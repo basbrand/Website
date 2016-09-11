@@ -1,0 +1,58 @@
+/*
+Tag
+
+.tag - Tag
+
+markup:
+<a class="{$modifiers}" href="javascript:void();">UAV</a>
+
+Styleguide 3.14
+*/
+
+.tag {
+  @extend %meta-text;
+  display: inline-block;
+  background: mix($color-body, #FFF, 26%);
+  padding: rhythm() rhythm(2);
+  font-size: to-unit(10px);
+  line-height: line-height(10px, 1);
+  font-style: normal;
+  text-decoration: none;
+  & {
+    color: inherit;
+  }
+
+  &:hover {
+    background-color: $color-theme;
+    color: #FFF;
+  }
+}
+
+/*
+Tag List
+
+.tag-list - Tag List
+
+markup:
+<ul class="{$modifiers} reset list--inline">
+  <li><a class="tag" href="javascript:void();">GIS</a></li>
+  <li><a class="tag" href="javascript:void();">GPS</a></li>
+  <li><a class="tag" href="javascript:void();">Hardware</a></li>
+  <li><a class="tag" href="javascript:void();">Internet</a></li>
+  <li><a class="tag" href="javascript:void();">Measuring</a></li>
+  <li><a class="tag" href="javascript:void();">Monitoring</a></li>
+  <li><a class="tag" href="javascript:void();">Radio</a></li>
+  <li><a class="tag" href="javascript:void();">Software</a></li>
+  <li><a class="tag" href="javascript:void();">Telephony</a></li>
+  <li><a class="tag" href="javascript:void();">TV & Video</a></li>
+</ul>
+
+Styleguide 3.14.1
+*/
+
+// .tag-list {
+//   .tag {
+//     float: left;
+//     margin: 0 rhythm() rhythm() 0;
+//   }
+// }

@@ -1,0 +1,14 @@
+/*
+Image
+
+Styleguide 3.15
+*/
+
+
+.image {
+  display: block;
+  &--stretch {
+    width: 100%;
+    height: auto;
+  }
+}

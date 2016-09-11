@@ -1,0 +1,107 @@
+/*
+Label
+
+.label - Label
+.label.label--square - Square label, for use with icon
+.label.label--s - Smaller tag
+
+markup:
+<span class="{$modifiers}">Featured Article</span>
+
+Styleguide 3.9
+*/
+
+.label {
+  font-family: $font-family--meta;
+  text-transform: uppercase;
+  display: inline-block;
+  background: $color-theme;
+  padding: rhythm(2.5) rhythm(5);
+  font-size: to-unit(12px);
+  letter-spacing: .05em;
+  line-height: line-height(12px, 1);
+  font-style: normal;
+  /* In case this is an anchor tag */
+  text-decoration: none;
+  &,
+  &:hover {
+    color: #FFF;
+  }
+  &:hover {
+      box-shadow: 2px 2px 8px rgba(0,0,0,.26);
+  }
+  &:active {
+      box-shadow: -1px -1px 8px rgba(0,0,0,.26);
+  }
+  .headline__tax &,
+  &.headline__tax{
+    box-shadow: none;
+  }
+  &--symbol {}
+  &--stretch {
+    width: 100%;
+  }
+}
+
+a.label {
+  &,
+  &:visited,
+  &:hover {
+    color: $white;
+  }
+}
+
+@include breakpoint($gt-small-desktop) {
+  .label {
+    padding: rhythm(3.5) rhythm(10);
+    font-size: to-unit(14px);
+    line-height: line-height(14px, 1);
+  }
+  .label.label--s {
+    padding: rhythm(2);
+    font-size: to-unit(11px);
+    line-height: line-height(12px, 1);
+    font-weight: 600;
+  }
+}
+
+.list--float {
+  .label {
+    padding: rhythm(3.5) rhythm(10);
+    font-size: to-unit(14px);
+    line-height: rhythm(5);
+  }
+  .share {
+    padding: 0;
+    line-height: rhythm(12);
+  }
+}
+
+/*
+Label List
+
+.label-list - Label List
+
+markup:
+<ul class="{$modifiers} reset list--inline">
+  <li><span class="label label--s">GIS</span></li>
+  <li><span class="label label--s">GPS</span></li>
+  <li><span class="label label--s">Hardware</span></li>
+  <li><span class="label label--s">Internet</span></li>
+  <li><span class="label label--s">Measuring</span></li>
+  <li><span class="label label--s">Monitoring</span></li>
+  <li><span class="label label--s">Radio</span></li>
+  <li><span class="label label--s">Software</span></li>
+  <li><span class="label label--s">Telehony</span></li>
+  <li><span class="label label--s">TV & Video</span></li>
+</ul>
+
+Styleguide 3.9.1
+*/
+
+.label-list {
+  .label {
+    float: left;
+    margin: 0 rhythm() rhythm() 0;
+  }
+}

@@ -1,0 +1,106 @@
+/*
+Colour
+
+Styleguide 1.1
+*/
+
+/*
+Base colours
+
+$color-blue - #445D87, used for links
+$color-teal - #57B0B6, used for most text
+
+markup:
+<div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+
+Styleguide 1.1.1
+*/
+
+$color-blue: #445D87;
+$color-teal: #57B0B6;
+
+
+/*
+Spot colours
+
+$color-yellow - #F39200
+$color-indigo - #505263
+$color-coral - #E94E2C
+$color-gold - #E3A129
+$color-vanilla - #F7ECB9
+$color-dark-blue - #37383C
+$color-green - #63B452
+
+markup:
+<div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+
+Styleguide 1.1.2
+*/
+
+$color-yellow: #F39200;
+$color-indigo: #505263;
+$color-coral: #E94E2C;
+$color-gold: #E3A129;
+$color-vanilla: #F7ECB9;
+$color-dark-blue: #37383C;
+$color-green: #63B452;
+
+
+/*
+Social media colours
+
+$color-rss - RSS Orange
+$color-twitter - Official Twitter blue
+$color-facebook - Official Facebook blue
+$color-linkedin - Official LinkedIn blue
+$color-youtube - Official YouTube red
+$color-youtube--dark - Official YouTube red (darker shade)
+
+markup:
+<div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+
+Styleguide 1.1.3
+*/
+
+$color-rss: #FF6600;
+$color-twitter: #55ACEE;
+$color-facebook: #3B5998;
+$color-linkedin: #0077B5;
+$color-youtube: #e52d27;
+$color-youtube--dark: #b31217;
+
+
+/*
+Applied colours
+
+$color-background - Background colour
+$color-body - Body colour
+$color-theme - Theme colour
+$color-primary - Primary colour
+$color-secondary - Secondary colour
+$color-button - Primary button colour
+
+markup:
+<div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+
+Styleguide 1.1.4
+*/
+
+$color-background: $white;
+$color-body: $color-blue;
+$color-theme: $color-teal;
+$color-primary: $color-coral;
+$color-secondary: $color-yellow;
+
+/* Mixing colours */
+$color-highlight: #FFF;
+$color-shadow: #000;
+
+/* Button colours */
+$color-button: $color-blue;
+
+/* Links colours */
+$color-anchor: $color-teal;
+$color-anchor--hover: $color-indigo;
+$color-anchor--active: $color-dark-blue;
+$color-anchor--visited: $color-dark-blue;

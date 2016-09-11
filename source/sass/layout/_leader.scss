@@ -1,0 +1,69 @@
+/*
+Leader
+
+Styleguide 2.4
+*/
+
+/*
+Leader
+
+Adds a margin to the top
+
+.leader - Single rhythm top-margin
+.leader--tiny - Half rhythm top-margin
+.leader--hero - Double rhythm top-margin
+.leader--giant - Triple rhythm top-margin
+
+markup:
+<div class="{$modifiers}">{$modifiers}</div>
+
+Styleguide 2.4.1
+*/
+
+.leader {
+	margin-top: rhythm(4);
+	&--tiny {
+		margin-top: rhythm(1);
+	}
+	&--hero {
+		margin-top: rhythm(8);
+	}
+	&--giant {
+		margin-top: rhythm(16);
+	}
+	@include breakpoint($gt-large-handheld) {
+			margin-top: rhythm(5);
+  }
+}
+
+
+/*
+Leader inside
+
+Adds padding to the top
+
+.leader-inside - Single rhythm top-margin
+.leader-inside--tiny - Half rhythm top-margin
+.leader-inside--hero - Double rhythm top-margin
+.leader-inside--giant - Triple rhythm top-margin
+
+markup:
+<div class="{$modifiers}">{$modifiers}</div>
+
+Styleguide 2.4.2
+*/
+.leader-inside {
+	padding-top: rhythm(4);
+	&--tiny {
+		padding-top: rhythm(1);
+	}
+	&--hero {
+		padding-top: rhythm(8);
+	}
+	&--giant {
+		padding-top: rhythm(16);
+	}
+	@include breakpoint($gt-large-handheld) {
+			padding-top: rhythm(5);
+  }
+}

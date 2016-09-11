@@ -1,0 +1,52 @@
+/*
+Grid
+
+### Flexbox with inline-block fallback
+
+Display: inline-block; mimics the behaviour of flexbox a bit better than floating elements when you have alternating widths of your grid cells and you want them to stay in line.
+
+If you require your columns to stretch to the full height of your container, use the table and table-cell properties. This will not be a good solution if you want to wrap grid cells on multiple rows but is a good fit if you can control the number of grid cells in a row.
+
+.grid - If flexbox is supported, all children will behave like flex items. If not, children are required to have a `.grid__cell class declared on them.
+
+markup:
+<div class="{$modifiers}">
+	 <div class="{$modifiers}__cell {$modifiers}__cell--hero" style="background:Red;">1</div><!--
+  --><div class="grid__cell">2<br>lines</div><!--
+  --><div class="grid__cell">3</div><!--
+  --><div class="grid__cell">4</div><!--
+  --><div class="grid__cell">5</div>
+</div>
+
+Styleguide 2.7
+*/
+
+
+/*
+ * 1. IE Fallback
+ */
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  &__cell {
+    flex: 0 1 100%;
+    width: 100%; /* 1. */
+    height: 100%;
+    height: 100vh;
+    @include breakpoint($landscape) {
+      flex-basis: 50%;
+      width: 50%;
+    }
+    &--hero {
+      @include breakpoint($portrait,$landscape) {
+          flex: 1 0 100%;
+          width: 100%;
+          width: 100vw;
+      }
+    }
+  }
+}
+@include breakpoint($landscape) {
+
+}

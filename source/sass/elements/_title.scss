@@ -1,0 +1,92 @@
+@function to-em($border-width) {
+  @return px($border-width);
+}
+/*
+Title
+
+Titles are different from headings. They are used in title and headline blocks and story lists. If you want to style an article heading, use the heading class.
+
+.title - This smaller headline is used in story lists
+.title.title--meta - Extra margin top and bottom
+.title.title--section - Extra margin top and bottom
+
+markup:
+<h1 class="{$modifiers}">Extra, extra – read all about it!</h1>
+
+Styleguide 3.3
+*/
+.title {
+  font: $font-weight--heading #{to-unit(14px, 1em, 12px)}/#{to-unit(rhythm(6), 1, 20px)} $font-family--heading;
+  a &,
+  & a {
+    text-decoration: none;
+  }
+  &--meta,
+  &--section {
+    font: $font-weight--meta #{to-unit(14px, 1em, 12px)} $font-family--meta;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing;
+  }
+  &--section {
+    font-size: to-unit(8px, 1em, 12px);
+  }
+  &--inverse {
+    &,
+    a &,
+    & a {
+      color: $white;
+      font-weight: 300;
+    }
+  }
+}
+
+
+@include breakpoint($gt-small-handheld) {
+  .title {
+    font-size: to-unit(18px, 1em, 12px);
+  }
+}
+@include breakpoint($gt-large-handheld) {
+  .title {
+    font-size: to-unit(24px, 1em, 14px);
+    &--meta,
+    &--section {
+      font-size: to-unit(18px, 1em, 14px);
+    }
+    &--section {
+      font-size: to-unit(12px, 1em, 14px);
+    }
+  }
+}
+@include breakpoint($gt-medium-desktop) {
+  .title {
+    font-size: to-unit(28px, 1em, 16px);
+    &--meta,
+    &--section {
+      font-size: to-unit(18px, 1em, 16px);
+    }
+    &--section {
+      font-size: to-unit(12px, 1em, 16px);
+    }
+  }
+}
+
+/*
+Title, inversed
+
+Titles are different from headings. They are used in title and headline blocks and story lists. If you want to style an article heading, use the heading class.
+
+.title.title--inverse - This smaller headline is used in story lists
+.title.title--meta.title--inverse - Extra margin top and bottom
+.title.title--section.title--inverse - Extra margin top and bottom
+
+markup:
+<h1 class="{$modifiers}">Extra, extra – read all about it!</h1>
+
+sg-wrapper:
+<div style="padding:32px;background:#445D87;">
+<sg-wrapper-content/>
+</div>
+
+Styleguide 3.3.1
+*/

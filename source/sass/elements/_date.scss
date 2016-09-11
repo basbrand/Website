@@ -1,0 +1,43 @@
+/*
+Date
+
+.date - Date block
+.date.date--inlne - Floats date block to the left
+
+markup:
+<span class="date">
+  <span class="date__head">Dec</span>
+  <span class="date__body">31</span>
+</span>
+
+Styleguide 3.10
+*/
+
+.date {
+  @extend %meta-text;
+  width: rhythm(16);
+  height: rhythm(18);
+  background: #FFF;
+  border: $border-width solid $color-theme;
+  text-align: center;
+  &,
+  &__head,
+  &__body {
+      display: block;
+  }
+  &__head {
+    background: $color-theme;
+    color: #FFF;
+    font-size: to-em(12px);
+    line-height: rhythm(6);
+  }
+  &__body {
+    font-size: to-em(20px);
+    line-height: rhythm(11);
+  }
+  &--inline {
+    float: left;
+    margin-right: 1em;
+  }
+
+}

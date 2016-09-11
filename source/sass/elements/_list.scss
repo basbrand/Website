@@ -1,0 +1,48 @@
+/*
+List
+
+.list--inline - Display set to inline.
+.list--float - List items are floated next to eachother
+
+markup:
+<ul class="{$modifiers}">
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ul>
+
+Styleguide 3.7
+*/
+
+.list {
+  &--inline {
+    li {
+      display: inline;
+    }
+  }
+  &--float {
+    @include clearfix;
+    li {
+      float: left;
+    }
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .well {
+    .list--inline {
+      .grid__cell {
+        display: inline-block !important;
+        float: left;
+      }
+    }
+  }
+  .list--inline {
+    display: inline-block;
+    float: left;
+  }
+  li {
+    float: left;
+  }
+}
+

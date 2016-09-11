@@ -1,0 +1,26 @@
+/*
+Cover
+
+Full bleed image. Image source is defined inline.
+
+markup:
+<section class="cover" style="background-image: url('https://images.unsplash.com/photo-1465198217870-8bd6e645e8d1?dpr=1&auto=format&crop=entropy&fit=crop&w=767&h=575&q=80&cs=tinysrgb');">
+</section>
+
+
+Styleguide 3.17
+*/
+
+.cover {
+  width: 100%;
+  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: $white;
+  @include breakpoint($landscape) {
+    background-position: left bottom;
+  }
+}

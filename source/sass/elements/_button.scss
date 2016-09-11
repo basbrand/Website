@@ -1,0 +1,70 @@
+/*
+Button
+
+.button - Default state button
+.button:active - Active state button
+.button:hover - Hover state button
+.button.button--stretch - Stretched default button
+
+markup:
+<button class="{$modifiers}">Button</button>
+
+Styleguide 3.5
+*/
+
+.button {
+  &,
+  &:visited {
+    display: inline-block;
+    padding: rhythm(2) rhythm(4);
+    border: 1px solid $color-button;
+    background: transparent;
+    color: $color-button;
+    font: 600 #{to-unit(8px, 1em, 12px)}/1 $font-family--meta;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing;
+    outline: 0;
+  }
+  &:hover {
+    color: $color-anchor;
+    border-color: $color-anchor;
+  }
+  &:active {
+    color: $color-dark-blue;
+    border-color: $color-dark-blue;
+  }
+  &--stretch {
+    width: 100%;
+    text-align: center;
+  }
+  &--inverse {
+    color: $white;
+    border-color: $white;
+  }
+
+  // @include breakpoint($gt-large-handheld) {
+  //   font-size: to-unit(10px, 1em, 14px);
+  // }
+  @include breakpoint($gt-medium-desktop) {
+    font-size: to-unit(10px, 1em, 16px);
+  }
+}
+
+/*
+Button, inversed
+
+.button.button--inverse - Default state button
+.button.button--inverse:active - Active state button
+.button.button--inverse:hover - Hover state button
+
+markup:
+<button class="{$modifiers}">Button</button>
+
+sg-wrapper:
+<div style="padding:32px;background:#445D87;">
+<sg-wrapper-content/>
+</div>
+
+Styleguide 3.5.1
+*/

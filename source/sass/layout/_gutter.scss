@@ -1,0 +1,99 @@
+/*
+Gutter
+
+Styleguide 2.2
+*/
+
+/*
+Gutter
+
+.gutter - Full gutter-width to right side
+.gutters - Half gutter-width to either side
+.gutter--left - Half gutter-width to left side
+.gutter--right - Half gutter-width to right side
+
+markup:
+<div class="{$modifiers}">{$modifiers}</div>
+
+Styleguide 2.2.1
+*/
+
+.gutter {
+	padding-right: gutter(1);
+	&--left {
+		padding-left: gutter();
+	}
+	&--right {
+		padding-right: gutter();
+	}
+	&s {
+		padding-left: gutter();
+		padding-right: gutter();
+	}
+}
+
+/*
+Gutter-outside
+
+Uses margin instead of padding
+
+.gutter-outside - Full gutter-width to right side
+.gutters-outside - Half gutter-width to either side
+.gutter-outside--left - Half gutter-width to left side
+.gutter-outside--left - Half gutter-width to right side
+
+markup:
+<div class="{$modifiers}">{$modifiers}</div>
+
+Styleguide 2.2.2
+*/
+.gutter {
+	&-outside {
+		margin-right: gutter(1);
+	}
+	&-outside--left {
+		margin-left: gutter();
+	}
+	&-outside--right {
+		margin-left: gutter();
+	}
+	&s-outside {
+		margin-left: gutter();
+		margin-right: gutter();
+	}
+}
+
+@each $breakpoint, $layout in $layouts {
+
+	$_gw: $gutter-width;
+
+	// Check if the gutter-width has changed since the previous breakpoint
+	@if $_gw != get-gutter-width($breakpoint) {
+
+		// Set gutters for this breakpoint
+		@include breakpoint( $breakpoint ) {
+			.gutter {
+				&--left {
+					padding-left: gutter($breakpoint);
+				}
+				&--right {
+					padding-left: gutter($breakpoint);
+				}
+				&s {
+					padding-left: gutter($breakpoint);
+					padding-right: gutter($breakpoint);
+				}
+				&-outside--left {
+					margin-left: gutter($breakpoint);
+				}
+				&-outside--right {
+					margin-left: gutter($breakpoint);
+				}
+				&s-outside {
+					margin-left: gutter($breakpoint);
+					margin-right: gutter($breakpoint);
+				}
+			}
+		}
+	}
+}
