@@ -12,6 +12,44 @@ Styleguide 2.0.1
 
 // $debug-layout: true;
 // $debug-rhythm: true;
+html:after,
+body:after {
+  display: block;
+  position: fixed;
+  right: 0;
+  background: #fff;
+  padding: rhythm();
+}
+html:after {
+  top: 0;
+  @include breakpoint($gt-small-handheld) {
+    content: 'gt-small-handheld';
+  }
+  @include breakpoint($gt-medium-handheld) {
+    content: 'gt-medium-handheld';
+  }
+  @include breakpoint($gt-large-handheld) {
+    content: 'gt-large-handheld';
+  }
+  @include breakpoint($gt-small-desktop) {
+    content: 'gt-small-desktop';
+  }
+  @include breakpoint($gt-medium-desktop) {
+    content: 'gt-medium-desktop';
+  }
+  @include breakpoint($gt-large-desktop) {
+    content: 'gt-large-desktop';
+  }
+}
+body:after {
+  top: rhythm(6);
+  @include breakpoint($landscape) {
+    content: 'landscape';
+  }
+  @include breakpoint($portrait) {
+    content: 'portrait';
+  }
+}
 
 @mixin debug-rhythm($rhythm: $rhythm)
 {

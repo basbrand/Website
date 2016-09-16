@@ -25,18 +25,22 @@ Styleguide 3.1
     line-height: line-height(24px, 1.3);
     margin: rhythm(10) 0;
   }
-  &--meta,
   &--whisper {
-    font-size: to-unit(12px);
-    line-height: line-height(12px, 1.3);
+    font-size: to-unit(10px, 1em, 12px);
+    line-height: line-height(10px, 1.1);
   }
   &--meta {
     @extend %meta-text;
+    font-size: to-unit(8px, 1em, 12px);
+    line-height: line-height(10px, 1.1);
   }
-}
-
-@include breakpoint($gt-large-handheld) {
-  .body--whisper {
-    font-size: to-unit(14px);
+  @include breakpoint($gt-medium-desktop) {
+    $reset-font-size: px(16px, 1%, $base-font-size);
+    $reset-line-height: px( rhythm(5), 1%, 16px);
+    &--meta,
+    &--whisper {
+      font-size: to-unit(10px, 1em, 16px);
+      line-height: line-height(10px, 1.1);
+    }
   }
 }

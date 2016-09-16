@@ -1,0 +1,31 @@
+
+/*
+Shop
+
+.shop - Centered content
+
+markup:
+<article class="shop cover">
+</article>
+<h1 class="tile">Extra, extra – read all about it!</h1>
+
+Styleguide 4.2
+*/
+
+/*
+ * 1. Layout
+ * 2. Background image
+ */
+.tile {
+  display: table-cell; /* 1 */
+  vertical-align: middle; /* 1 */
+  box-shadow: inset 1px 1px 0 $white, inset -1px -1px 0 $white;
+  &__body {
+    position: relative; /* 1 */
+    top: 50%; /* 1 */
+    transform: translateY(-50%); /* 1 */
+  }
+  &--shop {
+    text-align: center; /* 1 */
+  }
+}

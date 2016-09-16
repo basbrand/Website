@@ -15,8 +15,14 @@ markup:
 
 Styleguide 3.3
 */
+
+/*
+ * Force block on inline tags
+ */
 .title {
   font: $font-weight--heading #{to-unit(14px, 1em, 12px)}/#{to-unit(rhythm(6), 1, 20px)} $font-family--heading;
+  display: inline-block; /* 1 */
+  width: 100%; /* 1 */
   a &,
   & a {
     text-decoration: none;
@@ -29,6 +35,13 @@ Styleguide 3.3
   }
   &--section {
     font-size: to-unit(8px, 1em, 12px);
+    font-weight: 600;
+    .tile--cover & {
+      font-weight: 300;
+    }
+  }
+  &--em {
+    font-family: $font-family--heading;
   }
   &--inverse {
     &,

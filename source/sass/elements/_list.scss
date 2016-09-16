@@ -1,8 +1,13 @@
 /*
 List
 
-.list--inline - Display set to inline.
-.list--float - List items are floated next to eachother
+.list.list--inline - Display set to inline.
+.list.list--float - List items are floated next to eachother
+.list.list--reset.list--tools - Square bullets
+.list.list--reset.list--tools.list--discover - Square bullets
+.list.list--reset.list--tools.list--concept - Square bullets
+.list.list--reset.list--tools.list--design - Square bullets
+.list.list--reset.list--tools.list--build - Square bullets
 
 markup:
 <ul class="{$modifiers}">
@@ -14,7 +19,16 @@ markup:
 Styleguide 3.7
 */
 
+/*
+ * 2. MSIE
+ */
+
 .list {
+  &--reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
   &--inline {
     li {
       display: inline;
@@ -24,6 +38,82 @@ Styleguide 3.7
     @include clearfix;
     li {
       float: left;
+    }
+  }
+  &--tools {
+    &__section {
+      margin-top: rhythm(8);
+      .title {
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 100%;
+        padding: rhythm(2) 0 rhythm(2) .5 * $gutter-width;
+        background: rgba($color-body, .2);
+      }
+    }
+    li {
+      position: relative;
+      padding: rhythm(2) 0 rhythm(2) 1.25 * $gutter-width;
+      width: 100%; /* 2 */
+      &:before,
+      &:after {
+          content: "";
+          position: absolute;
+          top: 1em;
+          left: .5 * $gutter-width;
+          display: block;
+          width: .8em;
+          height: .8em;
+      }
+      &:before {
+        background-color: $color-body; /* or whatever color you prefer */
+      }
+      &:after {
+        background-color: $white;
+      }
+      @for $i from 20 through 1 {
+        &:nth-child(#{$i}):after {
+          $_opacity: $i * .05;
+          opacity: $_opacity;
+        }
+        // li:nth-child(#{$i}):after {
+        //   $_opacity: $i * 5%;
+        //     @debug $_opacity;
+        //   background: rgba($white, $_opacity);
+        // }
+      }
+
+    }
+
+  }
+  &--discover {
+    li {
+      &:before {
+        background: $color-coral; /* or whatever color you prefer */
+      }
+    }
+  }
+  &--concept {
+    li {
+      &:before {
+        background: $color-green; /* or whatever color you prefer */
+      }
+    }
+  }
+  &--design {
+    li {
+      &:before {
+        background: $color-yellow; /* or whatever color you prefer */
+      }
+    }
+  }
+  &--build {
+    li {
+      &:before {
+        background: $color-teal; /* or whatever color you prefer */
+      }
     }
   }
 }
@@ -45,4 +135,3 @@ Styleguide 3.7
     float: left;
   }
 }
-

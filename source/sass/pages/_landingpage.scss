@@ -4,61 +4,171 @@ Landingpage
 markup:
 <div class="landingpage">
   <div class="panel">
-    <div class="handshake">
-      <div class="well well--tile">
-        <div class="tile">
-          Handshake: logo + text
-        </div>
-      </div>
-    </div>
+    <sg-insert>4.1</sg-insert>
     <div class="invitation">
-      <div class="well well--tile">
+      <div class="invitation__item well well--tile wings">
         <div class="tile">
-          Invitation: navigation + text
+          <h2 class="title leader trailer">Wat is jouw volgende stap?</h2>
+          <p class="leader trailer">Word je een global, local en mobile brand? Beweeg je naar cloud, internet of things en blockchain? Wil je beginnen met een leeg vel of zoek je een slimme hack?</p>
         </div>
       </div>
-      <div class="well well--tile">
-        <div class="tile">
-          Invitation: shops
+      <div class="invitation__item well">
+        <div class="grid grid--tile cover" style="background-image: url('https://images.unsplash.com/photo-1470192581780-bf0a1cb67135?dpr=1&auto=format&crop=entropy&fit=crop&w=500&h=500&q=80&cs=tinysrgb');">
+          <article class="grid__cell tile tile--shop cover" style="background-imagee: url('https://images.unsplash.com/photo-1472512946974-cc09a294e210?dpr=1&auto=format&crop=entropy&fit=crop&w=500&h=500&q=80&cs=tinysrgb');">
+            <div class="tile__body gutters">
+              <h3><span class="title title--meta trailer-inside">Ontdekken</span><br/><span class="title title--section leader-inside">Analysis &amp; Challenge</span></h3>
+            </div>
+          </article>
+          <article class="grid__cell tile tile--shop cover" style="background-imagee: url('https://images.unsplash.com/photo-1458419948946-19fb2cc296af?dpr=1&auto=format&crop=entropy&fit=crop&w=500&h=500&q=80&cs=tinysrgb');">
+            <div class="tile__body gutters">
+              <h3><span class="title title--meta trailer-inside">Bedenken</span><br/><span class="title title--section leader-inside">Strategy &amp; Concept</span></h3>
+            </div>
+          </article>
+          <article class="grid__cell tile tile--shop cover" style="background-imagee: url('https://images.unsplash.com/photo-1464254654104-c690d2e93424?dpr=1&auto=format&crop=entropy&fit=crop&w=500&h=500&q=80&cs=tinysrgb');">
+            <div class="tile__body gutters">
+              <h3><span class="title title--meta trailer-inside">Ontwerpen</span><br/><span class="title title--section leader-inside">Digital User Experience</span></h3>
+            </div>
+          </article>
+          <article class="grid__cell tile tile--shop cover" style="background-imagee: url('https://images.unsplash.com/photo-1421757350652-9f65a35effc7?dpr=1&auto=format&crop=entropy&fit=crop&w=500&h=500&q=80&cs=tinysrgb');">
+            <div class="tile__body gutters">
+              <h3><span class="title title--meta trailer-inside">Bouwen</span><br/><span class="title title--section leader-inside">Development &amp; Implementation</span></h3>
+            </div>
+          </article>
         </div>
       </div>
     </div>
     <div class="introduction">
       <div class="well well--tile">
-        <div class="tile ">
-          Vision: text
+        <div class="tile wings">
+          <h3 class="title title--section leader trailer">Onze visie</h3>
+          <p>Slimme organisaties begrijpen mensen én techniek. Ze weten dat het digitale landschap het belangrijkste speelveld voor innovatie is. Maar bovenal weten ze wat hun klant van ze verwacht en gaat verwachten.</p>
         </div>
       </div>
       <div class="well well--tile">
-        <div class="tile">
-          Family: logos
+      <div class="tile cover wings" style="background-image: url('https://images.unsplash.com/photo-1470753937643-efeb931202a9?dpr=1&auto=format&crop=entropy&fit=crop&w=500&h=500&q=80&cs=tinysrgb');">
+          <h3 class="title title--section leader trailer">In goed gezelschap</h3>
         </div>
       </div>
     </div>
-    <div class="testimonial well well--hero">
+    <div class="testimonial well well--hero cover" style="background-image: url('https://images.unsplash.com/photo-1469204691332-56e068855403?dpr=1&auto=format&crop=entropy&fit=crop&w=500&h=500&q=80&cs=tinysrgb');">
       <div class="tile">
         Testimonial
       </div>
     </div>
   </div>
   <div class="tools">
-    <h2>Onze producten</h2>
-    <em>Krachtige tools voor slimme stappen</em>
-    <section>
-      <h3>Ontdekken</h3>
-    </section>
-    <section>
-      <h3>Bedenken</h3>
-    </section>
-    <section>
-      <h3>Ontwerpen</h3>
-    </section>
-    <section>
-      <h3>Bouwen</h3>
-    </section>
+    <div class="tools__header">
+      <h2 class="title title--section leader trailer">Onze producten</h2>
+      <em class="title">Krachtige tools voor slimme stappen</em>
+    </div>
+    <div class="tools__body">
+      <section>
+        <h3 class="title title--section title--em leader trailer">Ontdekken</h3>
+        <ul class="list list--reset list--tools list--discover body--meta">
+          <li class="list--tools__section">
+            <h4 class="title title--section title--em">Analysis</h4><!--
+            -->data research
+          </li>
+          <li>customer research</li>
+          <li>digital maturity scan</li>
+          <li class="list--tools__section">
+            <h4 class="title title--section title--em">Challenge</h4><!--
+            -->challenge your plan
+          </li>
+          <li>challenge your organisation</li>
+          <li>question your assumptions</li>
+        </ul>
+      </section>
+      <section>
+        <h3 class="title title--section title--em leader trailer">Bedenken</h3>
+        <ul class="list list--reset list--tools list--concept body--meta">
+          <li class="list--tools__section">
+            <h4 class="title title--section title--em">Strategie</h4><!--
+            -->digital strategie
+          </li>
+          <li>merk en marketing strategie</li>
+          <li>data en ux strategy</li>
+          <li class="list--tools__section">
+            <h4 class="title title--section title--em">Ideation</h4><!--
+            -->brainstorms
+          </li>
+          <li>triz</li>
+          <li>scamper</li>
+          <li class="list--tools__section">
+            <h4 class="title title--section title--em">Customer mapping</h4><!--
+            -->user segmentation
+          </li>
+          <li>persona&rsquo;s</li>
+          <li>klantprofielen</li>
+        </ul>
+      </section>
+      <section>
+        <h3 class="title title--section title--em leader trailer">Ontwerpen</h3>
+        <ul class="list list--reset list--tools list--design body--meta">
+          <li class="list--tools__section">
+            <h4 class="title title--section title--em">UX/CX Design</h4><!--
+            -->User scenario’s
+          </li>
+          <li>Use cases</li>
+          <li>Customer journey mapping</li>
+          <li class="list--tools__section">
+            <h4 class="title title--section title--em">Informatiearchitectuur</h4><!--
+            -->Data research
+          </li>
+          <li>Interactieontwerp</li>
+          <li>Flowcharts &amp; sitemaps</li>
+          <li>Wireframes</li>
+          <li>Mockups</li>
+          <li>Interactive prototypes</li>
+          <li>Digital style guide</li>
+          <li class="list--tools__section">
+            <h4 class="title title--section title--em">Content strategie</h4><!--
+            -->Content- en dataarchitectuur
+          </li>
+          <li>Taxonomie</li>
+          <li>Workflow design</li>
+        </ul>
+      </section>
+      <section>
+        <h3 class="title title--section title--em leader trailer">Bouwen</h3>
+        <ul class="list list--reset list--tools list--build body--meta">
+          <li class="list--tools__section">
+            <h4 class="title title--section title--em">Prototyping</h4><!--
+            -->Paper prototype
+          </li>
+          <li>Digital prototype</li>
+          <li>POC</li>
+          <li>MVP</li>
+          <li class="list--tools__section">
+            <h4 class="title title--section title--em">Development</h4><!--
+            -->Frontend development
+          </li>
+          <li>Serverside programming</li>
+          <li>Database design</li>
+          <li>Web applications</li>
+          <li>Intra- &amp; extranets</li>
+          <li>Integration testing</li>
+          <li class="list--tools__section">
+            <h4 class="title title--section title--em">SEO &amp; accessability</h4><!--
+            -->Search engine optimisation
+          </li>
+          <li>Performance optimisation</li>
+          <li>Accessibility wcag 2.0 (drempelvrij niveau 2)</li>
+          <li class="list--tools__section">
+            <h4 class="title title--section title--em">Support</h4><!--
+            -->Server management
+          </li>
+          <li>Performance optimisation</li>
+          <li>Server management &amp; configuration</li>
+          <li>Backend integration</li>
+        </ul>
+      </section>
+    </div>
   </div>
-  <div class="testimonial">
-  Testimonial
+  <div class="testimonial well well--hero cover" style="background-image: url('https://images.unsplash.com/photo-1469204691332-56e068855403?dpr=1&auto=format&crop=entropy&fit=crop&w=500&h=500&q=80&cs=tinysrgb');">
+    <div class="tile">
+      Testimonial
+    </div>
   </div>
   <div class="contact">
   Contact
@@ -69,34 +179,22 @@ Styleguide 7.1
 */
 
 .landingpage {
-  /* Remove well in production */
-  .well {
-    // border: 1px solid white;
-    color: white;
-  }
   /* Start layout */
   .handshake {
-    background-color: darkgreen;
   }
   .invitation {
-      background-color: blue;
   }
   .introduction {
-      background-color: purple;
     .vision {}
     .family {}
   }
   .testimonial {
-    background-color: coral;
   }
   .tools {
-    background-color: gold;
   }
   .testimonial {
-    background-color: coral;
   }
   .contact {
-    background-color: green;
   }
 
   .handshake,
@@ -109,7 +207,7 @@ Styleguide 7.1
     float: left;
     width: 100%;
     height: 100%;
-    width: 100vw;
+    // width: 100vw;
     height: 100vh;
   }
   @include breakpoint($gt-large-handheld) {
@@ -121,12 +219,19 @@ Styleguide 7.1
       height: 50vh;
 
       .well {
-        width: 50%;
-        width: 50vw;
+        width: 100%;
+        // width: 50vw;
       }
     }
     .invitation {
-
+      .grid {
+        &__cell {}
+        &--tile &__cell {
+          min-height: 25vh;
+          max-height: 25vh;
+          height: 25vh;
+        }
+      }
     }
   }
   @include breakpoint($gt-large-handheld,$landscape) {
@@ -137,7 +242,7 @@ Styleguide 7.1
     .contact {
       width: 50%;
       height: 100%;
-      width: 50vw;
+      // width: 50vw;
       height: 100vh;
       .well {
         height: 50%;
@@ -145,18 +250,71 @@ Styleguide 7.1
       }
     }
   }
+  @include breakpoint($gt-large-handheld,$portrait) {
+    .invitation {
+      .invitation__item {
+        width: 50%;
+      }
+    }
+  }
 
   @include breakpoint($gt-medium-desktop) {
-    .handshake,
-    .invitation,
     .introduction,
     .contact {
       width: percentage(1/3);
-      width: percentage(1/3) / 1% * 1vw;
+      // width: percentage(1/3) / 1% * 1vw;
     }
+    .panel {
+      position: relative;
+    }
+    .introduction {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .handshake,
+    .invitation {
+      height: 50%;
+      height: 50vh;
+    }
+    .handshake,
+    .invitation,
     .testimonial {
       width: percentage(2/3);
-      width: percentage(2/3) / 1% * 1vw;
+      // width: percentage(2/3) / 1% * 1vw;
+    }
+    .invitation {
+      .invitation__item {
+        width: 50%;
+      }
+    }
+    .tools {
+      max-height: 100%;
+      max-height: 100vw;
+      overflow: scroll;
+      // transform: translateZ(0); /* http://stackoverflow.com/questions/6794000 */
+      &__header,
+      &__body {
+        width: percentage(1/2);
+        height: 100%;
+        height: 100vw;
+        float: left;
+        padding: 0 percentage(1/18);
+      }
+      &__header {
+        // width: percentage(1/3);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        box-shadow: inset -1px -1px 0 $white;
+        color: $white;
+        text-shadow: 0px 2px 4px rgba($black,0.50);
+        background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?dpr=1&auto=format&crop=entropy&fit=crop&w=910&h=1240&q=80&cs=tinysrgb');
+      }
+      &__body {
+        overflow: scroll;
+        // width: percentage(2/3);
+      }
     }
     // .panel {
     //   position: relative;
