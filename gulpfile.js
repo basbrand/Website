@@ -8,7 +8,7 @@ var styleguide  = require('sc5-styleguide');
 // Path definitions
 
 var sourcePath      = 'source';
-var htmlWild        = sourcePath + '/**/*.twig';
+var htmlWild        = sourcePath + '/**/*.php';
 var phpWild         = sourcePath + '/**/*.php';
 var styleSourcePath = sourcePath + '/sass';
 var scssWild        = styleSourcePath + '/**/*.scss';
@@ -40,22 +40,26 @@ gulp.task('html', function() {
 gulp.task('scss', function() {
     return gulp.src(scssRoot)
         .pipe(sass())
-        .pipe(gulp.dest(buildPath + '/prototype/styles'));
+        .pipe(gulp.dest(buildPath + '/prototype/styles'))
+        .pipe(gulp.dest(buildPath + '/www/styles'));
 });
 
 gulp.task('assets', function() {
   gulp.src([sourcePath + '/javascript/**'])
     // Do image sprites, optimizations etc.
-    .pipe(gulp.dest(buildPath + '/prototype/javascript'))
+    .pipe(gulp.dest(buildPath + '/www/javascript'))
     .pipe(gulp.dest(styleguideTmpPath + '/javascript'));
   gulp.src([sourcePath + '/fonts/**'])
     // Do image sprites, optimizations etc.
-    .pipe(gulp.dest(buildPath + '/prototype/fonts'))
+    .pipe(gulp.dest(buildPath + '/www/fonts'))
     .pipe(gulp.dest(styleguideTmpPath + '/fonts'));
   gulp.src([sourcePath + '/images/**'])
     // Do image sprites, optimizations etc.
-    .pipe(gulp.dest(buildPath + '/prototype/images'))
+    .pipe(gulp.dest(buildPath + '/www/images'))
     .pipe(gulp.dest(styleguideTmpPath + '/images'));
+  gulp.src([sourcePath + '/www/**'])
+    // Do image sprites, optimizations etc.
+    .pipe(gulp.dest(buildPath + '/www'))
 });
 
 gulp.task('prototype', function() {

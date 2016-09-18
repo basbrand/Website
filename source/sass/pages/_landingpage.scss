@@ -218,10 +218,10 @@ Styleguide 7.1
       height: 50%;
       height: 50vh;
 
-      .well {
-        width: 100%;
-        // width: 50vw;
-      }
+      // .well {
+      //   width: 100%;
+      //   // width: 50vw;
+      // }
     }
     .invitation {
       .grid {
@@ -247,12 +247,14 @@ Styleguide 7.1
       .well {
         height: 50%;
         height: 50vh;
+        width: 100%;
       }
     }
   }
   @include breakpoint($gt-large-handheld,$portrait) {
-    .invitation {
-      .invitation__item {
+    .invitation,
+    .handshake {
+      &__item {
         width: 50%;
       }
     }
@@ -271,6 +273,10 @@ Styleguide 7.1
       position: absolute;
       right: 0;
       top: 0;
+      bottom: 0;
+      .well {
+        width: 100%;
+      }
     }
     .handshake,
     .invitation {
