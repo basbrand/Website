@@ -12,11 +12,13 @@ Styleguide 3.17
 */
 
 /*
- * Center image
+ * 1. Center image
+ * 2. Text on an image backdrop is white
  */
 .cover {
   position: relative;
   overflow: hidden;
+  color: $white;
   picture,
   img {
     position: absolute;
