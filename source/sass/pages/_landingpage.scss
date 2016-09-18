@@ -258,6 +258,11 @@ Styleguide 7.1
         width: 50%;
       }
     }
+    .introduction {
+      .well {
+        width: 50%;
+      }
+    }
   }
 
   @include breakpoint($gt-medium-desktop) {
@@ -289,10 +294,9 @@ Styleguide 7.1
       width: percentage(2/3);
       // width: percentage(2/3) / 1% * 1vw;
     }
-    .invitation {
-      .invitation__item {
+    .handshake .handshake__item,
+    .invitation .invitation__item {
         width: 50%;
-      }
     }
     .tools {
       max-height: 100%;

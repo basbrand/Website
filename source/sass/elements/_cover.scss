@@ -2,10 +2,24 @@
 Cover
 
 Full bleed image. Image source is defined inline.
+The picture is contained in a parent container which hides the overflow.
 
 markup:
-<section class="cover" style="background-image: url('https://images.unsplash.com/photo-1465198217870-8bd6e645e8d1?dpr=1&auto=format&crop=entropy&fit=crop&w=767&h=575&q=80&cs=tinysrgb');">
-</section>
+<figure class="cover">
+  <picture class="cover__image">
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source media="(min-width: 1440px)" srcset="/images/content/handheld/tablet.png, /images/content/handheld/tablet--2x.png 2x">
+    <source media="(min-width: 1024px)" srcset="images/content/handheld/smartphone--portrait--2x.png">
+    <source media="(min-width: 768px)" srcset="/images/content/handheld/smartphone--landscape--2x.png 2x">
+    <source media="(orientation: landscape)" srcset="/images/content/handheld/smartphone--landscape.png, /images/content/handheld/smartphone--landscape--2x.png 2x">
+    <source media="(orientation: portrait)" srcset="/images/content/handheld/smartphone--portrait.png, /images/content/handheld/smartphone--portrait--2x.png 2x">
+    <!--[if IE 9]></video><![endif]-->
+    <img class="cover__image" srcset="/images/content/handheld/tablet.png, /images/content/handheld/tablet--2x.png 2x" alt="">
+  </picture>
+  <figcaption">
+    Handheld
+  </figcaption>
+</figure>
 
 
 Styleguide 3.17
@@ -19,14 +33,23 @@ Styleguide 3.17
   position: relative;
   overflow: hidden;
   color: $white;
-  picture,
-  img {
+  &__image {
+    object-fit: cover;
     position: absolute;
     z-index: -1;
+    // min-width: 100%;
+    // min-height: 100%;
+
+    max-width: 100%;
     min-width: 100%;
+    max-height: 100%;
     min-height: 100%;
+    
     top: 50%; /* 1 */
     left: 50%; /* 1 */
     transform: translateY(-50%) translateX(-50%); /* 1 */
   }
+  // img {
+  //   max-width: 100%;
+  // }
 }

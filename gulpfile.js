@@ -88,13 +88,14 @@ gulp.task('staticStyleguide:generate', function() {
         nextSection: true,
         extraHead: [
             '<link rel="stylesheet" type="text/css" href="/screen.css">',
+            '<script src="/javascript/html5shiv.min.js"></script>',
             '<script src="https://use.typekit.net/zaf1yku.js"></script>',
             '<script>try{Typekit.load({ async: true });}catch(e){}</script>',
             '<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>',
             '<script src="/javascript/jquery.plugins.js"></script>',
             '<script src="/javascript/jquery.modules.js"></script>',
-            '<script>document.createElement( "picture" );</script>',
-            '<script src="/javascript/picturefill.min.js" async></script>'
+            '<script src="/javascript/picturefill.min.js" async></script>',
+            '<script src="/javascript/pf.intrinsic.min.js" async></script>'
         ],
       }))
     .pipe(gulp.dest(styleguideBuildPath));

@@ -13,11 +13,22 @@ markup:
     <!--[if IE 9]></video><![endif]-->
     <img class="cover__image" srcset="/images/content/handheld/tablet.png, /images/content/handheld/tablet--2x.png 2x" alt="">
   </picture>
-  <figcaption">
-    Handheld
+  <figcaption class="handshake__item well well--tile wings">
+    <h1 class="brand leader--hero trailer">
+      <span class="is-narrative">Brickson • Amsterdam – Den Bosch</span>
+    </h1>
+    <h2 class="title trailer--tiny leader--hero">Een stap vooruit in het digitale tijdperk</h2>
+    <p class="trailer leader">Brickson is een integrated digital agency, we begrijpen mensen én techniek en we helpen je een stap vooruit te zetten in de digitale wereld.</p>
   </figcaption>
 </figure>
+
 Styleguide 4.1
 */
 
-.handshake {}
+.handshake {
+  @include breakpoint($lt-large-handheld,$landscape) {
+    &__item {
+      padding-right: 0;
+    }
+  }
+}
