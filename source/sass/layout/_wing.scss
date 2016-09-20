@@ -16,11 +16,13 @@ Styleguide 2.3
 .wing {
 	&s,
 	&--left {
-		padding-left: percentage(1/12);
+		// padding-left: percentage(1/12);
+		padding-left: $gutter-width;
 	}
 	&s,
 	&--right {
-		padding-right: percentage(1/12);
+		// padding-right: percentage(1/12);
+		padding-right: $gutter-width;
 	}
 	// @include breakpoint($landscape) {
 	//
@@ -34,4 +36,14 @@ Styleguide 2.3
 	// 		}
 	//
 	// }
+	@include breakpoint($gt_small_desktop) {
+		&s,
+		&--left {
+			padding-left: percentage(1/12);
+		}
+		&s,
+		&--right {
+			padding-right: percentage(1/12);
+		}
+  }
 }

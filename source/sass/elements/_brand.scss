@@ -12,8 +12,11 @@ Styleguide 3.11
 */
 
 .brand {
-  height: rhythm(26);
+  height: rhythm(22);
   width: 100%;
   background: url("/images/logos/brickson-logo--white@1x.png") no-repeat center;
   background-size: contain;
+  @include breakpoint($gt-large-handheld) {
+    height: rhythm(26);
+  }
 }

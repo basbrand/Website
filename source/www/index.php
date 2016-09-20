@@ -22,10 +22,10 @@ $landscape = "(orientation: landscape)";
 $high_res = "(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)";
 ?>
 <!DOCTYPE html>
-<html lang="en">
-<head
-  <title="Brickson"/>
+<html lang="nl">
+<head>
   <meta charset="UTF-8">
+  <title>Brickson</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="/styles/screen.css?id=1474118468489">
   <script src="https://use.typekit.net/zaf1yku.js"></script>
@@ -35,7 +35,7 @@ $high_res = "(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)";
   <script src="/javascript/pf.intrinsic.min.js" async></script>
   <base href="/"><style type="text/css">@font-face{font-family:futura-pt;src:url(https://fonts.typekit.net/af/9749f0/00000000000000000001008f/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5) format("woff2");font-weight:500;font-style:normal;}@font-face{font-family:futura-pt;src:url(https://fonts.typekit.net/af/8a5494/000000000000000000013365/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4) format("woff2");font-weight:400;font-style:normal;}@font-face{font-family:futura-pt;src:url(https://fonts.typekit.net/af/75f41e/000000000000000000010096/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3) format("woff2");font-weight:300;font-style:normal;}@font-face{font-family:merriweather;src:url(https://fonts.typekit.net/af/f20d56/000000000000000000014a3e/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4) format("woff2");font-weight:400;font-style:normal;}@font-face{font-family:merriweather;src:url(https://fonts.typekit.net/af/f87f0c/000000000000000000014a3d/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
 </head>
-  <body>
+  <body class="debug-layout">
     <div class="landingpage">
       <div class="panel">
         <figure class="handshake cover">
@@ -57,19 +57,21 @@ $high_res = "(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)";
               media="<?php echo $portrait; ?>"
               srcset="/images/content/handshake--smartphone--portrait.jpg, /images/content/handshake--smartphone--portrait--2x.jpg 2x">
             <!--[if IE 9]></video><![endif]-->
-            <img class="cover__image" srcset="/images/content/handshake--smartphone--portrait.jpg, /images/content/handheld/handshake--smartphone--portrait--2x.jpg 2x" alt="">
+            <img class="cover__image" src="/images/content/handshake--smartphone--portrait.jpg" srcset="/images/content/handshake--smartphone--portrait.jpg, /images/content/handheld/handshake--smartphone--portrait--2x.jpg 2x" alt="">
           </picture>
-          <figcaption class="handshake__item well well--tile wings">
-            <h1 class="brand leader--hero trailer">
-              <span class="is-narrative">Brickson &bull; Amsterdam – Den Bosch</span>
-            </h1>
-            <h2 class="title trailer--tiny leader--hero">Een stap vooruit in het digitale tijdperk</h2>
-            <p class="trailer leader">Brickson is een integrated digital agency, we begrijpen mensen &eacute;n techniek en we helpen je een stap vooruit te zetten in de digitale wereld.</p>
+          <figcaption class="handshake__item well well--tile">
+            <div class="tile wings">
+              <h1 class="brand leader--hero trailer">
+                <span class="is-narrative">Brickson &bull; Amsterdam – Den Bosch</span>
+              </h1>
+              <h2 class="title trailer--tiny leader--hero">Een stap vooruit in het digitale tijdperk</h2>
+              <p class="trailer leader">Brickson is een integrated digital agency, we begrijpen mensen &eacute;n techniek en we helpen je een stap vooruit te zetten in de digitale wereld.</p>
+          </div>
           </figcaption>
         </figure>
         <div class="invitation">
-          <div class="invitation__item well well--tile wings">
-            <div class="tile">
+          <div class="invitation__item well well--tile">
+            <div class="tile wings">
               <h2 class="title leader trailer">Wat is jouw volgende stap?</h2>
               <p class="leader trailer">Word je een global, local en mobile brand? Beweeg je naar cloud, internet of things en blockchain? Wil je beginnen met een leeg vel of zoek je een slimme hack?</p>
             </div>
@@ -85,7 +87,8 @@ $high_res = "(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)";
                     /images/content/challenge--tile--tablet--2x.jpg 320w 2x,
                     /images/content/challenge--tile--tablet.jpg 320w,
                     /images/content/challenge--tile--smartphone.jpg 240w,
-                    /images/content/challenge--tile--smartphone--2x.jpg 240w 2x">
+                    /images/content/challenge--tile--smartphone--2x.jpg 240w,
+                    /images/content/challenge--tile--smartphone--2x.jpg 2x">
                 <figcaption class="tile__body gutters">
                   <h3><span class="title title--meta trailer-inside">Ontdekken</span><br/><span class="title title--section leader-inside">Analysis &amp; Challenge</span></h3>
                 </figcaption>
@@ -99,7 +102,8 @@ $high_res = "(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)";
                     /images/content/concept--tile--tablet--2x.jpg 320w 2x,
                     /images/content/concept--tile--tablet.jpg 320w,
                     /images/content/concept--tile--smartphone.jpg 240w,
-                    /images/content/concept--tile--smartphone--2x.jpg 240w 2x">
+                    /images/content/concept--tile--smartphone--2x.jpg 240w,
+                    /images/content/concept--tile--smartphone--2x.jpg 2x">
                 <figcaption class="tile__body gutters">
                   <h3><span class="title title--meta trailer-inside">Bedenken</span><br/><span class="title title--section leader-inside">Strategy &amp; Concept</span></h3>
                 </figcaption>
@@ -113,7 +117,8 @@ $high_res = "(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)";
                     /images/content/design--tile--tablet--2x.jpg 320w 2x,
                     /images/content/design--tile--tablet.jpg 320w,
                     /images/content/design--tile--smartphone.jpg 240w,
-                    /images/content/design--tile--smartphone--2x.jpg 240w 2x">
+                    /images/content/design--tile--smartphone--2x.jpg 240w,
+                    /images/content/design--tile--smartphone--2x.jpg 2x">
                 <figcaption class="tile__body gutters">
                   <h3><span class="title title--meta trailer-inside">Ontwerpen</span><br/><span class="title title--section leader-inside">Digital User Experience</span></h3>
                 </figcaption>
@@ -127,7 +132,8 @@ $high_res = "(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)";
                     /images/content/build--tile--tablet--2x.jpg 320w 2x,
                     /images/content/build--tile--tablet.jpg 320w,
                     /images/content/build--tile--smartphone.jpg 240w,
-                    /images/content/build--tile--smartphone--2x.jpg 240w 2x">
+                    /images/content/build--tile--smartphone--2x.jpg 240w,
+                    /images/content/build--tile--smartphone--2x.jpg 2x">
                 <figcaption class="tile__body gutters">
                   <h3><span class="title title--meta trailer-inside">Bouwen</span><br/><span class="title title--section leader-inside">Implement &amp; Develop</span></h3>
                 </figcaption>
@@ -152,7 +158,8 @@ $high_res = "(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)";
                 srcset="
                   <?php echo $_src . '&w=640&h=640'; ?> 640w,
                   <?php echo $_src . '&w=480&h=480'; ?> 480w,
-                  <?php echo $_src . '&w=960&h=960'; ?> 480w 2x">
+                  <?php echo $_src . '&w=960&h=960'; ?> 480w,
+                  <?php echo $_src . '&w=960&h=960'; ?> 2x">
               <figcaption>
                   <h3 class="title title--section leader trailer">In goed gezelschap</h3>
               </figcaption>
@@ -175,7 +182,7 @@ $high_res = "(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)";
               media="<?php echo $portrait; ?>"
               srcset="/images/content/eigenhuis--portrait.jpg, /images/content/eigenhuis--portrait--2x.jpg 2x">
             <!--[if IE 9]></video><![endif]-->
-            <img class="cover__image" srcset="/images/content/eigenhuis--portrait.jpg, /images/content/handheld/eigenhuis--portrait--2x.jpg 2x" alt="">
+            <img class="cover__image" src="/images/content/eigenhuis--portrait.jpg" srcset="/images/content/eigenhuis--portrait.jpg, /images/content/handheld/eigenhuis--portrait--2x.jpg 2x" alt="">
           </picture>
           <figcaption class="handshake__item well well--tile wings">
             <h3 class="title title--section leader trailer">Testimonial</h3>
@@ -307,7 +314,7 @@ $high_res = "(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)";
             media="<?php echo $portrait; ?>"
             srcset="/images/content/evean--portrait.jpg, /images/content/evean--portrait--2x.jpg 2x">
           <!--[if IE 9]></video><![endif]-->
-          <img class="cover__image" srcset="/images/content/evean--portrait.jpg, /images/content/handheld/evean--portrait--2x.jpg 2x" alt="">
+          <img class="cover__image" src="/images/content/evean--portrait.jpg" srcset="/images/content/evean--portrait.jpg, /images/content/handheld/evean--portrait--2x.jpg 2x" alt="">
         </picture>
         <figcaption class="handshake__item well well--tile wings">
           <h3 class="title title--section leader trailer">Testimonial</h3>

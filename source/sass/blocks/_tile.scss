@@ -19,7 +19,7 @@ Styleguide 4.2
 .tile {
   display: table-cell; /* 1 */
   vertical-align: middle; /* 1 */
-  box-shadow: inset 1px 1px 0 $white, inset -1px -1px 0 $white;
+  // box-shadow: inset 1px 1px 0 $white, inset -1px -1px 0 $white;
   &__body {
     position: relative; /* 1 */
     top: 50%; /* 1 */

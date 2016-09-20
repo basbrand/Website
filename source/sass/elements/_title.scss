@@ -57,6 +57,22 @@ Styleguide 3.3
 @include breakpoint($gt-small-handheld) {
   .title {
     font-size: to-unit(18px, 1em, 12px);
+    &--meta {
+      font: $font-weight--meta #{to-unit(14px, 1em, 12px)} $font-family--meta;
+    }
+    &--section {
+      font: $font-weight--meta #{to-unit(10px, 1em, 12px)} $font-family--meta;
+    }
+  }
+}
+@include breakpoint($gt-small-handheld,$landscape) {
+  .title {
+    &--meta {
+      font: $font-weight--meta #{to-unit(12px, 1em, 12px)} $font-family--meta;
+    }
+    &--section {
+      font: $font-weight--meta #{to-unit(8px, 1em, 12px)} $font-family--meta;
+    }
   }
 }
 @include breakpoint($gt-large-handheld) {
@@ -81,6 +97,20 @@ Styleguide 3.3
     &--section {
       font-size: to-unit(12px, 1em, 16px);
     }
+  }
+}
+
+@include breakpoint( "(min-width: 768px) and (max-width: 768px)" ) {
+  .title {
+    font-size: to-unit(28px, 1em, 14px);
+    &--meta,
+    &--section {
+      font-size: to-unit(18px, 1em, 14px);
+    }
+    &--section {
+      font-size: to-unit(12px, 1em, 14px);
+    }
+    font-weight: 900;
   }
 }
 

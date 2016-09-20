@@ -10,8 +10,9 @@ Debug layout
 Styleguide 2.0.1
 */
 
-// $debug-layout: true;
-// $debug-rhythm: true;
+$debug-layout: true;
+$debug-rhythm: true;
+
 html:after,
 body:after {
   display: block;

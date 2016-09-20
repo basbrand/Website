@@ -234,6 +234,16 @@ Styleguide 7.1
       }
     }
   }
+  @include breakpoint($gt-large-handheld,$portrait) {
+    .introduction {
+      position: relative;
+      top: 50vh;
+    }
+    .introduction + .testimonial {
+      position: relative;
+      top: -50vh;
+    }
+  }
   @include breakpoint($gt-large-handheld,$landscape) {
     .handshake,
     .invitation,

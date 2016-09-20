@@ -27,8 +27,8 @@ Styleguide 4.1
 
 .handshake {
   @include breakpoint($lt-large-handheld,$landscape) {
-    &__item {
-      padding-right: 0;
-    }
+    // &__item {
+    //   padding-right: 0;
+    // }
   }
 }
