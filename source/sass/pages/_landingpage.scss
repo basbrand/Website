@@ -210,6 +210,9 @@ Styleguide 7.1
     // width: 100vw;
     height: 100vh;
   }
+  .tools h3.title {
+    font-size: 1.05em;
+  }
   @include breakpoint($gt-large-handheld) {
     .handshake,
     .invitation,

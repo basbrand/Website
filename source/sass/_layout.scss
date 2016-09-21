@@ -10,8 +10,8 @@ Debug layout
 Styleguide 2.0.1
 */
 
-$debug-layout: true;
-$debug-rhythm: true;
+// $debug-layout: true;
+// $debug-rhythm: true;
 
 html:after,
 body:after {
@@ -107,8 +107,8 @@ body:after {
             z-index: 10;
             left: 0;
             top: 0;
-            width: 100%;
-            height: 100%;
+            bottom: 0;
+            right: 0;
 
             background-color: transparent;
             background-repeat: repeat-x;

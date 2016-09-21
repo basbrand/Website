@@ -47,6 +47,20 @@ Styleguide 2.7
     max-height: 25vh;
     height: 25vh;
   }
+  @include breakpoint($gt-small-handheld,$landscape) {
+    &--tools &__cell {
+      float: left;
+      min-width: 50%;
+      max-width: 50%;
+    }
+  }
+  @include breakpoint($gt-large-handheld) {
+    &--tools &__cell {
+      float: left;
+      min-width: 50%;
+      max-width: 50%;
+    }
+  }
 
   @include breakpoint($lt-small-desktop,$landscape) {
     &__cell {}
@@ -55,7 +69,13 @@ Styleguide 2.7
       max-height: 50vh;
       height: 50vh;
     }
+    &--tools &__cell {
+      float: left;
+      min-width: 25%;
+      max-width: 25%;
+    }
   }
+
 }
 @include breakpoint($landscape) {
 

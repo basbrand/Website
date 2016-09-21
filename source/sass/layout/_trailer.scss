@@ -33,6 +33,11 @@ Styleguide 2.5.1
 	@include breakpoint($gt-large-handheld) {
 			margin-bottom: rhythm(5);
   }
+	@include breakpoint($gt-small-desktop) {
+		&--giant {
+			margin-bottom: rhythm(30);
+		}
+	}
 }
 
 /*
@@ -64,4 +69,9 @@ Styleguide 2.5.2
 	@include breakpoint($gt-large-handheld) {
 			padding-bottom: rhythm(5);
   }
+	@include breakpoint($gt-small-desktop) {
+		&--giant {
+			padding-bottom: rhythm(30);
+		}
+	}
 }

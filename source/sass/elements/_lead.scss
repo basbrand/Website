@@ -1,0 +1,26 @@
+/*
+Body
+
+.lead - Lead or introduction paragraph
+.body--whisper - Smaller text
+.body--meta - Meta text, dates etc.
+
+markup:
+<p class="{$modifiers}">Drone technology could help farmers around the world monitor their crops, fend off pests, improve land tenure, and more. But to realise its full potential, regulatory regimes are necessary, while keeping citizens’ safety and privacy rights secure.</p>
+
+Styleguide 3.2
+*/
+
+.lead {
+  font-size: to-unit(16px, 1em, 12px);
+  line-height: line-height(16px, 1.3);
+  margin: rhythm(10) 0;
+  @include breakpoint($gt-large-handheld) {
+    font-size: px(20px, 1em, 14px);
+    line-height: line-height(20px, 1.3);
+  }
+  @include breakpoint($gt-medium-desktop) {
+    font-size: px(24px, 1em, 16px);
+    line-height: line-height(24px, 1.1);
+  }
+}

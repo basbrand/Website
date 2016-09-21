@@ -39,9 +39,15 @@ Styleguide 3.3
     .tile--cover & {
       font-weight: 300;
     }
+
+    .well--root & {
+      position: absolute;
+      top: 0;
+    }
   }
   &--em {
-    font-family: $font-family--heading;
+    font-family: $font-family--heading !important;
+    font-weight: $font-weight--heading !important;
   }
   &--inverse {
     &,
@@ -110,7 +116,6 @@ Styleguide 3.3
     &--section {
       font-size: to-unit(12px, 1em, 14px);
     }
-    font-weight: 900;
   }
 }
 

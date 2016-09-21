@@ -17,6 +17,7 @@ Styleguide 4.2
  * 2. Background image
  */
 .tile {
+  position: relative;
   display: table-cell; /* 1 */
   vertical-align: middle; /* 1 */
   // box-shadow: inset 1px 1px 0 $white, inset -1px -1px 0 $white;
@@ -28,4 +29,29 @@ Styleguide 4.2
   &--shop {
     text-align: center; /* 1 */
   }
+  &--top {
+    vertical-align: top;
+  }
+  &--gutters {
+    @include gutters;
+  }
+  &__header,
+  &__footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  &__header {
+    top: 0;
+  }
+  &__footer {
+    bottom: 0;
+  }
+  &--gutters &__header,
+  &--gutters &__footer {
+    left: .5 * $gutter-width;
+    right: .5 * $gutter-width;
+  }
+
+
 }

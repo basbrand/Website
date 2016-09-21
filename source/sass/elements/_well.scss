@@ -23,4 +23,11 @@ Styleguide 3.13
   &--tile {
     display: table;
   }
+  &--root {
+    position: relative;
+  }
+  &--hero {
+    height: 100%;
+    height: 100vh;
+  }
 }

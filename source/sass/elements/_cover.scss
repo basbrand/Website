@@ -30,6 +30,7 @@ Styleguide 3.17
  * 2. Text on an image backdrop is white
  */
 .cover {
+  // background-color: $color-blue; // Debug
   position: relative;
   overflow: hidden;
   color: $white;

@@ -34,6 +34,11 @@ Styleguide 2.4.1
 	@include breakpoint($gt-large-handheld) {
 			margin-top: rhythm(5);
   }
+	@include breakpoint($gt-small-desktop) {
+		&--giant {
+			margin-top: rhythm(30);
+		}
+	}
 }
 
 
@@ -66,4 +71,9 @@ Styleguide 2.4.2
 	@include breakpoint($gt-large-handheld) {
 			padding-top: rhythm(5);
   }
+	@include breakpoint($gt-small-desktop) {
+		&--giant {
+			padding-top: rhythm(30);
+		}
+	}
 }
