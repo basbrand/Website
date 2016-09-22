@@ -20,12 +20,12 @@ Styleguide 3.1
 
 .body {
   &--whisper {
-    font-size: to-unit(10px, 1em, 12px);
+    font-size: to-unit(10px, 1em, 16px);
     line-height: line-height(10px, 1.1);
   }
   &--meta {
     @extend %meta-text;
-    font-size: to-unit(8px, 1em, 12px);
+    font-size: to-unit(8px, 1em, 16px);
     line-height: line-height(10px, 1.1);
   }
   @include breakpoint($gt-medium-desktop) {

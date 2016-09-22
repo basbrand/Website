@@ -54,8 +54,8 @@ html, body
  */
 html {
 
-  $reset-font-size: px(12px, 1%, $base-font-size);
-  $reset-line-height: px( rhythm(4), 1%, 12px);
+  $reset-font-size: px(16px, 1%, $base-font-size);
+  $reset-line-height: px( rhythm(5), 1%, 16px);
 
   width: 100%; /* 3 */
   background: $color-background; /* 4 */
@@ -64,18 +64,18 @@ html {
   text-size-adjust: 100%; /* 3 */
 
   @include breakpoint($gt-large-handheld) {
-    $reset-font-size: px(14px, 1%, $base-font-size);
-    $reset-line-height: px( rhythm(5), 1%, 14px);
-
-    font-size: #{$reset-font-size};
-    line-height: #{$reset-line-height};
+    // $reset-font-size: px(14px, 1%, $base-font-size);
+    // $reset-line-height: px( rhythm(5), 1%, 14px);
+    //
+    // font-size: #{$reset-font-size};
+    // line-height: #{$reset-line-height};
   }
   @include breakpoint($gt-medium-desktop) {
-    $reset-font-size: px(16px, 1%, $base-font-size);
-    $reset-line-height: px( rhythm(5), 1%, 16px);
-
-    font-size: #{$reset-font-size};
-    line-height: #{$reset-line-height};
+    // $reset-font-size: px(16px, 1%, $base-font-size);
+    // $reset-line-height: px( rhythm(5), 1%, 16px);
+    //
+    // font-size: #{$reset-font-size};
+    // line-height: #{$reset-line-height};
   }
 }
 

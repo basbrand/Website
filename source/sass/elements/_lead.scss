@@ -12,11 +12,11 @@ Styleguide 3.2
 */
 
 .lead {
-  font-size: to-unit(16px, 1em, 12px);
+  font-size: to-unit(14px, 1em, 16px);
   line-height: line-height(16px, 1.3);
-  margin: rhythm(10) 0;
+  // margin: rhythm(10) 0;
   @include breakpoint($gt-large-handheld) {
-    font-size: px(20px, 1em, 14px);
+    font-size: px(20px, 1em, 16px);
     line-height: line-height(20px, 1.3);
   }
   @include breakpoint($gt-medium-desktop) {

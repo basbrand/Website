@@ -18,13 +18,13 @@ Styleguide 4.2
  */
 .tile {
   position: relative;
-  display: table-cell; /* 1 */
-  vertical-align: middle; /* 1 */
+  // display: table-cell; /* 1 */
+  // vertical-align: middle; /* 1 */
   // box-shadow: inset 1px 1px 0 $white, inset -1px -1px 0 $white;
   &__body {
-    position: relative; /* 1 */
-    top: 50%; /* 1 */
-    transform: translateY(-50%); /* 1 */
+    // position: relative; /* 1 */
+    // top: 50%; /* 1 */
+    // transform: translateY(-50%); /* 1 */
   }
   &--shop {
     text-align: center; /* 1 */
@@ -37,21 +37,20 @@ Styleguide 4.2
   }
   &__header,
   &__footer {
-    position: absolute;
-    left: 0;
-    right: 0;
+    // position: absolute;
+    // left: 0;
+    // right: 0;
   }
   &__header {
-    top: 0;
+    // top: 0;
   }
   &__footer {
-    bottom: 0;
+    // bottom: 0;
   }
   &--gutters &__header,
   &--gutters &__footer {
     left: .5 * $gutter-width;
     right: .5 * $gutter-width;
   }
-
 
 }

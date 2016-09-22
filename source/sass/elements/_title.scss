@@ -20,7 +20,7 @@ Styleguide 3.3
  * Force block on inline tags
  */
 .title {
-  font: $font-weight--heading #{to-unit(14px, 1em, 12px)}/#{to-unit(rhythm(6), 1, 20px)} $font-family--heading;
+  font: $font-weight--heading #{to-unit(14px, 1em, 16px)}/#{to-unit(rhythm(6), 1, 20px)} $font-family--heading;
   display: inline-block; /* 1 */
   width: 100%; /* 1 */
   a &,
@@ -29,7 +29,7 @@ Styleguide 3.3
   }
   &--meta,
   &--section {
-    font: $font-weight--meta #{to-unit(14px, 1em, 12px)} $font-family--meta;
+    font: $font-weight--meta #{to-unit(14px, 1em, 16px)} $font-family--meta;
     text-transform: uppercase;
     letter-spacing: $letter-spacing;
   }
@@ -57,65 +57,59 @@ Styleguide 3.3
       font-weight: 300;
     }
   }
-}
-
-
-@include breakpoint($gt-small-handheld) {
-  .title {
-    font-size: to-unit(18px, 1em, 12px);
-    &--meta {
-      font: $font-weight--meta #{to-unit(14px, 1em, 12px)} $font-family--meta;
-    }
-    &--section {
-      font: $font-weight--meta #{to-unit(10px, 1em, 12px)} $font-family--meta;
+  // &--section,
+  &--well {
+    .well & {
+      margin-top: rhythm(10);
+      margin-bottom: rhythm(6);
     }
   }
-}
-@include breakpoint($gt-small-handheld,$landscape) {
-  .title {
-    &--meta {
-      font: $font-weight--meta #{to-unit(12px, 1em, 12px)} $font-family--meta;
-    }
-    &--section {
-      font: $font-weight--meta #{to-unit(8px, 1em, 12px)} $font-family--meta;
-    }
+  @include breakpoint($gt-small-handheld) {
+      font-size: to-unit(18px, 1em, 12px);
+      &--meta {
+        font: $font-weight--meta #{to-unit(14px, 1em, 16px)} $font-family--meta;
+      }
+      &--section {
+        font: $font-weight--meta #{to-unit(10px, 1em, 16px)} $font-family--meta;
+      }
   }
-}
-@include breakpoint($gt-large-handheld) {
-  .title {
-    font-size: to-unit(24px, 1em, 14px);
-    &--meta,
-    &--section {
-      font-size: to-unit(18px, 1em, 14px);
-    }
-    &--section {
-      font-size: to-unit(12px, 1em, 14px);
-    }
+  @include breakpoint($gt-small-handheld,$landscape) {
+      &--meta {
+        font: $font-weight--meta #{to-unit(12px, 1em, 16px)} $font-family--meta;
+      }
+      &--section {
+        font: $font-weight--meta #{to-unit(8px, 1em, 16px)} $font-family--meta;
+      }
   }
-}
-@include breakpoint($gt-medium-desktop) {
-  .title {
-    font-size: to-unit(28px, 1em, 16px);
-    &--meta,
-    &--section {
-      font-size: to-unit(18px, 1em, 16px);
-    }
-    &--section {
-      font-size: to-unit(12px, 1em, 16px);
-    }
+  @include breakpoint($gt-large-handheld) {
+      font-size: to-unit(24px, 1em, 16px);
+      &--meta,
+      &--section {
+        font-size: to-unit(18px, 1em, 16px);
+      }
+      &--section {
+        font-size: to-unit(12px, 1em, 16px);
+      }
   }
-}
-
-@include breakpoint( "(min-width: 768px) and (max-width: 768px)" ) {
-  .title {
-    font-size: to-unit(28px, 1em, 14px);
-    &--meta,
-    &--section {
-      font-size: to-unit(18px, 1em, 14px);
-    }
-    &--section {
-      font-size: to-unit(12px, 1em, 14px);
-    }
+  @include breakpoint($gt-medium-desktop) {
+      font-size: to-unit(28px, 1em, 16px);
+      &--meta,
+      &--section {
+        font-size: to-unit(18px, 1em, 16px);
+      }
+      &--section {
+        font-size: to-unit(12px, 1em, 16px);
+      }
+  }
+  @include breakpoint( "(min-width: 768px) and (max-width: 768px)" ) {
+      font-size: to-unit(28px, 1em, 16px);
+      &--meta,
+      &--section {
+        font-size: to-unit(18px, 1em, 16px);
+      }
+      &--section {
+        font-size: to-unit(12px, 1em, 16px);
+      }
   }
 }
 

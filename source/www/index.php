@@ -36,10 +36,10 @@ $high_res = "(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)";
   <script src="/javascript/pf.intrinsic.min.js" async></script>
   <base href="/"><style type="text/css">@font-face{font-family:futura-pt;src:url(https://fonts.typekit.net/af/9749f0/00000000000000000001008f/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5) format("woff2");font-weight:500;font-style:normal;}@font-face{font-family:futura-pt;src:url(https://fonts.typekit.net/af/8a5494/000000000000000000013365/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4) format("woff2");font-weight:400;font-style:normal;}@font-face{font-family:futura-pt;src:url(https://fonts.typekit.net/af/75f41e/000000000000000000010096/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3) format("woff2");font-weight:300;font-style:normal;}@font-face{font-family:merriweather;src:url(https://fonts.typekit.net/af/f20d56/000000000000000000014a3e/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4) format("woff2");font-weight:400;font-style:normal;}@font-face{font-family:merriweather;src:url(https://fonts.typekit.net/af/f87f0c/000000000000000000014a3d/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
 </head>
-  <body class="debug-layout">
+  <body class="ddebug-layout">
     <div class="landingpage">
       <div class="panel">
-        <figure class="well well--hero cover">
+        <figure class="handshake well well--hero cover">
           <picture class="cover__image">
             <!--[if IE 9]><video style="display: none;"><![endif]-->
             <source
@@ -145,13 +145,13 @@ $high_res = "(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)";
           </div>
         </div>
         <div class="introduction">
-          <div class="well well--root well--tile">
+          <div class="well well--tile">
             <div class="tile wings">
-              <h3 class="title title--section leader--giant trailer--giant">Onze visie</h3>
+              <h3 class="title title--welll title--section leader--giant trailer--hero">Onze visie</h3>
               <p class="lead">Slimme organisaties begrijpen mensen én techniek. Ze weten dat het digitale landschap het belangrijkste speelveld voor innovatie is. Maar bovenal weten ze wat hun klant van ze verwacht en gaat verwachten.</p>
             </div>
           </div>
-          <div class="well well--root well--tile">
+          <div class="well well--tile">
             <figure class="tile cover wings">
               <?php $_src = "https://images.unsplash.com/photo-1470753937643-efeb931202a9?dpr=1&auto=format&crop=entropy&fit=crop&q=80&cs=tinysrgb"?>
               <img
@@ -164,7 +164,7 @@ $high_res = "(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)";
                   <?php echo $_src . '&w=960&h=960'; ?> 480w,
                   <?php echo $_src . '&w=960&h=960'; ?> 2x">
               <figcaption>
-                  <h3 class="title title--section  leader--giant trailer--giant">In goed gezelschap</h3>
+                  <h3 class="title title--wellltitle--section  leader--giant trailer--hero">In goed gezelschap</h3>
               </figcaption>
             </figure>
           </div>

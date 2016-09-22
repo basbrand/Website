@@ -32,8 +32,8 @@ Styleguide 4.1
 .handshake {
   &__brand,
   &__body {
-    min-height: 50%;
-    min-height: 50vh;
+    height: 50%;
+    height: 50vh;
   }
   &__brand {
 
@@ -46,4 +46,12 @@ Styleguide 4.1
     //   padding-right: 0;
     // }
   }
+}
+
+
+// Move!!!!
+
+.testimonial {
+  // padding-left: percentage(1/12);
+  // padding-right: percentage(1/12);
 }
