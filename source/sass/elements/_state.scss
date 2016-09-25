@@ -17,23 +17,9 @@ Styleguide 3.99
 	left: -999em;
 	top: -999em; /* IE pushed the text to the bottom of the page without this */
 }
-
-.is-heir.is-heir {
-	color: inherit;
-	background: inherit;
-	text-decoration: inherit;
-}
-
-.is-crowned {
-	.masthead + & {
-		display: block;
-		margin-top: rhythm(-26);
-		@include breakpoint($gt-small-desktop) {
-	    margin-top: rhythm(-64);
-	  }
-	}
-}
-
 .is-rooted {
 	position: relative;
+}
+.is-cleared {
+	@include clearfix;
 }

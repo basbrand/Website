@@ -22,9 +22,9 @@ Styleguide 4.2
   // vertical-align: middle; /* 1 */
   // box-shadow: inset 1px 1px 0 $white, inset -1px -1px 0 $white;
   &__body {
-    // position: relative; /* 1 */
-    // top: 50%; /* 1 */
-    // transform: translateY(-50%); /* 1 */
+    position: relative; /* 1 */
+    top: 50%; /* 1 */
+    transform: translateY(-50%); /* 1 */
   }
   &--shop {
     text-align: center; /* 1 */

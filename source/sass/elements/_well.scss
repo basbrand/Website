@@ -5,26 +5,44 @@ Styleguide 3.13
 */
 
 .well {
-  float: left;
+  &__title {
+    margin-top: rhythm(10);
+    margin-bottom: rhythm(10);
+  }
+  &__body {
 
-  width: 100%;
-  // width: 100vw;
-  min-height: 50%;
-  min-height: 50vh;
-  @include breakpoint($landscape) {
-    width: 50%;
-    // width: 50vw;
-    min-height: 100%;
-    min-height: 100vh;
   }
-  &--backdrop {
-    color: $white;
+  &__footer {
+
   }
-  &--tile {
-    display: table;
-  }
-  &--hero {
-    min-height: 100%;
-    min-height: 100vh;
+  @include breakpoint($gt-large-handheld) {
+      &__title {
+        margin-top: rhythm(20);
+        margin-bottom: rhythm(10);
+      }
   }
 }
+// .well {
+//   float: left;
+//
+//   width: 100%;
+//   // width: 100vw;
+//   min-height: 50%;
+//   min-height: 50vh;
+//   @include breakpoint($landscape) {
+//     width: 50%;
+//     // width: 50vw;
+//     min-height: 100%;
+//     min-height: 100vh;
+//   }
+//   &--backdrop {
+//     color: $white;
+//   }
+//   &--tile {
+//     display: table;
+//   }
+//   &--hero {
+//     min-height: 100%;
+//     min-height: 100vh;
+//   }
+// }

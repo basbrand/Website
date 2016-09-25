@@ -21,7 +21,7 @@ Styleguide 3.3
  */
 .title {
   font: $font-weight--heading #{to-unit(14px, 1em, 16px)}/#{to-unit(rhythm(6), 1, 20px)} $font-family--heading;
-  display: inline-block; /* 1 */
+  // display: inline-block; /* 1 */
   width: 100%; /* 1 */
   a &,
   & a {
@@ -38,11 +38,6 @@ Styleguide 3.3
     font-weight: 600;
     .tile--cover & {
       font-weight: 300;
-    }
-
-    .well--root & {
-      position: absolute;
-      top: 0;
     }
   }
   &--em {

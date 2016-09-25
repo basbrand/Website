@@ -33,9 +33,18 @@ Styleguide 3.17
   // background-color: $color-blue; // Debug
   position: relative;
   overflow: hidden;
+  background-color: transparent !important;
   color: $white;
   box-shadow: inset 1px 1px 0 $white, inset -1px -1px 0 $white;
+  &--light {
+    color: $color-dark-blue;
+    .button {
+      color: $color-dark-blue;
+      border-color: $color-dark-blue;
+    }
+  }
   &__image {
+    background-color: #FFF;
     object-fit: cover;
     position: absolute;
     z-index: -1;

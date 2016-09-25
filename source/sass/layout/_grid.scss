@@ -62,19 +62,20 @@ Styleguide 2.7
     }
   }
 
-  @include breakpoint($lt-small-desktop,$landscape) {
-    &__cell {}
-    &--tile &__cell {
-      min-height: 50vh;
-      max-height: 50vh;
-      height: 50vh;
-    }
-    &--tools &__cell {
-      float: left;
-      min-width: 25%;
-      max-width: 25%;
-    }
-  }
+  // @include breakpoint($gt-small-desktop,$landscape) {
+  //   &__cell {}
+  //   &--tile &__cell {
+  //     min-height: 50vh;
+  //     max-height: 50vh;
+  //     height: 50vh;
+  //   }
+  //   &--tools &__cell {
+  //     float: left;
+  //     min-width: 25%;
+  //     max-width: 25%;
+  //   }
+  // }
+
 
 }
 @include breakpoint($landscape) {

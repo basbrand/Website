@@ -19,8 +19,8 @@ Styleguide 3.2
     font-size: px(20px, 1em, 16px);
     line-height: line-height(20px, 1.3);
   }
-  @include breakpoint($gt-medium-desktop) {
-    font-size: px(24px, 1em, 16px);
-    line-height: line-height(24px, 1.1);
-  }
+  // @include breakpoint($gt-medium-desktop) {
+  //   font-size: px(22px, 1em, 16px);
+  //   line-height: line-height(22px, 1.1);
+  // }
 }
