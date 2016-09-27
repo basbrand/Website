@@ -11,7 +11,8 @@ markup:
 
 Styleguide 3.99
 */
-
+.is-lt-large-handheld,
+.is-gt-large-handheld,
 .is-narrative {
 	position: absolute;
 	left: -999em;
@@ -22,4 +23,14 @@ Styleguide 3.99
 }
 .is-cleared {
 	@include clearfix;
+}
+.is-lt-large-handheld {
+	@include breakpoint($lt-large-handheld) {
+		position: static;
+	}
+}
+.is-gt-large-handheld {
+	@include breakpoint($gt-large-handheld) {
+		position: static;
+	}
 }

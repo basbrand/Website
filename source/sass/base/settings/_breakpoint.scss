@@ -46,3 +46,5 @@ $msie: "(-ms-high-contrast: active) and (-ms-high-contrast: none)";
 
 $portrait: "(orientation: portrait)";
 $landscape: "(orientation: landscape)";
+
+$high-res: "(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)";

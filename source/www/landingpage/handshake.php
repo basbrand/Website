@@ -20,7 +20,7 @@
     <img class="cover__image" src="/images/content/handshake--smartphone--portrait.jpg" srcset="/images/content/handshake--smartphone--portrait.jpg, /images/content/handheld/handshake--smartphone--portrait--2x.jpg 2x" alt="">
   </picture>
   <div class="well">
-    <h1 class="well__title brand">
+    <h1 class="well__title brand brand--cover brand--handshake">
       <span class="is-narrative">Brickson • Amsterdam – Den Bosch</span>
     </h1>
   </div>

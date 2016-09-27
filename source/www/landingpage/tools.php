@@ -1,15 +1,12 @@
 <section class="tools is-cleared">
-  <div class="well">
-    <header class="tools__header well__title">
-      <h2>
-        <span class="title title--section trailer--hero">Onze producten</span>
-        <br>
-        <em class="title">Krachtige tools voor slimme stappen</em>
-      </h2>
+  <div class="well tools__header">
+    <header class="well__title">
+      <em class="title title--section trailer--hero">Onze producten</em>
+      <h2 class="title leader">Krachtige tools voor slimme stappen</h2>
     </header>
   </div>
-  <div class="well">
-    <div class="tools__body grid grid--tools bleed">
+  <div class="well tools__body">
+    <div class="well__title grid grid--tools">
       <section class="grid__cell gutters">
         <h3 class="title title--section title--em leader trailer">Ontdekken</h3>
         <ul class="list list--reset list--tools list--discover body--meta">

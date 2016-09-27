@@ -77,6 +77,9 @@ html {
     // font-size: #{$reset-font-size};
     // line-height: #{$reset-line-height};
   }
+  @include breakpoint($high-res) {
+    font-size: 16pt;
+  }
 }
 
 
@@ -279,6 +282,15 @@ hr {
 
 pre {
   overflow: auto;
+}
+
+/*
+ * Reset address and em styling.
+ */
+
+address,
+em {
+  font-style: inherit;
 }
 
 /*
@@ -577,6 +589,7 @@ ol, ul {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
+  font-size: 1em;
 }
 
 p,

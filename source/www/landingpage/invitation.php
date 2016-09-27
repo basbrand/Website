@@ -5,8 +5,6 @@
     <p><a class="button" href="mailto:vooruit@brickson.nl?subject='Contact met Brickson'">Spreek &eacute;&eacute;n van onze experts &#187;</a></p>
   </div>
   <div class="shops well">
-
-
       <div class="grid grid--tile">
         <figure class="grid__cell tile tile--shop cover">
           <img
@@ -69,6 +67,5 @@
           </figcaption>
         </figure>
       </div>
-
   </div>
 </div>

@@ -37,12 +37,17 @@ Styleguide 7.1
       padding-right: gutter(1);
     }
   }
-  .shops {
+  .shops,
+  .offices {
     padding: 0 !important;
   }
-  .tools,
-  .contact .well {
-    background-color: #FFF; /* 1 */
+  .tools {
+    .well {
+      min-height: auto;
+    }
+  }
+  .testimonial {
+    width: 100%;
   }
   @include breakpoint($landscape) {
     .handshake,
@@ -71,6 +76,15 @@ Styleguide 7.1
       .well {
         padding-left: percentage(1/12);
         padding-right: percentage(1/12);
+      }
+    }
+    .offices,
+    .shops {
+      .grid__cell.tile {
+        min-height: 50%;
+        min-height: 50vh;
+        max-height: 50%;
+        max-height: 50vh;
       }
     }
   }
@@ -110,6 +124,19 @@ Styleguide 7.1
       .well {
         padding-left: percentage(1/12);
         padding-right: percentage(1/12);
+      }
+    }
+  }
+
+
+  @include breakpoint($gt_small_desktop) {
+    .offices,
+    .shops {
+      .grid__cell.tile {
+        min-height: 50%;
+        min-height: 25vh;
+        max-height: 50%;
+        max-height: 25vh;
       }
     }
   }
@@ -178,15 +205,42 @@ Styleguide 7.1
         min-height: 50vh;
       }
     }
+
+    .tools,
+    .contact .well {
+      background-color: #FFF; /* 1 */
+    }
     .tools {
+      .well {
+        min-height: 100%;
+        min-height: 100vh;
+        height: 100%;
+        height: 100vh;
+        width: 50%;
+        overflow-y: scroll;
+      }
       &__header,
       &__body {
-        float: left;
-        width: 50%;
       }
       &__header {
+        color: $white;
+        position: relative;
+        &:before {
+          display: block;
+          content: "";
+          position: absolute;
+          top: 0; left: 0;
+          bottom: 0; right: gutter();
+          background: $color-indigo url("/images/content/tools--desktop.jpg") no-repeat center;
+          background-size: cover;
+        }
+        .well__title {
+          position: relative;
+          top: 1;
+        }
       }
       &__body {
+        padding: 0 !important;
       }
     }
   }
