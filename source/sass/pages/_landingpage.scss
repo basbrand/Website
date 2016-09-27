@@ -209,6 +209,8 @@ Styleguide 7.1
     .tools,
     .contact .well {
       background-color: #FFF; /* 1 */
+      position: relative;
+      z-index: 1;
     }
     .tools {
       .well {

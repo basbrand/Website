@@ -21,9 +21,15 @@ Styleguide 4.3
   &__image {
     outline: 1px solid $white;
   }
+  @include breakpoint($lt-large-handheld) {
+    &__image {
+      position: relative;
+      left: -50%;
+    }
+  }
   @include breakpoint($lt-large-handheld,$landscape) {
-    // &__item {
-    //   padding-right: 0;
-    // }
+    &__image {
+      left: -100%;
+    }
   }
 }
