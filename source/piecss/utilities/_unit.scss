@@ -67,6 +67,8 @@
         $number: percentage($number / $context);
     } @elseif unit($unit)=='rem' {
         $number: $number / $font-size * $unit;
+    } @elseif unit($unit)=='pt' {
+        $number: $number / $font-size * $unit;
     } @else {
         $number: $number / $context * $unit;
     }
@@ -89,7 +91,7 @@
 ///
 
 @function px( $value, $unit: $unit, $context: $font-size ) {
-    
+
     @if unit($value)!="px" {
         @warn 'Argument $value needs to be unitless, or set in px.';
         @return $value;
@@ -110,7 +112,7 @@
 ///
 /// @param {Number} $value - The value to convert, in any unit
 /// @param {Number} $context ($font-size) - The context of the targeted element, for calculations to em
-/// 
+///
 /// @return {Number} - The value in px
 ///
 
@@ -134,7 +136,7 @@
 /// @since 0.1
 ///
 /// @param {Number} $value - The value to convert
-/// 
+///
 /// @return {Number} - The value in px
 ///
 
@@ -149,7 +151,7 @@
 ///
 /// @param {Number} $value - The value to convert
 /// @param {Number} $context ($font-size) - The context of the targeted element
-/// 
+///
 /// @return {Number} - The value in px
 ///
 
@@ -166,7 +168,7 @@
 ///
 /// @param {Number} $value - The value to convert
 /// @param {Number} $context ($font-size) - The context of the targeted element
-/// 
+///
 /// @return {Number} - The value in px
 ///
 

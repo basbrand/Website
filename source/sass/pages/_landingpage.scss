@@ -41,6 +41,9 @@ Styleguide 7.1
   .offices {
     padding: 0 !important;
   }
+  .offices {
+    text-align: center;
+  }
   .tools {
     .well {
       min-height: auto;
@@ -124,6 +127,11 @@ Styleguide 7.1
       .well {
         padding-left: percentage(1/12);
         padding-right: percentage(1/12);
+      }
+    }
+    .offices {
+      .brand {
+        margin: rhythm(3) 0;
       }
     }
   }
@@ -211,6 +219,8 @@ Styleguide 7.1
       background-color: #FFF; /* 1 */
       position: relative;
       z-index: 1;
+    }
+    .offices {
     }
     .tools {
       .well {

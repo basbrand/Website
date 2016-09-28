@@ -20,7 +20,7 @@
             alt=""
             src="/images/content/brickson_amsterdam--tile--smartphone.jpg"
             srcset="
-              /images/content/brickson_amsterdam--tile--tablet--2x.jpg 320w 2x,
+              /images/content/brickson_amsterdam--tile--tablet--2x.jpg 2x,
               /images/content/brickson_amsterdam--tile--tablet.jpg 320w,
               /images/content/brickson_amsterdam--tile--smartphone.jpg 240w,
               /images/content/brickson_amsterdam--tile--smartphone--2x.jpg 240w,
@@ -35,7 +35,7 @@
             alt=""
             src="/images/content/concept--tile--smartphone.jpg"
             srcset="
-              /images/content/brickson_den-bosch--tile--tablet--2x.jpg 320w 2x,
+              /images/content/brickson_den-bosch--tile--tablet--2x.jpg 2x,
               /images/content/brickson_den-bosch--tile--tablet.jpg 320w,
               /images/content/brickson_den-bosch--tile--smartphone.jpg 240w,
               /images/content/brickson_den-bosch--tile--smartphone--2x.jpg 240w,
@@ -48,11 +48,11 @@
           <h3 class="brand brand--ams leader--tiny trailer--tiny">
             <span class="is-narrative">Brickson Amsterdam</span>
           </h3>
-          <address class="">
+          <address class="gutters">
             <p>Amsteldijk&nbsp;128<br/>
             1087 RT Amsterdam</p>
             <p class="leader--tiny"><a class="anchor--shy anchor--reset body--number" href="tel:0031202610120"><em>(020) 26 101 20</em></a></p>
-            <p><a class="anchor--shy body--email" href="mailto:amsterdam@brickson.eu?subject=Samen stappen zetten"><em>amsterdam@brickson.eu</em></a></p>
+            <p><a class="anchor--shy body--email" href="mailto:amsterdam@brickson.eu?subject=Samen%20stappen%20zetten"><em>amsterdam@brickson.eu</em></a></p>
 
           </address>
         </div>
@@ -61,11 +61,10 @@
             <span class="is-narrative">Brickson Den Bosch</span>
           </h3>
           <address class="gutters">
-            <h3 class="is-narrative">Brickson Den Bosch</h3>
             <p>Burg<span class="is-lt-large-handheld">.</span><span class="is-gt-large-handheld">emeester</span>&nbsp;Burgerslaan&nbsp;40a<br/>
             5245 NH Rosmalen</p>
             <p class="leader--tiny"><a class="anchor--shy anchor--reset body--number" href="tel:003173123456"><em>(073) 12 34 567</em></a></p>
-            <p><a class="anchor--shy body--email" href="mailto:denbosch@brickson.eu?subject=Samen stappen zetten"><em>denbosch@brickson.eu</em></a></p>
+            <p><a class="anchor--shy body--email" href="mailto:denbosch@brickson.eu?subject=Samen%20stappen%20zetten"><em>denbosch@brickson.eu</em></a></p>
           </address>
         </div>
       </div>

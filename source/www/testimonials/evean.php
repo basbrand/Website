@@ -21,7 +21,7 @@
     <div class="well__body leader-inside">
       <figure class="tile__body person media media--middle bleed trailer">
         <span class="gutters">
-          <img src="/images/heads/marja_smits.jpg" scrset="" class="person__image" width="56" height="56" style="background: Grey;"/>
+          <img src="/images/heads/marja_smits.jpg" class="person__image" width="56" height="56" style="background: Grey;"/>
         </span>
         <figcaption class="media__stretcher">
           <span class="person__name title title--section">MARJA SMITS</span>

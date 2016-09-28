@@ -7,6 +7,7 @@ Styleguide 2.10
 .align {
 	&--center,
 	&--middle {
+		position: relative;
 		top: 50%;
 	}
 	&--center {
@@ -14,6 +15,6 @@ Styleguide 2.10
 		transform: translateY(-50%) translateX(-50%);
 	}
 	&--middle {
-		transform: translateY(-50%);
+		transform: translateY(50%);
 	}
 }

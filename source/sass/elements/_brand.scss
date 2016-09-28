@@ -13,7 +13,6 @@ Styleguide 3.11
 
 .brand {
   height: rhythm(12);
-  height: rhythm(12);
   background: no-repeat center;
   background-image: url("/images/logos/Brickson-Logotype-RGB-LB--tablet--x2.png");
   background-image: url("/images/logos/Brickson-Logotype-RGB-LB.svg");
@@ -39,8 +38,13 @@ Styleguide 3.11
     background-image: url("/images/logos/Brickson-Logotype-RGB-DB.svg");
   }
   @include breakpoint($gt-large-handheld) {
+    height: rhythm(17);
+    &--ams,
+    &--dnb {
+      height: rhythm(22);
+    }
     &--handshake {
-      height: rhythm(26);
+      height: rhythm(27);
     }
   }
 }

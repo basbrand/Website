@@ -11,8 +11,7 @@
       srcset="
         /images/content/in-good-company--tablet.jpg 640w,
         /images/content/in-good-company--smartphone.jpg 480w,
-        /images/content/in-good-company--desktop.jpg 1024w,
-        /images/content/in-good-company--desktop.jpg 2x">
+        /images/content/in-good-company--desktop.jpg 1024w">
     <h3 class="well__title title title--section">In goed gezelschap</h3>
     <figure class="leader">
       <img
