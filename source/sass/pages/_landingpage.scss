@@ -91,7 +91,13 @@ Styleguide 7.1
       }
     }
   }
-  @include breakpoint($gt-large-handheld, $portrait) {
+  @include breakpoint($gt-large-handheld,$landscape) {
+    .introduction__cover {
+      max-height: 22vh;
+      width: auto;
+    }
+  }
+  @include breakpoint($gt-large-handheld,$portrait) {
     .handshake,
     .invitation,
     .introduction,

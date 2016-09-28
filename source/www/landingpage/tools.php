@@ -6,7 +6,7 @@
     </header>
   </div>
   <div class="well tools__body">
-    <div class="well__title grid grid--tools">
+    <div class="well__title grid grid--tools bleed">
       <section class="grid__cell gutters">
         <h3 class="title title--section title--em leader trailer">Ontdekken</h3>
         <ul class="list list--reset list--tools list--discover body--meta">

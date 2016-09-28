@@ -15,7 +15,7 @@
     <h3 class="well__title title title--section">In goed gezelschap</h3>
     <figure class="leader">
       <img
-        class="image--stretch"
+        class="introduction__cover image--stretch"
         alt=""
         src="/images/logos/brands.jpg"
         srcset="
