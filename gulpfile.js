@@ -3,6 +3,7 @@
 
 var gulp        = require('gulp');
 var sass        = require('gulp-sass');
+var minify      = require('gulp-clean-css');
 var styleguide  = require('sc5-styleguide');
 
 // Path definitions
@@ -45,27 +46,27 @@ gulp.task('scss', function() {
 });
 
 gulp.task('assets', function() {
-  gulp.src([sourcePath + '/javascript/**'])
+    gulp.src([sourcePath + '/javascript/**'])
     // Do image sprites, optimizations etc.
-    .pipe(gulp.dest(buildPath + '/www/javascript'))
-    .pipe(gulp.dest(styleguideTmpPath + '/javascript'));
-  gulp.src([sourcePath + '/fonts/**'])
+        .pipe(gulp.dest(buildPath + '/www/javascript'))
+        .pipe(gulp.dest(styleguideTmpPath + '/javascript'));
+    gulp.src([sourcePath + '/fonts/**'])
     // Do image sprites, optimizations etc.
-    .pipe(gulp.dest(buildPath + '/www/fonts'))
-    .pipe(gulp.dest(styleguideTmpPath + '/fonts'));
-  gulp.src([sourcePath + '/images/**'])
+        .pipe(gulp.dest(buildPath + '/www/fonts'))
+        .pipe(gulp.dest(styleguideTmpPath + '/fonts'));
+    gulp.src([sourcePath + '/images/**'])
     // Do image sprites, optimizations etc.
-    .pipe(gulp.dest(buildPath + '/www/images'))
-    .pipe(gulp.dest(styleguideTmpPath + '/images'));
-  gulp.src([sourcePath + '/www/**'])
+        .pipe(gulp.dest(buildPath + '/www/images'))
+        .pipe(gulp.dest(styleguideTmpPath + '/images'));
+    gulp.src([sourcePath + '/www/**'])
     // Do image sprites, optimizations etc.
-    .pipe(gulp.dest(buildPath + '/www'))
+        .pipe(gulp.dest(buildPath + '/www'))
 });
 
 gulp.task('prototype', function() {
-  gulp.src([sourcePath + '/prototype/**'])
+    gulp.src([sourcePath + '/prototype/**'])
     // Do image sprites, optimizations etc.
-    .pipe(gulp.dest(buildPath + '/prototype'))
+        .pipe(gulp.dest(buildPath + '/prototype'))
 });
 // Building styleguide for static hosting to be displayed as a part of the application
 //
@@ -77,37 +78,39 @@ gulp.task('prototype', function() {
 // styles.
 
 gulp.task('staticStyleguide:generate', function() {
-  return gulp.src(scssWild)
-    .pipe(styleguide.generate({
-        title: 'Brickson Pattern Library',
-        rootPath: styleguideBuildPath,
-        appRoot: styleguideAppRoot,
-        overviewPath: overviewPath,
-        sideNav: true,
-        previousSection: true,
-        nextSection: true,
-        extraHead: [
-            '<link rel="stylesheet" type="text/css" href="/screen.css">',
-            '<script src="/javascript/html5shiv.min.js"></script>',
-            '<script src="https://use.typekit.net/zaf1yku.js"></script>',
-            '<script>try{Typekit.load({ async: true });}catch(e){}</script>',
-            '<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>',
-            '<script src="/javascript/jquery.plugins.js"></script>',
-            '<script src="/javascript/jquery.modules.js"></script>',
-            '<script src="/javascript/picturefill.min.js" async></script>',
-            '<script src="/javascript/pf.intrinsic.min.js" async></script>'
-        ],
-      }))
-    .pipe(gulp.dest(styleguideBuildPath));
+    return gulp.src(scssWild)
+        .pipe(styleguide.generate({
+            title: 'Brickson Pattern Library',
+            rootPath: styleguideBuildPath,
+            appRoot: styleguideAppRoot,
+            overviewPath: overviewPath,
+            sideNav: true,
+            previousSection: true,
+            nextSection: true,
+            extraHead: [
+                '<link rel="stylesheet" type="text/css" href="/screen.css">',
+                '<script src="/javascript/html5shiv.min.js"></script>',
+                '<script src="https://use.typekit.net/zaf1yku.js"></script>',
+                '<script>try{Typekit.load({ async: true });}catch(e){}</script>',
+                '<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>',
+                '<script src="/javascript/jquery.plugins.js"></script>',
+                '<script src="/javascript/jquery.modules.js"></script>',
+                '<script src="/javascript/picturefill.min.js" async></script>',
+                '<script src="/javascript/pf.intrinsic.min.js" async></script>'
+            ],
+        }))
+        .pipe(gulp.dest(styleguideBuildPath));
 });
 
 gulp.task('staticStyleguide:applystyles', function() {
-  return gulp.src(scssRoot)
-    .pipe(sass({
-      errLogToConsole: true
-    }))
-    .pipe(styleguide.applyStyles())
-    .pipe(gulp.dest(styleguideBuildPath));
+    console.log(styleguideBuildPath);
+    return gulp.src(scssRoot)
+        .pipe(sass({
+            errLogToConsole: true
+        }))
+        .pipe(minify())
+        .pipe(styleguide.applyStyles())
+        .pipe(gulp.dest(styleguideBuildPath));
 });
 
 gulp.task('staticStyleguide', ['staticStyleguide:generate', 'staticStyleguide:applystyles']);
@@ -119,39 +122,39 @@ gulp.task('staticStyleguide', ['staticStyleguide:generate', 'staticStyleguide:ap
 // styles are modified.
 
 gulp.task('styleguide:generate', function() {
-  return gulp.src(scssWild)
-    .pipe(styleguide.generate({
-        title: 'Brickson Pattern Library',
-        server: true,
-        rootPath: styleguideTmpPath,
-        overviewPath: overviewPath,
-        sideNav: true,
-        previousSection: true,
-        nextSection: true,
-        disableHtml5Mode: true,
-        extraHead: [
-            '<link rel="stylesheet" type="text/css" href="/screen.css">',
-            '<script src="https://use.typekit.net/zaf1yku.js"></script>',
-            '<script>try{Typekit.load({ async: true });}catch(e){}</script>',
-            '<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>',
-            '<script src="/javascript/jquery.plugins.js"></script>',
-            '<script src="/javascript/jquery.modules.js"></script>',
-            '<script>document.createElement( "picture" );</script>',
-            '<script src="/javascript/picturefill.min.js" async></script>'
-        ],
-        beforeBody: '<div class="debug-rhythm debug-layout">',
-        afterBody: '</div>'
-      }))
-    .pipe(gulp.dest(styleguideTmpPath));
+    return gulp.src(scssWild)
+        .pipe(styleguide.generate({
+            title: 'Brickson Pattern Library',
+            server: true,
+            rootPath: styleguideTmpPath,
+            overviewPath: overviewPath,
+            sideNav: true,
+            previousSection: true,
+            nextSection: true,
+            disableHtml5Mode: true,
+            extraHead: [
+                '<link rel="stylesheet" type="text/css" href="/screen.css">',
+                '<script src="https://use.typekit.net/zaf1yku.js"></script>',
+                '<script>try{Typekit.load({ async: true });}catch(e){}</script>',
+                '<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>',
+                '<script src="/javascript/jquery.plugins.js"></script>',
+                '<script src="/javascript/jquery.modules.js"></script>',
+                '<script>document.createElement( "picture" );</script>',
+                '<script src="/javascript/picturefill.min.js" async></script>'
+            ],
+            beforeBody: '<div class="debug-rhythm debug-layout">',
+            afterBody: '</div>'
+        }))
+        .pipe(gulp.dest(styleguideTmpPath));
 });
 
 gulp.task('styleguide:applystyles', function() {
-  return gulp.src(scssRoot)
-    .pipe(sass({
-      errLogToConsole: true
-    }))
-    .pipe(styleguide.applyStyles())
-    .pipe(gulp.dest(styleguideTmpPath));
+    return gulp.src(scssRoot)
+        .pipe(sass({
+            errLogToConsole: true
+        }))
+        .pipe(styleguide.applyStyles())
+        .pipe(gulp.dest(styleguideTmpPath));
 });
 
 gulp.task('styleguide', ['styleguide:generate', 'styleguide:applystyles']);

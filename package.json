@@ -10,7 +10,8 @@
     "gulp": "^3.9.1",
     "gulp-sass": "^2.2.0",
     "piecss": "0.2.2-b",
-    "sc5-styleguide": "^0.3.46"
+    "sc5-styleguide": "^0.3.46",
+    "gulp-clean-css": "2.0.13"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
