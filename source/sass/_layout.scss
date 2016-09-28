@@ -10,46 +10,68 @@ Debug layout
 Styleguide 2.0.1
 */
 
-// $debug-layout: true;
-// $debug-rhythm: true;
+$debug-layout: false;
+$debug-rhythm: false;
+$debug-breakpoint: true;
 
-html:after,
-body:after {
-  display: block;
-  position: fixed;
-  right: 0;
-  background: #fff;
-  padding: rhythm();
-}
-html:after {
-  top: 0;
-  @include breakpoint($gt-small-handheld) {
-    content: 'gt-small-handheld';
+@if $debug-breakpoint {
+  html:after,
+  body:after {
+    display: block;
+    position: fixed;
+    right: 0;
+    background: #fff;
+    padding: rhythm();
   }
-  @include breakpoint($gt-medium-handheld) {
-    content: 'gt-medium-handheld';
+  html:after {
+    top: 0;
+    @include breakpoint($gt-small-handheld,$landscape) {
+      content: 'gt-small-handheld - landscape';
+    }
+    @include breakpoint($gt-small-handheld,$portrait) {
+      content: 'gt-small-handheld - portrait';
+    }
+    @include breakpoint($gt-medium-handheld,$landscape) {
+      content: 'gt-medium-handheld - landscape';
+    }
+    @include breakpoint($gt-medium-handheld,$portrait) {
+      content: 'gt-medium-handheld - portrait';
+    }
+    @include breakpoint($gt-large-handheld,$landscape) {
+      content: 'gt-large-handheld - landscape';
+    }
+    @include breakpoint($gt-large-handheld,$portrait) {
+      content: 'gt-large-handheld - portrait';
+    }
+    @include breakpoint($gt-small-desktop,$landscape) {
+      content: 'gt-small-desktop - landscape';
+    }
+    @include breakpoint($gt-small-desktop,$portrait) {
+      content: 'gt-small-desktop - portrait';
+    }
+    @include breakpoint($gt-medium-desktop,$landscape) {
+      content: 'gt-medium-desktop - landscape';
+    }
+    @include breakpoint($gt-medium-desktop,$portrait) {
+      content: 'gt-medium-desktop - portrait';
+    }
+    @include breakpoint($gt-large-desktop,$landscape) {
+      content: 'gt-large-desktop - landscape';
+    }
+    @include breakpoint($gt-large-desktop,$portrait) {
+      content: 'gt-large-desktop - portrait';
+    }
   }
-  @include breakpoint($gt-large-handheld) {
-    content: 'gt-large-handheld';
-  }
-  @include breakpoint($gt-small-desktop) {
-    content: 'gt-small-desktop';
-  }
-  @include breakpoint($gt-medium-desktop) {
-    content: 'gt-medium-desktop';
-  }
-  @include breakpoint($gt-large-desktop) {
-    content: 'gt-large-desktop';
-  }
-}
-body:after {
-  top: rhythm(6);
-  @include breakpoint($landscape) {
-    content: 'landscape';
-  }
-  @include breakpoint($portrait) {
-    content: 'portrait';
-  }
+  // This doesnt work on Samsung Galaxy
+  // body:after {
+  //   top: rhythm(6);
+  //   @include breakpoint($landscape) {
+  //     content: 'landscape';
+  //   }
+  //   @include breakpoint($portrait) {
+  //     content: 'portrait';
+  //   }
+  // }
 }
 
 @mixin debug-rhythm($rhythm: $rhythm)
