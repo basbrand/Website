@@ -1,10 +1,11 @@
 
 // Imports
 
-var gulp        = require('gulp');
-var sass        = require('gulp-sass');
-var minify      = require('gulp-clean-css');
-var styleguide  = require('sc5-styleguide');
+var gulp        = require('gulp'),
+    sass        = require('gulp-sass'),
+    minify      = require('gulp-clean-css'),
+    styleguide  = require('sc5-styleguide'),
+    postcss     = require('gulp-postcss');
 
 // Path definitions
 
@@ -108,6 +109,7 @@ gulp.task('staticStyleguide:applystyles', function() {
         .pipe(sass({
             errLogToConsole: true
         }))
+        .pipe(postcss({}))
         .pipe(minify())
         .pipe(styleguide.applyStyles())
         .pipe(gulp.dest(styleguideBuildPath));
