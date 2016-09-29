@@ -4,13 +4,13 @@ Person
 An image and some meta data (name, date, occupation, etc)
 
 markup:
-<figure class="person media">
-  <span class="gutters">
-    <img src="" scrset="" class="person__image" width="100" height="100" style="background: Grey;"/>
+<figure class="person bleed">
+  <span class="person__picture gutters">
+    <img src="/images/heads/marja_smits.jpg" class="person__image" width="56" height="56" style="background: Grey;"/>
   </span>
-  <figcaption class="media__stretcher gutters">
-    <span class="person__name title--meta">Babs Gösgens</span>
-    <span class="person__occupation">Webarchitect at Brickson</span>
+  <figcaption class="person__body">
+    <span class="person__name title title--section">MARJA SMITS</span>
+    <small class="person__occupation">Manager Strategie en Marketing Evean</small>
   </figcaption>
 </figure>
 
@@ -18,18 +18,25 @@ Styleguide 4.3
 */
 
 .person {
+  position: relative;
+  left: px-to-pt(-1*rhythm(5));
+  display: table;
+  &__picture,
+  &__body {
+    display: table-cell;
+    vertical-align: middle;
+    line-height: px-to-pt(rhythm(3));
+  }
   &__image {
     outline: 1px solid $white;
+    width: px-to-pt(rhythm(10));
+    height: px-to-pt(rhythm(10));
   }
-  @include breakpoint($lt-large-handheld) {
+  @include breakpoint($gt-small-desktop) {
+    left: px-to-pt(-1*rhythm(6));
     &__image {
-      position: relative;
-      left: -50%;
-    }
-  }
-  @include breakpoint($lt-large-handheld,$landscape) {
-    &__image {
-      left: -100%;
+      width: px-to-pt(rhythm(12));
+      height: px-to-pt(rhythm(12));
     }
   }
 }

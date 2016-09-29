@@ -54,8 +54,8 @@ html, body
  */
 html {
 
-  $reset-font-size: px-to-pt( 16px );
-  $reset-line-height: px-to-pt( rhythm(5) );
+  $reset-font-size: px-to-pt( 12px );
+  $reset-line-height: px-to-pt( rhythm(4) );
 
   width: 100%; /* 3 */
   background: $color-background; /* 4 */
@@ -64,11 +64,6 @@ html {
   text-size-adjust: 100%; /* 3 */
 
 }
-
-body {
-  // Global font-size overrides go here
-}
-
 
 /* HTML5 display definitions
    ========================================================================== */
@@ -201,7 +196,7 @@ mark {
  */
 
 small {
-  font-size: px-to-pt(10px);
+    font-size: to-unit(10px, 1em, 12px);
 }
 
 /*
@@ -512,9 +507,6 @@ samp {
 }
 pre {
     white-space: pre-wrap;
-}
-small {
-    font-size: 80%;
 }
 sub,
 sup {

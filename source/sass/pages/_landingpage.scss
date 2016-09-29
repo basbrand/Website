@@ -26,6 +26,11 @@ Styleguide 7.1
       min-height: 50vh;
     }
   }
+  .invitation {
+    .shops {
+      line-height: 1;
+    }
+  }
   .handshake,
   .invitation,
   .introduction,
@@ -33,8 +38,8 @@ Styleguide 7.1
   .tools,
   .contact {
     .well {
-      padding-left: gutter(1);
-      padding-right: gutter(1);
+      padding-left: percentage(1/12);
+      padding-right: percentage(1/12);
     }
   }
   .shops,
@@ -46,7 +51,7 @@ Styleguide 7.1
   }
   .tools {
     .well {
-      min-height: auto;
+      min-height: 0;
     }
     &__header {
       .well__title {
@@ -56,6 +61,12 @@ Styleguide 7.1
   }
   .testimonial {
     width: 100%;
+  }
+  .introduction {
+    overflow: hidden;
+    .tile__body {
+      width: percentage(10/12);
+    }
   }
   @include breakpoint($landscape) {
     .handshake,
@@ -82,8 +93,8 @@ Styleguide 7.1
     .tools,
     .contact {
       .well {
-        padding-left: percentage(1/12);
-        padding-right: percentage(1/12);
+        // padding-left: percentage(1/12);
+        // padding-right: percentage(1/12);
       }
     }
     .offices,
@@ -98,8 +109,9 @@ Styleguide 7.1
   }
   @include breakpoint($gt-large-handheld,$landscape) {
     .introduction__cover {
-      max-height: 22vh;
+      // max-height: 22vh;
       width: auto;
+      max-width: percentage(10/12);
     }
   }
   @include breakpoint($gt-large-handheld,$portrait) {
@@ -136,8 +148,8 @@ Styleguide 7.1
     .tools,
     .contact {
       .well {
-        padding-left: percentage(1/12);
-        padding-right: percentage(1/12);
+        // padding-left: percentage(1/12);
+        // padding-right: percentage(1/12);
       }
     }
     .offices {
@@ -182,6 +194,16 @@ Styleguide 7.1
     .invitation,
     .testimonial {
       width: percentage(24/36);
+    }
+
+    .handshake,
+    .invitation,
+    .testimonial,
+    .tools {
+      .well {
+        padding-left: percentage(1/24);
+        padding-right: percentage(1/24);
+      }
     }
     .handshake,
     .invitation {

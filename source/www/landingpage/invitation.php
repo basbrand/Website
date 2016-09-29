@@ -2,7 +2,7 @@
   <div class="well">
     <h2 class="well__title title">Wat is jouw volgende stap?</h2>
     <p class="lead leader trailer">Werken met Brickson betekent samen ontdekken, bedenken, ontwerpen of bouwen. We starten met de belangrijkste stap voor jouw ontwikkeling.</p>
-    <p><a class="button" href="mailto:vooruit@brickson.nl?subject='Vooruit%20met%20Brickson'">Spreek &eacute;&eacute;n van onze experts &#187;</a></p>
+    <p><a class="button button--stretch" href="mailto:vooruit@brickson.nl?subject='Vooruit%20met%20Brickson'">Spreek &eacute;&eacute;n van onze experts &#187;</a></p>
   </div>
   <div class="shops well">
       <div class="grid grid--tile">
@@ -17,7 +17,7 @@
               /images/content/challenge--tile--smartphone.jpg 240w,
               /images/content/challenge--tile--smartphone--2x.jpg 2x">
           <figcaption class="tile__body gutters">
-            <h3><span class="title title--meta trailer-inside">Ontdekken</span><br/><span class="title title--section leader-inside">Analysis &amp; Challenge</span></h3>
+            <h3><span class="title title--meta trailer-inside">Ontdekken</span><br/><br/><span class="title title--section leader-inside--hero">Analysis &amp;<br/>Challenge</span></h3>
           </figcaption>
         </figure>
         <figure class="grid__cell tile tile--shop cover">
@@ -31,7 +31,7 @@
               /images/content/concept--tile--smartphone.jpg 240w,
               /images/content/concept--tile--smartphone--2x.jpg 2x">
           <figcaption class="tile__body gutters">
-            <h3><span class="title title--meta trailer-inside">Bedenken</span><br/><span class="title title--section leader-inside">Strategy &amp; Concept</span></h3>
+            <h3><span class="title title--meta trailer-inside">Bedenken</span><br/><br/><span class="title title--section leader-inside">Strategy &amp;<br/>Concept</span></h3>
           </figcaption>
         </figure>
         <figure class="grid__cell tile tile--shop cover">
@@ -45,7 +45,7 @@
               /images/content/design--tile--smartphone.jpg 240w,
               /images/content/design--tile--smartphone--2x.jpg 2x">
           <figcaption class="tile__body gutters">
-            <h3><span class="title title--meta trailer-inside">Ontwerpen</span><br/><span class="title title--section leader-inside">Digital User Experience</span></h3>
+            <h3><span class="title title--meta trailer-inside">Ontwerpen</span><br/><br/><span class="title title--section leader-inside">Digital<br/>User Experience</span></h3>
           </figcaption>
         </figure>
         <figure class="grid__cell tile tile--shop cover">
@@ -59,7 +59,7 @@
               /images/content/build--tile--smartphone.jpg 240w,
               /images/content/build--tile--smartphone--2x.jpg 2x">
           <figcaption class="tile__body gutters">
-            <h3><span class="title title--meta trailer-inside">Bouwen</span><br/><span class="title title--section leader-inside">Implement &amp; Develop</span></h3>
+            <h3><span class="title title--meta trailer-inside">Bouwen</span><br/><br/><span class="title title--section leader-inside">Implement &amp;<br/>Develop</span></h3>
           </figcaption>
         </figure>
       </div>

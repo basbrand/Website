@@ -19,13 +19,13 @@
     <!--[if IE 9]></video><![endif]-->
     <img class="cover__image" src="/images/content/handshake--smartphone--portrait.jpg" srcset="/images/content/handshake--smartphone--portrait.jpg, /images/content/handheld/handshake--smartphone--portrait--2x.jpg 2x" alt="">
   </picture>
-  <div class="well">
-    <h1 class="well__title brand brand--cover brand--handshake">
-      <span class="is-narrative">Brickson • Amsterdam – Den Bosch</span>
-    </h1>
+  <div class="well is-rooted">
+      <h1 class="well__title brand brand--cover brand--handshake">
+        <span class="is-narrative">Brickson • Amsterdam – Den Bosch</span>
+      </h1>
   </div>
-  <div class="well">
-    <h2 class="title">Vooruit met digitaal</h2>
-    <p class="lead trailer leader">Brickson is er voor organisaties die de volgende stap in digitaal willen maken. Met een strategie, digitaal concept, website of een applicatie.</p>
+  <div class="well tile">
+      <h2 class="title well__title ">Vooruit met digitaal</h2>
+      <p class="lead trailer leader">Brickson is er voor organisaties die de volgende stap in digitaal willen maken. Met een strategie, digitaal concept, website of een applicatie.</p>
   </div>
 </div>

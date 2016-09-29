@@ -30,21 +30,26 @@ Styleguide 3.11
     background-image: url("/images/logos/Brickson-Logotype-DNB-RGB-LB.svg");
   }
   &--handshake {
-    width: auto;
     height: px-to-pt( rhythm(22) );
+    position: absolute;
+    width: 100%;
+    top: 33%;
+    left: 0;
+    margin-top: 0%;
+    transform: translateY(-50%);
   }
   &--cover {
     background-image: url("/images/logos/Brickson-Logotype-RGB-DB--tablet--x2.png");
     background-image: url("/images/logos/Brickson-Logotype-RGB-DB.svg");
   }
   @include breakpoint($gt-large-handheld) {
-    height: px-to-pt( rhythm(17) );
+    height: px-to-pt( rhythm(15) );
     &--ams,
     &--dnb {
-      height: px-to-pt( rhythm(22) );
+      height: px-to-pt( rhythm(17) );
     }
     &--handshake {
-      height: px-to-pt( rhythm(27) );
+      height: px-to-pt( rhythm(20) );
     }
   }
 }

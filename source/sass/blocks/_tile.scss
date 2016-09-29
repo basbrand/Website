@@ -22,7 +22,8 @@ Styleguide 4.2
   // vertical-align: middle; /* 1 */
   // box-shadow: inset 1px 1px 0 $white, inset -1px -1px 0 $white;
   &__body {
-    position: relative; /* 1 */
+    width: 100%;
+    position: absolute; /* 1 */
     top: 50%; /* 1 */
     transform: translateY(-50%); /* 1 */
   }

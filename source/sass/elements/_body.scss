@@ -20,15 +20,15 @@ Styleguide 3.1
 
 .body {
   &--whisper {
-    font-size: px-to-pt( 10px );
-    line-height: px-to-pt( rhythm(3) );
+    @extend small;
+    line-height: to-unit(rhythm(4), 1, 10px);
   }
   &--meta,
   &--number,
   &--email {
     @extend %meta-text;
-    font-size: px-to-pt( 8px );
-    line-height: px-to-pt( rhythm(2) );
+    // font-size: to-unit(10px, 1em, 12px);
+    // line-height: to-unit(rhythm(3), 1, 10px);
   }
   &--number,
   &--email {
@@ -36,10 +36,18 @@ Styleguide 3.1
     font-weight: 600;
   }
   &--number {
-    font-size: px-to-pt( 12px );
+    font-size: to-unit(14px, 1em, 12px);
+    line-height: to-unit(rhythm(6), 1, 14px);
   }
   &--email {
-
+      font-size: to-unit(11px, 1em, 16px);
+      line-height: to-unit(rhythm(2), 1, 11px);
+  }
+  @include breakpoint($lt-large-handheld) {
+    &--email {
+      font-size: to-unit(8px, 1em, 12px);
+      line-height: to-unit(rhythm(2), 1, 8px);
+    }
   }
   // @include breakpoint($gt-medium-desktop) {
   //   $reset-font-size: px(16px, 1%, $base-font-size);

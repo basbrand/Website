@@ -44,26 +44,26 @@
             <p>Kantoor Brickson Den Bosch</p>
           </figcaption>
         </figure>
-        <div class="grid__cell tile body--whisper gutters">
+        <div class="grid__cell tile gutters">
           <h3 class="brand brand--ams leader--tiny trailer--tiny">
             <span class="is-narrative">Brickson Amsterdam</span>
           </h3>
           <address class="gutters">
-            <p>Amsteldijk&nbsp;128<br/>
+            <p class="body--whisper">Amsteldijk&nbsp;128<br/>
             1087 RT Amsterdam</p>
-            <p class="leader--tiny"><a class="anchor--shy anchor--reset body--number" href="tel:0031202610120"><em>(020) 26 101 20</em></a></p>
+            <p class="body--whisper leader--tiny"><a class="anchor--shy anchor--reset body--number" href="tel:0031202610120"><em>(020) 26 101 20</em></a></p>
             <p><a class="anchor--shy body--email" href="mailto:amsterdam@brickson.eu?subject=Samen%20stappen%20zetten"><em>amsterdam@brickson.eu</em></a></p>
 
           </address>
         </div>
-        <div class="grid__cell tile body--whisper">
+        <div class="grid__cell tile">
           <h3 class="brand brand--dnb leader--tiny trailer--tiny">
             <span class="is-narrative">Brickson Den Bosch</span>
           </h3>
           <address class="gutters">
-            <p>Burg<span class="is-lt-large-handheld">.</span><span class="is-gt-large-handheld">emeester</span>&nbsp;Burgerslaan&nbsp;40a<br/>
+            <p class="body--whisper">Burg<span class="is-lt-large-handheld">.</span><span class="is-gt-large-handheld">emeester</span>&nbsp;Burgerslaan&nbsp;40a<br/>
             5245 NH Rosmalen</p>
-            <p class="leader--tiny"><a class="anchor--shy anchor--reset body--number" href="tel:003173123456"><em>(073) 12 34 567</em></a></p>
+            <p class="body--whisper leader--tiny"><a class="anchor--shy anchor--reset body--number" href="tel:003173123456"><em>(073) 12 34 567</em></a></p>
             <p><a class="anchor--shy body--email" href="mailto:denbosch@brickson.eu?subject=Samen%20stappen%20zetten"><em>denbosch@brickson.eu</em></a></p>
           </address>
         </div>

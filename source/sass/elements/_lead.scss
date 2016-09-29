@@ -9,9 +9,9 @@ markup:
 Styleguide 3.2
 */
 
-.__lead {
-  font-size: px-to-pt(16pt);
-  line-height: px-to-pt(rhythm(4));
+.lead {
+  font-size: to-unit(18px, 12px);
+  line-height: to-unit(rhythm(7), 1, 18px);
   // margin: rhythm(10) 0;
   // @include breakpoint($gt-large-handheld) {
   //   font-size: 20pt;
