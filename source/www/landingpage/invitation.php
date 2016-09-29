@@ -2,7 +2,7 @@
   <div class="well">
     <h2 class="well__title title">Wat is jouw volgende stap?</h2>
     <p class="lead leader trailer">Werken met Brickson betekent samen ontdekken, bedenken, ontwerpen of bouwen. We starten met de belangrijkste stap voor jouw ontwikkeling.</p>
-    <p><a class="button" href="mailto:vooruit@brickson.nl?subject='Contact%20met%20Brickson'">Spreek &eacute;&eacute;n van onze experts &#187;</a></p>
+    <p><a class="button" href="mailto:vooruit@brickson.nl?subject='Vooruit%20met%20Brickson'">Spreek &eacute;&eacute;n van onze experts &#187;</a></p>
   </div>
   <div class="shops well">
       <div class="grid grid--tile">
