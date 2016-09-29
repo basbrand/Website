@@ -48,6 +48,11 @@ Styleguide 7.1
     .well {
       min-height: auto;
     }
+    &__header {
+      .well__title {
+        margin-bottom: 0;
+      }
+    }
   }
   .testimonial {
     width: 100%;
@@ -235,6 +240,13 @@ Styleguide 7.1
         left: 0;
         bottom: 0;
         background: $white;
+
+        /* Move to Testimonial Module; */
+        color: $color-body;
+        .button {
+          color: $color-body;
+          border-color: $color-body;
+        }
       }
     }
     .tools {

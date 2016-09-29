@@ -37,18 +37,18 @@ Styleguide 3.17
   color: $white;
   box-shadow: inset 1px 1px 0 $white, inset -1px -1px 0 $white;
   &--light {
-    color: $color-dark-blue;
-    .button {
-      color: $color-dark-blue;
-      border-color: $color-dark-blue;
-    }
+    // color: $color-dark-blue;
+    // .button {
+    //   color: $color-dark-blue;
+    //   border-color: $color-dark-blue;
+    // }
   }
   &--neutral {
-    color: $color-body;
-    .button {
-      color: $color-body;
-      border-color: $color-body;
-    }
+    // color: $color-body;
+    // .button {
+    //   color: $color-body;
+    //   border-color: $color-body;
+    // }
   }
   &__image {
     background-color: #FFF;
