@@ -17,7 +17,7 @@
       <img
         class="introduction__cover image--stretch"
         alt=""
-        src="/images/logos/brands.jpg"
+        src="/images/logos/brands.png"
         srcset="
           /images/logos/brands--2x.png 640w,
           /images/logos/brands.png 480w,
