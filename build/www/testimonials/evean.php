@@ -1,4 +1,4 @@
-<div class="testimonial cover cover--light">
+<div class="testimonial cover cover--neutral">
   <picture class="cover__image">
     <!--[if IE 9]><video style="display: none;"><![endif]-->
     <source
@@ -14,12 +14,12 @@
       media="<?php echo $portrait; ?>"
       srcset="/images/content/evean--portrait.jpg, /images/content/evean--portrait--2x.jpg 2x">
     <!--[if IE 9]></video><![endif]-->
-    <img class="cover__image" src="/images/content/evean--portrait.jpg" srcset="/images/content/evean--portrait.jpg, /images/content/handheld/evean--portrait--2x.jpg 2x" alt="">
+    <img class="cover__image" src="/images/content/evean--portrait.jpg" srcset="/images/content/evean--portrait.jpg, /images/content/evean--portrait--2x.jpg 2x" alt="">
   </picture>
-  <div class="well">
+  <div class="well testimonial__body">
     <h3 class="well__title title title--section">Testimonial</h3>
     <div class="well__body leader-inside">
-      <figure class="tile__body person media media--middle bleed trailer">
+      <figure class="tile__body person media media--middle bleed">
         <span class="gutters">
           <img src="/images/heads/marja_smits.jpg" class="person__image" width="56" height="56" style="background: Grey;"/>
         </span>
@@ -31,8 +31,8 @@
       <blockquote class="quote lead"><p>Met oog en gevoel voor de mensen in je organisatie gaat Brickson altijd een stap verder.</p></blockquote>
     </div>
     <?php /*
-    <div class="well__footer leader--hero">
-      <a class="button button--stretch button--inverse" href="javascript:void();">Case: Evean</a>
+    <div class="well__footer  leader--hero">
+      <a class="button button--stretch button--inverse" href="javascript:void();">Case: Vereniging Eigen Huis</a>
     </div>
     */ ?>
   </div>

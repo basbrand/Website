@@ -1,4 +1,4 @@
-<div class="testimonial cover">
+<div class="testimonial cover cover--neutral">
   <picture class="cover__image">
     <!--[if IE 9]><video style="display: none;"><![endif]-->
     <source
@@ -14,9 +14,9 @@
       media="<?php echo $portrait; ?>"
       srcset="/images/content/eigenhuis--portrait.jpg, /images/content/eigenhuis--portrait--2x.jpg 2x">
     <!--[if IE 9]></video><![endif]-->
-    <img class="cover__image" src="/images/content/eigenhuis--portrait.jpg" srcset="/images/content/eigenhuis--portrait.jpg, /images/content/handheld/eigenhuis--portrait--2x.jpg 2x" alt="">
+    <img class="cover__image" src="/images/content/eigenhuis--portrait.jpg" srcset="/images/content/eigenhuis--portrait.jpg, /images/content/eigenhuis--portrait--2x.jpg 2x" alt="">
   </picture>
-  <div class="well">
+  <div class="well testimonial__body">
     <h3 class="well__title title title--section">Testimonial</h3>
     <div class="well__body leader-inside">
       <figure class="tile__body person media media--middle bleed">

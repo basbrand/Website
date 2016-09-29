@@ -228,6 +228,15 @@ Styleguide 7.1
     }
     .offices {
     }
+    .testimonial {
+      position: relative;
+      &__body {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: $white;
+      }
+    }
     .tools {
       .well {
         min-height: 100%;
