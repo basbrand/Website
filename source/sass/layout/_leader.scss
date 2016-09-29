@@ -21,22 +21,22 @@ Styleguide 2.4.1
 */
 
 .leader {
-	margin-top: rhythm(4);
+	margin-top: px-to-pt(rhythm(4));
 	&--tiny {
-		margin-top: rhythm(2);
+		margin-top: px-to-pt(rhythm(2));
 	}
 	&--hero {
-		margin-top: rhythm(8);
+		margin-top: px-to-pt(rhythm(8));
 	}
 	&--giant {
-		margin-top: rhythm(16);
+		margin-top: px-to-pt(rhythm(16));
 	}
 	@include breakpoint($gt-large-handheld) {
-			margin-top: rhythm(5);
+			margin-top: px-to-pt(rhythm(5));
   }
 	@include breakpoint($gt-small-desktop) {
 		&--giant {
-			margin-top: rhythm(30);
+			margin-top: px-to-pt(rhythm(30));
 		}
 	}
 }
@@ -58,22 +58,22 @@ markup:
 Styleguide 2.4.2
 */
 .leader-inside {
-	padding-top: rhythm(4);
+	padding-top: px-to-pt(rhythm(4));
 	&--tiny {
-		padding-top: rhythm(2);
+		padding-top: px-to-pt(rhythm(2));
 	}
 	&--hero {
-		padding-top: rhythm(8);
+		padding-top: px-to-pt(rhythm(8));
 	}
 	&--giant {
-		padding-top: rhythm(16);
+		padding-top: px-to-pt(rhythm(16));
 	}
 	@include breakpoint($gt-large-handheld) {
-			padding-top: rhythm(5);
+			padding-top: px-to-pt(rhythm(5));
   }
 	@include breakpoint($gt-small-desktop) {
 		&--giant {
-			padding-top: rhythm(30);
+			padding-top: px-to-pt(rhythm(30));
 		}
 	}
 }

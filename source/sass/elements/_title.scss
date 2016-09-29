@@ -20,7 +20,7 @@ Styleguide 3.3
  * Force block on inline tags
  */
 .title {
-  font: $font-weight--heading #{to-unit(14px, 1em, 16px)}/#{to-unit(rhythm(6), 1, 20px)} $font-family--heading;
+  font: $font-weight--heading #{px-to-pt(14px)}/#{px-to-pt(rhythm(6))} $font-family--heading;
   // display: inline-block; /* 1 */
   width: 100%; /* 1 */
   a &,
@@ -29,12 +29,13 @@ Styleguide 3.3
   }
   &--meta,
   &--section {
-    font: $font-weight--meta #{to-unit(14px, 1em, 16px)} $font-family--meta;
+    font-weight: $font-weight--meta;
+    font-family: $font-family--meta;
     text-transform: uppercase;
     letter-spacing: $letter-spacing;
   }
   &--section {
-    font-size: to-unit(8px, 1em, 12px);
+    font-size: px-to-pt(8px);
     font-weight: 600;
     .tile--cover & {
       font-weight: 300;
@@ -55,55 +56,45 @@ Styleguide 3.3
   // &--section,
   &--well {
     .well & {
-      margin-top: rhythm(10);
-      margin-bottom: rhythm(6);
+      margin-top: px-to-pt(rhythm(10));
+      margin-bottom: px-to-pt(rhythm(6));
     }
   }
   @include breakpoint($gt-small-handheld) {
-      font-size: to-unit(18px, 1em, 12px);
+      font-size: px-to-pt(18px);
       &--meta {
-        font: $font-weight--meta #{to-unit(14px, 1em, 16px)} $font-family--meta;
+        font-size: px-to-pt(14px);
       }
       &--section {
-        font: $font-weight--meta #{to-unit(10px, 1em, 16px)} $font-family--meta;
+        font-size: px-to-pt(10px);
       }
   }
   @include breakpoint($gt-small-handheld,$landscape) {
       &--meta {
-        font: $font-weight--meta #{to-unit(12px, 1em, 16px)} $font-family--meta;
+        font-size: px-to-pt(12px);
       }
       &--section {
-        font: $font-weight--meta #{to-unit(8px, 1em, 16px)} $font-family--meta;
+        font-size: px-to-pt(8px);
       }
   }
   @include breakpoint($gt-large-handheld) {
-      font-size: to-unit(24px, 1em, 16px);
+      font-size: px-to-pt(24px);
       &--meta,
       &--section {
-        font-size: to-unit(18px, 1em, 16px);
+        font-size: px-to-pt(18px);
       }
       &--section {
-        font-size: to-unit(12px, 1em, 16px);
+        font-size: px-to-pt(12px);
       }
   }
   @include breakpoint($gt-medium-desktop) {
-      font-size: to-unit(28px, 1em, 16px);
+      font-size: px-to-pt(28px);
       &--meta,
       &--section {
-        font-size: to-unit(18px, 1em, 16px);
+        font-size: px-to-pt(18px);
       }
       &--section {
-        font-size: to-unit(12px, 1em, 16px);
-      }
-  }
-  @include breakpoint( "(min-width: 768px) and (max-width: 768px)" ) {
-      font-size: to-unit(28px, 1em, 16px);
-      &--meta,
-      &--section {
-        font-size: to-unit(18px, 1em, 16px);
-      }
-      &--section {
-        font-size: to-unit(12px, 1em, 16px);
+        font-size: px-to-pt(12px);
       }
   }
 }

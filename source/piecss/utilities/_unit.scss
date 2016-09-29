@@ -175,3 +175,19 @@
 @function percentage-to-px($value, $context: $font-size) {
     @return $value/100% * $context;
 }
+
+
+
+///
+/// Convert a value in px to a pt value
+///
+/// @since 1.0
+///
+/// @param {Number} $value - The value to convert
+///
+/// @return {Number} - The value in pt
+///
+
+@function px-to-pt($value) {
+    @return strip-unit($value) * 1pt;
+}

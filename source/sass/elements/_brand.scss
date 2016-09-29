@@ -12,14 +12,14 @@ Styleguide 3.11
 */
 
 .brand {
-  height: rhythm(12);
+  height: px-to-pt( rhythm(12) );
   background: no-repeat center;
   background-image: url("/images/logos/Brickson-Logotype-RGB-LB--tablet--x2.png");
   background-image: url("/images/logos/Brickson-Logotype-RGB-LB.svg");
   background-size: contain;
   &--ams,
   &--dnb {
-    height: rhythm(15);
+    height: px-to-pt( rhythm(15) );
   }
   &--ams {
     background-image: url("/images/logos/Brickson-Logotype-AMS-RGB-LB--tablet--x2.png");
@@ -31,20 +31,20 @@ Styleguide 3.11
   }
   &--handshake {
     width: auto;
-    height: rhythm(22);
+    height: px-to-pt( rhythm(22) );
   }
   &--cover {
     background-image: url("/images/logos/Brickson-Logotype-RGB-DB--tablet--x2.png");
     background-image: url("/images/logos/Brickson-Logotype-RGB-DB.svg");
   }
   @include breakpoint($gt-large-handheld) {
-    height: rhythm(17);
+    height: px-to-pt( rhythm(17) );
     &--ams,
     &--dnb {
-      height: rhythm(22);
+      height: px-to-pt( rhythm(22) );
     }
     &--handshake {
-      height: rhythm(27);
+      height: px-to-pt( rhythm(27) );
     }
   }
 }

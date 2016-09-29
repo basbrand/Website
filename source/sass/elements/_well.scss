@@ -6,8 +6,8 @@ Styleguide 3.13
 
 .well {
   &__title {
-    margin-top: rhythm(10);
-    margin-bottom: rhythm(10);
+    margin-top: px-to-pt(rhythm(10));
+    margin-bottom: px-to-pt(rhythm(10));
   }
   &__body {
 
@@ -17,32 +17,7 @@ Styleguide 3.13
   }
   @include breakpoint($gt-large-handheld) {
       &__title {
-        margin-top: rhythm(20);
-        margin-bottom: rhythm(10);
+        margin-top: px-to-pt(rhythm(20));
       }
   }
 }
-// .well {
-//   float: left;
-//
-//   width: 100%;
-//   // width: 100vw;
-//   min-height: 50%;
-//   min-height: 50vh;
-//   @include breakpoint($landscape) {
-//     width: 50%;
-//     // width: 50vw;
-//     min-height: 100%;
-//     min-height: 100vh;
-//   }
-//   &--backdrop {
-//     color: $white;
-//   }
-//   &--tile {
-//     display: table;
-//   }
-//   &--hero {
-//     min-height: 100%;
-//     min-height: 100vh;
-//   }
-// }

@@ -20,7 +20,7 @@ Styleguide 3.5
     border: 1px solid $color-button;
     background: transparent;
     color: $color-button;
-    font: 600 #{to-unit(8px, 1em, 12px)}/1 $font-family--meta;
+    font: 600 #{px-to-pt( 8px )}/#{px-to-pt( rhythm(2) )} $font-family--meta;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: $letter-spacing;
@@ -41,13 +41,6 @@ Styleguide 3.5
   &--inverse {
     color: $white;
     border-color: $white;
-  }
-
-  // @include breakpoint($gt-large-handheld) {
-  //   font-size: to-unit(10px, 1em, 14px);
-  // }
-  @include breakpoint($gt-medium-desktop) {
-    font-size: to-unit(10px, 1em, 16px);
   }
 }
 

@@ -195,14 +195,11 @@ html {
   /* 3 */
   background: #ffffff;
   /* 4 */
-  font: normal normal 300 100%/125% Book Antiqua, Palatino Linotype, Palatino, serif;
+  font: normal normal 300 16pt/20pt Book Antiqua, Palatino Linotype, Palatino, serif;
   color: #445D87;
   /* 5 */
   text-size-adjust: 100%;
   /* 3 */ }
-  @media only screen and (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-    html {
-      font-size: 16pt; } }
 
 /* HTML5 display definitions
    ========================================================================== */
@@ -311,7 +308,7 @@ mark {
  * Address inconsistent and variable font size in all browsers.
  */
 small {
-  font-size: 0.625em; }
+  font-size: 10pt; }
 
 /*
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
@@ -978,19 +975,19 @@ markup:
 Styleguide 2.4.1
 */
 .leader {
-  margin-top: 16px; }
+  margin-top: 16pt; }
   .leader--tiny {
-    margin-top: 8px; }
+    margin-top: 8pt; }
   .leader--hero {
-    margin-top: 32px; }
+    margin-top: 32pt; }
   .leader--giant {
-    margin-top: 64px; }
+    margin-top: 64pt; }
   @media only screen and (min-width: 48em) {
     .leader {
-      margin-top: 20px; } }
+      margin-top: 20pt; } }
   @media only screen and (min-width: 64em) {
     .leader--giant {
-      margin-top: 120px; } }
+      margin-top: 120pt; } }
 
 /*
 Leader inside
@@ -1008,19 +1005,19 @@ markup:
 Styleguide 2.4.2
 */
 .leader-inside {
-  padding-top: 16px; }
+  padding-top: 16pt; }
   .leader-inside--tiny {
-    padding-top: 8px; }
+    padding-top: 8pt; }
   .leader-inside--hero {
-    padding-top: 32px; }
+    padding-top: 32pt; }
   .leader-inside--giant {
-    padding-top: 64px; }
+    padding-top: 64pt; }
   @media only screen and (min-width: 48em) {
     .leader-inside {
-      padding-top: 20px; } }
+      padding-top: 20pt; } }
   @media only screen and (min-width: 64em) {
     .leader-inside--giant {
-      padding-top: 120px; } }
+      padding-top: 120pt; } }
 
 /* 2.5 Trailer */
 /*
@@ -1044,19 +1041,19 @@ markup:
 Styleguide 2.5.1
 */
 .trailer {
-  margin-bottom: 16px; }
+  margin-bottom: 16pt; }
   .trailer--tiny {
-    margin-bottom: 8px; }
+    margin-bottom: 8pt; }
   .trailer--hero {
-    margin-bottom: 32px; }
+    margin-bottom: 32pt; }
   .trailer--giant {
-    margin-bottom: 64px; }
+    margin-bottom: 64pt; }
   @media only screen and (min-width: 48em) {
     .trailer {
-      margin-bottom: 20px; } }
+      margin-bottom: 20pt; } }
   @media only screen and (min-width: 64em) {
     .trailer--giant {
-      margin-bottom: 120px; } }
+      margin-bottom: 120pt; } }
 
 /*
 Trailer inside
@@ -1074,19 +1071,19 @@ markup:
 Styleguide 2.5.2
 */
 .trailer-inside {
-  padding-bottom: 16px; }
+  padding-bottom: 16pt; }
   .trailer-inside--tiny {
-    padding-bottom: 8px; }
+    padding-bottom: 8pt; }
   .trailer-inside--hero {
-    padding-bottom: 32px; }
+    padding-bottom: 32pt; }
   .trailer-inside--giant {
-    padding-bottom: 64px; }
+    padding-bottom: 64pt; }
   @media only screen and (min-width: 48em) {
     .trailer-inside {
-      padding-bottom: 20px; } }
+      padding-bottom: 20pt; } }
   @media only screen and (min-width: 64em) {
     .trailer-inside--giant {
-      padding-bottom: 120px; } }
+      padding-bottom: 120pt; } }
 
 /* 2.6 Bleed */
 /*
@@ -1298,43 +1295,41 @@ markup:
 
 Styleguide 3.1
 */
-.body--meta, .body--number, .body--email, .date, .tag {
+.body--meta, .body--number, .body--email {
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   font-weight: 300;
   letter-spacing: .3em; }
 
 .body--whisper {
-  font-size: 0.625em;
-  line-height: 12px; }
+  font-size: 10pt;
+  line-height: 12pt; }
 
 .body--meta, .body--number, .body--email {
-  font-size: 0.5em;
-  line-height: 12px; }
+  font-size: 8pt;
+  line-height: 8pt; }
 
 .body--number, .body--email {
   letter-spacing: 0;
   font-weight: 600; }
 
 .body--number {
-  font-size: 1.2em; }
+  font-size: 12pt; }
 
 /* 3.2 Heading */
 /*
-Body
+Lead
 
 .lead - Lead or introduction paragraph
-.body--whisper - Smaller text
-.body--meta - Meta text, dates etc.
 
 markup:
 <p class="{$modifiers}">Drone technology could help farmers around the world monitor their crops, fend off pests, improve land tenure, and more. But to realise its full potential, regulatory regimes are necessary, while keeping citizens’ safety and privacy rights secure.</p>
 
 Styleguide 3.2
 */
-.lead {
-  font-size: 14pt;
-  line-height: 24px; }
+.__lead {
+  font-size: 16pt;
+  line-height: 16pt; }
 
 /* 3.3 Headline */
 /*
@@ -1355,18 +1350,19 @@ Styleguide 3.3
  * Force block on inline tags
  */
 .title {
-  font: 900 0.875em/1.2 "Arial Black", Gadget, sans-serif;
+  font: 900 14pt/24pt "Arial Black", Gadget, sans-serif;
   width: 100%;
   /* 1 */ }
   a .title,
   .title a {
     text-decoration: none; }
   .title--meta, .title--section {
-    font: 300 0.875em Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.25em; }
   .title--section {
-    font-size: 0.66667em;
+    font-size: 8pt;
     font-weight: 600; }
     .tile--cover .title--section {
       font-weight: 300; }
@@ -1379,41 +1375,34 @@ Styleguide 3.3
     color: #ffffff;
     font-weight: 300; }
   .well .title--well {
-    margin-top: 40px;
-    margin-bottom: 24px; }
+    margin-top: 40pt;
+    margin-bottom: 24pt; }
   @media only screen and (min-width: 20em) {
     .title {
-      font-size: 1.5em; }
+      font-size: 18pt; }
       .title--meta {
-        font: 300 0.875em Arial, Helvetica, sans-serif; }
+        font-size: 14pt; }
       .title--section {
-        font: 300 0.625em Arial, Helvetica, sans-serif; } }
+        font-size: 10pt; } }
   @media (orientation: landscape) and (min-width: 20em) {
     .title--meta {
-      font: 300 0.75em Arial, Helvetica, sans-serif; }
+      font-size: 12pt; }
     .title--section {
-      font: 300 0.5em Arial, Helvetica, sans-serif; } }
+      font-size: 8pt; } }
   @media only screen and (min-width: 48em) {
     .title {
-      font-size: 1.5em; }
+      font-size: 24pt; }
       .title--meta, .title--section {
-        font-size: 1.125em; }
+        font-size: 18pt; }
       .title--section {
-        font-size: 0.75em; } }
+        font-size: 12pt; } }
   @media only screen and (min-width: 90em) {
     .title {
-      font-size: 1.75em; }
+      font-size: 28pt; }
       .title--meta, .title--section {
-        font-size: 1.125em; }
+        font-size: 18pt; }
       .title--section {
-        font-size: 0.75em; } }
-  @media only screen and (min-width: 768px) and (max-width: 768px) {
-    .title {
-      font-size: 1.75em; }
-      .title--meta, .title--section {
-        font-size: 1.125em; }
-      .title--section {
-        font-size: 0.75em; } }
+        font-size: 12pt; } }
 
 /*
 Title, inversed
@@ -1495,7 +1484,7 @@ Styleguide 3.5
   border: 1px solid #445D87;
   background: transparent;
   color: #445D87;
-  font: 600 0.66667em/1 Arial, Helvetica, sans-serif;
+  font: 600 8pt/8pt Arial, Helvetica, sans-serif;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.25em;
@@ -1516,10 +1505,6 @@ Styleguide 3.5
 .button--inverse {
   color: #ffffff;
   border-color: #ffffff; }
-
-@media only screen and (min-width: 90em) {
-  .button {
-    font-size: 0.625em; } }
 
 /*
 Button, inversed
@@ -1573,8 +1558,8 @@ Styleguide 3.6.1
       background: white; }
 
 .fld {
-  margin: 4px 0;
-  padding: 4px 0; }
+  margin: 4pt 0;
+  padding: 4pt 0; }
 
 /*
 Textarea Input
@@ -1656,26 +1641,26 @@ Styleguide 3.7
     float: left; }
 
 .list--tools__section {
-  margin-top: 32px; }
+  margin-top: 32pt; }
   .list--tools__section .title {
     display: block;
     position: absolute;
     left: 0;
     right: 0;
     bottom: 100%;
-    padding: 8px 0 8px 14px;
+    padding: 8pt 0 8pt 14pt;
     background: rgba(68, 93, 135, 0.2); }
 
 .list--tools li {
   position: relative;
-  padding: 8px 0 8px 35px;
+  padding: 8pt 0 8pt 35pt;
   width: 100%;
   /* 2 */ }
   .list--tools li:before, .list--tools li:after {
     content: "";
     position: absolute;
     top: 1em;
-    left: 14px;
+    left: 14pt;
     display: block;
     width: .8em;
     height: .8em; }
@@ -1752,71 +1737,7 @@ Styleguide 3.7
     float: left; } }
 
 /* 3.8 Icon */
-/*
-Icon
-
-Element with a `data-icon` attribute.
-
-home - Home icon `print`
-print - Print icon `print` or `printer`
-email - Envelope icon `envelope` or `print`
-facebook - Print icon `facebook`
-twitter - Print icon `twitter`
-
-markup:
-<span data-icon="{$modifiers}"></span>
-
-Styleguide 3.8
-*/
-/*
-Icon with icon class
-
-Element with class `icon` and a `data-icon` attribute.
-
-home - Home icon `print`
-print - Print icon `print` or `printer`
-email - Envelope icon `envelope` or `print`
-facebook - Print icon `facebook`
-twitter - Print icon `twitter`
-
-markup:
-<span class="icon">{$modifiers}</span>
-
-Styleguide 3.8.1
-*/
-@font-face {
-  font-family: 'cta-icons';
-  src: url("fonts/cta-icons.eot?5e5kyv");
-  src: url("fonts/cta-icons.eot?5e5kyv#iefix") format("embedded-opentype"), url("fonts/cta-icons.ttf?5e5kyv") format("truetype"), url("fonts/cta-icons.woff?5e5kyv") format("woff"), url("fonts/cta-icons.svg?5e5kyv#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-.icon,
-[data-icon]:before {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'cta-icons' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Enable Ligatures ================ */
-  letter-spacing: 0;
-  -webkit-font-feature-settings: "liga";
-  -moz-font-feature-settings: "liga=1";
-  -moz-font-feature-settings: "liga";
-  -ms-font-feature-settings: "liga" 1;
-  font-feature-settings: "liga";
-  -webkit-font-variant-ligatures: discretionary-ligatures;
-  font-variant-ligatures: discretionary-ligatures;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* Icon ================ */
-  content: attr(data-icon); }
-
-/* 3.9 Label */
+/* 3.9 Brand */
 /*
 Brand
 
@@ -1830,13 +1751,13 @@ width="444px" height="347px" viewBox="0 0 444 347"
 Styleguide 3.11
 */
 .brand {
-  height: 48px;
+  height: 48pt;
   background: no-repeat center;
   background-image: url("/images/logos/Brickson-Logotype-RGB-LB--tablet--x2.png");
   background-image: url("/images/logos/Brickson-Logotype-RGB-LB.svg");
   background-size: contain; }
   .brand--ams, .brand--dnb {
-    height: 60px; }
+    height: 60pt; }
   .brand--ams {
     background-image: url("/images/logos/Brickson-Logotype-AMS-RGB-LB--tablet--x2.png");
     background-image: url("/images/logos/Brickson-Logotype-AMS-RGB-LB.svg"); }
@@ -1845,53 +1766,19 @@ Styleguide 3.11
     background-image: url("/images/logos/Brickson-Logotype-DNB-RGB-LB.svg"); }
   .brand--handshake {
     width: auto;
-    height: 88px; }
+    height: 88pt; }
   .brand--cover {
     background-image: url("/images/logos/Brickson-Logotype-RGB-DB--tablet--x2.png");
     background-image: url("/images/logos/Brickson-Logotype-RGB-DB.svg"); }
   @media only screen and (min-width: 48em) {
     .brand {
-      height: 68px; }
+      height: 68pt; }
       .brand--ams, .brand--dnb {
-        height: 88px; }
+        height: 88pt; }
       .brand--handshake {
-        height: 108px; } }
+        height: 108pt; } }
 
 /* 3.10 Date */
-/*
-Date
-
-.date - Date block
-.date.date--inlne - Floats date block to the left
-
-markup:
-<span class="date">
-  <span class="date__head">Dec</span>
-  <span class="date__body">31</span>
-</span>
-
-Styleguide 3.10
-*/
-.date {
-  width: 64px;
-  height: 72px;
-  background: #FFF;
-  border: 2px solid #57B0B6;
-  text-align: center; }
-  .date, .date__head, .date__body {
-    display: block; }
-  .date__head {
-    background: #57B0B6;
-    color: #FFF;
-    font-size: 0.75em;
-    line-height: 24px; }
-  .date__body {
-    font-size: 1.25em;
-    line-height: 44px; }
-  .date--inline {
-    float: left;
-    margin-right: 1em; }
-
 /* 3.11 Brand */
 /*
 Brand
@@ -1906,13 +1793,13 @@ width="444px" height="347px" viewBox="0 0 444 347"
 Styleguide 3.11
 */
 .brand {
-  height: 48px;
+  height: 48pt;
   background: no-repeat center;
   background-image: url("/images/logos/Brickson-Logotype-RGB-LB--tablet--x2.png");
   background-image: url("/images/logos/Brickson-Logotype-RGB-LB.svg");
   background-size: contain; }
   .brand--ams, .brand--dnb {
-    height: 60px; }
+    height: 60pt; }
   .brand--ams {
     background-image: url("/images/logos/Brickson-Logotype-AMS-RGB-LB--tablet--x2.png");
     background-image: url("/images/logos/Brickson-Logotype-AMS-RGB-LB.svg"); }
@@ -1921,42 +1808,19 @@ Styleguide 3.11
     background-image: url("/images/logos/Brickson-Logotype-DNB-RGB-LB.svg"); }
   .brand--handshake {
     width: auto;
-    height: 88px; }
+    height: 88pt; }
   .brand--cover {
     background-image: url("/images/logos/Brickson-Logotype-RGB-DB--tablet--x2.png");
     background-image: url("/images/logos/Brickson-Logotype-RGB-DB.svg"); }
   @media only screen and (min-width: 48em) {
     .brand {
-      height: 68px; }
+      height: 68pt; }
       .brand--ams, .brand--dnb {
-        height: 88px; }
+        height: 88pt; }
       .brand--handshake {
-        height: 108px; } }
+        height: 108pt; } }
 
 /* 3.12 Theme */
-/*
-Theme
-
-The theme class defines which spot colour is used.
-
-.theme--blue - Blue
-.theme--lime - Lime
-.theme--yellow - Yellow
-.theme--gold - Gold
-.theme--salmon - Salmon
-.theme--orange - Orange
-.theme--red - Red
-.theme--burgundy - Burgundy
-.theme--purple - Purple
-
-markup:
-<div class="{$modifiers}">
-  <sg-insert>3.4-1</sg-insert>
-  <sg-insert>3.9-1</sg-insert>
-</div>
-
-Styleguide 3.12
-*/
 /* 3.13 Well */
 /*
 Well
@@ -1964,60 +1828,14 @@ Well
 Styleguide 3.13
 */
 .well__title {
-  margin-top: 40px;
-  margin-bottom: 40px; }
+  margin-top: 40pt;
+  margin-bottom: 40pt; }
 
 @media only screen and (min-width: 48em) {
   .well__title {
-    margin-top: 80px;
-    margin-bottom: 40px; } }
+    margin-top: 80pt; } }
 
 /* 3.14 Tag */
-/*
-Tag
-
-.tag - Tag
-
-markup:
-<a class="{$modifiers}" href="javascript:void();">UAV</a>
-
-Styleguide 3.14
-*/
-.tag {
-  display: inline-block;
-  background: #ced5e0;
-  padding: 4px 8px;
-  font-size: 0.625em;
-  line-height: 12px;
-  font-style: normal;
-  text-decoration: none; }
-  .tag {
-    color: inherit; }
-  .tag:hover {
-    background-color: #57B0B6;
-    color: #FFF; }
-
-/*
-Tag List
-
-.tag-list - Tag List
-
-markup:
-<ul class="{$modifiers} reset list--inline">
-  <li><a class="tag" href="javascript:void();">GIS</a></li>
-  <li><a class="tag" href="javascript:void();">GPS</a></li>
-  <li><a class="tag" href="javascript:void();">Hardware</a></li>
-  <li><a class="tag" href="javascript:void();">Internet</a></li>
-  <li><a class="tag" href="javascript:void();">Measuring</a></li>
-  <li><a class="tag" href="javascript:void();">Monitoring</a></li>
-  <li><a class="tag" href="javascript:void();">Radio</a></li>
-  <li><a class="tag" href="javascript:void();">Software</a></li>
-  <li><a class="tag" href="javascript:void();">Telephony</a></li>
-  <li><a class="tag" href="javascript:void();">TV & Video</a></li>
-</ul>
-
-Styleguide 3.14.1
-*/
 /* 3.15 Image */
 /*
 Image
@@ -2068,16 +1886,6 @@ Styleguide 3.17
   background-color: transparent !important;
   color: #ffffff;
   box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #ffffff; }
-  .cover--light {
-    color: #37383C; }
-    .cover--light .button {
-      color: #37383C;
-      border-color: #37383C; }
-  .cover--neutral {
-    color: #445D87; }
-    .cover--neutral .button {
-      color: #445D87;
-      border-color: #445D87; }
   .cover__image {
     background-color: #FFF;
     background-size: cover;
@@ -2220,10 +2028,6 @@ markup:
 
 Styleguide 4.1
 */
-.handshake__brand, .handshake__body {
-  height: 50%;
-  height: 50vh; }
-
 /* 4.2 Tile */
 /*
 Shop
@@ -2362,6 +2166,9 @@ Styleguide 7.1
 .landingpage .tools .well {
   min-height: auto; }
 
+.landingpage .tools__header .well__title {
+  margin-bottom: 0; }
+
 .landingpage .testimonial {
   width: 100%; }
 
@@ -2431,7 +2238,7 @@ Styleguide 7.1
     padding-left: 8.33333%;
     padding-right: 8.33333%; }
   .landingpage .offices .brand {
-    margin: 12px 0; } }
+    margin: 12pt 0; } }
 
 @media only screen and (min-width: 64em) {
   .landingpage .offices .grid__cell.tile,
@@ -2505,7 +2312,12 @@ Styleguide 7.1
       position: absolute;
       left: 0;
       bottom: 0;
-      background: #ffffff; }
+      background: #ffffff;
+      /* Move to Testimonial Module; */
+      color: #445D87; }
+      .landingpage .testimonial__body .button {
+        color: #445D87;
+        border-color: #445D87; }
   .landingpage .tools .well {
     min-height: 100%;
     min-height: 100vh;

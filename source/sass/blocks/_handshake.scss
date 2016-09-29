@@ -29,29 +29,29 @@ markup:
 Styleguide 4.1
 */
 
-.handshake {
-  &__brand,
-  &__body {
-    height: 50%;
-    height: 50vh;
-  }
-  &__brand {
-
-  }
-  &__body {
-
-  }
-  @include breakpoint($lt-large-handheld,$landscape) {
-    // &__item {
-    //   padding-right: 0;
-    // }
-  }
-}
-
-
-// Move!!!!
-
-.testimonial {
-  // padding-left: percentage(1/12);
-  // padding-right: percentage(1/12);
-}
+// .handshake {
+//   &__brand,
+//   &__body {
+//     height: 50%;
+//     height: 50vh;
+//   }
+//   &__brand {
+//
+//   }
+//   &__body {
+//
+//   }
+//   @include breakpoint($lt-large-handheld,$landscape) {
+//     // &__item {
+//     //   padding-right: 0;
+//     // }
+//   }
+// }
+//
+//
+// // Move!!!!
+//
+// .testimonial {
+//   // padding-left: percentage(1/12);
+//   // padding-right: percentage(1/12);
+// }

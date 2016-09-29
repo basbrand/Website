@@ -20,22 +20,22 @@ markup:
 Styleguide 2.5.1
 */
 .trailer {
-	margin-bottom: rhythm(4);
+	margin-bottom: px-to-pt(rhythm(4));
 	&--tiny {
-		margin-bottom: rhythm(2);
+		margin-bottom: px-to-pt(rhythm(2));
 	}
 	&--hero {
-		margin-bottom: rhythm(8);
+		margin-bottom: px-to-pt(rhythm(8));
 	}
 	&--giant {
-		margin-bottom: rhythm(16);
+		margin-bottom: px-to-pt(rhythm(16));
 	}
 	@include breakpoint($gt-large-handheld) {
-			margin-bottom: rhythm(5);
+			margin-bottom: px-to-pt(rhythm(5));
   }
 	@include breakpoint($gt-small-desktop) {
 		&--giant {
-			margin-bottom: rhythm(30);
+			margin-bottom: px-to-pt(rhythm(30));
 		}
 	}
 }
@@ -56,22 +56,22 @@ markup:
 Styleguide 2.5.2
 */
 .trailer-inside {
-	padding-bottom: rhythm(4);
+	padding-bottom: px-to-pt(rhythm(4));
 	&--tiny {
-		padding-bottom: rhythm(2);
+		padding-bottom: px-to-pt(rhythm(2));
 	}
 	&--hero {
-		padding-bottom: rhythm(8);
+		padding-bottom: px-to-pt(rhythm(8));
 	}
 	&--giant {
-		padding-bottom: rhythm(16);
+		padding-bottom: px-to-pt(rhythm(16));
 	}
 	@include breakpoint($gt-large-handheld) {
-			padding-bottom: rhythm(5);
+			padding-bottom: px-to-pt(rhythm(5));
   }
 	@include breakpoint($gt-small-desktop) {
 		&--giant {
-			padding-bottom: rhythm(30);
+			padding-bottom: px-to-pt(rhythm(30));
 		}
 	}
 }

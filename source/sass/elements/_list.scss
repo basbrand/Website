@@ -42,27 +42,27 @@ Styleguide 3.7
   }
   &--tools {
     &__section {
-      margin-top: rhythm(8);
+      margin-top: px-to-pt(rhythm(8));
       .title {
         display: block;
         position: absolute;
         left: 0;
         right: 0;
         bottom: 100%;
-        padding: rhythm(2) 0 rhythm(2) .5 * $gutter-width;
+        padding: px-to-pt(rhythm(2)) 0 px-to-pt(rhythm(2)) px-to-pt(.5 * $gutter-width);
         background: rgba($color-body, .2);
       }
     }
     li {
       position: relative;
-      padding: rhythm(2) 0 rhythm(2) 1.25 * $gutter-width;
+      padding: px-to-pt(rhythm(2)) 0 px-to-pt(rhythm(2)) px-to-pt(1.25 * $gutter-width);
       width: 100%; /* 2 */
       &:before,
       &:after {
           content: "";
           position: absolute;
           top: 1em;
-          left: .5 * $gutter-width;
+          left: px-to-pt(.5 * $gutter-width);
           display: block;
           width: .8em;
           height: .8em;

@@ -36,8 +36,8 @@ Styleguide 3.6.1
     }
 }
 .fld {
-  margin: rhythm(1) 0;
-  padding: rhythm(1) 0;
+  margin: px-to-pt(rhythm(1)) 0;
+  padding: px-to-pt(rhythm(1)) 0;
 }
 
 /*

@@ -20,15 +20,15 @@ Styleguide 3.1
 
 .body {
   &--whisper {
-    font-size: to-unit(10px, 1em, 16px);
-    line-height: line-height(10px, 1.1);
+    font-size: px-to-pt( 10px );
+    line-height: px-to-pt( rhythm(3) );
   }
   &--meta,
   &--number,
   &--email {
     @extend %meta-text;
-    font-size: to-unit(8px, 1em, 16px);
-    line-height: line-height(10px, 1.1);
+    font-size: px-to-pt( 8px );
+    line-height: px-to-pt( rhythm(2) );
   }
   &--number,
   &--email {
@@ -36,7 +36,7 @@ Styleguide 3.1
     font-weight: 600;
   }
   &--number {
-    font-size: 1.2em;
+    font-size: px-to-pt( 12px );
   }
   &--email {
 
