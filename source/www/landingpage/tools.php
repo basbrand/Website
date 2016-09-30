@@ -26,10 +26,10 @@
       </section>
       <section class="grid__cell gutters">
         <h3 class="title title--meta title--em leader trailer trailer-inside--tiny">Bedenken</h3>
-        <ul class="list list--reset list--tools list--discover title title--section">
+        <ul class="list list--reset list--tools list--concept title title--section">
           <li class="list--tools__section">
-            <h4 class="title--em">Strategie</h4><!--
-            -->digital strategie
+            <h4 class="title--em">Strategy</h4><!--
+            -->digital strategy
           </li>
           <li>merk en marketing strategie</li>
           <li>data en ux strategy</li>
@@ -49,7 +49,7 @@
       </section>
       <section class="grid__cell gutters">
         <h3 class="title title--meta title--em leader trailer trailer-inside--tiny">Ontwerpen</h3>
-        <ul class="list list--reset list--tools list--discover title title--section">
+        <ul class="list list--reset list--tools list--design title title--section">
           <li class="list--tools__section">
             <h4 class="title--em">UX/CX Design</h4><!--
             -->User scenario’s
@@ -57,7 +57,7 @@
           <li>Use cases</li>
           <li>Customer journey mapping</li>
           <li class="list--tools__section">
-            <h4 class="title--em">Informatiearchitectuur</h4><!--
+            <h4 class="title--em">Information Architecture</h4><!--
             -->Data research
           </li>
           <li>Interactieontwerp</li>
@@ -67,7 +67,7 @@
           <li>Interactive prototypes</li>
           <li>Digital style guide</li>
           <li class="list--tools__section">
-            <h4 class="title--em">Content strategie</h4><!--
+            <h4 class="title--em">Content Strategy</h4><!--
             -->Content- en dataarchitectuur
           </li>
           <li>Taxonomie</li>
@@ -76,7 +76,7 @@
       </section>
       <section class="grid__cell gutters">
         <h3 class="title title--meta title--em leader trailer trailer-inside--tiny">Bouwen</h3>
-        <ul class="list list--reset list--tools list--discover title title--section">
+        <ul class="list list--reset list--tools list--build title title--section">
           <li class="list--tools__section">
             <h4 class="title--em">Prototyping</h4><!--
             -->Paper prototype

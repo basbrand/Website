@@ -33,7 +33,7 @@
           <img
             class="cover__image"
             alt=""
-            src="/images/content/concept--tile--smartphone.jpg"
+            src="/images/content/brickson_den-bosch--tile--smartphone.jpg"
             srcset="
               /images/content/brickson_den-bosch--tile--tablet--2x.jpg 2x,
               /images/content/brickson_den-bosch--tile--tablet.jpg 320w,
@@ -51,8 +51,8 @@
           <address class="gutters">
             <p class="body--whisper">Amsteldijk&nbsp;128<br/>
             1087 RT Amsterdam</p>
-            <p class="body--whisper leader--tiny"><a class="anchor--shy anchor--reset body--number" href="tel:0031202610120"><em>(020) 26 101 20</em></a></p>
-            <p><a class="anchor--shy body--email" href="mailto:amsterdam@brickson.eu?subject=Samen%20stappen%20zetten"><em>amsterdam@brickson.eu</em></a></p>
+            <p class="body--whisper"><a class="anchor--shy anchor--reset body--number" href="tel:0031202610120"><em>(020) 26 101 20</em></a></p>
+            <p><a class="anchor--shy body--email" href="mailto:amsterdam@brickson.nl?subject=Samen%20stappen%20zetten"><em>amsterdam@brickson.nl</em></a></p>
 
           </address>
         </div>
@@ -63,8 +63,8 @@
           <address class="gutters">
             <p class="body--whisper">Burg<span class="is-lt-large-handheld">.</span><span class="is-gt-large-handheld">emeester</span>&nbsp;Burgerslaan&nbsp;40a<br/>
             5245 NH Rosmalen</p>
-            <p class="body--whisper leader--tiny"><a class="anchor--shy anchor--reset body--number" href="tel:003173123456"><em>(073) 203 22 76</em></a></p>
-            <p><a class="anchor--shy body--email" href="mailto:denbosch@brickson.eu?subject=Samen%20stappen%20zetten"><em>denbosch@brickson.eu</em></a></p>
+            <p class="body--whisper"><a class="anchor--shy anchor--reset body--number" href="tel:003173123456"><em>(073) 203 22 76</em></a></p>
+            <p><a class="anchor--shy body--email" href="mailto:denbosch@brickson.nl?subject=Samen%20stappen%20zetten"><em>denbosch@brickson.nl</em></a></p>
           </address>
         </div>
       </div>

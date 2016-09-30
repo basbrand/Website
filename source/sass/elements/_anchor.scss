@@ -29,13 +29,13 @@ a,
   &:hover,
   .is-heir:hover,
   &:hover .is-heir {
-    color: #000;
+    color: $color-theme;
   }
   &--shy {
     text-decoration: none;
   }
   &--reset {
-    color: initial;
+    color: inherit;
   }
   //.title {
   //  color: $color-body;
