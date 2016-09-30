@@ -52,4 +52,16 @@ Styleguide 3.11
       height: px-to-pt( rhythm(20) );
     }
   }
+  @include breakpoint($gt_small_desktop,$landscape) {
+    &--ams,
+    &--dnb {
+      height: px-to-pt( rhythm(13) );
+    }
+  }
+  @include breakpoint($gt_medium_desktop,$landscape) {
+    &--ams,
+    &--dnb {
+      height: px-to-pt( rhythm(17) );
+    }
+  }
 }
