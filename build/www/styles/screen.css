@@ -2155,6 +2155,10 @@ Styleguide 7.1
 .landingpage .offices {
   padding: 0 !important; }
 
+.landingpage .shops .title--meta {
+  font-size: 1.16667em;
+  line-height: 1.14286; }
+
 .landingpage .offices {
   text-align: center; }
 

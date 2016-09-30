@@ -46,6 +46,12 @@ Styleguide 7.1
   .offices {
     padding: 0 !important;
   }
+  .shops {
+    .title--meta {
+      font-size: to-unit(14px, 1em, 12px);
+      line-height: to-unit(rhythm(4), 1, 14px);
+    }
+  }
   .offices {
     text-align: center;
   }
