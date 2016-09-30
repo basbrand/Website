@@ -46,7 +46,7 @@ switch($extension) {
   <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
   <link rel="manifest" href="/manifest.json">
   <link rel="stylesheet" type="text/css" href="/styles/screen.css?id=1474118468489">
-  <script src="https://use.typekit.net/zaf1yku.js"></script>
+<?php /*  <script src="https://use.typekit.net/zaf1yku.js"></script> */ ?>
   <script src="/javascript/html5shiv.min.js"></script>
   <script src="/javascript/jquery-1.11.3.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
