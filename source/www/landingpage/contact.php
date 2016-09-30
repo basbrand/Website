@@ -63,7 +63,7 @@
           <address class="gutters">
             <p class="body--whisper">Burg<span class="is-lt-large-handheld">.</span><span class="is-gt-large-handheld">emeester</span>&nbsp;Burgerslaan&nbsp;40a<br/>
             5245 NH Rosmalen</p>
-            <p class="body--whisper leader--tiny"><a class="anchor--shy anchor--reset body--number" href="tel:003173123456"><em>(073) 12 34 567</em></a></p>
+            <p class="body--whisper leader--tiny"><a class="anchor--shy anchor--reset body--number" href="tel:003173123456"><em>(073) 203 22 76</em></a></p>
             <p><a class="anchor--shy body--email" href="mailto:denbosch@brickson.eu?subject=Samen%20stappen%20zetten"><em>denbosch@brickson.eu</em></a></p>
           </address>
         </div>
