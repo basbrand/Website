@@ -21,6 +21,7 @@ Styleguide 4.3
   position: relative;
   left: px-to-pt(-1*rhythm(5));
   display: table;
+  max-width: 380px;
   &__picture,
   &__body {
     display: table-cell;
