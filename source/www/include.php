@@ -31,4 +31,4 @@ switch($extension) {
         break;
 }
 
-$debug = false;
+$debug = true;

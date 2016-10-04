@@ -5,7 +5,7 @@
   <body class="<?php echo $debug ? 'debug-layout ' : ''; ?>p-case">
     <section class="panel is-active">
       <?php include 'catalog.php'; ?>
-      <div class="article" id="main">
+      <div class="article">
         <div class="article__body well">
           <h1 class="well__title title">Vereniging Eigen Huis</h1>
           <h2 class="well__title title title--section">De uitdaging</h2>

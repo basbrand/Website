@@ -1,6 +1,6 @@
 <div class="catalog">
   <div class="well well--hero cover">
-    <picture class="cover__image">
+    <picture class="cover__image" id="main">
       <!--[if IE 9]><video style="display: none;"><![endif]-->
       <source
         media="<?php echo $gt_medium_desktop; ?> and <?php echo $landscape; ?>"
