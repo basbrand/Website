@@ -1,7 +1,7 @@
 <div class="introduction">
   <div class="well">
-    <h2 class="well__title title">Blijer, gezonder en welvarender</h2>
-    <p class="lead">Waar draait digitaal om? Slimme organisaties begrijpen mensen én techniek. Ze weten dat het digitale landschap het belangrijkste speelveld voor innovatie is. Maar bovenal weten ze wat hun klant van ze verwacht en gaat verwachten.</p>
+    <h2 class="well__title title title--section">Blijer, gezonder en welvarender</h2>
+    <p class="_lead">Waar draait digitaal om? Slimme organisaties begrijpen mensen én techniek. Ze weten dat het digitale landschap het belangrijkste speelveld voor innovatie is. Maar bovenal weten ze wat hun klant van ze verwacht en gaat verwachten.</p>
   </div>
   <div class="well tile cover">
     <img
