@@ -30,7 +30,7 @@ Styleguide 3.11
     background-image: url("/images/logos/Brickson-Logotype-DNB-RGB-LB.svg");
   }
   &--handshake {
-    height: px-to-pt( rhythm(22) );
+      height: px-to-pt( rhythm(22) );
     position: absolute;
     width: 100%;
     top: 33%;
@@ -55,13 +55,13 @@ Styleguide 3.11
   @include breakpoint($gt_small_desktop,$landscape) {
     &--ams,
     &--dnb {
-      height: px-to-pt( rhythm(13) );
+      height: px-to-pt( rhythm(18) );
     }
   }
   @include breakpoint($gt_medium_desktop,$landscape) {
     &--ams,
     &--dnb {
-      height: px-to-pt( rhythm(17) );
+      height: px-to-pt( rhythm(20) );
     }
   }
 }

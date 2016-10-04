@@ -1763,10 +1763,10 @@ Styleguide 3.11
         height: 80pt; } }
   @media (orientation: landscape) and (min-width: 64em) {
     .brand--ams, .brand--dnb {
-      height: 52pt; } }
+      height: 72pt; } }
   @media (orientation: landscape) and (min-width: 90em) {
     .brand--ams, .brand--dnb {
-      height: 68pt; } }
+      height: 80pt; } }
 
 /* 3.10 Date */
 /* 3.11 Brand */
@@ -1816,10 +1816,10 @@ Styleguide 3.11
         height: 80pt; } }
   @media (orientation: landscape) and (min-width: 64em) {
     .brand--ams, .brand--dnb {
-      height: 52pt; } }
+      height: 72pt; } }
   @media (orientation: landscape) and (min-width: 90em) {
     .brand--ams, .brand--dnb {
-      height: 68pt; } }
+      height: 80pt; } }
 
 /* 3.12 Theme */
 /* 3.13 Well */
@@ -2313,6 +2313,8 @@ Styleguide 7.1
     /* 1 */
     position: relative;
     z-index: 1; }
+  .landingpage .offices {
+    font-size: 1.2em; }
   .landingpage .testimonial {
     position: relative; }
     .landingpage .testimonial__body {
