@@ -33,10 +33,8 @@
       </figure>
       <blockquote class="quote lead leader"><p>Met oog en gevoel voor de mensen in je organisatie gaat Brickson altijd een stap verder.</p></blockquote>
     </div>
-    <?php /*
     <div class="well__footer  leader--hero">
-      <a class="button button--stretch button--inverse" href="javascript:void();">Case: Vereniging Eigen Huis</a>
+      <a class="button button--stretch button--inverse" href="/cases/evean">Case: Evean</a>
     </div>
-    */ ?>
   </div>
 </div>

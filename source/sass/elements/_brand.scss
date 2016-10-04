@@ -31,12 +31,6 @@ Styleguide 3.11
   }
   &--handshake {
       height: px-to-pt( rhythm(22) );
-    position: absolute;
-    width: 100%;
-    top: 33%;
-    left: 0;
-    margin-top: 0%;
-    transform: translateY(-50%);
   }
   &--cover {
     background-image: url("/images/logos/Brickson-Logotype-RGB-DB--tablet--x2.png");
@@ -50,6 +44,14 @@ Styleguide 3.11
     }
     &--handshake {
       height: px-to-pt( rhythm(20) );
+    }
+    &--handshake {
+      position: absolute;
+      width: 100%;
+      top: 33%;
+      left: 0;
+      margin-top: 0%;
+      transform: translateY(-50%);
     }
   }
   @include breakpoint($gt_small_desktop,$landscape) {

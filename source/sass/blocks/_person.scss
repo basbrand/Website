@@ -14,12 +14,17 @@ markup:
   </figcaption>
 </figure>
 
+sg-wrapper:
+<div style="position: relative;">
+<sg-wrapper-content/>
+</div>
+
 Styleguide 4.3
 */
 
 .person {
   position: relative;
-  left: px-to-pt(-1*rhythm(5));
+  // left: px-to-pt(-1*rhythm(5));
   display: table;
   max-width: 380px;
   &__picture,

@@ -7,16 +7,13 @@ Styleguide 7.1
 /*
  * 1. Make sure to cover up introduction on desktop
  */
-.landingpage {
+.p-landingpage {
   .panel {
     position: relative;
   }
   .handshake,
   .invitation,
-  .introduction,
-  .testimonial,
-  .tools,
-  .contact {
+  .tools {
     min-height: 100%;
     min-height: 100vh;
     .well {
@@ -33,10 +30,7 @@ Styleguide 7.1
   }
   .handshake,
   .invitation,
-  .introduction,
-  .testimonial,
-  .tools,
-  .contact {
+  .tools {
     .well {
       padding-left: percentage(1/12);
       padding-right: percentage(1/12);
@@ -65,21 +59,9 @@ Styleguide 7.1
       }
     }
   }
-  .testimonial {
-    width: 100%;
-  }
-  .introduction {
-    overflow: hidden;
-    .tile__body {
-      width: percentage(10/12);
-    }
-  }
   @include breakpoint($landscape) {
     .handshake,
-    .invitation,
-    .introduction,
-    .testimonial,
-    .contact {
+    .invitation {
       .well {
         width: 50%;
         min-height: 100%;
@@ -92,12 +74,13 @@ Styleguide 7.1
       min-height: 100%;
       min-height: 100vh;
     }
+    .handshake .well {
+      // background: rgba($black,.3);
+      // color: $color-body;
+    }
     .handshake,
     .invitation,
-    .introduction,
-    .testimonial,
-    .tools,
-    .contact {
+    .tools {
       .well {
         // padding-left: percentage(1/12);
         // padding-right: percentage(1/12);
@@ -114,30 +97,17 @@ Styleguide 7.1
     }
   }
   @include breakpoint($gt-large-handheld,$landscape) {
-    .introduction__cover {
-      // max-height: 22vh;
-      width: auto;
-      max-width: percentage(10/12);
-    }
+
   }
   @include breakpoint($gt-large-handheld,$portrait) {
     .handshake,
-    .invitation,
-    .introduction,
-    .testimonial {
+    .invitation {
       min-height: 50%;
       min-height: 50vh;
       .well {
         width: 50%;
         min-height: 100%;
         min-height: 50vh;
-      }
-    }
-    .contact {
-      min-height: 50%;
-      min-height: 50vh;
-      .well {
-        width: 50%;
       }
     }
     .handshake {
@@ -149,10 +119,7 @@ Styleguide 7.1
     }
     .handshake,
     .invitation,
-    .introduction,
-    .testimonial,
-    .tools,
-    .contact {
+    .tools {
       .well {
         // padding-left: percentage(1/12);
         // padding-right: percentage(1/12);
@@ -164,8 +131,6 @@ Styleguide 7.1
       }
     }
   }
-
-
   @include breakpoint($gt_small_desktop) {
     .offices,
     .shops {
@@ -179,10 +144,7 @@ Styleguide 7.1
   }
   @include breakpoint($gt_small_desktop,$landscape) {
     .handshake,
-    .invitation,
-    .introduction,
-    .testimonial,
-    .contact {
+    .invitation {
       float: left;
       width: 50%;
       height: 100%;
@@ -194,17 +156,14 @@ Styleguide 7.1
       }
     }
   }
-
   @include breakpoint($gt_medium_desktop,$landscape) {
     .handshake,
-    .invitation,
-    .testimonial {
+    .invitation {
       width: percentage(24/36);
     }
 
     .handshake,
     .invitation,
-    .testimonial,
     .tools {
       .well {
         padding-left: percentage(1/24);
@@ -233,50 +192,13 @@ Styleguide 7.1
         min-height: 100vh;
       }
     }
-    .introduction,
-    .contact {
-      width: percentage(12/36);
-    }
-    .introduction {
-      position: fixed;
-      right: 0;
-      z-index: -1;
-    }
-    .contact {
-      float: left;
-    }
-    .testimonial {
-      .well {
-        width: 50%;
-        min-height: 50%;
-        min-height: 50vh;
-      }
-    }
-
-    .tools,
-    .contact .well {
+    .tools {
       background-color: #FFF; /* 1 */
       position: relative;
       z-index: 1;
     }
     .offices {
       font-size: 1.2em;
-    }
-    .testimonial {
-      position: relative;
-      &__body {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        background: $white;
-
-        /* Move to Testimonial Module; */
-        color: $color-body;
-        .button {
-          color: $color-body;
-          border-color: $color-body;
-        }
-      }
     }
     .tools {
       .well {

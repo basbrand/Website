@@ -1481,7 +1481,7 @@ Styleguide 3.5
   width: 100%;
   text-align: center; }
 
-.button--inverse {
+.cover .button, .button--inverse {
   color: #ffffff;
   border-color: #ffffff; }
 
@@ -1744,13 +1744,7 @@ Styleguide 3.11
     background-image: url("/images/logos/Brickson-Logotype-DNB-RGB-LB--tablet--x2.png");
     background-image: url("/images/logos/Brickson-Logotype-DNB-RGB-LB.svg"); }
   .brand--handshake {
-    height: 88pt;
-    position: absolute;
-    width: 100%;
-    top: 33%;
-    left: 0;
-    margin-top: 0%;
-    transform: translateY(-50%); }
+    height: 88pt; }
   .brand--cover {
     background-image: url("/images/logos/Brickson-Logotype-RGB-DB--tablet--x2.png");
     background-image: url("/images/logos/Brickson-Logotype-RGB-DB.svg"); }
@@ -1760,7 +1754,14 @@ Styleguide 3.11
       .brand--ams, .brand--dnb {
         height: 68pt; }
       .brand--handshake {
-        height: 80pt; } }
+        height: 80pt; }
+      .brand--handshake {
+        position: absolute;
+        width: 100%;
+        top: 33%;
+        left: 0;
+        margin-top: 0%;
+        transform: translateY(-50%); } }
   @media (orientation: landscape) and (min-width: 64em) {
     .brand--ams, .brand--dnb {
       height: 72pt; } }
@@ -1797,13 +1798,7 @@ Styleguide 3.11
     background-image: url("/images/logos/Brickson-Logotype-DNB-RGB-LB--tablet--x2.png");
     background-image: url("/images/logos/Brickson-Logotype-DNB-RGB-LB.svg"); }
   .brand--handshake {
-    height: 88pt;
-    position: absolute;
-    width: 100%;
-    top: 33%;
-    left: 0;
-    margin-top: 0%;
-    transform: translateY(-50%); }
+    height: 88pt; }
   .brand--cover {
     background-image: url("/images/logos/Brickson-Logotype-RGB-DB--tablet--x2.png");
     background-image: url("/images/logos/Brickson-Logotype-RGB-DB.svg"); }
@@ -1813,7 +1808,14 @@ Styleguide 3.11
       .brand--ams, .brand--dnb {
         height: 68pt; }
       .brand--handshake {
-        height: 80pt; } }
+        height: 80pt; }
+      .brand--handshake {
+        position: absolute;
+        width: 100%;
+        top: 33%;
+        left: 0;
+        margin-top: 0%;
+        transform: translateY(-50%); } }
   @media (orientation: landscape) and (min-width: 64em) {
     .brand--ams, .brand--dnb {
       height: 72pt; } }
@@ -2081,11 +2083,15 @@ markup:
   </figcaption>
 </figure>
 
+sg-wrapper:
+<div style="position: relative;">
+<sg-wrapper-content/>
+</div>
+
 Styleguide 4.3
 */
 .person {
   position: relative;
-  left: -20pt;
   display: table;
   max-width: 380px; }
   .person__picture, .person__body {
@@ -2109,6 +2115,387 @@ Modules
 
 Styleguide 5.0
 */
+/* 5.1 Handshake */
+/*
+Handshake
+
+Styleguide 5.1
+*/
+/* 5.2 Testimonial */
+/*
+Testimonial
+
+markup:
+<div class="testimonial cover cover--neutral">
+  <picture class="cover__image">
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source
+      media="(min-width: 1440px) and (orientation: landscape)"
+      srcset="/images/content/w1280px_h1280px--evean.jpg 1280w, /images/content/w1280px_h1280px--evean.jpg 2560w">
+    <source
+      media="(min-width: 1024px) and (orientation: portrait)"
+      srcset="/images/content/w683px_h1024px--evean.jpg 683w, /images/content/w683px_h1024px_2x--evean.jpg 1366w">
+    <source
+      media="(min-width: 768px) and (orientation: portrait)"
+      srcset="/images/content/w896px_h640px--evean.jpg 896w, /images/content/w896px_h640px_2x--evean.jpg 1792w">
+    <source
+      media="(min-width: 520px)and (orientation: landscape)"
+      srcset="/images/content/w1022px_h520px--evean.jpg 1022w, /images/content/w1022px_h520px_2x--evean.jpg 2044w">
+    <source
+      media="(min-width: 320px) and (orientation: portrait)"
+      srcset="/images/content/w520px_h1022px--evean.jpg 520w, /images/content/w520px_h1022px_2x--evean.jpg 1040w">
+    <!--[if IE 9]></video><![endif]-->
+    <img class="cover__image" src="/images/content/w320px_h576px--evean.jpg" alt="">
+  </picture>
+  <div class="well testimonial__body">
+    <h3 class="well__title title title--section">Testimonial</h3>
+    <div class="well__body">
+      <figure class="person bleed">
+        <span class="person__picture gutters">
+          <img src="/images/heads/marja_smits.jpg" class="person__image" width="56" height="56" style="background: Grey;"/>
+        </span>
+        <figcaption class="person__body">
+          <span class="person__name title title--section">MARJA SMITS</span>
+          <small class="person__occupation">Manager Strategie en Marketing Evean</small>
+        </figcaption>
+      </figure>
+      <blockquote class="quote lead leader"><p>Met oog en gevoel voor de mensen in je organisatie gaat Brickson altijd een stap verder.</p></blockquote>
+    </div>
+    <div class="well__footer  leader--hero">
+      <a class="button button--stretch button--inverse" href="javascript:void();">Case: Vereniging Eigen Huis</a>
+    </div>
+  </div>
+</div>
+
+Styleguide 5.2
+*/
+/*
+ * 1. Make sure to cover up introduction on desktop
+ */
+.testimonial {
+  width: 100%;
+  min-height: 100%;
+  min-height: 100vh; }
+  .testimonial .well {
+    float: left;
+    width: 100%;
+    min-height: 50%;
+    min-height: 50vh;
+    padding-left: 8.33333%;
+    padding-right: 8.33333%; }
+
+@media only screen and (orientation: landscape) {
+  .testimonial .well {
+    min-height: 100%;
+    min-height: 100vh; } }
+
+@media (orientation: portrait) and (min-width: 48em) {
+  .testimonial {
+    min-height: 50%;
+    min-height: 50vh; }
+    .testimonial .well {
+      width: 50%;
+      min-height: 100%;
+      min-height: 50vh; } }
+
+@media (orientation: landscape) and (min-width: 64em) {
+  .testimonial {
+    float: left;
+    width: 50%;
+    height: 100%;
+    height: 100vh; }
+    .testimonial .well {
+      width: 100%;
+      min-height: 50%;
+      min-height: 50vh; } }
+
+@media (orientation: landscape) and (min-width: 90em) {
+  .testimonial {
+    width: 66.66667%; }
+  .testimonial {
+    position: relative; }
+    .testimonial .well {
+      padding-left: 4.16667%;
+      padding-right: 4.16667%;
+      width: 50%;
+      min-height: 50%;
+      min-height: 50vh; }
+    .testimonial__body {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: #ffffff;
+      color: #445D87; }
+      .testimonial__body .button {
+        color: #445D87;
+        border-color: #445D87; } }
+
+/* 5.3 Introduction */
+/*
+Introduction
+
+markup:
+<div class="introduction">
+  <div class="well">
+    <h2 class="well__title title">Blijer, gezonder en welvarender</h2>
+    <p class="lead">Waar draait digitaal om? Slimme organisaties begrijpen mensen én techniek. Ze weten dat het digitale landschap het belangrijkste speelveld voor innovatie is. Maar bovenal weten ze wat hun klant van ze verwacht en gaat verwachten.</p>
+  </div>
+  <div class="well tile cover">
+    <img
+      class="cover__image"
+      alt=""
+      src="/images/content/in-good-company--tablet.jpg"
+      srcset="
+        /images/content/in-good-company--tablet.jpg 640w,
+        /images/content/in-good-company--smartphone.jpg 480w,
+        /images/content/in-good-company--desktop.jpg 1024w">
+    <h3 class="well__title title title--section">In goed gezelschap</h3>
+    <figure class="tile__body leader-inside">
+      <img
+        class="introduction__cover image--stretch"
+        alt=""
+        src="/images/logos/brands.png"
+        srcset="
+          /images/logos/brands--2x.png 640w,
+          /images/logos/brands.png 480w,
+          /images/logos/brands--3x.png 1024w,
+          /images/logos/brands--3x.png 2x">
+    </figure>
+  </div>
+</div>
+
+
+Styleguide 5.3
+*/
+/*
+ * 1. Make sure to cover up introduction on desktop
+ */
+.introduction {
+  overflow: hidden;
+  min-height: 100%;
+  min-height: 100vh; }
+  .introduction .well {
+    float: left;
+    width: 100%;
+    min-height: 50%;
+    min-height: 50vh;
+    padding-left: 8.33333%;
+    padding-right: 8.33333%; }
+  .introduction .tile__body {
+    width: 83.33333%; }
+
+@media only screen and (orientation: landscape) {
+  .introduction .well {
+    width: 50%;
+    min-height: 100%;
+    min-height: 100vh; } }
+
+@media (orientation: landscape) and (min-width: 48em) {
+  .introduction__cover {
+    width: auto;
+    max-width: 83.33333%; } }
+
+@media (orientation: portrait) and (min-width: 48em) {
+  .introduction {
+    min-height: 50%;
+    min-height: 50vh; }
+    .introduction .well {
+      width: 50%;
+      min-height: 100%;
+      min-height: 50vh; } }
+
+@media (orientation: landscape) and (min-width: 64em) {
+  .introduction {
+    float: left;
+    width: 50%;
+    height: 100%;
+    height: 100vh; }
+    .introduction .well {
+      width: 100%;
+      min-height: 50%;
+      min-height: 50vh; } }
+
+@media (orientation: landscape) and (min-width: 90em) {
+  .introduction {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    width: 33.33333%; } }
+
+/* 5.4 Contact */
+/*
+Contact
+
+markup:
+<div class="introduction">
+  <div class="well">
+    <h2 class="well__title title">Blijer, gezonder en welvarender</h2>
+    <p class="lead">Waar draait digitaal om? Slimme organisaties begrijpen mensen én techniek. Ze weten dat het digitale landschap het belangrijkste speelveld voor innovatie is. Maar bovenal weten ze wat hun klant van ze verwacht en gaat verwachten.</p>
+  </div>
+  <div class="well tile cover">
+    <img
+      class="cover__image"
+      alt=""
+      src="/images/content/in-good-company--tablet.jpg"
+      srcset="
+        /images/content/in-good-company--tablet.jpg 640w,
+        /images/content/in-good-company--smartphone.jpg 480w,
+        /images/content/in-good-company--desktop.jpg 1024w">
+    <h3 class="well__title title title--section">In goed gezelschap</h3>
+    <figure class="tile__body leader-inside">
+      <img
+        class="introduction__cover image--stretch"
+        alt=""
+        src="/images/logos/brands.png"
+        srcset="
+          /images/logos/brands--2x.png 640w,
+          /images/logos/brands.png 480w,
+          /images/logos/brands--3x.png 1024w,
+          /images/logos/brands--3x.png 2x">
+    </figure>
+  </div>
+</div>
+
+
+Styleguide 5.4
+*/
+/*
+ * 1. Make sure to cover up introduction on desktop
+ */
+/*
+ Landingpage
+
+ Styleguide 7.1
+ */
+/*
+  * 1. Make sure to cover up introduction on desktop
+  */
+.contact {
+  min-height: 100%;
+  min-height: 100vh; }
+  .contact .well {
+    float: left;
+    width: 100%;
+    min-height: 50%;
+    min-height: 50vh; }
+
+.contact .well {
+  padding-left: 8.33333%;
+  padding-right: 8.33333%; }
+
+@media only screen and (orientation: landscape) {
+  .contact .well {
+    width: 50%;
+    min-height: 100%;
+    min-height: 100vh; } }
+
+@media (orientation: portrait) and (min-width: 48em) {
+  .contact {
+    min-height: 50%;
+    min-height: 50vh; }
+    .contact .well {
+      width: 50%; } }
+
+@media (orientation: landscape) and (min-width: 64em) {
+  .contact {
+    float: left;
+    width: 50%;
+    height: 100%;
+    height: 100vh; }
+    .contact .well {
+      width: 100%;
+      min-height: 50%;
+      min-height: 50vh; } }
+
+@media (orientation: landscape) and (min-width: 90em) {
+  .contact {
+    float: left;
+    width: 33.33333%; }
+  .contact .well {
+    background-color: #FFF;
+    /* 1 */
+    position: relative;
+    z-index: 1; } }
+
+/* 5.5 Catalog */
+/*
+Contact
+
+Styleguide 5.5
+*/
+.catalog {
+  min-height: 100%;
+  min-height: 100vh; }
+  .catalog .well {
+    float: left;
+    width: 100%;
+    min-height: 100%;
+    min-height: 100vh;
+    padding-left: 8.33333%;
+    padding-right: 8.33333%; }
+
+@media only screen and (min-width: 48em) {
+  .catalog .well {
+    width: 50%;
+    min-height: 50%;
+    min-height: 50vh; }
+    .catalog .well__title {
+      visibility: hidden; }
+  .catalog .well .cover__image {
+    min-height: 50%;
+    min-height: 50vh;
+    max-height: 50%;
+    max-height: 50vh; }
+  .catalog .well:first-child {
+    position: static; }
+    .catalog .well:first-child,
+    .catalog .well:first-child .button {
+      color: #445D87; }
+    .catalog .well:first-child .button {
+      border-color: #445D87; }
+    .catalog .well:first-child .cover__image {
+      top: auto;
+      bottom: 0;
+      z-index: 1; }
+  .catalog .well:first-child .well__title {
+    visibility: visible; } }
+
+@media (orientation: landscape) and (min-width: 90em) {
+  .catalog {
+    position: relative;
+    width: 66.66667%; } }
+
+/* 5.6 Article */
+/*
+Article
+
+Styleguide 5.6
+*/
+.article {
+  min-height: 100%;
+  min-height: 100vh; }
+  .article__body {
+    padding-left: 8.33333%;
+    padding-right: 8.33333%; }
+
+@media (orientation: landscape) and (min-width: 48em) {
+  .article__body {
+    padding-left: 8.33333%;
+    padding-right: 8.33333%; } }
+
+@media (orientation: landscape) and (min-width: 90em) {
+  .article {
+    position: relative;
+    width: 66.66667%;
+    background: #ffffff; }
+    .article__body {
+      padding-left: 12.5%;
+      padding-right: 12.5%; }
+    .article .grid {
+      position: relative;
+      z-index: 1; } }
+
 /* 6. */
 /*
 Templates
@@ -2130,214 +2517,146 @@ Styleguide 7.1
 /*
  * 1. Make sure to cover up introduction on desktop
  */
-.landingpage .panel {
+.p-landingpage .panel {
   position: relative; }
 
-.landingpage .handshake,
-.landingpage .invitation,
-.landingpage .introduction,
-.landingpage .testimonial,
-.landingpage .tools,
-.landingpage .contact {
+.p-landingpage .handshake,
+.p-landingpage .invitation,
+.p-landingpage .tools {
   min-height: 100%;
   min-height: 100vh; }
-  .landingpage .handshake .well,
-  .landingpage .invitation .well,
-  .landingpage .introduction .well,
-  .landingpage .testimonial .well,
-  .landingpage .tools .well,
-  .landingpage .contact .well {
+  .p-landingpage .handshake .well,
+  .p-landingpage .invitation .well,
+  .p-landingpage .tools .well {
     float: left;
     width: 100%;
     min-height: 50%;
     min-height: 50vh; }
 
-.landingpage .invitation .shops {
+.p-landingpage .invitation .shops {
   line-height: 1; }
 
-.landingpage .handshake .well,
-.landingpage .invitation .well,
-.landingpage .introduction .well,
-.landingpage .testimonial .well,
-.landingpage .tools .well,
-.landingpage .contact .well {
+.p-landingpage .handshake .well,
+.p-landingpage .invitation .well,
+.p-landingpage .tools .well {
   padding-left: 8.33333%;
   padding-right: 8.33333%; }
 
-.landingpage .shops,
-.landingpage .offices {
+.p-landingpage .shops,
+.p-landingpage .offices {
   padding: 0 !important; }
 
-.landingpage .shops .title--meta {
+.p-landingpage .shops .title--meta {
   font-size: 1.16667em;
   line-height: 1.14286; }
 
-.landingpage .offices {
+.p-landingpage .offices {
   text-align: center; }
 
-.landingpage .tools .well {
+.p-landingpage .tools .well {
   min-height: 0; }
 
-.landingpage .tools__header .well__title {
+.p-landingpage .tools__header .well__title {
   margin-bottom: 0; }
 
-.landingpage .testimonial {
-  width: 100%; }
-
-.landingpage .introduction {
-  overflow: hidden; }
-  .landingpage .introduction .tile__body {
-    width: 83.33333%; }
-
 @media only screen and (orientation: landscape) {
-  .landingpage .handshake .well,
-  .landingpage .invitation .well,
-  .landingpage .introduction .well,
-  .landingpage .testimonial .well,
-  .landingpage .contact .well {
+  .p-landingpage .handshake .well,
+  .p-landingpage .invitation .well {
     width: 50%;
     min-height: 100%;
     min-height: 100vh; }
-  .landingpage .tools {
+  .p-landingpage .tools {
     clear: both;
     width: 100%;
     min-height: 100%;
     min-height: 100vh; }
-  .landingpage .offices .grid__cell.tile,
-  .landingpage .shops .grid__cell.tile {
+  .p-landingpage .offices .grid__cell.tile,
+  .p-landingpage .shops .grid__cell.tile {
     min-height: 50%;
     min-height: 50vh;
     max-height: 50%;
     max-height: 50vh; } }
 
-@media (orientation: landscape) and (min-width: 48em) {
-  .landingpage .introduction__cover {
-    width: auto;
-    max-width: 83.33333%; } }
-
 @media (orientation: portrait) and (min-width: 48em) {
-  .landingpage .handshake,
-  .landingpage .invitation,
-  .landingpage .introduction,
-  .landingpage .testimonial {
+  .p-landingpage .handshake,
+  .p-landingpage .invitation {
     min-height: 50%;
     min-height: 50vh; }
-    .landingpage .handshake .well,
-    .landingpage .invitation .well,
-    .landingpage .introduction .well,
-    .landingpage .testimonial .well {
+    .p-landingpage .handshake .well,
+    .p-landingpage .invitation .well {
       width: 50%;
       min-height: 100%;
       min-height: 50vh; }
-  .landingpage .contact {
-    min-height: 50%;
-    min-height: 50vh; }
-    .landingpage .contact .well {
-      width: 50%; }
-  .landingpage .handshake .well {
+  .p-landingpage .handshake .well {
     min-height: 50%;
     min-height: 25vh;
     clear: both; }
-  .landingpage .offices .brand {
+  .p-landingpage .offices .brand {
     margin: 12pt 0; } }
 
 @media only screen and (min-width: 64em) {
-  .landingpage .offices .grid__cell.tile,
-  .landingpage .shops .grid__cell.tile {
+  .p-landingpage .offices .grid__cell.tile,
+  .p-landingpage .shops .grid__cell.tile {
     min-height: 50%;
     min-height: 25vh;
     max-height: 50%;
     max-height: 25vh; } }
 
 @media (orientation: landscape) and (min-width: 64em) {
-  .landingpage .handshake,
-  .landingpage .invitation,
-  .landingpage .introduction,
-  .landingpage .testimonial,
-  .landingpage .contact {
+  .p-landingpage .handshake,
+  .p-landingpage .invitation {
     float: left;
     width: 50%;
     height: 100%;
     height: 100vh; }
-    .landingpage .handshake .well,
-    .landingpage .invitation .well,
-    .landingpage .introduction .well,
-    .landingpage .testimonial .well,
-    .landingpage .contact .well {
+    .p-landingpage .handshake .well,
+    .p-landingpage .invitation .well {
       width: 100%;
       min-height: 50%;
       min-height: 50vh; } }
 
 @media (orientation: landscape) and (min-width: 90em) {
-  .landingpage .handshake,
-  .landingpage .invitation,
-  .landingpage .testimonial {
+  .p-landingpage .handshake,
+  .p-landingpage .invitation {
     width: 66.66667%; }
-  .landingpage .handshake .well,
-  .landingpage .invitation .well,
-  .landingpage .testimonial .well,
-  .landingpage .tools .well {
+  .p-landingpage .handshake .well,
+  .p-landingpage .invitation .well,
+  .p-landingpage .tools .well {
     padding-left: 4.16667%;
     padding-right: 4.16667%; }
-  .landingpage .handshake,
-  .landingpage .invitation {
+  .p-landingpage .handshake,
+  .p-landingpage .invitation {
     min-height: 50%;
     min-height: 50vh;
     height: 50%;
     height: 50vh; }
-  .landingpage .handshake .well {
+  .p-landingpage .handshake .well {
     width: 50%;
     min-height: 50%;
     min-height: 25vh;
     clear: both; }
-  .landingpage .invitation .well {
+  .p-landingpage .invitation .well {
     width: 50%;
     min-height: 100%;
     min-height: 100vh; }
-  .landingpage .introduction,
-  .landingpage .contact {
-    width: 33.33333%; }
-  .landingpage .introduction {
-    position: fixed;
-    right: 0;
-    z-index: -1; }
-  .landingpage .contact {
-    float: left; }
-  .landingpage .testimonial .well {
-    width: 50%;
-    min-height: 50%;
-    min-height: 50vh; }
-  .landingpage .tools,
-  .landingpage .contact .well {
+  .p-landingpage .tools {
     background-color: #FFF;
     /* 1 */
     position: relative;
     z-index: 1; }
-  .landingpage .offices {
+  .p-landingpage .offices {
     font-size: 1.2em; }
-  .landingpage .testimonial {
-    position: relative; }
-    .landingpage .testimonial__body {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      background: #ffffff;
-      /* Move to Testimonial Module; */
-      color: #445D87; }
-      .landingpage .testimonial__body .button {
-        color: #445D87;
-        border-color: #445D87; }
-  .landingpage .tools .well {
+  .p-landingpage .tools .well {
     min-height: 100%;
     min-height: 100vh;
     height: 100%;
     height: 100vh;
     width: 50%;
     overflow-y: scroll; }
-  .landingpage .tools__header {
+  .p-landingpage .tools__header {
     color: #ffffff;
     position: relative; }
-    .landingpage .tools__header:before {
+    .p-landingpage .tools__header:before {
       display: block;
       content: "";
       position: absolute;
@@ -2347,10 +2666,10 @@ Styleguide 7.1
       right: 14px;
       background: #505263 url("/images/content/tools--desktop.jpg") no-repeat center;
       background-size: cover; }
-    .landingpage .tools__header .well__title {
+    .p-landingpage .tools__header .well__title {
       position: relative;
       top: 1; }
-  .landingpage .tools__body {
+  .p-landingpage .tools__body {
     padding: 0 !important; } }
 
 /* 8. */
