@@ -2,22 +2,22 @@
   <picture class="cover__image">
     <!--[if IE 9]><video style="display: none;"><![endif]-->
     <source
-      media="<?php echo $gt_medium_desktop; ?>"
-      srcset="/images/content/handshake--tablet.jpg, /images/content/handshake--tablet--2x.jpg 2x">
+      media="<?php echo $gt_medium_desktop; ?> and <?php echo $landscape; ?>"
+      srcset="/images/content/w1280px_h640px--handshake.jpg 1280w, /images/content/w1280px_h640px--handshake.jpg 2560w">
     <source
       media="<?php echo $gt_small_desktop; ?> and <?php echo $landscape; ?>"
-      srcset="images/content/handshake--smartphone--portrait--2x.jpg">
+      srcset="/images/content/w683px_h1024px--handshake.jpg 683w, /images/content/w683px_h1024px_2x--handshake.jpg 1366w">
     <source
       media="<?php echo $gt_large_handheld; ?> and <?php echo $portrait; ?>"
-      srcset="/images/content/handshake--smartphone--landscape--2x.jpg 2x">
+      srcset="/images/content/w896px_h640px--handshake.jpg 896w, /images/content/w896px_h640px_2x--handshake.jpg 1792w">
     <source
-      media="<?php echo $landscape; ?>"
-      srcset="/images/content/handshake--smartphone--landscape.jpg, /images/content/handshake--smartphone--landscape--2x.jpg 2x">
+      media="<?php echo $gt_medium_handheld; ?> and <?php echo $landscape; ?>"
+      srcset="/images/content/w1022px_h520px--handshake.jpg 1022w, /images/content/w1022px_h520px_2x--handshake.jpg 2044w">
     <source
-      media="<?php echo $portrait; ?>"
-      srcset="/images/content/handshake--smartphone--portrait.jpg, /images/content/handshake--smartphone--portrait--2x.jpg 2x">
+      media="<?php echo $gt_small_handheld; ?> and <?php echo $portrait; ?>"
+      srcset="/images/content/w520px_h1022px--handshake.jpg 520w, /images/content/w520px_h1022px_2x--handshake.jpg 1040w">
     <!--[if IE 9]></video><![endif]-->
-    <img class="cover__image" src="/images/content/handshake--smartphone--portrait.jpg" srcset="/images/content/handshake--smartphone--portrait.jpg, /images/content/handheld/handshake--smartphone--portrait--2x.jpg 2x" alt="">
+    <img class="cover__image" src="/images/content/w320px_h576px--handshake.jpg" alt="">
   </picture>
   <div class="well is-rooted">
       <h1 class="well__title brand brand--cover brand--handshake">

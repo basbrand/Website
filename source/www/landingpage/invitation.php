@@ -11,6 +11,12 @@
             class="cover__image"
             alt=""
             src="/images/content/challenge--tile--smartphone.jpg"
+            sizes="
+              (min-width: 1024x) 1024px,
+              (min-width: 768px) 384px,
+              (min-width: 520px) 520px,
+              (min-width: 320px) 320px,
+              280w"
             srcset="
               /images/content/challenge--tile--tablet--2x.jpg 1040w,
               /images/content/challenge--tile--tablet.jpg 320w,

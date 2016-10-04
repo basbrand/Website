@@ -2,19 +2,22 @@
   <picture class="cover__image">
     <!--[if IE 9]><video style="display: none;"><![endif]-->
     <source
+      media="<?php echo $gt_medium_desktop; ?> and <?php echo $landscape; ?>"
+      srcset="/images/content/w1280px_h1280px--eigenhuis.jpg 1280w, /images/content/w1280px_h1280px--eigenhuis.jpg 2560w">
+    <source
       media="<?php echo $gt_small_desktop; ?> and <?php echo $landscape; ?>"
-      srcset="/images/content/eigenhuis--desktop.jpg, /images/content/eigenhuis--desktop--2x.jpg 2x">
+      srcset="/images/content/w683px_h1024px--eigenhuis.jpg 683w, /images/content/w683px_h1024px_2x--eigenhuis.jpg 1366w">
     <source
       media="<?php echo $gt_large_handheld; ?> and <?php echo $portrait; ?>"
-      srcset="/images/content/eigenhuis--landscape--2x.jpg">
+      srcset="/images/content/w896px_h640px--eigenhuis.jpg 896w, /images/content/w896px_h640px_2x--eigenhuis.jpg 1792w">
     <source
-      media="<?php echo $landscape; ?>"
-      srcset="/images/content/eigenhuis--landscape.jpg, /images/content/eigenhuis--landscape--2x.jpg 2x">
+      media="<?php echo $gt_medium_handheld; ?> and <?php echo $landscape; ?>"
+      srcset="/images/content/w1022px_h520px--eigenhuis.jpg 1022w, /images/content/w1022px_h520px_2x--eigenhuis.jpg 2044w">
     <source
-      media="<?php echo $portrait; ?>"
-      srcset="/images/content/eigenhuis--portrait.jpg, /images/content/eigenhuis--portrait--2x.jpg 2x">
+      media="<?php echo $gt_small_handheld; ?> and <?php echo $portrait; ?>"
+      srcset="/images/content/w520px_h1022px--eigenhuis.jpg 520w, /images/content/w520px_h1022px_2x--eigenhuis.jpg 1040w">
     <!--[if IE 9]></video><![endif]-->
-    <img class="cover__image" src="/images/content/eigenhuis--portrait.jpg" srcset="/images/content/eigenhuis--portrait.jpg, /images/content/eigenhuis--portrait--2x.jpg 2x" alt="">
+    <img class="cover__image" src="/images/content/w320px_h576px--eigenhuis.jpg" alt="">
   </picture>
   <div class="well testimonial__body">
     <h3 class="well__title title title--section">Testimonial</h3>
