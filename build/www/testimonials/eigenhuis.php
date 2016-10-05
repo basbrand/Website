@@ -33,7 +33,7 @@
       </figure>
       <blockquote class="quote lead leader"><p>Prettige, deskundige en flexibele gesprekspartners met een schat aan ervaring. Ze luisteren goed naar requirements, berijden geen hinderlijke stokpaardjes en houden zich aan hun afspraken.</p></blockquote>
     </div>
-    <div class="well__footer  leader--hero">
+    <div class="well__footer  leader--hero trailer--tiny">
       <a class="button button--stretch button--inverse" href="/cases/vereniging-eigen-huis">Case: Vereniging Eigen Huis</a>
     </div>
   </div>

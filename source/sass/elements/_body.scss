@@ -40,13 +40,13 @@ Styleguide 3.1
     line-height: to-unit(rhythm(6), 1, 14px);
   }
   &--email {
-      font-size: to-unit(11px, 1em, 16px);
-      line-height: to-unit(rhythm(2), 1, 11px);
+      font-size: to-unit(12px, 1em, 16px);
+      line-height: to-unit(rhythm(2), 1, 12px);
   }
   @include breakpoint($lt-large-handheld) {
     &--email {
-      font-size: to-unit(8px, 1em, 12px);
-      line-height: to-unit(rhythm(2), 1, 8px);
+      font-size: to-unit(10px, 1em, 12px);
+      line-height: to-unit(rhythm(2), 1, 10px);
     }
   }
   // @include breakpoint($gt-medium-desktop) {

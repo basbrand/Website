@@ -1266,13 +1266,13 @@ Styleguide 3.1
   line-height: 1.71429; }
 
 .body--email {
-  font-size: 0.6875em;
-  line-height: 0.72727; }
+  font-size: 0.75em;
+  line-height: 0.66667; }
 
 @media only screen and (max-width: 47.9375em) {
   .body--email {
-    font-size: 0.66667em;
-    line-height: 1; } }
+    font-size: 0.83333em;
+    line-height: 0.8; } }
 
 /* 3.2 Heading */
 /*
@@ -2341,12 +2341,33 @@ Styleguide 5.4
 .contact .well {
   padding-left: 8.33333%;
   padding-right: 8.33333%; }
+  .contact .well__title {
+    margin-bottom: 12px; }
 
-@media only screen and (orientation: landscape) {
+@media (orientation: portrait) and (min-width: 20em) {
+  .contact .well {
+    min-height: auto;
+    max-height: auto;
+    height: auto; } }
+
+@media (orientation: landscape) and (min-width: 32.5em) {
   .contact .well {
     width: 50%;
     min-height: 100%;
-    min-height: 100vh; } }
+    min-height: 100vh; }
+  .contact .well:first-child {
+    padding-right: 14px; }
+  .contact .well:last-child {
+    padding-left: 14px; } }
+
+@media (orientation: landscape) and (min-width: 48em) {
+  .contact .well:first-child,
+  .contact .well:last-child {
+    min-height: auto;
+    max-height: auto;
+    height: auto;
+    padding-left: 8.33333%;
+    padding-right: 8.33333%; } }
 
 @media (orientation: portrait) and (min-width: 48em) {
   .contact {
@@ -2362,19 +2383,21 @@ Styleguide 5.4
     height: 100%;
     height: 100vh; }
     .contact .well {
-      width: 100%;
-      min-height: 50%;
-      min-height: 50vh; } }
+      width: 100%; } }
 
-@media (orientation: landscape) and (min-width: 90em) {
+@media only screen and (min-width: 90em) {
   .contact {
     float: left;
-    width: 33.33333%; }
-  .contact .well {
-    background-color: #FFF;
-    /* 1 */
-    position: relative;
-    z-index: 1; } }
+    width: 33.33333%;
+    min-height: 50%;
+    min-height: 50vh; }
+    .contact .well {
+      width: 100%;
+      min-height: auto;
+      max-height: auto;
+      height: auto;
+      position: relative;
+      z-index: 1; } }
 
 /* 5.5 Catalog */
 /*

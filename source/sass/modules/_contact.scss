@@ -49,19 +49,47 @@ Styleguide 5.4
    .well {
      padding-left: percentage(1/12);
      padding-right: percentage(1/12);
+     &__title {
+       margin-bottom: rhythm(3);
+     }
    }
  }
- @include breakpoint($landscape) {
+
+ @include breakpoint($gt-small-handheld,$portrait) {
+   .contact {
+     .well {
+       min-height: auto;
+       max-height: auto;
+       height: auto;
+     }
+   }
+ }
+ @include breakpoint($gt-medium-handheld,$landscape) {
    .contact {
      .well {
        width: 50%;
        min-height: 100%;
        min-height: 100vh;
      }
+     .well:first-child {
+       padding-right: gutter();
+     }
+     .well:last-child {
+       padding-left: gutter();
+     }
    }
  }
  @include breakpoint($gt-large-handheld,$landscape) {
-
+   .contact {
+     .well:first-child,
+     .well:last-child {
+       min-height: auto;
+       max-height: auto;
+       height: auto;
+       padding-left: percentage(1/12);
+       padding-right: percentage(1/12);
+     }
+   }
  }
  @include breakpoint($gt-large-handheld,$portrait) {
    .contact {
@@ -83,19 +111,24 @@ Styleguide 5.4
      height: 100vh;
      .well {
        width: 100%;
-       min-height: 50%;
-       min-height: 50vh;
+      //  min-height: 50%;
+      //  min-height: 50vh;
      }
    }
  }
- @include breakpoint($gt_medium_desktop,$landscape) {
+ @include breakpoint($gt_medium_desktop) {
    .contact {
      float: left;
      width: percentage(12/36);
-   }
-   .contact .well {
-     background-color: #FFF; /* 1 */
-     position: relative;
-     z-index: 1;
+     min-height: 50%;
+     min-height: 50vh;
+     .well {
+       width: 100%;
+       min-height: auto;
+       max-height: auto;
+       height: auto;
+       position: relative;
+       z-index: 1;
+     }
    }
  }
