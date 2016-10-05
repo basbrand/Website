@@ -1,0 +1,69 @@
+/*
+Brand
+
+markup:
+<p class="slogan">
+  <em class="is-narrative">Sowing Innovation Harvesting Prosperity</em>
+</p>
+
+width="444px" height="347px" viewBox="0 0 444 347"
+
+Styleguide 3.9
+*/
+
+.brand {
+  height: px-to-pt( rhythm(12) );
+  background: no-repeat center;
+  background-image: url("/images/logos/Brickson-Logotype-RGB-LB--tablet--x2.png");
+  background-image: url("/images/logos/Brickson-Logotype-RGB-LB.svg");
+  background-size: contain;
+  &--ams,
+  &--dnb {
+    height: px-to-pt( rhythm(15) );
+  }
+  &--ams {
+    background-image: url("/images/logos/Brickson-Logotype-AMS-RGB-LB--tablet--x2.png");
+    background-image: url("/images/logos/Brickson-Logotype-AMS-RGB-LB.svg");
+  }
+  &--dnb {
+    background-image: url("/images/logos/Brickson-Logotype-DNB-RGB-LB--tablet--x2.png");
+    background-image: url("/images/logos/Brickson-Logotype-DNB-RGB-LB.svg");
+  }
+  &--handshake {
+      height: px-to-pt( rhythm(22) );
+  }
+  &--cover {
+    background-image: url("/images/logos/Brickson-Logotype-RGB-DB--tablet--x2.png");
+    background-image: url("/images/logos/Brickson-Logotype-RGB-DB.svg");
+  }
+  @include breakpoint($gt-large-handheld) {
+    height: px-to-pt( rhythm(15) );
+    &--ams,
+    &--dnb {
+      height: px-to-pt( rhythm(17) );
+    }
+    &--handshake {
+      height: px-to-pt( rhythm(20) );
+    }
+    &--handshake {
+      position: absolute;
+      width: 100%;
+      top: 33%;
+      left: 0;
+      margin-top: 0%;
+      transform: translateY(-50%);
+    }
+  }
+  @include breakpoint($gt_small_desktop,$landscape) {
+    &--ams,
+    &--dnb {
+      height: px-to-pt( rhythm(18) );
+    }
+  }
+  @include breakpoint($gt_medium_desktop,$landscape) {
+    &--ams,
+    &--dnb {
+      height: px-to-pt( rhythm(20) );
+    }
+  }
+}

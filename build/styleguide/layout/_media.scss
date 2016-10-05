@@ -1,0 +1,86 @@
+/*
+Media Object
+
+Flexbox implementation of Nicole Sullivan's Media Object
+
+.media - Content aligned top
+.media.media--middle - Content vertically aligned middle
+
+markup:
+<div class="{$modifiers}">
+	<div class="media__image">
+		<img src="https://images.unsplash.com/reserve/Lt0DwxdqRKSQkX7439ey_Chaz_fisheye-11.jpg?q=80&fm=jpg&w=50&h=50&fit=crop"/>
+	</div>
+  <div class="media__content">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra pellentesque ligula ut feugiat. Nullam elit libero, rutrum eu odio sed, tempus iaculis lectus. Phasellus felis ex, malesuada vitae libero ac, auctor finibus sapien. Sed odio enim, molestie eu pretium sit amet, commodo ut enim. Praesent eget mi eget enim hendrerit interdum. Ut sit amet orci libero. Vestibulum et leo pretium, semper nisl non, aliquam arcu. Pellentesque malesuada eros a elit imperdiet, sed tempor enim malesuada. Praesent accumsan malesuada eros, in sodales tortor sagittis at. Duis sollicitudin, est sed lobortis semper, felis est hendrerit massa, a tincidunt nulla risus in lectus. Praesent eleifend vestibulum nunc sed mollis. Ut dapibus nisi turpis, id lobortis justo scelerisque vitae. Morbi vel augue in ipsum dignissim aliquet. Vestibulum justo est, venenatis ut massa eu, dignissim vulputate lorem. Morbi porta est quis erat vulputate tristique.
+	</div>
+</div>
+
+Styleguide 2.8
+*/
+
+.media {
+  display: flex;
+  &__image {
+
+  }
+  &__content {
+
+  }
+  &__stretcher {
+    flex-grow: 1;
+  }
+  &--middle {
+    align-items: center;
+  }
+}
+
+// Consider replacing with no-flex fallback via Modernizr
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .media {
+    display: inline-block;
+    >* {
+      display: inline-block;
+    }
+    .image {
+      display: inline-block;
+    }
+
+  }
+}
+
+/*
+Media Object (2)
+
+Media object with left part stretched as far as possible by applying `media__stretcher` to it.
+
+markup:
+<div class="media">
+	<div class="media__image media__stretcher">
+		<img src="https://images.unsplash.com/reserve/Lt0DwxdqRKSQkX7439ey_Chaz_fisheye-11.jpg?q=80&fm=jpg&w=50&h=50&fit=crop"/>
+	</div>
+  <div class="media__content">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra pellentesque ligula ut feugiat. Nullam elit libero, rutrum eu odio sed, tempus iaculis lectus. Phasellus felis ex, malesuada vitae libero ac, auctor finibus sapien. Sed odio enim, molestie eu pretium sit amet, commodo ut enim. Praesent eget mi eget enim hendrerit interdum. Ut sit amet orci libero. Vestibulum et leo pretium, semper nisl non, aliquam arcu. Pellentesque malesuada eros a elit imperdiet, sed tempor enim malesuada. Praesent accumsan malesuada eros, in sodales tortor sagittis at. Duis sollicitudin, est sed lobortis semper, felis est hendrerit massa, a tincidunt nulla risus in lectus. Praesent eleifend vestibulum nunc sed mollis. Ut dapibus nisi turpis, id lobortis justo scelerisque vitae. Morbi vel augue in ipsum dignissim aliquet. Vestibulum justo est, venenatis ut massa eu, dignissim vulputate lorem. Morbi porta est quis erat vulputate tristique.
+	</div>
+</div>
+
+Styleguide 2.8.1
+*/
+
+/*
+Media Object (3)
+
+Media object with right part stretched as far as possible by applying `media__stretcher` to it.
+
+markup:
+<div class="media">
+	<div class="media__image">
+		<img src="https://images.unsplash.com/reserve/Lt0DwxdqRKSQkX7439ey_Chaz_fisheye-11.jpg?q=80&fm=jpg&w=50&h=50&fit=crop"/>
+	</div>
+  <div class="media__content media__stretcher">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra pellentesque ligula ut feugiat. Nullam elit libero, rutrum eu odio sed, tempus iaculis lectus. Phasellus felis ex, malesuada vitae libero ac, auctor finibus sapien. Sed odio enim, molestie eu pretium sit amet, commodo ut enim. Praesent eget mi eget enim hendrerit interdum. Ut sit amet orci libero. Vestibulum et leo pretium, semper nisl non, aliquam arcu. Pellentesque malesuada eros a elit imperdiet, sed tempor enim malesuada. Praesent accumsan malesuada eros, in sodales tortor sagittis at. Duis sollicitudin, est sed lobortis semper, felis est hendrerit massa, a tincidunt nulla risus in lectus. Praesent eleifend vestibulum nunc sed mollis. Ut dapibus nisi turpis, id lobortis justo scelerisque vitae. Morbi vel augue in ipsum dignissim aliquet. Vestibulum justo est, venenatis ut massa eu, dignissim vulputate lorem. Morbi porta est quis erat vulputate tristique.
+	</div>
+</div>
+
+Styleguide 2.8.2
+*/

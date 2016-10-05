@@ -1,0 +1,31 @@
+// Copyright (C) 2014 Babs Gösgens. Licensed under MIT; see LICENSE.txt
+
+///
+/// If true,reveals the document's vertical rhythm. Also see: [mixin $debug-rhythm](./#mixin-debug-rhythm).
+///
+/// @since 0.1
+///
+/// @type {Bool}
+///
+
+$debug-rhythm: false;
+
+///
+/// If true,reveals the document's horizontal rhythm. Also see: [mixin $debug-layout](./#mixin-debug-layout).
+///
+/// @since 0.1
+///
+/// @type {Bool}
+///
+
+$debug-layout: false;
+
+///
+/// Gutter widths are based on the vertical [rhythm](./#variable-rhythm) and default to 2*$rhythm. Gutters are implemented using the [gutter mixin](./#mixin-gutters) and are expressed in factors of this measure (usually 1/2).
+///
+/// @since 0.1
+///
+/// @type {Number}
+///
+
+$gutter-width: rhythm(10);

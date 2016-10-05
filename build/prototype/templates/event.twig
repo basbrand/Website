@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% embed "partials/head.twig" with { title: 'Resources', locale: locale } %}
+  {% endembed %}
+  <body>
+    {% embed "partials/masthead.twig" with { locale: locale } %}
+    {% endembed %}
+    {% embed "partials/event/title.twig" %}
+    {% endembed %}
+    {% embed "partials/event/body.twig" %}
+    {% endembed %}
+  </body>
+</html>

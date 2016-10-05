@@ -1,0 +1,53 @@
+/*
+Navigation
+
+markup:
+<div class="navigation media">
+  <header class="media media__stretcher">
+    <a class="" href="/"><img class="navigation__home" title="Brickson.nl" src="/images/logos/Brickson-Brandmark.svg"></a>
+    <h3 class="navigation__section-marker title title--section"><a class="anchor--shy anchor--reset" href="/cases/">Cases</a></h3>
+  </header>
+  <nav>
+    <ul class="list--reset list--inline menu">
+      <li>
+        <a class="navigation__section-marker anchor--shy title title--section" href="javascript:void();">Menu Item</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+Styleguide 5.7
+*/
+
+.navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: rhythm() percentage(1/12);
+  background: rgba($white,.6);
+  img {
+    display: block; /* Hack - isolate in image class */
+  }
+  &__home {
+    height: rhythm(8);
+  }
+  &__section-marker {
+    line-height: rhythm(8);
+    margin-left: 1ex;
+  }
+  .menu {
+    text-align: right;
+  }
+  @include breakpoint($gt-large-handheld) {
+    right: percentage(12/24);
+  }
+  @include breakpoint($gt-small-desktop) {
+    padding: rhythm(4) percentage(1/24);
+  }
+  @include breakpoint($gt-medium-desktop) {
+    padding: rhythm(4) percentage(1/36);
+    right: percentage(24/36);
+  }
+}

@@ -1,0 +1,81 @@
+/*
+Form fields
+
+Styleguide 3.6
+*/
+
+/*
+Text Input
+
+.fld - Bas field selector
+.fld:hover - Hover state
+.fld:focus - Focus state
+.fld:empty - Empty state
+
+markup:
+<input class="fld" type="text"/>
+<input class="fld" type="text"/>
+<input class="fld" type="text"/>
+
+Styleguide 3.6.1
+*/
+
+.fld {
+  border: 0;
+  border-bottom: 1px dashed;
+  background: transparent;
+    &:focus {
+        outline: 1px solid mix($white, $color-theme, 80%);
+        background: mix($white, $color-theme, 80%);
+        .well & {
+            outline-color: $white;
+            outline-color: rgba($white, 20%);
+            background: $white;
+            background: rgba($white, 20%);
+        }
+    }
+}
+.fld {
+  margin: px-to-pt(rhythm(1)) 0;
+  padding: px-to-pt(rhythm(1)) 0;
+}
+
+/*
+Textarea Input
+
+Styleguide 3.6.2
+*/
+
+/*
+Select Input
+
+Styleguide 3.6.3
+*/
+
+/*
+Checkboxes
+
+Styleguide 3.6.4
+*/
+
+/*
+Radio buttons
+
+Styleguide 3.6.5
+*/
+
+/*
+Field label
+
+Field labels are assigne the title and title--meta classes.
+
+.fld-label.title.title--meta - Field label
+
+markup:
+<label class="fld-label title title--meta">Full name</label>
+
+Styleguide 3.6.6
+*/
+
+.fld-label {
+}

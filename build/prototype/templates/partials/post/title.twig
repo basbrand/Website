@@ -1,0 +1,19 @@
+<header class="post-header {% if item.link.mediaObject[0].metadata.url %} is-crowned {% endif %}">
+    {% if item.link.mediaObject[0].metadata.url %}
+        <img
+        class="image image--stretch"
+        sizes="(max-width: 500w) 500w, 1024w,1480w"
+        srcset="{{ resize(item.link.mediaObject[0].metadata.url, 1024, 640) }} 320w,
+              {{ resize(item.link.mediaObject[0].metadata.url, 1920, 800) }} 1480w"
+        alt="…">
+    {% endif %}
+  <div class="post-header__title layout layout--reverse">
+    <div class="layout__cell layout__cell--aside  wings">
+      <p class="post-header__about gutters">{{ item.about }}</p>
+    </div>
+    <div class="layout__cell gutters">
+      <h1 class="post-header__headline title title--headline">{{ item.headline | raw }}</h1>
+      <p class="post-header__author">By {{ item.link.person.author[0].name }}</p>
+    </div>
+  </div>
+</header>

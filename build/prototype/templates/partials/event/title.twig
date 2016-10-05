@@ -1,0 +1,20 @@
+<header class="post-header {% if item.mediaObject[0].metadata.url %} is-crowned {% endif %}">
+    {% if item.mediaObject[0].metadata.url %}
+        <img
+        class="image image--stretch"
+        sizes="(max-width: 500w) 500w, 1024w,1480w"
+        srcset="{{ resize(item.mediaObject[0].metadata.url, 1024, 640) }} 320w,
+              {{ resize(item.mediaObject[0].metadata.url, 1920, 800) }} 1480w"
+        alt="…">
+    {% endif %}
+  <div class="post-header__title layout layout--reverse">
+    <div class="layout__cell layout__cell--aside  wings">
+    </div>
+    <div class="layout__cell gutters">
+      <h1 class="post-header__headline title title--headline">{{ item.name | raw }}</h1>
+
+      <p class="posting__intro title leader">{{ item.startDate | date("F jS Y \\a\\t g:ia") }}</p>
+      <p class="posting__intro title">{{ item.location.name }}</p>
+    </div>
+  </div>
+</header>

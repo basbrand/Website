@@ -1,0 +1,57 @@
+
+/*
+Shop
+
+.shop - Centered content
+
+markup:
+<article class="shop cover">
+</article>
+<h1 class="tile">Extra, extra – read all about it!</h1>
+
+Styleguide 4.2
+*/
+
+/*
+ * 1. Layout
+ * 2. Background image
+ */
+.tile {
+  position: relative;
+  // display: table-cell; /* 1 */
+  // vertical-align: middle; /* 1 */
+  // box-shadow: inset 1px 1px 0 $white, inset -1px -1px 0 $white;
+  &__body {
+    width: 100%;
+    position: absolute; /* 1 */
+    top: 50%; /* 1 */
+    transform: translateY(-50%); /* 1 */
+  }
+  &--shop &__body {
+    text-align: center; /* 1 */
+  }
+  &--top {
+    vertical-align: top;
+  }
+  &--gutters {
+    @include gutters;
+  }
+  &__header,
+  &__footer {
+    // position: absolute;
+    // left: 0;
+    // right: 0;
+  }
+  &__header {
+    // top: 0;
+  }
+  &__footer {
+    // bottom: 0;
+  }
+  &--gutters &__header,
+  &--gutters &__footer {
+    left: .5 * $gutter-width;
+    right: .5 * $gutter-width;
+  }
+
+}

@@ -1,0 +1,98 @@
+/*
+Post Header
+
+photo-1464684979825-ad6f2811cef2 - 3
+photo-1452434351106-e02e34831841 - 4
+uploads/1412066791276cfd18da0/7a2fd8ac - 6
+photo-1441307811206-a12c74889338 - 5
+photo-1464087133576-4885b67263c6 - 0
+photo-1416432969026-7e41a751ee1e - 1
+photo-1445445166560-e1df5758c4f9 - 2
+
+markup:
+<header class="post-header is-crowned">
+  <img
+  class="image image--stretch"
+  sizes="(max-width: 500w) 500w, 1024w,1480w"
+  srcset="https://images.unsplash.com/{$modifiers}?q=80&crop=entropy&w=630&h=480&fit=crop 320w,
+          https://images.unsplash.com/{$modifiers}?q=80&crop=entropy&w=1920&h=600&fit=crop 1480w"
+  alt="…">
+  <div class="post-header__title layout layout--reverse">
+    <div class="layout__cell layout__cell--aside wings">
+      <p class="post-header__about gutters">Standfirst</p>
+    </div>
+    <div class="layout__cell gutters">
+      <h1 class="post-header__headline title title--headline">SCIENTIFIC ANIMATIONS WITHOUT BORDERS</h1>
+      <p class="post-header__author">By John Doe</p>
+    </div>
+  </div>
+</header>
+
+Styleguide 5.3.1
+*/
+
+/*
+ * 1. Pull up (under navigation)
+ */
+
+.post-header__author {
+  @extend %meta-text;
+  font-size: to-unit(12px, 1em, 15px);
+  margin-top: rhythm(6);
+  margin-bottom: rhythm(6);
+}
+.post-header {
+  margin-bottom: rhythm(10);
+  background: $color-theme;
+  color: #FFF;
+  .theme--blue & {
+    background-color: $color-blue;
+  }
+  .theme--lime & {
+    background-color: $color-lime;
+  }
+  .theme--yellow & {
+    background-color: $color-yellow;
+  }
+  .theme--gold & {
+    background-color: $color-gold;
+  }
+  .theme--orange & {
+    background-color: $color-orange;
+  }
+  .theme--salmon & {
+    background-color: $color-salmon;
+  }
+  .theme--red & {
+    background-color: $color-red;
+  }
+  .theme--burgundy & {
+    background-color: $color-burgundy;
+  }
+  .theme--purple & {
+    background-color: $color-purple;
+  }
+  &__title  {
+    padding: rhythm(22) 0 rhythm(16) 0;
+  }
+  &__about {
+    font-size: to-unit(12px, 1em, 15px);
+  }
+}
+.image {
+  display: block;
+  &--stretch {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@include breakpoint($gt-small-desktop) {
+  .post-header {
+    &__title,
+    &__headline {
+    }
+    &__author {
+    }
+  }
+}

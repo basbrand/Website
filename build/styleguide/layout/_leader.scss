@@ -1,0 +1,79 @@
+/*
+Leader
+
+Styleguide 2.4
+*/
+
+/*
+Leader
+
+Adds a margin to the top
+
+.leader - Single rhythm top-margin
+.leader--tiny - Half rhythm top-margin
+.leader--hero - Double rhythm top-margin
+.leader--giant - Triple rhythm top-margin
+
+markup:
+<div class="{$modifiers}">{$modifiers}</div>
+
+Styleguide 2.4.1
+*/
+
+.leader {
+	margin-top: px-to-pt(rhythm(4));
+	&--tiny {
+		margin-top: px-to-pt(rhythm(2));
+	}
+	&--hero {
+		margin-top: px-to-pt(rhythm(8));
+	}
+	&--giant {
+		margin-top: px-to-pt(rhythm(16));
+	}
+	@include breakpoint($gt-large-handheld) {
+			margin-top: px-to-pt(rhythm(5));
+  }
+	@include breakpoint($gt-small-desktop) {
+		&--giant {
+			margin-top: px-to-pt(rhythm(30));
+		}
+	}
+}
+
+
+/*
+Leader inside
+
+Adds padding to the top
+
+.leader-inside - Single rhythm top-margin
+.leader-inside--tiny - Half rhythm top-margin
+.leader-inside--hero - Double rhythm top-margin
+.leader-inside--giant - Triple rhythm top-margin
+
+markup:
+<div class="{$modifiers}">{$modifiers}</div>
+
+Styleguide 2.4.2
+*/
+.leader-inside {
+	padding-top: px-to-pt(rhythm(4));
+	&--tiny {
+		padding-top: px-to-pt(rhythm(2));
+	}
+	&--hero {
+		padding-top: px-to-pt(rhythm(8));
+	}
+	&--giant {
+		padding-top: px-to-pt(rhythm(16));
+	}
+	@include breakpoint($gt-large-handheld) {
+			padding-top: px-to-pt(rhythm(5));
+  }
+	@include breakpoint($gt-small-desktop) {
+		&--giant {
+			padding-top: px-to-pt(rhythm(30));
+		}
+	}
+}

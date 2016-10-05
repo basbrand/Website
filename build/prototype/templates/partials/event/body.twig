@@ -1,0 +1,28 @@
+<div class="layout trailer--hero">
+  <div class="layout__cell layout__cell--aside wings">
+  </div>
+  <div class="layout__cell gutters  post-body">
+
+    <div class="media">
+      <div>
+        <span class="date" style="margin-right: 1em;">
+          <span class="date__head">{{ item.startDate | date("M") }}</span>
+          <span class="date__body">{{ item.startDate | date("d") }}</span>
+        </span>
+      </div>
+      <div>
+        <span class="title">{{ item.startDate | date("F jS Y \\a\\t g:ia") }}</span><br>
+        <span class="title">{{ item.location.name }}</span>
+      </div>
+
+    </div>
+
+    <div>{{ item.description|raw }}</div>
+
+    {% if item.location.geo.latitude %}
+        <iframe src="https://www.google.com/maps/embed/v1/view?key=AIzaSyA3LxZf75PPPlpOylZ0zFzf9_6X0AgsAmg&zoom=13&center={{item.location.geo.latitude}},{{item.location.geo.longitude}}" frameborder="0" width="100%" height="250"></iframe>
+    {% endif %}
+  </div>
+  <div class="layout__cell layout__cell--aside wings">
+  </div>
+</div>

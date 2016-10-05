@@ -1,0 +1,61 @@
+/*
+Posting Issue - Issue Row
+
+ICT Update has a slightly different markup than a regular row posting to accommodate the posting top border.
+
+.posting.posting--issue.posting--row - Row posting for issues
+
+markup:
+<div class="{$modifiers}">
+  <div class="posting__image gutter">
+    <img class="image image--stretch" width="899" height="506" alt="" src="/images/content/covers/voip-in-field.jpg" />
+  </div>
+  <div class="posting__content media">
+    <div class="media__stretcher">
+      <h3 class="title">Africa Leading the Way in Adoption of Mobile Banking</h3>
+      <p class="posting__intro">Services allowing consumers to perform banking and payment operations on their mobile phones are surging in sub-Saharan Africa, blazing a trail for the rest of the slower-moving world to follow.</p>
+      <a class="posting__anchor" href="javascript:void();">Read more</a>
+    </div>
+    <div class="media__stretcher">
+      <div class="issue-label issue-label--s media">
+        <div class="issue-label__caption">
+          <span>September 2016</span>
+        </div>
+        <div class="issue-label__nr" data-issue-nr="83"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+Styleguide 4.50.2
+*/
+
+.posting {
+  &__image,
+  &__content {
+    .posting--row.posting--issue & {
+      // margin-top: rhythm(10);
+      padding-top: rhythm();
+      border-top: 1px solid $color-theme;
+      .issue-label {
+        position: relative;
+        top: rhythm(-1);
+        &,
+        &:after {
+          margin-left: rhythm(5);
+        }
+      }
+    }
+    &.gutters {
+      padding-right: gutter(1);
+      padding-left: 0;
+    }
+  }
+  &.posting--row.posting--issue {
+    .issue-label {
+      position: relative;
+      top: rhythm(-1);
+      white-space: nowrap;
+    }
+  }
+}

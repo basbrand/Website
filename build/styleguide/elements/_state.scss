@@ -1,0 +1,36 @@
+/*
+State
+
+.is-narrative - Hidden label, but is used as narrative for visually impaired users
+.is-heir - Passes on parent's color and background properties
+.is-crowned - When assigned to an element directly following the `masthead`, it pulls that item up so the masthead sits on top (like a crown).
+.is-rooted - Adds position relative.
+
+markup:
+<p class="{$modifiers}">{$modifiers}</p>
+
+Styleguide 3.99
+*/
+.is-lt-large-handheld,
+.is-gt-large-handheld,
+.is-narrative {
+	position: absolute;
+	left: -999em;
+	top: -999em; /* IE pushed the text to the bottom of the page without this */
+}
+.is-rooted {
+	position: relative;
+}
+.is-cleared {
+	@include clearfix;
+}
+.is-lt-large-handheld {
+	@include breakpoint($lt-large-handheld) {
+		position: static;
+	}
+}
+.is-gt-large-handheld {
+	@include breakpoint($gt-large-handheld) {
+		position: static;
+	}
+}

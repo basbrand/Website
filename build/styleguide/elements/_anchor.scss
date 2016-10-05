@@ -1,0 +1,43 @@
+/*
+Anchor
+
+.anchor - Anchor
+.anchor:visited - Visited link
+.anchor:hover - Hovered link
+.anchor:active - Active link
+
+markup:
+<a class="{$modifiers}" href="javascript:void();">I am text with a link</a>
+
+Styleguide 3.4
+*/
+
+a,
+.anchor {
+  @extend .fx;
+  text-decoration: underline;
+  cursor: pointer !important;
+  &,
+  &:active {
+    color: $color-theme;
+  }
+  &:visited
+  .is-heir:visited,
+  &:visited .is-heir {
+    color: inherit;
+  }
+  &:hover,
+  .is-heir:hover,
+  &:hover .is-heir {
+    color: $color-theme;
+  }
+  &--shy {
+    text-decoration: none;
+  }
+  &--reset {
+    color: inherit;
+  }
+  //.title {
+  //  color: $color-body;
+  //}
+}

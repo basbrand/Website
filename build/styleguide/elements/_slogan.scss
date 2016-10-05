@@ -1,0 +1,18 @@
+/*
+Slogan
+
+markup:
+<p class="slogan">
+  <em class="is-narrative">Sowing Innovation Harvesting Prosperity</em>
+</p>
+
+width="444px" height="347px" viewBox="0 0 444 347"
+
+Styleguide 3.11
+*/
+
+.slogan {
+  height: rhythm(116);
+  background: url("/images/slogan.svg") no-repeat center;
+  background-size: contain;
+}

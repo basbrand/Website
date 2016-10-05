@@ -1,0 +1,3297 @@
+@charset "UTF-8";
+/* styleguide:ignore:start */
+/* 1. */
+/*
+Base
+
+Styleguide 1.0
+*/
+/* 1.2 Fonts */
+/*
+Fonts
+
+Styleguide 1.2
+*/
+/* 1.3 Settings */
+/* 1.3.1 Rhythm */
+/*
+Settings
+
+Styleguide 1.3
+*/
+/* 1.3.1 Rhythm */
+/*
+Rhythm
+
+This measure is used to calculate vertical measurements like line-height and top and bottom paddings and margins. All vertical measurements need to be a whole multiple of this value to maintain consistent vertical rhythm.
+
+$rhythm - 3px
+
+markup:
+{$modifiers}
+
+Styleguide 1.3.1
+*/
+/* 1.3.2 Typography */
+/*
+Typography
+
+If `$use-brand-type: true` type is set in Merriwheather and Futura.
+If `$use-brand-type: false` type is set in Times and Open Sans.
+
+Styleguide 1.3.2
+*/
+/* 21px */
+/* 1.3.4 Base ? */
+/* 1.3.5 Breakpoint */
+/*
+Breakpoint settings
+
+$lt-small-handheld - Breakpoint for (**smaller than**) smaller handheld devices (<=319px).
+$lt-medium-handheld - Breakpoint for (**smaller than**) medium sized handheld devices (<=519px).
+$lt-large-handheld - Breakpoint for (**smaller than**) larger handheld devices and smaller desktop devices (<=767px).
+$lt-small-desktop - Breakpoint for (**smaller than**) medium sized handheld and small desktop devices (<=1023px).
+$lt-medium-desktop - Breakpoint for (**smaller than**) Breakpoint for large (desktop) devices (<=1259px).
+$lt-large-desktop - Breakpoint for (**smaller than**) Breakpoint for large (desktop) devices (<=1439px).
+<hr>
+$gt-small-handheld - Breakpoint for (**larger than**) smaller handheld devices (>=320px).
+$gt-medium-handheld - Breakpoint for (**larger than**) medium sized handheld devices (>=520px).
+$gt-large-handheld - Breakpoint for (**larger than**) larger handheld devices and smaller desktop devices (>=768px).
+$gt-small-desktop - Breakpoint for (**larger than**) medium sized handheld and small desktop devices (>=1024px).
+$gt-medium-desktop - Breakpoint for (**larger than**) Breakpoint for large (desktop) devices (>=1260px).
+$gt-large-desktop - Breakpoint for (**larger than**) Breakpoint for large (desktop) devices (>=1440px).
+<hr>
+$portrait - Breakpoint for portrait oriented viewports.
+$landscape - Breakpoint for landscape oriented viewports.
+
+markup:
+{$modifiers}
+
+Styleguide 1.3.3
+*/
+/* 1.3.7 Grid ? */
+/* 1.3.8 Layout */
+/*
+Layout
+
+$layout - Layouts accross breakpoints.
+
+markup:
+<pre>{$modifiers}</pre>
+
+Styleguide 1.3.8
+*/
+/* 1.3.9 Miscellaneaous */
+/* 1.1 Settings */
+/*
+Colour
+
+Styleguide 1.1
+*/
+/*
+Base colours
+
+$color-black - #000
+$color-green - #67AB43
+$color-dark-green - #1D673B
+
+markup:
+<div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+
+Styleguide 1.1.1
+*/
+/*
+Spot colours
+
+$color-blue - #56C0DD
+$color-lime - #C1D435
+$color-yellow - #FACF21
+$color-gold - #EB942C
+$color-orange - #E26435
+$color-salmon - #EB735D
+$color-red - #EC2D10
+$color-burgundy - #BA222A
+$color-purple - #9B3381
+
+markup:
+<div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+
+Styleguide 1.1.2
+*/
+/*
+Social media colours
+
+$color-rss - RSS Orange
+$color-twitter - Official Twitter blue
+$color-facebook - Official Facebook blue
+$color-linkedin - Official LinkedIn blue
+$color-youtube - Official YouTube red
+$color-youtube--dark - Official YouTube red (darker shade)
+
+markup:
+<div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+
+Styleguide 1.1.3
+*/
+/*
+Applied colours
+
+Styleguide 1.1.4
+*/
+/* Mixing colours */
+/* Button colours */
+/* Links colours */
+/* 1.4 Base styles */
+/*
+Base styles
+
+Smart reset, based on @necolas's normalize but updated to use the system's real values.
+
+markup:
+<h1>Header</h1>
+<p>Three years ago, the average person had no idea wh|at a drone was – o|r associated these flying machines with weapons of warfare. Things have changed. Now, unmanned aerial vehicles, or UAVs (also known as drones) have become one of the world’s most publicised and intriguing technologies, used by people in a wide range of professions, from journalism to humanitarian aid work.
+Farmers have always needed accurate and up-to-date information on the health of their crops and the environmental condition of the land. Agricultural aircraft have been in use since the 1920s, while agricultural experts increasingly use satellites to assess crop health from the sky. UAVs are a natural progression from macro to micro, from large-scale to small-scale farms.
+While UAVs are unlikely to entirely replace manned aircraft or satellites, they have a number of advantages over these more traditional remote-sensing methods. The technology is capable of collecting very high-resolution imagery below the cloud level, with much more detail than the satellite imagery usually available to developing country analysts. They are easy to use: most drone mapping and data-collection missions are now conducted autonomously, meaning that the drone essentially flies itself, while drone data processing tools are becoming less expensive and easier to use.
+Perhaps most importantly, drones are inexpensive. In 2016 it is possible to purchase a useful mapping UAV for less than $1,000. And surprisingly powerful mapping drones can be built at home for even less. While processing software can be expensive, open-source and lower cost options exist. Thanks to these low barriers to entry, UAVs are expected to provide significant help to farmers in developing countries, who historically have found it harder to access aerial imagery, either from manned aircraft or from satellites.</p>
+
+Styleguide 1.4
+*/
+/*
+ * 1. Apply a natural box layout model to all elements
+ * 2. Remove margins from all elements
+ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0; }
+
+/*
+ * 1. Remove default margin.
+ * 2. Set height to accommodate hero module
+ */
+html, body {
+  margin: 0;
+  /* 1 */
+  height: 100%;
+  /* 2 */
+  min-height: 100%;
+  /* 2 */ }
+
+/*
+ * 1. Set base font (family, size, line-height) for conversions to rem and/or em.
+ * 2. Set default font family to sans-serif.
+ * 3. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ * 4. Set background color.
+ * 5. Fallback for browsers that do not support opacity
+ */
+html {
+  width: 100%;
+  /* 3 */
+  background: #ffffff;
+  /* 4 */
+  font: normal normal 300 112.5%/133.33333% Georgia, Times New Roman, Times, serif;
+  color: black;
+  /* 5 */
+  color: rgba(0, 0, 0, 0.76);
+  text-size-adjust: 100%;
+  /* 3 */ }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/*
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+
+/*
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/*
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/*
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/*
+ * 1. Remove the gray background color from active links in IE 10.
+ * 2. Set default anchor colour.
+ */
+a {
+  background: transparent;
+  color: #95c47b; }
+
+/*
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/*
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/*
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/*
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/*
+ * Reset the headers – their visual appearance is decoupled from their semantic meaning
+ */
+h1 {
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0; }
+
+/*
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #FACF21;
+  color: rgba(0, 0, 0, 0.76); }
+
+/*
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 0.55556em; }
+
+/*
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/*
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0; }
+
+/*
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/*
+ * Reset margin
+ */
+figure {
+  margin: 0; }
+
+/*
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+/*
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/*
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/*
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/*
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/*
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible; }
+
+/*
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none; }
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/*
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/*
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/*
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/*
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/*
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  /* 1 */ }
+
+/*
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+
+/*
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #67AB43;
+  margin: 0 3px;
+  padding: gutters() 6px; }
+  .theme--blue fieldset {
+    border-color: #56C0DD; }
+  .theme--lime fieldset {
+    border-color: #C1D435; }
+  .theme--yellow fieldset {
+    border-color: #FACF21; }
+  .theme--gold fieldset {
+    border-color: #EB942C; }
+  .theme--orange fieldset {
+    border-color: #E26435; }
+  .theme--salmon fieldset {
+    border-color: #EB735D; }
+  .theme--red fieldset {
+    border-color: #EC2D10; }
+  .theme--burgundy fieldset {
+    border-color: #BA222A; }
+  .theme--purple fieldset {
+    border-color: #9B3381; }
+  fieldset--reset {
+    border: 0;
+    margin: 0;
+    padding: 0; }
+
+/*
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/*
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/*
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+/*
+-----------------------------------------------------------------------------
+Miscellaneous
+-----------------------------------------------------------------------------
+*/
+p {
+  margin: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+hr {
+  height: 0; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace;
+  font-size: 1em; }
+
+pre {
+  white-space: pre-wrap; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/*
+ * Set consistent quote types.
+ */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+  q--reset {
+    quotes: ""; }
+
+/*
+ * Reset list
+ */
+fieldset.reset, fieldset.menu,
+ol.reset,
+ol.menu, ul.reset, ul.menu, dl.reset, dl.menu {
+  margin: 0;
+  padding: 0; }
+
+ol.reset, ol.menu, ul.reset, ul.menu {
+  list-style: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300; }
+
+p.reset, p.menu,
+fieldset.reset,
+fieldset.menu,
+figure.reset,
+figure.menu {
+  margin: 0; }
+
+fieldset.reset, fieldset.menu {
+  border: 0; }
+
+button.reset, button.menu,
+input.reset,
+input.menu {
+  background: none;
+  border: 0;
+  padding: 0; }
+
+/* 3. */
+/*
+Layout
+
+Styleguide 2.0
+*/
+/*
+Debug layout
+
+Styleguide 2.0.1
+*/
+/* 2.1 Layout */
+/*
+Layout
+
+Two- or three-column layout – |Aside|Main|Aside. Aside columns are optional and can be omitted for a two- or single-column layout.
+
+.layout - Full width accross viewports
+.layout.layout--reverse - Reverses container ordering on smallest viewports, is used for source ordering
+.layout.layout--even - Spreads columns evenly
+.layout.layout--align-middle - Align content vertically centered
+
+markup:
+<div class="{$modifiers}">
+  <div class="layout__cell layout__cell--aside">
+    Sidebar
+  </div>
+  <div class="layout__cell">
+    Main
+  </div>
+  <div class="layout__cell layout__cell--aside">
+    Sidebar
+  </div>
+</div>
+
+Styleguide 2.1
+*/
+.layout {
+  display: flex;
+  flex-direction: column; }
+  .layout__cell {
+    flex: 0 1 100%; }
+  .layout--reverse {
+    flex-direction: column-reverse; }
+  .layout--even {
+    flex: 0 0 auto !important; }
+  .layout--align-middle {
+    align-items: center; }
+
+/*
+ * 1. Allow containers to shrink and grow
+ */
+@media only screen and (min-width: 42.66667em) {
+  .layout {
+    flex-direction: row; }
+    .layout__cell--aside {
+      flex: 0 0 27.77778%; }
+    .layout__cell--aside {
+      flex: 0 0 27.77778%; }
+    .layout__cell .layout__cell--aside {
+      flex: 0 0 38.46154%; }
+    .layout__cell--divider {
+      /* Rectangle: */
+      box-shadow: inset -14px 0px 0px 0px #FFFFFF, inset -15px 0px 0px 0px rgba(103, 171, 67, 0.26); }
+      .theme--blue .layout__cell--divider {
+        border-color: rgba(86, 192, 221, 0.26);
+        box-shadow: inset -14px 0px 0px 0px #FFFFFF, inset -15px 0px 0px 0px rgba(86, 192, 221, 0.26); }
+      .theme--lime .layout__cell--divider {
+        border-color: rgba(193, 212, 53, 0.26);
+        box-shadow: inset -14px 0px 0px 0px #FFFFFF, inset -15px 0px 0px 0px rgba(193, 212, 53, 0.26); }
+      .theme--yellow .layout__cell--divider {
+        border-color: rgba(250, 207, 33, 0.26);
+        box-shadow: inset -14px 0px 0px 0px #FFFFFF, inset -15px 0px 0px 0px rgba(250, 207, 33, 0.26); }
+      .theme--gold .layout__cell--divider {
+        border-color: rgba(235, 148, 44, 0.26);
+        box-shadow: inset -14px 0px 0px 0px #FFFFFF, inset -15px 0px 0px 0px rgba(235, 148, 44, 0.26); }
+      .theme--orange .layout__cell--divider {
+        border-color: rgba(226, 100, 53, 0.26);
+        box-shadow: inset -14px 0px 0px 0px #FFFFFF, inset -15px 0px 0px 0px rgba(226, 100, 53, 0.26); }
+      .theme--salmon .layout__cell--divider {
+        border-color: rgba(235, 115, 93, 0.26);
+        box-shadow: inset -14px 0px 0px 0px #FFFFFF, inset -15px 0px 0px 0px rgba(235, 115, 93, 0.26); }
+      .theme--red .layout__cell--divider {
+        border-color: rgba(236, 45, 16, 0.26);
+        box-shadow: inset -14px 0px 0px 0px #FFFFFF, inset -15px 0px 0px 0px rgba(236, 45, 16, 0.26); }
+      .theme--burgundy .layout__cell--divider {
+        border-color: rgba(186, 34, 42, 0.26);
+        box-shadow: inset -14px 0px 0px 0px #FFFFFF, inset -15px 0px 0px 0px rgba(186, 34, 42, 0.26); }
+      .theme--purple .layout__cell--divider {
+        border-color: rgba(155, 51, 129, 0.26);
+        box-shadow: inset -14px 0px 0px 0px #FFFFFF, inset -15px 0px 0px 0px rgba(155, 51, 129, 0.26); }
+      .well .layout__cell--divider, .layout__cell--divider.well {
+        box-shadow: inset -14px 0px 0px 0px #FFFFFF, inset -15px 0px 0px 0px rgba(255, 255, 255, 0.7); } }
+
+/*
+Layout example, two-column with left sidebar
+
+| Sidebar | Main |
+
+.layout - Full width accross viewports
+.layout.layout--reverse - Reverses container ordering on smallest viewports, is used for source ordering
+
+markup:
+<div class="{$modifiers}">
+  <div class="layout__cell layout__cell--aside">
+    Sidebar
+  </div>
+  <div class="layout__cell">
+    Main
+  </div>
+</div>
+
+Styleguide 2.1.1
+*/
+/*
+Layout example, two-column with right sidebar
+
+| Main | Sidebar |
+
+.layout - Full width accross viewports
+.layout.layout--reverse - Reverses container ordering on smallest viewports, is used for source ordering
+
+markup:
+<div class="{$modifiers}">
+  <div class="layout__cell">
+    Main
+  </div>
+  <div class="layout__cell layout__cell--aside">
+    Sidebar
+  </div>
+</div>
+
+Styleguide 2.1.2
+*/
+/*
+Example of a nested Layout
+
+Layouts can be nested for more complex layouts
+
+markup:
+<div class="layout layout--reverse layout--split">
+  <div class="layout__cell layout__cell--aside">
+    Sidebar
+  </div>
+  <div class="layout__cell layout__cell--main layout layout--reverse layout--split">
+    <div class="layout__cell layout__cell--main">
+      Main
+    </div>
+    <div class="layout__cell layout__cell--aside">
+      Sidebar
+    </div>
+  </div>
+</div>
+
+Styleguide 2.1.3
+*/
+/* 2.2 Gutter */
+/*
+Gutter
+
+Styleguide 2.2
+*/
+/*
+Gutter
+
+.gutter - Full gutter-width to right side
+.gutters - Half gutter-width to either side
+.gutter--left - Half gutter-width to left side
+.gutter--left - Half gutter-width to right side
+
+markup:
+<div class="{$modifiers}">{$modifiers}</div>
+
+Styleguide 2.2.1
+*/
+.gutter {
+  padding-right: 30px; }
+  .gutter--left {
+    padding-left: 15px; }
+  .gutter--right {
+    padding-left: 15px; }
+  .gutters {
+    padding-left: 15px;
+    padding-right: 15px; }
+
+/*
+Gutter-outside
+
+Uses margin instead of padding
+
+.gutter-outside - Full gutter-width to right side
+.gutters-outside - Half gutter-width to either side
+.gutter-outside--left - Half gutter-width to left side
+.gutter-outside--left - Half gutter-width to right side
+
+markup:
+<div class="{$modifiers}">{$modifiers}</div>
+
+Styleguide 2.2.2
+*/
+.gutter-outside {
+  margin-right: 30px; }
+
+.gutter-outside--left {
+  margin-left: 15px; }
+
+.gutter-outside--right {
+  margin-left: 15px; }
+
+.gutters-outside {
+  margin-left: 15px;
+  margin-right: 15px; }
+
+/* 2.3 Wing */
+/*
+Wing
+
+A single-column whitespace (left, right, or both)
+
+.wings - Left and right column padding
+.wing--left - Left column padding
+.wing--right - Right column padding
+
+markup:
+<div class="{$modifiers}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra pellentesque ligula ut feugiat. Nullam elit libero, rutrum eu odio sed, tempus iaculis lectus. Phasellus felis ex, malesuada vitae libero ac, auctor finibus sapien. Sed odio enim, molestie eu pretium sit amet, commodo ut enim. Praesent eget mi eget enim hendrerit interdum. Ut sit amet orci libero. Vestibulum et leo pretium, semper nisl non, aliquam arcu. Pellentesque malesuada eros a elit imperdiet, sed tempor enim malesuada. Praesent accumsan malesuada eros, in sodales tortor sagittis at. Duis sollicitudin, est sed lobortis semper, felis est hendrerit massa, a tincidunt nulla risus in lectus. Praesent eleifend vestibulum nunc sed mollis. Ut dapibus nisi turpis, id lobortis justo scelerisque vitae. Morbi vel augue in ipsum dignissim aliquet. Vestibulum justo est, venenatis ut massa eu, dignissim vulputate lorem. Morbi porta est quis erat vulputate tristique.</div>
+
+Styleguide 2.3
+*/
+@media only screen and (min-width: 42.66667em) {
+  .wings, .wing--left {
+    padding-left: 5.55556%; }
+    .layout__cell--aside .wings, .layout__cell--aside .wing--left {
+      padding-left: 20%; }
+  .wings, .wing--right {
+    padding-right: 5.55556%; }
+    .layout__cell--aside .wings, .layout__cell--aside .wing--right {
+      padding-right: 20%; } }
+
+/*
+Wings in a layout setup
+
+Wings may only be applied to the sidebar. Don't apply the wings to the layout parent container, as this will distort the layout.
+
+.wings - Left and right column padding
+.wing--left - Left column padding
+.wing--right - Right column padding
+
+markup:
+<div class="layout">
+  <div class="layout__cell layout__cell--aside {$modifiers}">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra pellentesque ligula ut feugiat. Nullam elit libero, rutrum eu odio sed, tempus iaculis lectus. Phasellus felis ex, malesuada vitae libero ac, auctor finibus sapien. Sed odio enim, molestie eu pretium sit amet, commodo ut enim. Praesent eget mi eget enim hendrerit interdum. Ut sit amet orci libero. Vestibulum et leo pretium, semper nisl non, aliquam arcu. Pellentesque malesuada eros a elit imperdiet, sed tempor enim malesuada. Praesent accumsan malesuada eros, in sodales tortor sagittis at. Duis sollicitudin, est sed lobortis semper, felis est hendrerit massa, a tincidunt nulla risus in lectus. Praesent eleifend vestibulum nunc sed mollis. Ut dapibus nisi turpis, id lobortis justo scelerisque vitae. Morbi vel augue in ipsum dignissim aliquet. Vestibulum justo est, venenatis ut massa eu, dignissim vulputate lorem. Morbi porta est quis erat vulputate tristique.
+  </div>
+  <div class="layout__cell">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra pellentesque ligula ut feugiat. Nullam elit libero, rutrum eu odio sed, tempus iaculis lectus. Phasellus felis ex, malesuada vitae libero ac, auctor finibus sapien. Sed odio enim, molestie eu pretium sit amet, commodo ut enim. Praesent eget mi eget enim hendrerit interdum. Ut sit amet orci libero. Vestibulum et leo pretium, semper nisl non, aliquam arcu. Pellentesque malesuada eros a elit imperdiet, sed tempor enim malesuada. Praesent accumsan malesuada eros, in sodales tortor sagittis at. Duis sollicitudin, est sed lobortis semper, felis est hendrerit massa, a tincidunt nulla risus in lectus. Praesent eleifend vestibulum nunc sed mollis. Ut dapibus nisi turpis, id lobortis justo scelerisque vitae. Morbi vel augue in ipsum dignissim aliquet. Vestibulum justo est, venenatis ut massa eu, dignissim vulputate lorem. Morbi porta est quis erat vulputate tristique.
+  </div>
+  <div class="layout__cell layout__cell--aside {$modifiers}">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra pellentesque ligula ut feugiat. Nullam elit libero, rutrum eu odio sed, tempus iaculis lectus. Phasellus felis ex, malesuada vitae libero ac, auctor finibus sapien. Sed odio enim, molestie eu pretium sit amet, commodo ut enim. Praesent eget mi eget enim hendrerit interdum. Ut sit amet orci libero. Vestibulum et leo pretium, semper nisl non, aliquam arcu. Pellentesque malesuada eros a elit imperdiet, sed tempor enim malesuada. Praesent accumsan malesuada eros, in sodales tortor sagittis at. Duis sollicitudin, est sed lobortis semper, felis est hendrerit massa, a tincidunt nulla risus in lectus. Praesent eleifend vestibulum nunc sed mollis. Ut dapibus nisi turpis, id lobortis justo scelerisque vitae. Morbi vel augue in ipsum dignissim aliquet. Vestibulum justo est, venenatis ut massa eu, dignissim vulputate lorem. Morbi porta est quis erat vulputate tristique.
+  </div>
+</div>
+
+Styleguide 2.3.1
+*/
+/* 2.4 Leader */
+/*
+Leader
+
+Styleguide 2.4
+*/
+/*
+Leader
+
+Adds a margin to the top
+
+.leader - Single rhythm top-margin
+.leader--tiny - Half rhythm top-margin
+.leader--hero - Double rhythm top-margin
+.leader--giant - Triple rhythm top-margin
+
+markup:
+<div class="{$modifiers}">{$modifiers}</div>
+
+Styleguide 2.4.1
+*/
+.leader {
+  margin-top: 30px; }
+  .leader--tiny {
+    margin-top: 9px; }
+  .leader--hero {
+    margin-top: 60px; }
+  .leader--giant {
+    margin-top: 120px; }
+
+/*
+Leader inside
+
+Adds padding to the top
+
+.leader-inside - Single rhythm top-margin
+.leader-inside--tiny - Half rhythm top-margin
+.leader-inside--hero - Double rhythm top-margin
+.leader-inside--giant - Triple rhythm top-margin
+
+markup:
+<div class="{$modifiers}">{$modifiers}</div>
+
+Styleguide 2.4.2
+*/
+.leader-inside {
+  padding-top: 30px; }
+  .leader-inside--tiny {
+    padding-top: 9px; }
+  .leader-inside--hero {
+    padding-top: 60px; }
+  .leader-inside--giant {
+    padding-top: 120px; }
+
+/* 2.5 Trailer */
+/*
+Trailer
+
+Styleguide 2.5
+*/
+/*
+Trailer
+
+Adds a bottom margin
+
+.trailer - Single rhythm top-margin
+.trailer--tiny - Half rhythm top-margin
+.trailer--hero - Double rhythm top-margin
+.trailer--giant - Triple rhythm top-margin
+
+markup:
+<div class="{$modifiers}">{$modifiers}</div>
+
+Styleguide 2.5.1
+*/
+.trailer {
+  margin-bottom: 30px; }
+  .trailer--tiny {
+    margin-bottom: 9px; }
+  .trailer--hero {
+    margin-bottom: 60px; }
+  .trailer--giant {
+    margin-bottom: 120px; }
+
+/*
+Trailer inside
+
+Adds bottom padding
+
+.trailer-inside - Single rhythm top-margin
+.trailer-inside--tiny - Half rhythm top-margin
+.trailer-inside--hero - Double rhythm top-margin
+.trailer-inside--giant - Triple rhythm top-margin
+
+markup:
+<div class="{$modifiers}">{$modifiers}</div>
+
+Styleguide 2.5.2
+*/
+.trailer-inside {
+  padding-bottom: 30px; }
+  .trailer-inside--tiny {
+    padding-bottom: 9px; }
+  .trailer-inside--hero {
+    padding-bottom: 60px; }
+  .trailer-inside--giant {
+    padding-bottom: 120px; }
+
+/* 2.6 Bleed */
+/*
+Bleed
+
+Pulls container into its parent's gutter space
+
+.bleed - Negative half gutter-width to either side
+.bleed--left - Negative half gutter-width to left side
+.bleed--left - Negative half gutter-width to right side
+
+markup:
+<div class="{$modifiers}">{$modifiers}</div>
+
+sg-wrapper:
+<div class="gutters">
+	<sg-wrapper-content/>
+</div>
+
+Styleguide 2.6
+*/
+.bleed--left {
+  margin-left: -15px; }
+
+.bleed--right {
+  margin-right: -15px; }
+
+.bleed {
+  margin-left: -15px;
+  margin-right: -15px; }
+
+/* 2.7 Grid */
+/*
+Grid
+
+### Flexbox with inline-block fallback
+
+Display: inline-block; mimics the behaviour of flexbox a bit better than floating elements when you have alternating widths of your grid cells and you want them to stay in line.
+
+If you require your columns to stretch to the full height of your container, use the table and table-cell properties. This will not be a good solution if you want to wrap grid cells on multiple rows but is a good fit if you can control the number of grid cells in a row.
+
+.grid - If flexbox is supported, all children will behave like flex items. If not, children are required to have a `.grid__cell class declared on them.
+.grid.grid--stories - When wide enough, the cells will be half the available width.
+.grid.grid--channels - Smaller containers
+.grid.grid--issues - Smaller containers
+
+markup:
+<div class="{$modifiers}">
+	 <div class="grid__cell">1</div><!--
+  --><div class="grid__cell">2<br>lines</div><!--
+  --><div class="grid__cell">3</div><!--
+  --><div class="grid__cell">4</div><!--
+  --><div class="grid__cell">5</div>
+</div>
+
+Styleguide 2.7
+*/
+.grid {
+  display: flex; }
+  .grid__cell {
+    flex: 0 1 100%; }
+  .grid--issues .grid__cell {
+    flex: 1 1 33.33333%; }
+
+@media only screen and (min-width: 17.77778em) {
+  .grid--stories .grid__cell,
+  .grid--channels .grid__cell {
+    min-width: 240px; }
+  .grid--issues .grid__cell {
+    min-width: 158px; }
+  .grid--stories .grid__cell {
+    flex: 0 1 50%; }
+  .grid--channels .grid__cell {
+    flex: 0 1 25%; }
+  .grid--issues .grid__cell {
+    flex: 0 1 33.33333%; } }
+
+/* 2.8 Media */
+/*
+Media Object
+
+Flexbox implementation of Nicole Sullivan's Media Object
+
+.media - Regular media
+
+markup:
+<div class="media">
+	<div class="media__image">
+		<img src="https://images.unsplash.com/reserve/Lt0DwxdqRKSQkX7439ey_Chaz_fisheye-11.jpg?q=80&fm=jpg&w=50&h=50&fit=crop"/>
+	</div>
+  <div class="media__content">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra pellentesque ligula ut feugiat. Nullam elit libero, rutrum eu odio sed, tempus iaculis lectus. Phasellus felis ex, malesuada vitae libero ac, auctor finibus sapien. Sed odio enim, molestie eu pretium sit amet, commodo ut enim. Praesent eget mi eget enim hendrerit interdum. Ut sit amet orci libero. Vestibulum et leo pretium, semper nisl non, aliquam arcu. Pellentesque malesuada eros a elit imperdiet, sed tempor enim malesuada. Praesent accumsan malesuada eros, in sodales tortor sagittis at. Duis sollicitudin, est sed lobortis semper, felis est hendrerit massa, a tincidunt nulla risus in lectus. Praesent eleifend vestibulum nunc sed mollis. Ut dapibus nisi turpis, id lobortis justo scelerisque vitae. Morbi vel augue in ipsum dignissim aliquet. Vestibulum justo est, venenatis ut massa eu, dignissim vulputate lorem. Morbi porta est quis erat vulputate tristique.
+	</div>
+</div>
+
+Styleguide 2.8
+*/
+.media {
+  display: flex; }
+  .media__stretcher {
+    flex-grow: 1; }
+  .media--middle {
+    align-items: center; }
+
+/* 2.9 Tier */
+/*
+Tier Group
+
+A tier group allows content to be aligned vertically. This implementation relies on Flex, the fallback is a naturally stacked group of elements.
+A tier is used in the [`Hero` module - Styleguide 6.9](/#/section/6.9)
+
+markup:
+<div class="tier-group">
+	<div class="tier">
+		I am a top-aligned tier.
+	</div>
+	<div class="tier tier--align-bottom">
+		I am a bottom-aligned tier.
+	</div>
+</div>
+
+Styleguide 2.9
+*/
+.tier {
+  flex-grow: 1; }
+  .tier--align-bottom {
+    flex-grow: 0; }
+  .tier-group {
+    height: 100%;
+    display: flex;
+    flex-direction: column; }
+
+/* 2. */
+.body--meta, .title, .button, .label, .date, .tag, .issue-label, .menu__item, .menu-toggle, .site-search__input, .posting__anchor, .post-header__author {
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600; }
+
+/*
+Elements
+
+Styleguide 3.0
+*/
+/* 3.1 Body */
+/*
+Body
+
+.body--lead - Lead or introduction paragraph
+.body--whisper - Smaller text
+.body--meta - Meta text, dates etc.
+
+markup:
+<p class="{$modifiers}">Drone technology could help farmers around the world monitor their crops, fend off pests, improve land tenure, and more. But to realise its full potential, regulatory regimes are necessary, while keeping citizens’ safety and privacy rights secure.</p>
+
+Styleguide 3.1
+*/
+.body--lead {
+  font-size: 1.33333em;
+  line-height: 33px;
+  margin: 30px 0; }
+
+.body--meta, .body--whisper {
+  font-size: 0.66667em;
+  line-height: 18px; }
+
+/* 3.2 Heading */
+/* 3.3 Headline */
+/*
+Title
+
+Titles are different from headings. They are used in title and headline blocks and story lists. If you want to style an article heading, use the heading class.
+
+.title - This smaller headline is used in story lists
+.title.title--lead - Larger headline
+.title.title--headline - This smaller headline is used in story lists
+.title.title--meta - Smaller
+
+
+markup:
+<h1 class="{$modifiers}">Extra, extra – read all about it!</h1>
+
+Styleguide 3.3
+*/
+.title {
+  font-size: 0.83333em;
+  line-height: 1; }
+  a .title,
+  .title a {
+    text-decoration: none; }
+  .title--meta {
+    font-size: 0.66667em; }
+  .title--hero, .title--lead {
+    font-size: 1em; }
+  .title--headline {
+    font-size: 1.16667em; }
+  .title--section {
+    margin: 1em 0; }
+
+@media only screen and (min-width: 28.88889em) {
+  .title--hero {
+    font-size: 1.33333em; }
+  .title--headline {
+    font-size: 1.66667em; } }
+
+@media only screen and (min-width: 56.88889em) {
+  .title--hero {
+    font-size: 1.77778em; }
+  .title--headline {
+    font-size: 2.66667em; } }
+
+/* 3.4 Anchor */
+/*
+Anchor
+
+.anchor - Anchor
+.anchor:visited - Visited link
+.anchor:hover - Hovered link
+.anchor:active - Active link
+
+markup:
+<a class="{$modifiers}" href="javascript:void();">I am text with a link</a>
+
+Styleguide 3.4
+*/
+a,
+.anchor {
+  text-decoration: underline;
+  cursor: pointer !important; }
+  a, a:active,
+  .anchor,
+  .anchor:active {
+    color: #67AB43; }
+    .theme--blue a, .theme--blue a:active, .theme--blue
+    .anchor, .theme--blue
+    .anchor:active {
+      color: #56C0DD; }
+    .theme--lime a, .theme--lime a:active, .theme--lime
+    .anchor, .theme--lime
+    .anchor:active {
+      color: #C1D435; }
+    .theme--yellow a, .theme--yellow a:active, .theme--yellow
+    .anchor, .theme--yellow
+    .anchor:active {
+      color: #FACF21; }
+    .theme--gold a, .theme--gold a:active, .theme--gold
+    .anchor, .theme--gold
+    .anchor:active {
+      color: #EB942C; }
+    .theme--orange a, .theme--orange a:active, .theme--orange
+    .anchor, .theme--orange
+    .anchor:active {
+      color: #E26435; }
+    .theme--salmon a, .theme--salmon a:active, .theme--salmon
+    .anchor, .theme--salmon
+    .anchor:active {
+      color: #EB735D; }
+    .theme--red a, .theme--red a:active, .theme--red
+    .anchor, .theme--red
+    .anchor:active {
+      color: #EC2D10; }
+    .theme--burgundy a, .theme--burgundy a:active, .theme--burgundy
+    .anchor, .theme--burgundy
+    .anchor:active {
+      color: #BA222A; }
+    .theme--purple a, .theme--purple a:active, .theme--purple
+    .anchor, .theme--purple
+    .anchor:active {
+      color: #9B3381; }
+  a:visited,
+  .theme--blue a:visited,
+  .theme--lime a:visited,
+  .theme--yellow a:visited,
+  .theme--gold a:visited,
+  .theme--orange a:visited,
+  .theme--salmon a:visited,
+  .theme--red a:visited,
+  .theme--burgundy a:visited,
+  .theme--purple a:visited,
+  a .is-heir:visited,
+  a:visited .is-heir,
+  .anchor:visited,
+  .theme--blue
+  .anchor:visited,
+  .theme--lime
+  .anchor:visited,
+  .theme--yellow
+  .anchor:visited,
+  .theme--gold
+  .anchor:visited,
+  .theme--orange
+  .anchor:visited,
+  .theme--salmon
+  .anchor:visited,
+  .theme--red
+  .anchor:visited,
+  .theme--burgundy
+  .anchor:visited,
+  .theme--purple
+  .anchor:visited,
+  .anchor .is-heir:visited,
+  .anchor:visited .is-heir {
+    color: inherit; }
+  a:hover,
+  .theme--blue a:hover,
+  .theme--lime a:hover,
+  .theme--yellow a:hover,
+  .theme--gold a:hover,
+  .theme--orange a:hover,
+  .theme--salmon a:hover,
+  .theme--red a:hover,
+  .theme--burgundy a:hover,
+  .theme--purple a:hover,
+  a .is-heir:hover,
+  a:hover .is-heir,
+  .anchor:hover,
+  .theme--blue
+  .anchor:hover,
+  .theme--lime
+  .anchor:hover,
+  .theme--yellow
+  .anchor:hover,
+  .theme--gold
+  .anchor:hover,
+  .theme--orange
+  .anchor:hover,
+  .theme--salmon
+  .anchor:hover,
+  .theme--red
+  .anchor:hover,
+  .theme--burgundy
+  .anchor:hover,
+  .theme--purple
+  .anchor:hover,
+  .anchor .is-heir:hover,
+  .anchor:hover .is-heir {
+    color: #000; }
+  a--shy,
+  .anchor--shy {
+    text-decoration: none; }
+  a .title,
+  .anchor .title {
+    color: rgba(0, 0, 0, 0.76); }
+
+/* 3.5 Button */
+/*
+Button
+
+.button - Default button
+.button.button--dim  - Borderless button
+
+markup:
+<button class="{$modifiers}">Button</button>
+
+Styleguide 3.5
+*/
+.button {
+  display: inline-block;
+  padding: 9px 15px;
+  background: #FFF;
+  border: 2px solid rgba(0, 0, 0, 0.76);
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.66667em;
+  line-height: 1em; }
+  .button--stretch {
+    width: 100%;
+    text-align: center; }
+  .button--shy {
+    border: 0;
+    color: #67AB43; }
+
+/* 3.6 Form */
+/* 3.7 List */
+/*
+List
+
+Styleguide 3.7
+*/
+.list--inline li, .menu li {
+  display: inline; }
+
+.list--float {
+  /**
+     * For IE 6/7 only
+     * Include this rule to trigger hasLayout and contain floats.
+     */ }
+  .list--float:before, .list--float:after {
+    content: " ";
+    display: table; }
+  .list--float:after {
+    clear: both; }
+  .list--float {
+    *zoom: 1; }
+  .list--float li {
+    float: left; }
+
+/* 3.8 Icon */
+/*
+Icon
+
+.icon.icon--sortable - Arrow up and down
+
+Styleguide 3.8
+*/
+.icon:after {
+  position: absolute;
+  right: -3px;
+  top: 9px;
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px; }
+
+.icon-sortable:after {
+  background: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 9 9' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23FFF' fill-rule='evenodd' id='arrow-up-down' d='M2 4.5L4.5 2 7 4.5H2zm0 1h5L4.5 8 2 5.5z'/%3E%3C/svg%3E\a     ") no-repeat center; }
+
+/* 3.9 Label */
+/*
+Label
+
+.label - Label
+.label.label--square - Square label, for use with icon
+.label.label--s - Smaller tag
+
+markup:
+<span class="{$modifiers}">Featured Article</span>
+
+Styleguide 3.9
+*/
+.label {
+  display: inline-block;
+  background: #67AB43;
+  padding: 7.5px 15px;
+  font-size: 0.66667em;
+  line-height: 12px;
+  font-style: normal;
+  color: #FFF; }
+  .label--stretch {
+    width: 100%; }
+  .theme--blue .label {
+    background-color: #56C0DD; }
+  .theme--lime .label {
+    background-color: #C1D435; }
+  .theme--yellow .label {
+    background-color: #FACF21; }
+  .theme--gold .label {
+    background-color: #EB942C; }
+  .theme--orange .label {
+    background-color: #E26435; }
+  .theme--salmon .label {
+    background-color: #EB735D; }
+  .theme--red .label {
+    background-color: #EC2D10; }
+  .theme--burgundy .label {
+    background-color: #BA222A; }
+  .theme--purple .label {
+    background-color: #9B3381; }
+
+@media only screen and (min-width: 56.88889em) {
+  .label {
+    padding: 10.5px 30px;
+    font-size: 0.77778em;
+    line-height: 15px; }
+  .label.label--s {
+    padding: 6px;
+    font-size: 0.66667em;
+    line-height: 12px; } }
+
+/*
+Label List
+
+.label-list - Label List
+
+markup:
+<ul class="{$modifiers} reset list--inline">
+  <li><span class="label label--s">GIS</span></li>
+  <li><span class="label label--s">GPS</span></li>
+  <li><span class="label label--s">Hardware</span></li>
+  <li><span class="label label--s">Internet</span></li>
+  <li><span class="label label--s">Measuring</span></li>
+  <li><span class="label label--s">Monitoring</span></li>
+  <li><span class="label label--s">Radio</span></li>
+  <li><span class="label label--s">Software</span></li>
+  <li><span class="label label--s">Telehony</span></li>
+  <li><span class="label label--s">TV & Video</span></li>
+</ul>
+
+Styleguide 3.9.1
+*/
+.label-list .label {
+  float: left;
+  margin: 0 3px 3px 0; }
+
+/* 3.10 Date */
+/*
+Date
+
+.date - Date block
+.date.date--inlne - Floats date block to the left
+
+markup:
+<span class="date">
+  <span class="date__head">{{ item.startDate | date("M") }}</span>
+  <span class="date__body">{{ item.startDate | date("d") }}</span>
+</span>
+
+Styleguide 3.10
+*/
+.date {
+  width: 48px;
+  height: 54px;
+  background: #FFF;
+  border: 2px solid #67AB43;
+  text-align: center; }
+  .theme--blue .date {
+    border-color: #56C0DD; }
+  .theme--lime .date {
+    border-color: #C1D435; }
+  .theme--yellow .date {
+    border-color: #FACF21; }
+  .theme--gold .date {
+    border-color: #EB942C; }
+  .theme--orange .date {
+    border-color: #E26435; }
+  .theme--salmon .date {
+    border-color: #EB735D; }
+  .theme--red .date {
+    border-color: #EC2D10; }
+  .theme--burgundy .date {
+    border-color: #BA222A; }
+  .theme--purple .date {
+    border-color: #9B3381; }
+  .date, .date__head, .date__body {
+    display: block; }
+  .date__head {
+    background: #67AB43;
+    color: #FFF;
+    font-size: 0.66667em;
+    line-height: 18px; }
+    .theme--blue .date__head {
+      background-color: #56C0DD; }
+    .theme--lime .date__head {
+      background-color: #C1D435; }
+    .theme--yellow .date__head {
+      background-color: #FACF21; }
+    .theme--gold .date__head {
+      background-color: #EB942C; }
+    .theme--orange .date__head {
+      background-color: #E26435; }
+    .theme--salmon .date__head {
+      background-color: #EB735D; }
+    .theme--red .date__head {
+      background-color: #EC2D10; }
+    .theme--burgundy .date__head {
+      background-color: #BA222A; }
+    .theme--purple .date__head {
+      background-color: #9B3381; }
+  .date__body {
+    font-size: 1.11111em;
+    line-height: 33px; }
+  .date--inline {
+    float: left;
+    margin-right: 1em; }
+
+/* 3.11 Slogan */
+/*
+Slogan
+
+markup:
+<p class="slogan">
+  <em class="is-narrative">Sowing Innovation Harvesting Prosperity</em>
+</p>
+
+width="444px" height="347px" viewBox="0 0 444 347"
+
+Styleguide 3.11
+*/
+.slogan {
+  height: 348px;
+  background: url("/images/slogan.svg") no-repeat center;
+  background-size: contain; }
+
+/* 3.12 Theme */
+/*
+Theme
+
+The theme class defines which spot colour is used.
+
+.theme--blue - Blue
+.theme--lime - Lime
+.theme--yellow - Yellow
+.theme--gold - Gold
+.theme--orange - Orange
+.theme--red - Red
+.theme--burgundy - Burgundy
+.theme--purple - Purple
+
+markup:
+<div class="{$modifiers}">
+  <sg-insert>3.4-1</sg-insert>
+  <sg-insert>3.9-1</sg-insert>
+</div>
+
+Styleguide 3.12
+*/
+/* 3.13 Well */
+/*
+Well
+
+Distinct container
+
+.well - Purple
+
+markup:
+<div class="{$modifiers}">
+  Content
+</div>
+
+Styleguide 3.13
+*/
+.well {
+  background-color: #d7e9ce;
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  .theme--blue .well {
+    background-color: #d3eff6; }
+  .theme--lime .well {
+    background-color: #eff4ca; }
+  .theme--yellow .well {
+    background-color: #fef3c5; }
+  .theme--gold .well {
+    background-color: #fae3c8; }
+  .theme--orange .well {
+    background-color: #f7d7ca; }
+  .theme--salmon .well {
+    background-color: #fadbd5; }
+  .theme--red .well {
+    background-color: #fac8c1; }
+  .theme--burgundy .well {
+    background-color: #edc6c8; }
+  .theme--purple .well {
+    background-color: #e5cade; }
+  .well--divider {
+    box-shadow: inset -14px 0px 0px #d7e9ce, inset -15px 0px 0px 0px rgba(255, 255, 255, 0.7); }
+    .theme--blue .well--divider {
+      box-shadow: inset -14px 0px 0px #d3eff6, inset -15px 0px 0px 0px rgba(255, 255, 255, 0.7); }
+    .theme--lime .well--divider {
+      box-shadow: inset -14px 0px 0px #d3eff6, inset -15px 0px 0px 0px rgba(255, 255, 255, 0.7); }
+    .theme--yellow .well--divider {
+      box-shadow: inset -14px 0px 0px #fef3c5, inset -15px 0px 0px 0px rgba(255, 255, 255, 0.7); }
+    .theme--gold .well--divider {
+      box-shadow: inset -14px 0px 0px #fae3c8, inset -15px 0px 0px 0px rgba(255, 255, 255, 0.7); }
+    .theme--orange .well--divider {
+      box-shadow: inset -14px 0px 0px #f7d7ca, inset -15px 0px 0px 0px rgba(255, 255, 255, 0.7); }
+    .theme--salmon .well--divider {
+      box-shadow: inset -14px 0px 0px #fadbd5, inset -15px 0px 0px 0px rgba(255, 255, 255, 0.7); }
+    .theme--red .well--divider {
+      box-shadow: inset -14px 0px 0px #fac8c1, inset -15px 0px 0px 0px rgba(255, 255, 255, 0.7); }
+    .theme--burgundy .well--divider {
+      box-shadow: inset -14px 0px 0px #edc6c8, inset -15px 0px 0px 0px rgba(255, 255, 255, 0.7); }
+    .theme--purple .well--divider {
+      box-shadow: inset -14px 0px 0px #e5cade, inset -15px 0px 0px 0px rgba(255, 255, 255, 0.7); }
+
+/* 3.14 Tag */
+/*
+Tag
+
+.tag - Tag
+
+markup:
+<a class="{$modifiers}" href="javascript:void();">UAV</a>
+
+Styleguide 3.14
+*/
+.tag {
+  display: inline-block;
+  background: rgba(210, 210, 210, 0.9376);
+  padding: 3px 6px;
+  font-size: 0.55556em;
+  line-height: 12px;
+  font-style: normal;
+  text-decoration: none;
+  color: inherit; }
+  .tag:hover {
+    background-color: #67AB43;
+    color: #FFF; }
+    .theme--blue .tag:hover {
+      background-color: #56C0DD; }
+    .theme--lime .tag:hover {
+      background-color: #C1D435; }
+    .theme--yellow .tag:hover {
+      background-color: #FACF21; }
+    .theme--gold .tag:hover {
+      background-color: #EB942C; }
+    .theme--orange .tag:hover {
+      background-color: #E26435; }
+    .theme--salmon .tag:hover {
+      background-color: #EB735D; }
+    .theme--red .tag:hover {
+      background-color: #EC2D10; }
+    .theme--burgundy .tag:hover {
+      background-color: #BA222A; }
+    .theme--purple .tag:hover {
+      background-color: #9B3381; }
+
+/*
+Tag List
+
+.tag-list - Tag List
+
+markup:
+<ul class="{$modifiers} reset list--inline">
+  <li><a class="tag" href="javascript:void();">GIS</a></li>
+  <li><a class="tag" href="javascript:void();">GPS</a></li>
+  <li><a class="tag" href="javascript:void();">Hardware</a></li>
+  <li><a class="tag" href="javascript:void();">Internet</a></li>
+  <li><a class="tag" href="javascript:void();">Measuring</a></li>
+  <li><a class="tag" href="javascript:void();">Monitoring</a></li>
+  <li><a class="tag" href="javascript:void();">Radio</a></li>
+  <li><a class="tag" href="javascript:void();">Software</a></li>
+  <li><a class="tag" href="javascript:void();">Telephony</a></li>
+  <li><a class="tag" href="javascript:void();">TV & Video</a></li>
+</ul>
+
+Styleguide 3.14.1
+*/
+/* 3.x Label */
+/* 3.x Alert */
+/* 3.x Tooltip */
+/* 3.x Media */
+/* 3.x Issue */
+/* 3.x Box */
+/* 3.x State */
+/* 3.50 ICT Update */
+/*
+ICT Update Elements
+
+Styleguide 3.50
+*/
+/* 3.50.1 Issue-label */
+/*
+ICT Update – Issue Label
+
+**@TODO - Breakpoints**
+**@TODO - Theme colours**
+
+The issue publication number
+
+.issue-label - Issue tag
+.issue-label.issue-label--s - Smaller issue tag
+.issue-label.issue-label--l - Larger Issue tag
+.issue-label.issue-label--offset-left - Float to left
+.issue-label.issue-label--offset-right - Float to right
+.issue-label.issue-label--offset-top - Float on top
+
+markup:
+<div class="{$modifiers} media">
+  <div class="issue-label__nr" data-issue-nr="80"></div>
+  <div class="issue-label__caption">
+    <p>
+      <strong>More than Mobile</strong><br/>
+      <span>Issue 80 August 2015</span>
+    </p>
+  </div>
+</div>
+
+Styleguide 3.50.1
+*/
+.issue-label {
+  font-size: 0.66667em;
+  line-height: 12px; }
+  .issue-label__nr:before {
+    content: attr(data-issue-nr);
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: #67AB43;
+    font-size: 1.6em;
+    line-height: 36px;
+    text-align: center;
+    color: #FFF; }
+  .issue-label__caption {
+    display: flex;
+    align-items: center; }
+    .issue-label__caption * {
+      flex: 0 1 100%; }
+  .issue-label__nr + .issue-label__caption,
+  .issue-label__caption + .issue-label__nr {
+    padding-left: 1em; }
+  .issue-label--s {
+    font-size: 0.61111em;
+    line-height: 12px; }
+  .issue-label--s .issue-label__nr:before {
+    font-size: 1.2em;
+    width: 30px;
+    height: 30px;
+    line-height: 30px; }
+  .issue-label--l {
+    font-size: 0.77778em;
+    line-height: 15px; }
+  .issue-label--l .issue-label__nr:before {
+    width: 48px;
+    height: 48px;
+    line-height: 48px; }
+  .issue-label--offset-left, .issue-label--offset-right, .issue-label--offset-top {
+    position: relative; }
+  .issue-label--offset-left .issue-label__nr:before,
+  .issue-label--offset-right .issue-label__nr:before,
+  .issue-label--offset-top .issue-label__nr:before {
+    position: absolute; }
+  .issue-label--offset-left .issue-label__nr:before {
+    right: 100%; }
+  .issue-label--offset-right .issue-label__nr:before {
+    left: 100%; }
+  .issue-label--offset-top .issue-label__nr:before {
+    bottom: 100%; }
+  .issue-label--offset-right > .issue-label__nr + .issue-label__caption,
+  .issue-label--offset-right > .issue-label__caption + .issue-label__nr,
+  .issue-label--offset-top > .issue-label__nr + .issue-label__caption,
+  .issue-label--offset-top > .issue-label__caption + .issue-label__nr {
+    padding-left: 0; }
+  .post-header .issue-label__nr:before {
+    background-color: #FFF;
+    color: #67AB43; }
+  .post-header .issue-label__caption {
+    color: #FFF; }
+
+/* 3.98 Effects */
+/*
+Effects
+
+.fx - Transition all properties
+
+Styleguide 3.98
+*/
+.fx, a,
+.anchor {
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+  transition-property: all; }
+
+/* 3.99 States */
+/*
+State
+
+.is-narrative - Hidden label, but is used as narrative for visually impaired users
+.is-heir - Passes on parent's color and background properties
+.is-crowned - When assigned to an element directly following the `masthead`, it pulls that item up so the masthead sits on top (like a crown).
+
+Styleguide 3.99
+*/
+.is-narrative {
+  position: absolute;
+  left: -999em; }
+
+.is-heir.is-heir {
+  color: inherit;
+  background: inherit;
+  text-decoration: inherit; }
+
+.masthead + .is-crowned {
+  display: block;
+  margin-top: -78px; }
+  @media only screen and (min-width: 56.88889em) {
+    .masthead + .is-crowned {
+      margin-top: -192px; } }
+
+.is-rooted {
+  position: relative; }
+
+/* 4. */
+/*
+Blocks
+
+Styleguide 4.0
+*/
+/* 4.1 Menu */
+/*
+Menu
+
+The *Menu* block is used in navigational elements.
+
+When used with a list element, the list element will need to be reset using the reset class.
+
+.menu - Horizontal menu
+.menu.menu--stacked - Vertical menu
+.menu.menu--secondary - Vertical menu
+
+markup:
+<ul class="{$modifiers}">
+  <li><a class="menu__item anchor is-heir" href="javascript:void();">Publications</a></li>
+  <li><a class="menu__item" href="javascript:void();">Resources</a></li>
+  <li><a class="menu__item" href="javascript:void();">Events</a></li>
+  <li><a class="menu__item" href="javascript:void();">Blog</a></li>
+  <li><a class="menu__item" href="javascript:void();">News</a></li>
+</ul>
+
+Styleguide 4.1
+*/
+.menu__item, .menu-toggle {
+  display: inline-block;
+  padding: 6px 15px;
+  color: inherit;
+  font-size: 0.77778em;
+  line-height: 15px;
+  text-decoration: none; }
+
+.menu--stacked .menu__item, .menu--stacked .menu-toggle {
+  display: block; }
+
+@media only screen and (min-width: 56.88889em) {
+  .menu__item, .menu-toggle {
+    padding: 10.5px 15px; }
+  .menu--secondary .menu__item, .menu--secondary .menu-toggle {
+    padding: 0 15px;
+    font-size: 0.72222em;
+    line-height: 15px; } }
+
+/*
+Menu
+
+The *Menu* block is used in navigational elements.
+
+When used with a list element, the list element will need to be reset using the reset class.
+
+markup:
+<div class="is-inactive is-conducive media__stretcher" id="network-navigation">
+  <button class="menu-toggle icon icon-sortable" data-toggle="network-navigation">CTA</button>
+  <ul class="fx menu menu--responsive">
+    <li><a class="menu__item is-heir" href="javascript:void();">Home</a></li>
+    <li><a class="menu__item is-heir" href="javascript:void();">About CTA</a></li>
+    <li><a class="menu__item is-heir" href="javascript:void();">Contact</a></li>
+    <li><a class="menu__item is-heir" href="javascript:void();">Press</a></li>
+    <li><a class="menu__item is-heir" href="javascript:void();">Working with CTA</a></li>
+  </ul>
+</div>
+
+sg-wrapper:
+<nav class="network-navigation">
+<sg-wrapper-content/>
+</nav>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra pellentesque ligula ut feugiat. Nullam elit libero, rutrum eu odio sed, tempus iaculis lectus. Phasellus felis ex, malesuada vitae libero ac, auctor finibus sapien. Sed odio enim, molestie eu pretium sit amet, commodo ut enim. Praesent eget mi eget enim hendrerit interdum. Ut sit amet orci libero. Vestibulum et leo pretium, semper nisl non, aliquam arcu. Pellentesque malesuada eros a elit imperdiet, sed tempor enim malesuada. Praesent accumsan malesuada eros, in sodales tortor sagittis at. Duis sollicitudin, est sed lobortis semper, felis est hendrerit massa, a tincidunt nulla risus in lectus. Praesent eleifend vestibulum nunc sed mollis. Ut dapibus nisi turpis, id lobortis justo scelerisque vitae. Morbi vel augue in ipsum dignissim aliquet. Vestibulum justo est, venenatis ut massa eu, dignissim vulputate lorem. Morbi porta est quis erat vulputate tristique.</p>
+<script>
+jQuery("document").ready(function($){
+    $("[data-toggle]").toggle();
+});
+</script>
+
+Styleguide 4.1.1
+*/
+.menu-toggle {
+  position: relative;
+  padding: 6px 15px;
+  border: 0;
+  background-color: inherit; }
+
+.menu:hover .menu-toggle:after {
+  display: none; }
+
+.menu--responsive {
+  position: absolute;
+  z-index: 1;
+  background: inherit; }
+
+.is-inactive .menu--responsive .menu__item, .is-inactive .menu--responsive .menu-toggle,
+.is-active .menu--responsive .menu__item,
+.is-active .menu--responsive .menu-toggle {
+  display: block; }
+
+.is-inactive .menu--responsive {
+  min-height: 0;
+  height: 0;
+  overflow: hidden; }
+
+.is-active .menu--responsive, .menu--responsive:hover, .menu-toggle:hover + .menu--responsive {
+  min-height: 30px;
+  height: auto; }
+
+@media only screen and (min-width: 42.66667em) {
+  .menu-toggle {
+    display: none; }
+  .is-inactive .menu--responsive .menu__item, .is-inactive .menu--responsive .menu-toggle,
+  .is-active .menu--responsive .menu__item,
+  .is-active .menu--responsive .menu-toggle {
+    display: inline-block; }
+  .is-inactive .menu--responsive,
+  .is-active .menu--responsive {
+    position: static;
+    height: auto; } }
+
+/* 4.2 Network Navigation */
+/*
+Network Navigation
+
+A navigation bar that holds CTA-wide navigation. The Networks Navigation bar is the smame accross all websites.
+
+markup:
+<nav class="network-navigation media wings">
+  <sg-insert>4.1.1-1</sg-insert>
+  <sg-insert>4.5-1</sg-insert>
+</nav>
+
+Styleguide 4.2
+*/
+.network-navigation {
+  position: relative;
+  background-color: #3d3d3d; }
+  .network-navigation,
+  .theme--blue .network-navigation,
+  .theme--lime .network-navigation,
+  .theme--yellow .network-navigation,
+  .theme--gold .network-navigation,
+  .theme--orange .network-navigation,
+  .theme--salmon .network-navigation,
+  .theme--red .network-navigation,
+  .theme--burgundy .network-navigation,
+  .theme--purple .network-navigation {
+    color: #c2c2c2; }
+  .network-navigation a:hover {
+    color: #FFF; }
+
+/* 4.3 Site Navigation */
+/*
+Site Navigation
+
+The website's primary navigation. This navigation bar is contextual to the website.
+
+.site-navigation - Fallback state, menu items are all visible but floated
+.site-navigation.is-inactive - Rested state, applies to smallest viewports only
+.site-navigation.is-active - Active state, applies to smallest viewports only
+
+markup:
+<nav class="{$modifiers} wings">
+  <a class="site-navigation__brand--cta gutters" href="javascript:void();">
+    <figure class="brand--cta"><figcaption class="is-narrative">CTA Homepage</figcaption></figure>
+  </a>
+  <div class="site-navigation__nav">
+    <ul class="list--inline menu site-navigation__menu">
+      <li><a class="menu__item" href="javascript:void();">Publications</a></li>
+      <li><a class="menu__item" href="javascript:void();">Resources</a></li>
+      <li><a class="menu__item" href="javascript:void();">Events</a></li>
+      <li><a class="menu__item" href="javascript:void();">Blog</a></li>
+      <li><a class="menu__item" href="javascript:void();">News</a></li>
+    </ul>
+    <div class="site-navigation__browse gutters">
+      <sg-insert>4.4-1</sg-insert>
+      <ul class="list--inline menu menu--secondary site-navigation__menu">
+        <li><a class="menu__item" href="javascript:void();">Programmes</a></li>
+        <li><a class="menu__item" href="javascript:void();">Regions</a></li>
+        <li><a class="menu__item" href="javascript:void();">Topics</a></li>
+      </ul>
+    </div>
+  </div>
+
+Styleguide 4.3
+*/
+.brand--cta {
+  margin-left: -15px;
+  margin-right: -15px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='78px' height='78px' viewBox='0 0 156 156' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3Cpath d='M33 79.094V123h90V33H33v14.31c-.06.006-.118.01-.176.017C32.827 47.32 24 49 14 45c0 2-.076 20 10.914 29.56 2.957 2.76 5.66 4.084 8.086 4.534z' id='a'/%3E%3Cmask id='b' x='-3' y='-3' width='115' height='96'%3E%3Cpath fill='%23fff' d='M11 30h115v96H11z'/%3E%3Cuse xlink:href='%23a'/%3E%3C/mask%3E%3C/defs%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cuse fill='%23FFF' xlink:href='%23a'/%3E%3Cuse stroke='%23FFF' mask='url(%23b)' stroke-width='6px' xlink:href='%23a'/%3E%3Cpath fill='%237BB010' d='M33 33h90v90H33z'/%3E%3Cpath d='M94.433 45.664s-3.732-.356-5.75-.356c-5.358 0-15.434.828-22.68 6.377-9.108 6.975-11.144 16.977-12.238 22.354-.18.89-1.236 3.553-1.58 4.016-.27.34-.54.706-.793 1.073-2.772 4.046-4.35 9.347-4.723 15.798-.15 2.04-.143 4.274.018 6.654.246 3.784.73 6.388.84 6.93.996 5.845 2.585 11.867 3.472 14.488h12.026c-.514-1.166-5.62-13.61-7.07-21.045-1.218-6.24-.754-10.746 1.598-15.533 1.752-2.672 4.177-3.397 5.472-3.59 1.097-.163 2.435-.214 3.863-.267 5.34-.203 11.987-.455 17.005-6.34C94.41 63.898 94.45 48.394 94.445 47.74l-.012-2.076z' fill='%2300662F'/%3E%3Cpath d='M53.696 103.483c-1.467-7.755-.478-12.706 1.837-17.51 1.876-3.03 4.612-4.42 6.994-4.788 5.178-.8 13.653.86 19.3-5.97 9.95-12.037 9.88-27.485 9.88-27.485s-15.125-1.597-24.62 5.903c-10.77 8.508-10.79 22.11-12.063 24.61-.318.627-.733 1.234-1.177 1.855-.253.326-.494.663-.724 1.006-2.898 4.365-3.982 9.903-4.265 14.92-.135 1.927-.136 4.056.02 6.435.256 4.098.796 6.797.796 6.797 1.07 6.507 2.697 11.537 3.45 13.743H60c-1.353-3.257-5.013-12.684-6.304-19.517z' fill='%23FFF'/%3E%3Cpath d='M70.04 65.224c-3.573 4.074-4.23 6.416-4.23 6.416s-1.418 2.39-2.26.896c-.956-1.698.46-5.564 5.803-10.21 5.785-5.033 12.633-7.5 12.633-7.5s-6.908 4.653-11.946 10.398z' fill='%2300662F'/%3E%3Cpath d='M81.335 113.673c-1.528.374-3.227.806-5.96.806-5.36 0-11.552-2.712-11.552-10.33 0-7.01 4.9-10.498 11.522-10.498 2.044 0 4.032.462 5.96 1.038l-.432 4.355c-1.727-.95-3.397-1.414-5.24-1.414-3.8 0-6.28 2.77-6.28 6.52 0 3.954 2.795 6.348 6.71 6.348 1.757 0 3.544-.463 5.013-1.04l.26 4.215zm5.9-15.696h-4.952v-3.98H97.55v3.98h-4.955v16.156h-5.36V97.977zm21.26-3.98h-6.568l-7.633 20.136h5.443l1.585-4.3h7.548l1.497 4.3h5.877l-7.748-20.135zm-5.933 12.03l2.592-7.876h.058l2.39 7.876h-5.04z' fill='%23FFF'/%3E%3Cpath d='M54.1 70.183c-.594-1.314-1.115-3.538-1.115-3.538-.475-2.443-1.392-6.246-2.978-9.677-.41-1.214-1.23-2.616-2.348-3.966-.343-.44-.702-.86-1.082-1.24-2.184-2.142-5.11-3.97-8.31-4.32-2.332-.26-4.02-.25-5.444-.115C32.827 47.32 24 49 14 45c0 2-.076 20 10.914 29.56 3.634 3.39 6.884 4.615 9.708 4.713 3.024.53 6.553.35 10.456-1.258-.004.007 4.534-1.642 6.643-.524.45.422.877.898 1.257 1.43 1.85 2.2 2.68 4.336 2.27 7.442-.376 2.845-1.233 5.374-2.062 8.576l2.755 11.588c1.952-3.808 3.71-8 4.746-12.312 1.288-5.365 1.65-9.54.14-14.196-.786-2.424-6.346-9.43-6.725-9.835zm-6.356 38.998C45.256 114.466 41.108 120.85 40 123h13c-.367-1.47-5.256-13.82-5.256-13.82z' fill='%2300662F'/%3E%3Cpath d='M44.924 68.104c-1.742.47-7.812-.54-11.653-2.412C23.028 60.698 20 55 20 55s6.902 5.727 13.385 7.615c6.48 1.89 10.74 2.437 11.362 2.493.622.058 1.255.182 1.617.582.702.767.057 2.008-1.44 2.414z' fill='%23FFF'/%3E%3C/g%3E%3C/svg%3E");
+  height: 78px;
+  width: 78px; }
+  @media only screen and (min-width: 56.88889em) {
+    .brand--cta {
+      margin-left: -30px;
+      margin-right: -30px;
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='156px' height='156px' viewBox='0 0 156 156' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3Cpath d='M33 79.094V123h90V33H33v14.31c-.06.006-.118.01-.176.017C32.827 47.32 24 49 14 45c0 2-.076 20 10.914 29.56 2.957 2.76 5.66 4.084 8.086 4.534z' id='a'/%3E%3Cmask id='b' x='-3' y='-3' width='115' height='96'%3E%3Cpath fill='%23fff' d='M11 30h115v96H11z'/%3E%3Cuse xlink:href='%23a'/%3E%3C/mask%3E%3C/defs%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cuse fill='%23FFF' xlink:href='%23a'/%3E%3Cuse stroke='%23FFF' mask='url(%23b)' stroke-width='6px' xlink:href='%23a'/%3E%3Cpath fill='%237BB010' d='M33 33h90v90H33z'/%3E%3Cpath d='M94.433 45.664s-3.732-.356-5.75-.356c-5.358 0-15.434.828-22.68 6.377-9.108 6.975-11.144 16.977-12.238 22.354-.18.89-1.236 3.553-1.58 4.016-.27.34-.54.706-.793 1.073-2.772 4.046-4.35 9.347-4.723 15.798-.15 2.04-.143 4.274.018 6.654.246 3.784.73 6.388.84 6.93.996 5.845 2.585 11.867 3.472 14.488h12.026c-.514-1.166-5.62-13.61-7.07-21.045-1.218-6.24-.754-10.746 1.598-15.533 1.752-2.672 4.177-3.397 5.472-3.59 1.097-.163 2.435-.214 3.863-.267 5.34-.203 11.987-.455 17.005-6.34C94.41 63.898 94.45 48.394 94.445 47.74l-.012-2.076z' fill='%2300662F'/%3E%3Cpath d='M53.696 103.483c-1.467-7.755-.478-12.706 1.837-17.51 1.876-3.03 4.612-4.42 6.994-4.788 5.178-.8 13.653.86 19.3-5.97 9.95-12.037 9.88-27.485 9.88-27.485s-15.125-1.597-24.62 5.903c-10.77 8.508-10.79 22.11-12.063 24.61-.318.627-.733 1.234-1.177 1.855-.253.326-.494.663-.724 1.006-2.898 4.365-3.982 9.903-4.265 14.92-.135 1.927-.136 4.056.02 6.435.256 4.098.796 6.797.796 6.797 1.07 6.507 2.697 11.537 3.45 13.743H60c-1.353-3.257-5.013-12.684-6.304-19.517z' fill='%23FFF'/%3E%3Cpath d='M70.04 65.224c-3.573 4.074-4.23 6.416-4.23 6.416s-1.418 2.39-2.26.896c-.956-1.698.46-5.564 5.803-10.21 5.785-5.033 12.633-7.5 12.633-7.5s-6.908 4.653-11.946 10.398z' fill='%2300662F'/%3E%3Cpath d='M81.335 113.673c-1.528.374-3.227.806-5.96.806-5.36 0-11.552-2.712-11.552-10.33 0-7.01 4.9-10.498 11.522-10.498 2.044 0 4.032.462 5.96 1.038l-.432 4.355c-1.727-.95-3.397-1.414-5.24-1.414-3.8 0-6.28 2.77-6.28 6.52 0 3.954 2.795 6.348 6.71 6.348 1.757 0 3.544-.463 5.013-1.04l.26 4.215zm5.9-15.696h-4.952v-3.98H97.55v3.98h-4.955v16.156h-5.36V97.977zm21.26-3.98h-6.568l-7.633 20.136h5.443l1.585-4.3h7.548l1.497 4.3h5.877l-7.748-20.135zm-5.933 12.03l2.592-7.876h.058l2.39 7.876h-5.04z' fill='%23FFF'/%3E%3Cpath d='M54.1 70.183c-.594-1.314-1.115-3.538-1.115-3.538-.475-2.443-1.392-6.246-2.978-9.677-.41-1.214-1.23-2.616-2.348-3.966-.343-.44-.702-.86-1.082-1.24-2.184-2.142-5.11-3.97-8.31-4.32-2.332-.26-4.02-.25-5.444-.115C32.827 47.32 24 49 14 45c0 2-.076 20 10.914 29.56 3.634 3.39 6.884 4.615 9.708 4.713 3.024.53 6.553.35 10.456-1.258-.004.007 4.534-1.642 6.643-.524.45.422.877.898 1.257 1.43 1.85 2.2 2.68 4.336 2.27 7.442-.376 2.845-1.233 5.374-2.062 8.576l2.755 11.588c1.952-3.808 3.71-8 4.746-12.312 1.288-5.365 1.65-9.54.14-14.196-.786-2.424-6.346-9.43-6.725-9.835zm-6.356 38.998C45.256 114.466 41.108 120.85 40 123h13c-.367-1.47-5.256-13.82-5.256-13.82z' fill='%2300662F'/%3E%3Cpath d='M44.924 68.104c-1.742.47-7.812-.54-11.653-2.412C23.028 60.698 20 55 20 55s6.902 5.727 13.385 7.615c6.48 1.89 10.74 2.437 11.362 2.493.622.058 1.255.182 1.617.582.702.767.057 2.008-1.44 2.414z' fill='%23FFF'/%3E%3C/g%3E%3C/svg%3E");
+      height: 156px;
+      width: 156px; } }
+
+.brand--extension {
+  height: 78px; }
+  @media only screen and (min-width: 56.88889em) {
+    .brand--extension {
+      height: 156px;
+      position: relative;
+      top: 48px; } }
+
+/*
+ * Fallback non-js
+ */
+.site-navigation {
+  position: relative;
+  background-color: #FFF;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  padding-top: 39px; }
+  .site-navigation__nav {
+    display: flex;
+    flex-grow: 1; }
+  .site-navigation__nav > .site-navigation__menu {
+    padding-top: 12px !important; }
+  .site-navigation__brand {
+    flex-shrink: 0;
+    align-self: flex-end; }
+  .site-navigation__menu {
+    white-space: nowrap;
+    overflow-x: auto;
+    flex-grow: 1; }
+    .site-navigation__menu li {
+      float: left;
+      /* 1 */ }
+  .site-navigation__search {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0; }
+  .site-navigation.is-inactive .site-navigation__browse .menu {
+    position: absolute;
+    left: -999em; }
+    .site-navigation.is-inactive .site-navigation__browse .menu li {
+      float: none;
+      /* 1 */ }
+
+@media only screen and (min-width: 56.88889em) {
+  .site-navigation {
+    padding-top: 0; }
+    .site-navigation__search {
+      position: relative;
+      top: auto;
+      left: auto;
+      right: auto; }
+    .site-navigation__brand {
+      top: 48px; }
+    .site-navigation__menu li {
+      float: none;
+      /* 1 */ }
+    .site-navigation__browse {
+      flex-basis: auto;
+      padding-left: 48px; } }
+
+@media only screen and (min-width: 70em) {
+  .site-navigation.is-inactive .site-navigation__browse .menu {
+    position: static; } }
+
+/*
+Site Navigation Brand Extemsion
+
+.site-navigation - Fallback state, menu items are all visible but floated
+.site-navigation.is-inactive - Rested state, applies to smallest viewports only
+.site-navigation.is-active - Active state, applies to smallest viewports only
+
+markup:
+<nav class="{$modifiers} wings">
+  <a class="site-navigation__brand gutters" href="javascript:void();">
+    <img class="image brand--extension" alt="ICT Update" src="/images/logos/logo-ict_update.png"/>
+  </a>
+  <div class="site-navigation__nav">
+    <ul class="list--inline menu site-navigation__menu">
+      <li><a class="menu__item" href="javascript:void();">Publications</a></li>
+      <li><a class="menu__item" href="javascript:void();">Resources</a></li>
+      <li><a class="menu__item" href="javascript:void();">Events</a></li>
+      <li><a class="menu__item" href="javascript:void();">Blog</a></li>
+      <li><a class="menu__item" href="javascript:void();">News</a></li>
+    </ul>
+    <div class="site-navigation__browse gutters">
+      <sg-insert>4.4.1-1</sg-insert>
+      <ul class="list--inline menu menu--secondary site-navigation__menu">
+        <li><a class="menu__item" href="javascript:void();">Programmes</a></li>
+        <li><a class="menu__item" href="javascript:void();">Regions</a></li>
+        <li><a class="menu__item" href="javascript:void();">Topics</a></li>
+      </ul>
+    </div>
+  </div>
+
+Styleguide 4.3.1
+*/
+/* 4.4 Site Search */
+/*
+Site Search
+
+The website's primary navigation. This navigation bar is contextual to the website.
+
+markup:
+<form class="site-navigation__search site-search wings">
+  <label class="is-narrative" for="site-search">Search</label>
+  <input class="site-search__input" id="site-search" placeholder="Search CTA &hellip;" type="text" />
+  <button class="is-narrative" type="submit">Search</button>
+</form>
+
+Styleguide 4.4
+*/
+/*
+ * 1. Remove rounded corners on search box in ios
+ */
+.site-search {
+  background: #FFF; }
+  .site-search__input {
+    padding: 0 39px 0 15px;
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    /* 1 */
+    -webkit-appearance: none;
+    /* 1 */
+    font-size: 0.66667em;
+    line-height: 36px; }
+    .site-search__input:focus {
+      outline: 1px solid #FFF; }
+  .site-search__brand {
+    position: absolute;
+    right: 0;
+    top: 0; }
+
+@media only screen and (min-width: 17.77778em) {
+  .site-search__input {
+    padding: 0 39px 0 18px; } }
+
+@media only screen and (min-width: 56.88889em) {
+  .site-search {
+    background: none;
+    margin-bottom: 6px; }
+    .site-search__input {
+      height: 36px;
+      width: 100%;
+      padding: 0 12px;
+      background: #FFF;
+      border: 2px solid #3d3d3d;
+      border-color: black;
+      font-size: 12px;
+      line-height: 30px; }
+      .site-search__input:focus {
+        outline: 2px solid rgba(0, 0, 0, 0.76); }
+    .site-search__brand {
+      right: 100%;
+      top: -9px; }
+      .site-search__brand svg {
+        width: 48px;
+        height: 48px; } }
+
+/*
+Site Search for Brand Extension
+
+The website's primary navigation. This navigation bar is contextual to the website.
+
+markup:
+<form class="site-navigation__search site-search wings">
+  <a class="site-search__brand" href="javascript:void();">
+    <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><title>CTA</title><g fill="none" fill-rule="evenodd"><path d="M3 12.923c.256 2.334 2 5.077 4 5.75C7.016 18.994 7 29 7 29h22.02V7H7s.016 3.236 0 3c-3 0-3.14-.635-4.2-.93 0 0-.15 2.063.2 3.853z" fill="#FFF"/><path fill="#7BB010" d="M8 8h20v20H8"/><path d="M21.933 10.594l-.226-.023-.23-.022c-.084-.007-.39-.032-.85-.032-1.215 0-3.502.182-5.147 1.4-2.067 1.534-2.53 3.732-2.777 4.913-.04.195-.104.49-.136.555-.058.107-.145.225-.223.327-.06.075-.122.155-.18.236-.63.89-.987 2.054-1.072 3.472-.033.448-.032.94.004 1.462.056.832.166 1.404.19 1.523.227 1.284.805 3.595.805 3.595h2.715s-1.276-3.402-1.605-5.036c-.276-1.37-.17-2.36.363-3.413.397-.587.948-.746 1.242-.788.25-.036.552-.047.876-.06 1.213-.044 2.722-.1 3.86-1.392 2.388-2.71 2.397-6.116 2.396-6.26l-.002-.228v-.228z" fill="#00662F"/><path d="M12.687 23.3c-.333-1.704-.108-2.792.417-3.848.426-.666 1.047-.972 1.587-1.052 1.177-.176 3.1.19 4.382-1.312 2.258-2.645 2.242-6.04 2.242-6.04s-3.433-.35-5.587 1.297c-2.445 1.87-2.45 4.86-2.74 5.408-.07.138-.165.27-.266.408-.056.073-.11.147-.163.222-.658.96-.904 2.176-.968 3.28-.032.422-.032.89.003 1.413.06.9.18 1.494.18 1.494.04.233.085.46.13.682.03.146.063.288.095.428.215.94.456 1.735.58 2.32h1.606c-.307-1.034-1.205-3.2-1.498-4.7z" fill="#FFF"/><path d="M16.396 14.892c-.81.896-.96 1.41-.96 1.41s-.32.525-.512.197c-.217-.374.104-1.224 1.317-2.245 1.314-1.106 2.868-1.648 2.868-1.648s-1.568 1.023-2.712 2.285z" fill="#00662F"/><path d="M11.385 14.515l-1.3-.497-2.537-.807L6 12.343H4.948v1.8l2.228 2.236s2.043.187 2.228 0c.186-.186 1.176-.186 1.176-.186h.68l.125-1.677zM18.96 25.54c-.347.08-.732.176-1.353.176-1.216 0-2.62-.596-2.62-2.27 0-1.54 1.11-2.307 2.614-2.307.465 0 .916.1 1.353.228l-.098.957c-.392-.21-.77-.31-1.19-.31-.862 0-1.424.607-1.424 1.432 0 .868.635 1.394 1.524 1.394.398 0 .804-.1 1.137-.227l.06.926zM20.3 22.09h-1.125v-.874h3.465v.874h-1.124v3.55H20.3M23.778 23.86l.588-1.732h.014l.542 1.73h-1.144zm1.347-2.644h-1.49L21.9 25.64h1.237l.36-.945h1.713l.34.945h1.333l-1.758-4.424z" fill="#FFF"/><path d="M10.68 15.584c-.395.104-1.773-.12-2.644-.53-2.325-1.097-3.012-2.35-3.012-2.35s1.566 1.26 3.038 1.674c1.47.415 2.437.536 2.578.548.142.012.285.04.367.128.16.168.013.44-.326.53zm3.625 2.56c-.178-.533-.462-.935-.727-1.254l.004-.003c-.174-.23-.358-.437-.533-.623h-.002c-.093-.1-.183-.193-.27-.282-.134-.29-.252-.777-.252-.777-.108-.537-.316-1.373-.676-2.127-.094-.267-.28-.575-.533-.87-.078-.098-.16-.19-.246-.274l-.003.007c-.49-.477-1.155-.878-1.88-.956-.53-.056-.914-.054-1.237-.025v-.002s-2.616.302-4.203-.39l-.087-.048s-.307 3.558 2.17 6.11h-.013s.118.132.337.314c.825.745 1.563 1.014 2.204 1.036.686.116 1.487.076 2.373-.277v.002s1.03-.363 1.51-.117c.1.093.198.197.284.314.42.483.608.953.515 1.636-.086.625-.28 1.18-.47 1.884l.166 1.16.137.477.02-.044.303.952c.443-.836.842-1.757 1.077-2.705.293-1.18.375-2.097.032-3.12zm-2.97 6.408C10.772 25.8 10.166 28 10.166 28h2.092c0-.81-.392-1.336-.467-1.853l-.454-1.595z" fill="#00662F"/></g></svg>
+  </a>
+  <label class="is-narrative" for="site-search">Search</label>
+  <input class="site-search__input" id="site-search" placeholder="Search CTA &hellip;" type="text" />
+  <button class="is-narrative" type="submit">Search</button>
+</form>
+
+Styleguide 4.4.1
+*/
+/* 4.5 Language */
+/*
+Language Switch
+
+The website's primary navigation. This navigation bar is contextual to the website.
+
+markup:
+<ul class="menu language-switch">
+  <li class="language is-active"><a class="menu__item" href="javascript:void();">EN</a></li>
+  <li class="language"><a class="menu__item" href="javascript:void();">FR</a></li>
+  <li class="language"><a class="menu__item" href="javascript:void();">PO</a></li>
+</ul>
+
+sg-wrapper:
+<nav class="network-navigation">
+  <sg-wrapper-content/>
+</nav>
+
+Styleguide 4.5
+*/
+.language {
+  left: -9999em;
+  text-align: center; }
+  .language, .language-switch {
+    position: absolute;
+    width: auto;
+    background: inherit;
+    z-index: 2; }
+  .language-switch {
+    right: 0; }
+  .language-switch:hover .language, .language.is-active {
+    display: block;
+    position: static; }
+  .language.is-active {
+    position: static; }
+  .language .menu__item, .language .menu-toggle {
+    padding: 6px 15px; }
+  .language-switch:hover .language.is-active .menu__item, .language-switch:hover .language.is-active .menu-toggle {
+    outline: 2px solid;
+    outline-offset: -2px;
+    color: #FFF;
+    border-color: #FFF; }
+
+@media only screen and (min-width: 56.88889em) {
+  .language, .language-switch {
+    position: static; }
+  .language-switch:hover .language, .language.is-active {
+    display: inline-block; }
+  .language .menu__item, .language .menu-toggle {
+    padding: 10.5px 15px; }
+  .language-switch:hover .language.is-active .menu__item, .language-switch:hover .language.is-active .menu-toggle, .language.is-active .menu__item, .language.is-active .menu-toggle {
+    outline: 2px solid;
+    outline-offset: -6px; } }
+
+/* 4.6 Author */
+/*
+Author
+
+markup:
+<aside class="author">
+  <h3 class="title trailer gutters">About the authors</h3>
+  <div class="media media--stretched trailer--tiny">
+    <div class="gutters">
+      <img class="image image--stretch" alt="Julia Bello-Bravo" src="/images/content/authors/Julia_Bello-Bravo.jpg">
+    </div>
+    <div class="gutters">
+      <img class="image image--stretch" alt="Barry Robert Pittendrigh" src="/images/content/authors/Barry_Robert_Pittendrigh.jpg">
+    </div>
+  </div>
+  <p class="body--meta gutters"><a href="javascript:void();">Julia Bello-Bravo</a> and <a href="javascript:void();">Barry Robert Pittendrigh</a> are co-director and director, respectively, of Scientific Animations Without Borders at the University of Illinois at Urbana-Champaign, United States.</p>
+</aside>
+
+Styleguide 4.6
+*/
+/* 4.7 Headline */
+/*
+Headline
+
+Main callout
+
+markup:
+<div class="headline wings">
+  <h1 class="title title--headline gutters">Scientific animation without borders</h1>
+  <em class="headline__tax"><span class="label">Taxonomy</span></em>
+</div>
+
+sg-wrapper:
+<div style="padding-top: 36px;">
+<sg-wrapper-content/>
+</div>
+
+Styleguide 4.7
+*/
+/*
+ * 1. Fallback
+ * 2. Set root for tag positioning
+ * 3. Hack to force to full width on Chrome
+ */
+.headline {
+  position: relative;
+  /* 2 */
+  width: 1%;
+  /* 3 */
+  min-width: 100%;
+  /* 3 */
+  padding-top: 42px;
+  padding-bottom: 15px;
+  background: #FFF;
+  /* 1 */
+  background: rgba(255, 255, 255, 0.8);
+  color: initial; }
+  .headline__tax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    background: #67AB43; }
+    .theme--blue .headline__tax {
+      background: #56C0DD; }
+    .headline__tax .theme--lime {
+      background-color: #C1D435; }
+    .theme--yellow .headline__tax {
+      background-color: #FACF21; }
+    .theme--gold .headline__tax {
+      background-color: #EB942C; }
+    .theme--orange .headline__tax {
+      background-color: #E26435; }
+    .theme--salmon .headline__tax {
+      background-color: #EB735D; }
+    .theme--red .headline__tax {
+      background-color: #EC2D10; }
+    .theme--burgundy .headline__tax {
+      background-color: #BA222A; }
+    .theme--purple .headline__tax {
+      background-color: #9B3381; }
+  .headline .posting__anchor {
+    margin-bottom: 0;
+    margin-top: 18px; }
+  .headline:hover .posting__anchor {
+    visibility: visible;
+    opacity: 1; }
+
+@media only screen and (min-width: 70em) {
+  .headline {
+    padding-left: 11.11111%;
+    padding-top: 90px;
+    padding-bottom: 54px; }
+    .headline__tax {
+      width: 100%;
+      padding-left: 11.11111%; } }
+
+/* 4.8 Posting */
+/*
+Posting
+
+@todo - extract posting__anchor into a new element: `read-more`
+
+Styleguide 4.8
+*/
+.posting {
+  position: relative; }
+  .posting__title {
+    margin: 6px 0; }
+  .posting__intro {
+    font-size: 0.83333em;
+    line-height: 18px; }
+  .posting__anchor {
+    display: block;
+    width: 100%;
+    margin-top: 9px;
+    margin-bottom: 18px;
+    text-decoration: none;
+    font-size: 0.66667em;
+    line-height: 1; }
+  .posting:hover .posting__anchor {
+    visibility: visible;
+    opacity: 1; }
+
+/*
+Posting - Hero item
+
+markup:
+<div class="posting posting--hero layout layout--even">
+  <div class="posting__image layout__cell gutters">
+    <img class="image image--stretch" width="899" height="506" alt="" src="/images/content/covers/mobile-banking.jpg" />
+  </div>
+  <div class="posting__content layout__cell gutters">
+    <em class="label">Africa</em>
+    <h3 class="title title--lead">Africa Leading the Way in Adoption of Mobile Banking</h3>
+    <p class="posting__intro">Services allowing consumers to perform banking and payment operations on their mobile phones are surging in sub-Saharan Africa, blazing a trail for the rest of the slower-moving world to follow.</p>
+    <a class="posting__anchor" href="javascript:void();">Read more</a>
+  </div>
+</div>
+
+Styleguide 4.8.1
+*/
+.posting--hero .title {
+  margin-top: 10.5px;
+  margin-bottom: 7.5px; }
+
+/*
+Posting - Tile
+
+markup:
+<div class="posting posting--tile">
+  <div class="posting__image layout__cell">
+    <img class="image image--stretch" width="899" height="506" alt="" src="/images/content/covers/mobile-banking.jpg" />
+  </div>
+  <div class="posting__content layout__cell">
+    <em class="label">Africa</em>
+    <h3 class="posting__title title">Africa Leading the Way in Adoption of Mobile Banking</h3>
+    <p class="posting__intro">Services allowing consumers to perform banking and payment operations on their mobile phones are surging in sub-Saharan Africa, blazing a trail for the rest of the slower-moving world to follow.</p>
+    <a class="posting__anchor" href="javascript:void();">Read more</a>
+  </div>
+</div>
+
+Styleguide 4.8.2
+*/
+.posting--tile {
+  position: relative; }
+
+.posting--tile .title {
+  padding-top: 7.5px;
+  padding-bottom: 4.5px; }
+
+.posting--tile .label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0; }
+
+/*
+Posting - Row
+
+markup:
+<div class="posting posting--row">
+  <div class="posting__image gutters">
+    <img class="image image--stretch" width="899" height="506" alt="" src="/images/content/covers/mobile-banking.jpg" />
+  </div>
+  <div class="posting__content gutters">
+    <h3 class="title">Africa Leading the Way in Adoption of Mobile Banking</h3>
+    <p class="posting__intro">Services allowing consumers to perform banking and payment operations on their mobile phones are surging in sub-Saharan Africa, blazing a trail for the rest of the slower-moving world to follow.</p>
+    <a class="posting__anchor" href="javascript:void();">Read more</a>
+  </div>
+</div>
+
+Styleguide 4.8.3
+*/
+.posting {
+  color: rgba(0, 0, 0, 0.76); }
+  .posting--row {
+    display: flex; }
+  .posting--row .posting__image {
+    flex: 1 0 25%; }
+  .posting--row .posting__content {
+    flex: 1 0 75%; }
+  .posting--row .title {
+    padding-bottom: 4.5px; }
+    .posting--row .title + p {
+      margin-top: 4.5px; }
+
+/* 4.9 Cover */
+/*
+Cover
+
+Full-bleed image with a vertically centered layover.
+
+markup:
+<figure class="cover hero is-crowned" style="background-image: url('http://farm9.staticflickr.com/8350/8246602118_7f6498e377_o.jpg');">
+  <img class="cover__image image image--stretch" alt="" src="http://farm9.staticflickr.com/8350/8246602118_7f6498e377_o.jpg}" />
+  <figcaption class="cover__layover">
+    <sg-insert>3.11</sg-insert>
+  </figcaption>
+</figure>
+
+Styleguide 4.9
+*/
+.cover {
+  position: relative;
+  background: no-repeat center;
+  background-size: cover;
+  max-height: 480px; }
+  .cover__image {
+    visibility: hidden; }
+
+@media only screen and (min-width: 28.88889em) {
+  .cover {
+    height: 100vh;
+    min-height: calc(100vh - 192px); }
+    .cover.is-crowned {
+      min-height: 100vh; }
+    .cover__layover {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      padding-top: 30px;
+      padding-bottom: 30px; }
+      .is-crowned .cover__layover {
+        top: calc(50% + 96px); } }
+
+/* 4.10 Sharing */
+/*
+Share
+
+.label.share - Share button
+.label.share.share--whisper - Subdued button
+.label.share.share--facebook - Facebook share button
+.label.share.share--twitter - Twitter share button
+.label.share.share--print - Print share button
+.label.share.share--email - Email share button
+
+markup:
+<a class="{$modifiers}" href="javascript:void();"><span class="icon icon--facebook">1<span><span class="is-narrative">Share on Facebook</span></a>
+
+Styleguide 4.10
+*/
+.share {
+  width: 36px;
+  padding: 0;
+  text-align: center;
+  line-height: 36px;
+  text-decoration: none; }
+  .share:hover {
+    color: #FFF; }
+  .share--whisper, .share-list--whisper .share {
+    opacity: .50; }
+  .share--whisper:hover, .share-list--whisper .share:hover {
+    opacity: 1; }
+  .share--facebook:hover {
+    background-color: #3B5998 !important; }
+  .share--twitter:hover {
+    background: #55ACEE; }
+  .share--print:hover, .share--email:hover {
+    background: rgba(0, 0, 0, 0.76); }
+
+/*
+Share List
+
+.share-list - Share list as used below content
+.share-list.share-list--whisper - Share list as used above content
+
+markup:
+<ul class="{$modifiers} reset list--float">
+  <li>
+    <a class="share share--facebook" href="javascript:void();"><span class="icon icon--facebook">1<span><span class="is-narrative">Share on Facebook</span></a>
+  </li>
+  <li>
+    <a class="share share--twitter" href="javascript:void();"><span class="icon icon--twitter">1<span><span class="is-narrative">Share on Twitter</span></a>
+  </li>
+  <li>
+    <a class="share share--print" href="javascript:void();"><span class="icon icon--print">1<span><span class="is-narrative">Print</span></a>
+  </li>
+  <li>
+    <a class="share share--email" href="javascript:void();"><span class="icon icon--email">1<span><span class="is-narrative">Send link via E-mail</span></a>
+  </li>
+</ul>
+
+Styleguide 4.10.1
+*/
+.share-list {
+  width: 100%;
+  background-color: #d7e9ce; }
+  .share-list li {
+    border: 1px solid #FFF;
+    border-width: 0 1px; }
+    .share-list li + li {
+      border-left: 0; }
+  .share-list--whisper {
+    width: auto;
+    background-color: transparent; }
+
+/* 4.x.x Post-row */
+/* 4.x.x Post-tile */
+/* 4.50 ICT Update */
+/*
+ICT Update
+
+Styleguide 4.50
+*/
+/* 4.50.1 ICT Update – Featured Issues */
+/*
+ICT Update – Featured Issues
+
+markup:
+<section class="grid grid--stories">
+<!-- Current Issue -->
+  <article class="grid__cell grid grid--stories posting">
+    <figure class="grid__cell gutters">
+      <img class="image image--stretch" alt="Issue 82" src="/images/content/ict-update/issue-covers/issue-82.png">
+      <a class="button button--stretch leader trailer" href="javascript:void();">See all issues</a>
+    </figure>
+    <div class="grid__cell gutters">
+      <div class="issue-label issue-label--inline issue-label--l body--meta" data-issue="82">
+        <strong>Issue 82</strong><span> April 2016</span>
+      </div>
+      <h3 class="title title--lead title--section">Drones for Agriculture</h3>
+      <p class="posting__intro">Morbi vitae est a sapien euismod suscipit. In tempus sed felis a congue. Duis hendrerit, sapien id pellentesque blandit, lectus velit ultricies ex, eu eleifend nisi turpis sit amet arcu. Aenean luctus lacus egestas, laoreet nisi quis, egestas est. Proin eleifend sollicitudin tortor sit amet malesuada. Aenean nec nulla sapien. Integer sed metus et ipsum tincidunt consectetur a eu lectus.</p>
+    </div>
+  </article>
+  <!-- Issue List -->
+  <div class="grid__cell">
+    <ul class="reset grid grid--issues">
+    <li class="grid__cell trailer--tiny gutters">
+        <figure class="issue-label" data-issue="81">
+          <img class="image image--stretch" alt="Issue 81" src="/images/content/ict-update/issue-covers/issue-81.png">
+          <figcaption class="body--meta body--whisper"><strong>Issue 81</strong> April 2016</figcaption>
+        </figure>
+      </li>
+      <li class="grid__cell trailer--tiny gutters">
+        <figure class="issue-label" data-issue="80">
+          <img class="image image--stretch" alt="Issue 80" src="/images/content/ict-update/issue-covers/issue-80.png">
+          <figcaption class="body--meta body--whisper"><strong>Issue 80</strong> April 2016</figcaption>
+        </figure>
+      </li>
+      <li class="grid__cell trailer--tiny gutters">
+        <figure class="issue-label" data-issue="79">
+          <img class="image image--stretch" alt="Issue 79" src="/images/content/ict-update/issue-covers/issue-79.png">
+          <figcaption class="body--meta body--whisper"><strong>Issue 79</strong> April 2016</figcaption>
+        </figure>
+      </li>
+      <li class="grid__cell trailer--tiny gutters">
+        <figure class="issue-label" data-issue="78">
+          <img class="image image--stretch" alt="Issue 78" src="/images/content/ict-update/issue-covers/issue-78.png">
+          <figcaption class="body--meta body--whisper"><strong>Issue 78</strong> April 2016</figcaption>
+        </figure>
+      </li>
+      <li class="grid__cell trailer--tiny gutters">
+        <figure class="issue-label" data-issue="77">
+          <img class="image image--stretch" alt="Issue 77" src="/images/content/ict-update/issue-covers/issue-77.png">
+          <figcaption class="body--meta body--whisper"><strong>Issue 77</strong> April 2016</figcaption>
+        </figure>
+      </li>
+      <li class="grid__cell trailer--tiny gutters">
+        <figure class="issue-label" data-issue="76">
+          <img class="image image--stretch" alt="Issue 76" src="/images/content/ict-update/issue-covers/issue-76.png">
+          <figcaption class="body--meta body--whisper"><strong>Issue 76</strong> April 2016</figcaption>
+        </figure>
+      </li>
+    </ul>
+  </div>
+</section>
+
+Styleguide 4.50.1
+*/
+/* 4.50.2 ICT Update – Posting */
+/*
+Posting Issue - Issue Row
+
+ICT Update has a slightly different markup than a regular row posting to accommodate the posting top border.
+
+.posting.posting--issue.posting--row - Row posting for issues
+
+markup:
+<div class="{$modifiers}">
+  <div class="posting__image gutter">
+    <img class="image image--stretch" width="899" height="506" alt="" src="/images/content/covers/voip-in-field.jpg" />
+  </div>
+  <div class="posting__content media">
+    <div class="media__stretcher">
+      <h3 class="title">Africa Leading the Way in Adoption of Mobile Banking</h3>
+      <p class="posting__intro">Services allowing consumers to perform banking and payment operations on their mobile phones are surging in sub-Saharan Africa, blazing a trail for the rest of the slower-moving world to follow.</p>
+      <a class="posting__anchor" href="javascript:void();">Read more</a>
+    </div>
+    <div class="media__stretcher">
+      <div class="issue-label issue-label--s media">
+        <div class="issue-label__caption">
+          <span>September 2016</span>
+        </div>
+        <div class="issue-label__nr" data-issue-nr="83"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+Styleguide 4.50.2
+*/
+.posting--row.posting--issue .posting__image, .posting--row.posting--issue .posting__content {
+  padding-top: 3px;
+  border-top: 1px solid #67AB43; }
+  .posting--row.posting--issue .posting__image .issue-label, .posting--row.posting--issue .posting__content .issue-label {
+    position: relative;
+    top: -3px; }
+    .posting--row.posting--issue .posting__image .issue-label, .posting--row.posting--issue .posting__image .issue-label:after, .posting--row.posting--issue .posting__content .issue-label, .posting--row.posting--issue .posting__content .issue-label:after {
+      margin-left: 15px; }
+
+.posting__image.gutters, .posting__content.gutters {
+  padding-right: 30px;
+  padding-left: 0; }
+
+.posting.posting--row.posting--issue .issue-label {
+  position: relative;
+  top: -3px;
+  white-space: nowrap; }
+
+/* 4.50.3 ICT Update – Issue */
+/*
+ICT Update – Issue
+
+**@TODO - Breakpoint tweaks**
+
+Uses the issue-label. The Issue label can be placed above or below the cover image. Use trailer/leader for extra spacing.
+
+The squared issue label is not part of the semantics of the HTML and is rendered through the data-issue attribute.
+
+.issue - Issue
+.issue.issue--s - Issue, smaller
+
+markup:
+<figure class="{$modifiers}">
+  <img class="issue__cover" alt="Issue 82" src="/images/content/ict-update/issue-covers/issue-82.png">
+  <figcaption class="issue-label issue-label--s media leader--tiny">
+    <div class="issue-label__nr" data-issue-nr="80"></div>
+    <div class="issue-label__caption">
+      <p>
+        <strong>More than Mobile</strong><br/>
+        <span>Issue 80 August 2015</span>
+      </p>
+    </div>
+  </figcaption>
+</figure>
+
+Styleguide 4.50.3
+*/
+.issue__cover {
+  display: block;
+  max-width: 100%; }
+
+.issue--s .issue__cover {
+  width: 120px; }
+
+/* 5. */
+/*
+Modules
+
+Styleguide 5.0
+*/
+/* 5.1 Masthead */
+/*
+Masthead
+
+.masthead - Site header, includes navigation and search
+
+markup:
+<header class="{$modifiers}">
+  <sg-insert>4.2-1</sg-insert>
+  <sg-insert>4.3-2</sg-insert>
+</header>
+
+Styleguide 5.1
+*/
+.masthead {
+  position: relative;
+  max-width: 100%;
+  z-index: 1; }
+
+/*
+Masthead – ICT Update
+
+.masthead - Site header, includes navigation and search
+
+markup:
+<header class="{$modifiers}">
+  <sg-insert>4.2-1</sg-insert>
+  <sg-insert>4.3.1-2</sg-insert>
+</header>
+
+Styleguide 5.1.1
+*/
+/* 5.2 Site-footer */
+/* 5.3 Post */
+/*
+Post
+
+Styleguide 5.3
+*/
+/* 5.3.1 Header */
+/*
+Post Header
+
+photo-1464684979825-ad6f2811cef2 - 3
+photo-1452434351106-e02e34831841 - 4
+uploads/1412066791276cfd18da0/7a2fd8ac - 6
+photo-1441307811206-a12c74889338 - 5
+photo-1464087133576-4885b67263c6 - 0
+photo-1416432969026-7e41a751ee1e - 1
+photo-1445445166560-e1df5758c4f9 - 2
+
+markup:
+<header class="post-header is-crowned">
+  <img
+  class="image image--stretch"
+  sizes="(max-width: 500w) 500w, 1024w,1480w"
+  srcset="https://images.unsplash.com/{$modifiers}?q=80&crop=entropy&w=630&h=480&fit=crop 320w,
+          https://images.unsplash.com/{$modifiers}?q=80&crop=entropy&w=1920&h=600&fit=crop 1480w"
+  alt="…">
+  <div class="post-header__title layout layout--reverse">
+    <div class="layout__cell layout__cell--aside wings">
+      <p class="post-header__about gutters">Standfirst</p>
+    </div>
+    <div class="layout__cell gutters">
+      <h1 class="post-header__headline title title--headline">SCIENTIFIC ANIMATIONS WITHOUT BORDERS</h1>
+      <p class="post-header__author">By John Doe</p>
+    </div>
+  </div>
+</header>
+
+Styleguide 5.3.1
+*/
+/*
+ * 1. Pull up (under navigation)
+ */
+.post-header__author {
+  font-size: 0.8em;
+  margin-top: 18px;
+  margin-bottom: 18px; }
+
+.post-header {
+  margin-bottom: 30px;
+  background: #67AB43;
+  color: #FFF; }
+  .theme--blue .post-header {
+    background-color: #56C0DD; }
+  .theme--lime .post-header {
+    background-color: #C1D435; }
+  .theme--yellow .post-header {
+    background-color: #FACF21; }
+  .theme--gold .post-header {
+    background-color: #EB942C; }
+  .theme--orange .post-header {
+    background-color: #E26435; }
+  .theme--salmon .post-header {
+    background-color: #EB735D; }
+  .theme--red .post-header {
+    background-color: #EC2D10; }
+  .theme--burgundy .post-header {
+    background-color: #BA222A; }
+  .theme--purple .post-header {
+    background-color: #9B3381; }
+  .post-header__title {
+    padding: 66px 0 48px 0; }
+  .post-header__about {
+    font-size: 0.8em; }
+
+.image {
+  display: block; }
+  .image--stretch {
+    width: 100%;
+    height: auto; }
+
+/* 5.3.2 Body */
+/*
+Post Body
+
+markup:
+<div class="layout">
+  <div class="layout__cell layout__cell--aside wings">
+    <sg-insert>4.6-1</sg-insert>
+  </div>
+  <div class="layout__cell gutters  post-body">
+    <sg-insert>3.9-1</sg-insert>
+    <p class="body--lead">Drone technology could help farmers around the world monitor their crops, fend off pests, improve land tenure, and more. But to realise its full potential, regulatory regimes are necessary, while keeping citizens’ safety and privacy rights secure.</p>
+    <p>Three years ago, the average person had no idea wh|at a drone was – o|r associated these flying machines with weapons of warfare. Things have changed. Now, unmanned aerial vehicles, or UAVs (also known as drones) have become one of the world’s most publicised and intriguing technologies, used by people in a wide range of professions, from journalism to humanitarian aid work.</p>
+    <p>Farmers have always needed accurate and up-to-date information on the health of their crops and the environmental condition of the land. Agricultural aircraft have been in use since the 1920s, while agricultural experts increasingly use satellites to assess crop health from the sky. UAVs are a natural progression from macro to micro, from large-scale to small-scale farms.</p>
+    <p>While UAVs are unlikely to entirely replace manned aircraft or satellites, they have a number of advantages over these more traditional remote-sensing methods. The technology is capable of collecting very high-resolution imagery below the cloud level, with much more detail than the satellite imagery usually available to developing country analysts. They are easy to use: most drone mapping and data-collection missions are now conducted autonomously, meaning that the drone essentially flies itself, while drone data processing tools are becoming less expensive and easier to use.</p>
+    <p>Perhaps most importantly, drones are inexpensive. In 2016 it is possible to purchase a useful mapping UAV for less than $1,000. And surprisingly powerful mapping drones can be built at home for even less. While processing software can be expensive, open-source and lower cost options exist. Thanks to these low barriers to entry, UAVs are expected to provide significant help to farmers in developing countries, who historically have found it harder to access aerial imagery, either from manned aircraft or from satellites.</p>
+  </div>
+  <div class="layout__cell layout__cell--aside wings">
+  Right
+  </div>
+</div>
+
+Styleguide 5.3.2
+*/
+.post-body p {
+  margin: 30px 0; }
+
+/* 5.3.3 List */
+/*
+Post List - Rows
+
+markup:
+<div class="wings">
+  <ul class="reset grid grid--stories">
+    <li class="grid__cell gutters">
+      <sg-insert>4.8.3-1</sg-insert>
+    </li>
+    <li class="grid__cell gutters">
+      <sg-insert>4.8.3-1</sg-insert>
+    </li>
+    <li class="grid__cell gutters">
+      <sg-insert>4.8.3-1</sg-insert>
+    </li>
+    <li class="grid__cell gutters">
+      <sg-insert>4.8.3-1</sg-insert>
+    </li>
+  </ul>
+</div>
+
+Styleguide 5.3.3
+*/
+/* 5.4 Hero */
+/*
+Hero
+
+.hero - Hero cover
+.hero.is-crowned - Pulls the cover underneath the masthead
+
+markup:
+<a class="anchor anchor--shy" href="javascript:void();">
+<figure class="{$modifiers}" style="background-image: url('images/content/covers/mtn-booth.jpg');">
+  <img class="image image--stretch" width="899" height="506" alt="" src="/images/content/covers/mtn-booth.jpg" />
+  <figcaption class="hero__headline">
+    <sg-insert>4.7-1</sg-insert>
+  </figcaption>
+</figure>
+</a>
+
+Styleguide 5.4
+*/
+.hero {
+  position: relative;
+  background: no-repeat center;
+  background-size: cover;
+  max-height: 480px; }
+  .hero > img {
+    visibility: hidden; }
+
+@media only screen and (min-width: 28.88889em) {
+  .hero {
+    height: 100vh;
+    min-height: calc(100vh - 192px); }
+    .hero.is-crowned {
+      min-height: 100vh; }
+    .hero__headline {
+      position: absolute;
+      top: 50%;
+      width: 50%;
+      transform: translateY(-50%); }
+      .is-crowned .hero__headline {
+        top: calc(50% + 96px); } }
+
+/* 5.5 Channels */
+/*
+Channels
+
+markup:
+<section class="grid grid--channels">
+  <section class="grid__cell">
+    <ul class="reset">
+      <li>
+        <a class="posting posting--row anchor anchor--shy" href="javascript:void()">
+          <article class="posting__content gutters">
+            <h3 class="title">Africa Leading the Way in Adoption of Mobile Banking</h3>
+            <span class="posting__anchor anchor">Read more</span>
+          </article>
+        </a>
+      </li>
+      <li>
+        <a class="posting posting--row anchor anchor--shy" href="javascript:void()">
+          <article class="posting__content gutters">
+            <h3 class="title">Africa Leading the Way in Adoption of Mobile Banking</h3>
+            <span class="posting__anchor anchor">Read more</span>
+          </article>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <section class="grid__cell">
+    <ul class="reset">
+      <li>
+        <a class="posting posting--row anchor anchor--shy" href="javascript:void()">
+          <article class="posting__content gutters">
+            <h3 class="title">Africa Leading the Way in Adoption of Mobile Banking</h3>
+            <span class="posting__anchor anchor">Read more</span>
+          </article>
+        </a>
+      </li>
+      <li>
+        <a class="posting posting--row anchor anchor--shy" href="javascript:void()">
+          <article class="posting__content gutters">
+            <h3 class="title">Africa Leading the Way in Adoption of Mobile Banking</h3>
+            <span class="posting__anchor anchor">Read more</span>
+          </article>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <section class="grid__cell">
+    <ul class="reset">
+      <li>
+        <a class="posting posting--row anchor anchor--shy" href="javascript:void()">
+          <article class="posting__content gutters">
+            <h3 class="title">Africa Leading the Way in Adoption of Mobile Banking</h3>
+            <span class="posting__anchor anchor">Read more</span>
+          </article>
+        </a>
+      </li>
+      <li>
+        <a class="posting posting--row anchor anchor--shy" href="javascript:void()">
+          <article class="posting__content gutters">
+            <h3 class="title">Africa Leading the Way in Adoption of Mobile Banking</h3>
+            <span class="posting__anchor anchor">Read more</span>
+          </article>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <section class="grid__cell">
+    <ul class="reset">
+      <li>
+        <a class="posting posting--row anchor anchor--shy" href="javascript:void()">
+          <article class="posting__content gutters">
+            <h3 class="title">Africa Leading the Way in Adoption of Mobile Banking</h3>
+            <span class="posting__anchor anchor">Read more</span>
+          </article>
+        </a>
+      </li>
+      <li>
+        <a class="posting posting--row anchor anchor--shy" href="javascript:void()">
+          <article class="posting__content gutters">
+            <h3 class="title">Africa Leading the Way in Adoption of Mobile Banking</h3>
+            <span class="posting__anchor anchor">Read more</span>
+          </article>
+        </a>
+      </li>
+    </ul>
+</section>
+
+Styleguide 5.5
+*/
+/* 5.x.x ICT Update Article */
+/* 5.x Cover */
+/* 5.x Title */
+/* 5.50 ICT Update */
+/*
+ICT Update
+
+Styleguide 5.50
+*/
+/* 5.50.1 Issue */
+/*
+ICT Update – Featured posts
+
+markup:
+<section class="layout">
+  <div class="layout__cell layout__cell--aside  layout__cell--divider">
+    <aside class="wings">
+      <div class="gutters">
+        <div class="issue-label issue-label--offset-top issue-label--l media">
+          <div class="issue-label__nr" data-issue-nr="82"></div>
+        </div>
+        <p class="body--meta trailer--tiny  issue-label issue-label--l issue-label--float leader-inside--hero" data-issue="82"><strong>Issue 82</strong> April 2016</p>
+        <h1 class="title title--hero">Drones for Agriculture</h1>
+        <h2 class="title title--lead title--section">Also in this issue</h2>
+        <sg-insert>4.8.2</sg-insert>
+        <sg-insert>4.8.2</sg-insert>
+      </div>
+    </aside>
+  </div>
+  <div class="layout__cell wing--right leader-inside--hero">
+    <sg-insert>4.8.1</sg-insert>
+    <div class="grid grid--channels leader">
+      <div class="grid__cell gutters">
+        <sg-insert>4.8.2</sg-insert>
+      </div>
+      <div class="grid__cell gutters">
+        <sg-insert>4.8.2</sg-insert>
+      </div>
+      <div class="grid__cell gutters">
+        <sg-insert>4.8.2</sg-insert>
+      </div>
+      <div class="grid__cell gutters">
+        <sg-insert>4.8.2</sg-insert>
+      </div>
+    </div>
+  </div>
+</section>
+
+Styleguide 5.50.1
+*/
+/* 5.50.2 Issues */
+/*
+ICT Update – Featured posts
+
+markup:
+<section class="layout">
+  <div class="layout__cell layout__cell--aside  layout__cell--divider">
+    <aside class="wings">
+      <div class="gutters">
+        <div class="issue-label issue-label--offset-top issue-label--l media">
+          <div class="issue-label__nr" data-issue-nr="82"></div>
+        </div>
+        <p class="body--meta trailer--tiny  issue-label issue-label--l issue-label--float leader-inside--hero" data-issue="82"><strong>Issue 82</strong> April 2016</p>
+        <h1 class="title title--hero">Drones for Agriculture</h1>
+        <h2 class="title title--lead title--section">Also in this issue</h2>
+        <sg-insert>4.8.2</sg-insert>
+        <sg-insert>4.8.2</sg-insert>
+      </div>
+    </aside>
+  </div>
+  <div class="layout__cell wing--right leader-inside--hero">
+    <sg-insert>4.8.1</sg-insert>
+    <div class="grid grid--channels leader">
+      <div class="grid__cell gutters">
+        <sg-insert>4.8.2</sg-insert>
+      </div>
+      <div class="grid__cell gutters">
+        <sg-insert>4.8.2</sg-insert>
+      </div>
+      <div class="grid__cell gutters">
+        <sg-insert>4.8.2</sg-insert>
+      </div>
+      <div class="grid__cell gutters">
+        <sg-insert>4.8.2</sg-insert>
+      </div>
+    </div>
+  </div>
+</section>
+
+Styleguide 5.50.1
+*/
+/* 5.50.3 Post */
+/*
+ICT Update – Post
+
+Styleguide 5.50.3
+*/
+/* 5.50.3.1 Header */
+/*
+Post Header
+
+photo-1464684979825-ad6f2811cef2 - 3
+
+markup:
+<header class="post-header is-crowned">
+  <img
+  class="image image--stretch"
+  sizes="(max-width: 500w) 500w, 1024w,1480w"
+  srcset="https://images.unsplash.com/{$modifiers}?q=80&crop=entropy&w=630&h=480&fit=crop 320w,
+          https://images.unsplash.com/{$modifiers}?q=80&crop=entropy&w=1920&h=600&fit=crop 1480w"
+  alt="…">
+  <div class="post-header__title layout layout--align-middle layout--reverse">
+    <div class="layout__cell layout__cell--aside wings">
+      <div class="post-header__about gutters">
+        <sg-insert>4.50.3-2</sg-insert>
+      </div>
+    </div>
+    <div class="layout__cell gutters">
+      <h1 class="post-header__headline title title--headline">SCIENTIFIC ANIMATIONS WITHOUT BORDERS</h1>
+      <p class="post-header__author">By John Doe</p>
+    </div>
+  </div>
+</header>
+
+Styleguide 5.50.3.1
+*/
+/* 5.x.x Issues 1 */
+/* 5.x.x Issues 2 */
+/* 6. */
+/*
+Templates
+
+Styleguide 7.0
+*/
+/* 7.1 Project/Campaign */
+/* 7.2 Theme/Channel */
+/* 7. */
+/*
+Pages
+
+Styleguide 6.0
+*/
+/* 6.1 */
+/*
+Frontpage
+
+This page is exclusively for the use as CTA.int's frontpage
+
+markup:
+<sg-insert>5.1-1</sg-insert>
+<sg-insert>5.4-1</sg-insert>
+
+Styleguide 6.1
+*/
+/* 6.3 Post */
+/*
+Post
+
+This page is exclusively for the use as CTA.int's frontpage
+
+markup:
+<sg-insert>5.1-1</sg-insert>
+<sg-insert>5.4-1</sg-insert>
+<sg-insert>5.50.1-1</sg-insert>
+<sg-insert>5.3.1-1</sg-insert>
+<sg-insert>5.3.2-1</sg-insert>
+
+Styleguide 6.2
+*/
+/* 6.2 Publications */
+/* 6.3 Resources */
+/* 6.4 Events */
+/* 6.5 Blog */
+/* 6.6 News */
+/* 6.7 Press
+
+/* 6.8 CTA */
+/* 6.8.1 About CTA */
+/* 6.8.2 Contact CTA */
+/* 6.8.3 Workin with CTA */
+/* 6.50 ICT Update */
+/*
+ICT Update
+
+Styleguide 6.50
+*/
+/* 6.50.1 ICT Update */
+/*
+ICT Update – Issue
+
+This page is exclusively for the use as CTA.int's frontpage
+
+markup:
+<sg-insert>5.1-1</sg-insert>
+<sg-insert>5.4-1</sg-insert>
+<sg-insert>5.50.1-1</sg-insert>
+<section class="layout">
+  <aside class="layout__cell layout__cell--aside well well--divider wings">
+    <div class="gutters">
+    <sg-insert>3.9.1-1</sg-insert>
+    <a class="button button--stretch leader trailer" href="javascript:void();">See all categories</a>
+    </div>
+  </aside>
+  <div class="layout__cell wing--right well">
+    <sg-insert>4.50.1-1</sg-insert>
+  </div>
+</section>
+
+Styleguide 6.50.1
+*/

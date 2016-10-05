@@ -1,0 +1,18 @@
+// Copyright (C) 2014 Babs Gösgens. Licensed under MIT; see LICENSE.txt
+
+
+///
+/// The unit to which to-unit() will convert px values. Used in various functions and mixins.
+///
+/// @since 0.1
+///
+/// @type {Number}
+///
+
+$unit: 1em;
+
+$line-height-unit: 1%;
+
+$border-radius: 0;
+
+$border-width: 2px;

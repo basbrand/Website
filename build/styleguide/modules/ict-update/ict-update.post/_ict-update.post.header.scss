@@ -1,0 +1,28 @@
+/*
+Post Header
+
+photo-1464684979825-ad6f2811cef2 - 3
+
+markup:
+<header class="post-header is-crowned">
+  <img
+  class="image image--stretch"
+  sizes="(max-width: 500w) 500w, 1024w,1480w"
+  srcset="https://images.unsplash.com/{$modifiers}?q=80&crop=entropy&w=630&h=480&fit=crop 320w,
+          https://images.unsplash.com/{$modifiers}?q=80&crop=entropy&w=1920&h=600&fit=crop 1480w"
+  alt="…">
+  <div class="post-header__title layout layout--align-middle layout--reverse">
+    <div class="layout__cell layout__cell--aside wings">
+      <div class="post-header__about gutters">
+        <sg-insert>4.50.3-2</sg-insert>
+      </div>
+    </div>
+    <div class="layout__cell gutters">
+      <h1 class="post-header__headline title title--headline">SCIENTIFIC ANIMATIONS WITHOUT BORDERS</h1>
+      <p class="post-header__author">By John Doe</p>
+    </div>
+  </div>
+</header>
+
+Styleguide 5.50.3.1
+*/

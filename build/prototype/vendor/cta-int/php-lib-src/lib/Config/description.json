@@ -1,0 +1,201 @@
+{
+  "baseUrl": "http://sharedcontent.cta.int/",
+  "operations": {
+    "getEvents": {
+      "httpMethod": "GET",
+      "uri": "/events",
+      "responseModel": "json",
+      "parameters": {
+        "language": {
+          "location": "query",
+          "type": "string"
+        },
+        "format": {
+          "location": "query",
+          "type": "string",
+          "default": "scr"
+        },
+        "limit": {
+          "location": "query",
+          "type": "number",
+          "default": 100
+        },
+        "skip": {
+          "location": "query",
+          "type": "number"
+        },
+        "upcoming": {
+          "location": "query",
+          "type": "boolean",
+          "default": false
+        },
+        "includeCancelled": {
+          "location": "query",
+          "type": "boolean",
+          "default": false
+        },
+        "start": {
+          "location": "query",
+          "type": "date"
+        },
+        "end": {
+          "location": "query",
+          "type": "date"
+        },
+        "timezoneOffset": {
+          "location": "query",
+          "type": "number"
+        }
+      }
+    },
+    "getEvent": {
+      "httpMethod": "GET",
+      "uri": "/events/{eventId}",
+      "responseModel": "json",
+      "parameters": {
+        "eventId": {
+          "location": "uri",
+          "type": "string",
+          "required": true
+        },
+        "language": {
+          "location": "query",
+          "type": "string"
+        },
+        "format": {
+          "location": "query",
+          "type": "string",
+          "default": "scr"
+        }
+      }
+    },
+    "listEventAttendees": {
+      "httpMethod": "GET",
+      "uri": "/events/{eventId}/attendees",
+      "responseModel": "json",
+      "parameters": {
+        "eventId": {
+          "location": "uri",
+          "type": "string",
+          "required": true
+        },
+        "limit": {
+          "location": "query",
+          "type": "number",
+          "default": 100
+        },
+        "skip": {
+          "location": "query",
+          "type": "number"
+        }
+      }
+    },
+    "getEventsWithPublishStatus": {
+      "httpMethod": "GET",
+      "uri": "/events/publishStatus/{status}",
+      "responseModel": "json",
+      "parameters": {
+        "status": {
+          "location": "uri",
+          "type": "string",
+          "default": "all",
+          "required": true
+        },
+        "limit": {
+          "location": "query",
+          "type": "number",
+          "default": 100
+        },
+        "skip": {
+          "location": "query",
+          "type": "number"
+        },
+        "start": {
+          "location": "query",
+          "type": "date"
+        },
+        "end": {
+          "location": "query",
+          "type": "date"
+        },
+        "timezoneOffset": {
+          "location": "query",
+          "type": "number"
+        }
+      }
+    },
+    "getRelatedEvents": {
+      "httpMethod": "GET",
+      "uri": "/events/{eventId}/related/events",
+      "responseModel": "json",
+      "parameters": {
+        "eventId": {
+          "location": "uri",
+          "type": "string",
+          "required": true
+        },
+        "language": {
+          "location": "query",
+          "type": "string"
+        },
+        "limit": {
+          "location": "query",
+          "type": "number",
+          "default": 100
+        },
+        "skip": {
+          "location": "query",
+          "type": "number"
+        },
+        "explain": {
+          "location": "query",
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "getRelatedArticles": {
+      "httpMethod": "GET",
+      "uri": "/events/{eventId}/related/articles",
+      "responseModel": "json",
+      "parameters": {
+        "eventId": {
+          "location": "uri",
+          "type": "string",
+          "required": true
+        },
+        "bookmarked": {
+          "location": "query",
+          "type": "boolean",
+          "default": false
+        },
+        "explain": {
+          "location": "query",
+          "type": "boolean",
+          "default": false
+        },
+        "language": {
+          "location": "query",
+          "type": "string"
+        },
+        "limit": {
+          "location": "query",
+          "type": "number",
+          "default": 100
+        },
+        "skip": {
+          "location": "query",
+          "type": "number"
+        }
+      }
+    }
+  },
+  "models": {
+    "json": {
+      "type": "object",
+      "additionalProperties": {
+        "location": "json"
+      }
+    }
+  }
+}

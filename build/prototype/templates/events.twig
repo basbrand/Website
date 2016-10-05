@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% embed "partials/head.twig" with { title: 'Events', locale: locale } %}
+  {% endembed %}
+
+  <body class="theme--blue">
+    {% embed "partials/masthead.twig" with { locale: locale } %}
+    {% endembed %}
+
+    <div class="is-crowned">
+    {% embed "partials/event/hero.twig" with {item: featured, locale: locale} only %}
+    {% endembed %}
+    </div>
+
+    <div class="layout layout--reverse">
+      <div class="layout__cell layout__cell--aside layout__cell--divider wings trailer-inside">
+        <h1 class="title title--headline title--section"><span class="gutters">Events</span></h1>
+        <h2 class="title title--lead title--section gutters">Upcoming events</h2>
+        <ul class="reset">
+          {% for item in items | slice(4, 5) %}
+            <li class="gutters">
+              <a class=" posting posting--row posting--event-row anchor anchor--shy is-heir" href="{{ route('event', {id: item._id}) }}">
+                <span class="date" style="margin-right: 1em;">
+                  <span class="date__head">{{ item.startDate | date("M") }}</span>
+                  <span class="date__body">{{ item.startDate | date("d") }}</span>
+                </span>
+                <div class="posting__content gutter-left">
+                  <h3 class="title">{{ item.name }}</h3>
+                  <p class="posting__intro">{{ item.startDate | date("F jS Y \\a\\t g:ia") }}</p>
+                  <p class="posting__intro">{{ item.location.name }}</p>
+                  <span class="posting__anchor anchor">Read more</span>
+                </div>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+
+        <a class="body--meta gutters anchor--shy" href="javascript:void();">Event calendar</a>
+
+      </div>
+
+      <div class="layout__cell wing--right">
+
+        <!-- Jasper: hier de artikelen van channel 8c713f30-eab9-4042-8761-e286bfa4445c -->
+
+        {% for item in items | slice(1,1) %}
+        <a class="anchor anchor--shy" href="{{ route('event', {id: item._id}) }}">
+          <article class="posting posting--hero layout layout--even leader trailer" data-anchor="{{ route('event', {id: item._id}) }}">
+            {% if item.image %}
+              <figure class="posting__image layout__cell gutters">
+                <img
+                class="image image--stretch"
+                sizes="(max-width: 500w) 500w, 1024w,1480w"
+                srcset="{{ resize(item.image, 600, 400) }} 320w,
+                      {{ resize(item.image, 600, 400) }} 1480w"
+                alt="…">
+              </figure>
+            {% endif %}
+            <div class="posting__content layout__cell gutters">
+              <span class="date" style="margin-right: 1em;">
+                <span class="date__head">{{ item.startDate | date("M") }}</span>
+                <span class="date__body">{{ item.startDate | date("d") }}</span>
+              </span>
+              <h3 class="title title--lead">{{ item.name }}</h3>
+              <div class="posting__intro">{{ item.description | raw }}</div>
+              <span class="posting__anchor anchor">Read more</span>
+            </div>
+          </article>
+        </a>
+        {% endfor %}
+
+
+        <div class="grid grid--channels">
+
+          {% for item in items | slice(2,3) %}
+          <a class="grid__cell  anchor anchor--shy" href="{{ route('event', {id: item._id}) }}">
+            <article class="posting posting--tile gutters">
+              {% if item.image %}
+                <figure class="posting__image layout__cell">
+                  <img
+                  class="image image--stretch"
+                  sizes="(max-width: 500w) 500w, 1024w,1480w"
+                  srcset="{{ resize(item.image, 600, 400) }} 320w,
+                        {{ resize(item.image, 600, 400) }} 1480w"
+                  alt="…">
+                </figure>
+              {% endif %}
+              <div class="posting__content layout__cell leader-inside--tiny">
+                <span class="date" style="margin-right: 1em;">
+                  <span class="date__head">{{ item.startDate | date("M") }}</span>
+                  <span class="date__body">{{ item.startDate | date("d") }}</span>
+                </span>
+                <h3 class="posting__title title">{{ item.name }}</h3>
+                <div class="posting__intro">{{ item.description[0:200] | raw }}</div>
+                <span class="posting__anchor anchor">Read more</span>
+              </div>
+            </article>
+          </a>
+          {% endfor %}
+
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="grid grid--channels wings well">
+
+          <section class="grid__cell gutters">
+            <h2 class="title title--section title--lead" style="margin-bottom: 2em;">Events – Africa</h2>
+            <ul class="reset">
+              {% for item in items | slice(8, 4) %}
+                <li>
+                  <a class=" posting posting--row posting--event-row anchor anchor--shy is-heir" href="{{ route('event', {id: item._id}) }}">
+                    <span class="date" style="margin-right: 1em;">
+                      <span class="date__head">{{ item.startDate | date("M") }}</span>
+                      <span class="date__body">{{ item.startDate | date("d") }}</span>
+                    </span>
+                    <div class="posting__content gutter-left">
+                      <h3 class="title">{{ item.name }}</h3>
+                      <p class="posting__intro">{{ item.startDate | date("F jS Y \\a\\t g:ia") }}</p>
+                      <p class="posting__intro">{{ item.location.name }}</p>
+                      <span class="posting__anchor anchor">Read more</span>
+                    </div>
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </section>
+
+          <section class="grid__cell gutters">
+            <h2 class="title title--section title--lead" style="margin-bottom: 2em;">Events – Carribean</h2>
+            <ul class="reset">
+              {% for item in items | slice(12, 4) %}
+                <li>
+                  <a class=" posting posting--row posting--event-row anchor anchor--shy is-heir" href="{{ route('event', {id: item._id}) }}">
+                    <span class="date" style="margin-right: 1em;">
+                      <span class="date__head">{{ item.startDate | date("M") }}</span>
+                      <span class="date__body">{{ item.startDate | date("d") }}</span>
+                    </span>
+                    <div class="posting__content gutter-left">
+                      <h3 class="title">{{ item.name }}</h3>
+                      <p class="posting__intro">{{ item.startDate | date("F jS Y \\a\\t g:ia") }}</p>
+                      <p class="posting__intro">{{ item.location.name }}</p>
+                      <span class="posting__anchor anchor">Read more</span>
+                    </div>
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </section>
+
+          <section class="grid__cell gutters">
+            <h2 class="title title--section title--lead" style="margin-bottom: 2em;">Events – Pacific</h2>
+            <ul class="reset">
+              {% for item in items | slice(16, 4) %}
+                <li>
+                  <a class=" posting posting--row posting--event-row anchor anchor--shy is-heir" href="{{ route('event', {id: item._id}) }}">
+                    <span class="date" style="margin-right: 1em;">
+                      <span class="date__head">{{ item.startDate | date("M") }}</span>
+                      <span class="date__body">{{ item.startDate | date("d") }}</span>
+                    </span>
+                    <div class="posting__content gutter-left">
+                      <h3 class="title">{{ item.name }}</h3>
+                      <p class="posting__intro">{{ item.startDate | date("F jS Y \\a\\t g:ia") }}</p>
+                      <p class="posting__intro">{{ item.location.name }}</p>
+                      <span class="posting__anchor anchor">Read more</span>
+                    </div>
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </section>
+
+          <section class="grid__cell gutters">
+            <h2 class="title title--section title--lead" style="margin-bottom: 2em;">Events – Europe</h2>
+            <ul class="reset">
+              {% for item in items | slice(20, 4) %}
+                <li>
+                  <a class=" posting posting--row posting--event-row anchor anchor--shy is-heir" href="{{ route('event', {id: item._id}) }}">
+                    <span class="date" style="margin-right: 1em;">
+                      <span class="date__head">{{ item.startDate | date("M") }}</span>
+                      <span class="date__body">{{ item.startDate | date("d") }}</span>
+                    </span>
+                    <div class="posting__content gutter-left">
+                      <h3 class="title">{{ item.name }}</h3>
+                      <p class="posting__intro">{{ item.startDate | date("F jS Y \\a\\t g:ia") }}</p>
+                      <p class="posting__intro">{{ item.location.name }}</p>
+                      <span class="posting__anchor anchor">Read more</span>
+                    </div>
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </section>
+
+    </div>
+
+  </body>
+</html>

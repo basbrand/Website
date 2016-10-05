@@ -1,0 +1,70 @@
+/*
+Layout
+
+$layout - Layouts accross breakpoints.
+
+markup:
+<pre>{$modifiers}</pre>
+
+Styleguide 1.3.8
+*/
+
+$layouts: (
+	$lt-medium-handheld: (
+		default: true,
+		columns: 12,
+		gutter-width: rhythm(7),
+		rhythm: rhythm(),
+		debug-color: #FFA500, // Orange
+		grids: (
+			split: (
+				main: ( columns: 6, wings: (0,0) ),
+				aside: ( columns: 6, wings: (0,0) )
+			),
+			sidebar: (
+				main: ( columns: 6, wings: (0,0) ),
+				aside: ( columns: 6, wings: (0,0) )
+			)
+		),
+	),
+	$gt-large-handheld: (
+		default: false,
+		columns: 24,
+		gutter-width: rhythm(7),
+		rhythm: rhythm(),
+		debug-color: #00FFFF, //Cyan
+		grids: (
+			split: (
+				main: ( columns: 14, wings: (2,2) ),
+				aside: ( columns: 14, wings: (2,2) )
+			),
+			tsplit: (
+				main: ( columns: 17, wings: (2,0) ),
+				aside: ( columns: 9, wings: (2,2) )
+			)
+		)
+	),
+
+	$gt-medium-desktop: (
+		default: false,
+		columns: 36,
+		gutter-width: rhythm(7),
+		rhythm: rhythm(),
+		debug-color: #00FFFF, //Cyan
+		grids: (
+			split: (
+				main: ( columns: 14, wings: (2,2) ),
+				aside: ( columns: 14, wings: (2,2) )
+			),
+			tsplit: (
+				main: ( columns: 17, wings: (2,0) ),
+				aside: ( columns: 9, wings: (2,2) )
+			)
+		)
+	)
+);
+
+// Get the defaults from the layouts map
+$columns: get-columns();
+$gutter-width: get-gutter-width();
+$rhythm: get-rhythm();

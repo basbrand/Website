@@ -1,0 +1,130 @@
+@function to-em($border-width) {
+  @return px($border-width);
+}
+/*
+Title
+
+Titles are different from headings. They are used in title and headline blocks and story lists. If you want to style an article heading, use the heading class.
+
+.title - This smaller headline is used in story lists
+.title.title--meta - Extra margin top and bottom
+.title.title--section - Extra margin top and bottom
+
+markup:
+<h1 class="{$modifiers}">Extra, extra – read all about it!</h1>
+
+Styleguide 3.3
+*/
+
+/*
+ * Force block on inline tags
+ */
+.title {
+  font: $font-weight--heading #{to-unit(18px, 1em, 12px)}/#{to-unit(rhythm(6), 1, 20px)} $font-family--heading;
+  // display: inline-block; /* 1 */
+  width: 100%; /* 1 */
+  a &,
+  & a {
+    text-decoration: none;
+  }
+  &--meta,
+  &--section {
+    font-weight: $font-weight--heading;
+    font-family: $font-family--meta;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing;
+  }
+  &--section {
+    font-size: to-unit(8px, 1em, 12px);
+    line-height: to-unit(rhythm(3), 1, 8px);
+    // font-weight: 600;
+    .tile--cover & {
+      font-weight: 300;
+    }
+  }
+  &--meta {
+      font-size: to-unit(10px, 1em, 12px);
+      line-height: to-unit(rhythm(4), 1, 10px);
+  }
+  &--em {
+    font-family: $font-family--heading !important;
+    font-weight: $font-weight--heading !important;
+  }
+  &--inverse {
+    &,
+    a &,
+    & a {
+      color: $white;
+      font-weight: 300;
+    }
+  }
+  // &--section,
+  &--well {
+    .well & {
+      margin-top: px-to-pt(rhythm(10));
+      margin-bottom: px-to-pt(rhythm(6));
+    }
+  }
+  // @include breakpoint($gt-small-handheld) {
+  //     font-size: px-to-pt(18px);
+  //     line-height: px-to-pt(rhythm(5));
+  //     &--meta {
+  //       font-size: px-to-pt(14px);
+  //       line-height: px-to-pt(rhythm(4));
+  //     }
+  //     &--section {
+  //       font-size: px-to-pt(10px);
+  //       line-height: px-to-pt(rhythm(3));
+  //     }
+  // }
+  // @include breakpoint($gt-small-handheld,$landscape) {
+  //     &--meta {
+  //       font-size: px-to-pt(12px);
+  //       line-height: px-to-pt(rhythm(3));
+  //     }
+  //     &--section {
+  //       font-size: px-to-pt(8px);
+  //       line-height: px-to-pt(rhythm(2));
+  //     }
+  // }
+  // @include breakpoint($gt-large-handheld) {
+  //     font-size: px-to-pt(20px);
+  //     line-height: px-to-pt(rhythm(5));
+  //     &--meta,
+  //     &--section {
+  //       font-size: px-to-pt(18px);
+  //       line-height: px-to-pt(rhythm(5));
+  //     }
+  //     &--section {
+  //       font-size: px-to-pt(12px);
+  //       line-height: px-to-pt(rhythm(3));
+  //     }
+  // }
+  // @include breakpoint($gt-medium-desktop) {
+  //     // font-size: px-to-pt(22px);
+  //     // line-height: px-to-pt(rhythm(6));
+  //     &--meta,
+  //     &--section {}
+  //     &--section {}
+  // }
+}
+
+/*
+Title, inversed
+
+Titles are different from headings. They are used in title and headline blocks and story lists. If you want to style an article heading, use the heading class.
+
+.title.title--inverse - This smaller headline is used in story lists
+.title.title--meta.title--inverse - Extra margin top and bottom
+.title.title--section.title--inverse - Extra margin top and bottom
+
+markup:
+<h1 class="{$modifiers}">Extra, extra – read all about it!</h1>
+
+sg-wrapper:
+<div style="padding:32px;background:#445D87;">
+<sg-wrapper-content/>
+</div>
+
+Styleguide 3.3.1
+*/
