@@ -2090,7 +2090,7 @@ markup:
     <img src="/images/heads/marja_smits.jpg" class="person__image" width="56" height="56" style="background: Grey;"/>
   </span>
   <figcaption class="person__body">
-    <span class="person__name title title--section">MARJA SMITS</span>
+    <span class="person__name title title--section">Marja Smits</span>
     <small class="person__occupation">Manager Strategie en Marketing Evean</small>
   </figcaption>
 </figure>
@@ -2114,12 +2114,13 @@ Styleguide 4.3
     outline: 1px solid #ffffff;
     width: 40pt;
     height: 40pt; }
+  .person--s .person__image {
+    width: 32pt;
+    height: 32pt; }
   @media only screen and (min-width: 64em) {
-    .person {
-      left: -24pt; }
-      .person__image {
-        width: 48pt;
-        height: 48pt; } }
+    .person__image {
+      width: 48pt;
+      height: 48pt; } }
 
 /* 5. */
 /*
@@ -2167,7 +2168,7 @@ markup:
           <img src="/images/heads/marja_smits.jpg" class="person__image" width="56" height="56" style="background: Grey;"/>
         </span>
         <figcaption class="person__body">
-          <span class="person__name title title--section">MARJA SMITS</span>
+          <span class="person__name title title--section">Marja Smits</span>
           <small class="person__occupation">Manager Strategie en Marketing Evean</small>
         </figcaption>
       </figure>
@@ -2530,7 +2531,7 @@ Styleguide 5.7
   top: 0;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 1;
   padding: 4px 8.33333%;
   background: rgba(255, 255, 255, 0.6); }
   .navigation img {

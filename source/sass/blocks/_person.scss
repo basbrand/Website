@@ -9,7 +9,7 @@ markup:
     <img src="/images/heads/marja_smits.jpg" class="person__image" width="56" height="56" style="background: Grey;"/>
   </span>
   <figcaption class="person__body">
-    <span class="person__name title title--section">MARJA SMITS</span>
+    <span class="person__name title title--section">Marja Smits</span>
     <small class="person__occupation">Manager Strategie en Marketing Evean</small>
   </figcaption>
 </figure>
@@ -38,8 +38,12 @@ Styleguide 4.3
     width: px-to-pt(rhythm(10));
     height: px-to-pt(rhythm(10));
   }
+  &--s &__image {
+      width: px-to-pt(rhythm(8));
+      height: px-to-pt(rhythm(8));
+  }
   @include breakpoint($gt-small-desktop) {
-    left: px-to-pt(-1*rhythm(6));
+    // left: px-to-pt(-1*rhythm(6));
     &__image {
       width: px-to-pt(rhythm(12));
       height: px-to-pt(rhythm(12));

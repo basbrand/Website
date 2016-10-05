@@ -3,6 +3,18 @@
 <html lang="nl">
   <?php include '../../head.php'; ?>
   <body class="<?php echo $debug ? 'debug-layout ' : ''; ?>p-case">
+    <div class="navigation media">
+      <header class="media media__stretcher">
+        <a class="" href="/"><img class="navigation__home" title="Brickson.nl" src="/images/logos/Brickson-Brandmark.svg"></a>
+      </header>
+      <nav>
+        <ul class="list--reset list--inline menu">
+          <li>
+            <a class="navigation__section-marker anchor--shy title title--section" href="javascript:void();">Cases</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <section class="panel is-active">
       <?php include 'catalog.php'; ?>
       <div class="article">

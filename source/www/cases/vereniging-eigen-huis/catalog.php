@@ -20,8 +20,7 @@
       <!--[if IE 9]></video><![endif]-->
       <img class="cover__image" src="/images/content/w320px_h576px--eigenhuis.jpg" alt="">
     </picture>
-    <p class="well__title title title--section">Case</p>
-    <h2 class="title">Vereniging Eigen Huis</h2>
+    <h2 class="well__title title">Vereniging Eigen Huis</h2>
     <p class="lead leader trailer">Nam non diam nec ipsum consequat convallis. Sed nec ultricies neque. Nulla facilisi. Donec eget accumsan diam.</p>
     <p><a class="button button--stretch" href="/cases/vereniging-eigen-huis#main">Lees verder</a></p>
   </div>
@@ -43,8 +42,7 @@
       <!--[if IE 9]></video><![endif]-->
       <img class="cover__image" src="/images/content/w320px_h576px--evean.jpg" alt="">
     </picture>
-    <p class="well__title title title--section">Case</p>
-    <h2 class="title">Evean</h2>
+    <h2 class="well__title title">Evean</h2>
     <p class="lead leader trailer">Nam non diam nec ipsum consequat convallis. Sed nec ultricies neque. Nulla facilisi. Donec eget accumsan diam.</p>
     <p><a class="button button--stretch" href="/cases/evean#main">Lees verder</a></p>
   </div>
