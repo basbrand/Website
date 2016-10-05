@@ -1,6 +1,7 @@
-<div class="catalog">
+<div class="catalog is-cleared">
   <div class="well well--hero cover">
-    <picture class="cover__image" id="main">
+    <a class="is-narrative is-anchor" name="main" id="main"></a>
+    <picture class="cover__image">
       <!--[if IE 9]><video style="display: none;"><![endif]-->
       <source
         media="<?php echo $gt_medium_desktop; ?> and <?php echo $landscape; ?>"
@@ -44,6 +45,6 @@
     </picture>
     <h2 class="well__title title">Vereniging Eigen Huis</h2>
     <p class="lead leader trailer">Nam non diam nec ipsum consequat convallis. Sed nec ultricies neque. Nulla facilisi. Donec eget accumsan diam.</p>
-    <p><a class="button button--stretch" href="/cases/vereniging-eigen-huis#main">Lees verder</a></p>
+    <p><a class="button button--stretch" href="/cases/vereniging-eigen-huis/#main">Lees verder</a></p>
   </div>
 </div>

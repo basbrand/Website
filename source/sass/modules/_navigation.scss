@@ -26,7 +26,7 @@ Styleguide 5.7
   right: 0;
   z-index: 1;
   padding: rhythm() percentage(1/12);
-  background: rgba($white,.6);
+  background: rgba($white,.8);
   img {
     display: block; /* Hack - isolate in image class */
   }
@@ -42,6 +42,7 @@ Styleguide 5.7
   }
   @include breakpoint($gt-large-handheld) {
     right: percentage(12/24);
+    padding: rhythm(4) percentage(1/12);
   }
   @include breakpoint($gt-small-desktop) {
     padding: rhythm(4) percentage(1/24);

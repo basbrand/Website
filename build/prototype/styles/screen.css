@@ -645,53 +645,6 @@ Debug layout
 
 Styleguide 2.0.1
 */
-html:after,
-body:after {
-  display: block;
-  position: fixed;
-  right: 0;
-  background: #fff;
-  padding: 4px; }
-
-html:after {
-  top: 0; }
-  @media (orientation: landscape) and (min-width: 20em) {
-    html:after {
-      content: 'gt-small-handheld - landscape'; } }
-  @media (orientation: portrait) and (min-width: 20em) {
-    html:after {
-      content: 'gt-small-handheld - portrait'; } }
-  @media (orientation: landscape) and (min-width: 32.5em) {
-    html:after {
-      content: 'gt-medium-handheld - landscape'; } }
-  @media (orientation: portrait) and (min-width: 32.5em) {
-    html:after {
-      content: 'gt-medium-handheld - portrait'; } }
-  @media (orientation: landscape) and (min-width: 48em) {
-    html:after {
-      content: 'gt-large-handheld - landscape'; } }
-  @media (orientation: portrait) and (min-width: 48em) {
-    html:after {
-      content: 'gt-large-handheld - portrait'; } }
-  @media (orientation: landscape) and (min-width: 64em) {
-    html:after {
-      content: 'gt-small-desktop - landscape'; } }
-  @media (orientation: portrait) and (min-width: 64em) {
-    html:after {
-      content: 'gt-small-desktop - portrait'; } }
-  @media (orientation: landscape) and (min-width: 90em) {
-    html:after {
-      content: 'gt-medium-desktop - landscape'; } }
-  @media (orientation: portrait) and (min-width: 90em) {
-    html:after {
-      content: 'gt-medium-desktop - portrait'; } }
-  @media (orientation: landscape) and (min-width: 100em) {
-    html:after {
-      content: 'gt-large-desktop - landscape'; } }
-  @media (orientation: portrait) and (min-width: 100em) {
-    html:after {
-      content: 'gt-large-desktop - portrait'; } }
-
 /* 2.1 Layout */
 /*
 Layout
@@ -2443,6 +2396,8 @@ Styleguide 5.5
       width: 50%;
       min-height: 50%;
       min-height: 50vh; }
+      .catalog .well__title {
+        margin-top: 96px; }
     .catalog .well .cover__image {
       min-height: 50%;
       min-height: 50vh;
@@ -2533,7 +2488,7 @@ Styleguide 5.7
   right: 0;
   z-index: 1;
   padding: 4px 8.33333%;
-  background: rgba(255, 255, 255, 0.6); }
+  background: rgba(255, 255, 255, 0.8); }
   .navigation img {
     display: block;
     /* Hack - isolate in image class */ }
@@ -2546,7 +2501,8 @@ Styleguide 5.7
     text-align: right; }
   @media only screen and (min-width: 48em) {
     .navigation {
-      right: 50%; } }
+      right: 50%;
+      padding: 16px 8.33333%; } }
   @media only screen and (min-width: 64em) {
     .navigation {
       padding: 16px 4.16667%; } }
@@ -2737,7 +2693,15 @@ Case
 
 Styleguide 7.2
 */
-@media (max-width: 89.9375em) and (min-width: 64em) {
+.p-case .is-anchor {
+  position: absolute;
+  top: 200%; }
+
+@media only screen and (min-width: 48em) {
+  .p-case .is-anchor {
+    position: static; } }
+
+@media (max-width: 89.9375em) and (min-width: 48em) {
   .p-case .testimonial {
     width: 100%;
     min-height: 50%;
@@ -2745,9 +2709,15 @@ Styleguide 7.2
     max-height: 50%;
     max-height: 50vh; }
     .p-case .testimonial .well {
-      width: 50%;
-      padding-left: 4.16667%;
-      padding-right: 4.16667%; } }
+      width: 100%;
+      padding-left: 8.33333%;
+      padding-right: 8.33333%; } }
+
+@media (max-width: 89.9375em) and (min-width: 64em) {
+  .p-case .testimonial .well {
+    width: 50%;
+    padding-left: 4.16667%;
+    padding-right: 4.16667%; } }
 
 /* 8. */
 @media only screen and (max-width: 47.9375em) {

@@ -42,7 +42,8 @@
         <div class="article__body well">
           <h2 class="well__title title">Resultaat</h2>
           <p class="leader trailer">De oplevering is een concreet en helder geschreven document, een stevig referentiekader voor alle digitale ontwikkelingen de komende jaren.</p>
-
+        </div>
+        <div class="well">
             <div class="grid grid--tile">
               <figure class="grid__cell tile cover">
                 <picture class="cover__image" id="main">
@@ -96,7 +97,8 @@
                 </figcaption>
               </figure>
             </div>
-
+        </div>
+        <div class="article__body well">
           <p class="title leader--tiny title--section"><strong>User experience design en visual design: evean.nl</strong></p>
           <p class="leader trailer">Met de strategie in de hand verder naar een nieuwe website. Natuurlijk zijn de cliënten (bestaand en nieuw) en andere doelgroepen (professionals, huisartsen, naasten) uitgangspunt. Maar een organisatie heeft ook communicatie behoefte.</p>
           <blockquote class="quote lead leader"><p>Brickson het bureau dat een stap vooruit denkt, niet alleen strategisch ook in de uitvoering.</p></blockquote>
@@ -113,7 +115,7 @@
           <p class="leader trailer">Evean biedt thuiszorg, verpleeg- en verzorgingshuiszorg en een breed scala aan gespecialiseerde zorg en behandeling, revalidatie, herstel, zorgondersteuning en welzijn. Evean staat voor het behoud van de identiteit van mensen. De behoefte van de cliënt staat hierbij voorop. Evean werd recent door het Nationale Business Succes Award instituut (NBSA) uitgeroepen tot branchewinnaar Thuiszorg.</p>
         </div>
       </div>
-      <?php include '../../testimonials/evean.php'; ?>
+      <?php include '../../testimonials/eigenhuis.php'; ?>
       <?php include '../../landingpage/introduction.php'; ?>
       <?php include '../../landingpage/contact.php'; ?>
     </section>

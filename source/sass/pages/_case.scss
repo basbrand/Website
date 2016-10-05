@@ -5,7 +5,16 @@ Styleguide 7.2
 */
 
 .p-case {
-  @include breakpoint($gt_small_desktop,$lt-medium-desktop) {
+  .is-anchor {
+  	position: absolute;
+  	top: 200%;
+  }
+  @include breakpoint($gt_large_handheld) {
+    .is-anchor {
+    	position: static;
+    }
+  }
+  @include breakpoint($gt_large_handheld,$lt-medium-desktop) {
     .testimonial {
       width: 100%;
       min-height: 50%;
@@ -13,7 +22,16 @@ Styleguide 7.2
       max-height: 50%;
       max-height: 50vh;
       .well {
-        width: 50%;
+        width: percentage(12/12);
+        padding-left: percentage(1/12);
+        padding-right: percentage(1/12);
+      }
+    }
+  }
+  @include breakpoint($gt-small-desktop,$lt-medium-desktop) {
+    .testimonial {
+      .well {
+        width: percentage(12/24);
         padding-left: percentage(1/24);
         padding-right: percentage(1/24);
       }
