@@ -645,6 +645,53 @@ Debug layout
 
 Styleguide 2.0.1
 */
+html:after,
+body:after {
+  display: block;
+  position: fixed;
+  right: 0;
+  background: #fff;
+  padding: 4px; }
+
+html:after {
+  top: 0; }
+  @media (orientation: landscape) and (min-width: 20em) {
+    html:after {
+      content: 'gt-small-handheld - landscape'; } }
+  @media (orientation: portrait) and (min-width: 20em) {
+    html:after {
+      content: 'gt-small-handheld - portrait'; } }
+  @media (orientation: landscape) and (min-width: 32.5em) {
+    html:after {
+      content: 'gt-medium-handheld - landscape'; } }
+  @media (orientation: portrait) and (min-width: 32.5em) {
+    html:after {
+      content: 'gt-medium-handheld - portrait'; } }
+  @media (orientation: landscape) and (min-width: 48em) {
+    html:after {
+      content: 'gt-large-handheld - landscape'; } }
+  @media (orientation: portrait) and (min-width: 48em) {
+    html:after {
+      content: 'gt-large-handheld - portrait'; } }
+  @media (orientation: landscape) and (min-width: 64em) {
+    html:after {
+      content: 'gt-small-desktop - landscape'; } }
+  @media (orientation: portrait) and (min-width: 64em) {
+    html:after {
+      content: 'gt-small-desktop - portrait'; } }
+  @media (orientation: landscape) and (min-width: 90em) {
+    html:after {
+      content: 'gt-medium-desktop - landscape'; } }
+  @media (orientation: portrait) and (min-width: 90em) {
+    html:after {
+      content: 'gt-medium-desktop - portrait'; } }
+  @media (orientation: landscape) and (min-width: 100em) {
+    html:after {
+      content: 'gt-large-desktop - landscape'; } }
+  @media (orientation: portrait) and (min-width: 100em) {
+    html:after {
+      content: 'gt-large-desktop - portrait'; } }
+
 /* 2.1 Layout */
 /*
 Layout
@@ -1680,7 +1727,7 @@ markup:
 
 width="444px" height="347px" viewBox="0 0 444 347"
 
-Styleguide 3.11
+Styleguide 3.9
 */
 .brand {
   height: 48pt;
@@ -1722,7 +1769,14 @@ Styleguide 3.11
     .brand--ams, .brand--dnb {
       height: 80pt; } }
 
-/* 3.10 Date */
+/* 3.10 Brandmark */
+/*
+Brandmark
+
+width="444px" height="347px" viewBox="0 0 444 347"
+
+Styleguide 3.10
+*/
 /* 3.11 Brand */
 /*
 Brand
@@ -1734,7 +1788,7 @@ markup:
 
 width="444px" height="347px" viewBox="0 0 444 347"
 
-Styleguide 3.11
+Styleguide 3.9
 */
 .brand {
   height: 48pt;
@@ -1776,7 +1830,12 @@ Styleguide 3.11
     .brand--ams, .brand--dnb {
       height: 80pt; } }
 
-/* 3.12 Theme */
+/* 3.12 Menu */
+/*
+Menu
+
+Styleguide 3.12
+*/
 /* 3.13 Well */
 /*
 Well
@@ -2313,17 +2372,6 @@ markup:
 
 Styleguide 5.4
 */
-/*
- * 1. Make sure to cover up introduction on desktop
- */
-/*
- Landingpage
-
- Styleguide 7.1
- */
-/*
-  * 1. Make sure to cover up introduction on desktop
-  */
 .contact {
   min-height: 100%;
   min-height: 100vh; }
@@ -2387,37 +2435,44 @@ Styleguide 5.5
     min-height: 100vh;
     padding-left: 8.33333%;
     padding-right: 8.33333%; }
-
-@media only screen and (min-width: 48em) {
-  .catalog .well {
-    width: 50%;
-    min-height: 50%;
-    min-height: 50vh; }
+  .catalog .well__title {
+    margin-top: 72px; }
+  @media only screen and (min-width: 48em) {
+    .catalog .well {
+      width: 50%;
+      min-height: 50%;
+      min-height: 50vh; }
+    .catalog .well .cover__image {
+      min-height: 50%;
+      min-height: 50vh;
+      max-height: 50%;
+      max-height: 50vh; }
+    .catalog .well:first-child {
+      position: static; }
+      .catalog .well:first-child,
+      .catalog .well:first-child .button {
+        color: #445D87; }
+      .catalog .well:first-child .button {
+        border-color: #445D87; }
+      .catalog .well:first-child .cover__image {
+        top: auto;
+        bottom: 0;
+        z-index: 1; }
+    .catalog .well:first-child .well__title {
+      visibility: visible; } }
+  @media only screen and (min-width: 64em) {
+    .catalog .well {
+      padding-left: 4.16667%;
+      padding-right: 4.16667%; }
     .catalog .well__title {
-      visibility: hidden; }
-  .catalog .well .cover__image {
-    min-height: 50%;
-    min-height: 50vh;
-    max-height: 50%;
-    max-height: 50vh; }
-  .catalog .well:first-child {
-    position: static; }
-    .catalog .well:first-child,
-    .catalog .well:first-child .button {
-      color: #445D87; }
-    .catalog .well:first-child .button {
-      border-color: #445D87; }
-    .catalog .well:first-child .cover__image {
-      top: auto;
-      bottom: 0;
-      z-index: 1; }
-  .catalog .well:first-child .well__title {
-    visibility: visible; } }
-
-@media (orientation: landscape) and (min-width: 90em) {
-  .catalog {
-    position: relative;
-    width: 66.66667%; } }
+      margin-top: 96px; } }
+  @media (orientation: landscape) and (min-width: 90em) {
+    .catalog {
+      position: relative;
+      width: 66.66667%; }
+      .catalog .well {
+        padding-left: 4.16667%;
+        padding-right: 4.16667%; } }
 
 /* 5.6 Article */
 /*
@@ -2448,6 +2503,56 @@ Styleguide 5.6
     .article .grid {
       position: relative;
       z-index: 1; } }
+
+/* 5.7 Navigation */
+/*
+Navigation
+
+markup:
+<div class="navigation media">
+  <header class="media media__stretcher">
+    <a class="" href="/"><img class="navigation__home" title="Brickson.nl" src="/images/logos/Brickson-Brandmark.svg"></a>
+    <h3 class="navigation__section-marker title title--section"><a class="anchor--shy anchor--reset" href="/cases/">Cases</a></h3>
+  </header>
+  <nav>
+    <ul class="list--reset list--inline menu">
+      <li>
+        <a class="navigation__section-marker anchor--shy title title--section" href="javascript:void();">Menu Item</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+Styleguide 5.7
+*/
+.navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: 4px 8.33333%;
+  background: rgba(255, 255, 255, 0.6); }
+  .navigation img {
+    display: block;
+    /* Hack - isolate in image class */ }
+  .navigation__home {
+    height: 32px; }
+  .navigation__section-marker {
+    line-height: 32px;
+    margin-left: 1ex; }
+  .navigation .menu {
+    text-align: right; }
+  @media only screen and (min-width: 48em) {
+    .navigation {
+      right: 50%; } }
+  @media only screen and (min-width: 64em) {
+    .navigation {
+      padding: 16px 4.16667%; } }
+  @media only screen and (min-width: 90em) {
+    .navigation {
+      padding: 16px 2.77778%;
+      right: 66.66667%; } }
 
 /* 6. */
 /*
