@@ -20,8 +20,8 @@
       <!--[if IE 9]></video><![endif]-->
       <img class="cover__image" src="/images/content/w320px_h576px--evean.jpg" alt="">
     </picture>
-    <h2 class="well__title title">Evean</h2>
-    <p class="lead leader trailer">Nam non diam nec ipsum consequat convallis. Sed nec ultricies neque. Nulla facilisi. Donec eget accumsan diam.</p>
+    <h2 class="well__title title">Digitale strategie: Evean naast de cliënt</h2>
+    <p class="lead leader trailer">Brickson ontwikkelde een visie op digitaal voor de lange termijn en een strijdplan in kleine en vooral haalbare stappen.</p>
     <p><a class="button button--stretch" href="/cases/evean/#main">Lees verder</a></p>
   </div>
   <div class="well well--hero cover">
