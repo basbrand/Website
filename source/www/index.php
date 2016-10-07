@@ -9,7 +9,7 @@
       <?php include 'testimonials/eigenhuis.php'; ?>
       <?php include 'landingpage/introduction.php'; ?>
     </section>
-    <?php include 'landingpage/tools.php'; ?>
+    <?php //include 'landingpage/tools.php'; ?>
     <section>
       <?php include 'testimonials/evean.php'; ?>
       <?php include 'landingpage/contact.php'; ?>
