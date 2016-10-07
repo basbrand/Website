@@ -1,8 +1,9 @@
 <section class="tools is-cleared">
   <div class="well tools__header">
-    <header class="well__title">
-      <em class="title title--section trailer--hero">Onze producten</em>
-      <h2 class="title leader">Krachtige tools voor slimme stappen</h2>
+    <header class="well__title" style="width: 100%;">
+      <!--em class="title title--section trailer--hero">Onze winkels</em-->
+      <h2 class="title leader-inside--hero">Krachtige tools voor slimme stappen</h2>
+      <p class="leader trailer">Vestibulum non congue lectus, nec viverra neque. Donec iaculis nibh nec lacus egestas hendrerit. Integer viverra vitae justo sed luctus. Praesent porttitor tincidunt accumsan.</p>
     </header>
   </div>
   <div class="well tools__body">
