@@ -3,7 +3,7 @@
     <header class="well__title" style="width: 100%;">
       <!--em class="title title--section trailer--hero">Onze winkels</em-->
       <h2 class="title leader-inside--hero">Krachtige tools voor slimme stappen</h2>
-      <p class="leader trailer">Wil je ook de volgende stap zetten? Werken met Brickson betekent samen ontdekken, bedenken, ontwerpen of bouwen. Kies uit ons aanbod de stappen die jou verder helpen, of laat je adviseren over het snelste pad naar een nieuwe digitale ervaring.</p>
+      <p class="leader trailer">Wil je ook de volgende stap zetten? Werken met Brickson betekent samen ontdekken, bedenken, ontwerpen of bouwen. Kies uit ons aanbod de stappen die jou verder helpen, of laat je door ons adviseren over het snelste pad naar een nieuwe digitale ervaring.</p>
     </header>
   </div>
   <div class="well tools__body">
