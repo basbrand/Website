@@ -17,13 +17,15 @@
     </div>
     <section class="panel is-active">
       <?php include 'catalog.php'; ?>
-      <div class="article">
+      <div class="article lead">
         <div class="article__body well">
-          <h1 class="well__title title title--section">Digitale strategie: Evean naast de cliënt</h1>
-          <p class="lead well__title">De zorg staat onder druk. Kosten nemen toe, behoeftes van zorgcliënten (en naasten) individualiseren, zoals in de meeste sectoren. Ieder visiestuk in de zorg praat over het voeren van regie door de cliënt.</p>
-          <h2 class="well__title title">Evean zag de opportunity</h2>
-          <p class="leader trailer">Het zorgaanbod van Evean is zo breed en tegelijk zo specialistisch dat er geen concurrent aan kan tippen. Dat is lastig maar het past wel in deze tijd. Digitaal was het aanbod vanuit de organisatie platgeslagen ook door een gedateerd content management systeem.</p>
-          <p class="leader trailer">Duidelijke keuzes aanbieden, lastig maar goed te doen. In volgorde: eerst een doorwrochte digitale strategie, daarna invulling van digitale middelen.</p>
+          <p class="well__title title title--section">Digitale strategie</p>
+          <h1 class="well__title title">Evean staat naast haar klant</h1>
+          <p class="leader trailer">De zorg is flink in beweging, zo ook Evean. De veranderingen die het kabinet doorvoert, vragen een behoorlijke omslag in doen en denken. De cliënt van vandaag mag zélf bepalen welke zorg en ondersteuning het beste aansluit bij zijn behoeften en mogelijkheden.</p>
+          <p class="leader trailer">Hoe zorg je dat je klanten een gevoel van regie geeft? En welke digitale mogelijkheden moet je ze dan als eerste geven? Waar ga je investeren? Hoe ben je relevant in een ondoorzichtige zorgmarkt?</p>
+        </div>
+        <div class="article__body leader-inside trailer-inside" style="background: whitesmoke;">
+          <p class="title title--section trailer">Testimonial</p>
           <blockquote class="quote lead leader">Met oog en gevoel voor de mensen in je organisatie gaat Brickson altijd een stap verder.</blockquote>
           <figure class="person person--s bleed leader--tiny trailer">
             <span class="person__picture gutters">
@@ -34,83 +36,34 @@
               <small class="person__occupation">Manager Strategie en Marketing Evean</small>
             </figcaption>
           </figure>
-          <p class="leader trailer">Digitale strategie is soms een vaag begrip, niet bij Brickson. Wij zien het als een strijdplan waarin we lange termijn visie invullen met kleine kleine stappen die daar naar leiden.</p>
-          <h2 class="well__title title">Hoe gingen we te werk?</h2>
-          <p class="leader trailer">Gesprekken dwars door de organisatie om alle processen goed in kaart te krijgen. We analyseerden en stelden 9 hypotheses op, deze leidden tot inzichten en conclusies.</p>
-          <p class="leader trailer">Daarop ontwikkelden we een visie voor de lange termijn en een strijdplan hoe we dat realiseren in kleine en vooral haalbare stappen. We formuleerden doelgroepen en doelstellingen om de strategie goed te kunnen toetsen.</p>
         </div>
-        <div class="article__body well">
-          <h2 class="well__title title">Resultaat</h2>
-          <p class="leader trailer">De oplevering is een concreet en helder geschreven document, een stevig referentiekader voor alle digitale ontwikkelingen de komende jaren.</p>
+        <div class="article__body lead">
+          <h2 class="well__title title">Digitale strategie</h2>
+          <p class="leader trailer">Brickson ontwikkelde een gedragen strijdplan voor de komende jaren. De lange termijn visie van de organisatie vertaalden we naar een strategie voor het digitale domein: hoe biedt je transacties aan, hoe informeer je, hoe communiceer je met klanten.</p>
+          <h2 class="well__title title">User experience en visual design</h2>
+          <p class="leader trailer">De doorvertaling een digitale strategie resulteerde in een UX design en een visual design voor de nieuwe website. De cliënten en hun naasten zijn uitgangspunt, maar ook andere doelgroepen (professionals, huisartsen, collega’s) ervaren hoe Evean er voor ze is.</p>
+
+          <h2 class="well__title title">Hoe kom je tot keuzes?</h2>
+          <p class="leader trailer">De aanpak voor Evean was gericht op het begrijpen van de cultuur, processen en aanstaande veranderingen binnen de organisatie en de zorgmarkt.  We onderzochten vanuit 9 hypotheses, deze leidden uiteindelijk tot de inzichten waarmee Evean keuzes kon maken.</p>
+          <p class="leader trailer">Geen onderonsjes met de directie, maar gesprekken dwars door de organisatie heen. Daarnaast spraken we vanzelfsprekend veel met cliënten en hun naasten.</p>
+
+          <h2 class="well__title title">Evean kiest een eigen lijn</h2>
+          <p class="leader trailer">Evean heeft nieuwe inzichten en een digitale roadmap, maar zet ook concrete stappen: een team van bevlogen professionals is begonnen om Evean.nl opnieuw in te richten. Daarbij kiest Evean voor een duidelijke online positionering en doet een uitgesproken propositie naar cliënten, naasten en verwijzers: waarmee kunnen we u helpen?</p>
         </div>
-        <div class="well">
-            <div class="grid grid--tile">
-              <figure class="grid__cell tile cover">
-                <picture class="cover__image" id="main">
-                  <!--[if IE 9]><video style="display: none;"><![endif]-->
-                  <source
-                    media="<?php echo $gt_small_desktop; ?> and <?php echo $landscape; ?>"
-                    srcset="/images/content/w500px_h300px--evean-01.jpg 683w">
-                  <!--[if IE 9]></video><![endif]-->
-                  <img class="cover__image" src="/images/content/w400px_h400px--evean-01.jpg" alt="">
-                </picture>
-                <figcaption class="tile__body gutters">
-                </figcaption>
-              </figure>
-              <figure class="grid__cell tile cover">
-                <picture class="cover__image" id="main">
-                  <!--[if IE 9]><video style="display: none;"><![endif]-->
-                  <source
-                    media="<?php echo $gt_small_desktop; ?> and <?php echo $landscape; ?>"
-                    srcset="/images/content/w500px_h300px--evean-02.jpg 683w">
-                  <!--[if IE 9]></video><![endif]-->
-                  <img class="cover__image" src="/images/content/w400px_h400px--evean-02.jpg" alt="">
-                </picture>
-                <figcaption class="tile__body gutters">
-                  <p></p>
-                </figcaption>
-              </figure>
-              <figure class="grid__cell tile cover">
-                <picture class="cover__image" id="main">
-                  <!--[if IE 9]><video style="display: none;"><![endif]-->
-                  <source
-                    media="<?php echo $gt_small_desktop; ?> and <?php echo $landscape; ?>"
-                    srcset="/images/content/w500px_h300px--evean-04.jpg 683w">
-                  <!--[if IE 9]></video><![endif]-->
-                  <img class="cover__image" src="/images/content/w400px_h400px--evean-04.jpg" alt="">
-                </picture>
-                <figcaption class="tile__body gutters">
-                  <p></p>
-                </figcaption>
-              </figure>
-              <figure class="grid__cell tile cover">
-                <picture class="cover__image" id="main">
-                  <!--[if IE 9]><video style="display: none;"><![endif]-->
-                  <source
-                    media="<?php echo $gt_small_desktop; ?> and <?php echo $landscape; ?>"
-                    srcset="/images/content/w500px_h300px--evean-03.jpg 683w">
-                  <!--[if IE 9]></video><![endif]-->
-                  <img class="cover__image" src="/images/content/w400px_h400px--evean-03.jpg" alt="">
-                </picture>
-                <figcaption class="tile__body gutters">
-                  <p></p>
-                </figcaption>
-              </figure>
-            </div>
-        </div>
-        <div class="article__body well">
-          <p class="title leader--tiny title--section"><strong>User experience design en visual design: evean.nl</strong></p>
-          <p class="leader trailer">Met de strategie in de hand verder naar een nieuwe website. Natuurlijk zijn de cliënten (bestaand en nieuw) en andere doelgroepen (professionals, huisartsen, naasten) uitgangspunt. Maar een organisatie heeft ook communicatie behoefte.</p>
-          <blockquote class="quote lead leader"><p>Brickson het bureau dat een stap vooruit denkt, niet alleen strategisch ook in de uitvoering.</p></blockquote>
-          <p class="person person--s leader--tiny trailer">
-            <span class="person__body">
-              <span class="person__name title title--section">Danielle Vlaar</span>
-              <small class="person__occupation">Marketeer Evean</small>
+        <div class="article__body leader-inside trailer-inside" style="background: whitesmoke;">
+          <p class="title title--section trailer">Testimonial</p>
+          <blockquote class="quote lead leader">Brickson het bureau dat een stap vooruit denkt, niet alleen strategisch ook in de uitvoering.</blockquote>
+          <figure class="person person--s bleed leader--tiny trailer">
+            <span class="person__picture gutters">
+              <img src="/images/heads/danielle_vlaar.jpg" class="person__image" width="56" height="56" style="background: Grey;">
             </span>
-          </p>
-          <p class="leader trailer">Een ontwerp waarbij we iedere communicatiebehoefte op basis van de strategie en dus ook vanuit de organisatie voor 99% kunnen invullen en dat in een uitstekende balans. We ontwikkelden containers die in een CMS gestapeld en ingevuld kunnen worden. Daarbij hoort een digitale stijlgids waarin op CSS niveau de gehele digitale vormgeving is ontwikkeld.</p>
+            <figcaption class="person__body">
+              <span class="person__name title title--section">Danielle Vlaar</span>
+              <small class="person__occupation">Projectleider Evean.nl</small>
+            </figcaption>
+          </figure>
         </div>
-        <div class="article__body well trailer-inside--hero">
+        <div class="article__body lead">
           <h2 class="well__title title title--section">Over Evean</h2>
           <p class="leader trailer">Evean biedt thuiszorg, verpleeg- en verzorgingshuiszorg en een breed scala aan gespecialiseerde zorg en behandeling, revalidatie, herstel, zorgondersteuning en welzijn. Evean staat voor het behoud van de identiteit van mensen. De behoefte van de cliënt staat hierbij voorop. Evean werd recent door het Nationale Business Succes Award instituut (NBSA) uitgeroepen tot branchewinnaar Thuiszorg.</p>
         </div>

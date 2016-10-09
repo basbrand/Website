@@ -22,7 +22,7 @@
       <img class="cover__image" src="/images/content/w320px_h576px--evean.jpg" alt="">
     </picture>
     <h2 class="well__title title">Digitale strategie: Evean naast de cliënt</h2>
-    <p class="lead leader trailer">Brickson ontwikkelde een visie op digitaal voor de lange termijn en een strijdplan in kleine en vooral haalbare stappen.</p>
+    <p class="lead leader trailer">Hoe zorg je dat je klanten een gevoel van regie geeft? En welke digitale mogelijkheden moet je ze dan als eerste geven? Waar ga je investeren? Hoe ben je relevant in een ondoorzichtige zorgmarkt?</p>
     <p><a class="button button--stretch" href="/cases/evean/#main">Lees verder</a></p>
   </div>
   <div class="well well--hero cover">
@@ -44,7 +44,7 @@
       <img class="cover__image" src="/images/content/w320px_h576px--eigenhuis.jpg" alt="">
     </picture>
     <h2 class="well__title title">Vereniging Eigen Huis</h2>
-    <p class="lead leader trailer">Nam non diam nec ipsum consequat convallis. Sed nec ultricies neque. Nulla facilisi. Donec eget accumsan diam.</p>
+    <p class="lead leader trailer">Bij deze opdracht speelde tijd een grote rol, er moest onder grote druk snel gewerkt worden. In dit geval een voordeel, de iteraties volgden elkaar snel op zodat we in een prettig hoog ritme werkten.</p>
     <p><a class="button button--stretch" href="/cases/vereniging-eigen-huis/#main">Lees verder</a></p>
   </div>
 </div>
