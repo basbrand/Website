@@ -52,14 +52,14 @@ $lt-large-handheld - Breakpoint for (**smaller than**) larger handheld devices a
 $lt-small-desktop - Breakpoint for (**smaller than**) medium sized handheld and small desktop devices (<=1023px).
 $lt-medium-desktop - Breakpoint for (**smaller than**) Breakpoint for large (desktop) devices (<=1259px).
 $lt-large-desktop - Breakpoint for (**smaller than**) Breakpoint for large (desktop) devices (<=1439px).
-
+<hr>
 $gt-small-handheld - Breakpoint for (**larger than**) smaller handheld devices (>=320px).
 $gt-medium-handheld - Breakpoint for (**larger than**) medium sized handheld devices (>=520px).
 $gt-large-handheld - Breakpoint for (**larger than**) larger handheld devices and smaller desktop devices (>=768px).
 $gt-small-desktop - Breakpoint for (**larger than**) medium sized handheld and small desktop devices (>=1024px).
 $gt-medium-desktop - Breakpoint for (**larger than**) Breakpoint for large (desktop) devices (>=1260px).
 $gt-large-desktop - Breakpoint for (**larger than**) Breakpoint for large (desktop) devices (>=1440px).
-
+<hr>
 $portrait - Breakpoint for portrait oriented viewports.
 $landscape - Breakpoint for landscape oriented viewports.
 
@@ -76,7 +76,7 @@ Layout
 $layout - Layouts accross breakpoints.
 
 markup:
-{$modifiers}
+<pre>{$modifiers}</pre>
 
 Styleguide 1.3.8
 */
@@ -94,7 +94,7 @@ $color-blue - #445D87, used for links
 $color-teal - #57B0B6, used for most text
 
 markup:
-{$modifiers}
+<div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
 
 Styleguide 1.1.1
 */
@@ -110,7 +110,7 @@ $color-dark-blue - #37383C
 $color-green - #63B452
 
 markup:
-{$modifiers}
+<div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
 
 Styleguide 1.1.2
 */
@@ -125,7 +125,7 @@ $color-youtube - Official YouTube red
 $color-youtube--dark - Official YouTube red (darker shade)
 
 markup:
-{$modifiers}
+<div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
 
 Styleguide 1.1.3
 */
@@ -140,7 +140,7 @@ $color-secondary - Secondary colour
 $color-button - Primary button colour
 
 markup:
-{$modifiers}
+<div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
 
 Styleguide 1.1.4
 */
@@ -154,11 +154,11 @@ Base styles
 Smart reset, based on @necolas's normalize but updated to use the system's real values.
 
 markup:
-Header
-Three years ago, the average person had no idea wh|at a drone was – o|r associated these flying machines with weapons of warfare. Things have changed. Now, unmanned aerial vehicles, or UAVs (also known as drones) have become one of the world’s most publicised and intriguing technologies, used by people in a wide range of professions, from journalism to humanitarian aid work.
+<h1>Header</h1>
+<p>Three years ago, the average person had no idea wh|at a drone was – o|r associated these flying machines with weapons of warfare. Things have changed. Now, unmanned aerial vehicles, or UAVs (also known as drones) have become one of the world’s most publicised and intriguing technologies, used by people in a wide range of professions, from journalism to humanitarian aid work.
 Farmers have always needed accurate and up-to-date information on the health of their crops and the environmental condition of the land. Agricultural aircraft have been in use since the 1920s, while agricultural experts increasingly use satellites to assess crop health from the sky. UAVs are a natural progression from macro to micro, from large-scale to small-scale farms.
 While UAVs are unlikely to entirely replace manned aircraft or satellites, they have a number of advantages over these more traditional remote-sensing methods. The technology is capable of collecting very high-resolution imagery below the cloud level, with much more detail than the satellite imagery usually available to developing country analysts. They are easy to use: most drone mapping and data-collection missions are now conducted autonomously, meaning that the drone essentially flies itself, while drone data processing tools are becoming less expensive and easier to use.
-Perhaps most importantly, drones are inexpensive. In 2016 it is possible to purchase a useful mapping UAV for less than $1,000. And surprisingly powerful mapping drones can be built at home for even less. While processing software can be expensive, open-source and lower cost options exist. Thanks to these low barriers to entry, UAVs are expected to provide significant help to farmers in developing countries, who historically have found it harder to access aerial imagery, either from manned aircraft or from satellites.
+Perhaps most importantly, drones are inexpensive. In 2016 it is possible to purchase a useful mapping UAV for less than $1,000. And surprisingly powerful mapping drones can be built at home for even less. While processing software can be expensive, open-source and lower cost options exist. Thanks to these low barriers to entry, UAVs are expected to provide significant help to farmers in developing countries, who historically have found it harder to access aerial imagery, either from manned aircraft or from satellites.</p>
 
 Styleguide 1.4
 */
@@ -198,11 +198,9 @@ html {
   font: normal normal 300 12pt/16pt Book Antiqua, Palatino Linotype, Palatino, serif;
   color: #445D87;
   /* 5 */
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-          text-size-adjust: 100%;
+  text-size-adjust: 100%;
   /* 3 */ }
-  @media only screen and (min-width: 1025px) and (max-width: 1280px) and (-webkit-min-device-pixel-ratio: 1), (-webkit-min-device-pixel-ratio: 1), (min-resolution: 96dpi) {
+  @media only screen and (min-width: 1025px) and (max-width: 1280px) and (-webkit-min-device-pixel-ratio: 1), (min-resolution: 96dpi) {
     html {
       font-size: 11pt; } }
 
@@ -709,17 +707,17 @@ Two- or three-column layout – |Aside|Main|Aside. Aside columns are optional an
 .layout.layout--align-middle - Align content vertically centered
 
 markup:
-
-
+<div class="{$modifiers}">
+  <div class="layout__cell layout__cell--aside">
     Sidebar
-
-
+  </div>
+  <div class="layout__cell">
     Main
-
-
+  </div>
+  <div class="layout__cell layout__cell--aside">
     Sidebar
-
-
+  </div>
+</div>
 
 Styleguide 2.1
 */
@@ -728,74 +726,47 @@ Styleguide 2.1
  * 2. IE Fallback
  */
 .layout {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
+  flex-direction: column; }
   .layout__cell {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 100%;
-            flex: 0 1 100%;
+    flex: 0 1 100%;
     max-width: 100%;
     /* 2. */ }
   .layout--reverse {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse; }
+    flex-direction: column-reverse; }
   .layout--even {
-    -webkit-box-flex: 0 !important;
-        -ms-flex: 0 0 auto !important;
-            flex: 0 0 auto !important;
+    flex: 0 0 auto !important;
     max-width: 100%;
     /* 2. */ }
   .layout--align-middle {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
+    align-items: center; }
 
 @media (-ms-high-contrast: active) and (-ms-high-contrast: none) and (min-width: 64em) {
   .layout__cell {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 100%;
-            flex: 0 1 100%;
+    flex: 0 1 100%;
     max-width: 100%;
     /* 2. */ } }
 
 @media only screen and (min-width: 64em) {
   .layout {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row; }
+    flex-direction: row; }
     .layout__cell--aside {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 0 27.77778%;
-              flex: 0 0 27.77778%;
+      flex: 0 0 27.77778%;
       max-width: 27.77778%;
       /* 2. */ }
     .layout__cell--aside + .layout__cell, .layout__cell:first-child:last-child {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 0 44.44444%;
-              flex: 0 0 44.44444%;
+      flex: 0 0 44.44444%;
       max-width: 44.44444%;
       /* 2. */ }
     .layout__cell:first-child:last-child {
       margin-left: auto;
       margin-right: auto; }
     .layout__cell--aside + .layout__cell:last-child {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 1 72.22222%;
-              flex: 0 1 72.22222%;
+      flex: 0 1 72.22222%;
       max-width: 72.22222%;
       /* 2. */ }
     .layout__cell .layout__cell--aside {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 0 38.46154%;
-              flex: 0 0 38.46154%;
+      flex: 0 0 38.46154%;
       max-width: 38.46154%;
       /* 2. */ }
     .layout__cell--divider {
@@ -829,14 +800,14 @@ Layout example, two-column with left sidebar
 .layout.layout--reverse - Reverses container ordering on smallest viewports, is used for source ordering
 
 markup:
-
-
+<div class="{$modifiers}">
+  <div class="layout__cell layout__cell--aside">
     Sidebar
-
-
+  </div>
+  <div class="layout__cell">
     Main
-
-
+  </div>
+</div>
 
 Styleguide 2.1.1
 */
@@ -849,14 +820,14 @@ Layout example, two-column with right sidebar
 .layout.layout--reverse - Reverses container ordering on smallest viewports, is used for source ordering
 
 markup:
-
-
+<div class="{$modifiers}">
+  <div class="layout__cell">
     Main
-
-
+  </div>
+  <div class="layout__cell layout__cell--aside">
     Sidebar
-
-
+  </div>
+</div>
 
 Styleguide 2.1.2
 */
@@ -868,11 +839,11 @@ Layout example, narrow single-column
 .layout - Full width accross viewports (added well class to cell for visibility in this example)
 
 markup:
-
-
+<div class="{$modifiers}">
+  <div class="layout__cell well">
     Main
-
-
+  </div>
+</div>
 
 Styleguide 2.1.3
 */
@@ -882,19 +853,19 @@ Example of a nested Layout
 Layouts can be nested for more complex layouts
 
 markup:
-
-
+<div class="layout layout--reverse layout--split">
+  <div class="layout__cell layout__cell--aside">
     Sidebar
-
-
-
+  </div>
+  <div class="layout__cell layout__cell--main layout layout--reverse layout--split">
+    <div class="layout__cell layout__cell--main">
       Main
-
-
+    </div>
+    <div class="layout__cell layout__cell--aside">
       Sidebar
-
-
-
+    </div>
+  </div>
+</div>
 
 Styleguide 2.1.4
 */
@@ -913,7 +884,7 @@ Gutter
 .gutter--right - Half gutter-width to right side
 
 markup:
-{$modifiers}
+<div class="{$modifiers}">{$modifiers}</div>
 
 Styleguide 2.2.1
 */
@@ -938,7 +909,7 @@ Uses margin instead of padding
 .gutter-outside--left - Half gutter-width to right side
 
 markup:
-{$modifiers}
+<div class="{$modifiers}">{$modifiers}</div>
 
 Styleguide 2.2.2
 */
@@ -966,15 +937,15 @@ A single-column whitespace (left, right, or both)
 .wing--right - Right column padding
 
 markup:
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra pellentesque ligula ut feugiat. Nullam elit libero, rutrum eu odio sed, tempus iaculis lectus. Phasellus felis ex, malesuada vitae libero ac, auctor finibus sapien. Sed odio enim, molestie eu pretium sit amet, commodo ut enim. Praesent eget mi eget enim hendrerit interdum. Ut sit amet orci libero. Vestibulum et leo pretium, semper nisl non, aliquam arcu. Pellentesque malesuada eros a elit imperdiet, sed tempor enim malesuada. Praesent accumsan malesuada eros, in sodales tortor sagittis at. Duis sollicitudin, est sed lobortis semper, felis est hendrerit massa, a tincidunt nulla risus in lectus. Praesent eleifend vestibulum nunc sed mollis. Ut dapibus nisi turpis, id lobortis justo scelerisque vitae. Morbi vel augue in ipsum dignissim aliquet. Vestibulum justo est, venenatis ut massa eu, dignissim vulputate lorem. Morbi porta est quis erat vulputate tristique.
+<div class="{$modifiers}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra pellentesque ligula ut feugiat. Nullam elit libero, rutrum eu odio sed, tempus iaculis lectus. Phasellus felis ex, malesuada vitae libero ac, auctor finibus sapien. Sed odio enim, molestie eu pretium sit amet, commodo ut enim. Praesent eget mi eget enim hendrerit interdum. Ut sit amet orci libero. Vestibulum et leo pretium, semper nisl non, aliquam arcu. Pellentesque malesuada eros a elit imperdiet, sed tempor enim malesuada. Praesent accumsan malesuada eros, in sodales tortor sagittis at. Duis sollicitudin, est sed lobortis semper, felis est hendrerit massa, a tincidunt nulla risus in lectus. Praesent eleifend vestibulum nunc sed mollis. Ut dapibus nisi turpis, id lobortis justo scelerisque vitae. Morbi vel augue in ipsum dignissim aliquet. Vestibulum justo est, venenatis ut massa eu, dignissim vulputate lorem. Morbi porta est quis erat vulputate tristique.</div>
 
 Styleguide 2.3
 */
 .wings, .wing--left {
-  padding-left: 28px; }
+  padding-left: 8.33333%; }
 
 .wings, .wing--right {
-  padding-right: 28px; }
+  padding-right: 8.33333%; }
 
 @media only screen and (min-width: 64em) {
   .wings, .wing--left {
@@ -999,7 +970,7 @@ Adds a margin to the top
 .leader--giant - Triple rhythm top-margin
 
 markup:
-{$modifiers}
+<div class="{$modifiers}">{$modifiers}</div>
 
 Styleguide 2.4.1
 */
@@ -1011,9 +982,6 @@ Styleguide 2.4.1
     margin-top: 32pt; }
   .leader--giant {
     margin-top: 64pt; }
-  @media only screen and (min-width: 48em) {
-    .leader {
-      margin-top: 20pt; } }
   @media only screen and (min-width: 64em) {
     .leader--giant {
       margin-top: 120pt; } }
@@ -1029,7 +997,7 @@ Adds padding to the top
 .leader-inside--giant - Triple rhythm top-margin
 
 markup:
-{$modifiers}
+<div class="{$modifiers}">{$modifiers}</div>
 
 Styleguide 2.4.2
 */
@@ -1065,7 +1033,7 @@ Adds a bottom margin
 .trailer--giant - Triple rhythm top-margin
 
 markup:
-{$modifiers}
+<div class="{$modifiers}">{$modifiers}</div>
 
 Styleguide 2.5.1
 */
@@ -1095,7 +1063,7 @@ Adds bottom padding
 .trailer-inside--giant - Triple rhythm top-margin
 
 markup:
-{$modifiers}
+<div class="{$modifiers}">{$modifiers}</div>
 
 Styleguide 2.5.2
 */
@@ -1125,7 +1093,7 @@ Pulls container into its parent's gutter space
 .bleed--right - Negative half gutter-width to right side
 
 markup:
-{$modifiers}
+<div class="{$modifiers}">{$modifiers}</div>
 
 Styleguide 2.6
 */
@@ -1150,9 +1118,13 @@ If you require your columns to stretch to the full height of your container, use
 .grid - If flexbox is supported, all children will behave like flex items. If not, children are required to have a `.grid__cell class declared on them.
 
 markup:
-
-	 12lines345
-
+<div class="{$modifiers}">
+	 <div class="{$modifiers}__cell {$modifiers}__cell--hero" style="background:Red;">1</div><!--
+  --><div class="grid__cell">2<br>lines</div><!--
+  --><div class="grid__cell">3</div><!--
+  --><div class="grid__cell">4</div><!--
+  --><div class="grid__cell">5</div>
+</div>
 
 Styleguide 2.7
 */
@@ -1196,29 +1168,23 @@ Flexbox implementation of Nicole Sullivan's Media Object
 .media.media--middle - Content vertically aligned middle
 
 markup:
-
-
-
-
-
+<div class="{$modifiers}">
+	<div class="media__image">
+		<img src="https://images.unsplash.com/reserve/Lt0DwxdqRKSQkX7439ey_Chaz_fisheye-11.jpg?q=80&fm=jpg&w=50&h=50&fit=crop"/>
+	</div>
+  <div class="media__content">
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra pellentesque ligula ut feugiat. Nullam elit libero, rutrum eu odio sed, tempus iaculis lectus. Phasellus felis ex, malesuada vitae libero ac, auctor finibus sapien. Sed odio enim, molestie eu pretium sit amet, commodo ut enim. Praesent eget mi eget enim hendrerit interdum. Ut sit amet orci libero. Vestibulum et leo pretium, semper nisl non, aliquam arcu. Pellentesque malesuada eros a elit imperdiet, sed tempor enim malesuada. Praesent accumsan malesuada eros, in sodales tortor sagittis at. Duis sollicitudin, est sed lobortis semper, felis est hendrerit massa, a tincidunt nulla risus in lectus. Praesent eleifend vestibulum nunc sed mollis. Ut dapibus nisi turpis, id lobortis justo scelerisque vitae. Morbi vel augue in ipsum dignissim aliquet. Vestibulum justo est, venenatis ut massa eu, dignissim vulputate lorem. Morbi porta est quis erat vulputate tristique.
-
-
+	</div>
+</div>
 
 Styleguide 2.8
 */
 .media {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex; }
   .media__stretcher {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1; }
+    flex-grow: 1; }
   .media--middle {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
+    align-items: center; }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .media {
@@ -1234,14 +1200,14 @@ Media Object (2)
 Media object with left part stretched as far as possible by applying `media__stretcher` to it.
 
 markup:
-
-
-
-
-
+<div class="media">
+	<div class="media__image media__stretcher">
+		<img src="https://images.unsplash.com/reserve/Lt0DwxdqRKSQkX7439ey_Chaz_fisheye-11.jpg?q=80&fm=jpg&w=50&h=50&fit=crop"/>
+	</div>
+  <div class="media__content">
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra pellentesque ligula ut feugiat. Nullam elit libero, rutrum eu odio sed, tempus iaculis lectus. Phasellus felis ex, malesuada vitae libero ac, auctor finibus sapien. Sed odio enim, molestie eu pretium sit amet, commodo ut enim. Praesent eget mi eget enim hendrerit interdum. Ut sit amet orci libero. Vestibulum et leo pretium, semper nisl non, aliquam arcu. Pellentesque malesuada eros a elit imperdiet, sed tempor enim malesuada. Praesent accumsan malesuada eros, in sodales tortor sagittis at. Duis sollicitudin, est sed lobortis semper, felis est hendrerit massa, a tincidunt nulla risus in lectus. Praesent eleifend vestibulum nunc sed mollis. Ut dapibus nisi turpis, id lobortis justo scelerisque vitae. Morbi vel augue in ipsum dignissim aliquet. Vestibulum justo est, venenatis ut massa eu, dignissim vulputate lorem. Morbi porta est quis erat vulputate tristique.
-
-
+	</div>
+</div>
 
 Styleguide 2.8.1
 */
@@ -1251,14 +1217,14 @@ Media Object (3)
 Media object with right part stretched as far as possible by applying `media__stretcher` to it.
 
 markup:
-
-
-
-
-
+<div class="media">
+	<div class="media__image">
+		<img src="https://images.unsplash.com/reserve/Lt0DwxdqRKSQkX7439ey_Chaz_fisheye-11.jpg?q=80&fm=jpg&w=50&h=50&fit=crop"/>
+	</div>
+  <div class="media__content media__stretcher">
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra pellentesque ligula ut feugiat. Nullam elit libero, rutrum eu odio sed, tempus iaculis lectus. Phasellus felis ex, malesuada vitae libero ac, auctor finibus sapien. Sed odio enim, molestie eu pretium sit amet, commodo ut enim. Praesent eget mi eget enim hendrerit interdum. Ut sit amet orci libero. Vestibulum et leo pretium, semper nisl non, aliquam arcu. Pellentesque malesuada eros a elit imperdiet, sed tempor enim malesuada. Praesent accumsan malesuada eros, in sodales tortor sagittis at. Duis sollicitudin, est sed lobortis semper, felis est hendrerit massa, a tincidunt nulla risus in lectus. Praesent eleifend vestibulum nunc sed mollis. Ut dapibus nisi turpis, id lobortis justo scelerisque vitae. Morbi vel augue in ipsum dignissim aliquet. Vestibulum justo est, venenatis ut massa eu, dignissim vulputate lorem. Morbi porta est quis erat vulputate tristique.
-
-
+	</div>
+</div>
 
 Styleguide 2.8.2
 */
@@ -1270,34 +1236,25 @@ A tier group allows content to be aligned vertically. This implementation relies
 A tier is used in the [`Hero` module - Styleguide 6.9](/#/section/6.9)
 
 markup:
-
-
+<div class="tier-group">
+	<div class="tier">
 		I am a top-aligned tier.
-
-
+	</div>
+	<div class="tier tier--align-bottom">
 		I am a bottom-aligned tier.
-
-
+	</div>
+</div>
 
 Styleguide 2.9
 */
 .tier {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1; }
+  flex-grow: 1; }
   .tier--align-bottom {
-    -webkit-box-flex: 0;
-        -ms-flex-positive: 0;
-            flex-grow: 0; }
+    flex-grow: 0; }
   .tier-group {
     height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
+    flex-direction: column; }
 
 /* 2.10 Align */
 /*
@@ -1311,12 +1268,10 @@ Styleguide 2.10
 
 .align--center {
   left: 50%;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-          transform: translateY(-50%) translateX(-50%); }
+  transform: translateY(-50%) translateX(-50%); }
 
 .align--middle {
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%); }
+  transform: translateY(50%); }
 
 /* 2. */
 /*
@@ -1333,7 +1288,7 @@ Body
 .body--meta - Meta text, dates etc.
 
 markup:
-Drone technology could help farmers around the world monitor their crops, fend off pests, improve land tenure, and more. But to realise its full potential, regulatory regimes are necessary, while keeping citizens’ safety and privacy rights secure.
+<p class="{$modifiers}">Drone technology could help farmers around the world monitor their crops, fend off pests, improve land tenure, and more. But to realise its full potential, regulatory regimes are necessary, while keeping citizens’ safety and privacy rights secure.</p>
 
 Styleguide 3.1
 */
@@ -1370,13 +1325,17 @@ Lead
 .lead - Lead or introduction paragraph
 
 markup:
-Drone technology could help farmers around the world monitor their crops, fend off pests, improve land tenure, and more. But to realise its full potential, regulatory regimes are necessary, while keeping citizens’ safety and privacy rights secure.
+<p class="{$modifiers}">Drone technology could help farmers around the world monitor their crops, fend off pests, improve land tenure, and more. But to realise its full potential, regulatory regimes are necessary, while keeping citizens’ safety and privacy rights secure.</p>
 
 Styleguide 3.2
 */
 .lead {
-  font-size: 18px;
-  line-height: 1.55556; }
+  font-size: 16px;
+  line-height: 1.75; }
+  @media only screen and (min-width: 90em) {
+    .lead {
+      font-size: 18px;
+      line-height: 1.55556; } }
 
 /* 3.3 Headline */
 /*
@@ -1389,7 +1348,7 @@ Titles are different from headings. They are used in title and headline blocks a
 .title.title--section - Extra margin top and bottom
 
 markup:
-Extra, extra – read all about it!
+<h1 class="{$modifiers}">Extra, extra – read all about it!</h1>
 
 Styleguide 3.3
 */
@@ -1416,9 +1375,11 @@ Styleguide 3.3
   .title--meta {
     font-size: 0.83333em;
     line-height: 1.6; }
-  .title--em {
+  .title--em, .title--byline {
     font-family: "Arial Black", Gadget, sans-serif !important;
     font-weight: 900 !important; }
+  .title--byline {
+    font-size: 1.16667em; }
   .title--inverse,
   a .title--inverse,
   .title--inverse a {
@@ -1438,12 +1399,12 @@ Titles are different from headings. They are used in title and headline blocks a
 .title.title--section.title--inverse - Extra margin top and bottom
 
 markup:
-Extra, extra – read all about it!
+<h1 class="{$modifiers}">Extra, extra – read all about it!</h1>
 
 sg-wrapper:
-
-
-
+<div style="padding:32px;background:#445D87;">
+<sg-wrapper-content/>
+</div>
 
 Styleguide 3.3.1
 */
@@ -1457,7 +1418,7 @@ Anchor
 .anchor:active - Active link
 
 markup:
-I am text with a link
+<a class="{$modifiers}" href="javascript:void();">I am text with a link</a>
 
 Styleguide 3.4
 */
@@ -1498,7 +1459,7 @@ Button
 .button.button--stretch - Stretched default button
 
 markup:
-Button
+<button class="{$modifiers}">Button</button>
 
 Styleguide 3.5
 */
@@ -1538,12 +1499,12 @@ Button, inversed
 .button.button--inverse:hover - Hover state button
 
 markup:
-Button
+<button class="{$modifiers}">Button</button>
 
 sg-wrapper:
-
-
-
+<div style="padding:32px;background:#445D87;">
+<sg-wrapper-content/>
+</div>
 
 Styleguide 3.5.1
 */
@@ -1562,9 +1523,9 @@ Text Input
 .fld:empty - Empty state
 
 markup:
-
-
-
+<input class="fld" type="text"/>
+<input class="fld" type="text"/>
+<input class="fld" type="text"/>
 
 Styleguide 3.6.1
 */
@@ -1613,7 +1574,7 @@ Field labels are assigne the title and title--meta classes.
 .fld-label.title.title--meta - Field label
 
 markup:
-Full name
+<label class="fld-label title title--meta">Full name</label>
 
 Styleguide 3.6.6
 */
@@ -1630,11 +1591,11 @@ List
 .list.list--reset.list--tools.list--build - Square bullets
 
 markup:
-
-  List item 1
-  List item 2
-  List item 3
-
+<ul class="{$modifiers}">
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ul>
 
 Styleguide 3.7
 */
@@ -1766,9 +1727,9 @@ Styleguide 3.7
 Brand
 
 markup:
-
-  Sowing Innovation Harvesting Prosperity
-
+<p class="slogan">
+  <em class="is-narrative">Sowing Innovation Harvesting Prosperity</em>
+</p>
 
 width="444px" height="347px" viewBox="0 0 444 347"
 
@@ -1806,8 +1767,7 @@ Styleguide 3.9
         top: 33%;
         left: 0;
         margin-top: 0%;
-        -webkit-transform: translateY(-50%);
-                transform: translateY(-50%); } }
+        transform: translateY(-50%); } }
   @media (orientation: landscape) and (min-width: 64em) {
     .brand--ams, .brand--dnb {
       height: 72pt; } }
@@ -1828,9 +1788,9 @@ Styleguide 3.10
 Brand
 
 markup:
-
-  Sowing Innovation Harvesting Prosperity
-
+<p class="slogan">
+  <em class="is-narrative">Sowing Innovation Harvesting Prosperity</em>
+</p>
 
 width="444px" height="347px" viewBox="0 0 444 347"
 
@@ -1868,8 +1828,7 @@ Styleguide 3.9
         top: 33%;
         left: 0;
         margin-top: 0%;
-        -webkit-transform: translateY(-50%);
-                transform: translateY(-50%); } }
+        transform: translateY(-50%); } }
   @media (orientation: landscape) and (min-width: 64em) {
     .brand--ams, .brand--dnb {
       height: 72pt; } }
@@ -1915,21 +1874,21 @@ Full bleed image. Image source is defined inline.
 The picture is contained in a parent container which hides the overflow.
 
 markup:
-
-
-
-
-
-
-
-
-
-
-
-
+<figure class="cover">
+  <picture class="cover__image">
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source media="(min-width: 1440px)" srcset="/images/content/handheld/tablet.png, /images/content/handheld/tablet--2x.png 2x">
+    <source media="(min-width: 1024px)" srcset="images/content/handheld/smartphone--portrait--2x.png">
+    <source media="(min-width: 768px)" srcset="/images/content/handheld/smartphone--landscape--2x.png 2x">
+    <source media="(orientation: landscape)" srcset="/images/content/handheld/smartphone--landscape.png, /images/content/handheld/smartphone--landscape--2x.png 2x">
+    <source media="(orientation: portrait)" srcset="/images/content/handheld/smartphone--portrait.png, /images/content/handheld/smartphone--portrait--2x.png 2x">
+    <!--[if IE 9]></video><![endif]-->
+    <img class="cover__image" srcset="/images/content/handheld/tablet.png, /images/content/handheld/tablet--2x.png 2x" alt="">
+  </picture>
+  <figcaption">
     Handheld
-
-
+  </figcaption>
+</figure>
 
 
 Styleguide 3.17
@@ -1947,8 +1906,7 @@ Styleguide 3.17
   .cover__image {
     background-color: #FFF;
     background-size: cover;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     position: absolute;
     left: 0;
     top: 0;
@@ -1963,11 +1921,11 @@ Styleguide 3.17
 Quote
 
 markup:
-For 50 years, WWF has been protecting the future of nature.
+<blockquote class="quote lead"><p>For 50 years, WWF has been protecting the future of nature.
 The world's leading conservation organization,
 WWF works in 100 countries and is supported by
 1.2 million members in the United States and
-close to 5 million globally.
+close to 5 million globally.</p></blockquote>
 
 Styleguide 3.18
 */
@@ -1999,11 +1957,8 @@ Styleguide 3.98
 */
 .fx, a,
 .anchor {
-  -webkit-transition-duration: .3s;
-          transition-duration: .3s;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
-  -webkit-transition-property: all;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
   transition-property: all; }
 
 /* 3.99 State */
@@ -2016,7 +1971,7 @@ State
 .is-rooted - Adds position relative.
 
 markup:
-{$modifiers}
+<p class="{$modifiers}">{$modifiers}</p>
 
 Styleguide 3.99
 */
@@ -2063,29 +2018,29 @@ Styleguide 4.0
 Handshake
 
 markup:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        Brickson • Amsterdam – Den Bosch
-
-
-
-      Een stap vooruit in het digitale tijdperk
-      Brickson is een integrated digital agency, we begrijpen mensen én techniek en we helpen je een stap vooruit te zetten in de digitale wereld.
-
-
-
+<figure class="well well--hero cover" style="background: Grey;">
+  <picture class="cover__image">
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source media="(min-width: 1440px)" srcset="/images/content/handshake--tablet.png, /images/content/handshake--tablet--2x.png 2x">
+    <source media="(min-width: 1024px)" srcset="images/content/handshake--smartphone--portrait--2x.png">
+    <source media="(min-width: 768px)" srcset="/images/content/handshake--smartphone--landscape--2x.png 2x">
+    <source media="(orientation: landscape)" srcset="/images/content/handshake--smartphone--landscape.png, /images/content/handshake--smartphone--landscape--2x.png 2x">
+    <source media="(orientation: portrait)" srcset="/images/content/handshake--smartphone--portrait.png, /images/content/handshake--smartphone--portrait--2x.png 2x">
+    <!--[if IE 9]></video><![endif]-->
+    <img class="cover__image" srcset="/images/content/handshake--tablet.png, /images/content/handshake--tablet--2x.png 2x" alt="">
+  </picture>
+  <figcaption class="well well--hero well--tile  handshake__item tile tile__footer wings">
+    <div class="handshake__body">
+      <h1 class="brand tile__body">
+        <span class="is-narrative">Brickson • Amsterdam – Den Bosch</span>
+      </h1>
+    </div>
+    <div class="handshake__body">
+      <h2 class="title trailer--tiny leader--hero">Een stap vooruit in het digitale tijdperk</h2>
+      <p class="trailer leader">Brickson is een integrated digital agency, we begrijpen mensen én techniek en we helpen je een stap vooruit te zetten in de digitale wereld.</p>
+    </div>
+  </figcaption>
+</figure>
 
 Styleguide 4.1
 */
@@ -2096,9 +2051,9 @@ Shop
 .shop - Centered content
 
 markup:
-
-
-Extra, extra – read all about it!
+<article class="shop cover">
+</article>
+<h1 class="tile">Extra, extra – read all about it!</h1>
 
 Styleguide 4.2
 */
@@ -2109,13 +2064,13 @@ Styleguide 4.2
 .tile {
   position: relative; }
   .tile__body {
-    width: 100%;
     position: absolute;
     /* 1 */
     top: 50%;
     /* 1 */
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
     /* 1 */ }
   .tile--shop .tile__body {
     text-align: center;
@@ -2137,20 +2092,20 @@ Person
 An image and some meta data (name, date, occupation, etc)
 
 markup:
-
-
-
-
-
-    Marja Smits
-    Manager Strategie en Marketing Evean
-
-
+<figure class="person bleed">
+  <span class="person__picture gutters">
+    <img src="/images/heads/marja_smits.jpg" class="person__image" width="56" height="56" style="background: Grey;"/>
+  </span>
+  <figcaption class="person__body">
+    <span class="person__name title title--section">Marja Smits</span>
+    <small class="person__occupation">Manager Strategie en Marketing Evean</small>
+  </figcaption>
+</figure>
 
 sg-wrapper:
-
-
-
+<div style="position: relative;">
+<sg-wrapper-content/>
+</div>
 
 Styleguide 4.3
 */
@@ -2191,36 +2146,46 @@ Styleguide 5.1
 Testimonial
 
 markup:
-
-
-
-
-
-
-
-
-
-
-
-
-    Testimonial
-
-
-
-
-
-
-          Marja Smits
-          Manager Strategie en Marketing Evean
-
-
-      Met oog en gevoel voor de mensen in je organisatie gaat Brickson altijd een stap verder.
-
-
-      Case: Vereniging Eigen Huis
-
-
-
+<div class="testimonial cover cover--neutral">
+  <picture class="cover__image">
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source
+      media="(min-width: 1440px) and (orientation: landscape)"
+      srcset="/images/content/w1280px_h1280px--evean.jpg 1280w, /images/content/w1280px_h1280px--evean.jpg 2560w">
+    <source
+      media="(min-width: 1024px) and (orientation: portrait)"
+      srcset="/images/content/w683px_h1024px--evean.jpg 683w, /images/content/w683px_h1024px_2x--evean.jpg 1366w">
+    <source
+      media="(min-width: 768px) and (orientation: portrait)"
+      srcset="/images/content/w896px_h640px--evean.jpg 896w, /images/content/w896px_h640px_2x--evean.jpg 1792w">
+    <source
+      media="(min-width: 520px)and (orientation: landscape)"
+      srcset="/images/content/w1022px_h520px--evean.jpg 1022w, /images/content/w1022px_h520px_2x--evean.jpg 2044w">
+    <source
+      media="(min-width: 320px) and (orientation: portrait)"
+      srcset="/images/content/w520px_h1022px--evean.jpg 520w, /images/content/w520px_h1022px_2x--evean.jpg 1040w">
+    <!--[if IE 9]></video><![endif]-->
+    <img class="cover__image" src="/images/content/w320px_h576px--evean.jpg" alt="">
+  </picture>
+  <div class="well testimonial__body">
+    <h3 class="well__title title title--section">Testimonial</h3>
+    <div class="well__body">
+      <figure class="person bleed">
+        <span class="person__picture gutters">
+          <img src="/images/heads/marja_smits.jpg" class="person__image" width="56" height="56" style="background: Grey;"/>
+        </span>
+        <figcaption class="person__body">
+          <span class="person__name title title--section">Marja Smits</span>
+          <small class="person__occupation">Manager Strategie en Marketing Evean</small>
+        </figcaption>
+      </figure>
+      <blockquote class="quote lead leader"><p>Met oog en gevoel voor de mensen in je organisatie gaat Brickson altijd een stap verder.</p></blockquote>
+    </div>
+    <div class="well__footer  leader--hero">
+      <a class="button button--stretch button--inverse" href="javascript:void();">Case: Vereniging Eigen Huis</a>
+    </div>
+  </div>
+</div>
 
 Styleguide 5.2
 */
@@ -2290,19 +2255,34 @@ Styleguide 5.2
 Introduction
 
 markup:
-
-
-    Blijer, gezonder en welvarender
-    Waar draait digitaal om? Slimme organisaties begrijpen mensen én techniek. Ze weten dat het digitale landschap het belangrijkste speelveld voor innovatie is. Maar bovenal weten ze wat hun klant van ze verwacht en gaat verwachten.
-
-
-
-    In goed gezelschap
-
-
-
-
-
+<div class="introduction">
+  <div class="well">
+    <h2 class="well__title title">Blijer, gezonder en welvarender</h2>
+    <p class="lead">Waar draait digitaal om? Slimme organisaties begrijpen mensen én techniek. Ze weten dat het digitale landschap het belangrijkste speelveld voor innovatie is. Maar bovenal weten ze wat hun klant van ze verwacht en gaat verwachten.</p>
+  </div>
+  <div class="well tile cover">
+    <img
+      class="cover__image"
+      alt=""
+      src="/images/content/in-good-company--tablet.jpg"
+      srcset="
+        /images/content/in-good-company--tablet.jpg 640w,
+        /images/content/in-good-company--smartphone.jpg 480w,
+        /images/content/in-good-company--desktop.jpg 1024w">
+    <h3 class="well__title title title--section">In goed gezelschap</h3>
+    <figure class="tile__body leader-inside">
+      <img
+        class="introduction__cover image--stretch"
+        alt=""
+        src="/images/logos/brands.png"
+        srcset="
+          /images/logos/brands--2x.png 640w,
+          /images/logos/brands.png 480w,
+          /images/logos/brands--3x.png 1024w,
+          /images/logos/brands--3x.png 2x">
+    </figure>
+  </div>
+</div>
 
 
 Styleguide 5.3
@@ -2321,19 +2301,12 @@ Styleguide 5.3
     min-height: 50vh;
     padding-left: 8.33333%;
     padding-right: 8.33333%; }
-  .introduction .tile__body {
-    width: 83.33333%; }
 
 @media only screen and (orientation: landscape) {
   .introduction .well {
     width: 50%;
     min-height: 100%;
     min-height: 100vh; } }
-
-@media (orientation: landscape) and (min-width: 48em) {
-  .introduction__cover {
-    width: auto;
-    max-width: 83.33333%; } }
 
 @media (orientation: portrait) and (min-width: 48em) {
   .introduction {
@@ -2368,19 +2341,34 @@ Styleguide 5.3
 Contact
 
 markup:
-
-
-    Blijer, gezonder en welvarender
-    Waar draait digitaal om? Slimme organisaties begrijpen mensen én techniek. Ze weten dat het digitale landschap het belangrijkste speelveld voor innovatie is. Maar bovenal weten ze wat hun klant van ze verwacht en gaat verwachten.
-
-
-
-    In goed gezelschap
-
-
-
-
-
+<div class="introduction">
+  <div class="well">
+    <h2 class="well__title title">Blijer, gezonder en welvarender</h2>
+    <p class="lead">Waar draait digitaal om? Slimme organisaties begrijpen mensen én techniek. Ze weten dat het digitale landschap het belangrijkste speelveld voor innovatie is. Maar bovenal weten ze wat hun klant van ze verwacht en gaat verwachten.</p>
+  </div>
+  <div class="well tile cover">
+    <img
+      class="cover__image"
+      alt=""
+      src="/images/content/in-good-company--tablet.jpg"
+      srcset="
+        /images/content/in-good-company--tablet.jpg 640w,
+        /images/content/in-good-company--smartphone.jpg 480w,
+        /images/content/in-good-company--desktop.jpg 1024w">
+    <h3 class="well__title title title--section">In goed gezelschap</h3>
+    <figure class="tile__body leader-inside">
+      <img
+        class="introduction__cover image--stretch"
+        alt=""
+        src="/images/logos/brands.png"
+        srcset="
+          /images/logos/brands--2x.png 640w,
+          /images/logos/brands.png 480w,
+          /images/logos/brands--3x.png 1024w,
+          /images/logos/brands--3x.png 2x">
+    </figure>
+  </div>
+</div>
 
 
 Styleguide 5.4
@@ -2553,19 +2541,19 @@ Styleguide 5.6
 Navigation
 
 markup:
-
-
-
-    Cases
-
-
-
-
-        Menu Item
-
-
-
-
+<div class="navigation media">
+  <header class="media media__stretcher">
+    <a class="" href="/"><img class="navigation__home" title="Brickson.nl" src="/images/logos/Brickson-Brandmark.svg"></a>
+    <h3 class="navigation__section-marker title title--section"><a class="anchor--shy anchor--reset" href="/cases/">Cases</a></h3>
+  </header>
+  <nav>
+    <ul class="list--reset list--inline menu">
+      <li>
+        <a class="navigation__section-marker anchor--shy title title--section" href="javascript:void();">Menu Item</a>
+      </li>
+    </ul>
+  </nav>
+</div>
 
 Styleguide 5.7
 */
@@ -2739,9 +2727,7 @@ Styleguide 7.1
     min-height: 25vh;
     clear: both; }
   .p-landingpage .invitation .well {
-    width: 50%;
-    min-height: 100%;
-    min-height: 100vh; }
+    width: 50%; }
   .p-landingpage .tools {
     background-color: #FFF;
     /* 1 */
@@ -2819,23 +2805,17 @@ Styleguide 7.2
 
 @media only screen and (min-width: 32.5em) {
   .posting--hero.layout {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row; }
+    flex-direction: row; }
   .layout__cell .grid--channels .grid__cell {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%; } }
+    flex-basis: 50%; } }
 
 @media only screen and (min-width: 48em) {
   .layout__cell .grid--channels .grid__cell {
-    -ms-flex-preferred-size: 25%;
-        flex-basis: 25%; } }
+    flex-basis: 25%; } }
 
 @media only screen and (min-width: 64em) {
   .layout__cell .grid--channels .grid__cell {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%; }
+    flex-basis: 50%; }
   .layout > .layout__cell {
     padding-right: 14px; }
   .layout > .layout__cell--divider {

@@ -16,13 +16,13 @@ Styleguide 2.3
 .wing {
 	&s,
 	&--left {
-		// padding-left: percentage(1/12);
-		padding-left: $gutter-width;
+		padding-left: percentage(1/12);
+		// padding-left: $gutter-width;
 	}
 	&s,
 	&--right {
-		// padding-right: percentage(1/12);
-		padding-right: $gutter-width;
+		padding-right: percentage(1/12);
+		// padding-right: $gutter-width;
 	}
 	// @include breakpoint($landscape) {
 	//

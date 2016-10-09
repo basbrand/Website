@@ -63,6 +63,10 @@ html {
   color: $color-body; /* 5 */
   text-size-adjust: 100%; /* 3 */
 
+  @include breakpoint("(min-width: 1025px) and (max-width: 1280px) and (-webkit-min-device-pixel-ratio: 1), (min-resolution: 96dpi)") {
+    font-size: 11pt;
+  }
+
 }
 
 /* HTML5 display definitions

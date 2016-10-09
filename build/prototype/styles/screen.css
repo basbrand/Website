@@ -942,10 +942,10 @@ markup:
 Styleguide 2.3
 */
 .wings, .wing--left {
-  padding-left: 28px; }
+  padding-left: 8.33333%; }
 
 .wings, .wing--right {
-  padding-right: 28px; }
+  padding-right: 8.33333%; }
 
 @media only screen and (min-width: 64em) {
   .wings, .wing--left {
@@ -982,9 +982,6 @@ Styleguide 2.4.1
     margin-top: 32pt; }
   .leader--giant {
     margin-top: 64pt; }
-  @media only screen and (min-width: 48em) {
-    .leader {
-      margin-top: 20pt; } }
   @media only screen and (min-width: 64em) {
     .leader--giant {
       margin-top: 120pt; } }
@@ -1333,8 +1330,12 @@ markup:
 Styleguide 3.2
 */
 .lead {
-  font-size: 18px;
-  line-height: 1.55556; }
+  font-size: 16px;
+  line-height: 1.75; }
+  @media only screen and (min-width: 90em) {
+    .lead {
+      font-size: 18px;
+      line-height: 1.55556; } }
 
 /* 3.3 Headline */
 /*
@@ -1374,9 +1375,11 @@ Styleguide 3.3
   .title--meta {
     font-size: 0.83333em;
     line-height: 1.6; }
-  .title--em {
+  .title--em, .title--byline {
     font-family: "Arial Black", Gadget, sans-serif !important;
     font-weight: 900 !important; }
+  .title--byline {
+    font-size: 1.16667em; }
   .title--inverse,
   a .title--inverse,
   .title--inverse a {
@@ -2061,11 +2064,12 @@ Styleguide 4.2
 .tile {
   position: relative; }
   .tile__body {
-    width: 100%;
     position: absolute;
     /* 1 */
     top: 50%;
     /* 1 */
+    left: 0;
+    right: 0;
     transform: translateY(-50%);
     /* 1 */ }
   .tile--shop .tile__body {
@@ -2297,19 +2301,12 @@ Styleguide 5.3
     min-height: 50vh;
     padding-left: 8.33333%;
     padding-right: 8.33333%; }
-  .introduction .tile__body {
-    width: 83.33333%; }
 
 @media only screen and (orientation: landscape) {
   .introduction .well {
     width: 50%;
     min-height: 100%;
     min-height: 100vh; } }
-
-@media (orientation: landscape) and (min-width: 48em) {
-  .introduction__cover {
-    width: auto;
-    max-width: 83.33333%; } }
 
 @media (orientation: portrait) and (min-width: 48em) {
   .introduction {
@@ -2730,9 +2727,7 @@ Styleguide 7.1
     min-height: 25vh;
     clear: both; }
   .p-landingpage .invitation .well {
-    width: 50%;
-    min-height: 100%;
-    min-height: 100vh; }
+    width: 50%; }
   .p-landingpage .tools {
     background-color: #FFF;
     /* 1 */

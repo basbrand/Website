@@ -51,7 +51,7 @@ Styleguide 5.3
    padding-right: percentage(1/12);
  }
  .tile__body {
-   width: percentage(10/12);
+  //  width: percentage(10/12);
  }
 }
 @include breakpoint($landscape) {
@@ -65,8 +65,8 @@ Styleguide 5.3
 }
 @include breakpoint($gt-large-handheld,$landscape) {
  .introduction__cover {
-   width: auto;
-   max-width: percentage(10/12);
+  //  width: auto;
+  //  max-width: percentage(10/12);
  }
 }
 @include breakpoint($gt-large-handheld,$portrait) {

@@ -46,9 +46,13 @@ Styleguide 3.3
       font-size: to-unit(10px, 1em, 12px);
       line-height: to-unit(rhythm(4), 1, 10px);
   }
-  &--em {
+  &--em,
+  &--byline {
     font-family: $font-family--heading !important;
     font-weight: $font-weight--heading !important;
+  }
+  &--byline {
+    font-size: to-unit(14px, 1em, 12px);
   }
   &--inverse {
     &,

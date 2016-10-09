@@ -18,7 +18,7 @@
   </picture>
   <div class="well">
       <h2 class="well__title title">Samen stappen zetten?</h2>
-      <p class="lead leader trailer">Wil je beginnen met een leeg vel of zoek je een slimme hack?  Wij helpen je met ontdekken, bedenken, ontwerpen en bouwen.</p>
+      <p class="lead leader trailer">Wil je beginnen met een leeg vel of zoek je een slimme hack?  Wij helpen je vandaag nog om te beginnen met ontdekken, bedenken, ontwerpen en bouwen. </p>
   </div>
   <div class="well">
       <address>

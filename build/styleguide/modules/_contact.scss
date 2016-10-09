@@ -49,33 +49,65 @@ Styleguide 5.4
    .well {
      padding-left: percentage(1/12);
      padding-right: percentage(1/12);
+     &__title {
+       margin-bottom: rhythm(3);
+     }
    }
  }
- @include breakpoint($landscape) {
+
+ @include breakpoint($gt-small-handheld,$portrait) {
+   .contact {
+     .well {
+       min-height: auto;
+       max-height: auto;
+       height: auto;
+     }
+   }
+ }
+ @include breakpoint($gt-medium-handheld,$landscape) {
    .contact {
      .well {
        width: 50%;
        min-height: 100%;
        min-height: 100vh;
      }
+     .well:first-child {
+       padding-right: gutter();
+     }
+     .well:last-child {
+       padding-left: gutter();
+     }
    }
  }
  @include breakpoint($gt-large-handheld,$landscape) {
-
+   .contact {
+     width: 100%;
+     min-height: 50%;
+     min-height: 50vh;
+    //  height: 50%;
+    //  height: 50vh;
+     .well:first-child,
+     .well:last-child {
+       width: 50%;
+       min-height: auto;
+       max-height: auto;
+       height: auto;
+       padding-left: percentage(1/12);
+       padding-right: percentage(1/12);
+     }
+   }
  }
  @include breakpoint($gt-large-handheld,$portrait) {
    .contact {
      min-height: 50%;
      min-height: 50vh;
+     max-height: auto;
      .well {
        width: 50%;
      }
    }
  }
- @include breakpoint($gt_small_desktop) {
-
- }
- @include breakpoint($gt_small_desktop,$landscape) {
+@include breakpoint($gt_small_desktop,$landscape) {
    .contact {
      float: left;
      width: 50%;
@@ -83,19 +115,22 @@ Styleguide 5.4
      height: 100vh;
      .well {
        width: 100%;
-       min-height: 50%;
-       min-height: 50vh;
+       min-height: auto;
+       max-height: auto;
+       height: auto;
      }
    }
  }
- @include breakpoint($gt_medium_desktop,$landscape) {
+ @include breakpoint($gt_medium_desktop) {
    .contact {
      float: left;
      width: percentage(12/36);
-   }
-   .contact .well {
-     background-color: #FFF; /* 1 */
-     position: relative;
-     z-index: 1;
+     min-height: 50%;
+     min-height: 50vh;
+     .well {
+       width: 100%;
+       position: relative;
+       z-index: 1;
+     }
    }
  }
