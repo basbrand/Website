@@ -1751,7 +1751,7 @@ Styleguide 3.9
     background-image: url("/images/logos/Brickson-Logotype-DNB-RGB-LB.svg"); }
   .brand--handshake {
     height: 88pt; }
-  .brand--cover {
+  .brand--cover, .brand--inverse {
     background-image: url("/images/logos/Brickson-Logotype-RGB-DB--tablet--x2.png");
     background-image: url("/images/logos/Brickson-Logotype-RGB-DB.svg"); }
   @media only screen and (min-width: 48em) {
@@ -1812,7 +1812,7 @@ Styleguide 3.9
     background-image: url("/images/logos/Brickson-Logotype-DNB-RGB-LB.svg"); }
   .brand--handshake {
     height: 88pt; }
-  .brand--cover {
+  .brand--cover, .brand--inverse {
     background-image: url("/images/logos/Brickson-Logotype-RGB-DB--tablet--x2.png");
     background-image: url("/images/logos/Brickson-Logotype-RGB-DB.svg"); }
   @media only screen and (min-width: 48em) {
@@ -1915,6 +1915,14 @@ Styleguide 3.17
     min-width: 100%;
     max-height: 100%;
     min-height: 100%; }
+  @media only screen and (orientation: landscape) and (min-width: 90em) {
+    .cover--hero .cover__image {
+      max-width: initial;
+      max-height: initial;
+      top: auto;
+      left: auto;
+      right: 0;
+      bottom: 0; } }
 
 /* 3.18 quote */
 /*
@@ -2586,6 +2594,104 @@ Styleguide 5.7
     .navigation {
       padding: 16px 2.77778%;
       right: 66.66667%; } }
+
+/* 5.8 Hero */
+/*
+Hero
+
+.hero - Hero
+
+markup:
+<article class="cover">
+  <picture class="cover__image">
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source media="(min-width: 1680px) and (orientation: landscape)" srcset="/images/content/w1680px_h1050px--hero.jpg 1680w, /images/content/w1680px_h1050px_2x--hero.jpg 3360w">
+    <source media="(min-width: 1280px) and (orientation: landscape)" srcset="/images/content/w1280px_h800px--hero.jpg 1280w, /images/content/w1280px_h800px_2x--hero.jpg 2560w">
+    <source media="(min-width: 480px) and (orientation: landscape)" srcset="/images/content/w667px_h375px--hero.jpg 667w, /images/content/w667px_h375px_2x--hero.jpg 1334w">
+    <source media="(min-width: 768px) and (orientation: portrait)" srcset="/images/content/w800px_h1280px--hero.jpg 768w, /images/content/w800px_h1280px_2x--hero.jpg 1600w">
+    <source media="(min-width: 320px) and (orientation: portrait)" srcset="/images/content/w375px_h667px--hero.jpg 320w, /images/content/w375px_h667px_2x--hero.jpg 750w">
+    <!--[if IE 9]></video><![endif]-->
+    <img class="cover__image" src="/images/content/w1280px_h800px--hero.jpg" alt="">
+  </picture>
+  <div class="hero">
+    <header class="hero__header brand brand--inverse">
+      <h1>Brickson • Amsterdam – Den Bosch</h1>
+    </header>
+    <section class="hero__body">
+      <p><strong>Vooruit met digitaal</strong></p>
+      <p>Brickson is er voor organisaties die de volgende stap in digitaal willen maken. Met een strategie, digitaal concept, website of een applicatie.</p>
+    </section>
+  </div>
+</article>
+
+Styleguide 5.8
+*/
+.hero {
+  width: 100%;
+  min-height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  font-size: 1.33333em; }
+  .hero__title {
+    font-size: 1.25em; }
+  .hero__header, .hero__body {
+    padding: 12px 8.33333%;
+    flex: 1 1;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .hero__header, .hero__body {
+    padding: 12px 8.33333% 12px 8.33333%; }
+  .hero__header, .hero__body {
+    justify-content: center; }
+  @media only screen and (orientation: landscape) {
+    .hero__header {
+      width: 50%;
+      padding: 12px 8.33333%;
+      justify-content: flex-end; }
+    .hero__body {
+      padding: 12px 8.33333%;
+      justify-content: flex-start; } }
+  @media only screen and (min-width: 48em) {
+    .hero {
+      font-size: 1.66667em; }
+      .hero__title {
+        font-size: 1.2em; }
+      .hero__header, .hero__body {
+        padding: 24px 20.83333%; }
+      .hero__body {
+        padding-right: 16.66667%; } }
+  @media only screen and (min-width: 64em) {
+    .hero .title {
+      margin-bottom: .5em; } }
+  @media (orientation: landscape) and (min-width: 64em) {
+    .hero__header img {
+      width: auto;
+      max-height: 30vh;
+      max-width: 100%; } }
+  @media (orientation: landscape) and (min-width: 48em) {
+    .hero__header, .hero__body {
+      padding-left: 8.33333%; }
+    .hero__header {
+      padding-right: 8.33333%;
+      justify-content: center; }
+    .hero__body {
+      width: 50%;
+      padding-right: 4.16667%;
+      flex-grow: 1; } }
+  @media (orientation: landscape) and (min-width: 90em) {
+    .hero {
+      font-size: 1.66667em; }
+      .hero__title {
+        font-size: 1.2em; }
+      .hero__header, .hero__body {
+        padding-left: 12.5%; }
+      .hero__header {
+        padding-right: 12.5%;
+        justify-content: flex-end; } }
 
 /* 6. */
 /*

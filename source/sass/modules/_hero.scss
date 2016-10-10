@@ -1,0 +1,128 @@
+/*
+Hero
+
+.hero - Hero
+
+markup:
+<article class="cover">
+  <picture class="cover__image">
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source media="(min-width: 1680px) and (orientation: landscape)" srcset="/images/content/w1680px_h1050px--hero.jpg 1680w, /images/content/w1680px_h1050px_2x--hero.jpg 3360w">
+    <source media="(min-width: 1280px) and (orientation: landscape)" srcset="/images/content/w1280px_h800px--hero.jpg 1280w, /images/content/w1280px_h800px_2x--hero.jpg 2560w">
+    <source media="(min-width: 480px) and (orientation: landscape)" srcset="/images/content/w667px_h375px--hero.jpg 667w, /images/content/w667px_h375px_2x--hero.jpg 1334w">
+    <source media="(min-width: 768px) and (orientation: portrait)" srcset="/images/content/w800px_h1280px--hero.jpg 768w, /images/content/w800px_h1280px_2x--hero.jpg 1600w">
+    <source media="(min-width: 320px) and (orientation: portrait)" srcset="/images/content/w375px_h667px--hero.jpg 320w, /images/content/w375px_h667px_2x--hero.jpg 750w">
+    <!--[if IE 9]></video><![endif]-->
+    <img class="cover__image" src="/images/content/w1280px_h800px--hero.jpg" alt="">
+  </picture>
+  <div class="hero">
+    <header class="hero__header brand brand--inverse">
+      <h1>Brickson • Amsterdam – Den Bosch</h1>
+    </header>
+    <section class="hero__body">
+      <p><strong>Vooruit met digitaal</strong></p>
+      <p>Brickson is er voor organisaties die de volgende stap in digitaal willen maken. Met een strategie, digitaal concept, website of een applicatie.</p>
+    </section>
+  </div>
+</article>
+
+Styleguide 5.8
+*/
+
+.hero {
+  width: 100%;
+  min-height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  font-size: to-unit(16px, 1em, 12px);
+  &__title {
+    font-size: to-unit(20px, 1em, 16px);
+  }
+  &__header,
+  &__body {
+      padding: rhythm(3) percentage(1/12);
+      flex: 1 1;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+  &__header,
+  &__body {
+      padding: rhythm(3) percentage(1/12) rhythm(3) percentage(1/12);
+  }
+  &__header,
+  &__body {
+      justify-content: center;
+  }
+  @include breakpoint($landscape) {
+    &__header {
+        width: 50%;
+        padding: rhythm(3) percentage(1/12);
+        justify-content: flex-end;
+    }
+    &__body {
+        padding: rhythm(3) percentage(1/12);
+        justify-content: flex-start;
+    }
+  }
+  @include breakpoint($gt_large_handheld) {
+    font-size: to-unit(20px, 1em, 12px);
+    &__title {
+      font-size: to-unit(24px, 1em, 20px);
+    }
+    &__header,
+    &__body {
+        padding: rhythm(6) percentage(5/24);
+    }
+    &__body {
+        padding-right: percentage(2/12);
+    }
+  }
+
+  @include breakpoint($gt-small-desktop) {
+    .title {
+      margin-bottom: .5em;
+    }
+  }
+  @include breakpoint($gt-small-desktop, $landscape) {
+    &__header {
+      img {
+        width: auto;
+        max-height: 30vh;
+        max-width: 100%;
+      }
+    }
+  }
+  @include breakpoint($gt_large_handheld,$landscape) {
+    &__header,
+    &__body {
+        padding-left: percentage(2/24);
+    }
+    &__header {
+        padding-right: percentage(2/24);
+        justify-content: center;
+    }
+    &__body {
+        width: 50%;
+        padding-right: percentage(1/24);
+        flex-grow: 1;
+    }
+  }
+  @include breakpoint($gt_medium_desktop,$landscape) {
+    font-size: to-unit(20px, 1em, 12px);
+    &__title {
+      font-size: to-unit(24px, 1em, 20px);
+    }
+    &__header,
+    &__body {
+        padding-left: percentage(3/24);
+    }
+    &__header {
+        padding-right: percentage(3/24);
+        justify-content: flex-end;
+    }
+  }
+}

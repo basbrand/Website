@@ -1,7 +1,7 @@
 <head>
   <meta charset="UTF-8">
-  <title>Brickson</title>
-  <meta name="description" content="Brickson is er voor organisaties die de volgende stap in digitaal willen maken. Werken met Brickson betekent samen ontdekken, bedenken, ontwerpen of bouwen."/>
+  <title>Brickson - Digital agency uit Amsterdam &amp; Den Bosch</title>
+  <meta name="description" content="We helpen jou met de volgende stap in digitaal. Dat betekent samen ontdekken, bedenken, ontwerpen of bouwen."/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#ffffff">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
