@@ -648,53 +648,6 @@ Debug layout
 
 Styleguide 2.0.1
 */
-html:after,
-body:after {
-  display: block;
-  position: fixed;
-  right: 0;
-  background: #fff;
-  padding: 4px; }
-
-html:after {
-  top: 0; }
-  @media (orientation: landscape) and (min-width: 20em) {
-    html:after {
-      content: 'gt-small-handheld - landscape'; } }
-  @media (orientation: portrait) and (min-width: 20em) {
-    html:after {
-      content: 'gt-small-handheld - portrait'; } }
-  @media (orientation: landscape) and (min-width: 32.5em) {
-    html:after {
-      content: 'gt-medium-handheld - landscape'; } }
-  @media (orientation: portrait) and (min-width: 32.5em) {
-    html:after {
-      content: 'gt-medium-handheld - portrait'; } }
-  @media (orientation: landscape) and (min-width: 48em) {
-    html:after {
-      content: 'gt-large-handheld - landscape'; } }
-  @media (orientation: portrait) and (min-width: 48em) {
-    html:after {
-      content: 'gt-large-handheld - portrait'; } }
-  @media (orientation: landscape) and (min-width: 64em) {
-    html:after {
-      content: 'gt-small-desktop - landscape'; } }
-  @media (orientation: portrait) and (min-width: 64em) {
-    html:after {
-      content: 'gt-small-desktop - portrait'; } }
-  @media (orientation: landscape) and (min-width: 90em) {
-    html:after {
-      content: 'gt-medium-desktop - landscape'; } }
-  @media (orientation: portrait) and (min-width: 90em) {
-    html:after {
-      content: 'gt-medium-desktop - portrait'; } }
-  @media (orientation: landscape) and (min-width: 100em) {
-    html:after {
-      content: 'gt-large-desktop - landscape'; } }
-  @media (orientation: portrait) and (min-width: 100em) {
-    html:after {
-      content: 'gt-large-desktop - portrait'; } }
-
 /* 2.1 Layout */
 /*
 Layout
