@@ -42,6 +42,10 @@ Styleguide 3.5
   &--inverse {
     color: $white;
     border-color: $white;
+    &:hover {
+      color: $color-dark-blue;
+      border-color: $color-dark-blue;
+    }
   }
 }
 
