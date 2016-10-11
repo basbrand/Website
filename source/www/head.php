@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
   <link rel="manifest" href="/manifest.json">
-  <link rel="stylesheet" type="text/css" href="/styles/screen.css?id=1474118468489">
+  <link rel="stylesheet" type="text/css" href="/styles/screen.css?id=<?php echo time(); ?>">
   <script src="/javascript/html5shiv.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="/javascript/picturefill.min.js" async></script>
