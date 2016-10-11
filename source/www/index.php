@@ -12,7 +12,7 @@
         <source sizes="(min-width: 768px) and (orientation: portrait) 1536px, 768px" media="(min-width: 768px) and (orientation: portrait)" srcset="/images/content/w800px_h1280px--hero.jpg 768w, /images/content/w800px_h1280px_2x--hero.jpg 1536w">
         <source sizes="(min-width: 320px) and (orientation: portrait) 640px, 320px" media="(min-width: 320px) and (orientation: portrait)" srcset="/images/content/w375px_h667px--hero.jpg 320w, /images/content/w375px_h667px_2x--hero.jpg 640w">
         <!--[if IE 9]></video><![endif]-->
-        <img class="cover__image" src="/images/content/w1280px_h800px--hero.jpg" alt="">
+        <img class="cover__image" src="/images/content/w1280px_h800px--hero.jpg" width="1280" height="800" alt="">
       </picture>
       <div class="hero">
         <header class="hero__header">
@@ -21,7 +21,7 @@
               <!--[if IE 9]><video style="display: none;"><![endif]-->
               <source sizes="(min-width: 280px) 280px" media="(min-width: 280px)" srcset="/images/logos/Brickson-Logotype-RGB-DB.svg 280w">
               <!--[if IE 9]></video><![endif]-->
-              <img class="image--stretch" src="/images/logos/Brickson-Logotype-RGB-DB--tablet--2x.png" alt="">
+              <img class="image--stretch" src="/images/logos/Brickson-Logotype-RGB-DB--tablet--2x.png" width="640" height="340" alt="">
             </picture>
             <h1><span class="is-narrative">Brickson - Digital agency uit Amsterdam &amp; Den Bosch</span></h1>
           </div>
