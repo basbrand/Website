@@ -55,17 +55,17 @@ Styleguide 3.17
   }
   &__image {
     background-color: #FFF;
-    background-size: cover;
     object-fit: cover;
     position: absolute;
     left: 0;
     top: 0;
     z-index: -1;
-
-    max-width: 100%;
+    width: auto;
+    height: 100%;
     min-width: 100%;
-    max-height: 100%;
     min-height: 100%;
+    // max-width: 100%;
+    // max-height: 100%;
 
     // top: 50%; /* 1 */
     // left: 50%; /* 1 */
@@ -74,14 +74,38 @@ Styleguide 3.17
   // img {
   //   max-width: 100%;
   // }
-  @include breakpoint("#{$gt-small-desktop} and (min-aspect-ratio: 16/9)") {
+
+  @include breakpoint($portrait) {
     &--hero &__image {
-        max-width: initial;
-        max-height: initial;
-        top: auto;
+      width: 100%;
+      height: auto;
+      min-height: 0;
+      top: auto;
+      bottom: 0;
+    }
+  }
+  @include breakpoint($landscape) {
+    &--hero &__image {
+        height: auto;
+        max-height: 100%;
         left: auto;
         right: 0;
+    }
+  }
+  @include breakpoint("#{$landscape} and (min-aspect-ratio: 16/9)") {
+    &--hero &__image {
+        top: auto;
         bottom: 0;
+    }
+  }
+  @include breakpoint("(min-aspect-ratio: 16/9)") {
+    &--hero &__image {
+        height: 100%;
+    }
+  }
+  @include breakpoint($portrait) {
+    &--hero &__image {
+        max-width: none;
     }
   }
 }
