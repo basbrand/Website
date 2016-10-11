@@ -28,9 +28,8 @@
         </header>
         <section class="hero__body">
           <div>
-            <h2 class="title leader trailer--tiny"><strong>Een stap vooruit</strong></h2>
-            <p class="leader--tiny trailer">Je hebt ons nu al gevonden? We werken nog aan onze website!<br />Brickson is sinds 1 oktober een integrated digital agency. Onze belofte: we begrijpen mensen én techniek, en helpen je een stap vooruit te zetten in de digitale wereld.</p>
-            <p>Zie je snel. Groet <a class="anchor--reset" href="http://www.teemr.works/">Teemr Works</a> en <a class="anchor--reset" href="http://www.internetpeople.nl/">internetpeople</a></p>
+            <h2 class="title leader trailer--tiny"><strong>De volgende stap in digitaal.</strong></h2>
+            <p class="leader--tiny trailer">Het Amsterdamse bureau Internetpeople is per 1 oktober gefuseerd met internetbureau Teemr Works uit Den Bosch. De twee bureau’s werkten al een jaar samen voor klanten als CTA, Evean, Interbank en Vereniging Eigen Huis.</p>
           </div>
         </section>
       </div>
