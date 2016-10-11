@@ -30,7 +30,7 @@
           <div>
             <h2 class="title leader trailer--tiny"><strong>Een stap vooruit</strong></h2>
             <p class="leader--tiny trailer">Je hebt ons nu al gevonden? We werken nog aan onze website!<br />Brickson is sinds 1 oktober een integrated digital agency. Onze belofte: we begrijpen mensen én techniek, en helpen je een stap vooruit te zetten in de digitale wereld.</p>
-            <p>Zie je snel. Groet <a href="http://www.teemr.works/">Teemr Works</a> en <a href="http://www.internetpeople.nl/">internetpeople</a></p>
+            <p>Zie je snel. Groet <a class="anchor--reset" href="http://www.teemr.works/">Teemr Works</a> en <a class="anchor--reset" href="http://www.internetpeople.nl/">internetpeople</a></p>
           </div>
         </section>
       </div>
