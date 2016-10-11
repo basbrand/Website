@@ -74,7 +74,7 @@ Styleguide 3.17
   // img {
   //   max-width: 100%;
   // }
-  @include breakpoint("#{$landscape} and #{$gt-medium-desktop}") {
+  @include breakpoint("#{$gt-small-desktop} and (min-aspect-ratio: 16/9)") {
     &--hero &__image {
         max-width: initial;
         max-height: initial;
