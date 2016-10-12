@@ -36,13 +36,12 @@ Styleguide 5.8
   display: flex;
   flex-direction: column;
   line-height: 1.5;
-  font-size: to-unit(15px, 1em, 12px);
+  // font-size: to-unit(15px, 1em, 12px);
   &__title {
-    font-size: to-unit(18px, 1em, 15px);
+    // font-size: to-unit(18px, 1em, 15px);
   }
   &__header,
   &__body {
-      padding: rhythm(3) percentage(1/12);
       flex: 1 1;
       flex-grow: 1;
       display: flex;
@@ -51,36 +50,36 @@ Styleguide 5.8
   }
   &__header,
   &__body {
-      padding: rhythm(3) percentage(1/12) rhythm(3) percentage(1/12);
   }
   &__header,
   &__body {
       justify-content: center;
   }
-  &_header {
+  &__header {
+    padding: rhythm(3) percentage(2/12);
     min-height: 30%;
     min-height: 30vh;
   }
   &__body {
-      padding-right: 0;
+      padding: rhythm(3) 0 rhythm(3) percentage(1/12);
       min-height: 50%;
       min-height: 50vh;
   }
   @include breakpoint($landscape) {
     &__header {
+        padding: rhythm(3) percentage(2/12) rhythm(1) percentage(1/12);
         width: 50%;
-        padding: rhythm(3) percentage(1/12);
         justify-content: flex-end;
     }
     &__body {
-        padding: rhythm(3) percentage(1/12);
+        padding: rhythm(1) percentage(1/12) rhythm(3) percentage(1/12);
         justify-content: flex-start;
     }
   }
   @include breakpoint($gt_large_handheld) {
-    font-size: to-unit(18px, 1em, 12px);
+    // font-size: to-unit(18px, 1em, 12px);
     &__title {
-      font-size: to-unit(22px, 1em, 18px);
+      // font-size: to-unit(22px, 1em, 18px);
     }
     &__header,
     &__body {
@@ -91,18 +90,15 @@ Styleguide 5.8
     }
   }
 
+  @include breakpoint($gt_large_handheld,$portrait) {
+    &__header {
+        padding: rhythm(3) percentage(3/12)
+    }
+  }
+
   @include breakpoint($gt-small-desktop) {
     .title {
       margin-bottom: .5em;
-    }
-  }
-  @include breakpoint($gt-small-desktop, $landscape) {
-    &__header {
-      img {
-        width: auto;
-        max-height: 30vh;
-        max-width: 100%;
-      }
     }
   }
   @include breakpoint($gt_large_handheld,$landscape) {
@@ -120,18 +116,24 @@ Styleguide 5.8
         flex-grow: 1;
     }
   }
-  @include breakpoint($gt_medium_desktop,$landscape) {
-    // font-size: to-unit(20px, 1em, 12px);
-    &__title {
-      // font-size: to-unit(24px, 1em, 20px);
+  @include breakpoint($gt-small-desktop, $landscape) {
+    &__header {
+      justify-content: flex-end;
+      img {
+        width: auto;
+        max-height: 25vh;
+        max-width: 100%;
+      }
     }
+  }
+  @include breakpoint($gt_medium_desktop,$landscape) {
+
     &__header,
     &__body {
         padding-left: percentage(3/24);
     }
     &__header {
-        padding-right: percentage(3/24);
-        justify-content: flex-end;
+        padding-right: percentage(4/24);
     }
   }
 }

@@ -30,8 +30,8 @@
           <div>
             <h2 class="title leader trailer--tiny"><strong>De volgende stap in digitaal.</strong></h2>
             <p class="leader--tiny trailer">Het Amsterdamse bureau Internetpeople is per 1 oktober gefuseerd met internetbureau Teemr Works uit Den Bosch. De twee bureau’s werkten al een jaar samen voor klanten als CTA, Evean, Interbank en Vereniging Eigen Huis.</p>
-            <p><a class="button button--inverse" href="mailto:vooruit@brickson.nl?subject=Vooruit%20met%20Brickson">vooruit@brickson.nl</a></p>
-            <p class="leader body--whisper"><a class="anchor--inverse" href="/internetpeople-en-teemr-works-samen-verder-als-brickson-20161001.html">Lees het persbericht</a></p>
+            <p>Klaar voor de volgende stap? Stuur een mail naar <a class="anchor--inverse" href="mailto:vooruit@brickson.nl?subject=Vooruit%20met%20Brickson">vooruit@brickson.nl</a></p>
+            <p class="leader body--whisper"><a class="anchor--inverse button button--inverse" href="/internetpeople-en-teemr-works-samen-verder-als-brickson-20161001.html">Lees het persbericht</a></p>
           </div>
         </section>
       </div>
