@@ -16,3 +16,27 @@ $line-height-unit: 1%;
 $border-radius: 0;
 
 $border-width: 2px;
+
+$font-style: normal;
+$font-variant: normal;
+$font-weight: normal;
+$font-size: 16px;
+$line-height: rhythm(6) / $font-size;
+$font-family: "Arial Black";
+
+@debug $line-height;
+
+/*
+ * Gets the number of whole rhythms from a value in px
+ * E.g. if the rhythm equals 4 and the value given is 40, the funtion returns 10
+ */
+@function extract-rhythm($value) {
+
+  // Only allow px values
+  @if unitless($value) OR unit($value)!="px"  {
+    @warn "Value must be in px";
+    @return false;
+  }
+
+  @return ceil( $value / $rhythm );
+}
