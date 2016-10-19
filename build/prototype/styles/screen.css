@@ -2171,33 +2171,17 @@ markup:
 
 sg-wrapper:
 <div class="sg-container">
+  <style>
+  </style>
   <sg-wrapper-content/>
 </div>
 
 Styleguide 4.1.6
 */
 .pod {
-  /* Debug */
-  background: url("https://hd.unsplash.com/photo-1428542244207-0aaec316e609") no-repeat center;
-  background-size: cover;
-  /* End Debug */
   width: 100%;
   min-height: 100%;
   min-height: 100vh; }
-  .pod__seed {
-    background: rgba(0, 0, 0, 0.3); }
-  .pod__seed + .pod__seed {
-    background: rgba(0, 0, 0, 0.6); }
-  .pod--rhino {
-    background-image: url("http://animal-dream.com/data_images/rhino/rhino8.jpg"); }
-  .pod--hippo {
-    background-image: url("http://i.imgur.com/hfpgikz.jpg"); }
-  .pod--kudu {
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/25/Kudu1.jpg"); }
-  .pod--serval {
-    background-image: url("http://img.wallpaperfolder.com/f/53CC12F5FCA5/serval-bush-cat-1956x1303-196078.jpg"); }
-  .pod--baboon {
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/97/BABOON-e.JPG"); }
   .pod__seed {
     float: left;
     width: 100%;
@@ -2255,8 +2239,7 @@ Styleguide 4.1.6
       max-width: 66.66667%; }
     .pod__serval {
       position: relative; }
-    .pod--baboon,
-    .pod--serval .pod__seed {
+    .pod--baboon {
       width: 33.33333%; } }
 
 /* 4.2 Tile */
@@ -2355,7 +2338,7 @@ Styleguide 5.0
 Handshake
 
 markup:
-<section class="pod pod--kudu handshake cover is-root">
+<section class="pod pod--kudu pod--rhino handshake cover is-root">
   <picture>
     <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
   </picture>
@@ -2376,7 +2359,7 @@ Styleguide 5.1
 Testimonial
 
 markup:
-<section class="pod pod--aardvark cover">
+<section class="pod pod--serval pod--rhino cover">
   <picture>
     <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
   </picture>
