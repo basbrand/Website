@@ -1,0 +1,38 @@
+/*
+Invitation
+
+markup:
+<section class="pod pod--rhino invitation">
+  <div class="pod__seed">
+    {$modifiers}
+  </div>
+  <ul class="pod__seed grid">
+    <li class="grid__cell cover">
+      <picture>
+        <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+      </picture>
+    </li>
+    <li class="grid__cell cover">
+      <picture>
+        <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+      </picture>
+    </li>
+    <li class="grid__cell cover">
+      <picture>
+        <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+      </picture>
+    </li>
+    <li class="grid__cell cover">
+      <picture>
+        <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+      </picture>
+    </li>
+  </ul>
+</section>
+
+Styleguide 5.8
+*/
+
+.invitation {
+    // width: percentage(24/36);
+}

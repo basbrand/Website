@@ -35,7 +35,9 @@ Styleguide 3.17
   overflow: hidden;
   background-color: transparent !important;
   color: $white;
-  box-shadow: inset 1px 1px 0 $white, inset -1px -1px 0 $white;
+  // box-shadow: inset 1px 1px 0 $white, inset -1px -1px 0 $white;
+  outline: .5pt solid $white;
+  outline-offset: .5pt;
   &--light {
     // color: $color-dark-blue;
     // .button {
