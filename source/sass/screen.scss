@@ -1,4 +1,5 @@
 // Copyright (C) 2016 Babs Gösgens. Licensed under MIT; see LICENSE.txt
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black|Archivo+Narrow|Lora:400,400i');
 
 @import "../piecss/utilities";
 @import "utilities";
@@ -26,3 +27,17 @@
 
 /* 8. */
 @import "trumps";
+
+/*
+ * brrrrrrrrrr
+ */
+.sg-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0; top: 0; right: 0; bottom: 0;
+}
+
+.debug {
+  background: Grey;
+}

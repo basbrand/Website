@@ -23,6 +23,7 @@ Styleguide 3.3
   font: $font-weight--heading #{to-unit(18px, 1em, 12px)}/#{to-unit(rhythm(6), 1, 20px)} $font-family--heading;
   // display: inline-block; /* 1 */
   width: 100%; /* 1 */
+  letter-spacing: -0.025em;
   a &,
   & a {
     text-decoration: none;
