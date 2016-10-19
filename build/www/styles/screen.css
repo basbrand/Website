@@ -2019,6 +2019,7 @@ Pods are layout containers that can behave in different ways. There are six (6) 
 * Kudu pod `used for handshake module`
 * Serval pod `used for testimonial module`
 * Baboon pod `used for introduction pod and contact module`
+* Zebra pod `used for invitation module`
 * Rhino pod `utility modifier to be used in combination with other pods, limits to 24 columns wide on large desktop (and up) landscape.`
 
 Styleguide 4.1
@@ -2153,6 +2154,33 @@ sg-wrapper:
 Styleguide 4.1.5
 */
 /*
+Zebra pod
+
+Full bleed on mobile views. Half height, full width on tablet (and up) portrait. Full height, half width on tablet (and up) landscape. 12/36 Width on medium desktop (and up) landscape.
+
+Holds one (1) to two (2) pod seeds.
+
+.pod.pod--zebra - Zebra pod.
+.pod.pod--zebra.pod--rhino - Kudu pod, Rhino modifier.
+
+markup:
+<section class="{$modifiers}">
+  <div class="pod__seed">
+    {$modifiers}
+  </div>
+  <div class="pod__seed">
+    {$modifiers}
+  </div>
+</section>
+
+sg-wrapper:
+<div class="sg-container">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 4.1.6
+*/
+/*
 Rhino pod
 
  24 Columns width on large desktop (and up) landscape.
@@ -2176,7 +2204,7 @@ sg-wrapper:
   <sg-wrapper-content/>
 </div>
 
-Styleguide 4.1.6
+Styleguide 4.1.7
 */
 .pod {
   width: 100%;
@@ -2199,13 +2227,17 @@ Styleguide 4.1.6
       width: 50%;
       min-height: 100%;
       min-height: 100vh; }
+    .pod--kudu .pod__seed,
+    .pod--zebra .pod__seed {
+      width: 50%; }
     .pod--kudu .pod__seed {
-      width: 50%;
       float: none; }
     .pod--baboon {
       width: 50%; }
     .pod--baboon .pod__seed {
-      width: 100%;
+      width: 100%; }
+    .pod--baboon .pod__seed,
+    .pod--zebra .pod__seed {
       min-height: 50%;
       min-height: 50vh; } }
   @media only screen and (max-aspect-ratio: 6 / 5) {
@@ -2218,7 +2250,10 @@ Styleguide 4.1.6
       min-height: 50vh; } }
   @media only screen and (min-width: 48em) {
     .pod__seed {
-      padding: 0 8.33333%; } }
+      padding: 0 8.33333%; }
+    .pod--kudu, .pod--zebra {
+      min-height: 50%;
+      min-height: 50vh; } }
   @media only screen and (min-width: 64em) {
     .pod__serval {
       position: relative; }
@@ -2706,7 +2741,7 @@ Styleguide 5.7
 Invitation
 
 markup:
-<section class="pod pod--rhino invitation">
+<section class="pod pod--zebra pod--rhino invitation cover">
   <div class="pod__seed">
     {$modifiers}
   </div>
@@ -2829,6 +2864,9 @@ Styleguide 7.2
 @media only screen and (min-width: 90em) {
   .headline.wings {
     padding-left: 11.11111%; } }
+
+.pod__seed.grid {
+  padding: 0; }
 
 /*
  * brrrrrrrrrr
