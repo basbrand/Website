@@ -5,8 +5,8 @@ Article
 .article.article--has-aside - Article with sidebar
 
 markup:
+<sg-insert>5.9</sg-insert>
 <article class="{$modifiers}">
-  <sg-insert>5.9</sg-insert>
   <div class="article__main isolation">
     <div class="wings">
       <sg-insert>4.4</sg-insert>
@@ -47,6 +47,8 @@ Styleguide 5.6
 */
 
 .article {
+  display: flex;
+  flex-direction: column;
   &__main {
     h2 {
       font-size: to-unit(24px);
@@ -62,6 +64,7 @@ Styleguide 5.6
 
   }
   @include breakpoint($gt_small_desktop) {
+    flex-direction: row;
     .wings {
       padding-left: percentage(4/24);
       padding-right: percentage(4/24);

@@ -2321,8 +2321,8 @@ Article
 .article.article--has-aside - Article with sidebar
 
 markup:
+<sg-insert>5.9</sg-insert>
 <article class="{$modifiers}">
-  <sg-insert>5.9</sg-insert>
   <div class="article__main isolation">
     <div class="wings">
       <sg-insert>4.4</sg-insert>
@@ -2361,39 +2361,41 @@ markup:
 
 Styleguide 5.6
 */
-.article__main h2 {
-  font-size: 1.5em;
-  line-height: 1; }
-
-.article__main h2,
-.article__main p {
-  margin: 24px 0; }
-
-@media only screen and (min-width: 64em) {
-  .article .wings {
-    padding-left: 16.66667%;
-    padding-right: 16.66667%; }
-  .article__main, .article__aside {
-    float: left; }
-  .article__main {
-    width: 66.66667%; }
-  .article__aside {
-    width: 33.33333%; }
-    .article__aside .wings {
-      padding-left: 8.33333%;
-      padding-right: 8.33333%; } }
-
-@media only screen and (min-width: 90em) {
+.article {
+  display: flex;
+  flex-direction: column; }
   .article__main h2 {
-    font-size: 2em;
-    line-height: 1.5;
-    margin: 48px 0 24px 0; }
+    font-size: 1.5em;
+    line-height: 1; }
+  .article__main h2,
   .article__main p {
-    font-size: 1.125em;
-    line-height: 1.55556; }
-  .article .wings {
-    padding-left: 16.66667%;
-    padding-right: 16.66667%; } }
+    margin: 24px 0; }
+  @media only screen and (min-width: 64em) {
+    .article {
+      flex-direction: row; }
+      .article .wings {
+        padding-left: 16.66667%;
+        padding-right: 16.66667%; }
+      .article__main, .article__aside {
+        float: left; }
+      .article__main {
+        width: 66.66667%; }
+      .article__aside {
+        width: 33.33333%; }
+        .article__aside .wings {
+          padding-left: 8.33333%;
+          padding-right: 8.33333%; } }
+  @media only screen and (min-width: 90em) {
+    .article__main h2 {
+      font-size: 2em;
+      line-height: 1.5;
+      margin: 48px 0 24px 0; }
+    .article__main p {
+      font-size: 1.125em;
+      line-height: 1.55556; }
+    .article .wings {
+      padding-left: 16.66667%;
+      padding-right: 16.66667%; } }
 
 /* 5.7 Navigation */
 /*
