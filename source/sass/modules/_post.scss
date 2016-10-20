@@ -1,21 +1,26 @@
 /*
 Article
 
-.article - Regular article
-.article.article--has-aside - Article with sidebar
+.post - Regular article
+.post.post--has-aside - Article with sidebar
 
 markup:
 <article class="{$modifiers}">
-  <header class="article__header pod pod--hippo cover isolation">
+  <header class="post__header pod pod--hippo cover isolation">
     <picture>
       <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
     </picture>
-    <div class="seed wings">
-      <h1 class="article__title title--inverse">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit</h1>
-      <p class="article__lead body--inverse">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus, dapibus rutrum ipsum gravida et. Integer lectus nisi, facilisis sit amet eleifend nec, pharetra ut augue. Integer quam nunc, consequat nec.</p>
+    <div class="pod__seed seed wings">
+      <div class="seed__header">
+        <img style="max-height: 100px;" src="../images/logos/Brickson-Logotype-RGB-DB.svg" alt="Brickson • Amsterdam – Den Bosch">
+      </div>
+      <div class="seed__footer leader trailer">
+        <h1 class="post__title title--inverse leader trailer">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit</h1>
+        <p class="post__lead body--inverse leader trailer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+      </div>
     </div>
   </header>
-  <div class="article__main isolation">
+  <div class="post__main isolation">
     <div class="wings">
       <sg-insert>4.4</sg-insert>
       <h2>Lorem Ipsum Dolor Sit Amet</h2>
@@ -37,7 +42,7 @@ markup:
       </div>
     </footer>
   </div>
-  <aside class="article__aside well well--stork isolation seed">
+  <aside class="post__aside well well--stork isolation seed">
     <section class="leader--giant trailer wings seed__body">
       <sg-insert>3.18-2</sg-insert>
     </section>
@@ -54,7 +59,7 @@ markup:
 Styleguide 5.6
 */
 
-.article {
+.post {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -62,46 +67,59 @@ Styleguide 5.6
     flex: 1 0 100%;
     width: 100%;
   }
-  &__title {
-    font-size: to-unit(62px);
-    line-height: to-unit(rhythm(19), 1, 62px);
-  }
-  &__lead {
-    font-size: to-unit(20px);
-    line-height: to-unit(rhythm(8), 1, 20px);
-  }
-  &__main {
-    h2 {
-      font-size: to-unit(24px);
-      line-height: to-unit( rhythm(6), 1, 24px);
+  .navbar + & {
+    .pod__seed {
+      padding-top: rhythm(20);
     }
-    h2,
-    p {
-        margin: rhythm(6) 0;
-    }
+  }
+  &__title,
+  &__main h2 {
+    font-size: to-unit(24px);
+    line-height: to-unit( rhythm(6), 1, 24px);
+  }
+  &__title,
+  &__main h2,
+  &__main p {
+      margin: rhythm(6) 0;
   }
   &__aside {}
   @include breakpoint($gt-large-handheld) {
 
   }
   @include breakpoint($gt_small_desktop) {
-    .wings {
-      padding-left: percentage(4/24);
-      padding-right: percentage(4/24);
-    }
     flex-direction: row;
-    &__title {
-      font-size: to-unit(62px);
-      line-height: to-unit(rhythm(19), 1, 62px);
+    .navbar + & {
+      .pod__seed {
+        padding-top: rhythm(30);
+      }
     }
     &__main,
     &__aside {
       float: left;
     }
-    &__header .seed,
     &__main {
       width: percentage(24/36);
     }
+
+    .wings {
+      padding-left: percentage(4/24);
+      padding-right: percentage(4/24);
+    }
+    &__header {
+      .wings {
+        padding-left: percentage(4/36);
+        padding-right: percentage(4/36);
+      }
+    }
+    &__title {
+      font-size: to-unit(48px);
+      line-height: to-unit(rhythm(14), 1, 48px);
+    }
+    &__lead {
+      font-size: to-unit(18px);
+      line-height: to-unit(rhythm(8), 1, 18px);
+    }
+
     &__aside {
       width: percentage(12/36);
       .wings {
@@ -109,8 +127,21 @@ Styleguide 5.6
         padding-right: percentage(1/12);
       }
     }
+    &__title,
+    &__lead {
+      padding-right: percentage(4/30);
+    }
   }
   @include breakpoint($gt-medium-desktop) {
+
+    &__title {
+      font-size: to-unit(62px);
+      line-height: to-unit(rhythm(18), 1, 62px);
+    }
+    &__lead {
+      font-size: to-unit(20px);
+      line-height: to-unit(rhythm(8), 1, 20px);
+    }
     &__main {
       h2 {
         font-size: to-unit(32px);
@@ -125,6 +156,17 @@ Styleguide 5.6
     .wings {
       padding-left: percentage(4/24);
       padding-right: percentage(4/24);
+    }
+
+    &__header {
+      .wings {
+        padding-left: percentage(4/36);
+        padding-right: percentage(12/36);
+      }
+    }
+    &__title,
+    &__lead {
+      padding-right: percentage(2/30);
     }
   }
 }

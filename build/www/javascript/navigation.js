@@ -1,1 +1,94 @@
-!function(t,i){function e(e,n){this.element=e,this.cache={},this.width=i(t).width(),this.config={calculate:!1},i.extend(this.config,n),this.orderItems(),i(this.element).addClass("is-prioritised"),i(t).on("resize",this.hideElements.bind(this)),i(t).trigger("resize")}e.prototype.orderItems=function(){var t=i(this.element).children();t=t.sort(function(t,e){var n=i(t),s=i(e);return n.data("priority")>0&&s.data("priority")>0?n.data("priority")>s.data("priority")?1:-1:1}),i(this.element).html(t)},e.prototype.getContentWidth=function(){var t=0;return i(this.element).children().each(function(e,n){i(n).hasClass("is-demoted")||(t+=parseInt(i(n).width()))}),t},e.prototype.hideElements=function(e){var n=this.getContentWidth(),s=i(this.element).width();if(n>s)for(i(this.element).find("[data-priority=0]").addClass("is-demoted");this.getContentWidth()>s;)i(this.element).find("li:not(is-demoted):last").addClass("is-demoted");else if(this.width<i(t).width())for(this.width=i(t).width();parseInt(i(this.element).find("li.is-demoted:first").width())+n<s&&i(this.element).find("li.is-demoted").length>0;)i(this.element).find("li.is-demoted:last").removeClass("is-demoted")},i.fn.PriorityNavigation=function(t){i(this).each(function(n,s){var d=i(s);d.data("prioritised")||(d.data("prioritised","set"),new e(s,t))})}}(window,window.jQuery);
+/**
+ * The following classes are in effect:
+ * - is-prioritised (Is added when there are items hidden)
+ * - is-demoted (Is for the items that are hidden)
+ * - data-priority="n"
+ *      - Highest Priority 1
+ *      - When no priority is given priority is based on DOM
+ *      - If there is a mix, the items with "data-priority" have more priority
+ *      - data-priority="0" are always hidden when data is prioritised!
+ */
+
+;(function(window, $) {
+    function Navigation(element, config) {
+        this.element = element;
+        this.cache = {};
+        this.width = $(window).width();
+        this.config = {
+            calculate: false
+        };
+
+        $.extend(this.config, config);
+
+        this.orderItems();
+
+        $(this.element).addClass('is-prioritised');
+
+        $(window).on('resize', this.hideElements.bind(this));
+        $(window).trigger('resize');
+    }
+
+    Navigation.prototype.orderItems = function() {
+        var items = $(this.element).children();
+
+        items = items.sort(function(a, b) {
+            var $a = $(a),
+                $b = $(b);
+
+            if($a.data('priority') > 0 && $b.data('priority') > 0) {
+                return ($a.data('priority') > $b.data('priority') ? 1 : -1);
+            }
+
+            return 1;
+        });
+
+        $(this.element).html(items);
+    };
+
+    Navigation.prototype.getContentWidth = function() {
+        var total = 0;
+
+        $(this.element).children().each(function(key, element) {
+            if(!$(element).hasClass('is-demoted')) {
+                total += parseInt($(element).width());
+            }
+        });
+
+        return total;
+    };
+
+    Navigation.prototype.hideElements = function(event) {
+        var contentWidth = this.getContentWidth(),
+            elementWidth = $(this.element).width();
+
+        if(contentWidth > elementWidth) {
+            $(this.element).find('[data-priority=0]').addClass('is-demoted');
+
+            while (this.getContentWidth() > elementWidth) {
+                $(this.element).find('li:not(is-demoted):last').addClass('is-demoted');
+            }
+        } else {
+            if(this.width < $(window).width()) {
+                this.width = $(window).width();
+
+                while ((parseInt($(this.element).find('li.is-demoted:first').width()) + contentWidth) < elementWidth && $(this.element).find('li.is-demoted').length > 0) {
+                    $(this.element).find('li.is-demoted:last').removeClass('is-demoted');
+                }
+            }
+        }
+
+    };
+
+    $.fn.PriorityNavigation = function(config) {
+        $(this).each(function(key, element) {
+            var $element = $(element);
+
+            if(!$element.data('prioritised')) {
+                $element.data('prioritised', 'set');
+
+                new Navigation(element, config);
+            }
+        });
+    }
+
+})(window, window.jQuery);
