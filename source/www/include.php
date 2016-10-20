@@ -30,5 +30,3 @@ switch($extension) {
         $analytics_code = 'UA-84990043-2';
         break;
 }
-
-$debug = true;
