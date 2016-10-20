@@ -1735,25 +1735,34 @@ Styleguide 3.17
 /*
 Quote
 
+.quote - Regular quote, used in testimonial pod
+.quote.quote--l - Large quote, used in case
+
 markup:
-<blockquote class="quote lead"><p>For 50 years, WWF has been protecting the future of nature.
-The world's leading conservation organization,
-WWF works in 100 countries and is supported by
-1.2 million members in the United States and
-close to 5 million globally.</p></blockquote>
+<blockquote class="{$modifiers} leader trailer"><p>Met oog en gevoel voor de mensen in je organisatie gaat Brickson altijd een stap verder.</p></blockquote>
+<figure class="person bleed leader trailer">
+  <span class="person__picture gutters">
+    <img src="/images/heads/marja_smits.jpg" class="person__image" width="56" height="56" style="background: Grey;"/>
+  </span>
+  <figcaption class="person__body">
+    <span class="person__name title title--section">Marja Smits</span>
+    <small class="person__occupation">Manager Strategie en Marketing Evean</small>
+  </figcaption>
+</figure>
 
 Styleguide 3.18
 */
 .quote {
   position: relative;
-  quotes: "“" "”" "‘" "’";
   font-style: italic; }
+  .quote--l {
+    font-size: 1.5em;
+    line-height: 1.5; }
   .quote:before {
-    position: absolute;
-    right: 100%;
+    display: block;
     content: open-quote; }
-  .quote p {
-    display: inline; }
+  .quote:before, .quote:after {
+    font: normal normal 4em/.5 Arial, Helvetica, Gadget, sans-serif; }
 
 /* 3.98 Fx */
 /*
@@ -2328,9 +2337,14 @@ Article
 
 markup:
 <article class="{$modifiers}">
+  <sg-insert>5.9</sg-insert>
   <div class="article__main isolation">
     <div class="wings">
       <sg-insert>4.4</sg-insert>
+      <h2>Lorem Ipsum Dolor Sit Amet</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+      <h2>Lorem Ipsum Dolor Sit Amet</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
       <h2>Lorem Ipsum Dolor Sit Amet</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
       <h2>Lorem Ipsum Dolor Sit Amet</h2>
@@ -2346,30 +2360,28 @@ markup:
       </div>
     </footer>
   </div>
-  <aside class="article__aside well well--stork isolation">
-    <div class="seed__body leader trailer wings">
-      <figure class="person bleed">
-        <span class="person__picture gutters">
-          <img src="/images/heads/marja_smits.jpg" class="person__image" width="56" height="56" style="background: Grey;"/>
-        </span>
-        <figcaption class="person__body">
-          <span class="person__name title title--section">Marja Smits</span>
-          <small class="person__occupation">Manager Strategie en Marketing Evean</small>
-        </figcaption>
-      </figure>
-      <blockquote class="quote lead leader"><p>Met oog en gevoel voor de mensen in je organisatie gaat Brickson altijd een stap verder.</p></blockquote>
-    </div>
+  <aside class="article__aside well well--stork isolation seed">
+    <section class="leader--giant trailer wings seed__body">
+      <sg-insert>3.18-2</sg-insert>
+    </section>
+    <section class="leader--giant trailer wings seed__body">
+      <sg-insert>3.18-2</sg-insert>
+    </section>
+    <section class="leader--giant trailer wings seed__footer">
+      <h3 class="title title--section leader trailer">Over Brickson</h3>
+      <p class="body--whisper">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus, dapibus rutrum ipsum gravida et. Integer lectus nisi, facilisis sit amet eleifend nec, pharetra ut augue. Integer quam nunc, consequat nec egestas ac, volutpat ac nisi. Sed consectetur dignissim dignissim. Donec pretium est site.</p>
+    </section>
   </aside>
 </article>
 
 Styleguide 5.6
 */
-.article h2 {
+.article__main h2 {
   font-size: 1.5em;
   line-height: 1; }
 
-.article h2,
-.article p {
+.article__main h2,
+.article__main p {
   margin: 24px 0; }
 
 @media only screen and (min-width: 64em) {
@@ -2387,11 +2399,11 @@ Styleguide 5.6
       padding-right: 8.33333%; } }
 
 @media only screen and (min-width: 90em) {
-  .article h2 {
+  .article__main h2 {
     font-size: 2em;
     line-height: 1.5;
     margin: 48px 0 24px 0; }
-  .article p {
+  .article__main p {
     font-size: 1.125em;
     line-height: 1.55556; }
   .article .wings {
