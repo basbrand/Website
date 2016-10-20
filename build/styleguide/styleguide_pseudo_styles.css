@@ -5,235 +5,54 @@ a.pseudo-class-hover {
 
 a.pseudo-class-active,
 .anchor.pseudo-class-active {
-  color: #67AB43;
+  color: #57B0B6;
 }
 
-.theme--blue a.pseudo-class-active,
-.theme--blue
-    .anchor.pseudo-class-active {
-  color: #56C0DD;
-}
-
-.theme--lime a.pseudo-class-active,
-.theme--lime
-    .anchor.pseudo-class-active {
-  color: #C1D435;
-}
-
-.theme--yellow a.pseudo-class-active,
-.theme--yellow
-    .anchor.pseudo-class-active {
-  color: #FACF21;
-}
-
-.theme--gold a.pseudo-class-active,
-.theme--gold
-    .anchor.pseudo-class-active {
-  color: #EB942C;
-}
-
-.theme--orange a.pseudo-class-active,
-.theme--orange
-    .anchor.pseudo-class-active {
-  color: #E26435;
-}
-
-.theme--salmon a.pseudo-class-active,
-.theme--salmon
-    .anchor.pseudo-class-active {
-  color: #EB735D;
-}
-
-.theme--red a.pseudo-class-active,
-.theme--red
-    .anchor.pseudo-class-active {
-  color: #EC2D10;
-}
-
-.theme--burgundy a.pseudo-class-active,
-.theme--burgundy
-    .anchor.pseudo-class-active {
-  color: #BA222A;
-}
-
-.theme--purple a.pseudo-class-active,
-.theme--purple
-    .anchor.pseudo-class-active {
-  color: #9B3381;
-}
-
-a.pseudo-class-visited,
-.theme--blue a.pseudo-class-visited,
-.theme--lime a.pseudo-class-visited,
-.theme--yellow a.pseudo-class-visited,
-.theme--gold a.pseudo-class-visited,
-.theme--orange a.pseudo-class-visited,
-.theme--salmon a.pseudo-class-visited,
-.theme--red a.pseudo-class-visited,
-.theme--burgundy a.pseudo-class-visited,
-.theme--purple a.pseudo-class-visited,
-a .is-heir.pseudo-class-visited,
+a.pseudo-class-visited .is-heir.pseudo-class-visited,
 a.pseudo-class-visited .is-heir,
-.anchor.pseudo-class-visited,
-.theme--blue
-  .anchor.pseudo-class-visited,
-.theme--lime
-  .anchor.pseudo-class-visited,
-.theme--yellow
-  .anchor.pseudo-class-visited,
-.theme--gold
-  .anchor.pseudo-class-visited,
-.theme--orange
-  .anchor.pseudo-class-visited,
-.theme--salmon
-  .anchor.pseudo-class-visited,
-.theme--red
-  .anchor.pseudo-class-visited,
-.theme--burgundy
-  .anchor.pseudo-class-visited,
-.theme--purple
-  .anchor.pseudo-class-visited,
-.anchor .is-heir.pseudo-class-visited,
+.anchor.pseudo-class-visited .is-heir.pseudo-class-visited,
 .anchor.pseudo-class-visited .is-heir {
   color: inherit;
 }
 
 a.pseudo-class-hover,
-.theme--blue a.pseudo-class-hover,
-.theme--lime a.pseudo-class-hover,
-.theme--yellow a.pseudo-class-hover,
-.theme--gold a.pseudo-class-hover,
-.theme--orange a.pseudo-class-hover,
-.theme--salmon a.pseudo-class-hover,
-.theme--red a.pseudo-class-hover,
-.theme--burgundy a.pseudo-class-hover,
-.theme--purple a.pseudo-class-hover,
 a .is-heir.pseudo-class-hover,
 a.pseudo-class-hover .is-heir,
 .anchor.pseudo-class-hover,
-.theme--blue
-  .anchor.pseudo-class-hover,
-.theme--lime
-  .anchor.pseudo-class-hover,
-.theme--yellow
-  .anchor.pseudo-class-hover,
-.theme--gold
-  .anchor.pseudo-class-hover,
-.theme--orange
-  .anchor.pseudo-class-hover,
-.theme--salmon
-  .anchor.pseudo-class-hover,
-.theme--red
-  .anchor.pseudo-class-hover,
-.theme--burgundy
-  .anchor.pseudo-class-hover,
-.theme--purple
-  .anchor.pseudo-class-hover,
 .anchor .is-heir.pseudo-class-hover,
 .anchor.pseudo-class-hover .is-heir {
-  color: #000;
+  color: #57B0B6;
 }
 
-.tag.pseudo-class-hover {
-  background-color: #67AB43;
-  color: #FFF;
+.button.pseudo-class-visited {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid;
+  background: transparent;
+  color: #445D87;
+  font: 600 8pt/8pt Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  outline: 0;
 }
 
-.theme--blue .tag.pseudo-class-hover {
-  background-color: #56C0DD;
+.button.pseudo-class-hover {
+  color: #57B0B6;
 }
 
-.theme--lime .tag.pseudo-class-hover {
-  background-color: #C1D435;
+.button.pseudo-class-active {
+  color: #37383C;
 }
 
-.theme--yellow .tag.pseudo-class-hover {
-  background-color: #FACF21;
+.fld.pseudo-class-focus {
+  outline: 1px solid #ddeff0;
+  background: #ddeff0;
 }
 
-.theme--gold .tag.pseudo-class-hover {
-  background-color: #EB942C;
-}
-
-.theme--orange .tag.pseudo-class-hover {
-  background-color: #E26435;
-}
-
-.theme--salmon .tag.pseudo-class-hover {
-  background-color: #EB735D;
-}
-
-.theme--red .tag.pseudo-class-hover {
-  background-color: #EC2D10;
-}
-
-.theme--burgundy .tag.pseudo-class-hover {
-  background-color: #BA222A;
-}
-
-.theme--purple .tag.pseudo-class-hover {
-  background-color: #9B3381;
-}
-
-.menu.pseudo-class-hover .menu-toggle:after {
-  display: none;
-}
-
-.menu--responsive.pseudo-class-hover,
-.menu-toggle.pseudo-class-hover + .menu--responsive {
-  min-height: 30px;
-  height: auto;
-}
-
-.network-navigation a.pseudo-class-hover {
-  color: #FFF;
-}
-
-.site-search__input.pseudo-class-focus {
-  outline: 1px solid #FFF;
-}
-
-.language-switch.pseudo-class-hover .language {
-  display: block;
-  position: static;
-}
-
-.language-switch.pseudo-class-hover .language.is-active .menu__item,
-.language-switch.pseudo-class-hover .language.is-active .menu-toggle {
-  outline: 2px solid;
-  outline-offset: -2px;
-  color: #FFF;
-  border-color: #FFF;
-}
-
-.headline.pseudo-class-hover .posting__anchor {
-  visibility: visible;
-  opacity: 1;
-}
-
-.posting.pseudo-class-hover .posting__anchor {
-  visibility: visible;
-  opacity: 1;
-}
-
-.share.pseudo-class-hover {
-  color: #FFF;
-}
-
-.share--whisper.pseudo-class-hover,
-.share-list--whisper .share.pseudo-class-hover {
-  opacity: 1;
-}
-
-.share--facebook.pseudo-class-hover {
-  background-color: #3B5998 !important;
-}
-
-.share--twitter.pseudo-class-hover {
-  background: #55ACEE;
-}
-
-.share--print.pseudo-class-hover,
-.share--email.pseudo-class-hover {
-  background: rgba(0, 0, 0, 0.76);
+.well .fld.pseudo-class-focus {
+  outline-color: #ffffff;
+  outline-color: white;
+  background: #ffffff;
+  background: white;
 }

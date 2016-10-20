@@ -498,10 +498,6 @@ angular.module('sgApp')
       }
     }
 
-    $scope.isMainSection = function(section) {
-      return section.reference.indexOf('.') === -1;
-    };
-
     $scope.isEmptyMainSection = function(section) {
       return section.reference.indexOf('.') === -1 && !section.renderMarkup && (!section.modifiers || section.modifiers.length === 0);
     };

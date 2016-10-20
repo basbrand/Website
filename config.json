@@ -1,0 +1,15 @@
+{
+  "source": "source",
+  "output": {
+    "styleguide": "build/styleguide",
+    "prototype": "(Currently not in use!)",
+    "build": "build/www"
+  },
+  "watch": ["**/*.php", "**/*.scss", "**/*.html"],
+  "plugins": {
+    "minify": null,
+    "uglify": null,
+    "postcss": {},
+    "imagemin": false
+  }
+}

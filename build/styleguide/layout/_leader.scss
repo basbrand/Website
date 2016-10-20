@@ -32,7 +32,7 @@ Styleguide 2.4.1
 		margin-top: px-to-pt(rhythm(16));
 	}
 	@include breakpoint($gt-large-handheld) {
-			margin-top: px-to-pt(rhythm(5));
+			// margin-top: px-to-pt(rhythm(5));
   }
 	@include breakpoint($gt-small-desktop) {
 		&--giant {

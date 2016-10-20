@@ -17,7 +17,7 @@ Styleguide 3.5
   &:visited {
     display: inline-block;
     padding: rhythm(2) rhythm(4);
-    border: 1px solid $color-button;
+    border: 1px solid;
     background: transparent;
     color: $color-button;
     font: 600 #{px-to-pt( 8px )}/#{px-to-pt( rhythm(2) )} $font-family--meta;
@@ -28,20 +28,16 @@ Styleguide 3.5
   }
   &:hover {
     color: $color-anchor;
-    border-color: $color-anchor;
   }
   &:active {
     color: $color-dark-blue;
-    border-color: $color-dark-blue;
   }
   &--stretch {
     width: 100%;
     text-align: center;
   }
-  .cover &,
   &--inverse {
     color: $white;
-    border-color: $white;
   }
 }
 

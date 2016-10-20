@@ -1,49 +1,12 @@
 /*
 Hero
 
-.hero - Hero cover
-.hero.is-crowned - Pulls the cover underneath the masthead
-
 markup:
-<a class="anchor anchor--shy" href="javascript:void();">
-<figure class="{$modifiers}" style="background-image: url('images/content/covers/mtn-booth.jpg');">
-  <img class="image image--stretch" width="899" height="506" alt="" src="/images/content/covers/mtn-booth.jpg" />
-  <figcaption class="hero__headline">
-    <sg-insert>4.7-1</sg-insert>
-  </figcaption>
-</figure>
-</a>
+<header class="pod pod--hippo cover isolation">
+  <picture>
+    <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+  </picture>
+</header>
 
-Styleguide 5.4
+Styleguide 5.9
 */
-
-.hero {
-  position: relative;
-  background: no-repeat center;
-  background-size: cover;
-  max-height: 480px;
-  &>img {
-    visibility: hidden;
-  }
-  &__headline {
-  }
-}
-
-@include breakpoint($gt-medium-handheld) {
-  .hero {
-    height: 100vh;
-    min-height: calc(100vh - #{rhythm(64)});
-    &.is-crowned {
-      min-height: 100vh;
-    }
-    &__headline {
-      position: absolute;;
-      top: 50%;
-      width: 50%;
-      transform: translateY(-50%);
-      .is-crowned & {
-        top: calc(50% + #{rhythm(32)});
-      }
-    }
-  }
-}

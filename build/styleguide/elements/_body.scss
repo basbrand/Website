@@ -23,12 +23,13 @@ Styleguide 3.1
     @extend small;
     line-height: to-unit(rhythm(4), 1, 10px);
   }
+  &--inverse {
+    color: $white;
+  }
   &--meta,
   &--number,
   &--email {
     @extend %meta-text;
-    // font-size: to-unit(10px, 1em, 12px);
-    // line-height: to-unit(rhythm(3), 1, 10px);
   }
   &--number,
   &--email {
