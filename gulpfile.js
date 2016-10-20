@@ -96,6 +96,8 @@ gulp.task('default', function() {
             return config.source + '/' + item;
         }) || config.source + '/sass/**/*.scss';
 
+    tasks = ['imagemin'];
+
     // We will start the build and styleguide when we want it,
     // This gives us the time to build our plugins array which we will need.
     gulp.start(['build', 'styleguide', 'assets']);

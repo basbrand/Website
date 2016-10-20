@@ -1,5 +1,1 @@
-jQuery("document").ready(function($){   
-
-    $("[data-toggle]").toggle();  
-
-});
+jQuery("document").ready(function(e){e("[data-toggle]").toggle()});
