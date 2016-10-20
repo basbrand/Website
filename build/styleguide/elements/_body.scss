@@ -37,16 +37,16 @@ Styleguide 3.1
     font-weight: 600;
   }
   &--number {
-    font-size: to-unit(14px, 1em, 12px);
+    font-size: to-unit(14px);
     line-height: to-unit(rhythm(6), 1, 14px);
   }
   &--email {
-      font-size: to-unit(12px, 1em, 16px);
+      font-size: to-unit(12px);
       line-height: to-unit(rhythm(2), 1, 12px);
   }
   @include breakpoint($lt-large-handheld) {
     &--email {
-      font-size: to-unit(10px, 1em, 12px);
+      font-size: to-unit(10px);
       line-height: to-unit(rhythm(2), 1, 10px);
     }
   }

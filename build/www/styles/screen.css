@@ -313,7 +313,7 @@ mark {
  * Address inconsistent and variable font size in all browsers.
  */
 small, .body--whisper {
-  font-size: 0.83333em; }
+  font-size: 0.625em; }
 
 /*
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
@@ -1187,7 +1187,7 @@ Styleguide 3.1
   font-weight: 600; }
 
 .body--number {
-  font-size: 1.16667em;
+  font-size: 0.875em;
   line-height: 1.71429; }
 
 .body--email {
@@ -1196,7 +1196,7 @@ Styleguide 3.1
 
 @media only screen and (max-width: 47.9375em) {
   .body--email {
-    font-size: 0.83333em;
+    font-size: 0.625em;
     line-height: 0.8; } }
 
 /* 3.2 Heading */
@@ -2839,7 +2839,7 @@ markup:
   <div class="pod__seed seed">
     <h2 class="seed__header title title--body leader trailer">Lorem Ipsum Dolor Sit Amet</h2>
     <p class="seed__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
-    <p class="seed__footer leader trailer"><a class="anchor--shy body--meta body--whisper" href="javascript:void();">Lees verder</a></p>
+    <p class="seed__footer leader trailer"><a class="anchor--shy body--meta body--whisper" href="javascript:void();"><b>Lees verder</b></a></p>
   </div>
 </article>
 <article class="pod--leopard isolation">
@@ -2851,7 +2851,7 @@ markup:
   <div class="pod__seed seed">
     <h2 class="seed__header title title--body leader trailer">Lorem Ipsum Dolor Sit Amet</h2>
     <p class="seed__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
-    <p class="seed__footer leader trailer"><a class="anchor--shy body--meta body--whisper" href="javascript:void();">Lees verder</a></p>
+    <p class="seed__footer leader trailer"><a class="anchor--shy body--meta body--whisper" href="javascript:void();"><b>Lees verder</b></a></p>
   </div>
 </article>
 <article class="pod--leopard isolation">
@@ -2863,7 +2863,7 @@ markup:
   <div class="pod__seed seed">
     <h2 class="seed__header title title--body leader trailer">Lorem Ipsum Dolor Sit Amet</h2>
     <p class="seed__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
-    <p class="seed__footer leader trailer"><a class="anchor--shy body--meta body--whisper" href="javascript:void();">Lees verder</a></p>
+    <p class="seed__footer leader trailer"><a class="anchor--shy body--meta body--whisper" href="javascript:void();"><b>Lees verder</b></a></p>
   </div>
 </article>
 <article class="pod--leopard isolation">
@@ -2875,7 +2875,7 @@ markup:
   <div class="pod__seed seed">
     <h2 class="seed__header title title--body leader trailer">Lorem Ipsum Dolor Sit Amet</h2>
     <p class="seed__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
-    <p class="seed__footer leader trailer"><a class="anchor--shy body--meta body--whisper" href="javascript:void();">Lees verder</a></p>
+    <p class="seed__footer leader trailer"><a class="anchor--shy body--meta body--whisper" href="javascript:void();"><b>Lees verder</b></a></p>
   </div>
 </article>
 
