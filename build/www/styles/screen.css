@@ -701,175 +701,7 @@ html:after {
 /*
 Layout
 
-Two- or three-column layout – |Aside|Main|Aside. Aside columns are optional and can be omitted for a two- or single-column layout.
-
-.layout - Full width accross viewports
-.layout.layout--reverse - Reverses container ordering on smallest viewports, is used for source ordering
-.layout.layout--even - Spreads columns evenly
-.layout.layout--align-middle - Align content vertically centered
-
-markup:
-<div class="{$modifiers}">
-  <div class="layout__cell layout__cell--aside">
-    Sidebar
-  </div>
-  <div class="layout__cell">
-    Main
-  </div>
-  <div class="layout__cell layout__cell--aside">
-    Sidebar
-  </div>
-</div>
-
 Styleguide 2.1
-*/
-/*
- * 1. Allow containers to shrink and grow
- * 2. IE Fallback
- */
-.layout {
-  display: flex;
-  flex-direction: column; }
-  .layout__cell {
-    flex: 0 1 100%;
-    max-width: 100%;
-    /* 2. */ }
-  .layout--reverse {
-    flex-direction: column-reverse; }
-  .layout--even {
-    flex: 0 0 auto !important;
-    max-width: 100%;
-    /* 2. */ }
-  .layout--align-middle {
-    align-items: center; }
-
-@media (-ms-high-contrast: active) and (-ms-high-contrast: none) and (min-width: 64em) {
-  .layout__cell {
-    flex: 0 1 100%;
-    max-width: 100%;
-    /* 2. */ } }
-
-@media only screen and (min-width: 64em) {
-  .layout {
-    flex-direction: row; }
-    .layout__cell--aside {
-      flex: 0 0 27.77778%;
-      max-width: 27.77778%;
-      /* 2. */ }
-    .layout__cell--aside + .layout__cell, .layout__cell:first-child:last-child {
-      flex: 0 0 44.44444%;
-      max-width: 44.44444%;
-      /* 2. */ }
-    .layout__cell:first-child:last-child {
-      margin-left: auto;
-      margin-right: auto; }
-    .layout__cell--aside + .layout__cell:last-child {
-      flex: 0 1 72.22222%;
-      max-width: 72.22222%;
-      /* 2. */ }
-    .layout__cell .layout__cell--aside {
-      flex: 0 0 38.46154%;
-      max-width: 38.46154%;
-      /* 2. */ }
-    .layout__cell--divider {
-      /* Rectangle: */
-      box-shadow: inset -19px 0px 0px 0px #FFFFFF, inset -20px 0px 0px 0px rgba(99, 180, 82, 0.26); }
-      .well .layout__cell--divider, .layout__cell--divider.well {
-        box-shadow: inset -19px 0px 0px #d3eaec, inset -20px 0px 0px 0px rgba(255, 255, 255, 0.7); } }
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .layout {
-    display: inline-block;
-    max-width: 100%; }
-  .layout__cell {
-    display: inline-block;
-    vertical-align: top;
-    float: left; } }
-
-@media only screen and (-ms-high-contrast: active) and (min-width: 48em), only screen and (-ms-high-contrast: none) and (min-width: 48em) {
-  .layout__cell:first-child:last-child {
-    margin-left: 15%;
-    margin-right: 15%;
-    width: 100%;
-    max-width: 70%; } }
-
-/*
-Layout example, two-column with left sidebar
-
-| Sidebar | Main |
-
-.layout - Full width accross viewports
-.layout.layout--reverse - Reverses container ordering on smallest viewports, is used for source ordering
-
-markup:
-<div class="{$modifiers}">
-  <div class="layout__cell layout__cell--aside">
-    Sidebar
-  </div>
-  <div class="layout__cell">
-    Main
-  </div>
-</div>
-
-Styleguide 2.1.1
-*/
-/*
-Layout example, two-column with right sidebar
-
-| Main | Sidebar |
-
-.layout - Full width accross viewports
-.layout.layout--reverse - Reverses container ordering on smallest viewports, is used for source ordering
-
-markup:
-<div class="{$modifiers}">
-  <div class="layout__cell">
-    Main
-  </div>
-  <div class="layout__cell layout__cell--aside">
-    Sidebar
-  </div>
-</div>
-
-Styleguide 2.1.2
-*/
-/*
-Layout example, narrow single-column
-
-| Main |
-
-.layout - Full width accross viewports (added well class to cell for visibility in this example)
-
-markup:
-<div class="{$modifiers}">
-  <div class="layout__cell well">
-    Main
-  </div>
-</div>
-
-Styleguide 2.1.3
-*/
-/*
-Example of a nested Layout
-
-Layouts can be nested for more complex layouts
-
-markup:
-<div class="layout layout--reverse layout--split">
-  <div class="layout__cell layout__cell--aside">
-    Sidebar
-  </div>
-  <div class="layout__cell layout__cell--main layout layout--reverse layout--split">
-    <div class="layout__cell layout__cell--main">
-      Main
-    </div>
-    <div class="layout__cell layout__cell--aside">
-      Sidebar
-    </div>
-  </div>
-</div>
-
-Styleguide 2.1.4
 */
 /* 2.2 Gutter */
 /*
@@ -1374,9 +1206,6 @@ Styleguide 3.3
   .title--inverse a {
     color: #ffffff;
     letter-spacing: 0.04em; }
-  .well .title--well {
-    margin-top: 40pt;
-    margin-bottom: 24pt; }
 
 /*
 Title, inversed
@@ -1808,17 +1637,16 @@ Styleguide 3.13
 .seed {
   display: flex;
   flex-direction: column; }
-  .seed__header, .seed__body, .seed__footer {
-    display: flex;
-    flex-basis: 100%;
-    flex-direction: column;
-    justify-content: center; }
   .seed__body, .seed__footer {
     flex-grow: 1; }
   .seed__header {
     height: 80px;
     flex-basis: 80px;
     flex-shrink: 1; }
+  .seed__footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; }
 
 /* 3.14 Tag */
 /* 3.15 Image */
@@ -1833,8 +1661,29 @@ Styleguide 3.15
     width: 100%;
     height: auto; }
 
-/* 3.16 tile */
-/* 3.17 cover */
+/* 3.16 Well */
+/*
+Well
+
+Somethimes, content needs to stand out. The `well` class adds a background color, and changes the text color.
+
+.well - Regular well, text and background reversed.
+
+markup:
+<div class="{$modifiers}">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus, dapibus rutrum ipsum gravida et.</p>
+</div>
+
+Styleguide 3.16
+*/
+.well {
+  background: #445D87;
+  color: #ffffff; }
+  .well--stork {
+    color: #445D87;
+    background: #d3eaec; }
+
+/* 3.17 Cover */
 /*
 Cover
 
@@ -1882,7 +1731,7 @@ Styleguide 3.17
     max-height: 100%;
     min-height: 100%; }
 
-/* 3.18 quote */
+/* 3.18 Quote */
 /*
 Quote
 
@@ -1897,22 +1746,15 @@ Styleguide 3.18
 */
 .quote {
   position: relative;
-  quotes: "“" "”" "‘" "’"; }
+  quotes: "“" "”" "‘" "’";
+  font-style: italic; }
   .quote:before {
     position: absolute;
     right: 100%;
     content: open-quote; }
-  .quote:after {
-    content: close-quote; }
   .quote p {
     display: inline; }
 
-/* 3.x Label */
-/* 3.x Alert */
-/* 3.x Tooltip */
-/* 3.x Media */
-/* 3.x Issue */
-/* 3.x Box */
 /* 3.98 Fx */
 /*
 Effects
@@ -2333,6 +2175,24 @@ Styleguide 4.3
       width: 48pt;
       height: 48pt; } }
 
+/* 4.4 Trail */
+/*
+Trail
+
+Breadcrumbs
+
+.trail - Trail
+
+markup:
+<nav class="{$modifiers}">
+  <ol>
+    <li><a href="">Cases</a></li>
+    <li>Vereniging Eigen Huis</li>
+  </ol>
+</nav>
+
+Styleguide 4.4
+*/
 /* 5. */
 /*
 Modules
@@ -2348,18 +2208,18 @@ markup:
   <picture>
     <img
       sizes="(max-width: 1920px) 67vw, 1068px"
-      srcset="https://hd.unsplash.com/photo-1428542244207-0aaec316e609 1068w"
+      srcset="https://hd.unsplash.com/photo-1428542244207-0aaec316e609 512w, https://hd.unsplash.com/photo-1428542244207-0aaec316e609 1068w"
       class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
   </picture>
-  <div class="pod__seed">
-    <h1 class="leader trailer">
+  <div class="pod__seed seed">
+    <h1 class="seed__header leader trailer">
       <img style="max-height: 100px;" src="../images/logos/Brickson-Logotype-RGB-DB.svg" alt="Brickson • Amsterdam – Den Bosch">
     </h1>
-  </div>
-  <div class="pod__seed">
-    <h2 class="title title--inverse">Vooruit met digitaal</h2>
-    <p class="body--inverse trailer leader">Brickson is er voor organisaties die de volgende stap in digitaal willen maken. Met een strategie, digitaal concept, website of een applicatie.</p>
-  </div>
+    <div class="seed__footer">
+      <h2 class="title title--inverse">Vooruit met digitaal</h2>
+      <p class="body--inverse trailer leader">Brickson is er voor organisaties die de volgende stap in digitaal willen maken. Met een strategie, digitaal concept, website of een applicatie.</p>
+    </div>
+  </section>
 </section>
 
 Styleguide 5.1
@@ -2374,8 +2234,8 @@ markup:
     <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
   </picture>
   <div class="pod__seed seed">
-    <h3 class="seed__header title title--section leader-inside trailer-inside">Testimonial</h3>
-    <div class="seed__body">
+    <h3 class="seed__header title title--section leader trailer">Testimonial</h3>
+    <div class="seed__body leader trailer">
       <figure class="person bleed">
         <span class="person__picture gutters">
           <img src="/images/heads/marja_smits.jpg" class="person__image" width="56" height="56" style="background: Grey;"/>
@@ -2401,9 +2261,9 @@ Introduction
 
 markup:
 <section class="pod pod--baboon introduction">
-  <div class="pod__seed">
-    <h2 class="well__title title">Blijer, gezonder en welvarender</h2>
-    <p class="lead">Brickson is er voor ambitieuze merken in traditionele markten. Wij helpen ze om relevant te blijven en meer voor klanten te betekenen. Succesvolle merken kijken vooruit en stellen zich de vraag: hoe maak ik mijn klant blijer, gezonder en welvarender?</p>
+  <div class="pod__seed seed">
+    <h2 class="seed__header title leader trailer">Blijer, gezonder en welvarender</h2>
+    <p class="seed__body leader trailer">Brickson is er voor ambitieuze merken in traditionele markten. Wij helpen ze om relevant te blijven en meer voor klanten te betekenen. Succesvolle merken kijken vooruit en stellen zich de vraag: hoe maak ik mijn klant blijer, gezonder en welvarender?</p>
   </div>
   <div class="pod__seed cover isolation">
     <picture>
@@ -2459,86 +2319,84 @@ Contact
 
 Styleguide 5.5
 */
-.catalog {
-  min-height: 100%;
-  min-height: 100vh; }
-  .catalog .well {
-    float: left;
-    width: 100%;
-    min-height: 100%;
-    min-height: 100vh;
-    padding-left: 8.33333%;
-    padding-right: 8.33333%; }
-  .catalog .well__title {
-    margin-top: 72px; }
-  @media only screen and (min-width: 48em) {
-    .catalog .well {
-      width: 50%;
-      min-height: 50%;
-      min-height: 50vh; }
-      .catalog .well__title {
-        margin-top: 96px; }
-    .catalog .well .cover__image {
-      min-height: 50%;
-      min-height: 50vh;
-      max-height: 50%;
-      max-height: 50vh; }
-    .catalog .well:first-child {
-      position: static; }
-      .catalog .well:first-child,
-      .catalog .well:first-child .button {
-        color: #445D87; }
-      .catalog .well:first-child .button {
-        border-color: #445D87; }
-      .catalog .well:first-child .cover__image {
-        top: auto;
-        bottom: 0;
-        z-index: 1; }
-    .catalog .well:first-child .well__title {
-      visibility: visible; } }
-  @media only screen and (min-width: 64em) {
-    .catalog .well {
-      padding-left: 4.16667%;
-      padding-right: 4.16667%; }
-    .catalog .well__title {
-      margin-top: 96px; } }
-  @media (orientation: landscape) and (min-width: 90em) {
-    .catalog {
-      position: relative;
-      width: 66.66667%; }
-      .catalog .well {
-        padding-left: 4.16667%;
-        padding-right: 4.16667%; } }
-
 /* 5.6 Article */
 /*
 Article
 
+.article - Regular article
+.article.article--has-aside - Article with sidebar
+
+markup:
+<article class="{$modifiers}">
+  <div class="article__main isolation">
+    <div class="wings">
+      <sg-insert>4.4</sg-insert>
+      <h2>Lorem Ipsum Dolor Sit Amet</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+      <h2>Lorem Ipsum Dolor Sit Amet</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+      <h2>Lorem Ipsum Dolor Sit Amet</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+    </div>
+    <footer class="well seed wings leader--hero">
+      <h3 class="seed__title title--section leader trailer"><strong>Het resultaat</strong></h3>
+      <div class="seed__body leader trailer">
+        <h2>Lorem Ipsum Dolor Sit Amet</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+      </div>
+    </footer>
+  </div>
+  <aside class="article__aside well well--stork isolation">
+    <div class="seed__body leader trailer wings">
+      <figure class="person bleed">
+        <span class="person__picture gutters">
+          <img src="/images/heads/marja_smits.jpg" class="person__image" width="56" height="56" style="background: Grey;"/>
+        </span>
+        <figcaption class="person__body">
+          <span class="person__name title title--section">Marja Smits</span>
+          <small class="person__occupation">Manager Strategie en Marketing Evean</small>
+        </figcaption>
+      </figure>
+      <blockquote class="quote lead leader"><p>Met oog en gevoel voor de mensen in je organisatie gaat Brickson altijd een stap verder.</p></blockquote>
+    </div>
+  </aside>
+</article>
+
 Styleguide 5.6
 */
-.article {
-  min-height: 100%;
-  min-height: 100vh; }
-  .article__body {
-    padding-left: 8.33333%;
-    padding-right: 8.33333%; }
+.article h2 {
+  font-size: 1.5em;
+  line-height: 1; }
 
-@media (orientation: landscape) and (min-width: 48em) {
-  .article__body {
-    padding-left: 8.33333%;
-    padding-right: 8.33333%; } }
+.article h2,
+.article p {
+  margin: 24px 0; }
 
-@media (orientation: landscape) and (min-width: 90em) {
-  .article {
-    position: relative;
-    width: 66.66667%;
-    background: #ffffff; }
-    .article__body {
-      padding-left: 12.5%;
-      padding-right: 12.5%; }
-    .article .grid {
-      position: relative;
-      z-index: 1; } }
+@media only screen and (min-width: 64em) {
+  .article .wings {
+    padding-left: 16.66667%;
+    padding-right: 16.66667%; }
+  .article__main, .article__aside {
+    float: left; }
+  .article__main {
+    width: 66.66667%; }
+  .article__aside {
+    width: 33.33333%; }
+    .article__aside .wings {
+      padding-left: 8.33333%;
+      padding-right: 8.33333%; } }
+
+@media only screen and (min-width: 90em) {
+  .article h2 {
+    font-size: 2em;
+    line-height: 1.5;
+    margin: 48px 0 24px 0; }
+  .article p {
+    font-size: 1.125em;
+    line-height: 1.55556; }
+  .article .wings {
+    padding-left: 16.66667%;
+    padding-right: 16.66667%; } }
 
 /* 5.7 Navigation */
 /*
@@ -2598,9 +2456,9 @@ Invitation
 markup:
 <section class="pod pod--zebra pod--rhino invitation cover isolation">
   <div class="pod__seed seed">
-    <h2 class="seed__header title">Wat is jouw volgende stap?</h2>
+    <h2 class="seed__header title leader trailer">Wat is jouw volgende stap?</h2>
     <p class="seed__body leader trailer">Werken met Brickson betekent samen ontdekken, bedenken, ontwerpen of bouwen. We lossen complexe problemen op en werken op project-, consultancy- of interimbasis.</p>
-    <p class="seed__footer"><a class="button button--stretch" href="mailto:experts@brickson.nl?subject='Vooruit%20met%20Brickson'">Wil je meer weten? Neem contact op!</a></p>
+    <p class="seed__footer leader trailer"><a class="button button--stretch" href="mailto:experts@brickson.nl?subject='Vooruit%20met%20Brickson'">Wil je meer weten? Neem contact op!</a></p>
   </div>
   <ul class="pod__seed grid">
     <li class="grid__cell cover isolation">
@@ -2627,6 +2485,19 @@ markup:
 </section>
 
 Styleguide 5.8
+*/
+/* 5.9 Hero */
+/*
+Hero
+
+markup:
+<header class="pod pod--hippo cover isolation">
+  <picture>
+    <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+  </picture>
+</header>
+
+Styleguide 5.9
 */
 /* 6. */
 /*
@@ -2656,38 +2527,11 @@ Styleguide 7.1
 /*
 Case
 
+markup:
+<sg-insert>5.6-1</sg-insert>
+
 Styleguide 7.2
 */
-.p-case .is-anchor {
-  position: absolute;
-  top: 200%; }
-
-@media only screen and (min-width: 48em) {
-  .p-case .is-anchor {
-    position: static; } }
-
-@media (max-width: 89.9375em) and (min-width: 48em) {
-  .p-case .testimonial {
-    width: 100%;
-    min-height: 50%;
-    min-height: 50vh;
-    max-height: auto;
-    max-height: auto;
-    height: auto; }
-    .p-case .testimonial .well {
-      height: auto;
-      min-height: auto;
-      max-height: auto;
-      width: 100%;
-      padding-left: 8.33333%;
-      padding-right: 8.33333%; } }
-
-@media (max-width: 89.9375em) and (min-width: 64em) {
-  .p-case .testimonial .well {
-    width: 50%;
-    padding-left: 4.16667%;
-    padding-right: 4.16667%; } }
-
 /* 8. */
 @media only screen and (max-width: 47.9375em) {
   .headline .posting__intro {

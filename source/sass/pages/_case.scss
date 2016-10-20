@@ -1,44 +1,8 @@
 /*
 Case
 
+markup:
+<sg-insert>5.6-1</sg-insert>
+
 Styleguide 7.2
 */
-
-.p-case {
-  .is-anchor {
-  	position: absolute;
-  	top: 200%;
-  }
-  @include breakpoint($gt_large_handheld) {
-    .is-anchor {
-    	position: static;
-    }
-  }
-  @include breakpoint($gt_large_handheld,$lt-medium-desktop) {
-    .testimonial {
-      width: 100%;
-      min-height: 50%;
-      min-height: 50vh;
-      max-height: auto;
-      max-height: auto;
-      height: auto;
-      .well {
-        height: auto;
-        min-height: auto;
-        max-height: auto;
-        width: percentage(12/12);
-        padding-left: percentage(1/12);
-        padding-right: percentage(1/12);
-      }
-    }
-  }
-  @include breakpoint($gt-small-desktop,$lt-medium-desktop) {
-    .testimonial {
-      .well {
-        width: percentage(12/24);
-        padding-left: percentage(1/24);
-        padding-right: percentage(1/24);
-      }
-    }
-  }
-}

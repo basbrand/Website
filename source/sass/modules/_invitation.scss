@@ -4,9 +4,9 @@ Invitation
 markup:
 <section class="pod pod--zebra pod--rhino invitation cover isolation">
   <div class="pod__seed seed">
-    <h2 class="seed__header title">Wat is jouw volgende stap?</h2>
+    <h2 class="seed__header title leader trailer">Wat is jouw volgende stap?</h2>
     <p class="seed__body leader trailer">Werken met Brickson betekent samen ontdekken, bedenken, ontwerpen of bouwen. We lossen complexe problemen op en werken op project-, consultancy- of interimbasis.</p>
-    <p class="seed__footer"><a class="button button--stretch" href="mailto:experts@brickson.nl?subject='Vooruit%20met%20Brickson'">Wil je meer weten? Neem contact op!</a></p>
+    <p class="seed__footer leader trailer"><a class="button button--stretch" href="mailto:experts@brickson.nl?subject='Vooruit%20met%20Brickson'">Wil je meer weten? Neem contact op!</a></p>
   </div>
   <ul class="pod__seed grid">
     <li class="grid__cell cover isolation">
@@ -34,7 +34,3 @@ markup:
 
 Styleguide 5.8
 */
-
-.invitation {
-    // width: percentage(24/36);
-}

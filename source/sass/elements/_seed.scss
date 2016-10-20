@@ -12,10 +12,6 @@ Styleguide 3.13
   &__header,
   &__body,
   &__footer {
-    display: flex;
-    flex-basis: 100%;
-    flex-direction: column;
-    justify-content: center;
   }
   &__body,
   &__footer {
@@ -27,9 +23,10 @@ Styleguide 3.13
     flex-shrink: 1;
   }
   &__body {
-
   }
   &__footer {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
 }
