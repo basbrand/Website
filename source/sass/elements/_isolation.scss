@@ -1,0 +1,22 @@
+/*
+Isolation
+
+.isolation - White pixel outline
+
+markup:
+<p class="{$modifiers}">
+  I am in isolation.
+</p>
+
+sg-wrapper:
+<div style="background: Grey; padding: 2em;">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 3.11
+*/
+
+.isolation {
+  outline: 1px solid $white;
+  outline-offset: 0;
+}

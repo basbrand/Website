@@ -1,0 +1,32 @@
+/*
+Seed
+
+The seed class is used on `pod__seeds`. The pod seed will behave as a flex item, designated a fixed amount of space to the first item and vertically centering content in the remaining space.
+
+Styleguide 3.13
+*/
+
+.seed {
+  display: flex;
+  flex-direction: column;
+  &__header,
+  &__body,
+  &__footer {
+  }
+  &__body,
+  &__footer {
+    flex-grow: 1;
+  }
+  &__header {
+    height: rhythm(20);
+    flex-basis: rhythm(20);
+    flex-shrink: 1;
+  }
+  &__body {
+  }
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
