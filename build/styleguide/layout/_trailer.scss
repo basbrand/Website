@@ -28,14 +28,14 @@ Styleguide 2.5.1
 		margin-bottom: px-to-pt(rhythm(8));
 	}
 	&--giant {
-		margin-bottom: px-to-pt(rhythm(16));
+		margin-bottom: px-to-pt(rhythm(10));
 	}
 	@include breakpoint($gt-large-handheld) {
 			margin-bottom: px-to-pt(rhythm(5));
   }
 	@include breakpoint($gt-small-desktop) {
 		&--giant {
-			margin-bottom: px-to-pt(rhythm(30));
+			margin-bottom: px-to-pt(rhythm(18));
 		}
 	}
 }

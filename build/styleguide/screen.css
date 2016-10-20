@@ -768,10 +768,13 @@ Styleguide 2.4.1
   .leader--hero {
     margin-top: 32pt; }
   .leader--giant {
-    margin-top: 64pt; }
+    margin-top: 40pt; }
+  @media only screen and (min-width: 48em) {
+    .leader {
+      margin-top: 20pt; } }
   @media only screen and (min-width: 64em) {
     .leader--giant {
-      margin-top: 120pt; } }
+      margin-top: 72pt; } }
 
 /*
 Leader inside
@@ -831,13 +834,13 @@ Styleguide 2.5.1
   .trailer--hero {
     margin-bottom: 32pt; }
   .trailer--giant {
-    margin-bottom: 64pt; }
+    margin-bottom: 40pt; }
   @media only screen and (min-width: 48em) {
     .trailer {
       margin-bottom: 20pt; } }
   @media only screen and (min-width: 64em) {
     .trailer--giant {
-      margin-bottom: 120pt; } }
+      margin-bottom: 72pt; } }
 
 /*
 Trailer inside
@@ -2321,8 +2324,16 @@ Article
 .article.article--has-aside - Article with sidebar
 
 markup:
-<sg-insert>5.9</sg-insert>
 <article class="{$modifiers}">
+  <header class="article__header pod pod--hippo cover isolation">
+    <picture>
+      <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+    </picture>
+    <div class="seed wings">
+      <h1 class="article__title title--inverse">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit</h1>
+      <p class="article__lead body--inverse">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus, dapibus rutrum ipsum gravida et. Integer lectus nisi, facilisis sit amet eleifend nec, pharetra ut augue. Integer quam nunc, consequat nec.</p>
+    </div>
+  </header>
   <div class="article__main isolation">
     <div class="wings">
       <sg-insert>4.4</sg-insert>
@@ -2363,7 +2374,17 @@ Styleguide 5.6
 */
 .article {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  flex-wrap: wrap; }
+  .article__header {
+    flex: 1 0 100%;
+    width: 100%; }
+  .article__title {
+    font-size: 3.875em;
+    line-height: 1.22581; }
+  .article__lead {
+    font-size: 1.25em;
+    line-height: 1.6; }
   .article__main h2 {
     font-size: 1.5em;
     line-height: 1; }
@@ -2376,9 +2397,12 @@ Styleguide 5.6
       .article .wings {
         padding-left: 16.66667%;
         padding-right: 16.66667%; }
+      .article__title {
+        font-size: 3.875em;
+        line-height: 1.22581; }
       .article__main, .article__aside {
         float: left; }
-      .article__main {
+      .article__header .seed, .article__main {
         width: 66.66667%; }
       .article__aside {
         width: 33.33333%; }
@@ -2494,6 +2518,10 @@ markup:
   <picture>
     <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
   </picture>
+  <div class="pod__seed seed">
+    <h1 class="article__title title--inverse">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit</h1>
+    <p class="body--inverse">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus, dapibus rutrum ipsum gravida et. Integer lectus nisi, facilisis sit amet eleifend nec, pharetra ut augue. Integer quam nunc, consequat nec.</p>
+  </div>
 </header>
 
 Styleguide 5.9
