@@ -24,6 +24,11 @@ a.pseudo-class-hover .is-heir,
   color: #57B0B6;
 }
 
+a--inverse.pseudo-class-hover,
+.anchor--inverse.pseudo-class-hover {
+  color: #37383C;
+}
+
 .button.pseudo-class-visited {
   display: inline-block;
   padding: 8px 16px;
