@@ -15,6 +15,124 @@ Styleguide 4.1
 */
 
 
+.pod {
+
+  // /* Debug */
+  // background: url('https://hd.unsplash.com/photo-1428542244207-0aaec316e609') no-repeat center;
+  // background-size: cover;
+  // &--rhino { background-image: url('http://animal-dream.com/data_images/rhino/rhino8.jpg') }
+  // &--hippo { background-image: url('http://i.imgur.com/hfpgikz.jpg') }
+  // &--kudu { background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/25/Kudu1.jpg') }
+  // &--serval { background-image: url('http://img.wallpaperfolder.com/f/53CC12F5FCA5/serval-bush-cat-1956x1303-196078.jpg') }
+  // &--baboon { background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/97/BABOON-e.JPG') }
+  // &--zebra { background-image: url('https://c2.staticflickr.com/4/3043/2405490902_d57eb8a36f_b.jpg') }
+  // /* End Debug */
+
+  width: 100%;
+  min-height: 100%;
+  min-height: 100vh;
+  &__seed {
+    float: left;
+    width: 100%;
+    min-height: 50%;
+    min-height: 50vh;
+    padding: 0 gutter();
+  }
+  &--hippo &__seed {
+    width: 100%;
+    min-height: 100%;
+    min-height: 100vh;
+  }
+  &--kudu &__seed {
+    min-height: 0;
+  }
+  @include breakpoint("(min-aspect-ratio: 6/5)") {
+    &__seed {
+      width: 50%;
+      min-height: 100%;
+      min-height: 100vh;
+    }
+    &--kudu &__seed,
+    &--zebra &__seed {
+      width: 50%;
+    }
+    &--kudu &__seed {
+      float: none;
+    }
+    &--baboon {
+      width: 50%;
+    }
+    &--baboon &__seed {
+      width: 100%;
+    }
+    &--baboon &__seed,
+    &--zebra &__seed {
+      min-height: 50%;
+      min-height: 50vh;
+    }
+  }
+  @include breakpoint("(max-aspect-ratio: 6/5)") {
+    &--baboon {
+      min-height: 50%;
+      min-height: 50vh;
+    }
+    &--baboon &__seed {
+      width: 50%;
+      min-height: 100%;
+      min-height: 50vh;
+    }
+  }
+  @include breakpoint($gt-large-handheld) {
+    &__seed {
+      padding: 0 percentage(1/12);
+    }
+    &--kudu,
+    &--zebra {
+        min-height: 50%;
+        min-height: 50vh;
+    }
+  }
+  @include breakpoint($gt-small-desktop) {
+    &__seed {
+      // padding: 0 percentage(2/24);
+    }
+    &__serval {
+      position: relative;
+    }
+    &--serval &__seed {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      // top: 50%;
+      width: percentage(12/24);
+      min-height: 50%;
+      min-height: 50vh;
+      background: $white;
+      background: rgba($white, .8);
+    }
+  }
+  @include breakpoint($gt-medium-desktop) {
+    &__seed {
+      padding: 0 percentage(2/36);
+    }
+    &--rhino {
+      width: percentage(24/36);
+      max-width: percentage(24/36);
+    }
+    &__serval {
+      position: relative;
+    }
+    &--baboon {
+      width: percentage(12/36);
+    }
+    // &--serval &__seed {
+    //   width: percentage(12/24);
+    // }
+  }
+}
+
+
+
 /*
 Regular, default pod
 
@@ -209,120 +327,3 @@ sg-wrapper:
 
 Styleguide 4.1.7
 */
-
-.pod {
-
-  // /* Debug */
-  // background: url('https://hd.unsplash.com/photo-1428542244207-0aaec316e609') no-repeat center;
-  // background-size: cover;
-  // &__seed { background: rgba(0,0,0,.3) }
-  // &__seed + &__seed { background: rgba(0,0,0,.6) }
-  // &--rhino { background-image: url('http://animal-dream.com/data_images/rhino/rhino8.jpg') }
-  // &--hippo { background-image: url('http://i.imgur.com/hfpgikz.jpg') }
-  // &--kudu { background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/25/Kudu1.jpg') }
-  // &--serval { background-image: url('http://img.wallpaperfolder.com/f/53CC12F5FCA5/serval-bush-cat-1956x1303-196078.jpg') }
-  // &--baboon { background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/97/BABOON-e.JPG') }
-  // &--zebra { background-image: url('https://c2.staticflickr.com/4/3043/2405490902_d57eb8a36f_b.jpg') }
-  // /* End Debug */
-
-  width: 100%;
-  min-height: 100%;
-  min-height: 100vh;
-  &__seed {
-    float: left;
-    width: 100%;
-    min-height: 50%;
-    min-height: 50vh;
-    padding: 0 gutter();
-  }
-  &--hippo &__seed {
-    width: 100%;
-    min-height: 100%;
-    min-height: 100vh;
-  }
-  &--kudu &__seed {
-    min-height: 0;
-  }
-  @include breakpoint("(min-aspect-ratio: 6/5)") {
-    &__seed {
-      width: 50%;
-      min-height: 100%;
-      min-height: 100vh;
-    }
-    &--kudu &__seed,
-    &--zebra &__seed {
-      width: 50%;
-    }
-    &--kudu &__seed {
-      float: none;
-    }
-    &--baboon {
-      width: 50%;
-    }
-    &--baboon &__seed {
-      width: 100%;
-    }
-    &--baboon &__seed,
-    &--zebra &__seed {
-      min-height: 50%;
-      min-height: 50vh;
-    }
-  }
-  @include breakpoint("(max-aspect-ratio: 6/5)") {
-    &--baboon {
-      min-height: 50%;
-      min-height: 50vh;
-    }
-    &--baboon &__seed {
-      width: 50%;
-      min-height: 100%;
-      min-height: 50vh;
-    }
-  }
-  @include breakpoint($gt-large-handheld) {
-    &__seed {
-      padding: 0 percentage(1/12);
-    }
-    &--kudu,
-    &--zebra {
-        min-height: 50%;
-        min-height: 50vh;
-    }
-  }
-  @include breakpoint($gt-small-desktop) {
-    &__seed {
-      // padding: 0 percentage(2/24);
-    }
-    &__serval {
-      position: relative;
-    }
-    &--serval &__seed {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: percentage(12/24);
-      min-height: 50%;
-      min-height: 50vh;
-      background: $white;
-      background: rgba($white, .8);
-    }
-  }
-  @include breakpoint($gt-medium-desktop) {
-    &__seed {
-      padding: 0 percentage(2/36);
-    }
-    &--rhino {
-      width: percentage(24/36);
-      max-width: percentage(24/36);
-    }
-    &__serval {
-      position: relative;
-    }
-    &--baboon {
-      width: percentage(12/36);
-    }
-    // &--serval &__seed {
-    //   width: percentage(12/24);
-    // }
-  }
-}

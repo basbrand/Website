@@ -2,9 +2,12 @@
 Handshake
 
 markup:
-<section class="pod pod--kudu pod--rhino handshake cover is-root">
+<section class="pod pod--kudu pod--rhino handshake cover isolation">
   <picture>
-    <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+    <img
+      sizes="(max-width: 1920px) 67vw, 1068px"
+      srcset="https://hd.unsplash.com/photo-1428542244207-0aaec316e609 1068w"
+      class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
   </picture>
   <div class="pod__seed">
     <h1 class="leader trailer">
@@ -12,7 +15,8 @@ markup:
     </h1>
   </div>
   <div class="pod__seed">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim</p>
+    <h2 class="title title--inverse">Vooruit met digitaal</h2>
+    <p class="body--inverse trailer leader">Brickson is er voor organisaties die de volgende stap in digitaal willen maken. Met een strategie, digitaal concept, website of een applicatie.</p>
   </div>
 </section>
 
@@ -20,4 +24,7 @@ Styleguide 5.1
 */
 
 .handshake {
+  .pod__seed {
+
+  }
 }

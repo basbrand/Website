@@ -34,7 +34,7 @@ Styleguide 4.3
     line-height: px-to-pt(rhythm(3));
   }
   &__image {
-    outline: 1px solid $white;
+    outline: 1px solid;
     width: px-to-pt(rhythm(10));
     height: px-to-pt(rhythm(10));
   }
