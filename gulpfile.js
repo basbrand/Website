@@ -5,11 +5,13 @@ var gulp        = require('gulp'),
     methods     = {
         minify:     require('gulp-clean-css'),
         postcss:    require('gulp-postcss'),
-        imagemin:   require('gulp-imagemin')
+        imagemin:   require('gulp-imagemin'),
+        uglify:     require('gulp-uglify')
     },
     sass        = require('gulp-sass'),
     config      = require('./config.json'),
     log         = require('gulp-util').log,
+    autopref    = require('autoprefixer'),
     tasks       = [],
     debug       = true,
     extras      = ['<link rel="stylesheet" type="text/css" href="/styles/screen.css">',
@@ -21,6 +23,13 @@ var gulp        = require('gulp'),
                     '<script src="/javascript/jquery.modules.js"></script>',
                     '<script src="/javascript/picturefill.min.js" async></script>',
                     '<script src="/javascript/pf.intrinsic.min.js" async></script>'];
+
+// A simple check for the postcss config
+if(config.plugins.postcss !== false) {
+    config.plugins.postcss = [
+        autopref(config.plugins.postcss)
+    ];
+}
 
 /**
  * This task moves all the assets to the styleguide and www folders.
@@ -98,5 +107,19 @@ gulp.task('test', function() {
 });
 
 gulp.task('production', function() {
-    console.log('Called production task!')
+    tasks = ['postcss', 'minify'];
+
+    gulp.start(['assets', 'build'], function() {
+        if(config.plugins.uglify !== false) {
+            gulp.src(config.output.build + '/**/*.js')
+                .pipe(methods.uglify(config.plugins.uglify))
+                .pipe(gulp.dest(config.output.build));
+        }
+
+        if(config.plugins.imagemin !== false) {
+            gulp.src([config.output.build + '/**/*.png', config.output.build + '/**/*.jpg', config.output.build + '/**/*.jpeg', config.output.build + '/**/*.gif', config.output.build + '/**/*.svg'])
+                .pipe(methods.imagemin(config.plugins.imagemin))
+                .pipe(gulp.dest(config.output.build));
+        }
+    });
 });
