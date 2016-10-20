@@ -6,9 +6,14 @@ Article
 
 markup:
 <article class="{$modifiers}">
+  <sg-insert>5.9</sg-insert>
   <div class="article__main isolation">
     <div class="wings">
       <sg-insert>4.4</sg-insert>
+      <h2>Lorem Ipsum Dolor Sit Amet</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+      <h2>Lorem Ipsum Dolor Sit Amet</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
       <h2>Lorem Ipsum Dolor Sit Amet</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
       <h2>Lorem Ipsum Dolor Sit Amet</h2>
@@ -24,19 +29,17 @@ markup:
       </div>
     </footer>
   </div>
-  <aside class="article__aside well well--stork isolation">
-    <div class="seed__body leader trailer wings">
-      <figure class="person bleed">
-        <span class="person__picture gutters">
-          <img src="/images/heads/marja_smits.jpg" class="person__image" width="56" height="56" style="background: Grey;"/>
-        </span>
-        <figcaption class="person__body">
-          <span class="person__name title title--section">Marja Smits</span>
-          <small class="person__occupation">Manager Strategie en Marketing Evean</small>
-        </figcaption>
-      </figure>
-      <blockquote class="quote lead leader"><p>Met oog en gevoel voor de mensen in je organisatie gaat Brickson altijd een stap verder.</p></blockquote>
-    </div>
+  <aside class="article__aside well well--stork isolation seed">
+    <section class="leader--giant trailer wings seed__body">
+      <sg-insert>3.18-2</sg-insert>
+    </section>
+    <section class="leader--giant trailer wings seed__body">
+      <sg-insert>3.18-2</sg-insert>
+    </section>
+    <section class="leader--giant trailer wings seed__footer">
+      <h3 class="title title--section leader trailer">Over Brickson</h3>
+      <p class="body--whisper">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus, dapibus rutrum ipsum gravida et. Integer lectus nisi, facilisis sit amet eleifend nec, pharetra ut augue. Integer quam nunc, consequat nec egestas ac, volutpat ac nisi. Sed consectetur dignissim dignissim. Donec pretium est site.</p>
+    </section>
   </aside>
 </article>
 
@@ -44,15 +47,16 @@ Styleguide 5.6
 */
 
 .article {
-  h2 {
-    font-size: to-unit(24px);
-    line-height: to-unit( rhythm(6), 1, 24px);
+  &__main {
+    h2 {
+      font-size: to-unit(24px);
+      line-height: to-unit( rhythm(6), 1, 24px);
+    }
+    h2,
+    p {
+        margin: rhythm(6) 0;
+    }
   }
-  h2,
-  p {
-      margin: rhythm(6) 0;
-  }
-  &__main {}
   &__aside {}
   @include breakpoint($gt-large-handheld) {
 
@@ -78,14 +82,16 @@ Styleguide 5.6
     }
   }
   @include breakpoint($gt-medium-desktop) {
-    h2 {
-      font-size: to-unit(32px);
-      line-height: to-unit( rhythm(12), 1, 32px);
-      margin: rhythm(12) 0 rhythm(6) 0;
-    }
-    p {
-        font-size: to-unit(18px);
-        line-height: to-unit( rhythm(7), 1, 18px );
+    &__main {
+      h2 {
+        font-size: to-unit(32px);
+        line-height: to-unit( rhythm(12), 1, 32px);
+        margin: rhythm(12) 0 rhythm(6) 0;
+      }
+      p {
+          font-size: to-unit(18px);
+          line-height: to-unit( rhythm(7), 1, 18px );
+      }
     }
     .wings {
       padding-left: percentage(4/24);

@@ -1,39 +1,41 @@
 /*
 Quote
 
+.quote - Regular quote, used in testimonial pod
+.quote.quote--l - Large quote, used in case
+
 markup:
-<blockquote class="quote lead"><p>For 50 years, WWF has been protecting the future of nature.
-The world's leading conservation organization,
-WWF works in 100 countries and is supported by
-1.2 million members in the United States and
-close to 5 million globally.</p></blockquote>
+<blockquote class="{$modifiers} leader trailer"><p>Met oog en gevoel voor de mensen in je organisatie gaat Brickson altijd een stap verder.</p></blockquote>
+<figure class="person bleed leader trailer">
+  <span class="person__picture gutters">
+    <img src="/images/heads/marja_smits.jpg" class="person__image" width="56" height="56" style="background: Grey;"/>
+  </span>
+  <figcaption class="person__body">
+    <span class="person__name title title--section">Marja Smits</span>
+    <small class="person__occupation">Manager Strategie en Marketing Evean</small>
+  </figcaption>
+</figure>
 
 Styleguide 3.18
 */
 
 .quote {
   position: relative;
-  // background: #f9f9f9;
-  // border-left: 10px solid #ccc;
-  // margin: 1.5em 10px;
-  // padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
+  // quotes: "\201C""\201D""\2018""\2019";
   font-style: italic;
+  &--l {
+    font-size: to-unit(24px, 1em);
+    line-height: to-unit(36px, 1, 24px);
+  }
   &:before {
-    position: absolute;
-    right: 100%;
-    // color: #ccc;
+    display: block;
     content: open-quote;
-    // font-size: 2em;
-    // line-height: 0.1em;
-    // margin-right: 0.25em;
-    // vertical-align: -0.4em;
   }
   &:after {
     // content: close-quote;
   }
-  & p {
-    display: inline;
-    // font-style: italic;
+  &:before,
+  &:after {
+    font: normal normal 4em/.5 Arial, Helvetica, Gadget, sans-serif;
   }
 }
