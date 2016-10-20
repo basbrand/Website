@@ -32,7 +32,7 @@ Styleguide 3.18
     content: open-quote;
   }
   &:after {
-    // content: close-quote;
+    content: no-close-quote;
   }
   &:before,
   &:after {
