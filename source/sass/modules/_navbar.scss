@@ -1,0 +1,27 @@
+/*
+Navigation Bar
+
+.navbar - Navigation bar
+
+markup:
+<nav class="{$modifiers}">
+  <sg-insert>4.5-1</sg-insert>
+</nav>
+
+Styleguide 5.10
+*/
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: rhythm(2) gutter();
+  // height: rhythm(20);
+  background: $white;
+  background: rgba($white,.8);
+  @include breakpoint($gt-small-desktop) {
+    padding: rhythm(4) gutter();
+  }
+}

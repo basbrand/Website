@@ -10,9 +10,9 @@ Debug layout
 Styleguide 2.0.1
 */
 
-$debug-layout: false;
-$debug-rhythm: false;
-$debug-breakpoint: false;
+$debug-layout: true;
+$debug-rhythm: true;
+$debug-breakpoint: true;
 
 @if $debug-breakpoint {
   html:after,
@@ -62,16 +62,6 @@ $debug-breakpoint: false;
       content: 'gt-large-desktop - portrait';
     }
   }
-  // This doesnt work on Samsung Galaxy
-  // body:after {
-  //   top: rhythm(6);
-  //   @include breakpoint($landscape) {
-  //     content: 'landscape';
-  //   }
-  //   @include breakpoint($portrait) {
-  //     content: 'portrait';
-  //   }
-  // }
 }
 
 @mixin debug-rhythm($rhythm: $rhythm)

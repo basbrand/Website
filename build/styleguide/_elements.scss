@@ -35,13 +35,13 @@ Styleguide 3.0
 @import "elements/brandmark";
 
 /* 3.11 Brand */
-@import "elements/brand";
+@import "elements/isolation";
 
 /* 3.12 Menu */
 @import "elements/menu";
 
-/* 3.13 Well */
-@import "elements/well";
+/* 3.13 Seed */
+@import "elements/seed";
 
 /* 3.14 Tag */
 // @import "elements/tag";
@@ -49,28 +49,17 @@ Styleguide 3.0
 /* 3.15 Image */
 @import "elements/image";
 
-/* 3.16 tile */
-// @import "elements/tile";
+/* 3.16 Well */
+@import "elements/well";
 
-/* 3.17 cover */
+/* 3.17 Cover */
 @import "elements/cover";
 
-/* 3.18 quote */
+/* 3.18 Quote */
 @import "elements/quote";
 
 
 
-/* 3.x Label */
-
-/* 3.x Alert */
-
-/* 3.x Tooltip */
-
-/* 3.x Media */
-
-/* 3.x Issue */
-
-/* 3.x Box */
 
 /* 3.98 Fx */
 @import "elements/fx";

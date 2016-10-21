@@ -26,7 +26,7 @@ Rhythm
 
 This measure is used to calculate vertical measurements like line-height and top and bottom paddings and margins. All vertical measurements need to be a whole multiple of this value to maintain consistent vertical rhythm.
 
-$rhythm - 4px
+$rhythm - 3px
 
 markup:
 {$modifiers}
@@ -313,7 +313,7 @@ mark {
  * Address inconsistent and variable font size in all browsers.
  */
 small, .body--whisper {
-  font-size: 0.83333em; }
+  font-size: 0.625em; }
 
 /*
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
@@ -650,6 +650,103 @@ Debug layout
 
 Styleguide 2.0.1
 */
+html:after,
+body:after {
+  display: block;
+  position: fixed;
+  right: 0;
+  background: #fff;
+  padding: 4px; }
+
+html:after {
+  top: 0; }
+  @media (orientation: landscape) and (min-width: 20em) {
+    html:after {
+      content: 'gt-small-handheld - landscape'; } }
+  @media (orientation: portrait) and (min-width: 20em) {
+    html:after {
+      content: 'gt-small-handheld - portrait'; } }
+  @media (orientation: landscape) and (min-width: 32.5em) {
+    html:after {
+      content: 'gt-medium-handheld - landscape'; } }
+  @media (orientation: portrait) and (min-width: 32.5em) {
+    html:after {
+      content: 'gt-medium-handheld - portrait'; } }
+  @media (orientation: landscape) and (min-width: 48em) {
+    html:after {
+      content: 'gt-large-handheld - landscape'; } }
+  @media (orientation: portrait) and (min-width: 48em) {
+    html:after {
+      content: 'gt-large-handheld - portrait'; } }
+  @media (orientation: landscape) and (min-width: 64em) {
+    html:after {
+      content: 'gt-small-desktop - landscape'; } }
+  @media (orientation: portrait) and (min-width: 64em) {
+    html:after {
+      content: 'gt-small-desktop - portrait'; } }
+  @media (orientation: landscape) and (min-width: 90em) {
+    html:after {
+      content: 'gt-medium-desktop - landscape'; } }
+  @media (orientation: portrait) and (min-width: 90em) {
+    html:after {
+      content: 'gt-medium-desktop - portrait'; } }
+  @media (orientation: landscape) and (min-width: 100em) {
+    html:after {
+      content: 'gt-large-desktop - landscape'; } }
+  @media (orientation: portrait) and (min-width: 100em) {
+    html:after {
+      content: 'gt-large-desktop - portrait'; } }
+
+.debug-layout {
+  position: relative; }
+  .debug-layout::before {
+    pointer-events: none;
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: transparent;
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    background-size: 2.77778% 100%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.1) 14px, transparent 14px, transparent 100%), linear-gradient(to left, rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.1) 14px, transparent 14px, transparent 100%), linear-gradient(to left, transparent 0%, rgba(0, 0, 0, 0.5) 1px, transparent 1px, transparent 100%); }
+    @media only screen and (max-width: 32.4375em) {
+      .debug-layout::before {
+        background-size: 8.33333% 100%;
+        background-image: linear-gradient(to right, rgba(255, 165, 0, 0.1) 0, rgba(255, 165, 0, 0.1) 14px, transparent 14px, transparent 100%), linear-gradient(to left, rgba(255, 165, 0, 0.1) 0, rgba(255, 165, 0, 0.1) 14px, transparent 14px, transparent 100%), linear-gradient(to left, transparent 0%, rgba(0, 0, 0, 0.5) 1px, transparent 1px, transparent 100%);
+        content: "12 columns at (max-width: 32.4375em)";
+        text-shadow: 1px 1px 0 #ffffff; } }
+    @media only screen and (min-width: 48em) {
+      .debug-layout::before {
+        background-size: 4.16667% 100%;
+        background-image: linear-gradient(to right, rgba(0, 255, 255, 0.1) 0, rgba(0, 255, 255, 0.1) 14px, transparent 14px, transparent 100%), linear-gradient(to left, rgba(0, 255, 255, 0.1) 0, rgba(0, 255, 255, 0.1) 14px, transparent 14px, transparent 100%), linear-gradient(to left, transparent 0%, rgba(0, 0, 0, 0.5) 1px, transparent 1px, transparent 100%);
+        content: "24 columns at (min-width: 48em)";
+        text-shadow: 1px 1px 0 #ffffff; } }
+    @media only screen and (min-width: 90em) {
+      .debug-layout::before {
+        background-size: 2.77778% 100%;
+        background-image: linear-gradient(to right, rgba(0, 255, 255, 0.1) 0, rgba(0, 255, 255, 0.1) 14px, transparent 14px, transparent 100%), linear-gradient(to left, rgba(0, 255, 255, 0.1) 0, rgba(0, 255, 255, 0.1) 14px, transparent 14px, transparent 100%), linear-gradient(to left, transparent 0%, rgba(0, 0, 0, 0.5) 1px, transparent 1px, transparent 100%);
+        content: "36 columns at (min-width: 90em)";
+        text-shadow: 1px 1px 0 #ffffff; } }
+
+.debug-rhythm:after {
+  pointer-events: none;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  content: "";
+  background-image: -webkit-linear-gradient(rgba(226, 255, 255, 0.25) 50%, transparent 50%);
+  background-image: linear-gradient(rgba(226, 255, 255, 0.25) 50%, transparent 50%);
+  background-size: 8px 8px; }
+
 /* 2.1 Layout */
 /*
 Layout
@@ -768,10 +865,13 @@ Styleguide 2.4.1
   .leader--hero {
     margin-top: 32pt; }
   .leader--giant {
-    margin-top: 64pt; }
+    margin-top: 40pt; }
+  @media only screen and (min-width: 48em) {
+    .leader {
+      margin-top: 20pt; } }
   @media only screen and (min-width: 64em) {
     .leader--giant {
-      margin-top: 120pt; } }
+      margin-top: 72pt; } }
 
 /*
 Leader inside
@@ -831,13 +931,13 @@ Styleguide 2.5.1
   .trailer--hero {
     margin-bottom: 32pt; }
   .trailer--giant {
-    margin-bottom: 64pt; }
+    margin-bottom: 40pt; }
   @media only screen and (min-width: 48em) {
     .trailer {
       margin-bottom: 20pt; } }
   @media only screen and (min-width: 64em) {
     .trailer--giant {
-      margin-bottom: 120pt; } }
+      margin-bottom: 72pt; } }
 
 /*
 Trailer inside
@@ -1087,7 +1187,7 @@ Styleguide 3.1
   font-weight: 600; }
 
 .body--number {
-  font-size: 1.16667em;
+  font-size: 0.875em;
   line-height: 1.71429; }
 
 .body--email {
@@ -1096,7 +1196,7 @@ Styleguide 3.1
 
 @media only screen and (max-width: 47.9375em) {
   .body--email {
-    font-size: 0.83333em;
+    font-size: 0.625em;
     line-height: 0.8; } }
 
 /* 3.2 Heading */
@@ -1819,7 +1919,7 @@ Styleguide 4.0
 /*
 Pod
 
-Pods are layout containers that can behave in different ways. There are six (6) different pods:
+Pods are layout containers that can behave in different ways. There are several different pods:
 
 * Regular, default pod `used for introduction pod and contact module`
 * Hippo pod `used for hero module`
@@ -1827,6 +1927,7 @@ Pods are layout containers that can behave in different ways. There are six (6) 
 * Serval pod `used for testimonial module`
 * Baboon pod `used for introduction pod and contact module`
 * Zebra pod `used for invitation module`
+* Leopard pod `used for case tiles`
 * Rhino pod `utility modifier to be used in combination with other pods, limits to 24 columns wide on large desktop (and up) landscape.`
 
 Styleguide 4.1
@@ -1844,7 +1945,8 @@ Styleguide 4.1
   .pod--hippo .pod__seed {
     width: 100%;
     min-height: 100%;
-    min-height: 100vh; }
+    min-height: 100vh;
+    padding: 0 8.33333%; }
   .pod--kudu .pod__seed {
     min-height: 0; }
   @media only screen and (min-aspect-ratio: 6 / 5) {
@@ -1859,8 +1961,10 @@ Styleguide 4.1
       float: none; }
     .pod--baboon {
       width: 50%; }
+    .pod--leopard .pod__seed,
     .pod--baboon .pod__seed {
       width: 100%; }
+    .pod--leopard .pod__seed,
     .pod--baboon .pod__seed,
     .pod--zebra .pod__seed {
       min-height: 50%;
@@ -1878,7 +1982,18 @@ Styleguide 4.1
       padding: 0 8.33333%; }
     .pod--kudu, .pod--zebra {
       min-height: 50%;
-      min-height: 50vh; } }
+      min-height: 50vh; }
+    .pod--leopard {
+      width: 50%;
+      float: left; }
+    .pod--leopard {
+      width: 50%;
+      float: right; }
+      .pod--leopard:nth-child(2n+1) {
+        clear: right; }
+    .pod--leopard .pod__seed {
+      min-height: 50%;
+      min-height: 25vh; } }
   @media only screen and (min-width: 64em) {
     .pod__serval {
       position: relative; }
@@ -1890,7 +2005,9 @@ Styleguide 4.1
       min-height: 50%;
       min-height: 50vh;
       background: #ffffff;
-      background: rgba(255, 255, 255, 0.8); } }
+      background: rgba(255, 255, 255, 0.8); }
+    .pod--hippo .pod__seed {
+      padding: 0 5.55556% 0 11.11111%; } }
   @media only screen and (min-width: 90em) {
     .pod__seed {
       padding: 0 5.55556%; }
@@ -1900,6 +2017,8 @@ Styleguide 4.1
     .pod__serval {
       position: relative; }
     .pod--baboon {
+      width: 33.33333%; }
+    .pod--leopard {
       width: 33.33333%; } }
 
 /*
@@ -2059,6 +2178,32 @@ sg-wrapper:
 Styleguide 4.1.6
 */
 /*
+Leopard pod
+
+Two, half height, stacked containers accross all viewports.
+
+Holds one (1) to two (2) pod seeds.
+
+.pod.pod--leopard - Leopard pod.
+
+markup:
+<section class="{$modifiers}">
+  <div class="pod__seed">
+    {$modifiers}
+  </div>
+  <div class="pod__seed">
+    {$modifiers}
+  </div>
+</section>
+
+sg-wrapper:
+<div class="sg-container">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 4.1.7
+*/
+/*
 Rhino pod
 
  24 Columns width on large desktop (and up) landscape.
@@ -2082,7 +2227,7 @@ sg-wrapper:
   <sg-wrapper-content/>
 </div>
 
-Styleguide 4.1.7
+Styleguide 4.1.8
 */
 /* 4.2 Tile */
 /*
@@ -2179,25 +2324,80 @@ Breadcrumbs
 
 markup:
 <nav class="{$modifiers}">
-  <ol class="reset">
-    <li><a class="anchor anchor--reset anchor--shy" href="javascript:;">Case</a></li>
-    <li><a class="anchor anchor--reset anchor--shy" href="javascript:;">Vereniging Eigen Huis</a></li>
+  <ol>
+    <li><a href="">Cases</a></li>
+    <li>Vereniging Eigen Huis</li>
   </ol>
 </nav>
 
 Styleguide 4.4
 */
-.trail {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  text-transform: uppercase;
-  color: #445D87; }
-  .trail li {
+/* 4.5 Menu */
+/*
+Menu
+
+Breadcrumbs
+
+.menu - Menu
+
+markup:
+<ol class="{$modifiers} list--reset fx" id="menu">
+  <li>
+    <a class="menu__home fx" href="/"><span class="is-narrative">Home</span></a>
+    <a class="menu__item anchor--shy is-current is-active" href="#menu">Cases</a>
+  </li>
+  <li><a class="menu__item anchor--shy fx" href="javascript:void();">Over Brickson</a></li>
+  <li><a class="menu__item anchor--shy fx is-active" href="javascript:void();">Cases</a></li>
+  <li><a class="menu__item anchor--shy fx" href="javascript:void();">Werken bij Brickson</a></li>
+</ol>
+
+Styleguide 4.5
+*/
+.menu {
+  white-space: nowrap;
+  max-height: 48px;
+  height: auto;
+  overflow: hidden; }
+  .menu li, .menu__item {
+    display: block; }
+  .menu__home {
     display: block;
     float: left;
-    padding-right: 16px; }
-  .trail li + li:before {
-    content: "|";
-    padding-right: 16px; }
+    width: 3em;
+    height: 3em;
+    background: url("/images/logos/brickson-brandmark.png");
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%2357B0B6' fill-rule='evenodd' d='M23.247 42.848c-1.993 0-3.92-.293-5.74-.83l.066-.022c.717-.255 1.43-.56 2.148-.92.716-.358 1.39-.707 2.02-1.05.44-.236.806-.44 1.104-.61.182.14.4.236.645.236h.015c1.27-.02 2.502-.19 3.692-.473.83-.066 1.63-.256 2.393-.584.58-.248 1.106-.56 1.592-.92 5.466-2.885 9.223-8.623 9.223-15.18 0-9.46-7.698-17.156-17.158-17.156-.284 0-.54.115-.73.295-.246-.142-.52-.303-.827-.485-.63-.375-1.304-.734-2.02-1.074-.717-.34-1.425-.638-2.123-.895-.122-.044-.236-.08-.35-.117 1.912-.596 3.944-.918 6.05-.918 11.222 0 20.352 9.13 20.352 20.35 0 11.223-9.13 20.353-20.353 20.353M2.895 22.496c0-6.968 3.523-13.128 8.88-16.798-.147.437-.237.896-.237 1.395 0 .844.237 1.593.68 2.262-3.905 3.27-6.128 8.008-6.128 13.14 0 5.108 2.304 9.964 6.21 13.21-.5.698-.762 1.488-.762 2.38 0 .414.07.796.17 1.163-5.318-3.675-8.813-9.812-8.813-16.752m14.78-13.894c-.887.392-1.5.588-1.84.588-.58 0-1.075-.203-1.483-.614-.41-.408-.616-.903-.616-1.483 0-.578.206-1.083.616-1.51.408-.424.903-.638 1.483-.638.34 0 .953.197 1.84.59.887.39 1.91.912 3.068 1.558-1.16.613-2.18 1.117-3.07 1.51m5.524-.435h.82c1.055 0 2.062.203 3.017.613.953.41 1.78.966 2.48 1.663.7.7 1.253 1.517 1.663 2.455.408.94.614 1.934.614 2.99 0 1.06-.205 2.057-.613 2.994-.41.938-.964 1.756-1.662 2.454-.7.698-1.52 1.262-2.455 1.688-.94.427-1.936.64-2.992.64h-.206c-.408-.24-.912-.53-1.507-.87-.598-.34-1.228-.666-1.893-.972-.665-.307-1.313-.58-1.943-.818-.633-.24-1.17-.392-1.612-.46v-9.36c.51-.134 1.073-.34 1.688-.613.614-.273 1.21-.562 1.79-.87.578-.306 1.116-.594 1.61-.867l1.2-.665m9.413 18.36c-.923-1.058-1.98-1.843-3.173-2.353.273-.17.545-.358.818-.564.274-.203.53-.44.77-.715.952-.92 1.676-1.985 2.17-3.195.496-1.21.744-2.48.744-3.81 0-1.943-.504-3.683-1.49-5.228 3.528 2.75 5.81 7.026 5.81 11.834 0 3.91-1.535 7.483-4.02 10.167.065-.4.106-.807.106-1.227 0-1.84-.58-3.478-1.737-4.91M14.35 39.594c-.41-.427-.616-.93-.616-1.51 0-.577.206-1.072.616-1.482.408-.408.903-.612 1.483-.612.34 0 .953.197 1.84.59.887.39 1.91.893 3.068 1.506-1.16.648-2.18 1.17-3.07 1.56-.885.392-1.498.588-1.838.588-.58 0-1.075-.212-1.483-.64m.714-16.313c.41-.427.904-.64 1.484-.64.34 0 .954.196 1.84.588.888.393 1.91.912 3.07 1.56-1.16.648-2.182 1.16-3.07 1.533-.886.378-1.5.565-1.84.565-.58 0-1.074-.205-1.484-.613-.408-.41-.613-.904-.613-1.484s.205-1.082.613-1.51m-1.254-12.452c.298.165.61.31.948.41v9.666c-.715.375-1.304.894-1.764 1.56-.46.664-.69 1.44-.69 2.326 0 .852.23 1.62.69 2.302.46.682 1.05 1.193 1.764 1.533v5.37c-.28.073-.542.178-.793.297-3.598-2.837-5.732-7.2-5.732-11.794 0-4.583 2.03-8.803 5.577-11.67m13.29 26.16c-.175.016-.35.025-.528.025h-3.377c-.272-.17-.663-.39-1.174-.664l-1.637-.87c-.58-.306-1.176-.587-1.79-.844-.615-.255-1.177-.468-1.688-.64v-4.958c.51-.07 1.1-.24 1.764-.512.665-.274 1.337-.57 2.02-.896.682-.324 1.32-.656 1.918-.996.596-.342 1.066-.615 1.406-.818h2.558c.75 0 1.465.144 2.148.434.682.29 1.278.69 1.79 1.2.512.512.92 1.11 1.226 1.792.307.682.46 1.415.46 2.198 0 .785-.153 1.51-.46 2.174-.306.665-.714 1.252-1.226 1.764-.23.23-.482.43-.747.615-.847.413-1.738.746-2.664.995M23.248 0C10.843 0 .75 10.092.75 22.496c0 12.405 10.093 22.497 22.497 22.497 12.405 0 22.496-10.092 22.496-22.497C45.743 10.092 35.653 0 23.247 0'/%3E%3C/svg%3E");
+    background-size: cover; }
+    .menu__home:hover {
+      background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23445D87' fill-rule='evenodd' d='M23.247 42.848c-1.993 0-3.92-.293-5.74-.83l.066-.022c.717-.255 1.43-.56 2.148-.92.716-.358 1.39-.707 2.02-1.05.44-.236.806-.44 1.104-.61.182.14.4.236.645.236h.015c1.27-.02 2.502-.19 3.692-.473.83-.066 1.63-.256 2.393-.584.58-.248 1.106-.56 1.592-.92 5.466-2.885 9.223-8.623 9.223-15.18 0-9.46-7.698-17.156-17.158-17.156-.284 0-.54.115-.73.295-.246-.142-.52-.303-.827-.485-.63-.375-1.304-.734-2.02-1.074-.717-.34-1.425-.638-2.123-.895-.122-.044-.236-.08-.35-.117 1.912-.596 3.944-.918 6.05-.918 11.222 0 20.352 9.13 20.352 20.35 0 11.223-9.13 20.353-20.353 20.353M2.895 22.496c0-6.968 3.523-13.128 8.88-16.798-.147.437-.237.896-.237 1.395 0 .844.237 1.593.68 2.262-3.905 3.27-6.128 8.008-6.128 13.14 0 5.108 2.304 9.964 6.21 13.21-.5.698-.762 1.488-.762 2.38 0 .414.07.796.17 1.163-5.318-3.675-8.813-9.812-8.813-16.752m14.78-13.894c-.887.392-1.5.588-1.84.588-.58 0-1.075-.203-1.483-.614-.41-.408-.616-.903-.616-1.483 0-.578.206-1.083.616-1.51.408-.424.903-.638 1.483-.638.34 0 .953.197 1.84.59.887.39 1.91.912 3.068 1.558-1.16.613-2.18 1.117-3.07 1.51m5.524-.435h.82c1.055 0 2.062.203 3.017.613.953.41 1.78.966 2.48 1.663.7.7 1.253 1.517 1.663 2.455.408.94.614 1.934.614 2.99 0 1.06-.205 2.057-.613 2.994-.41.938-.964 1.756-1.662 2.454-.7.698-1.52 1.262-2.455 1.688-.94.427-1.936.64-2.992.64h-.206c-.408-.24-.912-.53-1.507-.87-.598-.34-1.228-.666-1.893-.972-.665-.307-1.313-.58-1.943-.818-.633-.24-1.17-.392-1.612-.46v-9.36c.51-.134 1.073-.34 1.688-.613.614-.273 1.21-.562 1.79-.87.578-.306 1.116-.594 1.61-.867l1.2-.665m9.413 18.36c-.923-1.058-1.98-1.843-3.173-2.353.273-.17.545-.358.818-.564.274-.203.53-.44.77-.715.952-.92 1.676-1.985 2.17-3.195.496-1.21.744-2.48.744-3.81 0-1.943-.504-3.683-1.49-5.228 3.528 2.75 5.81 7.026 5.81 11.834 0 3.91-1.535 7.483-4.02 10.167.065-.4.106-.807.106-1.227 0-1.84-.58-3.478-1.737-4.91M14.35 39.594c-.41-.427-.616-.93-.616-1.51 0-.577.206-1.072.616-1.482.408-.408.903-.612 1.483-.612.34 0 .953.197 1.84.59.887.39 1.91.893 3.068 1.506-1.16.648-2.18 1.17-3.07 1.56-.885.392-1.498.588-1.838.588-.58 0-1.075-.212-1.483-.64m.714-16.313c.41-.427.904-.64 1.484-.64.34 0 .954.196 1.84.588.888.393 1.91.912 3.07 1.56-1.16.648-2.182 1.16-3.07 1.533-.886.378-1.5.565-1.84.565-.58 0-1.074-.205-1.484-.613-.408-.41-.613-.904-.613-1.484s.205-1.082.613-1.51m-1.254-12.452c.298.165.61.31.948.41v9.666c-.715.375-1.304.894-1.764 1.56-.46.664-.69 1.44-.69 2.326 0 .852.23 1.62.69 2.302.46.682 1.05 1.193 1.764 1.533v5.37c-.28.073-.542.178-.793.297-3.598-2.837-5.732-7.2-5.732-11.794 0-4.583 2.03-8.803 5.577-11.67m13.29 26.16c-.175.016-.35.025-.528.025h-3.377c-.272-.17-.663-.39-1.174-.664l-1.637-.87c-.58-.306-1.176-.587-1.79-.844-.615-.255-1.177-.468-1.688-.64v-4.958c.51-.07 1.1-.24 1.764-.512.665-.274 1.337-.57 2.02-.896.682-.324 1.32-.656 1.918-.996.596-.342 1.066-.615 1.406-.818h2.558c.75 0 1.465.144 2.148.434.682.29 1.278.69 1.79 1.2.512.512.92 1.11 1.226 1.792.307.682.46 1.415.46 2.198 0 .785-.153 1.51-.46 2.174-.306.665-.714 1.252-1.226 1.764-.23.23-.482.43-.747.615-.847.413-1.738.746-2.664.995M23.248 0C10.843 0 .75 10.092.75 22.496c0 12.405 10.093 22.497 22.497 22.497 12.405 0 22.496-10.092 22.496-22.497C45.743 10.092 35.653 0 23.247 0'/%3E%3C/svg%3E"); }
+  .menu__item {
+    width: 100%;
+    padding: 8px 1ex;
+    font: normal bold 0.625em/3.2 Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .25em; }
+    .menu__item:hover, .menu__item.is-active {
+      color: #445D87;
+      max-height: 240px; }
+  .menu .is-current {
+    height: auto;
+    display: inline-block;
+    font-size: 1em;
+    line-height: 2;
+    padding-left: 1ex;
+    padding-right: 0; }
+  .menu.is-active, .menu:target {
+    max-height: 192px; }
+  @media only screen and (min-width: 32.5em) {
+    .menu {
+      display: flex; }
+      .menu__item {
+        position: static;
+        padding: 8px 2ex; }
+      .menu li, .menu__item {
+        display: inline-block; }
+      .menu li:first-child {
+        flex: 1 1 100%; } }
 
 /* 5. */
 /*
@@ -2213,46 +2413,19 @@ markup:
 <section class="pod pod--kudu pod--rhino handshake cover isolation">
   <picture>
     <img
-      class="cover__image"
-      sizes="(max-width: 1920px) 100vw, 1920px"
-      srcset="
-      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_190.jpg 190w,
-      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_275.jpg 275w,
-      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_348.jpg 348w,
-      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_407.jpg 407w,
-      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_467.jpg 467w,
-      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_523.jpg 523w,
-      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_578.jpg 578w,
-      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_626.jpg 626w,
-      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_671.jpg 671w,
-      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_721.jpg 721w,
-      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_764.jpg 764w,
-      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_768.jpg 768w,
-      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_775.jpg 775w,
-      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_913.jpg 913w,
-      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1032.jpg 1032w,
-      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1156.jpg 1156w,
-      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1262.jpg 1262w,
-      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1363.jpg 1363w,
-      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1468.jpg 1468w,
-      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1562.jpg 1562w,
-      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1655.jpg 1655w,
-      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1746.jpg 1746w,
-      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1836.jpg 1836w,
-      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1914.jpg 1914w,
-      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1920.jpg 1920w"
-      src="../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1920.jpg"
-      alt="">
+      sizes="(max-width: 1920px) 67vw, 1068px"
+      srcset="https://hd.unsplash.com/photo-1428542244207-0aaec316e609 512w, https://hd.unsplash.com/photo-1428542244207-0aaec316e609 1068w"
+      class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
   </picture>
-  <div class="pod__seed">
-    <h1 class="leader trailer">
+  <div class="pod__seed seed">
+    <h1 class="seed__header leader trailer">
       <img style="max-height: 100px;" src="../images/logos/Brickson-Logotype-RGB-DB.svg" alt="Brickson • Amsterdam – Den Bosch">
     </h1>
-  </div>
-  <div class="pod__seed">
-    <h2 class="title title--inverse">Vooruit met digitaal</h2>
-    <p class="body--inverse trailer leader">Brickson is er voor organisaties die de volgende stap in digitaal willen maken. Met een strategie, digitaal concept, website of een applicatie.</p>
-  </div>
+    <div class="seed__footer">
+      <h2 class="title title--inverse">Vooruit met digitaal</h2>
+      <p class="body--inverse trailer leader">Brickson is er voor organisaties die de volgende stap in digitaal willen maken. Met een strategie, digitaal concept, website of een applicatie.</p>
+    </div>
+  </section>
 </section>
 
 Styleguide 5.1
@@ -2352,17 +2525,30 @@ Contact
 
 Styleguide 5.5
 */
-/* 5.6 Article */
+/* 5.6 Post */
 /*
 Article
 
-.article - Regular article
-.article.article--has-aside - Article with sidebar
+.post - Regular article
+.post.post--has-aside - Article with sidebar
 
 markup:
 <article class="{$modifiers}">
-  <sg-insert>5.9</sg-insert>
-  <div class="article__main isolation">
+  <header class="post__header pod pod--hippo cover isolation">
+    <picture>
+      <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+    </picture>
+    <div class="pod__seed seed wings">
+      <div class="seed__header">
+        <img style="max-height: 100px;" src="../images/logos/Brickson-Logotype-RGB-DB.svg" alt="Brickson • Amsterdam – Den Bosch">
+      </div>
+      <div class="seed__footer leader trailer">
+        <h1 class="post__title title--inverse leader trailer">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit</h1>
+        <p class="post__lead body--inverse leader trailer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+      </div>
+    </div>
+  </header>
+  <div class="post__main isolation">
     <div class="wings">
       <sg-insert>4.4</sg-insert>
       <h2>Lorem Ipsum Dolor Sit Amet</h2>
@@ -2384,7 +2570,7 @@ markup:
       </div>
     </footer>
   </div>
-  <aside class="article__aside well well--stork isolation seed">
+  <aside class="post__aside well well--stork isolation seed">
     <section class="leader--giant trailer wings seed__body">
       <sg-insert>3.18-2</sg-insert>
     </section>
@@ -2400,39 +2586,73 @@ markup:
 
 Styleguide 5.6
 */
-.article__main h2 {
-  font-size: 1.5em;
-  line-height: 1; }
-
-.article__main h2,
-.article__main p {
-  margin: 24px 0; }
-
-@media only screen and (min-width: 64em) {
-  .article .wings {
-    padding-left: 16.66667%;
-    padding-right: 16.66667%; }
-  .article__main, .article__aside {
-    float: left; }
-  .article__main {
-    width: 66.66667%; }
-  .article__aside {
-    width: 33.33333%; }
-    .article__aside .wings {
-      padding-left: 8.33333%;
-      padding-right: 8.33333%; } }
-
-@media only screen and (min-width: 90em) {
-  .article__main h2 {
-    font-size: 2em;
-    line-height: 1.5;
-    margin: 48px 0 24px 0; }
-  .article__main p {
-    font-size: 1.125em;
-    line-height: 1.55556; }
-  .article .wings {
-    padding-left: 16.66667%;
-    padding-right: 16.66667%; } }
+.post {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; }
+  .post__header {
+    flex: 1 0 100%;
+    width: 100%; }
+  .navbar + .post .pod__seed {
+    padding-top: 80px; }
+  .post__title,
+  .post__main h2 {
+    font-size: 1.5em;
+    line-height: 1; }
+  .post__title,
+  .post__main h2,
+  .post__main p {
+    margin: 24px 0; }
+  @media only screen and (min-width: 64em) {
+    .post {
+      flex-direction: row; }
+      .navbar + .post .pod__seed {
+        padding-top: 120px; }
+      .post__main, .post__aside {
+        float: left; }
+      .post__main {
+        width: 66.66667%; }
+      .post .wings {
+        padding-left: 16.66667%;
+        padding-right: 16.66667%; }
+      .post__header .wings {
+        padding-left: 11.11111%;
+        padding-right: 11.11111%; }
+      .post__title {
+        font-size: 3em;
+        line-height: 1.16667; }
+      .post__lead {
+        font-size: 1.125em;
+        line-height: 1.77778; }
+      .post__aside {
+        width: 33.33333%; }
+        .post__aside .wings {
+          padding-left: 8.33333%;
+          padding-right: 8.33333%; }
+      .post__title, .post__lead {
+        padding-right: 13.33333%; } }
+  @media only screen and (min-width: 90em) {
+    .post__title {
+      font-size: 3.875em;
+      line-height: 1.16129; }
+    .post__lead {
+      font-size: 1.25em;
+      line-height: 1.6; }
+    .post__main h2 {
+      font-size: 2em;
+      line-height: 1.5;
+      margin: 48px 0 24px 0; }
+    .post__main p {
+      font-size: 1.125em;
+      line-height: 1.55556; }
+    .post .wings {
+      padding-left: 16.66667%;
+      padding-right: 16.66667%; }
+    .post__header .wings {
+      padding-left: 11.11111%;
+      padding-right: 33.33333%; }
+    .post__title, .post__lead {
+      padding-right: 6.66667%; } }
 
 /* 5.7 Navigation */
 /*
@@ -2531,10 +2751,40 @@ markup:
   <picture>
     <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
   </picture>
+  <div class="pod__seed seed">
+    <h1 class="article__title title--inverse">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit</h1>
+    <p class="body--inverse">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus, dapibus rutrum ipsum gravida et. Integer lectus nisi, facilisis sit amet eleifend nec, pharetra ut augue. Integer quam nunc, consequat nec.</p>
+  </div>
 </header>
 
 Styleguide 5.9
 */
+/* 5.10 Navigation Bar */
+/*
+Navigation Bar
+
+.navbar - Navigation bar
+
+markup:
+<nav class="{$modifiers}">
+  <sg-insert>4.5-1</sg-insert>
+</nav>
+
+Styleguide 5.10
+*/
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 8px 14px;
+  background: #ffffff;
+  background: rgba(255, 255, 255, 0.8); }
+  @media only screen and (min-width: 64em) {
+    .navbar {
+      padding: 16px 14px; } }
+
 /* 6. */
 /*
 Templates
@@ -2564,9 +2814,72 @@ Styleguide 7.1
 Case
 
 markup:
+<sg-insert>5.10-1</sg-insert>
 <sg-insert>5.6-1</sg-insert>
 
 Styleguide 7.2
+*/
+/* 7.3 Cases */
+/*
+Cases
+
+markup:
+<sg-insert>5.10-1</sg-insert>
+<article class="case pod pod--hippo isolation">
+  <picture>
+    <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+  </picture>
+</article>
+<article class="pod--leopard isolation">
+  <div class="pod__seed cover">
+    <picture>
+      <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+    </picture>
+  </div>
+  <div class="pod__seed seed">
+    <h2 class="seed__header title title--body leader trailer">Lorem Ipsum Dolor Sit Amet</h2>
+    <p class="seed__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+    <p class="seed__footer leader trailer"><a class="anchor--shy body--meta body--whisper" href="javascript:void();"><b>Lees verder</b></a></p>
+  </div>
+</article>
+<article class="pod--leopard isolation">
+  <div class="pod__seed cover">
+    <picture>
+      <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+    </picture>
+  </div>
+  <div class="pod__seed seed">
+    <h2 class="seed__header title title--body leader trailer">Lorem Ipsum Dolor Sit Amet</h2>
+    <p class="seed__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+    <p class="seed__footer leader trailer"><a class="anchor--shy body--meta body--whisper" href="javascript:void();"><b>Lees verder</b></a></p>
+  </div>
+</article>
+<article class="pod--leopard isolation">
+  <div class="pod__seed cover">
+    <picture>
+      <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+    </picture>
+  </div>
+  <div class="pod__seed seed">
+    <h2 class="seed__header title title--body leader trailer">Lorem Ipsum Dolor Sit Amet</h2>
+    <p class="seed__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+    <p class="seed__footer leader trailer"><a class="anchor--shy body--meta body--whisper" href="javascript:void();"><b>Lees verder</b></a></p>
+  </div>
+</article>
+<article class="pod--leopard isolation">
+  <div class="pod__seed cover">
+    <picture>
+      <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+    </picture>
+  </div>
+  <div class="pod__seed seed">
+    <h2 class="seed__header title title--body leader trailer">Lorem Ipsum Dolor Sit Amet</h2>
+    <p class="seed__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+    <p class="seed__footer leader trailer"><a class="anchor--shy body--meta body--whisper" href="javascript:void();"><b>Lees verder</b></a></p>
+  </div>
+</article>
+
+Styleguide 7.3
 */
 /* 8. */
 @media only screen and (max-width: 47.9375em) {
