@@ -44,6 +44,9 @@ Styleguide 4.1
     width: 100%;
     min-height: 100%;
     min-height: 100vh;
+  }
+  &--hippo &__seed,
+  &--leopard &__seed {
     padding: 0 percentage(1/12);
   }
   &--kudu &__seed {
@@ -159,7 +162,7 @@ Styleguide 4.1
       width: percentage(12/36);
     }
     &--leopard {
-      width: percentage(12/36);
+      // width: percentage(1/2);
     }
   }
 }

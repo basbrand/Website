@@ -16,6 +16,9 @@ Styleguide 3.16
 .well {
   background: $color-body;
   color: $white;
+  &--ostrich {
+    background: $color-teal;
+  }
   &--stork {
     color: $color-body;
     background: mix($color-teal, $white, 26%);

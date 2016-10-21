@@ -313,7 +313,7 @@ mark {
  * Address inconsistent and variable font size in all browsers.
  */
 small, .body--whisper {
-  font-size: 0.625em; }
+  font-size: 0.75em; }
 
 /*
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
@@ -751,8 +751,70 @@ html:after {
 /*
 Layout
 
+Two- or three-column layout – |Aside|Main|Aside. Aside columns are optional and can be omitted for a two- or single-column layout.
+
+.layout - Full width accross viewports
+.layout.layout--reverse - Reverses container ordering on smallest viewports, is used for source ordering
+.layout.layout--even - Spreads columns evenly
+.layout.layout--align-middle - Align content vertically centered
+
+markup:
+<div class="{$modifiers}">
+  <div class="layout__cell layout__cell--aside">
+    Sidebar
+  </div>
+  <div class="layout__cell">
+    Main
+  </div>
+  <div class="layout__cell layout__cell--aside">
+    Sidebar
+  </div>
+</div>
+
 Styleguide 2.1
 */
+/*
+ * 1. Allow containers to shrink and grow
+ * 2. IE Fallback
+ */
+.layout {
+  display: flex;
+  flex-direction: column; }
+  .layout__cell {
+    flex: 0 1 100%;
+    max-width: 100%;
+    /* 2. */ }
+  .layout--reverse {
+    flex-direction: column-reverse; }
+  .layout--even {
+    flex: 0 0 auto !important;
+    max-width: 100%;
+    /* 2. */ }
+  .layout--align-middle {
+    align-items: center; }
+
+@media only screen and (min-width: 48em) {
+  .layout__cell.wings {
+    padding-left: 4.16667%;
+    padding-right: 4.16667%; } }
+
+@media only screen and (min-width: 64em) {
+  .layout {
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .layout__cell {
+      flex: 1 1 33.33333%;
+      min-width: 33.33333%; }
+      .layout__cell.wings {
+        padding-left: 2.77778%;
+        padding-right: 2.77778%; }
+    .layout__cell--main {
+      flex: 1 1 66.66667%;
+      min-width: 66.66667%; }
+      .layout__cell--main.wings {
+        padding-left: 4.16667%;
+        padding-right: 4.16667%; } }
+
 /* 2.2 Gutter */
 /*
 Gutter
@@ -1738,6 +1800,8 @@ Styleguide 3.16
 .well {
   background: #445D87;
   color: #ffffff; }
+  .well--ostrich {
+    background: #57B0B6; }
   .well--stork {
     color: #445D87;
     background: #d3eaec; }
@@ -1822,7 +1886,7 @@ Quote
 .quote.quote--l - Large quote, used in case
 
 markup:
-<blockquote class="{$modifiers} leader trailer"><p>Met oog en gevoel voor de mensen in je organisatie gaat Brickson altijd een stap verder.</p></blockquote>
+<blockquote class="{$modifiers} leader--giant trailer"><p>Met oog en gevoel voor de mensen in je organisatie gaat Brickson altijd een stap verder.</p></blockquote>
 <figure class="person bleed leader trailer">
   <span class="person__picture gutters">
     <img src="/images/heads/marja_smits.jpg" class="person__image" width="56" height="56" style="background: Grey;"/>
@@ -1879,6 +1943,8 @@ Styleguide 3.99
 */
 .is-lt-large-handheld,
 .is-gt-large-handheld,
+.is-gt-small-desktop,
+.is-gt-medium-desktop,
 .is-narrative {
   position: absolute;
   left: -999em;
@@ -1907,6 +1973,14 @@ Styleguide 3.99
 
 @media only screen and (min-width: 48em) {
   .is-gt-large-handheld {
+    position: static; } }
+
+@media only screen and (min-width: 64em) {
+  .is-gt-small-desktop {
+    position: static; } }
+
+@media only screen and (min-width: 90em) {
+  .is-gt-medium-desktop {
     position: static; } }
 
 /* 4. */
@@ -1945,7 +2019,9 @@ Styleguide 4.1
   .pod--hippo .pod__seed {
     width: 100%;
     min-height: 100%;
-    min-height: 100vh;
+    min-height: 100vh; }
+  .pod--hippo .pod__seed,
+  .pod--leopard .pod__seed {
     padding: 0 8.33333%; }
   .pod--kudu .pod__seed {
     min-height: 0; }
@@ -2022,8 +2098,6 @@ Styleguide 4.1
     .pod__serval {
       position: relative; }
     .pod--baboon {
-      width: 33.33333%; }
-    .pod--leopard {
       width: 33.33333%; } }
 
 /*
@@ -2428,39 +2502,9 @@ Handshake
 
 markup:
 <section class="pod pod--kudu pod--rhino handshake cover isolation">
-  <picture>
-    <img
-      class="cover__image"
-      sizes="(max-width: 1920px) 100vw, 1920px"
-      srcset="
-      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_190.jpg 190w,
-      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_275.jpg 275w,
-      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_348.jpg 348w,
-      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_407.jpg 407w,
-      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_467.jpg 467w,
-      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_523.jpg 523w,
-      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_578.jpg 578w,
-      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_626.jpg 626w,
-      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_671.jpg 671w,
-      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_721.jpg 721w,
-      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_764.jpg 764w,
-      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_768.jpg 768w,
-      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_775.jpg 775w,
-      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_913.jpg 913w,
-      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1032.jpg 1032w,
-      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1156.jpg 1156w,
-      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1262.jpg 1262w,
-      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1363.jpg 1363w,
-      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1468.jpg 1468w,
-      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1562.jpg 1562w,
-      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1655.jpg 1655w,
-      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1746.jpg 1746w,
-      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1836.jpg 1836w,
-      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1914.jpg 1914w,
-      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1920.jpg 1920w"
-      src="../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1920.jpg"
-      alt="">
-  </picture>
+<picture>
+  <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+</picture>
   <div class="pod__seed">
     <h1 class="leader trailer">
       <img style="max-height: 100px;" src="../images/logos/Brickson-Logotype-RGB-DB.svg" alt="Brickson • Amsterdam – Den Bosch">
@@ -2484,7 +2528,8 @@ markup:
     <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
   </picture>
   <div class="pod__seed seed">
-    <h3 class="seed__header title title--section leader trailer">Testimonial</h3>
+    <h3 class="seed__header title title--section leader--hero trailer">Testimonial</h3>
+    <blockquote class="quote lead leader"><p>Met oog en gevoel voor de mensen in je organisatie gaat Brickson altijd een stap verder.</p></blockquote>
     <div class="seed__body leader trailer">
       <figure class="person bleed">
         <span class="person__picture gutters">
@@ -2495,7 +2540,6 @@ markup:
           <small class="person__occupation">Manager Strategie en Marketing Evean</small>
         </figcaption>
       </figure>
-      <blockquote class="quote lead leader"><p>Met oog en gevoel voor de mensen in je organisatie gaat Brickson altijd een stap verder.</p></blockquote>
     </div>
     <div class="seed__footer leader trailer">
       <a class="button button--stretch" href="/cases/evean/#main">Case: Evean</a>
@@ -2622,8 +2666,8 @@ markup:
       <sg-insert>3.18-2</sg-insert>
     </section>
     <section class="leader--giant trailer wings seed__footer">
-      <h3 class="title title--section leader trailer">Over Brickson</h3>
-      <p class="body--whisper">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus, dapibus rutrum ipsum gravida et. Integer lectus nisi, facilisis sit amet eleifend nec, pharetra ut augue. Integer quam nunc, consequat nec egestas ac, volutpat ac nisi. Sed consectetur dignissim dignissim. Donec pretium est site.</p>
+      <h3 class="title title--section leader">Over Brickson</h3>
+      <p class="body--whisper leader--tiny trailer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus, dapibus rutrum ipsum gravida et. Integer lectus nisi, facilisis sit amet eleifend nec, pharetra ut augue. Integer quam nunc, consequat nec egestas ac, volutpat ac nisi. Sed consectetur dignissim dignissim. Donec pretium est site.</p>
     </section>
   </aside>
 </article>
@@ -2877,91 +2921,79 @@ markup:
     <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
   </picture>
 </article>
-<article class="pod--leopard isolation">
-  <div class="pod__seed cover">
-    <picture>
-      <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
-    </picture>
+<section class="layout">
+  <aside class="layout__cell well well--ostrich isolation wings seed is-gt-medium-desktop">
+    <div class="seed__body">
+      <sg-insert>3.18-2</sg-insert>
+    </div>
+    <div class="seed__footer">
+      <h3 class="title title--section leader">Over Brickson</h3>
+      <p class="body--whisper leader--tiny trailer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus, dapibus rutrum ipsum gravida et. Integer lectus nisi, facilisis sit amet eleifend nec, pharetra ut augue. Integer quam nunc, consequat nec egestas ac, volutpat ac nisi. Sed consectetur dignissim dignissim. Donec pretium est site.</p>
+    </div>
+  </aside>
+  <div class="layout__cell layout__cell--main">
+    <article class="pod--leopard isolation">
+      <div class="pod__seed cover">
+        <picture>
+          <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+        </picture>
+      </div>
+      <div class="pod__seed seed">
+        <div class="seed__body">
+          <h2 class="title title--body leader trailer">Lorem Ipsum Dolor Sit Amet</h2>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+        </div>
+        <p class="seed__footer leader trailer"><a class="anchor--shy body--meta body--whisper" href="javascript:void();"><b>Lees verder</b></a></p>
+      </div>
+    </article>
+    <article class="pod--leopard isolation">
+      <div class="pod__seed cover">
+        <picture>
+          <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+        </picture>
+      </div>
+      <div class="pod__seed seed">
+        <div class="seed__body">
+          <h2 class="title title--body leader trailer">Lorem Ipsum Dolor Sit Amet</h2>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+        </div>
+        <p class="seed__footer leader trailer"><a class="anchor--shy body--meta body--whisper" href="javascript:void();"><b>Lees verder</b></a></p>
+      </div>
+    </article>
+    <article class="pod--leopard isolation">
+      <div class="pod__seed cover">
+        <picture>
+          <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+        </picture>
+      </div>
+      <div class="pod__seed seed">
+        <div class="seed__body">
+          <h2 class="title title--body leader trailer">Lorem Ipsum Dolor Sit Amet</h2>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+        </div>
+        <p class="seed__footer leader trailer"><a class="anchor--shy body--meta body--whisper" href="javascript:void();"><b>Lees verder</b></a></p>
+      </div>
+    </article>
+    <article class="pod--leopard isolation">
+      <div class="pod__seed cover">
+        <picture>
+          <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+        </picture>
+      </div>
+      <div class="pod__seed seed">
+        <div class="seed__body">
+          <h2 class="title title--body leader trailer">Lorem Ipsum Dolor Sit Amet</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+        </div>
+        <p class="seed__footer leader trailer"><a class="anchor--shy body--meta body--whisper" href="javascript:void();"><b>Lees verder</b></a></p>
+      </div>
+    </article>
   </div>
-  <div class="pod__seed seed">
-    <h2 class="seed__header title title--body leader trailer">Lorem Ipsum Dolor Sit Amet</h2>
-    <p class="seed__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
-    <p class="seed__footer leader trailer"><a class="anchor--shy body--meta body--whisper" href="javascript:void();"><b>Lees verder</b></a></p>
-  </div>
-</article>
-<article class="pod--leopard isolation">
-  <div class="pod__seed cover">
-    <picture>
-      <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
-    </picture>
-  </div>
-  <div class="pod__seed seed">
-    <h2 class="seed__header title title--body leader trailer">Lorem Ipsum Dolor Sit Amet</h2>
-    <p class="seed__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
-    <p class="seed__footer leader trailer"><a class="anchor--shy body--meta body--whisper" href="javascript:void();"><b>Lees verder</b></a></p>
-  </div>
-</article>
-<article class="pod--leopard isolation">
-  <div class="pod__seed cover">
-    <picture>
-      <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
-    </picture>
-  </div>
-  <div class="pod__seed seed">
-    <h2 class="seed__header title title--body leader trailer">Lorem Ipsum Dolor Sit Amet</h2>
-    <p class="seed__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
-    <p class="seed__footer leader trailer"><a class="anchor--shy body--meta body--whisper" href="javascript:void();"><b>Lees verder</b></a></p>
-  </div>
-</article>
-<article class="pod--leopard isolation">
-  <div class="pod__seed cover">
-    <picture>
-      <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
-    </picture>
-  </div>
-  <div class="pod__seed seed">
-    <h2 class="seed__header title title--body leader trailer">Lorem Ipsum Dolor Sit Amet</h2>
-    <p class="seed__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
-    <p class="seed__footer leader trailer"><a class="anchor--shy body--meta body--whisper" href="javascript:void();"><b>Lees verder</b></a></p>
-  </div>
-</article>
+</section>
 
 Styleguide 7.3
 */
 /* 8. */
-@media only screen and (max-width: 47.9375em) {
-  .headline .posting__intro {
-    position: absolute;
-    left: -999em; } }
-
-@media only screen and (min-width: 32.5em) {
-  .posting--hero.layout {
-    flex-direction: row; }
-  .layout__cell .grid--channels .grid__cell {
-    flex-basis: 50%; } }
-
-@media only screen and (min-width: 48em) {
-  .layout__cell .grid--channels .grid__cell {
-    flex-basis: 25%; } }
-
-@media only screen and (min-width: 64em) {
-  .layout__cell .grid--channels .grid__cell {
-    flex-basis: 50%; }
-  .layout > .layout__cell {
-    padding-right: 14px; }
-  .layout > .layout__cell--divider {
-    padding-right: 28px; }
-  .wings > .gutters {
-    padding-right: 0; }
-  .layout__cell--aside .posting {
-    max-width: 290px;
-    max-width: calc( 50% - 2*$gutter-width);
-    float: left; } }
-
-@media only screen and (min-width: 90em) {
-  .headline.wings {
-    padding-left: 11.11111%; } }
-
 .pod__seed.grid {
   padding: 0; }
 

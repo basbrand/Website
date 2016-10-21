@@ -13,6 +13,8 @@ Styleguide 3.99
 */
 .is-lt-large-handheld,
 .is-gt-large-handheld,
+.is-gt-small-desktop,
+.is-gt-medium-desktop,
 .is-narrative {
 	position: absolute;
 	left: -999em;
@@ -31,6 +33,16 @@ Styleguide 3.99
 }
 .is-gt-large-handheld {
 	@include breakpoint($gt-large-handheld) {
+		position: static;
+	}
+}
+.is-gt-small-desktop {
+	@include breakpoint($gt-small-desktop) {
+		position: static;
+	}
+}
+.is-gt-medium-desktop {
+	@include breakpoint($gt-medium-desktop) {
 		position: static;
 	}
 }
