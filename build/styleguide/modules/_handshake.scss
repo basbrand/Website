@@ -5,20 +5,54 @@ markup:
 <section class="pod pod--kudu pod--rhino handshake cover isolation">
   <picture>
     <img
-      sizes="(max-width: 1920px) 67vw, 1068px"
-      srcset="https://hd.unsplash.com/photo-1428542244207-0aaec316e609 512w, https://hd.unsplash.com/photo-1428542244207-0aaec316e609 1068w"
-      class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+      class="cover__image"
+      sizes="(max-width: 1920px) 100vw, 1920px"
+      srcset="
+      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_190.jpg 190w,
+      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_275.jpg 275w,
+      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_348.jpg 348w,
+      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_407.jpg 407w,
+      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_467.jpg 467w,
+      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_523.jpg 523w,
+      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_578.jpg 578w,
+      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_626.jpg 626w,
+      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_671.jpg 671w,
+      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_721.jpg 721w,
+      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_764.jpg 764w,
+      ../images/content/photo-1428542244207-0aaec316e609_s20rjq_ar_9_16,c_fill,g_auto__c_scalew_768.jpg 768w,
+      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_775.jpg 775w,
+      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_913.jpg 913w,
+      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1032.jpg 1032w,
+      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1156.jpg 1156w,
+      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1262.jpg 1262w,
+      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1363.jpg 1363w,
+      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1468.jpg 1468w,
+      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1562.jpg 1562w,
+      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1655.jpg 1655w,
+      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1746.jpg 1746w,
+      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1836.jpg 1836w,
+      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1914.jpg 1914w,
+      ../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1920.jpg 1920w"
+      src="../images/content/photo-1428542244207-0aaec316e609_falwlm_c_scalew_1920.jpg"
+      alt="">
   </picture>
-  <div class="pod__seed seed">
-    <h1 class="seed__header leader trailer">
+  <div class="pod__seed">
+    <h1 class="leader trailer">
       <img style="max-height: 100px;" src="../images/logos/Brickson-Logotype-RGB-DB.svg" alt="Brickson • Amsterdam – Den Bosch">
     </h1>
-    <div class="seed__footer">
-      <h2 class="title title--inverse">Vooruit met digitaal</h2>
-      <p class="body--inverse trailer leader">Brickson is er voor organisaties die de volgende stap in digitaal willen maken. Met een strategie, digitaal concept, website of een applicatie.</p>
-    </div>
-  </section>
+  </div>
+  <div class="pod__seed">
+    <h2 class="title title--inverse">Vooruit met digitaal</h2>
+    <p class="body--inverse trailer leader">Brickson is er voor organisaties die de volgende stap in digitaal willen maken. Met een strategie, digitaal concept, website of een applicatie.</p>
+  </div>
 </section>
 
 Styleguide 5.1
 */
+
+
+.handshake {
+  .pod__seed {
+
+  }
+}

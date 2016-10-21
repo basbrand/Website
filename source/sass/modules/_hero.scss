@@ -2,15 +2,21 @@
 Hero
 
 markup:
-<header class="pod pod--hippo cover isolation">
+<header class="hero pod pod--hippo cover isolation">
   <picture>
     <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
   </picture>
   <div class="pod__seed seed">
-    <h1 class="article__title title--inverse">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit</h1>
+    <h1 class="title article__title title--inverse">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit</h1>
     <p class="body--inverse">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus, dapibus rutrum ipsum gravida et. Integer lectus nisi, facilisis sit amet eleifend nec, pharetra ut augue. Integer quam nunc, consequat nec.</p>
   </div>
 </header>
 
 Styleguide 5.9
 */
+
+.hero {
+  .pod__seed {
+    justify-content: center;
+  }
+}
