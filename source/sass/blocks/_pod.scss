@@ -87,6 +87,14 @@ Styleguide 4.1
       min-height: 50vh;
     }
   }
+  @include breakpoint($lt-small-desktop){
+      &--serval &__seed {
+        color: white;
+        .button {
+          color: white;
+        }
+      }
+  }
   @include breakpoint($gt-large-handheld) {
     &__seed {
       padding: 0 percentage(1/12);

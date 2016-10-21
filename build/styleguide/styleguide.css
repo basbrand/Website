@@ -1977,6 +1977,11 @@ Styleguide 4.1
       width: 50%;
       min-height: 100%;
       min-height: 50vh; } }
+  @media only screen and (max-width: 63.9375em) {
+    .pod--serval .pod__seed {
+      color: white; }
+      .pod--serval .pod__seed .button {
+        color: white; } }
   @media only screen and (min-width: 48em) {
     .pod__seed {
       padding: 0 8.33333%; }
