@@ -1,13 +1,20 @@
 
 /*
-Shop
+Tile
 
-.shop - Centered content
+.tile - Centered content
 
 markup:
-<article class="shop cover">
+<article class="{$modifiers} seed cover isolation">
+  <picture>
+    <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+  </picture>
+  <div class="seed__header">
+  </div>
+  <div class="seed__footer">
+  CASE
+  </div>
 </article>
-<h1 class="tile">Extra, extra – read all about it!</h1>
 
 Styleguide 4.2
 */
@@ -17,6 +24,13 @@ Styleguide 4.2
  * 2. Background image
  */
 .tile {
+
+  display: flex;
+justify-content: center;
+flex-direction: column;
+text-align: center;
+
+
   position: relative;
   // display: table-cell; /* 1 */
   // vertical-align: middle; /* 1 */

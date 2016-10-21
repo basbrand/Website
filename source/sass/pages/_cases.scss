@@ -2,12 +2,8 @@
 Cases
 
 markup:
-<sg-insert>5.10-1</sg-insert>
-<article class="case pod pod--hippo isolation">
-  <picture>
-    <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
-  </picture>
-</article>
+<sg-insert>5.10-2</sg-insert>
+<sg-insert>5.9-2</sg-insert>
 <section class="layout">
   <aside class="layout__cell well well--ostrich isolation wings seed is-gt-medium-desktop">
     <div class="seed__body">
@@ -20,10 +16,16 @@ markup:
   </aside>
   <div class="layout__cell layout__cell--main">
     <article class="pod--leopard isolation">
-      <div class="pod__seed cover">
+      <div class="pod__seed seed cover">
         <picture>
           <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
         </picture>
+        <div class="seed__header leader-inside trailer-inside">
+          <img align="right" src="../images/logos/veh.png" alt="Vereniging Eigen Huis" width="112" height="25">
+        </div>
+        <div class="seed__footer">
+          <small class="title title--section leader-inside trailer-inside body--inverse">Case</small>
+        </div>
       </div>
       <div class="pod__seed seed">
         <div class="seed__body">
@@ -38,6 +40,12 @@ markup:
         <picture>
           <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
         </picture>
+        <div class="seed__header leader-inside trailer-inside">
+          <img align="right" src="../images/logos/veh.png" alt="Vereniging Eigen Huis" width="112" height="25">
+        </div>
+        <div class="seed__footer">
+          <small class="title title--section leader-inside trailer-inside body--inverse">Case</small>
+        </div>
       </div>
       <div class="pod__seed seed">
         <div class="seed__body">
@@ -52,6 +60,12 @@ markup:
         <picture>
           <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
         </picture>
+        <div class="seed__header leader-inside trailer-inside">
+          <img align="right" src="../images/logos/veh.png" alt="Vereniging Eigen Huis" width="112" height="25">
+        </div>
+        <div class="seed__footer">
+          <small class="title title--section leader-inside trailer-inside body--inverse">Case</small>
+        </div>
       </div>
       <div class="pod__seed seed">
         <div class="seed__body">
@@ -66,6 +80,12 @@ markup:
         <picture>
           <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
         </picture>
+        <div class="seed__header leader-inside trailer-inside">
+          <img align="right" src="../images/logos/veh.png" alt="Vereniging Eigen Huis" width="112" height="25">
+        </div>
+        <div class="seed__footer">
+          <small class="title title--section leader-inside trailer-inside body--inverse">Case</small>
+        </div>
       </div>
       <div class="pod__seed seed">
         <div class="seed__body">

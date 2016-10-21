@@ -2,14 +2,13 @@
 /*
 Menu
 
-Breadcrumbs
-
 .menu - Menu
+.menu.menu--home - Menu
 
 markup:
-<ol class="{$modifiers} list--reset fx" id="menu">
-  <li>
-    <a class="menu__home fx" href="javascript:;"><span class="is-narrative">Home</span></a>
+<ol class="{$modifiers} list--reset fx bleed" id="menu">
+  <li class="gutters">
+    <a class="menu__home fx" href="javascript:void();"><span class="is-narrative">Home</span></a>
     <a class="menu__item anchor--shy is-current is-active" href="javascript:;">Cases</a>
   </li>
   <li><a class="menu__item anchor--shy fx" href="javascript:void();">Over Brickson</a></li>
@@ -26,6 +25,9 @@ Styleguide 4.5
   max-height: rhythm(12);
   height: auto;
   overflow: hidden;
+  li {
+    position: relative;
+  }
   li,
   &__item {
     display: block;
@@ -44,7 +46,7 @@ Styleguide 4.5
   }
   &__item {
     width: 100%;
-    padding: rhythm(2) 1ex;
+    padding: rhythm(2) gutter();
     font: normal bold #{to-unit(10px)}/#{to-unit(rhythm(8), 1, 10px)} $font-family--meta;
     text-transform: uppercase;
     letter-spacing: .25em;
@@ -66,18 +68,28 @@ Styleguide 4.5
   &:target {
     max-height: rhythm(48);
   }
+  @include breakpoint($gt-small-desktop) {
+    &__home {
+      // position: absolute;
+      // left: -100%;
+    }
+  }
   @include breakpoint($gt-medium-handheld) {
     display: flex;
     &__item {
       position: static;
-      padding: rhythm(2) 2ex;
     }
     li,
     &__item {
       display: inline-block;
     }
-    li:first-child {
-      flex: 1 1 100%;
+    &--home &__item {
+      padding: rhythm(2) gutter(1);
+    }
+    &--home {
+      li:first-child {
+        flex: 1 1 100%;
+      }
     }
   }
 }

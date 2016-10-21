@@ -1046,12 +1046,12 @@ markup:
 
 Styleguide 2.6
 */
-.bleed {
+.bleed.bleed {
   margin-left: -14px;
   margin-right: -14px; }
-  .bleed--left {
+  .bleed.bleed--left {
     margin-left: -14px; }
-  .bleed--right {
+  .bleed.bleed--right {
     margin-right: -14px; }
 
 /* 2.7 Grid */
@@ -1901,7 +1901,9 @@ Styleguide 3.18
 */
 .quote {
   position: relative;
-  font-style: italic; }
+  font-style: italic;
+  font-size: 1.125em;
+  line-height: 1.33333; }
   .quote--l {
     font-size: 1.5em;
     line-height: 1.5; }
@@ -1933,8 +1935,6 @@ State
 
 .is-narrative - Hidden label, but is used as narrative for visually impaired users
 .is-heir - Passes on parent's color and background properties
-.is-crowned - When assigned to an element directly following the `masthead`, it pulls that item up so the masthead sits on top (like a crown).
-.is-rooted - Adds position relative.
 
 markup:
 <p class="{$modifiers}">{$modifiers}</p>
@@ -1951,7 +1951,7 @@ Styleguide 3.99
   top: -999em;
   /* IE pushed the text to the bottom of the page without this */ }
 
-.is-rooted {
+.is-root {
   position: relative; }
 
 .is-cleared {
@@ -2068,8 +2068,7 @@ Styleguide 4.1
       width: 50%;
       float: left; }
     .pod--leopard {
-      width: 50%;
-      float: right; }
+      width: 50%; }
       .pod--leopard:nth-child(2n+1) {
         clear: right; }
     .pod--leopard .pod__seed {
@@ -2310,14 +2309,21 @@ Styleguide 4.1.8
 */
 /* 4.2 Tile */
 /*
-Shop
+Tile
 
-.shop - Centered content
+.tile - Centered content
 
 markup:
-<article class="shop cover">
+<article class="{$modifiers} seed cover isolation">
+  <picture>
+    <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+  </picture>
+  <div class="seed__header">
+  </div>
+  <div class="seed__footer">
+  CASE
+  </div>
 </article>
-<h1 class="tile">Extra, extra – read all about it!</h1>
 
 Styleguide 4.2
 */
@@ -2326,6 +2332,10 @@ Styleguide 4.2
  * 2. Background image
  */
 .tile {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
   position: relative; }
   .tile__body {
     position: absolute;
@@ -2402,39 +2412,32 @@ Breadcrumbs
 .trail - Trail
 
 markup:
-<nav class="{$modifiers}">
-  <ol class="reset">
-    <li><a class="anchor anchor--reset anchor--shy" href="javascript:;">Case</a></li>
-    <li><a class="anchor anchor--reset anchor--shy" href="javascript:;">Vereniging Eigen Huis</a></li>
+<nav class="{$modifiers} body--whisper body--meta title title--section leader--tiny trailer bleed">
+  <ol class="list--reset list--inline">
+    <li><a class="anchor--reset anchor--shy" href="javascript:;">Case</a></li>
+    <li><a class="anchor--reset anchor--shy" href="javascript:;">Vereniging Eigen Huis</a></li>
   </ol>
 </nav>
 
 Styleguide 4.4
 */
-.trail {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  text-transform: uppercase;
-  color: #445D87; }
-  .trail li {
-    display: block;
-    float: left;
-    padding-right: 16px; }
-  .trail li + li:before {
-    content: "|";
-    padding-right: 16px; }
+.trail a {
+  padding: 8px 14px; }
+
+.trail li + li:before {
+  content: "|"; }
 
 /* 4.5 Menu */
 /*
 Menu
 
-Breadcrumbs
-
 .menu - Menu
+.menu.menu--home - Menu
 
 markup:
-<ol class="{$modifiers} list--reset fx" id="menu">
-  <li>
-    <a class="menu__home fx" href="javascript:;"><span class="is-narrative">Home</span></a>
+<ol class="{$modifiers} list--reset fx bleed" id="menu">
+  <li class="gutters">
+    <a class="menu__home fx" href="javascript:void();"><span class="is-narrative">Home</span></a>
     <a class="menu__item anchor--shy is-current is-active" href="javascript:;">Cases</a>
   </li>
   <li><a class="menu__item anchor--shy fx" href="javascript:void();">Over Brickson</a></li>
@@ -2449,6 +2452,8 @@ Styleguide 4.5
   max-height: 48px;
   height: auto;
   overflow: hidden; }
+  .menu li {
+    position: relative; }
   .menu li, .menu__item {
     display: block; }
   .menu__home {
@@ -2463,7 +2468,7 @@ Styleguide 4.5
       background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23445D87' fill-rule='evenodd' d='M23.247 42.848c-1.993 0-3.92-.293-5.74-.83l.066-.022c.717-.255 1.43-.56 2.148-.92.716-.358 1.39-.707 2.02-1.05.44-.236.806-.44 1.104-.61.182.14.4.236.645.236h.015c1.27-.02 2.502-.19 3.692-.473.83-.066 1.63-.256 2.393-.584.58-.248 1.106-.56 1.592-.92 5.466-2.885 9.223-8.623 9.223-15.18 0-9.46-7.698-17.156-17.158-17.156-.284 0-.54.115-.73.295-.246-.142-.52-.303-.827-.485-.63-.375-1.304-.734-2.02-1.074-.717-.34-1.425-.638-2.123-.895-.122-.044-.236-.08-.35-.117 1.912-.596 3.944-.918 6.05-.918 11.222 0 20.352 9.13 20.352 20.35 0 11.223-9.13 20.353-20.353 20.353M2.895 22.496c0-6.968 3.523-13.128 8.88-16.798-.147.437-.237.896-.237 1.395 0 .844.237 1.593.68 2.262-3.905 3.27-6.128 8.008-6.128 13.14 0 5.108 2.304 9.964 6.21 13.21-.5.698-.762 1.488-.762 2.38 0 .414.07.796.17 1.163-5.318-3.675-8.813-9.812-8.813-16.752m14.78-13.894c-.887.392-1.5.588-1.84.588-.58 0-1.075-.203-1.483-.614-.41-.408-.616-.903-.616-1.483 0-.578.206-1.083.616-1.51.408-.424.903-.638 1.483-.638.34 0 .953.197 1.84.59.887.39 1.91.912 3.068 1.558-1.16.613-2.18 1.117-3.07 1.51m5.524-.435h.82c1.055 0 2.062.203 3.017.613.953.41 1.78.966 2.48 1.663.7.7 1.253 1.517 1.663 2.455.408.94.614 1.934.614 2.99 0 1.06-.205 2.057-.613 2.994-.41.938-.964 1.756-1.662 2.454-.7.698-1.52 1.262-2.455 1.688-.94.427-1.936.64-2.992.64h-.206c-.408-.24-.912-.53-1.507-.87-.598-.34-1.228-.666-1.893-.972-.665-.307-1.313-.58-1.943-.818-.633-.24-1.17-.392-1.612-.46v-9.36c.51-.134 1.073-.34 1.688-.613.614-.273 1.21-.562 1.79-.87.578-.306 1.116-.594 1.61-.867l1.2-.665m9.413 18.36c-.923-1.058-1.98-1.843-3.173-2.353.273-.17.545-.358.818-.564.274-.203.53-.44.77-.715.952-.92 1.676-1.985 2.17-3.195.496-1.21.744-2.48.744-3.81 0-1.943-.504-3.683-1.49-5.228 3.528 2.75 5.81 7.026 5.81 11.834 0 3.91-1.535 7.483-4.02 10.167.065-.4.106-.807.106-1.227 0-1.84-.58-3.478-1.737-4.91M14.35 39.594c-.41-.427-.616-.93-.616-1.51 0-.577.206-1.072.616-1.482.408-.408.903-.612 1.483-.612.34 0 .953.197 1.84.59.887.39 1.91.893 3.068 1.506-1.16.648-2.18 1.17-3.07 1.56-.885.392-1.498.588-1.838.588-.58 0-1.075-.212-1.483-.64m.714-16.313c.41-.427.904-.64 1.484-.64.34 0 .954.196 1.84.588.888.393 1.91.912 3.07 1.56-1.16.648-2.182 1.16-3.07 1.533-.886.378-1.5.565-1.84.565-.58 0-1.074-.205-1.484-.613-.408-.41-.613-.904-.613-1.484s.205-1.082.613-1.51m-1.254-12.452c.298.165.61.31.948.41v9.666c-.715.375-1.304.894-1.764 1.56-.46.664-.69 1.44-.69 2.326 0 .852.23 1.62.69 2.302.46.682 1.05 1.193 1.764 1.533v5.37c-.28.073-.542.178-.793.297-3.598-2.837-5.732-7.2-5.732-11.794 0-4.583 2.03-8.803 5.577-11.67m13.29 26.16c-.175.016-.35.025-.528.025h-3.377c-.272-.17-.663-.39-1.174-.664l-1.637-.87c-.58-.306-1.176-.587-1.79-.844-.615-.255-1.177-.468-1.688-.64v-4.958c.51-.07 1.1-.24 1.764-.512.665-.274 1.337-.57 2.02-.896.682-.324 1.32-.656 1.918-.996.596-.342 1.066-.615 1.406-.818h2.558c.75 0 1.465.144 2.148.434.682.29 1.278.69 1.79 1.2.512.512.92 1.11 1.226 1.792.307.682.46 1.415.46 2.198 0 .785-.153 1.51-.46 2.174-.306.665-.714 1.252-1.226 1.764-.23.23-.482.43-.747.615-.847.413-1.738.746-2.664.995M23.248 0C10.843 0 .75 10.092.75 22.496c0 12.405 10.093 22.497 22.497 22.497 12.405 0 22.496-10.092 22.496-22.497C45.743 10.092 35.653 0 23.247 0'/%3E%3C/svg%3E"); }
   .menu__item {
     width: 100%;
-    padding: 8px 1ex;
+    padding: 8px 14px;
     font: normal bold 0.625em/3.2 Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     letter-spacing: .25em; }
@@ -2483,13 +2488,26 @@ Styleguide 4.5
     .menu {
       display: flex; }
       .menu__item {
-        position: static;
-        padding: 8px 2ex; }
+        position: static; }
       .menu li, .menu__item {
         display: inline-block; }
-      .menu li:first-child {
+      .menu--home .menu__item {
+        padding: 8px 28px; }
+      .menu--home li:first-child {
         flex: 1 1 100%; } }
 
+/* 4.6 Case */
+/*
+Card
+
+.card - Picture and title
+
+markup:
+<div>
+</div>
+
+Styleguide 4.6
+*/
 /* 5. */
 /*
 Modules
@@ -2555,7 +2573,7 @@ Introduction
 
 markup:
 <section class="pod pod--baboon introduction">
-  <div class="pod__seed seed">
+  <div class="pod__seed seed isolation">
     <h2 class="seed__header title leader trailer">Blijer, gezonder en welvarender</h2>
     <p class="seed__body leader trailer">Brickson is er voor ambitieuze merken in traditionele markten. Wij helpen ze om relevant te blijven en meer voor klanten te betekenen. Succesvolle merken kijken vooruit en stellen zich de vraag: hoe maak ik mijn klant blijer, gezonder en welvarender?</p>
   </div>
@@ -2570,6 +2588,12 @@ markup:
 
 Styleguide 5.3
 */
+@media only screen and (min-width: 90em) {
+  .introduction {
+    position: fixed;
+    right: 0;
+    top: 0; } }
+
 /* 5.4 Contact */
 /*
 Contact
@@ -2622,23 +2646,10 @@ Article
 
 markup:
 <article class="{$modifiers}">
-  <header class="post__header pod pod--hippo cover isolation">
-    <picture>
-      <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
-    </picture>
-    <div class="pod__seed seed wings">
-      <div class="seed__header">
-        <img style="max-height: 100px;" src="../images/logos/Brickson-Logotype-RGB-DB.svg" alt="Brickson • Amsterdam – Den Bosch">
-      </div>
-      <div class="seed__footer leader trailer">
-        <h1 class="post__title title--inverse leader trailer">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit</h1>
-        <p class="post__lead body--inverse leader trailer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-      </div>
-    </div>
-  </header>
+  <sg-insert>5.9-2</sg-insert>
   <div class="post__main isolation">
     <div class="wings">
-      <sg-insert>4.4</sg-insert>
+      <sg-insert>4.4-1</sg-insert>
       <h2>Lorem Ipsum Dolor Sit Amet</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
       <h2>Lorem Ipsum Dolor Sit Amet</h2>
@@ -2659,10 +2670,8 @@ markup:
     </footer>
   </div>
   <aside class="post__aside well well--stork isolation seed">
-    <section class="leader--giant trailer wings seed__body">
+    <section class="leader trailer wings seed__body">
       <sg-insert>3.18-2</sg-insert>
-    </section>
-    <section class="leader--giant trailer wings seed__body">
       <sg-insert>3.18-2</sg-insert>
     </section>
     <section class="leader--giant trailer wings seed__footer">
@@ -2681,8 +2690,6 @@ Styleguide 5.6
   .post__header {
     flex: 1 0 100%;
     width: 100%; }
-  .navbar + .post .pod__seed {
-    padding-top: 80px; }
   .post__title,
   .post__main h2 {
     font-size: 1.5em;
@@ -2694,8 +2701,6 @@ Styleguide 5.6
   @media only screen and (min-width: 64em) {
     .post {
       flex-direction: row; }
-      .navbar + .post .pod__seed {
-        padding-top: 120px; }
       .post__main, .post__aside {
         float: left; }
       .post__main {
@@ -2800,30 +2805,45 @@ Invitation
 markup:
 <section class="pod pod--zebra pod--rhino invitation cover isolation">
   <div class="pod__seed seed">
-    <h2 class="seed__header title leader trailer">Wat is jouw volgende stap?</h2>
-    <p class="seed__body leader trailer">Werken met Brickson betekent samen ontdekken, bedenken, ontwerpen of bouwen. We lossen complexe problemen op en werken op project-, consultancy- of interimbasis.</p>
+    <ol class="menu leader trailer seed__header list--reset fx bleed" id="menu">
+      <li><a class="menu__item anchor--shy fx" href="javascript:void();">Over Brickson</a></li>
+      <li><a class="menu__item anchor--shy fx is-active" href="javascript:void();">Cases</a></li>
+      <li><a class="menu__item anchor--shy fx" href="javascript:void();">Werken bij Brickson</a></li>
+    </ol>
+    <div class="seed__body">
+      <h2 class="title leader trailer">Wat is jouw volgende stap?</h2>
+      <p class="leader trailer">Werken met Brickson betekent samen ontdekken, bedenken, ontwerpen of bouwen. We lossen complexe problemen op en werken op project-, consultancy- of interimbasis.</p>
+    </div>
     <p class="seed__footer leader trailer"><a class="button button--stretch" href="mailto:experts@brickson.nl?subject='Vooruit%20met%20Brickson'">Wil je meer weten? Neem contact op!</a></p>
   </div>
   <ul class="pod__seed grid">
-    <li class="grid__cell cover isolation">
+    <li class="grid__cell cover isolation tile">
       <picture>
         <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
       </picture>
+      <p><strong class="title--inverse title--meta">Ontdekken</strong></p>
+      <p><strong class="title--inverse title title--section">Analyse &amp; Challenge</strong></p>
     </li>
-    <li class="grid__cell cover isolation">
+    <li class="grid__cell cover isolation tile">
       <picture>
         <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
       </picture>
+      <p><strong class="title--inverse title--meta">Ontdekken</strong></p>
+      <p><strong class="title--inverse title title--section">Analyse &amp; Challenge</strong></p>
     </li>
-    <li class="grid__cell cover isolation">
+    <li class="grid__cell cover isolation tile">
       <picture>
         <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
       </picture>
+      <p><strong class="title--inverse title--meta">Ontdekken</strong></p>
+      <p><strong class="title--inverse title title--section">Analyse &amp; Challenge</strong></p>
     </li>
-    <li class="grid__cell cover isolation">
+    <li class="grid__cell cover isolation tile">
       <picture>
         <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
       </picture>
+      <p><strong class="title--inverse title--meta">Ontdekken</strong></p>
+      <p><strong class="title--inverse title title--section">Analyse &amp; Challenge</strong></p>
     </li>
   </ul>
 </section>
@@ -2834,21 +2854,53 @@ Styleguide 5.8
 /*
 Hero
 
+.hero - Regular header
+.hero.hero--navbar - Added padding to allow for positioning of navbar
+
 markup:
-<header class="hero pod pod--hippo cover isolation">
+<header class="{$modifiers} seed pod pod--hippo cover isolation">
   <picture>
     <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
   </picture>
-  <div class="pod__seed seed">
-    <h1 class="title article__title title--inverse">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit</h1>
-    <p class="body--inverse">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus, dapibus rutrum ipsum gravida et. Integer lectus nisi, facilisis sit amet eleifend nec, pharetra ut augue. Integer quam nunc, consequat nec.</p>
+  <div class="hero__header seed__header">
+    <img src="../images/logos/veh--l.png" alt="Brickson • Amsterdam – Den Bosch">
+  </div>
+  <div class="hero__body seed__body">
+    <h1 class="post__title title--inverse leader trailer">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit</h1>
+    <p class="post__lead body--inverse leader trailer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
   </div>
 </header>
 
 Styleguide 5.9
 */
-.hero .pod__seed {
-  justify-content: center; }
+.hero {
+  max-width: 100%; }
+  .hero--navbar {
+    padding-top: 80px; }
+  .hero__header, .hero__body, .hero__footer {
+    padding: 0 14px; }
+  .hero__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .hero__header {
+    text-align: right; }
+  @media only screen and (min-width: 32.5em) {
+    .hero__header, .hero__body, .hero__footer {
+      padding: 0 8.33333%; } }
+  @media only screen and (min-width: 48em) {
+    .hero__header, .hero__body, .hero__footer {
+      padding: 0 4.16667%; } }
+  @media only screen and (min-width: 64em) {
+    .hero--navbar {
+      padding-top: 120px; }
+    .hero__body, .hero__footer {
+      padding: 0 8.33333%; } }
+  @media only screen and (min-width: 90em) {
+    .hero__header {
+      padding: 0 5.55556%; }
+    .hero__body, .hero__footer {
+      padding: 0 16.66667%; } }
 
 /* 5.10 Navigation Bar */
 /*
@@ -2872,9 +2924,21 @@ Styleguide 5.10
   padding: 8px 14px;
   background: #ffffff;
   background: rgba(255, 255, 255, 0.8); }
+  @media only screen and (min-width: 32.5em) {
+    .navbar {
+      padding-left: 8.33333%;
+      padding-right: 8.33333%; } }
+  @media only screen and (min-width: 48em) {
+    .navbar {
+      padding-left: 4.16667%;
+      padding-right: 4.16667%; } }
   @media only screen and (min-width: 64em) {
     .navbar {
-      padding: 16px 14px; } }
+      padding: 16px 4.16667%; } }
+  @media only screen and (min-width: 90em) {
+    .navbar {
+      padding-left: 5.55556%;
+      padding-right: 5.55556%; } }
 
 /* 6. */
 /*
@@ -2893,10 +2957,12 @@ Styleguide 7.0
 Landingpage
 
 markup:
+<div class="is-root">
 <sg-insert>5.1</sg-insert>
 <sg-insert>5.8</sg-insert>
 <sg-insert>5.2</sg-insert>
 <sg-insert>5.3</sg-insert>
+</div>
 
 Styleguide 7.1
 */
@@ -2905,7 +2971,7 @@ Styleguide 7.1
 Case
 
 markup:
-<sg-insert>5.10-1</sg-insert>
+<sg-insert>5.10-2</sg-insert>
 <sg-insert>5.6-1</sg-insert>
 
 Styleguide 7.2
@@ -2915,12 +2981,8 @@ Styleguide 7.2
 Cases
 
 markup:
-<sg-insert>5.10-1</sg-insert>
-<article class="case pod pod--hippo isolation">
-  <picture>
-    <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
-  </picture>
-</article>
+<sg-insert>5.10-2</sg-insert>
+<sg-insert>5.9-2</sg-insert>
 <section class="layout">
   <aside class="layout__cell well well--ostrich isolation wings seed is-gt-medium-desktop">
     <div class="seed__body">
@@ -2933,10 +2995,16 @@ markup:
   </aside>
   <div class="layout__cell layout__cell--main">
     <article class="pod--leopard isolation">
-      <div class="pod__seed cover">
+      <div class="pod__seed seed cover">
         <picture>
           <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
         </picture>
+        <div class="seed__header leader-inside trailer-inside">
+          <img align="right" src="../images/logos/veh.png" alt="Vereniging Eigen Huis" width="112" height="25">
+        </div>
+        <div class="seed__footer">
+          <small class="title title--section leader-inside trailer-inside body--inverse">Case</small>
+        </div>
       </div>
       <div class="pod__seed seed">
         <div class="seed__body">
@@ -2951,6 +3019,12 @@ markup:
         <picture>
           <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
         </picture>
+        <div class="seed__header leader-inside trailer-inside">
+          <img align="right" src="../images/logos/veh.png" alt="Vereniging Eigen Huis" width="112" height="25">
+        </div>
+        <div class="seed__footer">
+          <small class="title title--section leader-inside trailer-inside body--inverse">Case</small>
+        </div>
       </div>
       <div class="pod__seed seed">
         <div class="seed__body">
@@ -2965,6 +3039,12 @@ markup:
         <picture>
           <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
         </picture>
+        <div class="seed__header leader-inside trailer-inside">
+          <img align="right" src="../images/logos/veh.png" alt="Vereniging Eigen Huis" width="112" height="25">
+        </div>
+        <div class="seed__footer">
+          <small class="title title--section leader-inside trailer-inside body--inverse">Case</small>
+        </div>
       </div>
       <div class="pod__seed seed">
         <div class="seed__body">
@@ -2979,6 +3059,12 @@ markup:
         <picture>
           <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
         </picture>
+        <div class="seed__header leader-inside trailer-inside">
+          <img align="right" src="../images/logos/veh.png" alt="Vereniging Eigen Huis" width="112" height="25">
+        </div>
+        <div class="seed__footer">
+          <small class="title title--section leader-inside trailer-inside body--inverse">Case</small>
+        </div>
       </div>
       <div class="pod__seed seed">
         <div class="seed__body">

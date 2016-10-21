@@ -21,7 +21,19 @@ Styleguide 5.10
   // height: rhythm(20);
   background: $white;
   background: rgba($white,.8);
+  @include breakpoint($gt-medium-handheld) {
+    padding-left: percentage(1/12);
+    padding-right: percentage(1/12);
+  }
+  @include breakpoint($gt-large-handheld) {
+    padding-left: percentage(1/24);
+    padding-right: percentage(1/24);
+  }
   @include breakpoint($gt-small-desktop) {
-    padding: rhythm(4) gutter();
+    padding: rhythm(4) percentage(1/24);
+  }
+  @include breakpoint($gt-medium-desktop) {
+    padding-left: percentage(2/36);
+    padding-right: percentage(2/36);
   }
 }

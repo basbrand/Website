@@ -7,10 +7,10 @@ Breadcrumbs
 .trail - Trail
 
 markup:
-<nav class="{$modifiers}">
-  <ol class="reset">
-    <li><a class="anchor anchor--reset anchor--shy" href="javascript:;">Case</a></li>
-    <li><a class="anchor anchor--reset anchor--shy" href="javascript:;">Vereniging Eigen Huis</a></li>
+<nav class="{$modifiers} body--whisper body--meta title title--section leader--tiny trailer bleed">
+  <ol class="list--reset list--inline">
+    <li><a class="anchor--reset anchor--shy" href="javascript:;">Case</a></li>
+    <li><a class="anchor--reset anchor--shy" href="javascript:;">Vereniging Eigen Huis</a></li>
   </ol>
 </nav>
 
@@ -18,18 +18,12 @@ Styleguide 4.4
 */
 
 .trail {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  text-transform: uppercase;
-  color: $color-blue;
-  li {
-    display: block;
-    float: left;
-    padding-right: rhythm(4);
+  a {
+    padding: rhythm(2) gutter();
   }
   li + li {
     &:before {
       content: "|";
-      padding-right: rhythm(4);
     }
   }
 }
