@@ -1761,8 +1761,6 @@ Styleguide 3.13
   .seed__body, .seed__footer {
     flex-grow: 1; }
   .seed__header {
-    height: 80px;
-    flex-basis: 80px;
     flex-shrink: 1; }
   .seed__footer {
     display: flex;
@@ -2024,7 +2022,8 @@ Styleguide 4.1
   .pod--leopard .pod__seed {
     padding: 0 8.33333%; }
   .pod--kudu .pod__seed {
-    min-height: 0; }
+    min-height: 0;
+    clear: left; }
   @media only screen and (min-aspect-ratio: 6 / 5) {
     .pod__seed {
       width: 50%;
@@ -2053,6 +2052,9 @@ Styleguide 4.1
       width: 50%;
       min-height: 100%;
       min-height: 50vh; } }
+  @media only screen and (min-width: 48em) and (max-aspect-ratio: 6 / 5) {
+    .pod__seed {
+      width: 50%; } }
   @media only screen and (max-width: 63.9375em) {
     .pod--serval .pod__seed {
       color: white; }
@@ -2520,17 +2522,15 @@ Handshake
 
 markup:
 <section class="pod pod--kudu pod--rhino handshake cover isolation">
-<picture>
-  <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
-</picture>
-  <div class="pod__seed">
-    <h1 class="leader trailer">
-      <img style="max-height: 100px;" src="../images/logos/Brickson-Logotype-RGB-DB.svg" alt="Brickson • Amsterdam – Den Bosch">
-    </h1>
-  </div>
-  <div class="pod__seed">
-    <h2 class="title title--inverse">Vooruit met digitaal</h2>
-    <p class="body--inverse trailer leader">Brickson is er voor organisaties die de volgende stap in digitaal willen maken. Met een strategie, digitaal concept, website of een applicatie.</p>
+  <picture>
+    <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+  </picture>
+  <h1 class="seed__header leader trailer">
+    <img style="max-height: 100px;" src="../images/logos/Brickson-Logotype-RGB-DB.svg" alt="Brickson • Amsterdam – Den Bosch">
+  </h1>
+  <div class="pod__seed seed">
+    <h2 class=" seed__header title title--inverse">Vooruit met digitaal</h2>
+    <p class="seed__body body--inverse trailer leader">Brickson is er voor organisaties die de volgende stap in digitaal willen maken. Met een strategie, digitaal concept, website of een applicatie.</p>
   </div>
 </section>
 
@@ -2850,6 +2850,10 @@ markup:
 
 Styleguide 5.8
 */
+@media only screen and (min-width: 48em) and (max-aspect-ratio: 6 / 5) {
+  .invitation .grid__cell {
+    height: 25vh; } }
+
 /* 5.9 Hero */
 /*
 Hero

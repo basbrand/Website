@@ -49,3 +49,11 @@ markup:
 
 Styleguide 5.8
 */
+
+.invitation {
+  @include breakpoint("#{$gt-large-handheld} and (max-aspect-ratio: 6/5)") {
+    .grid__cell {
+      height: 25vh;
+    }
+  }
+}

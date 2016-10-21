@@ -51,6 +51,7 @@ Styleguide 4.1
   }
   &--kudu &__seed {
     min-height: 0;
+    clear: left;
   }
   @include breakpoint("(min-aspect-ratio: 6/5)") {
     &__seed {
@@ -88,6 +89,11 @@ Styleguide 4.1
       width: 50%;
       min-height: 100%;
       min-height: 50vh;
+    }
+  }
+  @include breakpoint("#{$gt-large-handheld} and (max-aspect-ratio: 6/5)") {
+    &__seed {
+      width: 50%;
     }
   }
   @include breakpoint($lt-small-desktop){
