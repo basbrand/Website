@@ -28,7 +28,7 @@
           <img src="/images/heads/marja_smits.jpg" class="person__image" width="56" height="56" style="background: Grey;"/>
         </span>
         <figcaption class="person__body">
-          <span class="person__name title title--section">Marja Smits</span>
+          <span class="person__name meta">Marja Smits</span>
           <small class="person__occupation">Manager Strategie en Marketing Evean</small>
         </figcaption>
       </figure>

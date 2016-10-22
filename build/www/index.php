@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="nl">
   <?php include 'head.php'; ?>
-  <body class="<?php echo $debug ? 'debug-layout ' : ''; ?>p-landingpage">
+  <body class="<?php echo $debug ? 'debug-layout ' : ''; ?>">
     <section class="panel is-active">
       <?php include 'landingpage/handshake.php'; ?>
       <?php include 'landingpage/invitation.php'; ?>

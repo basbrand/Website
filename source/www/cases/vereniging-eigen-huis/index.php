@@ -2,53 +2,91 @@
 <!DOCTYPE html>
 <html lang="nl">
   <?php include '../../head.php'; ?>
-  <body class="<?php echo $debug ? 'debug-layout ' : ''; ?>p-case">
-    <div class="navigation media">
-      <header class="media media__stretcher">
-        <a class="" href="/"><img class="navigation__home" title="Brickson.nl" src="/images/logos/Brickson-Brandmark.svg"></a>
-      </header>
-      <nav>
-        <ul class="list--reset list--inline menu">
-          <li>
-            <a class="navigation__section-marker anchor--shy title title--section" href="javascript:void();">Cases</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <section class="panel is-active">
-      <?php include 'catalog.php'; ?>
-      <div class="article lead">
-        <div class="article__body well trailer-inside--hero">
-          <p class="well__title title title--section">User experience design</p>
-          <h1 class="well__title title">User experience design: eigenhuis.nl</h1>
-          <p class="lead well__title">Vereniging Eigen Huis is een van de grootste ledenorganisaties in Nederland met ruim 700.000 leden. Daarnaast is de expertise die de vereniging heeft op alles wat maar met huizenbezit te maken heeft uitputtend. Er is zoveel content dat het naast een grote ledenorganisatie eigenlijk gewoon een grote uitgever is.</p>
-          <p class="leader trailer">Natuurlijk is er een presentatielaag die voor iedereen toegankelijk is op eigenhuis.nl. In veel gevallen is specifieke content er alleen voor leden of voor geregistreerde gebruikers. Daarbij beschikt VEH over tal van digitale tools voor huizenbezitters.</p>
-          <p class="leader trailer">Bij deze opdracht speelde tijd een grote rol, er moest onder grote druk snel gewerkt worden. In dit geval een voordeel, de iteraties volgden elkaar snel op zodat we in een prettig hoog ritme werkten.</p>
+  <body class="<?php echo $debug ? 'debug-layout ' : ''; ?>">
+    <nav class="navbar navbar">
+      <ol class="menu menu--hero list--reset fx bleed media" id="menu">
+        <li class="gutters meta meta--hero media__stretcher">
+          <a class="menu__home fx" href="/"><span class="is-narrative">Home</span></a>
+          <a class="menu__item anchor--shy is-current is-active" href="/cases/">Cases</a>
+        </li>
+        <li><a class="menu__item anchor--shy meta meta--tiny fx" href="/over-brickson/">Over Brickson</a></li>
+        <li><a class="menu__item anchor--shy meta meta--tiny fx is-active" href="/cases/">Cases</a></li>
+        <li><a class="menu__item anchor--shy meta meta--tiny fx" href="/werken-bij-brickson/">Werken bij Brickson</a></li>
+      </ol>
+    </nav>
+    <article class="post">
+      <header class="hero hero--navbar seed pod pod--hippo cover isolation">
+      <picture>
+        <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+      </picture>
+      <div class="hero__header seed__header">
+        <img src="../images/logos/veh--l.png" alt="Brickson • Amsterdam – Den Bosch">
+      </div>
+      <div class="hero__body seed__body backdrop">
+        <h1 class="post__title title--inverse leader trailer">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit</h1>
+        <p class="post__lead body--inverse leader trailer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+      </div>
+    </header>
+      <div class="post__main isolation">
+        <div class="wings">
+          <nav class="trail meta leader--tiny trailer bleed">
+            <ol class="list--reset list--inline">
+              <li><a class="anchor--shy" href="/cases/">Cases</a></li>
+              <li><a class="anchor--reset anchor--shy" href="/cases/vereniging-eigen-huis">Vereniging Eigen Huis</a></li>
+            </ol>
+          </nav>
+          <h2>Lorem Ipsum Dolor Sit Amet</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+          <h2>Lorem Ipsum Dolor Sit Amet</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+          <h2>Lorem Ipsum Dolor Sit Amet</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+          <h2>Lorem Ipsum Dolor Sit Amet</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+          <h2>Lorem Ipsum Dolor Sit Amet</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
         </div>
-        <div class="article__body leader-inside trailer-inside" style="background: whitesmoke;">
-          <p class="title title--section trailer">Testimonial</p>
-          <blockquote class="quote lead leader">Prettige, deskundige en flexibele gesprekspartners met een schat aan ervaring. Ze luisteren goed naar requirements, berijden geen hinderlijke stokpaardjes en houden zich aan hun afspraken.</blockquote>
-          <figure class="person person--s bleed leader--tiny trailer">
+        <footer class="well seed wings leader--hero">
+          <h3 class="seed__title title--section leader trailer"><strong>Het resultaat</strong></h3>
+          <div class="seed__body leader trailer">
+            <h2>Lorem Ipsum Dolor Sit Amet</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+          </div>
+        </footer>
+      </div>
+      <aside class="post__aside well well--stork isolation seed">
+        <section class="leader trailer wings seed__body">
+
+          <blockquote class="quote leader--giant leader--hero trailer"><p>Met oog en gevoel voor de mensen in je organisatie gaat Brickson altijd een stap verder.</p></blockquote>
+          <figure class="person bleed leader trailer">
             <span class="person__picture gutters">
-              <img src="/images/heads/frank_muller.jpg" class="person__image" width="56" height="56" style="background: Grey;">
+              <img src="/images/heads/marja_smits.jpg" class="person__image" width="56" height="56" style="background: Grey;">
             </span>
             <figcaption class="person__body">
-              <span class="person__name title title--section">Frank Muller</span>
-              <small class="person__occupation">Marketing Manager Vereniging Eigen Huis</small>
+              <span class="person__name meta">Marja Smits</span>
+              <small class="person__occupation">Manager Strategie en Marketing Evean</small>
             </figcaption>
           </figure>
-        </div>
-        <div class="article__body lead">
-          <p class="leader trailer">De kern vormde het ontwikkelen van een model voor context, content en interactie. De uitwerking kwam tot stand op basis van het Meyers-Briggs model waarin uitgangspunt is op welke manier mensen content waarnemen, consumeren en vervolgens beslissen.</p>
-          <p class="leader trailer">Met dit model is op ieder niveau een DNA gemaakt voor de website. Dat gecombineerd met een tool box waarmee in het CMS de pagina’s op verschillende manieren samengesteld worden door het stapelen van zogenaamde containers vormde de basis voor het interactie ontwerp.</p>
-          <p class="leader trailer">Visueel leverden we een digitale stijlgids waarin ieder container en ieder element tot op detail niveau is uitgewerkt (tot en met de CSS code).</p>
-          <h2 class="well__title title">Resultaat</h2>
-          <p class="leader trailer">Een content model, een interactiestructuur waarmee VEH efficiënt online communiceert en leden optimaal bedient. Een stijlgids waarmee de eigen site bouwers en content experts van VEH de strategische lijnen moeiteloos kunnen volgen.</p>
-        </div>
-      </div>
-      <?php include '../../testimonials/evean.php'; ?>
-      <?php include '../../landingpage/introduction.php'; ?>
-      <?php include '../../landingpage/contact.php'; ?>
-    </section>
+
+          <hr class="divider leader--giant trailer--giant">
+
+          <blockquote class="quote leader--hero leader--hero trailer"><p>Met oog en gevoel voor de mensen in je organisatie gaat Brickson altijd een stap verder.</p></blockquote>
+          <figure class="person bleed leader trailer">
+            <span class="person__picture gutters">
+              <img src="/images/heads/marja_smits.jpg" class="person__image" width="56" height="56" style="background: Grey;">
+            </span>
+            <figcaption class="person__body">
+              <span class="person__name meta">Marja Smits</span>
+              <small class="person__occupation">Manager Strategie en Marketing Evean</small>
+            </figcaption>
+          </figure>
+
+        </section>
+        <section class="leader--giant trailer wings seed__footer">
+          <h3 class="title title--section leader">Over Brickson</h3>
+          <p class="body--tiny leader--tiny trailer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus, dapibus rutrum ipsum gravida et. Integer lectus nisi, facilisis sit amet eleifend nec, pharetra ut augue. Integer quam nunc, consequat nec egestas ac, volutpat ac nisi. Sed consectetur dignissim dignissim. Donec pretium est site.</p>
+        </section>
+      </aside>
+    </article>
   </body>
 </html>

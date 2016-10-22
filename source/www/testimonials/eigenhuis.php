@@ -28,7 +28,7 @@
           <img src="/images/heads/frank_muller.jpg" class="person__image" width="56" height="56" style="background: Grey;"/>
         </span>
         <figcaption class="person__body">
-          <span class="person__name title title--section">FRANK MULLER</span>
+          <span class="person__name meta">FRANK MULLER</span>
           <small class="person__occupation">Marketing Manager Vereniging Eigen Huis</small>
         </figcaption>
       </figure>

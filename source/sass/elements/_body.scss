@@ -2,7 +2,8 @@
 Body
 
 .body - Regular paragraph
-.body--whisper - Smaller text
+.body--tiny - Smaller text
+.body--whisper - Lighter text
 .body--meta - Meta text, dates etc.
 
 markup:
@@ -14,9 +15,12 @@ Styleguide 3.1
 
 
 .body {
-  &--whisper {
+  &--tiny {
     @extend small;
     line-height: to-unit(rhythm(4), 1, 10px);
+  }
+  &--whisper {
+    opacity: .76;
   }
   &--inverse {
     color: $white;

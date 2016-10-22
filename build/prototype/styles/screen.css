@@ -312,7 +312,7 @@ mark {
 /*
  * Address inconsistent and variable font size in all browsers.
  */
-small, .body--whisper {
+small, .body--tiny {
   font-size: 0.75em; }
 
 /*
@@ -1177,7 +1177,8 @@ Styleguide 3.0
 Body
 
 .body - Regular paragraph
-.body--whisper - Smaller text
+.body--tiny - Smaller text
+.body--whisper - Lighter text
 .body--meta - Meta text, dates etc.
 
 markup:
@@ -1185,8 +1186,11 @@ markup:
 
 Styleguide 3.1
 */
-.body--whisper {
+.body--tiny {
   line-height: 1.6; }
+
+.body--whisper {
+  opacity: .76; }
 
 .body--inverse {
   color: #ffffff; }
@@ -2409,7 +2413,7 @@ Breadcrumbs
 .trail - Trail
 
 markup:
-<nav class="{$modifiers} body--whisper body--meta title title--section leader--tiny trailer bleed">
+<nav class="{$modifiers} meta leader--tiny trailer bleed">
   <ol class="list--reset list--inline">
     <li><a class="anchor--reset anchor--shy" href="javascript:;">Case</a></li>
     <li><a class="anchor--reset anchor--shy" href="javascript:;">Vereniging Eigen Huis</a></li>
