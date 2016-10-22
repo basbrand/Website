@@ -2054,7 +2054,10 @@ Styleguide 4.1
       min-height: 50vh; } }
   @media only screen and (min-width: 48em) and (max-aspect-ratio: 6 / 5) {
     .pod__seed {
-      width: 50%; } }
+      width: 50%; }
+    .pod--serval {
+      min-height: 50%;
+      min-height: 50vh; } }
   @media only screen and (max-width: 63.9375em) {
     .pod--serval .pod__seed {
       color: white; }
@@ -2574,8 +2577,10 @@ Introduction
 markup:
 <section class="pod pod--baboon introduction">
   <div class="pod__seed seed isolation">
-    <h2 class="seed__header title leader trailer">Blijer, gezonder en welvarender</h2>
-    <p class="seed__body leader trailer">Brickson is er voor ambitieuze merken in traditionele markten. Wij helpen ze om relevant te blijven en meer voor klanten te betekenen. Succesvolle merken kijken vooruit en stellen zich de vraag: hoe maak ik mijn klant blijer, gezonder en welvarender?</p>
+    <div class="seed__body">
+      <h2 class="title leader trailer">Blijer, gezonder en welvarender</h2>
+      <p class="leader trailer">Brickson is er voor ambitieuze merken in traditionele markten. Wij helpen ze om relevant te blijven en meer voor klanten te betekenen. Succesvolle merken kijken vooruit en stellen zich de vraag: hoe maak ik mijn klant blijer, gezonder en welvarender?</p>
+    </div>
   </div>
   <div class="pod__seed cover isolation">
     <picture>
