@@ -10,9 +10,9 @@ Debug layout
 Styleguide 2.0.1
 */
 
-$debug-layout: true;
-$debug-rhythm: true;
-$debug-breakpoint: true;
+$debug-layout: false;
+$debug-rhythm: false;
+$debug-breakpoint: false;
 
 @if $debug-breakpoint {
   html:after,

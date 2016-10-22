@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Archivo+Black|Archivo+Narrow|Lora:400,400i");
 /* styleguide:ignore:start */
 /* 1. */
 /*
@@ -25,7 +26,7 @@ Rhythm
 
 This measure is used to calculate vertical measurements like line-height and top and bottom paddings and margins. All vertical measurements need to be a whole multiple of this value to maintain consistent vertical rhythm.
 
-$rhythm - 3px
+$rhythm - 4px
 
 markup:
 {$modifiers}
@@ -42,6 +43,10 @@ If `$use-brand-type: false` type is set in Times and Open Sans.
 Styleguide 1.3.2
 */
 /* 1.3.4 Base ? */
+/*
+ * Gets the number of whole rhythms from a value in px
+ * E.g. if the rhythm equals 4 and the value given is 40, the funtion returns 10
+ */
 /* 1.3.5 Breakpoint */
 /*
 Breakpoint settings
@@ -195,7 +200,7 @@ html {
   /* 3 */
   background: #ffffff;
   /* 4 */
-  font: normal normal 300 12pt/16pt Book Antiqua, Palatino Linotype, Palatino, serif;
+  font: normal normal normal 16px/1.5 Lora, Book Antiqua, Palatino Linotype, Palatino, serif;
   color: #445D87;
   /* 5 */
   text-size-adjust: 100%;
@@ -308,7 +313,7 @@ mark {
  * Address inconsistent and variable font size in all browsers.
  */
 small, .body--whisper {
-  font-size: 0.83333em; }
+  font-size: 0.75em; }
 
 /*
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
@@ -691,134 +696,28 @@ Styleguide 2.1
   .layout--align-middle {
     align-items: center; }
 
-@media (-ms-high-contrast: active) and (-ms-high-contrast: none) and (min-width: 64em) {
-  .layout__cell {
-    flex: 0 1 100%;
-    max-width: 100%;
-    /* 2. */ } }
+@media only screen and (min-width: 48em) {
+  .layout__cell.wings {
+    padding-left: 4.16667%;
+    padding-right: 4.16667%; } }
 
 @media only screen and (min-width: 64em) {
   .layout {
-    flex-direction: row; }
-    .layout__cell--aside {
-      flex: 0 0 27.77778%;
-      max-width: 27.77778%;
-      /* 2. */ }
-    .layout__cell--aside + .layout__cell, .layout__cell:first-child:last-child {
-      flex: 0 0 44.44444%;
-      max-width: 44.44444%;
-      /* 2. */ }
-    .layout__cell:first-child:last-child {
-      margin-left: auto;
-      margin-right: auto; }
-    .layout__cell--aside + .layout__cell:last-child {
-      flex: 0 1 72.22222%;
-      max-width: 72.22222%;
-      /* 2. */ }
-    .layout__cell .layout__cell--aside {
-      flex: 0 0 38.46154%;
-      max-width: 38.46154%;
-      /* 2. */ }
-    .layout__cell--divider {
-      /* Rectangle: */
-      box-shadow: inset -19px 0px 0px 0px #FFFFFF, inset -20px 0px 0px 0px rgba(99, 180, 82, 0.26); }
-      .well .layout__cell--divider, .layout__cell--divider.well {
-        box-shadow: inset -19px 0px 0px #d3eaec, inset -20px 0px 0px 0px rgba(255, 255, 255, 0.7); } }
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .layout__cell {
+      flex: 1 1 33.33333%;
+      min-width: 33.33333%; }
+      .layout__cell.wings {
+        padding-left: 2.77778%;
+        padding-right: 2.77778%; }
+    .layout__cell--main {
+      flex: 1 1 66.66667%;
+      min-width: 66.66667%; }
+      .layout__cell--main.wings {
+        padding-left: 4.16667%;
+        padding-right: 4.16667%; } }
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .layout {
-    display: inline-block;
-    max-width: 100%; }
-  .layout__cell {
-    display: inline-block;
-    vertical-align: top;
-    float: left; } }
-
-@media only screen and (-ms-high-contrast: active) and (min-width: 48em), only screen and (-ms-high-contrast: none) and (min-width: 48em) {
-  .layout__cell:first-child:last-child {
-    margin-left: 15%;
-    margin-right: 15%;
-    width: 100%;
-    max-width: 70%; } }
-
-/*
-Layout example, two-column with left sidebar
-
-| Sidebar | Main |
-
-.layout - Full width accross viewports
-.layout.layout--reverse - Reverses container ordering on smallest viewports, is used for source ordering
-
-markup:
-<div class="{$modifiers}">
-  <div class="layout__cell layout__cell--aside">
-    Sidebar
-  </div>
-  <div class="layout__cell">
-    Main
-  </div>
-</div>
-
-Styleguide 2.1.1
-*/
-/*
-Layout example, two-column with right sidebar
-
-| Main | Sidebar |
-
-.layout - Full width accross viewports
-.layout.layout--reverse - Reverses container ordering on smallest viewports, is used for source ordering
-
-markup:
-<div class="{$modifiers}">
-  <div class="layout__cell">
-    Main
-  </div>
-  <div class="layout__cell layout__cell--aside">
-    Sidebar
-  </div>
-</div>
-
-Styleguide 2.1.2
-*/
-/*
-Layout example, narrow single-column
-
-| Main |
-
-.layout - Full width accross viewports (added well class to cell for visibility in this example)
-
-markup:
-<div class="{$modifiers}">
-  <div class="layout__cell well">
-    Main
-  </div>
-</div>
-
-Styleguide 2.1.3
-*/
-/*
-Example of a nested Layout
-
-Layouts can be nested for more complex layouts
-
-markup:
-<div class="layout layout--reverse layout--split">
-  <div class="layout__cell layout__cell--aside">
-    Sidebar
-  </div>
-  <div class="layout__cell layout__cell--main layout layout--reverse layout--split">
-    <div class="layout__cell layout__cell--main">
-      Main
-    </div>
-    <div class="layout__cell layout__cell--aside">
-      Sidebar
-    </div>
-  </div>
-</div>
-
-Styleguide 2.1.4
-*/
 /* 2.2 Gutter */
 /*
 Gutter
@@ -931,10 +830,13 @@ Styleguide 2.4.1
   .leader--hero {
     margin-top: 32pt; }
   .leader--giant {
-    margin-top: 64pt; }
+    margin-top: 40pt; }
+  @media only screen and (min-width: 48em) {
+    .leader {
+      margin-top: 20pt; } }
   @media only screen and (min-width: 64em) {
     .leader--giant {
-      margin-top: 120pt; } }
+      margin-top: 72pt; } }
 
 /*
 Leader inside
@@ -994,13 +896,13 @@ Styleguide 2.5.1
   .trailer--hero {
     margin-bottom: 32pt; }
   .trailer--giant {
-    margin-bottom: 64pt; }
+    margin-bottom: 40pt; }
   @media only screen and (min-width: 48em) {
     .trailer {
       margin-bottom: 20pt; } }
   @media only screen and (min-width: 64em) {
     .trailer--giant {
-      margin-bottom: 120pt; } }
+      margin-bottom: 72pt; } }
 
 /*
 Trailer inside
@@ -1047,12 +949,12 @@ markup:
 
 Styleguide 2.6
 */
-.bleed {
+.bleed.bleed {
   margin-left: -14px;
   margin-right: -14px; }
-  .bleed--left {
+  .bleed.bleed--left {
     margin-left: -14px; }
-  .bleed--right {
+  .bleed.bleed--right {
     margin-right: -14px; }
 
 /* 2.7 Grid */
@@ -1081,32 +983,26 @@ Styleguide 2.7
 /*
  * 1. Clearfix reloaded (http://cssmojo.com/the-very-latest-clearfix-reloaded/)
  */
-.grid:after {
-  /* 1. */
-  content: " ";
-  display: block;
-  clear: both; }
-
-.grid--tile .grid__cell {
-  float: left;
-  min-width: 50%;
-  max-width: 50%;
-  height: 50%;
-  min-height: 25vh;
-  max-height: 25vh;
-  height: 25vh; }
-
-@media (orientation: landscape) and (min-width: 20em) {
-  .grid--tools .grid__cell {
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  /* Need breakpoint for wide and narrow viewports */ }
+  .grid:after {
+    /* 1. */
+    content: " ";
+    display: block;
+    clear: both; }
+  .grid__cell {
+    flex: 1 1 50%;
     float: left;
     min-width: 50%;
-    max-width: 50%; } }
-
-@media only screen and (min-width: 48em) {
-  .grid--tools .grid__cell {
-    float: left;
-    min-width: 50%;
-    max-width: 50%; } }
+    width: 50%;
+    min-height: 50%;
+    flex-basis: 50%; }
+  @media (max-aspect-ratio: 2 / 1) and (min-width: 64em) {
+    .grid__cell {
+      height: 25vh; } }
 
 /* 2.8 Media */
 /*
@@ -1242,31 +1138,11 @@ markup:
 
 Styleguide 3.1
 */
-.body--meta, .body--number, .body--email {
-  font-family: Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
-  font-weight: 300;
-  letter-spacing: .3em; }
-
 .body--whisper {
   line-height: 1.6; }
 
-.body--number, .body--email {
-  letter-spacing: 0;
-  font-weight: 600; }
-
-.body--number {
-  font-size: 1.16667em;
-  line-height: 1.71429; }
-
-.body--email {
-  font-size: 0.75em;
-  line-height: 0.66667; }
-
-@media only screen and (max-width: 47.9375em) {
-  .body--email {
-    font-size: 0.83333em;
-    line-height: 0.8; } }
+.body--inverse {
+  color: #ffffff; }
 
 /* 3.2 Heading */
 /*
@@ -1279,14 +1155,6 @@ markup:
 
 Styleguide 3.2
 */
-.lead {
-  font-size: 16px;
-  line-height: 1.75; }
-  @media only screen and (min-width: 90em) {
-    .lead {
-      font-size: 18px;
-      line-height: 1.55556; } }
-
 /* 3.3 Headline */
 /*
 Title
@@ -1306,14 +1174,15 @@ Styleguide 3.3
  * Force block on inline tags
  */
 .title {
-  font: 900 1.5em/1.2 "Arial Black", Gadget, sans-serif;
+  font: 600 1.375em/1.09091 Kanit, Arial, Helvetica, Gadget, sans-serif;
   width: 100%;
-  /* 1 */ }
+  /* 1 */
+  letter-spacing: 0.02em; }
   a .title,
   .title a {
     text-decoration: none; }
   .title--meta, .title--section {
-    font-weight: 900;
+    font-weight: 600;
     font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.25em; }
@@ -1326,18 +1195,15 @@ Styleguide 3.3
     font-size: 0.83333em;
     line-height: 1.6; }
   .title--em, .title--byline {
-    font-family: "Arial Black", Gadget, sans-serif !important;
-    font-weight: 900 !important; }
+    font-family: Kanit, Arial, Helvetica, Gadget, sans-serif !important;
+    font-weight: 600 !important; }
   .title--byline {
     font-size: 1.16667em; }
   .title--inverse,
   a .title--inverse,
   .title--inverse a {
     color: #ffffff;
-    font-weight: 300; }
-  .well .title--well {
-    margin-top: 40pt;
-    margin-bottom: 24pt; }
+    letter-spacing: 0.04em; }
 
 /*
 Title, inversed
@@ -1398,6 +1264,12 @@ a,
   a--reset,
   .anchor--reset {
     color: inherit; }
+  a--inverse,
+  .anchor--inverse {
+    color: #ffffff; }
+    a--inverse:hover,
+    .anchor--inverse:hover {
+      color: #37383C; }
 
 /* 3.5 Button */
 /*
@@ -1416,7 +1288,7 @@ Styleguide 3.5
 .button, .button:visited {
   display: inline-block;
   padding: 8px 16px;
-  border: 1px solid #445D87;
+  border: 1px solid;
   background: transparent;
   color: #445D87;
   font: 600 8pt/8pt Arial, Helvetica, sans-serif;
@@ -1426,20 +1298,17 @@ Styleguide 3.5
   outline: 0; }
 
 .button:hover {
-  color: #57B0B6;
-  border-color: #57B0B6; }
+  color: #57B0B6; }
 
 .button:active {
-  color: #37383C;
-  border-color: #37383C; }
+  color: #37383C; }
 
 .button--stretch {
   width: 100%;
   text-align: center; }
 
-.cover .button, .button--inverse {
-  color: #ffffff;
-  border-color: #ffffff; }
+.button--inverse {
+  color: #ffffff; }
 
 /*
 Button, inversed
@@ -1671,7 +1540,51 @@ Styleguide 3.7
   li {
     float: left; } }
 
-/* 3.8 Icon */
+/* 3.8 Meta */
+/*
+Meta
+
+.meta - Labels, etc
+.meta.meta--tiny - Smaller
+.meta.meta--whisper - Smaller
+.meta.meta--hero - Larger
+
+markup:
+<span class="{$modifiers}">Babs Gösgens</span>
+
+Styleguide 3.8
+*/
+.meta {
+  font: normal 600 0.75em/1 Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .2em; }
+  .meta--inverse {
+    font-weight: 300;
+    color: #ffffff; }
+  .meta--tiny, .meta--whisper {
+    font-size: 0.625em;
+    line-height: 1.2;
+    letter-spacing: .3em; }
+  .meta--hero {
+    font-size: 1em;
+    line-height: 1;
+    font-weight: 600; }
+
+/*
+Meta Inverse
+
+.meta.meta--inverse - White on dark bakgrounds
+
+markup:
+<span class="{$modifiers}">Babs Gösgens</span>
+
+sg-wrapper:
+<div class="well gutters">
+<sg-wrapper-content/>
+</div>
+
+Styleguide 3.8.1
+*/
 /* 3.9 Brand */
 /*
 Brand
@@ -1735,56 +1648,25 @@ Styleguide 3.10
 */
 /* 3.11 Brand */
 /*
-Brand
+Isolation
+
+.isolation - White pixel outline
 
 markup:
-<p class="slogan">
-  <em class="is-narrative">Sowing Innovation Harvesting Prosperity</em>
+<p class="{$modifiers}">
+  I am in isolation.
 </p>
 
-width="444px" height="347px" viewBox="0 0 444 347"
+sg-wrapper:
+<div style="background: Grey; padding: 2em;">
+  <sg-wrapper-content/>
+</div>
 
-Styleguide 3.9
+Styleguide 3.11
 */
-.brand {
-  height: 48pt;
-  background: no-repeat center;
-  background-image: url("/images/logos/Brickson-Logotype-RGB-LB--tablet--x2.png");
-  background-image: url("/images/logos/Brickson-Logotype-RGB-LB.svg");
-  background-size: contain; }
-  .brand--ams, .brand--dnb {
-    height: 60pt; }
-  .brand--ams {
-    background-image: url("/images/logos/Brickson-Logotype-AMS-RGB-LB--tablet--x2.png");
-    background-image: url("/images/logos/Brickson-Logotype-AMS-RGB-LB.svg"); }
-  .brand--dnb {
-    background-image: url("/images/logos/Brickson-Logotype-DNB-RGB-LB--tablet--x2.png");
-    background-image: url("/images/logos/Brickson-Logotype-DNB-RGB-LB.svg"); }
-  .brand--handshake {
-    height: 88pt; }
-  .brand--cover, .brand--inverse {
-    background-image: url("/images/logos/Brickson-Logotype-RGB-DB--tablet--x2.png");
-    background-image: url("/images/logos/Brickson-Logotype-RGB-DB.svg"); }
-  @media only screen and (min-width: 48em) {
-    .brand {
-      height: 60pt; }
-      .brand--ams, .brand--dnb {
-        height: 68pt; }
-      .brand--handshake {
-        height: 80pt; }
-      .brand--handshake {
-        position: absolute;
-        width: 100%;
-        top: 33%;
-        left: 0;
-        margin-top: 0%;
-        transform: translateY(-50%); } }
-  @media (orientation: landscape) and (min-width: 64em) {
-    .brand--ams, .brand--dnb {
-      height: 72pt; } }
-  @media (orientation: landscape) and (min-width: 90em) {
-    .brand--ams, .brand--dnb {
-      height: 80pt; } }
+.isolation {
+  outline: 1px solid #ffffff;
+  outline-offset: 0; }
 
 /* 3.12 Menu */
 /*
@@ -1792,15 +1674,25 @@ Menu
 
 Styleguide 3.12
 */
-/* 3.13 Well */
+/* 3.13 Seed */
 /*
-Well
+Seed
+
+The seed class is used on `pod__seeds`. The pod seed will behave as a flex item, designated a fixed amount of space to the first item and vertically centering content in the remaining space.
 
 Styleguide 3.13
 */
-.well__title {
-  margin-top: 32pt;
-  margin-bottom: 20pt; }
+.seed {
+  display: flex;
+  flex-direction: column; }
+  .seed__body, .seed__footer {
+    flex-grow: 1; }
+  .seed__header {
+    flex-shrink: 1; }
+  .seed__footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; }
 
 /* 3.14 Tag */
 /* 3.15 Image */
@@ -1815,8 +1707,31 @@ Styleguide 3.15
     width: 100%;
     height: auto; }
 
-/* 3.16 tile */
-/* 3.17 cover */
+/* 3.16 Well */
+/*
+Well
+
+Somethimes, content needs to stand out. The `well` class adds a background color, and changes the text color.
+
+.well - Regular well, text and background reversed.
+
+markup:
+<div class="{$modifiers}">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus, dapibus rutrum ipsum gravida et.</p>
+</div>
+
+Styleguide 3.16
+*/
+.well {
+  background: #445D87;
+  color: #ffffff; }
+  .well--ostrich {
+    background: #57B0B6; }
+  .well--stork {
+    color: #445D87;
+    background: #d3eaec; }
+
+/* 3.17 Cover */
 /*
 Cover
 
@@ -1850,61 +1765,81 @@ Styleguide 3.17
 .cover {
   position: relative;
   overflow: hidden;
-  background-color: transparent !important;
-  color: #ffffff;
-  box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #ffffff; }
+  background-color: transparent !important; }
   .cover__image {
     background-color: #FFF;
-    background-size: cover;
     object-fit: cover;
     position: absolute;
     left: 0;
     top: 0;
     z-index: -1;
-    max-width: 100%;
+    width: auto;
+    height: 100%;
     min-width: 100%;
-    max-height: 100%;
     min-height: 100%; }
-  @media only screen and (min-width: 64em) and (min-aspect-ratio: 16 / 9) {
+  @media only screen and (orientation: portrait) {
     .cover--hero .cover__image {
-      max-width: initial;
-      max-height: initial;
+      width: 100%;
+      height: auto;
+      min-height: 0;
       top: auto;
+      bottom: 0; } }
+  @media only screen and (orientation: landscape) {
+    .cover--hero .cover__image {
+      height: auto;
+      max-height: 100%;
       left: auto;
       right: 0;
+      top: auto;
       bottom: 0; } }
+  @media only screen and (orientation: landscape) and (min-aspect-ratio: 16 / 9) {
+    .cover--hero .cover__image {
+      top: auto;
+      bottom: 0; } }
+  @media only screen and (min-aspect-ratio: 16 / 9) {
+    .cover--hero .cover__image {
+      height: 100%; } }
+  @media only screen and (orientation: portrait) {
+    .cover--hero .cover__image {
+      max-width: none; } }
 
-/* 3.18 quote */
+/* 3.18 Quote */
 /*
 Quote
 
+.quote - Regular quote, used in testimonial pod
+.quote.quote--l - Large quote, used in case
+
 markup:
-<blockquote class="quote lead"><p>For 50 years, WWF has been protecting the future of nature.
-The world's leading conservation organization,
-WWF works in 100 countries and is supported by
-1.2 million members in the United States and
-close to 5 million globally.</p></blockquote>
+<blockquote class="{$modifiers} leader--giant trailer"><p>Met oog en gevoel voor de mensen in je organisatie gaat Brickson altijd een stap verder.</p></blockquote>
+<figure class="person bleed leader trailer">
+  <span class="person__picture gutters">
+    <img src="/images/heads/marja_smits.jpg" class="person__image" width="56" height="56" style="background: Grey;"/>
+  </span>
+  <figcaption class="person__body">
+    <span class="person__name title title--section">Marja Smits</span>
+    <small class="person__occupation">Manager Strategie en Marketing Evean</small>
+  </figcaption>
+</figure>
 
 Styleguide 3.18
 */
 .quote {
   position: relative;
-  quotes: "“" "”" "‘" "’"; }
+  font-style: italic;
+  font-size: 1.125em;
+  line-height: 1.33333; }
+  .quote--l {
+    font-size: 1.5em;
+    line-height: 1.5; }
   .quote:before {
-    position: absolute;
-    right: 100%;
+    display: block;
     content: open-quote; }
   .quote:after {
-    content: close-quote; }
-  .quote p {
-    display: inline; }
+    content: no-close-quote; }
+  .quote:before, .quote:after {
+    font: normal normal 4em/.5 Arial, Helvetica, Gadget, sans-serif; }
 
-/* 3.x Label */
-/* 3.x Alert */
-/* 3.x Tooltip */
-/* 3.x Media */
-/* 3.x Issue */
-/* 3.x Box */
 /* 3.98 Fx */
 /*
 Effects
@@ -1925,8 +1860,6 @@ State
 
 .is-narrative - Hidden label, but is used as narrative for visually impaired users
 .is-heir - Passes on parent's color and background properties
-.is-crowned - When assigned to an element directly following the `masthead`, it pulls that item up so the masthead sits on top (like a crown).
-.is-rooted - Adds position relative.
 
 markup:
 <p class="{$modifiers}">{$modifiers}</p>
@@ -1935,13 +1868,15 @@ Styleguide 3.99
 */
 .is-lt-large-handheld,
 .is-gt-large-handheld,
+.is-gt-small-desktop,
+.is-gt-medium-desktop,
 .is-narrative {
   position: absolute;
   left: -999em;
   top: -999em;
   /* IE pushed the text to the bottom of the page without this */ }
 
-.is-rooted {
+.is-root {
   position: relative; }
 
 .is-cleared {
@@ -1965,53 +1900,370 @@ Styleguide 3.99
   .is-gt-large-handheld {
     position: static; } }
 
+@media only screen and (min-width: 64em) {
+  .is-gt-small-desktop {
+    position: static; } }
+
+@media only screen and (min-width: 90em) {
+  .is-gt-medium-desktop {
+    position: static; } }
+
 /* 4. */
 /*
 Blocks
 
 Styleguide 4.0
 */
-/* 4.1 Handshake */
+/* 4.1 Pod */
 /*
-Handshake
+Pod
 
-markup:
-<figure class="well well--hero cover" style="background: Grey;">
-  <picture class="cover__image">
-    <!--[if IE 9]><video style="display: none;"><![endif]-->
-    <source media="(min-width: 1440px)" srcset="/images/content/handshake--tablet.png, /images/content/handshake--tablet--2x.png 2x">
-    <source media="(min-width: 1024px)" srcset="images/content/handshake--smartphone--portrait--2x.png">
-    <source media="(min-width: 768px)" srcset="/images/content/handshake--smartphone--landscape--2x.png 2x">
-    <source media="(orientation: landscape)" srcset="/images/content/handshake--smartphone--landscape.png, /images/content/handshake--smartphone--landscape--2x.png 2x">
-    <source media="(orientation: portrait)" srcset="/images/content/handshake--smartphone--portrait.png, /images/content/handshake--smartphone--portrait--2x.png 2x">
-    <!--[if IE 9]></video><![endif]-->
-    <img class="cover__image" srcset="/images/content/handshake--tablet.png, /images/content/handshake--tablet--2x.png 2x" alt="">
-  </picture>
-  <figcaption class="well well--hero well--tile  handshake__item tile tile__footer wings">
-    <div class="handshake__body">
-      <h1 class="brand tile__body">
-        <span class="is-narrative">Brickson • Amsterdam – Den Bosch</span>
-      </h1>
-    </div>
-    <div class="handshake__body">
-      <h2 class="title trailer--tiny leader--hero">Een stap vooruit in het digitale tijdperk</h2>
-      <p class="trailer leader">Brickson is een integrated digital agency, we begrijpen mensen én techniek en we helpen je een stap vooruit te zetten in de digitale wereld.</p>
-    </div>
-  </figcaption>
-</figure>
+Pods are layout containers that can behave in different ways. There are several different pods:
+
+* Regular, default pod `used for introduction pod and contact module`
+* Hippo pod `used for hero module`
+* Kudu pod `used for handshake module`
+* Serval pod `used for testimonial module`
+* Baboon pod `used for introduction pod and contact module`
+* Zebra pod `used for invitation module`
+* Leopard pod `used for case tiles`
+* Rhino pod `utility modifier to be used in combination with other pods, limits to 24 columns wide on large desktop (and up) landscape.`
 
 Styleguide 4.1
 */
-/* 4.2 Tile */
-/*
-Shop
+.pod {
+  width: 100%;
+  min-height: 100%;
+  min-height: 100vh; }
+  .pod__seed {
+    float: left;
+    width: 100%;
+    min-height: 50%;
+    min-height: 50vh;
+    padding: 0 8.33333%; }
+  .pod--hippo .pod__seed {
+    width: 100%;
+    min-height: 100%;
+    min-height: 100vh; }
+  .pod--hippo .pod__seed,
+  .pod--leopard .pod__seed {
+    padding: 0 8.33333%; }
+  @media only screen and (min-aspect-ratio: 6 / 5) {
+    .pod__seed {
+      width: 50%;
+      min-height: 100%;
+      min-height: 100vh; }
+    .pod--kudu .pod__seed {
+      width: 100%; }
+    .pod--baboon,
+    .pod--baboon .pod__seed {
+      min-height: 50%;
+      min-height: 50vh; }
+    .pod--leopard .pod__seed {
+      width: 100%; }
+    .pod--leopard .pod__seed {
+      min-height: 50%;
+      min-height: 50vh; }
+    .pod--zebra {
+      display: flex;
+      flex-wrap: wrap; }
+    .pod--zebra .pod__seed {
+      min-height: 100%; } }
+  @media only screen and (max-aspect-ratio: 6 / 5) {
+    .pod--baboon {
+      min-height: 50%;
+      min-height: 50vh; }
+    .pod--baboon .pod__seed {
+      width: 50%;
+      min-height: 100%;
+      min-height: 50vh; } }
+  @media only screen and (min-width: 48em) {
+    .pod--kudo,
+    .pod--kudu .pod__seed {
+      min-height: 50%;
+      min-height: 50vh; } }
+  @media only screen and (min-width: 48em) and (max-aspect-ratio: 6 / 5) {
+    .pod__seed {
+      width: 50%; }
+    .pod--serval {
+      min-height: 50%;
+      min-height: 50vh; } }
+  @media only screen and (max-width: 63.9375em) {
+    .pod--serval .pod__seed {
+      color: white; }
+      .pod--serval .pod__seed .button {
+        color: white; } }
+  @media only screen and (min-width: 48em) {
+    .pod__seed {
+      padding: 0 8.33333%; }
+    .pod--kudu, .pod--zebra {
+      min-height: 50%;
+      min-height: 50vh; }
+    .pod--leopard {
+      width: 50%;
+      float: left; }
+    .pod--leopard {
+      width: 50%; }
+      .pod--leopard:nth-child(2n+1) {
+        clear: right; }
+    .pod--leopard .pod__seed {
+      min-height: 50%;
+      min-height: 25vh; } }
+  @media only screen and (min-width: 64em) {
+    .pod__serval {
+      position: relative; }
+    .pod--serval .pod__seed {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50%;
+      min-height: 50%;
+      min-height: 50vh;
+      background: #ffffff;
+      background: rgba(255, 255, 255, 0.8); }
+    .pod--hippo .pod__seed {
+      padding: 0 5.55556% 0 11.11111%; } }
+  @media only screen and (min-width: 90em) {
+    .pod__seed {
+      padding: 0 5.55556%; }
+    .pod--rhino {
+      width: 66.66667%;
+      max-width: 66.66667%; }
+    .pod__serval {
+      position: relative; }
+    .pod--baboon {
+      width: 33.33333%; }
+    .pod--baboon .pod__seed {
+      width: 100%; } }
 
-.shop - Centered content
+/*
+Regular, default pod
+
+Full bleed on mobile views.
+
+Holds one (1) to two (2) pod seeds. Pod seeds are always half size, stacked on portrait and adjacent on landscape viewports.
+
+.pod - Regular pod.
+.pod.pod--rhino - Regular pod, Rhino modifier.
 
 markup:
-<article class="shop cover">
-</article>
-<h1 class="tile">Extra, extra – read all about it!</h1>
+<section class="{$modifiers}">
+  <div class="pod__seed">
+    {$modifiers}
+  </div>
+  <div class="pod__seed">
+    {$modifiers}
+  </div>
+</section>
+
+sg-wrapper:
+<div class="sg-container">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 4.1.1
+*/
+/*
+Hippo pod
+
+Hippo pod. Full bleed accross views.
+
+Holds one (1) pod seed.
+
+.pod.pod--hippo - Hippo pod.
+.pod.pod--hippo.pod--rhino - Hippo pod, Rhino modifier.
+
+markup:
+<section class="{$modifiers}">
+  <div class="pod__seed">
+    {$modifiers}
+  </div>
+</section>
+
+sg-wrapper:
+<div class="sg-container">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 4.1.2
+*/
+/*
+Kudu pod
+
+Full bleed on mobile views. Half height, full width on tablet (and up) portrait. Full height, half width on tablet (and up) landscape. 12/36 Width on medium desktop (and up) landscape.
+
+Holds one (1) to two (2) pod seeds. Pod seeds are half width, but always stacked in the left half of the pod (right half empty).
+
+.pod.pod--kudu - Kudu pod.
+.pod.pod--kudu.pod--rhino - Kudu pod, Rhino modifier.
+
+markup:
+<section class="{$modifiers}">
+  <div class="pod__seed">
+    {$modifiers}
+  </div>
+  <div class="pod__seed">
+    {$modifiers}
+  </div>
+</section>
+
+sg-wrapper:
+<div class="sg-container">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 4.1.3
+*/
+/*
+Serval pod
+
+Full bleed on mobile views. Half height, full width on tablet (and up) portrait. Full height, half width on tablet (and up) landscape.
+
+Holds only one (1) pod seed. Pod seed sits in the bottom left corner on large desktop (and up) landscape.
+
+.pod.pod--serval - Serval pod.
+.pod.pod--serval.pod--rhino - Serval pod, Rhino modifier.
+
+markup:
+<section class="{$modifiers}">
+  <div class="pod__seed">
+    {$modifiers}
+  </div>
+</section>
+
+sg-wrapper:
+<div class="sg-container">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 4.1.4
+*/
+/*
+Baboon pod
+
+Full bleed on mobile views. Half height, full width on tablet (and up) portrait. Full height, half width on tablet (and up) landscape.
+
+Holds one (1) to two (2) pod seeds. Pod seeds are always half size.
+
+.pod.pod--baboon - Baboon pod.
+.pod.pod--baboon.pod--rhino - Baboon pod, Rhino modifier.
+
+markup:
+<section class="{$modifiers}">
+  <div class="pod__seed">
+    {$modifiers}
+  </div>
+  <div class="pod__seed">
+    {$modifiers}
+  </div>
+</section>
+
+sg-wrapper:
+<div class="sg-container">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 4.1.5
+*/
+/*
+Zebra pod
+
+Full bleed on mobile views. Half height, full width on tablet (and up) portrait. Full height, half width on tablet (and up) landscape. 12/36 Width on medium desktop (and up) landscape.
+
+Holds one (1) to two (2) pod seeds.
+
+.pod.pod--zebra - Zebra pod.
+.pod.pod--zebra.pod--rhino - Kudu pod, Rhino modifier.
+
+markup:
+<section class="{$modifiers}">
+  <div class="pod__seed">
+    {$modifiers}
+  </div>
+  <div class="pod__seed">
+    {$modifiers}
+  </div>
+</section>
+
+sg-wrapper:
+<div class="sg-container">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 4.1.6
+*/
+/*
+Leopard pod
+
+Two, half height, stacked containers accross all viewports.
+
+Holds one (1) to two (2) pod seeds.
+
+.pod.pod--leopard - Leopard pod.
+
+markup:
+<section class="{$modifiers}">
+  <div class="pod__seed">
+    {$modifiers}
+  </div>
+  <div class="pod__seed">
+    {$modifiers}
+  </div>
+</section>
+
+sg-wrapper:
+<div class="sg-container">
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 4.1.7
+*/
+/*
+Rhino pod
+
+ 24 Columns width on large desktop (and up) landscape.
+
+.pod.pod--rhino - Rhino pod.
+
+markup:
+<section class="{$modifiers}">
+  <div class="pod__seed">
+    {$modifiers}
+  </div>
+  <div class="pod__seed">
+    {$modifiers}
+  </div>
+</section>
+
+sg-wrapper:
+<div class="sg-container">
+  <style>
+  </style>
+  <sg-wrapper-content/>
+</div>
+
+Styleguide 4.1.8
+*/
+/* 4.2 Tile */
+/*
+Tile
+
+.tile - Centered content
+
+markup:
+<div class="grid__cell cover isolation tile">
+  <img
+    class="cover__image"
+    alt=""
+    src="/images/content/design--tile--smartphone.jpg"
+    srcset="
+      /images/content/design--tile--tablet--2x.jpg 1040w,
+      /images/content/design--tile--tablet.jpg 320w,
+      /images/content/design--tile--smartphone.jpg 240w,
+      /images/content/design--tile--smartphone--2x.jpg 2x">
+  <p class="tile"><strong class="meta meta--inverse meta--hero">Ontwerpen</strong></p>
+  <p class="tile"><strong class="meta meta--inverse">User Interface & Experience Design</strong></p>
+</div>
 
 Styleguide 4.2
 */
@@ -2020,28 +2272,13 @@ Styleguide 4.2
  * 2. Background image
  */
 .tile {
-  position: relative; }
-  .tile__body {
-    position: absolute;
-    /* 1 */
-    top: 50%;
-    /* 1 */
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-    /* 1 */ }
-  .tile--shop .tile__body {
-    text-align: center;
-    /* 1 */ }
-  .tile--top {
-    vertical-align: top; }
-  .tile--gutters {
-    padding-left: 14px;
-    padding-right: 14px; }
-  .tile--gutters .tile__header,
-  .tile--gutters .tile__footer {
-    left: 14px;
-    right: 14px; }
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+  .tile--focus {
+    text-align: center; }
+  .tile--justify .tile {
+    min-height: 100%; }
 
 /* 4.3 Person */
 /*
@@ -2076,7 +2313,7 @@ Styleguide 4.3
     vertical-align: middle;
     line-height: 12pt; }
   .person__image {
-    outline: 1px solid #ffffff;
+    outline: 1px solid;
     width: 40pt;
     height: 40pt; }
   .person--s .person__image {
@@ -2087,6 +2324,111 @@ Styleguide 4.3
       width: 48pt;
       height: 48pt; } }
 
+/* 4.4 Trail */
+/*
+Trail
+
+Breadcrumbs
+
+.trail - Trail
+
+markup:
+<nav class="{$modifiers} body--whisper body--meta title title--section leader--tiny trailer bleed">
+  <ol class="list--reset list--inline">
+    <li><a class="anchor--reset anchor--shy" href="javascript:;">Case</a></li>
+    <li><a class="anchor--reset anchor--shy" href="javascript:;">Vereniging Eigen Huis</a></li>
+  </ol>
+</nav>
+
+Styleguide 4.4
+*/
+.trail a {
+  padding: 8px 14px; }
+
+.trail li + li:before {
+  content: "|"; }
+
+/* 4.5 Menu */
+/*
+Menu
+
+.menu - Menu
+.menu.menu--home - Menu
+
+markup:
+<ol class="{$modifiers} list--reset fx bleed" id="menu">
+  <li class="gutters">
+    <a class="menu__home fx" href="javascript:void();"><span class="is-narrative">Home</span></a>
+    <a class="menu__item anchor--shy is-current is-active" href="javascript:;">Cases</a>
+  </li>
+  <li><a class="menu__item anchor--shy fx" href="javascript:void();">Over Brickson</a></li>
+  <li><a class="menu__item anchor--shy fx is-active" href="javascript:void();">Cases</a></li>
+  <li><a class="menu__item anchor--shy fx" href="javascript:void();">Werken bij Brickson</a></li>
+</ol>
+
+Styleguide 4.5
+*/
+.menu {
+  white-space: nowrap;
+  max-height: 48px;
+  height: auto;
+  overflow: hidden; }
+  .menu li {
+    position: relative; }
+  .menu li, .menu__item {
+    display: block; }
+  .menu__home {
+    display: block;
+    float: left;
+    width: 3em;
+    height: 3em;
+    background: url("/images/logos/brickson-brandmark.png");
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%2357B0B6' fill-rule='evenodd' d='M23.247 42.848c-1.993 0-3.92-.293-5.74-.83l.066-.022c.717-.255 1.43-.56 2.148-.92.716-.358 1.39-.707 2.02-1.05.44-.236.806-.44 1.104-.61.182.14.4.236.645.236h.015c1.27-.02 2.502-.19 3.692-.473.83-.066 1.63-.256 2.393-.584.58-.248 1.106-.56 1.592-.92 5.466-2.885 9.223-8.623 9.223-15.18 0-9.46-7.698-17.156-17.158-17.156-.284 0-.54.115-.73.295-.246-.142-.52-.303-.827-.485-.63-.375-1.304-.734-2.02-1.074-.717-.34-1.425-.638-2.123-.895-.122-.044-.236-.08-.35-.117 1.912-.596 3.944-.918 6.05-.918 11.222 0 20.352 9.13 20.352 20.35 0 11.223-9.13 20.353-20.353 20.353M2.895 22.496c0-6.968 3.523-13.128 8.88-16.798-.147.437-.237.896-.237 1.395 0 .844.237 1.593.68 2.262-3.905 3.27-6.128 8.008-6.128 13.14 0 5.108 2.304 9.964 6.21 13.21-.5.698-.762 1.488-.762 2.38 0 .414.07.796.17 1.163-5.318-3.675-8.813-9.812-8.813-16.752m14.78-13.894c-.887.392-1.5.588-1.84.588-.58 0-1.075-.203-1.483-.614-.41-.408-.616-.903-.616-1.483 0-.578.206-1.083.616-1.51.408-.424.903-.638 1.483-.638.34 0 .953.197 1.84.59.887.39 1.91.912 3.068 1.558-1.16.613-2.18 1.117-3.07 1.51m5.524-.435h.82c1.055 0 2.062.203 3.017.613.953.41 1.78.966 2.48 1.663.7.7 1.253 1.517 1.663 2.455.408.94.614 1.934.614 2.99 0 1.06-.205 2.057-.613 2.994-.41.938-.964 1.756-1.662 2.454-.7.698-1.52 1.262-2.455 1.688-.94.427-1.936.64-2.992.64h-.206c-.408-.24-.912-.53-1.507-.87-.598-.34-1.228-.666-1.893-.972-.665-.307-1.313-.58-1.943-.818-.633-.24-1.17-.392-1.612-.46v-9.36c.51-.134 1.073-.34 1.688-.613.614-.273 1.21-.562 1.79-.87.578-.306 1.116-.594 1.61-.867l1.2-.665m9.413 18.36c-.923-1.058-1.98-1.843-3.173-2.353.273-.17.545-.358.818-.564.274-.203.53-.44.77-.715.952-.92 1.676-1.985 2.17-3.195.496-1.21.744-2.48.744-3.81 0-1.943-.504-3.683-1.49-5.228 3.528 2.75 5.81 7.026 5.81 11.834 0 3.91-1.535 7.483-4.02 10.167.065-.4.106-.807.106-1.227 0-1.84-.58-3.478-1.737-4.91M14.35 39.594c-.41-.427-.616-.93-.616-1.51 0-.577.206-1.072.616-1.482.408-.408.903-.612 1.483-.612.34 0 .953.197 1.84.59.887.39 1.91.893 3.068 1.506-1.16.648-2.18 1.17-3.07 1.56-.885.392-1.498.588-1.838.588-.58 0-1.075-.212-1.483-.64m.714-16.313c.41-.427.904-.64 1.484-.64.34 0 .954.196 1.84.588.888.393 1.91.912 3.07 1.56-1.16.648-2.182 1.16-3.07 1.533-.886.378-1.5.565-1.84.565-.58 0-1.074-.205-1.484-.613-.408-.41-.613-.904-.613-1.484s.205-1.082.613-1.51m-1.254-12.452c.298.165.61.31.948.41v9.666c-.715.375-1.304.894-1.764 1.56-.46.664-.69 1.44-.69 2.326 0 .852.23 1.62.69 2.302.46.682 1.05 1.193 1.764 1.533v5.37c-.28.073-.542.178-.793.297-3.598-2.837-5.732-7.2-5.732-11.794 0-4.583 2.03-8.803 5.577-11.67m13.29 26.16c-.175.016-.35.025-.528.025h-3.377c-.272-.17-.663-.39-1.174-.664l-1.637-.87c-.58-.306-1.176-.587-1.79-.844-.615-.255-1.177-.468-1.688-.64v-4.958c.51-.07 1.1-.24 1.764-.512.665-.274 1.337-.57 2.02-.896.682-.324 1.32-.656 1.918-.996.596-.342 1.066-.615 1.406-.818h2.558c.75 0 1.465.144 2.148.434.682.29 1.278.69 1.79 1.2.512.512.92 1.11 1.226 1.792.307.682.46 1.415.46 2.198 0 .785-.153 1.51-.46 2.174-.306.665-.714 1.252-1.226 1.764-.23.23-.482.43-.747.615-.847.413-1.738.746-2.664.995M23.248 0C10.843 0 .75 10.092.75 22.496c0 12.405 10.093 22.497 22.497 22.497 12.405 0 22.496-10.092 22.496-22.497C45.743 10.092 35.653 0 23.247 0'/%3E%3C/svg%3E");
+    background-size: cover; }
+    .menu__home:hover {
+      background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23445D87' fill-rule='evenodd' d='M23.247 42.848c-1.993 0-3.92-.293-5.74-.83l.066-.022c.717-.255 1.43-.56 2.148-.92.716-.358 1.39-.707 2.02-1.05.44-.236.806-.44 1.104-.61.182.14.4.236.645.236h.015c1.27-.02 2.502-.19 3.692-.473.83-.066 1.63-.256 2.393-.584.58-.248 1.106-.56 1.592-.92 5.466-2.885 9.223-8.623 9.223-15.18 0-9.46-7.698-17.156-17.158-17.156-.284 0-.54.115-.73.295-.246-.142-.52-.303-.827-.485-.63-.375-1.304-.734-2.02-1.074-.717-.34-1.425-.638-2.123-.895-.122-.044-.236-.08-.35-.117 1.912-.596 3.944-.918 6.05-.918 11.222 0 20.352 9.13 20.352 20.35 0 11.223-9.13 20.353-20.353 20.353M2.895 22.496c0-6.968 3.523-13.128 8.88-16.798-.147.437-.237.896-.237 1.395 0 .844.237 1.593.68 2.262-3.905 3.27-6.128 8.008-6.128 13.14 0 5.108 2.304 9.964 6.21 13.21-.5.698-.762 1.488-.762 2.38 0 .414.07.796.17 1.163-5.318-3.675-8.813-9.812-8.813-16.752m14.78-13.894c-.887.392-1.5.588-1.84.588-.58 0-1.075-.203-1.483-.614-.41-.408-.616-.903-.616-1.483 0-.578.206-1.083.616-1.51.408-.424.903-.638 1.483-.638.34 0 .953.197 1.84.59.887.39 1.91.912 3.068 1.558-1.16.613-2.18 1.117-3.07 1.51m5.524-.435h.82c1.055 0 2.062.203 3.017.613.953.41 1.78.966 2.48 1.663.7.7 1.253 1.517 1.663 2.455.408.94.614 1.934.614 2.99 0 1.06-.205 2.057-.613 2.994-.41.938-.964 1.756-1.662 2.454-.7.698-1.52 1.262-2.455 1.688-.94.427-1.936.64-2.992.64h-.206c-.408-.24-.912-.53-1.507-.87-.598-.34-1.228-.666-1.893-.972-.665-.307-1.313-.58-1.943-.818-.633-.24-1.17-.392-1.612-.46v-9.36c.51-.134 1.073-.34 1.688-.613.614-.273 1.21-.562 1.79-.87.578-.306 1.116-.594 1.61-.867l1.2-.665m9.413 18.36c-.923-1.058-1.98-1.843-3.173-2.353.273-.17.545-.358.818-.564.274-.203.53-.44.77-.715.952-.92 1.676-1.985 2.17-3.195.496-1.21.744-2.48.744-3.81 0-1.943-.504-3.683-1.49-5.228 3.528 2.75 5.81 7.026 5.81 11.834 0 3.91-1.535 7.483-4.02 10.167.065-.4.106-.807.106-1.227 0-1.84-.58-3.478-1.737-4.91M14.35 39.594c-.41-.427-.616-.93-.616-1.51 0-.577.206-1.072.616-1.482.408-.408.903-.612 1.483-.612.34 0 .953.197 1.84.59.887.39 1.91.893 3.068 1.506-1.16.648-2.18 1.17-3.07 1.56-.885.392-1.498.588-1.838.588-.58 0-1.075-.212-1.483-.64m.714-16.313c.41-.427.904-.64 1.484-.64.34 0 .954.196 1.84.588.888.393 1.91.912 3.07 1.56-1.16.648-2.182 1.16-3.07 1.533-.886.378-1.5.565-1.84.565-.58 0-1.074-.205-1.484-.613-.408-.41-.613-.904-.613-1.484s.205-1.082.613-1.51m-1.254-12.452c.298.165.61.31.948.41v9.666c-.715.375-1.304.894-1.764 1.56-.46.664-.69 1.44-.69 2.326 0 .852.23 1.62.69 2.302.46.682 1.05 1.193 1.764 1.533v5.37c-.28.073-.542.178-.793.297-3.598-2.837-5.732-7.2-5.732-11.794 0-4.583 2.03-8.803 5.577-11.67m13.29 26.16c-.175.016-.35.025-.528.025h-3.377c-.272-.17-.663-.39-1.174-.664l-1.637-.87c-.58-.306-1.176-.587-1.79-.844-.615-.255-1.177-.468-1.688-.64v-4.958c.51-.07 1.1-.24 1.764-.512.665-.274 1.337-.57 2.02-.896.682-.324 1.32-.656 1.918-.996.596-.342 1.066-.615 1.406-.818h2.558c.75 0 1.465.144 2.148.434.682.29 1.278.69 1.79 1.2.512.512.92 1.11 1.226 1.792.307.682.46 1.415.46 2.198 0 .785-.153 1.51-.46 2.174-.306.665-.714 1.252-1.226 1.764-.23.23-.482.43-.747.615-.847.413-1.738.746-2.664.995M23.248 0C10.843 0 .75 10.092.75 22.496c0 12.405 10.093 22.497 22.497 22.497 12.405 0 22.496-10.092 22.496-22.497C45.743 10.092 35.653 0 23.247 0'/%3E%3C/svg%3E"); }
+  .menu__item {
+    width: 100%;
+    padding: 8px 14px;
+    font: normal bold 0.625em/3.2 Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .25em; }
+    .menu__item:hover, .menu__item.is-active {
+      color: #445D87;
+      max-height: 240px; }
+  .menu .is-current {
+    height: auto;
+    display: inline-block;
+    font-size: 1em;
+    line-height: 2;
+    padding-left: 1ex;
+    padding-right: 0; }
+  .menu.is-active, .menu:target {
+    max-height: 192px; }
+  @media only screen and (min-width: 32.5em) {
+    .menu {
+      display: flex; }
+      .menu__item {
+        position: static; }
+      .menu li, .menu__item {
+        display: inline-block; }
+      .menu--home .menu__item {
+        padding: 8px 28px; }
+      .menu--home li:first-child {
+        flex: 1 1 100%; } }
+
+/* 4.6 Case */
+/*
+Card
+
+.card - Picture and title
+
+markup:
+<div>
+</div>
+
+Styleguide 4.6
+*/
 /* 5. */
 /*
 Modules
@@ -2097,37 +2439,55 @@ Styleguide 5.0
 /*
 Handshake
 
+markup:
+<section class="pod pod--kudu pod--rhino handshake cover isolation">
+  <picture>
+    <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+  </picture>
+  <h1 class="seed__header leader trailer">
+    <img style="max-height: 100px;" src="../images/logos/Brickson-Logotype-RGB-DB.svg" alt="Brickson • Amsterdam – Den Bosch">
+  </h1>
+  <div class="pod__seed seed">
+    <h2 class=" seed__header title title--inverse">Vooruit met digitaal</h2>
+    <p class="seed__body body--inverse trailer leader">Brickson is er voor organisaties die de volgende stap in digitaal willen maken. Met een strategie, digitaal concept, website of een applicatie.</p>
+  </div>
+</section>
+
 Styleguide 5.1
 */
+.handshake .tile {
+  min-height: 50%;
+  min-height: 50vh; }
+
+.handshake img {
+  max-height: 136px; }
+
+.handshake h1 {
+  text-align: center; }
+
+@media only screen and (min-aspect-ratio: 6 / 5) {
+  .handshake .tile {
+    padding-right: 50%; }
+  .handshake h1 {
+    text-align: left; } }
+
+@media only screen and (min-width: 48em) {
+  .handshake .tile {
+    min-height: 25vh; } }
+
 /* 5.2 Testimonial */
 /*
 Testimonial
 
 markup:
-<div class="testimonial cover cover--neutral">
-  <picture class="cover__image">
-    <!--[if IE 9]><video style="display: none;"><![endif]-->
-    <source
-      media="(min-width: 1440px) and (orientation: landscape)"
-      srcset="/images/content/w1280px_h1280px--evean.jpg 1280w, /images/content/w1280px_h1280px--evean.jpg 2560w">
-    <source
-      media="(min-width: 1024px) and (orientation: portrait)"
-      srcset="/images/content/w683px_h1024px--evean.jpg 683w, /images/content/w683px_h1024px_2x--evean.jpg 1366w">
-    <source
-      media="(min-width: 768px) and (orientation: portrait)"
-      srcset="/images/content/w896px_h640px--evean.jpg 896w, /images/content/w896px_h640px_2x--evean.jpg 1792w">
-    <source
-      media="(min-width: 520px)and (orientation: landscape)"
-      srcset="/images/content/w1022px_h520px--evean.jpg 1022w, /images/content/w1022px_h520px_2x--evean.jpg 2044w">
-    <source
-      media="(min-width: 320px) and (orientation: portrait)"
-      srcset="/images/content/w520px_h1022px--evean.jpg 520w, /images/content/w520px_h1022px_2x--evean.jpg 1040w">
-    <!--[if IE 9]></video><![endif]-->
-    <img class="cover__image" src="/images/content/w320px_h576px--evean.jpg" alt="">
+<section class="pod pod--serval pod--rhino cover isolation">
+  <picture>
+    <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
   </picture>
-  <div class="well testimonial__body">
-    <h3 class="well__title title title--section">Testimonial</h3>
-    <div class="well__body">
+  <div class="pod__seed seed">
+    <h3 class="seed__header title title--section leader--hero trailer">Testimonial</h3>
+    <blockquote class="quote lead leader"><p>Met oog en gevoel voor de mensen in je organisatie gaat Brickson altijd een stap verder.</p></blockquote>
+    <div class="seed__body leader trailer">
       <figure class="person bleed">
         <span class="person__picture gutters">
           <img src="/images/heads/marja_smits.jpg" class="person__image" width="56" height="56" style="background: Grey;"/>
@@ -2137,162 +2497,44 @@ markup:
           <small class="person__occupation">Manager Strategie en Marketing Evean</small>
         </figcaption>
       </figure>
-      <blockquote class="quote lead leader"><p>Met oog en gevoel voor de mensen in je organisatie gaat Brickson altijd een stap verder.</p></blockquote>
     </div>
-    <div class="well__footer  leader--hero">
-      <a class="button button--stretch button--inverse" href="javascript:void();">Case: Vereniging Eigen Huis</a>
+    <div class="seed__footer leader trailer">
+      <a class="button button--stretch" href="/cases/evean/#main">Case: Evean</a>
     </div>
-  </div>
-</div>
+    </div>
+</section>
 
 Styleguide 5.2
 */
-/*
- * 1. Make sure to cover up introduction on desktop
- */
-.testimonial {
-  width: 100%;
-  min-height: 100%;
-  min-height: 100vh; }
-  .testimonial .well {
-    float: left;
-    width: 100%;
-    min-height: 50%;
-    min-height: 50vh;
-    padding-left: 8.33333%;
-    padding-right: 8.33333%; }
-
-@media only screen and (orientation: landscape) {
-  .testimonial .well {
-    min-height: 100%;
-    min-height: 100vh; } }
-
-@media (orientation: portrait) and (min-width: 48em) {
-  .testimonial {
-    min-height: 50%;
-    min-height: 50vh; }
-    .testimonial .well {
-      width: 50%;
-      min-height: 100%;
-      min-height: 50vh; } }
-
-@media (orientation: landscape) and (min-width: 64em) {
-  .testimonial {
-    float: left;
-    width: 50%;
-    height: 100%;
-    height: 100vh; }
-    .testimonial .well {
-      width: 100%;
-      min-height: 50%;
-      min-height: 50vh; } }
-
-@media (orientation: landscape) and (min-width: 90em) {
-  .testimonial {
-    width: 66.66667%; }
-  .testimonial {
-    position: relative; }
-    .testimonial .well {
-      padding-left: 4.16667%;
-      padding-right: 4.16667%;
-      width: 50%;
-      min-height: 50%;
-      min-height: 50vh; }
-    .testimonial__body {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      background: #ffffff;
-      color: #445D87; }
-      .testimonial__body .button {
-        color: #445D87;
-        border-color: #445D87; } }
-
 /* 5.3 Introduction */
 /*
 Introduction
 
 markup:
-<div class="introduction">
-  <div class="well">
-    <h2 class="well__title title">Blijer, gezonder en welvarender</h2>
-    <p class="lead">Waar draait digitaal om? Slimme organisaties begrijpen mensen én techniek. Ze weten dat het digitale landschap het belangrijkste speelveld voor innovatie is. Maar bovenal weten ze wat hun klant van ze verwacht en gaat verwachten.</p>
+<section class="pod pod--baboon introduction">
+  <div class="pod__seed seed isolation">
+    <div class="seed__body">
+      <h2 class="title leader trailer">Blijer, gezonder en welvarender</h2>
+      <p class="leader trailer">Brickson is er voor ambitieuze merken in traditionele markten. Wij helpen ze om relevant te blijven en meer voor klanten te betekenen. Succesvolle merken kijken vooruit en stellen zich de vraag: hoe maak ik mijn klant blijer, gezonder en welvarender?</p>
+    </div>
   </div>
-  <div class="well tile cover">
-    <img
-      class="cover__image"
-      alt=""
-      src="/images/content/in-good-company--tablet.jpg"
-      srcset="
-        /images/content/in-good-company--tablet.jpg 640w,
-        /images/content/in-good-company--smartphone.jpg 480w,
-        /images/content/in-good-company--desktop.jpg 1024w">
-    <h3 class="well__title title title--section">In goed gezelschap</h3>
-    <figure class="tile__body leader-inside">
-      <img
-        class="introduction__cover image--stretch"
-        alt=""
-        src="/images/logos/brands.png"
-        srcset="
-          /images/logos/brands--2x.png 640w,
-          /images/logos/brands.png 480w,
-          /images/logos/brands--3x.png 1024w,
-          /images/logos/brands--3x.png 2x">
-    </figure>
+  <div class="pod__seed cover isolation">
+    <picture>
+      <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+    </picture>
+    {$modifiers}
   </div>
-</div>
+</section>
 
 
 Styleguide 5.3
 */
-/*
- * 1. Make sure to cover up introduction on desktop
- */
-.introduction {
-  overflow: hidden;
-  min-height: 100%;
-  min-height: 100vh; }
-  .introduction .well {
-    float: left;
-    width: 100%;
-    min-height: 50%;
-    min-height: 50vh;
-    padding-left: 8.33333%;
-    padding-right: 8.33333%; }
-
-@media only screen and (orientation: landscape) {
-  .introduction .well {
-    width: 50%;
-    min-height: 100%;
-    min-height: 100vh; } }
-
-@media (orientation: portrait) and (min-width: 48em) {
-  .introduction {
-    min-height: 50%;
-    min-height: 50vh; }
-    .introduction .well {
-      width: 50%;
-      min-height: 100%;
-      min-height: 50vh; } }
-
-@media (orientation: landscape) and (min-width: 64em) {
-  .introduction {
-    float: left;
-    width: 50%;
-    height: 100%;
-    height: 100vh; }
-    .introduction .well {
-      width: 100%;
-      min-height: 50%;
-      min-height: 50vh; } }
-
-@media (orientation: landscape) and (min-width: 90em) {
+@media only screen and (min-width: 90em) {
   .introduction {
     position: fixed;
     right: 0;
     top: 0;
-    z-index: -1;
-    width: 33.33333%; } }
+    z-index: 1; } }
 
 /* 5.4 Contact */
 /*
@@ -2331,81 +2573,10 @@ markup:
 
 Styleguide 5.4
 */
-.contact {
-  min-height: 100%;
-  min-height: 100vh; }
-  .contact .well {
-    float: left;
-    width: 100%;
-    min-height: 50%;
-    min-height: 50vh; }
-
-.contact .well {
-  padding-left: 8.33333%;
-  padding-right: 8.33333%; }
-  .contact .well__title {
-    margin-bottom: 12px; }
-
-@media (orientation: portrait) and (min-width: 20em) {
-  .contact .well {
-    min-height: auto;
-    max-height: auto;
-    height: auto; } }
-
-@media (orientation: landscape) and (min-width: 32.5em) {
-  .contact .well {
-    width: 50%;
-    min-height: 100%;
-    min-height: 100vh; }
-  .contact .well:first-child {
-    padding-right: 14px; }
-  .contact .well:last-child {
-    padding-left: 14px; } }
-
-@media (orientation: landscape) and (min-width: 48em) {
-  .contact {
-    width: 100%;
-    min-height: 50%;
-    min-height: 50vh; }
-    .contact .well:first-child,
-    .contact .well:last-child {
-      width: 50%;
-      min-height: auto;
-      max-height: auto;
-      height: auto;
-      padding-left: 8.33333%;
-      padding-right: 8.33333%; } }
-
-@media (orientation: portrait) and (min-width: 48em) {
-  .contact {
-    min-height: 50%;
-    min-height: 50vh;
-    max-height: auto; }
-    .contact .well {
-      width: 50%; } }
-
-@media (orientation: landscape) and (min-width: 64em) {
-  .contact {
-    float: left;
-    width: 50%;
-    height: 100%;
-    height: 100vh; }
-    .contact .well {
-      width: 100%;
-      min-height: auto;
-      max-height: auto;
-      height: auto; } }
-
 @media only screen and (min-width: 90em) {
   .contact {
-    float: left;
-    width: 33.33333%;
-    min-height: 50%;
-    min-height: 50vh; }
-    .contact .well {
-      width: 100%;
-      position: relative;
-      z-index: 1; } }
+    position: relative;
+    z-index: 1; } }
 
 /* 5.5 Catalog */
 /*
@@ -2413,86 +2584,115 @@ Contact
 
 Styleguide 5.5
 */
-.catalog {
-  min-height: 100%;
-  min-height: 100vh; }
-  .catalog .well {
-    float: left;
-    width: 100%;
-    min-height: 100%;
-    min-height: 100vh;
-    padding-left: 8.33333%;
-    padding-right: 8.33333%; }
-  .catalog .well__title {
-    margin-top: 72px; }
-  @media only screen and (min-width: 48em) {
-    .catalog .well {
-      width: 50%;
-      min-height: 50%;
-      min-height: 50vh; }
-      .catalog .well__title {
-        margin-top: 96px; }
-    .catalog .well .cover__image {
-      min-height: 50%;
-      min-height: 50vh;
-      max-height: 50%;
-      max-height: 50vh; }
-    .catalog .well:first-child {
-      position: static; }
-      .catalog .well:first-child,
-      .catalog .well:first-child .button {
-        color: #445D87; }
-      .catalog .well:first-child .button {
-        border-color: #445D87; }
-      .catalog .well:first-child .cover__image {
-        top: auto;
-        bottom: 0;
-        z-index: 1; }
-    .catalog .well:first-child .well__title {
-      visibility: visible; } }
-  @media only screen and (min-width: 64em) {
-    .catalog .well {
-      padding-left: 4.16667%;
-      padding-right: 4.16667%; }
-    .catalog .well__title {
-      margin-top: 96px; } }
-  @media (orientation: landscape) and (min-width: 90em) {
-    .catalog {
-      position: relative;
-      width: 66.66667%; }
-      .catalog .well {
-        padding-left: 4.16667%;
-        padding-right: 4.16667%; } }
-
-/* 5.6 Article */
+/* 5.6 Post */
 /*
 Article
 
+.post - Regular article
+.post.post--has-aside - Article with sidebar
+
+markup:
+<article class="{$modifiers}">
+  <sg-insert>5.9-2</sg-insert>
+  <div class="post__main isolation">
+    <div class="wings">
+      <sg-insert>4.4-1</sg-insert>
+      <h2>Lorem Ipsum Dolor Sit Amet</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+      <h2>Lorem Ipsum Dolor Sit Amet</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+      <h2>Lorem Ipsum Dolor Sit Amet</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+      <h2>Lorem Ipsum Dolor Sit Amet</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+      <h2>Lorem Ipsum Dolor Sit Amet</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+    </div>
+    <footer class="well seed wings leader--hero">
+      <h3 class="seed__title title--section leader trailer"><strong>Het resultaat</strong></h3>
+      <div class="seed__body leader trailer">
+        <h2>Lorem Ipsum Dolor Sit Amet</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+      </div>
+    </footer>
+  </div>
+  <aside class="post__aside well well--stork isolation seed">
+    <section class="leader trailer wings seed__body">
+      <sg-insert>3.18-2</sg-insert>
+      <sg-insert>3.18-2</sg-insert>
+    </section>
+    <section class="leader--giant trailer wings seed__footer">
+      <h3 class="title title--section leader">Over Brickson</h3>
+      <p class="body--whisper leader--tiny trailer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus, dapibus rutrum ipsum gravida et. Integer lectus nisi, facilisis sit amet eleifend nec, pharetra ut augue. Integer quam nunc, consequat nec egestas ac, volutpat ac nisi. Sed consectetur dignissim dignissim. Donec pretium est site.</p>
+    </section>
+  </aside>
+</article>
+
 Styleguide 5.6
 */
-.article {
-  min-height: 100%;
-  min-height: 100vh; }
-  .article__body {
-    padding-left: 8.33333%;
-    padding-right: 8.33333%; }
-
-@media (orientation: landscape) and (min-width: 48em) {
-  .article__body {
-    padding-left: 8.33333%;
-    padding-right: 8.33333%; } }
-
-@media (orientation: landscape) and (min-width: 90em) {
-  .article {
-    position: relative;
-    width: 66.66667%;
-    background: #ffffff; }
-    .article__body {
-      padding-left: 12.5%;
-      padding-right: 12.5%; }
-    .article .grid {
-      position: relative;
-      z-index: 1; } }
+.post {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; }
+  .post__header {
+    flex: 1 0 100%;
+    width: 100%; }
+  .post__title,
+  .post__main h2 {
+    font-size: 1.5em;
+    line-height: 1; }
+  .post__title,
+  .post__main h2,
+  .post__main p {
+    margin: 24px 0; }
+  @media only screen and (min-width: 64em) {
+    .post {
+      flex-direction: row; }
+      .post__main, .post__aside {
+        float: left; }
+      .post__main {
+        width: 66.66667%; }
+      .post .wings {
+        padding-left: 16.66667%;
+        padding-right: 16.66667%; }
+      .post__header .wings {
+        padding-left: 11.11111%;
+        padding-right: 11.11111%; }
+      .post__title {
+        font-size: 3em;
+        line-height: 1.16667; }
+      .post__lead {
+        font-size: 1.125em;
+        line-height: 1.77778; }
+      .post__aside {
+        width: 33.33333%; }
+        .post__aside .wings {
+          padding-left: 8.33333%;
+          padding-right: 8.33333%; }
+      .post__title, .post__lead {
+        padding-right: 13.33333%; } }
+  @media only screen and (min-width: 90em) {
+    .post__title {
+      font-size: 3.875em;
+      line-height: 1.16129; }
+    .post__lead {
+      font-size: 1.25em;
+      line-height: 1.6; }
+    .post__main h2 {
+      font-size: 2em;
+      line-height: 1.5;
+      margin: 48px 0 24px 0; }
+    .post__main p {
+      font-size: 1.125em;
+      line-height: 1.55556; }
+    .post .wings {
+      padding-left: 16.66667%;
+      padding-right: 16.66667%; }
+    .post__header .wings {
+      padding-left: 11.11111%;
+      padding-right: 33.33333%; }
+    .post__title, .post__lead {
+      padding-right: 6.66667%; } }
 
 /* 5.7 Navigation */
 /*
@@ -2545,101 +2745,151 @@ Styleguide 5.7
       padding: 16px 2.77778%;
       right: 66.66667%; } }
 
-/* 5.8 Hero */
+/* 5.8 Invitation */
 /*
-Hero
-
-.hero - Hero
+Invitation
 
 markup:
-<article class="cover">
-  <picture class="cover__image">
-    <!--[if IE 9]><video style="display: none;"><![endif]-->
-    <source media="(min-width: 1680px) and (orientation: landscape)" srcset="/images/content/w1680px_h1050px--hero.jpg 1680w, /images/content/w1680px_h1050px_2x--hero.jpg 3360w">
-    <source media="(min-width: 1280px) and (orientation: landscape)" srcset="/images/content/w1280px_h800px--hero.jpg 1280w, /images/content/w1280px_h800px_2x--hero.jpg 2560w">
-    <source media="(min-width: 480px) and (orientation: landscape)" srcset="/images/content/w667px_h375px--hero.jpg 667w, /images/content/w667px_h375px_2x--hero.jpg 1334w">
-    <source media="(min-width: 768px) and (orientation: portrait)" srcset="/images/content/w800px_h1280px--hero.jpg 768w, /images/content/w800px_h1280px_2x--hero.jpg 1600w">
-    <source media="(min-width: 320px) and (orientation: portrait)" srcset="/images/content/w375px_h667px--hero.jpg 320w, /images/content/w375px_h667px_2x--hero.jpg 750w">
-    <!--[if IE 9]></video><![endif]-->
-    <img class="cover__image" src="/images/content/w1280px_h800px--hero.jpg" alt="">
-  </picture>
-  <div class="hero">
-    <header class="hero__header brand brand--inverse">
-      <h1>Brickson • Amsterdam – Den Bosch</h1>
-    </header>
-    <section class="hero__body">
-      <p><strong>Vooruit met digitaal</strong></p>
-      <p>Brickson is er voor organisaties die de volgende stap in digitaal willen maken. Met een strategie, digitaal concept, website of een applicatie.</p>
-    </section>
+<section class="pod pod--zebra pod--rhino invitation isolation">
+  <div class="pod__seed">
+    <ol class="menu leader trailer seed__header list--reset fx bleed" id="menu">
+      <li><a class="menu__item anchor--shy fx" href="javascript:void();">Over Brickson</a></li>
+      <li><a class="menu__item anchor--shy fx is-active" href="javascript:void();">Cases</a></li>
+      <li><a class="menu__item anchor--shy fx" href="javascript:void();">Werken bij Brickson</a></li>
+    </ol>
+    <div class="seed__body">
+      <h2 class="title leader trailer">Wat is jouw volgende stap?</h2>
+      <p class="leader trailer">Werken met Brickson betekent samen ontdekken, bedenken, ontwerpen of bouwen. We lossen complexe problemen op en werken op project-, consultancy- of interimbasis.</p>
+    </div>
+    <p class="seed__footer leader trailer"><a class="button button--stretch" href="mailto:experts@brickson.nl?subject='Vooruit%20met%20Brickson'">Wil je meer weten? Neem contact op!</a></p>
   </div>
-</article>
+  <ul class="pod__seed grid">
+    <li class="grid__cell cover isolation tile">
+      <picture>
+        <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+      </picture>
+      <p><strong class="meta meta--inverse meta--hero">Ontdekken</strong></p>
+      <p><strong class="title--inverse title title--section">Analyse &amp; Challenge</strong></p>
+    </li>
+    <li class="grid__cell cover isolation tile">
+      <picture>
+        <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+      </picture>
+      <p><strong class="title--inverse title--meta">Ontdekken</strong></p>
+      <p><strong class="title--inverse title title--section">Analyse &amp; Challenge</strong></p>
+    </li>
+    <li class="grid__cell cover isolation tile">
+      <picture>
+        <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+      </picture>
+      <p><strong class="title--inverse title--meta">Ontdekken</strong></p>
+      <p><strong class="title--inverse title title--section">Analyse &amp; Challenge</strong></p>
+    </li>
+    <li class="grid__cell cover isolation tile">
+      <picture>
+        <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+      </picture>
+      <p><strong class="title--inverse title--meta">Ontdekken</strong></p>
+      <p><strong class="title--inverse title title--section">Analyse &amp; Challenge</strong></p>
+    </li>
+  </ul>
+</section>
 
 Styleguide 5.8
 */
+@media only screen and (min-width: 48em) and (max-aspect-ratio: 6 / 5) {
+  .invitation .grid__cell {
+    height: 25vh; } }
+
+/* 5.9 Hero */
+/*
+Hero
+
+.hero - Regular header
+.hero.hero--navbar - Added padding to allow for positioning of navbar
+
+markup:
+<header class="{$modifiers} seed pod pod--hippo cover isolation">
+  <picture>
+    <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+  </picture>
+  <div class="hero__header seed__header">
+    <img src="../images/logos/veh--l.png" alt="Brickson • Amsterdam – Den Bosch">
+  </div>
+  <div class="hero__body seed__body">
+    <h1 class="post__title title--inverse leader trailer">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit</h1>
+    <p class="post__lead body--inverse leader trailer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+  </div>
+</header>
+
+Styleguide 5.9
+*/
 .hero {
-  width: 100%;
-  min-height: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  line-height: 1.5;
-  font-size: 1.25em; }
-  .hero__title {
-    font-size: 1.2em; }
-  .hero__header, .hero__body {
-    padding: 12px 8.33333%;
-    flex: 1 1;
-    flex-grow: 1;
+  max-width: 100%; }
+  .hero--navbar {
+    padding-top: 80px; }
+  .hero__header, .hero__body, .hero__footer {
+    padding: 0 14px; }
+  .hero__body {
     display: flex;
     flex-direction: column;
     justify-content: center; }
-  .hero__header, .hero__body {
-    padding: 12px 8.33333% 12px 8.33333%; }
-  .hero__header, .hero__body {
-    justify-content: center; }
-  .hero__body {
-    padding-right: 0; }
-  @media only screen and (orientation: landscape) {
-    .hero__header {
-      width: 50%;
-      padding: 12px 8.33333%;
-      justify-content: flex-end; }
-    .hero__body {
-      padding: 12px 8.33333%;
-      justify-content: flex-start; } }
+  .hero__header {
+    text-align: right; }
+  @media only screen and (min-width: 32.5em) {
+    .hero__header, .hero__body, .hero__footer {
+      padding: 0 8.33333%; } }
   @media only screen and (min-width: 48em) {
-    .hero {
-      font-size: 1.5em; }
-      .hero__title {
-        font-size: 1.22222em; }
-      .hero__header, .hero__body {
-        padding: 24px 20.83333%; }
-      .hero__body {
-        padding-right: 16.66667%; } }
+    .hero__header, .hero__body, .hero__footer {
+      padding: 0 4.16667%; } }
   @media only screen and (min-width: 64em) {
-    .hero .title {
-      margin-bottom: .5em; } }
-  @media (orientation: landscape) and (min-width: 64em) {
-    .hero__header img {
-      width: auto;
-      max-height: 30vh;
-      max-width: 100%; } }
-  @media (orientation: landscape) and (min-width: 48em) {
-    .hero__header, .hero__body {
-      padding-left: 8.33333%; }
+    .hero--navbar {
+      padding-top: 120px; }
+    .hero__body, .hero__footer {
+      padding: 0 8.33333%; } }
+  @media only screen and (min-width: 90em) {
     .hero__header {
-      padding-right: 8.33333%;
-      justify-content: center; }
-    .hero__body {
-      width: 50%;
-      padding-right: 4.16667%;
-      flex-grow: 1; } }
-  @media (orientation: landscape) and (min-width: 90em) {
-    .hero__header, .hero__body {
-      padding-left: 12.5%; }
-    .hero__header {
-      padding-right: 12.5%;
-      justify-content: flex-end; } }
+      padding: 0 5.55556%; }
+    .hero__body, .hero__footer {
+      padding: 0 16.66667%; } }
+
+/* 5.10 Navigation Bar */
+/*
+Navigation Bar
+
+.navbar - Navigation bar
+
+markup:
+<nav class="{$modifiers}">
+  <sg-insert>4.5-1</sg-insert>
+</nav>
+
+Styleguide 5.10
+*/
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 8px 14px;
+  background: #ffffff;
+  background: rgba(255, 255, 255, 0.8); }
+  @media only screen and (min-width: 32.5em) {
+    .navbar {
+      padding-left: 8.33333%;
+      padding-right: 8.33333%; } }
+  @media only screen and (min-width: 48em) {
+    .navbar {
+      padding-left: 4.16667%;
+      padding-right: 4.16667%; } }
+  @media only screen and (min-width: 64em) {
+    .navbar {
+      padding: 16px 4.16667%; } }
+  @media only screen and (min-width: 90em) {
+    .navbar {
+      padding-left: 5.55556%;
+      padding-right: 5.55556%; } }
 
 /* 6. */
 /*
@@ -2657,230 +2907,144 @@ Styleguide 7.0
 /*
 Landingpage
 
+markup:
+<div class="is-root">
+<sg-insert>5.1</sg-insert>
+<sg-insert>5.8</sg-insert>
+<sg-insert>5.2</sg-insert>
+<sg-insert>5.3</sg-insert>
+</div>
+
 Styleguide 7.1
 */
-/*
- * 1. Make sure to cover up introduction on desktop
- */
-.p-landingpage .panel {
-  position: relative; }
-
-.p-landingpage .handshake,
-.p-landingpage .invitation,
-.p-landingpage .tools {
-  min-height: 100%;
-  min-height: 100vh; }
-  .p-landingpage .handshake .well,
-  .p-landingpage .invitation .well,
-  .p-landingpage .tools .well {
-    float: left;
-    width: 100%;
-    min-height: 50%;
-    min-height: 50vh; }
-
-.p-landingpage .invitation .shops {
-  line-height: 1; }
-
-.p-landingpage .handshake .well,
-.p-landingpage .invitation .well,
-.p-landingpage .tools .well {
-  padding-left: 8.33333%;
-  padding-right: 8.33333%; }
-
-.p-landingpage .shops,
-.p-landingpage .offices {
-  padding: 0 !important; }
-
-.p-landingpage .shops .title--meta {
-  font-size: 1.16667em;
-  line-height: 1.14286; }
-
-.p-landingpage .offices {
-  text-align: center; }
-
-.p-landingpage .tools .well {
-  min-height: 0; }
-
-.p-landingpage .tools__header .well__title {
-  margin-bottom: 0; }
-
-@media only screen and (orientation: landscape) {
-  .p-landingpage .handshake .well,
-  .p-landingpage .invitation .well {
-    width: 50%;
-    min-height: 100%;
-    min-height: 100vh; }
-  .p-landingpage .tools {
-    clear: both;
-    width: 100%;
-    min-height: 100%;
-    min-height: 100vh; }
-  .p-landingpage .offices .grid__cell.tile,
-  .p-landingpage .shops .grid__cell.tile {
-    min-height: 50%;
-    min-height: 50vh;
-    max-height: 50%;
-    max-height: 50vh; } }
-
-@media (orientation: portrait) and (min-width: 48em) {
-  .p-landingpage .handshake,
-  .p-landingpage .invitation {
-    min-height: 50%;
-    min-height: 50vh; }
-    .p-landingpage .handshake .well,
-    .p-landingpage .invitation .well {
-      width: 50%;
-      min-height: 100%;
-      min-height: 50vh; }
-  .p-landingpage .handshake .well {
-    min-height: 50%;
-    min-height: 25vh;
-    clear: both; }
-  .p-landingpage .offices .brand {
-    margin: 12pt 0; } }
-
-@media only screen and (min-width: 64em) {
-  .p-landingpage .offices .grid__cell.tile,
-  .p-landingpage .shops .grid__cell.tile {
-    min-height: 50%;
-    min-height: 25vh;
-    max-height: 50%;
-    max-height: 25vh; } }
-
-@media (orientation: landscape) and (min-width: 64em) {
-  .p-landingpage .handshake,
-  .p-landingpage .invitation {
-    float: left;
-    width: 50%;
-    height: 100%;
-    height: 100vh; }
-    .p-landingpage .handshake .well,
-    .p-landingpage .invitation .well {
-      width: 100%;
-      min-height: 50%;
-      min-height: 50vh; } }
-
-@media (orientation: landscape) and (min-width: 90em) {
-  .p-landingpage .handshake,
-  .p-landingpage .invitation {
-    width: 66.66667%; }
-  .p-landingpage .handshake .well,
-  .p-landingpage .invitation .well,
-  .p-landingpage .tools .well {
-    padding-left: 4.16667%;
-    padding-right: 4.16667%; }
-  .p-landingpage .handshake,
-  .p-landingpage .invitation {
-    min-height: 50%;
-    min-height: 50vh;
-    height: 50%;
-    height: 50vh; }
-  .p-landingpage .handshake .well {
-    width: 50%;
-    min-height: 50%;
-    min-height: 25vh;
-    clear: both; }
-  .p-landingpage .invitation .well {
-    width: 50%; }
-  .p-landingpage .tools {
-    background-color: #FFF;
-    /* 1 */
-    position: relative;
-    z-index: 1; }
-  .p-landingpage .offices {
-    font-size: 1.2em; }
-  .p-landingpage .tools .well {
-    min-height: 100%;
-    min-height: 100vh;
-    height: 100%;
-    height: 100vh;
-    width: 50%;
-    overflow-y: scroll; }
-  .p-landingpage .tools__header {
-    color: #ffffff;
-    position: relative; }
-    .p-landingpage .tools__header:before {
-      display: block;
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 14px;
-      background: #505263 url("/images/content/tools--desktop.jpg") no-repeat center;
-      background-size: cover; }
-    .p-landingpage .tools__header .well__title {
-      position: relative;
-      top: 1; }
-  .p-landingpage .tools__body {
-    padding: 0 !important; } }
-
 /* 7.2 Case */
 /*
 Case
 
+markup:
+<sg-insert>5.10-2</sg-insert>
+<sg-insert>5.6-1</sg-insert>
+
 Styleguide 7.2
 */
-.p-case .is-anchor {
-  position: absolute;
-  top: 200%; }
+/* 7.3 Cases */
+/*
+Cases
 
-@media only screen and (min-width: 48em) {
-  .p-case .is-anchor {
-    position: static; } }
+markup:
+<sg-insert>5.10-2</sg-insert>
+<sg-insert>5.9-2</sg-insert>
+<section class="layout">
+  <aside class="layout__cell well well--ostrich isolation wings seed is-gt-medium-desktop">
+    <div class="seed__body">
+      <sg-insert>3.18-2</sg-insert>
+    </div>
+    <div class="seed__footer">
+      <h3 class="title title--section leader">Over Brickson</h3>
+      <p class="body--whisper leader--tiny trailer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus, dapibus rutrum ipsum gravida et. Integer lectus nisi, facilisis sit amet eleifend nec, pharetra ut augue. Integer quam nunc, consequat nec egestas ac, volutpat ac nisi. Sed consectetur dignissim dignissim. Donec pretium est site.</p>
+    </div>
+  </aside>
+  <div class="layout__cell layout__cell--main">
+    <article class="pod--leopard isolation">
+      <div class="pod__seed seed cover">
+        <picture>
+          <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+        </picture>
+        <div class="seed__header leader-inside trailer-inside">
+          <img align="right" src="../images/logos/veh.png" alt="Vereniging Eigen Huis" width="112" height="25">
+        </div>
+        <div class="seed__footer">
+          <small class="title title--section leader-inside trailer-inside body--inverse">Case</small>
+        </div>
+      </div>
+      <div class="pod__seed seed">
+        <div class="seed__body">
+          <h2 class="title title--body leader trailer">Lorem Ipsum Dolor Sit Amet</h2>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+        </div>
+        <p class="seed__footer leader trailer"><a class="anchor--shy body--meta body--whisper" href="javascript:void();"><b>Lees verder</b></a></p>
+      </div>
+    </article>
+    <article class="pod--leopard isolation">
+      <div class="pod__seed cover">
+        <picture>
+          <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+        </picture>
+        <div class="seed__header leader-inside trailer-inside">
+          <img align="right" src="../images/logos/veh.png" alt="Vereniging Eigen Huis" width="112" height="25">
+        </div>
+        <div class="seed__footer">
+          <small class="title title--section leader-inside trailer-inside body--inverse">Case</small>
+        </div>
+      </div>
+      <div class="pod__seed seed">
+        <div class="seed__body">
+          <h2 class="title title--body leader trailer">Lorem Ipsum Dolor Sit Amet</h2>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+        </div>
+        <p class="seed__footer leader trailer"><a class="anchor--shy body--meta body--whisper" href="javascript:void();"><b>Lees verder</b></a></p>
+      </div>
+    </article>
+    <article class="pod--leopard isolation">
+      <div class="pod__seed cover">
+        <picture>
+          <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+        </picture>
+        <div class="seed__header leader-inside trailer-inside">
+          <img align="right" src="../images/logos/veh.png" alt="Vereniging Eigen Huis" width="112" height="25">
+        </div>
+        <div class="seed__footer">
+          <small class="title title--section leader-inside trailer-inside body--inverse">Case</small>
+        </div>
+      </div>
+      <div class="pod__seed seed">
+        <div class="seed__body">
+          <h2 class="title title--body leader trailer">Lorem Ipsum Dolor Sit Amet</h2>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+        </div>
+        <p class="seed__footer leader trailer"><a class="anchor--shy body--meta body--whisper" href="javascript:void();"><b>Lees verder</b></a></p>
+      </div>
+    </article>
+    <article class="pod--leopard isolation">
+      <div class="pod__seed cover">
+        <picture>
+          <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+        </picture>
+        <div class="seed__header leader-inside trailer-inside">
+          <img align="right" src="../images/logos/veh.png" alt="Vereniging Eigen Huis" width="112" height="25">
+        </div>
+        <div class="seed__footer">
+          <small class="title title--section leader-inside trailer-inside body--inverse">Case</small>
+        </div>
+      </div>
+      <div class="pod__seed seed">
+        <div class="seed__body">
+          <h2 class="title title--body leader trailer">Lorem Ipsum Dolor Sit Amet</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+        </div>
+        <p class="seed__footer leader trailer"><a class="anchor--shy body--meta body--whisper" href="javascript:void();"><b>Lees verder</b></a></p>
+      </div>
+    </article>
+  </div>
+</section>
 
-@media (max-width: 89.9375em) and (min-width: 48em) {
-  .p-case .testimonial {
-    width: 100%;
-    min-height: 50%;
-    min-height: 50vh;
-    max-height: auto;
-    max-height: auto;
-    height: auto; }
-    .p-case .testimonial .well {
-      height: auto;
-      min-height: auto;
-      max-height: auto;
-      width: 100%;
-      padding-left: 8.33333%;
-      padding-right: 8.33333%; } }
-
-@media (max-width: 89.9375em) and (min-width: 64em) {
-  .p-case .testimonial .well {
-    width: 50%;
-    padding-left: 4.16667%;
-    padding-right: 4.16667%; } }
-
+Styleguide 7.3
+*/
 /* 8. */
-@media only screen and (max-width: 47.9375em) {
-  .headline .posting__intro {
-    position: absolute;
-    left: -999em; } }
+.pod__seed.grid {
+  padding: 0; }
 
-@media only screen and (min-width: 32.5em) {
-  .posting--hero.layout {
-    flex-direction: row; }
-  .layout__cell .grid--channels .grid__cell {
-    flex-basis: 50%; } }
+/*
+ * brrrrrrrrrr
+ */
+.sg-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0; }
 
-@media only screen and (min-width: 48em) {
-  .layout__cell .grid--channels .grid__cell {
-    flex-basis: 25%; } }
-
-@media only screen and (min-width: 64em) {
-  .layout__cell .grid--channels .grid__cell {
-    flex-basis: 50%; }
-  .layout > .layout__cell {
-    padding-right: 14px; }
-  .layout > .layout__cell--divider {
-    padding-right: 28px; }
-  .wings > .gutters {
-    padding-right: 0; }
-  .layout__cell--aside .posting {
-    max-width: 290px;
-    max-width: calc( 50% - 2*$gutter-width);
-    float: left; } }
-
-@media only screen and (min-width: 90em) {
-  .headline.wings {
-    padding-left: 11.11111%; } }
+.debug {
+  background: Grey; }

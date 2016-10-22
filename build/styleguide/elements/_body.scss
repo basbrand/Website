@@ -11,12 +11,7 @@ markup:
 Styleguide 3.1
 */
 
-%meta-text {
-  font-family: $font-family--meta;
-  text-transform: uppercase;
-  font-weight: $font-weight--meta;
-  letter-spacing: .3em;
-}
+
 
 .body {
   &--whisper {
@@ -26,40 +21,4 @@ Styleguide 3.1
   &--inverse {
     color: $white;
   }
-  &--meta,
-  &--number,
-  &--email {
-    @extend %meta-text;
-  }
-  &--number,
-  &--email {
-    letter-spacing: 0;
-    font-weight: 600;
-  }
-  &--number {
-    font-size: to-unit(14px);
-    line-height: to-unit(rhythm(6), 1, 14px);
-  }
-  &--email {
-      font-size: to-unit(12px);
-      line-height: to-unit(rhythm(2), 1, 12px);
-  }
-  @include breakpoint($lt-large-handheld) {
-    &--email {
-      font-size: to-unit(10px);
-      line-height: to-unit(rhythm(2), 1, 10px);
-    }
-  }
-  // @include breakpoint($gt-medium-desktop) {
-  //   $reset-font-size: px(16px, 1%, $base-font-size);
-  //   $reset-line-height: px( rhythm(5), 1%, 16px);
-  //   &--meta,
-  //   &--whisper {
-  //     font-size: to-unit(10px, 1em, 16px);
-  //     line-height: line-height(10px, 1.3);
-  //   }
-  //   &--number {
-  //     font-size: 1.2em;
-  //   }
-  // }
 }

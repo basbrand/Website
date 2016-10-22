@@ -3,29 +3,33 @@ a.pseudo-class-hover {
   outline: 0;
 }
 
-a.pseudo-class-active,
-.anchor.pseudo-class-active {
+.button.pseudo-class-visited {
+  text-transform: uppercase;
+}
+
+.anchor.pseudo-class-active,
+a.pseudo-class-active {
   color: #57B0B6;
 }
 
-a.pseudo-class-visited .is-heir.pseudo-class-visited,
-a.pseudo-class-visited .is-heir,
+.anchor.pseudo-class-visited .is-heir,
 .anchor.pseudo-class-visited .is-heir.pseudo-class-visited,
-.anchor.pseudo-class-visited .is-heir {
+a.pseudo-class-visited .is-heir,
+a.pseudo-class-visited .is-heir.pseudo-class-visited {
   color: inherit;
 }
 
-a.pseudo-class-hover,
-a .is-heir.pseudo-class-hover,
-a.pseudo-class-hover .is-heir,
-.anchor.pseudo-class-hover,
 .anchor .is-heir.pseudo-class-hover,
-.anchor.pseudo-class-hover .is-heir {
+.anchor.pseudo-class-hover,
+.anchor.pseudo-class-hover .is-heir,
+a .is-heir.pseudo-class-hover,
+a.pseudo-class-hover,
+a.pseudo-class-hover .is-heir {
   color: #57B0B6;
 }
 
-a--inverse.pseudo-class-hover,
-.anchor--inverse.pseudo-class-hover {
+.anchor--inverse.pseudo-class-hover,
+a--inverse.pseudo-class-hover {
   color: #37383C;
 }
 
@@ -33,12 +37,11 @@ a--inverse.pseudo-class-hover,
   display: inline-block;
   padding: 8px 16px;
   border: 1px solid;
-  background: transparent;
+  background: 0 0;
   color: #445D87;
-  font: 600 8pt/8pt Arial, Helvetica, sans-serif;
+  font: 600 8pt/8pt Arial,Helvetica,sans-serif;
   text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
+  letter-spacing: .25em;
   outline: 0;
 }
 
@@ -51,15 +54,13 @@ a--inverse.pseudo-class-hover,
 }
 
 .fld.pseudo-class-focus {
-  outline: 1px solid #ddeff0;
+  outline: #ddeff0 solid 1px;
   background: #ddeff0;
 }
 
 .well .fld.pseudo-class-focus {
-  outline-color: #ffffff;
-  outline-color: white;
-  background: #ffffff;
-  background: white;
+  outline-color: #fff;
+  background: #fff;
 }
 
 .menu__home.pseudo-class-hover {

@@ -18,7 +18,23 @@ markup:
 Styleguide 5.1
 */
 
-
 .handshake {
-  
+  .tile {
+    min-height: 50%;
+    min-height: 50vh;
+  }
+  img {
+    max-height: rhythm(34);
+  }
+  h1 {
+    text-align: center;
+  }
+  @include breakpoint("(min-aspect-ratio: 6/5)") {
+    .tile {
+      padding-right: 50%;
+    }
+    h1 {
+      text-align: left;
+    }
+  }
 }

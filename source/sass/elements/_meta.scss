@@ -1,0 +1,51 @@
+/*
+Meta
+
+.meta - Labels, etc
+.meta.meta--tiny - Smaller
+.meta.meta--whisper - Smaller
+.meta.meta--hero - Larger
+
+markup:
+<span class="{$modifiers}">Babs Gösgens</span>
+
+Styleguide 3.8
+*/
+
+.meta {
+  font: normal 600 #{to-unit(12px)}/#{to-unit(rhythm(3),1,12px)} $font-family--meta;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  &--inverse {
+    font-weight: 300;
+    color: $white;
+  }
+  &--tiny,
+  &--whisper {
+    font-size: to-unit(10px);
+    line-height: to-unit(rhythm(3),1,10px);
+    letter-spacing: .3em;
+  }
+  &--hero {
+    font-size: to-unit(16px);
+    line-height: to-unit(rhythm(4),1,16px);
+    font-weight: 600;
+    // letter-spacing: .15em;
+  }
+}
+
+/*
+Meta Inverse
+
+.meta.meta--inverse - White on dark bakgrounds
+
+markup:
+<span class="{$modifiers}">Babs Gösgens</span>
+
+sg-wrapper:
+<div class="well gutters">
+<sg-wrapper-content/>
+</div>
+
+Styleguide 3.8.1
+*/

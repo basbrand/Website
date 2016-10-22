@@ -29,7 +29,7 @@ Styleguide 2.7
 .grid {
   display: flex;
   flex-wrap: wrap;
-  // flex-direction: row;
+  flex-direction: row;
   // height: 100%;
   &:after {
     /* 1. */
@@ -38,10 +38,13 @@ Styleguide 2.7
     clear:both;
   }
   &__cell {
+    flex: 1 1 50%;
     float: left;
+    min-width: 50%;
     width: 50%;
-    height: 50%;
-    height: 50vh;
+    min-height: 50%;
+    flex-basis: 50%;
+    // height: 50vh;
   }
   /* Need breakpoint for wide and narrow viewports */
   @include breakpoint($gt-small-desktop,"(max-aspect-ratio: 2/1)") {

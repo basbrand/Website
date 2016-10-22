@@ -5,16 +5,19 @@ Tile
 .tile - Centered content
 
 markup:
-<article class="{$modifiers} seed cover isolation">
-  <picture>
-    <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
-  </picture>
-  <div class="seed__header">
-  </div>
-  <div class="seed__footer">
-  CASE
-  </div>
-</article>
+<div class="grid__cell cover isolation tile">
+  <img
+    class="cover__image"
+    alt=""
+    src="/images/content/design--tile--smartphone.jpg"
+    srcset="
+      /images/content/design--tile--tablet--2x.jpg 1040w,
+      /images/content/design--tile--tablet.jpg 320w,
+      /images/content/design--tile--smartphone.jpg 240w,
+      /images/content/design--tile--smartphone--2x.jpg 2x">
+  <p class="tile"><strong class="meta meta--inverse meta--hero">Ontwerpen</strong></p>
+  <p class="tile"><strong class="meta meta--inverse">User Interface & Experience Design</strong></p>
+</div>
 
 Styleguide 4.2
 */
@@ -26,49 +29,12 @@ Styleguide 4.2
 .tile {
 
   display: flex;
-justify-content: center;
-flex-direction: column;
-text-align: center;
-
-
-  position: relative;
-  // display: table-cell; /* 1 */
-  // vertical-align: middle; /* 1 */
-  // box-shadow: inset 1px 1px 0 $white, inset -1px -1px 0 $white;
-  &__body {
-    // width: 100%;
-    position: absolute; /* 1 */
-    top: 50%; /* 1 */
-    left: 0;
-    right: 0;
-    transform: translateY(-50%); /* 1 */
-    // padding: inherit;
+  justify-content: center;
+  flex-direction: column;
+  &--focus {
+    text-align: center;
   }
-  &--shop &__body {
-    text-align: center; /* 1 */
+  &--justify & {
+    min-height: 100%;
   }
-  &--top {
-    vertical-align: top;
-  }
-  &--gutters {
-    @include gutters;
-  }
-  &__header,
-  &__footer {
-    // position: absolute;
-    // left: 0;
-    // right: 0;
-  }
-  &__header {
-    // top: 0;
-  }
-  &__footer {
-    // bottom: 0;
-  }
-  &--gutters &__header,
-  &--gutters &__footer {
-    left: .5 * $gutter-width;
-    right: .5 * $gutter-width;
-  }
-
 }

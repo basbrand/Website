@@ -2,8 +2,8 @@
 Invitation
 
 markup:
-<section class="pod pod--zebra pod--rhino invitation cover isolation">
-  <div class="pod__seed seed">
+<section class="pod pod--zebra pod--rhino invitation isolation">
+  <div class="pod__seed">
     <ol class="menu leader trailer seed__header list--reset fx bleed" id="menu">
       <li><a class="menu__item anchor--shy fx" href="javascript:void();">Over Brickson</a></li>
       <li><a class="menu__item anchor--shy fx is-active" href="javascript:void();">Cases</a></li>
@@ -20,7 +20,7 @@ markup:
       <picture>
         <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
       </picture>
-      <p><strong class="title--inverse title--meta">Ontdekken</strong></p>
+      <p><strong class="meta meta--inverse meta--hero">Ontdekken</strong></p>
       <p><strong class="title--inverse title title--section">Analyse &amp; Challenge</strong></p>
     </li>
     <li class="grid__cell cover isolation tile">

@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Archivo Black';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Archivo Black Regular'),local('ArchivoBlack-Regular'),url(https://fonts.gstatic.com/s/archivoblack/v4/WoAoVT7K3k7hHfxKbvB6B0FBUwxZoPEX5aisj8qBSHE.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Archivo Narrow';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Archivo Narrow Regular'),local('ArchivoNarrow-Regular'),url(https://fonts.gstatic.com/s/archivonarrow/v5/DsLzC9scoPnrGiwYYMQXpkpeNX8RPf6i6WQfJWyCWEs.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: Lora;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lora'),local('Lora-Regular'),url(https://fonts.gstatic.com/s/lora/v9/4A-myfZX6oDr9CtSTkTGig.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: Lora;
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lora Italic'),local('Lora-Italic'),url(https://fonts.gstatic.com/s/lora/v9/DeoOq1kX9ExfArSHppos_g.ttf) format('truetype');
+}
