@@ -12,7 +12,7 @@ Styleguide 2.0.1
 
 $debug-layout: false;
 $debug-rhythm: false;
-$debug-breakpoint: true;
+$debug-breakpoint: false;
 
 @if $debug-breakpoint {
   html:after,

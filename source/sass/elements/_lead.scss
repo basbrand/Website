@@ -10,6 +10,8 @@ Styleguide 3.2
 */
 
 .lead {
+  font-size: to-unit(18px);
+  line-height: to-unit(rhythm(8), 1, 18px);
   // font-size: to-unit(16px, 12px);
   // line-height: to-unit(rhythm(7), 1, 16px);
   // // margin: rhythm(10) 0;

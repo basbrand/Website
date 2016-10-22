@@ -47,7 +47,6 @@ Styleguide 4.5
   &__item {
     width: 100%;
     padding: rhythm(4) gutter();
-    // font: normal bold #{to-unit(10px)}/#{to-unit(rhythm(8), 1, 10px)} $font-family--meta;
     &:hover,
     &.is-active {
       color: $color-body;

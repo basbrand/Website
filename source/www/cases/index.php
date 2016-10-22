@@ -15,23 +15,51 @@
       </ol>
     </nav>
     <header class="hero hero--navbar seed pod pod--hippo cover isolation">
-      <picture>
-        <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+      <picture class="cover__image">
+        <!--[if IE 9]><video style="display: none;"><![endif]-->
+        <source
+          media="<?php echo $gt_medium_handheld; ?> and <?php echo $landscape; ?>"
+          srcset="/images/content/w1022px_h520px--eigenhuis.jpg 1022w, /images/content/w1022px_h520px_2x--eigenhuis.jpg 2044w">
+        <source
+          media="<?php echo $gt_small_handheld; ?> and <?php echo $portrait; ?>"
+          srcset="/images/content/w520px_h1022px--eigenhuis.jpg 520w, /images/content/w520px_h1022px_2x--eigenhuis.jpg 1040w">
+        <!--[if IE 9]></video><![endif]-->
+        <img class="cover__image" src="/images/content/w320px_h576px--eigenhuis.jpg" alt="">
       </picture>
       <div class="hero__header seed__header">
         <img src="../images/logos/veh--l.png" alt="Brickson • Amsterdam – Den Bosch">
       </div>
-      <div class="hero__body seed__body">
-        <h1 class="post__title title--inverse leader trailer">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit</h1>
-        <p class="post__lead body--inverse leader trailer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+      <div class="hero__body seed__body backdrop">
+        <h1 class="post__title title--inverse leader trailer">UX design voor Vereniging Eigen Huis</h1>
+        <p class="lead body--inverse leader trailer">Vereniging Eigen Huis is met ruim 700.000 leden een van de grootste ledenorganisaties in Nederland. De Vereniging is belangenbehartiger en dienstverlener in één. Een unieke positie die vraagt om effectief op te komen voor de belangen voor iedereen die een huis heeft of van plan is te kopen. Daarnaast is Vereniging Eigen Huis een partner voor alle sectoren die met huizenbouw te maken hebben en de politiek.</p>
+      </div>
+      <div class="hero__body seed__footer backdrop backdrop--body">
+        <p><a class="button button--hero button--inverse" href="/cases/vereniging-eigen-huis/">Lees verder</a></p>
       </div>
     </header>
     <section class="layout">
       <div class="layout__cell layout__cell--main">
         <article class="pod--leopard isolation">
           <div class="pod__seed seed cover">
-            <picture>
-              <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+            <picture class="cover__image">
+              <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source
+                media="<?php echo $gt_medium_desktop; ?> and <?php echo $landscape; ?>"
+                srcset="/images/content/w1280px_h1280px--evean.jpg 1280w, /images/content/w1280px_h1280px--evean.jpg 2560w">
+              <source
+                media="<?php echo $gt_small_desktop; ?> and <?php echo $landscape; ?>"
+                srcset="/images/content/w683px_h1024px--evean.jpg 683w, /images/content/w683px_h1024px_2x--evean.jpg 1366w">
+              <source
+                media="<?php echo $gt_large_handheld; ?> and <?php echo $portrait; ?>"
+                srcset="/images/content/w896px_h640px--evean.jpg 896w, /images/content/w896px_h640px_2x--evean.jpg 1792w">
+              <source
+                media="<?php echo $gt_medium_handheld; ?> and <?php echo $landscape; ?>"
+                srcset="/images/content/w1022px_h520px--evean.jpg 1022w, /images/content/w1022px_h520px_2x--evean.jpg 2044w">
+              <source
+                media="<?php echo $gt_small_handheld; ?> and <?php echo $portrait; ?>"
+                srcset="/images/content/w520px_h1022px--evean.jpg 520w, /images/content/w520px_h1022px_2x--evean.jpg 1040w">
+              <!--[if IE 9]></video><![endif]-->
+              <img class="cover__image" src="/images/content/w320px_h576px--evean.jpg" alt="">
             </picture>
             <div class="seed__header leader-inside trailer-inside">
               <img align="right" src="../images/logos/veh.png" alt="Vereniging Eigen Huis" width="112" height="25">
@@ -42,11 +70,11 @@
           </div>
           <div class="pod__seed seed">
             <div class="seed__body">
-              <h2 class="title title--body leader trailer">Lorem Ipsum Dolor Sit Amet</h2>
-              <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+              <h2 class="title title--body leader trailer">Evean staat naast haar klant</h2>
+              <p>Hoe zorg je dat je klanten een gevoel van regie geeft? En welke digitale mogelijkheden moet je ze dan als eerste geven? Waar ga je investeren? Hoe ben je relevant in een ondoorzichtige zorgmarkt?</p>
             </div>
             <p class="seed__footer leader trailer">
-              <a class="anchor--shy meta" href="javascript:void();">Lees verder</a>
+              <a class="anchor--shy meta" href="/cases/evean">Lees verder</a>
             </p>
           </div>
         </article>
@@ -143,7 +171,7 @@
         </div>
         <div class="seed__footer">
           <h3 class="title title--section leader">Over Brickson</h3>
-          <p class="body--tiny leader--tiny trailer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus, dapibus rutrum ipsum gravida et. Integer lectus nisi, facilisis sit amet eleifend nec, pharetra ut augue. Integer quam nunc, consequat nec egestas ac, volutpat ac nisi. Sed consectetur dignissim dignissim. Donec pretium est site.</p>
+          <p class="body--tiny leader--tiny trailer">Brickson is er voor ambitieuze merken in traditionele markten. Wij helpen ze om relevant te blijven en meer voor klanten te betekenen. Succesvolle merken kijken vooruit en stellen zich de vraag: hoe maak ik mijn klant blijer, gezonder en welvarender?</p>
         </div>
       </aside>
     </section>

@@ -1,7 +1,7 @@
-<?php include '../../include.php'; ?>
+<?php include '../include.php'; ?>
 <!DOCTYPE html>
 <html lang="nl">
-  <?php include '../../head.php'; ?>
+  <?php include '../head.php'; ?>
   <body class="<?php echo $debug ? 'debug-layout ' : ''; ?>">
     <nav class="navbar navbar">
       <ol class="menu menu--hero list--reset fx bleed media" id="menu">
@@ -9,35 +9,26 @@
           <a class="menu__home fx" href="/"><span class="is-narrative">Home</span></a>
           <a class="menu__item anchor--shy is-current is-active" href="/cases/">Cases</a>
         </li>
-        <li><a class="menu__item anchor--shy meta meta--tiny fx" href="/over-brickson/">Over Brickson</a></li>
-        <li><a class="menu__item anchor--shy meta meta--tiny fx is-active" href="/cases/">Cases</a></li>
+        <li><a class="menu__item anchor--shy meta meta--tiny fx is-active" href="/over-brickson/">Over Brickson</a></li>
+        <li><a class="menu__item anchor--shy meta meta--tiny fx" href="/cases/">Cases</a></li>
         <li><a class="menu__item anchor--shy meta meta--tiny fx" href="/werken-bij-brickson/">Werken bij Brickson</a></li>
       </ol>
     </nav>
     <article class="post">
       <header class="hero hero--navbar seed pod pod--hippo cover isolation">
-        <picture class="cover__image">
-          <!--[if IE 9]><video style="display: none;"><![endif]-->
-          <source
-            media="<?php echo $gt_large_handheld; ?> and <?php echo $portrait; ?>"
-            srcset="/images/content/w896px_h640px--evean.jpg 896w, /images/content/w896px_h640px_2x--evean.jpg 1792w">
-          <source
-            media="<?php echo $gt_medium_handheld; ?> and <?php echo $landscape; ?>"
-            srcset="/images/content/w1022px_h520px--evean.jpg 1022w, /images/content/w1022px_h520px_2x--evean.jpg 2044w">
-          <source
-            media="<?php echo $gt_small_handheld; ?> and <?php echo $portrait; ?>"
-            srcset="/images/content/w520px_h1022px--evean.jpg 520w, /images/content/w520px_h1022px_2x--evean.jpg 1040w">
-          <!--[if IE 9]></video><![endif]-->
-          <img class="cover__image" src="/images/content/w1280px_h1280px--evean.jpg" alt="">
-        </picture>
-        <div class="hero__header seed__header">
-          <img src="../images/logos/veh--l.png" alt="Brickson • Amsterdam – Den Bosch">
-        </div>
-        <div class="hero__body seed__body backdrop">
-          <h1 class="post__title title--inverse leader trailer">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit</h1>
-          <p class="post__lead body--inverse leader trailer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-        </div>
-      </header>
+      <picture>
+        <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+      </picture>
+      <div class="hero__header seed__header">
+        <video class="cover__image"  autoplay>
+          <source src="http://vid.123rf.com/preview/pressmaster/pressmaster1512/pressmaster151201220.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="hero__body seed__body backdrop">
+        <h1 class="post__title title--inverse leader trailer">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit</h1>
+        <p class="post__lead body--inverse leader trailer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+      </div>
+    </header>
       <div class="post__main isolation">
         <div class="wings">
           <nav class="trail meta leader--tiny trailer bleed">

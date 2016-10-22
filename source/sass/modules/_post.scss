@@ -56,12 +56,15 @@ Styleguide 5.6
   &__title,
   &__main h2 {
     font-size: to-unit(24px);
-    line-height: to-unit( rhythm(6), 1, 24px);
+    line-height: to-unit( rhythm(7), 1, 24px);
   }
   &__title,
   &__main h2,
   &__main p {
       margin: rhythm(6) 0;
+  }
+  &__main h2 {
+      margin-top: rhythm(12);
   }
   &__aside {}
   @include breakpoint($gt-large-handheld) {
@@ -78,13 +81,13 @@ Styleguide 5.6
     }
 
     .wings {
-      padding-left: percentage(4/24);
-      padding-right: percentage(4/24);
+      padding-left: percentage(3/24);
+      padding-right: percentage(3/24);
     }
     &__header {
       .wings {
-        padding-left: percentage(4/36);
-        padding-right: percentage(4/36);
+        padding-left: percentage(3/36);
+        padding-right: percentage(3/36);
       }
     }
     &__title {

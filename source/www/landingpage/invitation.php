@@ -1,4 +1,4 @@
-<section class="pod pod--zebra pod--rhino invitation cover">
+<section class="pod pod--zebra pod--rhino invitation isolation cover">
   <div class="pod__seed tile">
     <nav class="tile trailer-inside">
       <ol class="menu leader trailer list--reset fx bleed" id="menu">
@@ -15,21 +15,21 @@
   </div>
   <ul class="pod__seed grid cover">
     <img class="cover__image" src="http://previews.123rf.com/images/lamarinx/lamarinx1302/lamarinx130200008/18021678-Bridge-to-the-Pag-island-with-sun-and-clouds-Croatia-Stock-Photo.jpg">
-    <li class="grid__cell isolation tile tile--focus wellwell--ostrich">
-      <p class="gutters leader trailer"><strong class="backdrop meta meta--inverse meta--hero">Ontdekken</strong></p>
-      <p class="gutters trailer"><strong class="backdrop meta meta--inverse">Analyse &amp; Challenge</strong></p>
+    <li class="grid__cell isolation tile tile--focus wellwell--ostrich backdrop backdrop--body">
+      <p class="gutters leader trailer"><strong class="meta meta--inverse meta--hero">Ontdekken</strong></p>
+      <p class="gutters trailer"><strong class="meta meta--inverse">Analyse &amp; Challenge</strong></p>
     </li>
-    <li class="grid__cell isolation tile tile--focus wellwell--ostrich">
-      <p class="gutters leader trailer"><strong class="backdrop meta meta--inverse meta--hero">Bedenken</strong></p>
-      <p class="gutters trailer"><strong class="backdrop meta meta--inverse">Strategise&amp; Conceptualise</strong></p>
+    <li class="grid__cell isolation tile tile--focus wellwell--ostrich backdrop backdrop--body">
+      <p class="gutters leader trailer"><strong class="meta meta--inverse meta--hero">Bedenken</strong></p>
+      <p class="gutters trailer"><strong class="meta meta--inverse">Strategise&amp; Conceptualise</strong></p>
     </li>
-    <li class="grid__cell isolation tile tile--focus wellwell--ostrich">
-      <p class="gutters leader trailer"><strong class="backdrop meta meta--inverse meta--hero">Ontwerpen</strong></p>
-      <p class="gutters trailer"><strong class="backdrop meta meta--inverse">User Interface & Experience Design</strong></p>
+    <li class="grid__cell isolation tile tile--focus wellwell--ostrich backdrop">
+      <p class="gutters leader trailer"><strong class="meta meta--inverse meta--hero">Ontwerpen</strong></p>
+      <p class="gutters trailer"><strong class="meta meta--inverse">User Interface & Experience Design</strong></p>
     </li>
-    <li class="grid__cell isolation tile tile--focus wellwell--ostrich">
-      <p class="gutters leader trailer"><strong class="backdrop meta meta--inverse meta--hero">Bouwen</strong></p>
-      <p class="gutters trailer"><strong class="backdrop meta meta--inverse">Architect &amp; Develop</strong></p>
+    <li class="grid__cell isolation tile tile--focus wellwell--ostrich backdrop">
+      <p class="gutters leader trailer"><strong class="meta meta--inverse meta--hero">Bouwen</strong></p>
+      <p class="gutters trailer"><strong class="meta meta--inverse">Architect &amp; Develop</strong></p>
     </li>
   </ul>
 </section>
