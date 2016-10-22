@@ -1,0 +1,11 @@
+/*
+Backdrop
+
+Drops a black shadow behind white text for increased readability
+
+Styleguide 3.19
+*/
+
+.backdrop {
+  text-shadow: 0 0 20px rgba(0,0,0,.76)
+}

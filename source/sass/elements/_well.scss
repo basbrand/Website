@@ -14,13 +14,19 @@ Styleguide 3.16
 */
 
 .well {
-  background: $color-body;
+  background-color: $color-body;
   color: $white;
   &--ostrich {
-    background: $color-teal;
+    background-color: $color-teal;
   }
+  &--dove,
   &--stork {
     color: $color-body;
-    background: mix($color-teal, $white, 26%);
+  }
+  &--stork {
+    background-color: mix($color-teal, $white, 26%);
+  }
+  &--dove {
+    background-color: $white;
   }
 }

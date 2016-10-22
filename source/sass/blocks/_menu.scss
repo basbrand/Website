@@ -6,14 +6,14 @@ Menu
 .menu.menu--home - Menu
 
 markup:
-<ol class="{$modifiers} list--reset fx bleed" id="menu">
-  <li class="gutters">
+<ol class="{$modifiers} list--reset fx bleed media" id="menu">
+  <li class="gutters meta meta--hero media__stretcher">
     <a class="menu__home fx" href="javascript:void();"><span class="is-narrative">Home</span></a>
-    <a class="menu__item anchor--shy is-current is-active" href="javascript:;">Cases</a>
+    <a class="menu__item anchor--shy is-current is-active" href="javascript:void();">Cases</a>
   </li>
-  <li><a class="menu__item anchor--shy fx" href="javascript:void();">Over Brickson</a></li>
-  <li><a class="menu__item anchor--shy fx is-active" href="javascript:void();">Cases</a></li>
-  <li><a class="menu__item anchor--shy fx" href="javascript:void();">Werken bij Brickson</a></li>
+  <li><a class="menu__item anchor--shy meta meta--tiny fx" href="javascript:void();">Over Brickson</a></li>
+  <li><a class="menu__item anchor--shy meta meta--tiny fx is-active" href="javascript:void();">Cases</a></li>
+  <li><a class="menu__item anchor--shy meta meta--tiny fx" href="javascript:void();">Werken bij Brickson</a></li>
 </ol>
 
 Styleguide 4.5
@@ -46,10 +46,8 @@ Styleguide 4.5
   }
   &__item {
     width: 100%;
-    padding: rhythm(2) gutter();
-    font: normal bold #{to-unit(10px)}/#{to-unit(rhythm(8), 1, 10px)} $font-family--meta;
-    text-transform: uppercase;
-    letter-spacing: .25em;
+    padding: rhythm(4) gutter();
+    // font: normal bold #{to-unit(10px)}/#{to-unit(rhythm(8), 1, 10px)} $font-family--meta;
     &:hover,
     &.is-active {
       color: $color-body;
@@ -59,8 +57,8 @@ Styleguide 4.5
   .is-current {
     height: auto;
     display: inline-block;
-    font-size: to-unit(16px);
-    line-height: #{to-unit(rhythm(8), 1, 16px)};
+    padding: rhythm(3) gutter();
+    line-height: #{to-unit(rhythm(4),1,12px)};
     padding-left: 1ex;
     padding-right: 0;
   }

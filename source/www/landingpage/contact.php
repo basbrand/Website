@@ -1,22 +1,6 @@
-<div class="contact pod pod--baboon cover isolation">
-  <picture class="cover__image">
-    <!--[if IE 9]><video style="display: none;"><![endif]-->
-    <source
-      media="<?php echo $gt_small_desktop; ?> and <?php echo $landscape; ?>"
-      srcset="/images/content/w683px_h1024px--contact.jpg 683w, /images/content/w683px_h1024px_2x--contact.jpg 1366w">
-    <source
-      media="<?php echo $gt_large_handheld; ?> and <?php echo $portrait; ?>"
-      srcset="/images/content/w896px_h640px--contact.jpg 896w, /images/content/w896px_h640px_2x--contact.jpg 1792w">
-    <source
-      media="<?php echo $gt_medium_handheld; ?> and <?php echo $landscape; ?>"
-      srcset="/images/content/w1022px_h520px--contact.jpg 1022w, /images/content/w1022px_h520px_2x--contact.jpg 2044w">
-    <source
-      media="<?php echo $gt_small_handheld; ?> and <?php echo $portrait; ?>"
-      srcset="/images/content/w520px_h1022px--contact.jpg 520w, /images/content/w520px_h1022px_2x--contact.jpg 1040w">
-    <!--[if IE 9]></video><![endif]-->
-    <img class="cover__image" src="/images/content/w320px_h576px--contact.jpg" alt="">
-  </picture>
-  <div class="pod__seed tile">
+<div class="contact pod pod--baboon cover isolation well well--dove">
+  <img src="/images/content/w683px_h1024px--contact.jpg" class="cover__image">
+  <div class="pod__seed tile well well--dove cover">
       <h2 class="title title--inverse">Samen stappen zetten?</h2>
       <p class="body--inverse leader trailer">Wil je beginnen met een leeg vel of zoek je een slimme hack?  Wij helpen je vandaag nog om te beginnen met ontdekken, bedenken, ontwerpen en bouwen. </p>
   </div>

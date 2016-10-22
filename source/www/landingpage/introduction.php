@@ -9,11 +9,7 @@
     <img
       class="cover__image"
       alt=""
-      src="/images/content/in-good-company--tablet.jpg"
-      srcset="
-        /images/content/in-good-company--tablet.jpg 640w,
-        /images/content/in-good-company--smartphone.jpg 480w,
-        /images/content/in-good-company--desktop.jpg 1024w">
+      src="http://previews.123rf.com/images/oleg23photo/oleg23photo1505/oleg23photo150500141/39415584-Young-handsome-man-shows-gesture-OK-Emotional-photo-in-studio--Stock-Photo.jpg">
         <img
           class="introduction__cover image--stretch"
           alt=""

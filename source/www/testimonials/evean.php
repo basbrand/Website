@@ -20,7 +20,7 @@
     <img class="cover__image" src="/images/content/w320px_h576px--evean.jpg" alt="">
   </picture>
   <div class="pod__seed seed">
-    <h3 class="seed__header title title--section leader--hero trailer">Testimonial</h3>
+    <h3 class="seed__header meta meta--tiny leader--hero trailer">Testimonial</h3>
     <blockquote class="quote lead leader"><p>Met oog en gevoel voor de mensen in je organisatie gaat Brickson altijd een stap verder.</p></blockquote>
     <div class="seed__body leader trailer">
       <figure class="person bleed">

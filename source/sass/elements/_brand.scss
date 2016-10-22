@@ -13,7 +13,7 @@ Styleguide 3.9
 
 .brand {
   height: px-to-pt( rhythm(12) );
-  background: no-repeat center;
+  background: no-repeat 0;
   background-image: url("/images/logos/Brickson-Logotype-RGB-LB--tablet--x2.png");
   background-image: url("/images/logos/Brickson-Logotype-RGB-LB.svg");
   background-size: contain;
@@ -29,13 +29,12 @@ Styleguide 3.9
     background-image: url("/images/logos/Brickson-Logotype-DNB-RGB-LB--tablet--x2.png");
     background-image: url("/images/logos/Brickson-Logotype-DNB-RGB-LB.svg");
   }
-  &--handshake {
-      height: px-to-pt( rhythm(22) );
+  &--hero {
+      height: px-to-pt( rhythm(18) );
   }
-  &--cover,
   &--inverse {
-    background-image: url("/images/logos/Brickson-Logotype-RGB-DB--tablet--x2.png");
-    background-image: url("/images/logos/Brickson-Logotype-RGB-DB.svg");
+    background-image: url("/images/logos/Brickson-Logotype-RGB--tablet--x2.png");
+    background-image: url("/images/logos/Brickson-Logotype-W.svg");
   }
   @include breakpoint($gt-large-handheld) {
     height: px-to-pt( rhythm(15) );
@@ -43,16 +42,8 @@ Styleguide 3.9
     &--dnb {
       height: px-to-pt( rhythm(17) );
     }
-    &--handshake {
-      height: px-to-pt( rhythm(20) );
-    }
-    &--handshake {
-      position: absolute;
-      width: 100%;
-      top: 33%;
-      left: 0;
-      margin-top: 0%;
-      transform: translateY(-50%);
+    &--hero {
+        height: px-to-pt( rhythm(22) );
     }
   }
   @include breakpoint($gt_small_desktop,$landscape) {
@@ -60,11 +51,17 @@ Styleguide 3.9
     &--dnb {
       height: px-to-pt( rhythm(18) );
     }
+    &--hero {
+        height: px-to-pt( rhythm(33) );
+    }
   }
   @include breakpoint($gt_medium_desktop,$landscape) {
     &--ams,
     &--dnb {
       height: px-to-pt( rhythm(20) );
+    }
+    &--hero {
+        height: px-to-pt( rhythm(44) );
     }
   }
 }

@@ -20,9 +20,9 @@
     <img class="cover__image" src="/images/content/w320px_h576px--handshake.jpg" alt="">
   </picture>
   <div class="pod__seed">
-    <h1 class="tile leader-inside trailer-inside">
-      <img  class="leader-inside trailer-inside" src="../images/logos/Brickson-Logotype-RGB-DB.svg" alt="Brickson • Amsterdam – Den Bosch">
-    </h1>
+    <div class="tile">
+      <h1 class="brand brand--inverse brand--hero leader trailer"><span class="is-narrative">Brickson • Amsterdam – Den Bosch</span></h1>
+    </div>
     <div class="tile">
       <h2 class="title title--inverse">Vooruit met digitaal</h2>
       <p class="body--inverse trailer leader">Brickson is er voor organisaties die de volgende stap in digitaal willen maken. Met een strategie, digitaal concept, website of een applicatie.</p>
