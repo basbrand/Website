@@ -1,0 +1,148 @@
+/*
+Article
+
+.post - Regular article
+.post.post--has-aside - Article with sidebar
+
+markup:
+<article class="{$modifiers}">
+  <sg-insert>5.9-2</sg-insert>
+  <div class="post__main isolation">
+    <div class="wings">
+      <sg-insert>4.4-1</sg-insert>
+      <h2>Lorem Ipsum Dolor Sit Amet</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+      <h2>Lorem Ipsum Dolor Sit Amet</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+      <h2>Lorem Ipsum Dolor Sit Amet</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+      <h2>Lorem Ipsum Dolor Sit Amet</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+      <h2>Lorem Ipsum Dolor Sit Amet</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+    </div>
+    <footer class="well seed wings leader--hero">
+      <h3 class="seed__title title--section leader trailer"><strong>Het resultaat</strong></h3>
+      <div class="seed__body leader trailer">
+        <h2>Lorem Ipsum Dolor Sit Amet</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+      </div>
+    </footer>
+  </div>
+  <aside class="post__aside well well--stork isolation seed">
+    <section class="leader trailer wings seed__body">
+      <sg-insert>3.18-2</sg-insert>
+      <sg-insert>3.18-2</sg-insert>
+    </section>
+    <section class="leader--giant trailer wings seed__footer">
+      <h3 class="title title--section leader">Over Brickson</h3>
+      <p class="body--whisper leader--tiny trailer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus, dapibus rutrum ipsum gravida et. Integer lectus nisi, facilisis sit amet eleifend nec, pharetra ut augue. Integer quam nunc, consequat nec egestas ac, volutpat ac nisi. Sed consectetur dignissim dignissim. Donec pretium est site.</p>
+    </section>
+  </aside>
+</article>
+
+Styleguide 5.6
+*/
+
+.post {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  &__header {
+    flex: 1 0 100%;
+    width: 100%;
+  }
+
+  &__title,
+  &__main h2 {
+    font-size: to-unit(24px);
+    line-height: to-unit( rhythm(6), 1, 24px);
+  }
+  &__title,
+  &__main h2,
+  &__main p {
+      margin: rhythm(6) 0;
+  }
+  &__aside {}
+  @include breakpoint($gt-large-handheld) {
+
+  }
+  @include breakpoint($gt_small_desktop) {
+    flex-direction: row;
+    &__main,
+    &__aside {
+      float: left;
+    }
+    &__main {
+      width: percentage(24/36);
+    }
+
+    .wings {
+      padding-left: percentage(4/24);
+      padding-right: percentage(4/24);
+    }
+    &__header {
+      .wings {
+        padding-left: percentage(4/36);
+        padding-right: percentage(4/36);
+      }
+    }
+    &__title {
+      font-size: to-unit(48px);
+      line-height: to-unit(rhythm(14), 1, 48px);
+    }
+    &__lead {
+      font-size: to-unit(18px);
+      line-height: to-unit(rhythm(8), 1, 18px);
+    }
+
+    &__aside {
+      width: percentage(12/36);
+      .wings {
+        padding-left: percentage(1/12);
+        padding-right: percentage(1/12);
+      }
+    }
+    &__title,
+    &__lead {
+      padding-right: percentage(4/30);
+    }
+  }
+  @include breakpoint($gt-medium-desktop) {
+
+    &__title {
+      font-size: to-unit(62px);
+      line-height: to-unit(rhythm(18), 1, 62px);
+    }
+    &__lead {
+      font-size: to-unit(20px);
+      line-height: to-unit(rhythm(8), 1, 20px);
+    }
+    &__main {
+      h2 {
+        font-size: to-unit(32px);
+        line-height: to-unit( rhythm(12), 1, 32px);
+        margin: rhythm(12) 0 rhythm(6) 0;
+      }
+      p {
+          font-size: to-unit(18px);
+          line-height: to-unit( rhythm(7), 1, 18px );
+      }
+    }
+    .wings {
+      padding-left: percentage(4/24);
+      padding-right: percentage(4/24);
+    }
+
+    &__header {
+      .wings {
+        padding-left: percentage(4/36);
+        padding-right: percentage(12/36);
+      }
+    }
+    &__title,
+    &__lead {
+      padding-right: percentage(2/30);
+    }
+  }
+}

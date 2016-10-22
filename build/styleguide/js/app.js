@@ -1,4 +1,4 @@
-angular.module('sgApp', [
+var deps = [
   'ui.router',
   'ngAnimate',
   'colorpicker.module',
@@ -8,7 +8,17 @@ angular.module('sgApp', [
   'ngProgress',
   'rt.debounce',
   'duScroll'
-])
+];
+
+if( window._styleguideConfig &&
+  window._styleguideConfig.additionalNgDependencies &&
+  window._styleguideConfig.additionalNgDependencies.length &&
+  window._styleguideConfig.additionalNgDependencies.length > 0 ){
+  deps = deps.concat( window._styleguideConfig.additionalNgDependencies );
+  console.info('Merging dependencies: ' + deps);
+}
+
+angular.module('sgApp', deps)
   .value('duScrollOffset', 30)
   .config(["$stateProvider", "$urlRouterProvider", "$locationProvider", "localStorageServiceProvider", "$ocLazyLoadProvider", function($stateProvider, $urlRouterProvider, $locationProvider, localStorageServiceProvider, $ocLazyLoadProvider) {
     var styleguideConfig = {};
@@ -31,8 +41,8 @@ angular.module('sgApp', [
         templateUrl: 'views/sections.html',
         controller: 'SectionsCtrl',
         resolve: {
-          loadLazyModule: ["$ocLazyLoad", function($ocLazyLoad) {
-            loadModule($ocLazyLoad);
+          loadLazyModule: ["$$animateJs", "$ocLazyLoad", function($$animateJs, $ocLazyLoad) {
+            return loadModule($$animateJs, $ocLazyLoad);
           }]
         }
       })
@@ -41,8 +51,8 @@ angular.module('sgApp', [
         templateUrl: 'views/sections.html',
         controller: 'SectionsCtrl',
         resolve: {
-          loadLazyModule: ["$ocLazyLoad", function($ocLazyLoad) {
-            loadModule($ocLazyLoad);
+          loadLazyModule: ["$$animateJs", "$ocLazyLoad", function($$animateJs, $ocLazyLoad) {
+            return loadModule($$animateJs, $ocLazyLoad);
           }]
         }
       })
@@ -71,8 +81,8 @@ angular.module('sgApp', [
         templateUrl: 'views/variable-sections.html',
         controller: 'VariablesCtrl',
         resolve: {
-          loadLazyModule: ["$ocLazyLoad", function($ocLazyLoad) {
-            loadModule($ocLazyLoad);
+          loadLazyModule: ["$$animateJs", "$ocLazyLoad", function($$animateJs, $ocLazyLoad) {
+            return loadModule($$animateJs, $ocLazyLoad);
           }]
         }
       })
@@ -81,8 +91,8 @@ angular.module('sgApp', [
         templateUrl: 'views/element-fullscreen.html',
         controller: 'ElementCtrl',
         resolve: {
-          loadLazyModule: ["$ocLazyLoad", function($ocLazyLoad) {
-            loadModule($ocLazyLoad);
+          loadLazyModule: ["$$animateJs", "$ocLazyLoad", function($$animateJs, $ocLazyLoad) {
+            return loadModule($$animateJs, $ocLazyLoad);
           }]
         }
       }).state('app.index.404', {
@@ -90,7 +100,7 @@ angular.module('sgApp', [
         templateUrl: 'views/404.html'
       });
 
-    function loadModule($ocLazyLoad) {
+    function loadModule($$animateJs, $ocLazyLoad) {
       if (window.filesConfig && window.filesConfig.length) {
         var moduleNames = [];
         angular.forEach(window.filesConfig, function(lazyLoadmodule) {
@@ -165,8 +175,8 @@ angular.module('sgApp', [
     };
   })
   // Replace $variables with values found in variables object
-  .filter('setVariables', function() {
-    return function(str, variables) {
+  .filter('setVariables', ['lodash', function(_) {
+    function filterFn(str, variables) {
       if (!str) {
         return '';
       }
@@ -193,17 +203,19 @@ angular.module('sgApp', [
         str = str.replace(new RegExp('\[\$\@]' + variable.name, 'g'), cleanedValue);
       });
       return str;
-    };
-  });
+    }
+    return _.memoize(filterFn);
+  }]);
 
 'use strict';
 
 angular.module('sgApp')
-  .controller('AppCtrl', ["$scope", "ngProgress", function($scope, ngProgress) {
+  .controller('AppCtrl', ["$scope", "ngProgressFactory", function($scope, ngProgressFactory) {
+    var ngProgress = ngProgressFactory.createInstance();
     // ngProgress do not respect styles assigned via CSS if we do not pass empty parameters
     // See: https://github.com/VictorBjelkholm/ngProgress/issues/33
-    ngProgress.height('');
-    ngProgress.color('');
+    ngProgress.setHeight('');
+    ngProgress.setColor('');
 
     // Scroll top when page is changed
     $scope.$on('$viewContentLoaded', function() {
@@ -403,9 +415,17 @@ angular.module('sgApp')
     $scope.variables = Variables.variables;
     $scope.toggleMenu = false;
 
-    $scope.toggleBool = function(toggleMenu) {
+    $scope.toggleSideNav = function(toggleMenu) {
       $scope.toggleMenu = !toggleMenu;
       return $scope.toggleMenu;
+    };
+
+    $scope.isSideNav = function() {
+      if($scope.config.data && $scope.config.data.sideNav) {
+        return 'sideNav';
+      } else if ($scope.config.data && !$scope.config.data.sideNav) {
+        return 'topNav';
+      }
     };
 
     // Bind variable to scope to wait for data to be resolved
@@ -427,7 +447,7 @@ angular.module('sgApp')
     $scope.hasSubsections = function(parentSection) {
       var result = false;
       angular.forEach($scope.sections.data, function(section) {
-        if(parentSection.reference === section.parentReference) {
+        if (parentSection.reference === section.parentReference) {
           result = true;
           return;
         }

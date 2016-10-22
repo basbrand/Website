@@ -32,7 +32,8 @@ Styleguide 3.9
   &--handshake {
       height: px-to-pt( rhythm(22) );
   }
-  &--cover {
+  &--cover,
+  &--inverse {
     background-image: url("/images/logos/Brickson-Logotype-RGB-DB--tablet--x2.png");
     background-image: url("/images/logos/Brickson-Logotype-RGB-DB.svg");
   }

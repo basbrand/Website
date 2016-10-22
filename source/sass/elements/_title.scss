@@ -20,9 +20,10 @@ Styleguide 3.3
  * Force block on inline tags
  */
 .title {
-  font: $font-weight--heading #{to-unit(18px, 1em, 12px)}/#{to-unit(rhythm(6), 1, 20px)} $font-family--heading;
+  font: $font-weight--heading #{to-unit(22px)}/#{to-unit(rhythm(6), 1, 22px)} $font-family--heading;
   // display: inline-block; /* 1 */
   width: 100%; /* 1 */
+  letter-spacing: 0.02em;
   a &,
   & a {
     text-decoration: none;
@@ -59,16 +60,12 @@ Styleguide 3.3
     a &,
     & a {
       color: $white;
-      font-weight: 300;
+      letter-spacing: 0.04em;
     }
   }
-  // &--section,
-  &--well {
-    .well & {
-      margin-top: px-to-pt(rhythm(10));
-      margin-bottom: px-to-pt(rhythm(6));
-    }
-  }
+
+  
+
   // @include breakpoint($gt-small-handheld) {
   //     font-size: px-to-pt(18px);
   //     line-height: px-to-pt(rhythm(5));

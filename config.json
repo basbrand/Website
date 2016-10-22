@@ -1,0 +1,14 @@
+{
+  "source": "source",
+  "output": {
+    "styleguide": "build/styleguide",
+    "build": "build/www"
+  },
+  "watch": ["**/*.php", "**/*.scss", "**/*.html"],
+  "plugins": {
+    "minify": null,
+    "uglify": null,
+    "postcss": {"browsers": ["last 2 versions", "Firefox <= 20", "ie 8", "ie 9", "> 1%"]},
+    "imagemin": null
+  }
+}

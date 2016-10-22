@@ -1,0 +1,59 @@
+/*
+Invitation
+
+markup:
+<section class="pod pod--zebra pod--rhino invitation cover isolation">
+  <div class="pod__seed seed">
+    <ol class="menu leader trailer seed__header list--reset fx bleed" id="menu">
+      <li><a class="menu__item anchor--shy fx" href="javascript:void();">Over Brickson</a></li>
+      <li><a class="menu__item anchor--shy fx is-active" href="javascript:void();">Cases</a></li>
+      <li><a class="menu__item anchor--shy fx" href="javascript:void();">Werken bij Brickson</a></li>
+    </ol>
+    <div class="seed__body">
+      <h2 class="title leader trailer">Wat is jouw volgende stap?</h2>
+      <p class="leader trailer">Werken met Brickson betekent samen ontdekken, bedenken, ontwerpen of bouwen. We lossen complexe problemen op en werken op project-, consultancy- of interimbasis.</p>
+    </div>
+    <p class="seed__footer leader trailer"><a class="button button--stretch" href="mailto:experts@brickson.nl?subject='Vooruit%20met%20Brickson'">Wil je meer weten? Neem contact op!</a></p>
+  </div>
+  <ul class="pod__seed grid">
+    <li class="grid__cell cover isolation tile">
+      <picture>
+        <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+      </picture>
+      <p><strong class="title--inverse title--meta">Ontdekken</strong></p>
+      <p><strong class="title--inverse title title--section">Analyse &amp; Challenge</strong></p>
+    </li>
+    <li class="grid__cell cover isolation tile">
+      <picture>
+        <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+      </picture>
+      <p><strong class="title--inverse title--meta">Ontdekken</strong></p>
+      <p><strong class="title--inverse title title--section">Analyse &amp; Challenge</strong></p>
+    </li>
+    <li class="grid__cell cover isolation tile">
+      <picture>
+        <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+      </picture>
+      <p><strong class="title--inverse title--meta">Ontdekken</strong></p>
+      <p><strong class="title--inverse title title--section">Analyse &amp; Challenge</strong></p>
+    </li>
+    <li class="grid__cell cover isolation tile">
+      <picture>
+        <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+      </picture>
+      <p><strong class="title--inverse title--meta">Ontdekken</strong></p>
+      <p><strong class="title--inverse title title--section">Analyse &amp; Challenge</strong></p>
+    </li>
+  </ul>
+</section>
+
+Styleguide 5.8
+*/
+
+.invitation {
+  @include breakpoint("#{$gt-large-handheld} and (max-aspect-ratio: 6/5)") {
+    .grid__cell {
+      height: 25vh;
+    }
+  }
+}
