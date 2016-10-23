@@ -5,7 +5,7 @@ Quote
 .quote.quote--l - Large quote, used in case
 
 markup:
-<blockquote class="{$modifiers} leader--giant trailer"><p>Met oog en gevoel voor de mensen in je organisatie gaat Brickson altijd een stap verder.</p></blockquote>
+<blockquote class="{$modifiers} leader--hero leader--hero trailer"><p>Met oog en gevoel voor de mensen in je organisatie gaat Brickson altijd een stap verder.</p></blockquote>
 <figure class="person bleed leader trailer">
   <span class="person__picture gutters">
     <img src="/images/heads/marja_smits.jpg" class="person__image" width="56" height="56" style="background: Grey;"/>
@@ -19,12 +19,16 @@ markup:
 Styleguide 3.18
 */
 
+/*
+ * 1. Aligns the quote to the top of the quote
+ */
 .quote {
   position: relative;
   // quotes: "\201C""\201D""\2018""\2019";
   font-style: italic;
   font-size: to-unit(18px, 1em);
   line-height: to-unit(24px, 1, 18px);
+  padding-top: 2em; /* 1 */
   &--l {
     font-size: to-unit(24px, 1em);
     line-height: to-unit(36px, 1, 24px);
@@ -32,12 +36,14 @@ Styleguide 3.18
   &:before {
     display: block;
     content: open-quote;
+    position: relative;
+    top: -.1em;
   }
   &:after {
     content: no-close-quote;
   }
   &:before,
   &:after {
-    font: normal normal 4em/.5 Arial, Helvetica, Gadget, sans-serif;
+    font: normal normal 4em/0 Arial, Helvetica, Gadget, sans-serif;
   }
 }

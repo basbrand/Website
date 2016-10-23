@@ -1,7 +1,12 @@
 <?php include 'include.php'; ?>
 <!DOCTYPE html>
 <html lang="nl">
-  <?php include 'head.php'; ?>
+  <head>
+    <meta charset="UTF-8">
+    <title>Brickson</title>
+    <meta name="description" content="Brickson is er voor organisaties die de volgende stap in digitaal willen maken. Werken met Brickson betekent samen ontdekken, bedenken, ontwerpen of bouwen."/>
+    <?php include 'head.php'; ?>
+  </head>
   <body class="<?php echo $debug ? 'debug-layout ' : ''; ?>">
     <section class="panel is-active trump-landingpage">
       <?php include 'landingpage/handshake.php'; ?>

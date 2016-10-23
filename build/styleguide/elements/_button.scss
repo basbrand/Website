@@ -15,19 +15,26 @@ Styleguide 3.5
 .button {
   &,
   &:visited {
+    @extend .meta;
     display: inline-block;
     padding: rhythm(2) rhythm(4);
     border: 1px solid;
     background: transparent;
     color: $color-button;
-    font: 600 #{px-to-pt( 8px )}/#{px-to-pt( rhythm(2) )} $font-family--meta;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: $letter-spacing;
     outline: 0;
   }
+  &--inverse,
+  &--inverse:visited {
+    color: $white;
+  }
   &:hover {
     color: $color-anchor;
+  }
+  &--inverse:hover {
+    color: $color-body;
   }
   &:active {
     color: $color-dark-blue;
@@ -36,8 +43,8 @@ Styleguide 3.5
     width: 100%;
     text-align: center;
   }
-  &--inverse {
-    color: $white;
+  &--hero {
+    padding: rhythm(4) rhythm(8);
   }
 }
 

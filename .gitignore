@@ -2,6 +2,7 @@
 node_modules
 tmp
 build
+!build/www
 .sass-cache
 composer.lock
 source/prototype/vendor

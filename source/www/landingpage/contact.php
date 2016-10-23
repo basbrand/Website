@@ -1,10 +1,10 @@
-<div class="contact pod pod--baboon well well--dove">
+<div class="contact pod pod--baboon">
   <div class="pod__seed well well--dove tile">
       <h2 class="title leader trailer">Samen stappen zetten?</h2>
       <p class="leader trailer">Wil je beginnen met een leeg vel of zoek je een slimme hack?  Wij helpen je vandaag nog om te beginnen met ontdekken, bedenken, ontwerpen en bouwen. </p>
   </div>
   <div class="pod__seed tile cover isolation backdrop">
-      <img src="/images/content/w683px_h1024px--contact.jpg" class="cover__image">
+      <img class="cover__image" src="/images/content/w683px_h1024px--contact.jpg">
       <address class="leader trailer">
         <h4 class="title title--inverse">Brickson Amsterdam</h4>
         <p class="leader trailer-tiny"><a class="anchor--shy anchor--reset meta meta--inverse meta--hero" href="tel:0031202610120"><em>(020) 26 101 20</em></a></p>

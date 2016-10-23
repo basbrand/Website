@@ -10,7 +10,7 @@ markup:
     <img style="max-height: 100px;" src="../images/logos/Brickson-Logotype-RGB-DB.svg" alt="Brickson • Amsterdam – Den Bosch">
   </h1>
   <div class="pod__seed seed">
-    <h2 class=" seed__header title title--inverse">Vooruit met digitaal</h2>
+    <h2 class=" seed__header title title--inverse">Vor met digitaal</h2>
     <p class="seed__body body--inverse trailer leader">Brickson is er voor organisaties die de volgende stap in digitaal willen maken. Met een strategie, digitaal concept, website of een applicatie.</p>
   </div>
 </section>
@@ -23,18 +23,47 @@ Styleguide 5.1
     min-height: 50%;
     min-height: 50vh;
   }
-  img {
-    max-height: rhythm(34);
+  .brand {
+    background-position: center;
   }
-  h1 {
-    text-align: center;
-  }
-  @include breakpoint("(min-aspect-ratio: 6/5)") {
+    @include breakpoint("(min-aspect-ratio: 6/5)") {
     .tile {
-      padding-right: 50%;
+      width: percentage(9/12);
+      min-height: 0;
     }
-    h1 {
-      text-align: left;
+    .tile + .tile {
+      min-height: 50%;
+      min-height: 50vh;
+    }
+    .brand {
+      background-position: 0;
+    }
+  }
+  @include breakpoint($gt-large-handheld) {
+    .tile {
+      min-height: 25vh;
+    }
+    .brand {
+      background-position: 0;
+    }
+  }
+  @include breakpoint("#{$gt-small-desktop} and (min-aspect-ratio: 6/5)") {
+    .tile {
+      width: percentage(6/12);
+    }
+    .brand {
+        height: px-to-pt( rhythm(22) );
+    }
+  }
+  @include breakpoint("#{$gt-medium-desktop} and (min-aspect-ratio: 6/5)") {
+    .tile {
+      width: percentage(6/12);
+    }
+    .pod__seed.tile {
+      width: 100%;
+    }
+    .brand {
+        height: px-to-pt( rhythm(24) );
     }
   }
 }

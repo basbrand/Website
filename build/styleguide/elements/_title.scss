@@ -20,7 +20,7 @@ Styleguide 3.3
  * Force block on inline tags
  */
 .title {
-  font: $font-weight--heading #{to-unit(22px)}/#{to-unit(rhythm(6), 1, 22px)} $font-family--heading;
+  font: $font-weight--heading #{to-unit(24px)}/#{to-unit(rhythm(7), 1, 24px)} $font-family--heading;
   // display: inline-block; /* 1 */
   width: 100%; /* 1 */
   letter-spacing: 0.02em;
@@ -47,14 +47,6 @@ Styleguide 3.3
       font-size: to-unit(10px, 1em, 12px);
       line-height: to-unit(rhythm(4), 1, 10px);
   }
-  &--em,
-  &--byline {
-    font-family: $font-family--heading !important;
-    font-weight: $font-weight--heading !important;
-  }
-  &--byline {
-    font-size: to-unit(14px, 1em, 12px);
-  }
   &--inverse {
     &,
     a &,
@@ -64,7 +56,7 @@ Styleguide 3.3
     }
   }
 
-  
+
 
   // @include breakpoint($gt-small-handheld) {
   //     font-size: px-to-pt(18px);
