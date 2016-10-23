@@ -55,6 +55,7 @@ Styleguide 5.8
     &,
     .grid {
       padding: 0;
+      flex-grow: 1;
     }
   }
   @include breakpoint("#{$gt-large-handheld} and (max-aspect-ratio: 6/5)") {

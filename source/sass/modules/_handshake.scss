@@ -26,9 +26,14 @@ Styleguide 5.1
   .brand {
     background-position: center;
   }
-  @include breakpoint("(min-aspect-ratio: 6/5)") {
+    @include breakpoint("(min-aspect-ratio: 6/5)") {
     .tile {
       width: percentage(9/12);
+      min-height: 0;
+    }
+    .tile + .tile {
+      min-height: 50%;
+      min-height: 50vh;
     }
     .brand {
       background-position: 0;

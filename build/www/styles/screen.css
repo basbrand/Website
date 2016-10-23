@@ -650,6 +650,53 @@ Debug layout
 
 Styleguide 2.0.1
 */
+html:after,
+body:after {
+  display: block;
+  position: fixed;
+  right: 0;
+  background: #fff;
+  padding: 4px; }
+
+html:after {
+  top: 0; }
+  @media (orientation: landscape) and (min-width: 20em) {
+    html:after {
+      content: 'gt-small-handheld - landscape'; } }
+  @media (orientation: portrait) and (min-width: 20em) {
+    html:after {
+      content: 'gt-small-handheld - portrait'; } }
+  @media (orientation: landscape) and (min-width: 32.5em) {
+    html:after {
+      content: 'gt-medium-handheld - landscape'; } }
+  @media (orientation: portrait) and (min-width: 32.5em) {
+    html:after {
+      content: 'gt-medium-handheld - portrait'; } }
+  @media (orientation: landscape) and (min-width: 48em) {
+    html:after {
+      content: 'gt-large-handheld - landscape'; } }
+  @media (orientation: portrait) and (min-width: 48em) {
+    html:after {
+      content: 'gt-large-handheld - portrait'; } }
+  @media (orientation: landscape) and (min-width: 64em) {
+    html:after {
+      content: 'gt-small-desktop - landscape'; } }
+  @media (orientation: portrait) and (min-width: 64em) {
+    html:after {
+      content: 'gt-small-desktop - portrait'; } }
+  @media (orientation: landscape) and (min-width: 90em) {
+    html:after {
+      content: 'gt-medium-desktop - landscape'; } }
+  @media (orientation: portrait) and (min-width: 90em) {
+    html:after {
+      content: 'gt-medium-desktop - portrait'; } }
+  @media (orientation: landscape) and (min-width: 100em) {
+    html:after {
+      content: 'gt-large-desktop - landscape'; } }
+  @media (orientation: portrait) and (min-width: 100em) {
+    html:after {
+      content: 'gt-large-desktop - portrait'; } }
+
 /* 2.1 Layout */
 /*
 Layout
@@ -2005,10 +2052,6 @@ Styleguide 4.1
       min-height: 100vh; }
     .pod--kudu .pod__seed {
       width: 100%; }
-    .pod--baboon,
-    .pod--baboon .pod__seed {
-      min-height: 50%;
-      min-height: 50vh; }
     .pod--leopard .pod__seed {
       width: 100%; }
     .pod--leopard .pod__seed {
@@ -2019,16 +2062,8 @@ Styleguide 4.1
       flex-wrap: wrap; }
     .pod--zebra .pod__seed {
       min-height: 100%; } }
-  @media only screen and (max-aspect-ratio: 6 / 5) {
-    .pod--baboon {
-      min-height: 50%;
-      min-height: 50vh; }
-    .pod--baboon .pod__seed {
-      width: 50%;
-      min-height: 100%;
-      min-height: 50vh; } }
   @media only screen and (min-width: 48em) {
-    .pod--kudo,
+    .pod--baboon, .pod--kudo,
     .pod--kudu .pod__seed {
       min-height: 50%;
       min-height: 50vh; } }
@@ -2513,7 +2548,11 @@ Styleguide 5.1
 
 @media only screen and (min-aspect-ratio: 6 / 5) {
   .handshake .tile {
-    width: 75%; }
+    width: 75%;
+    min-height: 0; }
+  .handshake .tile + .tile {
+    min-height: 50%;
+    min-height: 50vh; }
   .handshake .brand {
     background-position: 0; } }
 
@@ -2861,7 +2900,8 @@ Styleguide 5.8
 */
 .invitation .pod__seed.cover,
 .invitation .pod__seed.cover .grid {
-  padding: 0; }
+  padding: 0;
+  flex-grow: 1; }
 
 @media only screen and (min-width: 48em) and (max-aspect-ratio: 6 / 5) {
   .invitation .grid__cell {
