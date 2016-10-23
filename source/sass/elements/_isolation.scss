@@ -1,7 +1,7 @@
 /*
 Isolation
 
-.isolation - White pixel outline
+.isolation - White pixel outline bottom and right. Right outline is also controlled from pod objects, as the right outline is not always needed (for instance when it touches the left side of the viewport).
 
 markup:
 <p class="{$modifiers}">
@@ -17,6 +17,32 @@ Styleguide 3.11
 */
 
 .isolation {
-  outline: 1px solid $white;
-  outline-offset: 0;
+  position: relative;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    background: $white;
+  }
+  &:before {
+    left: 0;
+    height: 1px;
+    // box-shadow: 0 -1px 0 0 $color-body;
+  }
+  &:after {
+    bottom: 0;
+    width: 1px;
+    // box-shadow: -1px 0 0 0 $color-body;
+  }
+  &--quad {
+    &:before {
+      top: 50%;
+    }
+    &:after {
+      left: 50%;
+    }
+  }
 }

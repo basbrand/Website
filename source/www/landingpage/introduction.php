@@ -1,5 +1,5 @@
-<section class="pod pod--baboon introduction isolation">
-  <div class="pod__seed tile">
+<section class="pod pod--baboon introduction">
+  <div class="pod__seed tile isolation">
     <div>
       <h2 class="title leader trailer">Blijer, gezonder en welvarender</h2>
       <p class="leader trailer">Brickson is er voor ambitieuze merken in traditionele markten. Wij helpen ze om relevant te blijven en meer voor klanten te betekenen. Succesvolle merken kijken vooruit en stellen zich de vraag: hoe maak ik mijn klant blijer, gezonder en welvarender?</p>

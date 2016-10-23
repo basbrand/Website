@@ -33,8 +33,7 @@
         <div class="wings">
           <nav class="trail meta leader--tiny trailer bleed">
             <ol class="list--reset list--inline">
-              <li><a class="anchor--shy" href="/cases/">Cases</a></li>
-              <li><a class="anchor--reset anchor--shy" href="/cases/vereniging-eigen-huis">Evean</a></li>
+              <li><a class="anchor--shy" href="/cases/">Over Brickson</a></li>
             </ol>
           </nav>
           <h2>Lorem Ipsum Dolor Sit Amet</h2>

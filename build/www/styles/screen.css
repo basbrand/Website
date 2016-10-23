@@ -1652,7 +1652,7 @@ Styleguide 3.10
 /*
 Isolation
 
-.isolation - White pixel outline
+.isolation - White pixel outline bottom and right. Right outline is also controlled from pod objects, as the right outline is not always needed (for instance when it touches the left side of the viewport).
 
 markup:
 <p class="{$modifiers}">
@@ -1667,8 +1667,24 @@ sg-wrapper:
 Styleguide 3.11
 */
 .isolation {
-  outline: 1px solid #ffffff;
-  outline-offset: 0; }
+  position: relative; }
+  .isolation:before, .isolation:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    background: #ffffff; }
+  .isolation:before {
+    left: 0;
+    height: 1px; }
+  .isolation:after {
+    bottom: 0;
+    width: 1px; }
+  .isolation--quad:before {
+    top: 50%; }
+  .isolation--quad:after {
+    left: 50%; }
 
 /* 3.12 Menu */
 /*
@@ -2843,6 +2859,10 @@ markup:
 
 Styleguide 5.8
 */
+.invitation .pod__seed.cover,
+.invitation .pod__seed.cover .grid {
+  padding: 0; }
+
 @media only screen and (min-width: 48em) and (max-aspect-ratio: 6 / 5) {
   .invitation .grid__cell {
     height: 25vh; } }
@@ -3084,9 +3104,6 @@ markup:
 Styleguide 7.3
 */
 /* 8. */
-.pod__seed.grid {
-  padding: 0; }
-
 /*
  * brrrrrrrrrr
  */

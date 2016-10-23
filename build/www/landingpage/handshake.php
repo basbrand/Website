@@ -1,4 +1,4 @@
-<section class="pod pod--kudu pod--rhino handshake cover isolation tile">
+<section class="pod pod--kudu pod--rhino handshake cover tile isolation">
   <picture class="cover__image">
     <!--[if IE 9]><video style="display: none;"><![endif]-->
     <source

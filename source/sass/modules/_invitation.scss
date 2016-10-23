@@ -51,6 +51,12 @@ Styleguide 5.8
 */
 
 .invitation {
+  .pod__seed.cover {
+    &,
+    .grid {
+      padding: 0;
+    }
+  }
   @include breakpoint("#{$gt-large-handheld} and (max-aspect-ratio: 6/5)") {
     .grid__cell {
       height: 25vh;
