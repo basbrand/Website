@@ -651,53 +651,6 @@ Debug layout
 
 Styleguide 2.0.1
 */
-html:after,
-body:after {
-  display: block;
-  position: fixed;
-  right: 0;
-  background: #fff;
-  padding: 4px; }
-
-html:after {
-  top: 0; }
-  @media (orientation: landscape) and (min-width: 20em) {
-    html:after {
-      content: 'gt-small-handheld - landscape'; } }
-  @media (orientation: portrait) and (min-width: 20em) {
-    html:after {
-      content: 'gt-small-handheld - portrait'; } }
-  @media (orientation: landscape) and (min-width: 32.5em) {
-    html:after {
-      content: 'gt-medium-handheld - landscape'; } }
-  @media (orientation: portrait) and (min-width: 32.5em) {
-    html:after {
-      content: 'gt-medium-handheld - portrait'; } }
-  @media (orientation: landscape) and (min-width: 48em) {
-    html:after {
-      content: 'gt-large-handheld - landscape'; } }
-  @media (orientation: portrait) and (min-width: 48em) {
-    html:after {
-      content: 'gt-large-handheld - portrait'; } }
-  @media (orientation: landscape) and (min-width: 64em) {
-    html:after {
-      content: 'gt-small-desktop - landscape'; } }
-  @media (orientation: portrait) and (min-width: 64em) {
-    html:after {
-      content: 'gt-small-desktop - portrait'; } }
-  @media (orientation: landscape) and (min-width: 90em) {
-    html:after {
-      content: 'gt-medium-desktop - landscape'; } }
-  @media (orientation: portrait) and (min-width: 90em) {
-    html:after {
-      content: 'gt-medium-desktop - portrait'; } }
-  @media (orientation: landscape) and (min-width: 100em) {
-    html:after {
-      content: 'gt-large-desktop - landscape'; } }
-  @media (orientation: portrait) and (min-width: 100em) {
-    html:after {
-      content: 'gt-large-desktop - portrait'; } }
-
 /* 2.1 Layout */
 /*
 Layout
@@ -1206,9 +1159,10 @@ markup:
 
 Styleguide 3.2
 */
-.lead {
-  font-size: 1.125em;
-  line-height: 1.77778; }
+@media only screen and (min-width: 48em) {
+  .lead {
+    font-size: 1.125em;
+    line-height: 1.77778; } }
 
 /* 3.3 Headline */
 /*
@@ -1349,8 +1303,11 @@ Styleguide 3.5
 .button--inverse, .button--inverse:visited {
   color: #ffffff; }
 
-.button--inverse:hover, .button:hover {
+.button:hover {
   color: #57B0B6; }
+
+.button--inverse:hover {
+  color: #445D87; }
 
 .button:active {
   color: #37383C; }
@@ -2145,6 +2102,7 @@ Styleguide 4.1
       min-height: 50vh;
       background: #ffffff;
       background: rgba(255, 255, 255, 0.8);
+      text-shadow: none;
       color: inherit; }
       .pod--serval .pod__seed .button {
         color: inherit; }
@@ -2964,7 +2922,7 @@ Styleguide 5.9
   .hero--navbar {
     padding-top: 80px; }
   .hero__header, .hero__body, .hero__footer {
-    padding: 0 14px; }
+    padding: 0 8.33333%; }
   .hero__body {
     display: flex;
     flex-direction: column;

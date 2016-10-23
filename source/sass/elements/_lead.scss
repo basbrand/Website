@@ -10,8 +10,8 @@ Styleguide 3.2
 */
 
 .lead {
-  font-size: to-unit(18px);
-  line-height: to-unit(rhythm(8), 1, 18px);
+  // font-size: to-unit(18px);
+  // line-height: to-unit(rhythm(6), 1, 16px);
   // font-size: to-unit(16px, 12px);
   // line-height: to-unit(rhythm(7), 1, 16px);
   // // margin: rhythm(10) 0;
@@ -23,4 +23,8 @@ Styleguide 3.2
   //   font-size: to-unit(18px, 12px);
   //   line-height: to-unit(rhythm(7), 1, 18px);
   // }
+  @include breakpoint($gt-large-handheld) {
+    font-size: to-unit(18px);
+    line-height: to-unit(rhythm(8), 1, 18px);
+  }
 }

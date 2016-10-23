@@ -29,7 +29,7 @@ Styleguide 5.9
   &__header,
   &__body,
   &__footer {
-    padding: 0 gutter();
+    padding: 0 percentage(1/12);
   }
   &__body {
     display: flex;

@@ -35,7 +35,7 @@
           <p class="lead body--inverse leader trailer">Vereniging Eigen Huis is met ruim 700.000 leden een van de grootste ledenorganisaties in Nederland. De Vereniging is belangenbehartiger en dienstverlener in één. Een unieke positie die vraagt om effectief op te komen voor de belangen voor iedereen die een huis heeft of van plan is te kopen. Daarnaast is Vereniging Eigen Huis een partner voor alle sectoren die met huizenbouw te maken hebben en de politiek.</p>
         </div>
         <div class="hero__body seed__footer backdrop backdrop--body">
-          <p><a class="button button--hero button--inverse" href="/cases/vereniging-eigen-huis/">Lees verder</a></p>
+          <p class="leader trailer"><a class="button button--hero button--inverse" href="/cases/vereniging-eigen-huis/">Lees verder</a></p>
         </div>
       </header>
       <div class="layout__cell layout__cell--main">

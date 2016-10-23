@@ -30,9 +30,11 @@ Styleguide 3.5
   &--inverse:visited {
     color: $white;
   }
-  &--inverse:hover,
   &:hover {
     color: $color-anchor;
+  }
+  &--inverse:hover {
+    color: $color-body;
   }
   &:active {
     color: $color-dark-blue;

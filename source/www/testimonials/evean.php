@@ -1,4 +1,4 @@
-<section class="pod pod--serval pod--rhino cover isolation">
+<section class="pod pod--serval pod--rhino cover isolation backdrop">
   <picture class="cover__image">
     <!--[if IE 9]><video style="display: none;"><![endif]-->
     <source
@@ -34,7 +34,7 @@
       </figure>
     </div>
     <div class="seed__footer leader trailer">
-      <a class="button button--stretch" href="/cases/evean">Case: Evean</a>
+      <a class="button button--stretch" href="/cases/evean">Lees meer</a>
     </div>
     </div>
 </section>
