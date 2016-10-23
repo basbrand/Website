@@ -3,7 +3,7 @@
 //   padding: 0;
 // }
 .trump-landingpage {
-  @include breakpoint("#{$gt-small-desktop} and #{$landscape}") {
+  @include breakpoint("#{$gt-small-desktop} and #{$lt-medium-desktop} and #{$landscape}") {
     display: flex;
     flex-wrap: wrap;
     .handshake,
@@ -39,6 +39,11 @@
     }
   }
   @include breakpoint($gt-medium-desktop,$landscape) {
-    display: auto;
+    display: block;
+    .handshake {
+      .tile {
+        min-height: 0;
+      }
+    }
   }
 }

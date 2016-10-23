@@ -192,7 +192,19 @@ Styleguide 4.1
       width: percentage(24/36);
       max-width: percentage(24/36);
     }
-    &__serval {
+    &--serval {
+      min-height: 100%;
+      min-height: 100vh;
+    }
+    &--kudu {
+      min-height: 50%;
+      min-height: 50vh;
+    }
+    &--kudu &__seed {
+      min-height: 100%;
+      min-height: 50vh;
+    }
+    &--serval {
       position: relative;
     }
     &--serval &__seed {
@@ -205,6 +217,10 @@ Styleguide 4.1
       min-height: 50vh;
       background: $white;
       background: rgba($white, .8);
+      color: inherit;
+      .button {
+        color: white;
+      }
     }
     &--baboon {
       width: percentage(12/36);

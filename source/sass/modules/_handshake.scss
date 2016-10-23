@@ -59,6 +59,9 @@ Styleguide 5.1
     .tile {
       width: percentage(6/12);
     }
+    .pod__seed.tile {
+      width: 100%;
+    }
     .brand {
         height: px-to-pt( rhythm(24) );
     }

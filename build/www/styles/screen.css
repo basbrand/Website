@@ -2120,7 +2120,16 @@ Styleguide 4.1
     .pod--rhino {
       width: 66.66667%;
       max-width: 66.66667%; }
-    .pod__serval {
+    .pod--serval {
+      min-height: 100%;
+      min-height: 100vh; }
+    .pod--kudu {
+      min-height: 50%;
+      min-height: 50vh; }
+    .pod--kudu .pod__seed {
+      min-height: 100%;
+      min-height: 50vh; }
+    .pod--serval {
       position: relative; }
     .pod--serval .pod__seed {
       position: absolute;
@@ -2130,7 +2139,10 @@ Styleguide 4.1
       min-height: 50%;
       min-height: 50vh;
       background: #ffffff;
-      background: rgba(255, 255, 255, 0.8); }
+      background: rgba(255, 255, 255, 0.8);
+      color: inherit; }
+      .pod--serval .pod__seed .button {
+        color: white; }
     .pod--baboon {
       width: 33.33333%; }
     .pod--baboon .pod__seed {
@@ -2584,6 +2596,8 @@ Styleguide 5.1
 @media only screen and (min-width: 90em) and (min-aspect-ratio: 6 / 5) {
   .handshake .tile {
     width: 50%; }
+  .handshake .pod__seed.tile {
+    width: 100%; }
   .handshake .brand {
     height: 96pt; } }
 
@@ -3157,7 +3171,7 @@ markup:
 Styleguide 7.3
 */
 /* 8. */
-@media only screen and (min-width: 64em) and (orientation: landscape) {
+@media only screen and (min-width: 64em) and (max-width: 89.9375em) and (orientation: landscape) {
   .trump-landingpage {
     display: flex;
     flex-wrap: wrap; }
@@ -3188,7 +3202,9 @@ Styleguide 7.3
 
 @media (orientation: landscape) and (min-width: 90em) {
   .trump-landingpage {
-    display: auto; } }
+    display: block; }
+    .trump-landingpage .handshake .tile {
+      min-height: 0; } }
 
 /*
  * brrrrrrrrrr
