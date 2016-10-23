@@ -10,11 +10,7 @@
       <?php include 'landingpage/introduction.php'; ?>
     </section>
     <?php //include 'landingpage/tools.php'; ?>
-    <section class="layout">
-      <div class="layout__cell">
-        <?php include 'testimonials/evean.php'; ?>
-      </div>
-      <?php include 'landingpage/contact.php'; ?>
-    </section>
+    <?php include 'testimonials/evean.php'; ?>
+    <?php include 'landingpage/contact.php'; ?>
   </body>
 </html>

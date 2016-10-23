@@ -46,10 +46,7 @@ Styleguide 2.1
   &--align-middle {
     align-items: center;
   }
-}
-
-@include breakpoint($gt-large-handheld) {
-  .layout {
+  @include breakpoint($gt-large-handheld) {
     &__cell {
       &.wings {
         padding-left: percentage(1/24);
@@ -57,9 +54,7 @@ Styleguide 2.1
       }
     }
   }
-}
-@include breakpoint($gt-small-desktop) {
-  .layout {
+  @include breakpoint($gt-small-desktop) {
     flex-direction: row;
     flex-wrap: wrap;
     &__cell {
