@@ -3,7 +3,7 @@
 <html lang="nl">
   <?php include 'head.php'; ?>
   <body class="<?php echo $debug ? 'debug-layout ' : ''; ?>">
-    <section class="panel is-active">
+    <section class="panel is-active trump-landingpage">
       <?php include 'landingpage/handshake.php'; ?>
       <?php include 'landingpage/invitation.php'; ?>
       <?php include 'testimonials/eigenhuis.php'; ?>

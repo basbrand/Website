@@ -2108,7 +2108,14 @@ Styleguide 4.1
       background: rgba(255, 255, 255, 0.8); }
     .pod--hippo .pod__seed {
       padding: 0 5.55556% 0 11.11111%;
-      padding: 0 5.55556vw 0 11.11111vw; } }
+      padding: 0 5.55556vw 0 11.11111vw; }
+    .pod--baboon {
+      min-height: 50%;
+      min-height: 50vh; }
+    .pod--baboon .pod__seed {
+      width: 50%;
+      min-height: 100%;
+      min-height: 50vh; } }
   @media only screen and (min-width: 90em) {
     .pod__seed {
       padding: 0 5.55556%;
@@ -3144,6 +3151,39 @@ markup:
 Styleguide 7.3
 */
 /* 8. */
+@media only screen and (min-width: 64em) and (orientation: landscape) {
+  .trump-landingpage {
+    display: flex;
+    flex-wrap: wrap; }
+    .trump-landingpage .handshake,
+    .trump-landingpage .invitation {
+      flex-basis: 50%;
+      width: 50%;
+      min-height: 100%;
+      min-height: 100vh; }
+      .trump-landingpage .handshake .pod__seed,
+      .trump-landingpage .invitation .pod__seed {
+        width: 100%;
+        min-height: 50%;
+        min-height: 50vh; }
+    .trump-landingpage .handshake .tile {
+      width: 100%;
+      flex-grow: 1; }
+    .trump-landingpage .handshake .tile + .tile {
+      flex-grow: 0; }
+    .trump-landingpage .handshake .brand {
+      background-position: center; }
+    .trump-landingpage .introduction,
+    .trump-landingpage .testimonial {
+      flex-basis: 100%;
+      width: 100%;
+      min-height: 50%;
+      min-height: 50vh; } }
+
+@media (orientation: landscape) and (min-width: 90em) {
+  .trump-landingpage {
+    display: auto; } }
+
 /*
  * brrrrrrrrrr
  */
