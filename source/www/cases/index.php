@@ -14,30 +14,30 @@
         <li><a class="menu__item anchor--shy meta meta--tiny fx" href="/werken-bij-brickson/">Werken bij Brickson</a></li>
       </ol>
     </nav>
-    <header class="hero hero--navbar seed pod pod--hippo cover isolation">
-      <picture class="cover__image">
-        <!--[if IE 9]><video style="display: none;"><![endif]-->
-        <source
-          media="<?php echo $gt_medium_handheld; ?> and <?php echo $landscape; ?>"
-          srcset="/images/content/w1022px_h520px--eigenhuis.jpg 1022w, /images/content/w1022px_h520px_2x--eigenhuis.jpg 2044w">
-        <source
-          media="<?php echo $gt_small_handheld; ?> and <?php echo $portrait; ?>"
-          srcset="/images/content/w520px_h1022px--eigenhuis.jpg 520w, /images/content/w520px_h1022px_2x--eigenhuis.jpg 1040w">
-        <!--[if IE 9]></video><![endif]-->
-        <img class="cover__image" src="/images/content/w320px_h576px--eigenhuis.jpg" alt="">
-      </picture>
-      <div class="hero__header seed__header">
-        <img src="../images/logos/veh--l.png" alt="Brickson • Amsterdam – Den Bosch">
-      </div>
-      <div class="hero__body seed__body backdrop">
-        <h1 class="post__title title--inverse leader trailer">UX design voor Vereniging Eigen Huis</h1>
-        <p class="lead body--inverse leader trailer">Vereniging Eigen Huis is met ruim 700.000 leden een van de grootste ledenorganisaties in Nederland. De Vereniging is belangenbehartiger en dienstverlener in één. Een unieke positie die vraagt om effectief op te komen voor de belangen voor iedereen die een huis heeft of van plan is te kopen. Daarnaast is Vereniging Eigen Huis een partner voor alle sectoren die met huizenbouw te maken hebben en de politiek.</p>
-      </div>
-      <div class="hero__body seed__footer backdrop backdrop--body">
-        <p><a class="button button--hero button--inverse" href="/cases/vereniging-eigen-huis/">Lees verder</a></p>
-      </div>
-    </header>
     <section class="layout">
+      <header class="hero hero--navbar seed pod pod--hippo cover isolation is-cleared">
+        <picture class="cover__image">
+          <!--[if IE 9]><video style="display: none;"><![endif]-->
+          <source
+            media="<?php echo $gt_medium_handheld; ?> and <?php echo $landscape; ?>"
+            srcset="/images/content/w1022px_h520px--eigenhuis.jpg 1022w, /images/content/w1022px_h520px_2x--eigenhuis.jpg 2044w">
+          <source
+            media="<?php echo $gt_small_handheld; ?> and <?php echo $portrait; ?>"
+            srcset="/images/content/w520px_h1022px--eigenhuis.jpg 520w, /images/content/w520px_h1022px_2x--eigenhuis.jpg 1040w">
+          <!--[if IE 9]></video><![endif]-->
+          <img class="cover__image" src="/images/content/w320px_h576px--eigenhuis.jpg" alt="">
+        </picture>
+        <div class="hero__header seed__header">
+          <img src="../images/logos/veh--l.png" alt="Brickson • Amsterdam – Den Bosch">
+        </div>
+        <div class="hero__body seed__body backdrop">
+          <h1 class="post__title title--inverse leader trailer">UX design voor Vereniging Eigen Huis</h1>
+          <p class="lead body--inverse leader trailer">Vereniging Eigen Huis is met ruim 700.000 leden een van de grootste ledenorganisaties in Nederland. De Vereniging is belangenbehartiger en dienstverlener in één. Een unieke positie die vraagt om effectief op te komen voor de belangen voor iedereen die een huis heeft of van plan is te kopen. Daarnaast is Vereniging Eigen Huis een partner voor alle sectoren die met huizenbouw te maken hebben en de politiek.</p>
+        </div>
+        <div class="hero__body seed__footer backdrop backdrop--body">
+          <p><a class="button button--hero button--inverse" href="/cases/vereniging-eigen-huis/">Lees verder</a></p>
+        </div>
+      </header>
       <div class="layout__cell layout__cell--main">
         <article class="pod--leopard isolation">
           <div class="pod__seed seed cover">

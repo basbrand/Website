@@ -26,6 +26,11 @@ Styleguide 3.5
     letter-spacing: $letter-spacing;
     outline: 0;
   }
+  &--inverse,
+  &--inverse:visited {
+    color: $white;
+  }
+  &--inverse:hover,
   &:hover {
     color: $color-anchor;
   }
@@ -38,10 +43,6 @@ Styleguide 3.5
   }
   &--hero {
     padding: rhythm(4) rhythm(8);
-  }
-  &--inverse,
-  &--inverse:visited {
-    color: $white;
   }
 }
 

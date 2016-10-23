@@ -729,16 +729,9 @@ Styleguide 2.1
  * 2. IE Fallback
  */
 @media only screen and (min-width: 48em) {
-  .layout__cell.wings {
-    padding-left: 4.16667%;
-    padding-right: 4.16667%; } }
-
-@media only screen and (min-width: 64em) {
   .layout {
     display: flex;
-    flex-direction: column;
-    flex-direction: row;
-    flex-wrap: wrap; }
+    flex-direction: column; }
     .layout__cell {
       flex: 0 1 100%;
       max-width: 100%;
@@ -751,6 +744,14 @@ Styleguide 2.1
       /* 2. */ }
     .layout--align-middle {
       align-items: center; }
+    .layout__cell.wings {
+      padding-left: 4.16667%;
+      padding-right: 4.16667%; } }
+
+@media only screen and (min-width: 64em) {
+  .layout {
+    flex-direction: row;
+    flex-wrap: wrap; }
     .layout__cell {
       flex: 1 1 33.33333%;
       min-width: 33.33333%; }
@@ -1306,7 +1307,7 @@ a,
   .anchor:hover,
   .anchor .is-heir:hover,
   .anchor:hover .is-heir {
-    color: #57B0B6; }
+    color: #445D87; }
   a--shy,
   .anchor--shy {
     text-decoration: none; }
@@ -1345,7 +1346,10 @@ Styleguide 3.5
   letter-spacing: 0.25em;
   outline: 0; }
 
-.button:hover {
+.button--inverse, .button--inverse:visited {
+  color: #ffffff; }
+
+.button--inverse:hover, .button:hover {
   color: #57B0B6; }
 
 .button:active {
@@ -1357,9 +1361,6 @@ Styleguide 3.5
 
 .button--hero {
   padding: 16px 32px; }
-
-.button--inverse, .button--inverse:visited {
-  color: #ffffff; }
 
 /*
 Button, inversed
@@ -2045,6 +2046,10 @@ Styleguide 4.1
     width: 100%;
     min-height: 100%;
     min-height: 100vh; }
+  .pod--leopard .pod__seed {
+    width: 100%;
+    min-height: 50%;
+    min-height: 50vh; }
   .pod--serval .pod__seed {
     color: white; }
     .pod--serval .pod__seed .button {
@@ -2056,11 +2061,6 @@ Styleguide 4.1
       min-height: 100vh; }
     .pod--kudu .pod__seed {
       width: 100%; }
-    .pod--leopard .pod__seed {
-      width: 100%; }
-    .pod--leopard .pod__seed {
-      min-height: 50%;
-      min-height: 50vh; }
     .pod--zebra {
       display: flex;
       flex-wrap: wrap; }
@@ -2069,10 +2069,15 @@ Styleguide 4.1
     .pod--serval .pod__seed {
       width: 100%; } }
   @media only screen and (min-width: 48em) {
-    .pod--baboon, .pod--kudo,
+    .pod--baboon, .pod--kudo, .pod--leopard,
     .pod--kudu .pod__seed {
       min-height: 50%;
-      min-height: 50vh; } }
+      min-height: 50vh; }
+    .pod--leopard {
+      width: 50%; }
+    .pod--leopard .pod__seed {
+      min-height: 50%;
+      min-height: 25vh; } }
   @media only screen and (min-width: 48em) and (max-aspect-ratio: 6 / 5) {
     .pod__seed {
       width: 50%; }
@@ -2142,7 +2147,7 @@ Styleguide 4.1
       background: rgba(255, 255, 255, 0.8);
       color: inherit; }
       .pod--serval .pod__seed .button {
-        color: white; }
+        color: inherit; }
     .pod--baboon {
       width: 33.33333%; }
     .pod--baboon .pod__seed {
