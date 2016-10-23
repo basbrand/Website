@@ -24,16 +24,26 @@
         <picture class="cover__image">
           <!--[if IE 9]><video style="display: none;"><![endif]-->
           <source
-            media="<?php echo $gt_medium_handheld; ?> and <?php echo $landscape; ?>"
+            media="<?php echo $landscape; ?>"
+            sizes="100vw"
             srcset="/images/content/w1022px_h520px--eigenhuis.jpg 1022w, /images/content/w1022px_h520px_2x--eigenhuis.jpg 2044w">
           <source
-            media="<?php echo $gt_small_handheld; ?> and <?php echo $portrait; ?>"
+            media="<?php echo $portrait; ?>"
+            sizes="100vw"
             srcset="/images/content/w520px_h1022px--eigenhuis.jpg 520w, /images/content/w520px_h1022px_2x--eigenhuis.jpg 1040w">
           <!--[if IE 9]></video><![endif]-->
           <img class="cover__image" src="/images/content/w320px_h576px--eigenhuis.jpg" alt="">
         </picture>
         <div class="hero__header seed__header">
-          <img src="../images/logos/veh--l.png" alt="Brickson • Amsterdam – Den Bosch">
+          <img
+            class="brand-client--hero"
+            sizes="<?php echo $gt_small_desktop; ?> 23vw, 50vw"
+            srcset="/images/logos/veh_h80w237_2x.png 474w, /images/logos/veh_h80w237.png 237w, /images/logos/veh_h40w119.png 119w"
+            src="/images/logos/veh_h80w237.png"
+            alt="Afbeelding logo Vereniging Eigen Huis"
+            width="237"
+            height="80"
+            />
         </div>
         <div class="hero__body seed__body backdrop">
           <h1 class="post__title title--inverse leader trailer">UX design voor Vereniging Eigen Huis</h1>
@@ -46,28 +56,25 @@
       <div class="layout__cell layout__cell--main">
         <article class="pod--leopard isolation">
           <div class="pod__seed seed cover">
-            <picture class="cover__image">
-              <!--[if IE 9]><video style="display: none;"><![endif]-->
-              <source
-                media="<?php echo $gt_medium_desktop; ?> and <?php echo $landscape; ?>"
-                srcset="/images/content/w1280px_h1280px--evean.jpg 1280w, /images/content/w1280px_h1280px--evean.jpg 2560w">
-              <source
-                media="<?php echo $gt_small_desktop; ?> and <?php echo $landscape; ?>"
-                srcset="/images/content/w683px_h1024px--evean.jpg 683w, /images/content/w683px_h1024px_2x--evean.jpg 1366w">
-              <source
-                media="<?php echo $gt_large_handheld; ?> and <?php echo $portrait; ?>"
-                srcset="/images/content/w896px_h640px--evean.jpg 896w, /images/content/w896px_h640px_2x--evean.jpg 1792w">
-              <source
-                media="<?php echo $gt_medium_handheld; ?> and <?php echo $landscape; ?>"
-                srcset="/images/content/w1022px_h520px--evean.jpg 1022w, /images/content/w1022px_h520px_2x--evean.jpg 2044w">
-              <source
-                media="<?php echo $gt_small_handheld; ?> and <?php echo $portrait; ?>"
-                srcset="/images/content/w520px_h1022px--evean.jpg 520w, /images/content/w520px_h1022px_2x--evean.jpg 1040w">
-              <!--[if IE 9]></video><![endif]-->
-              <img class="cover__image" src="/images/content/w320px_h576px--evean.jpg" alt="">
-            </picture>
+            <img
+              class="cover__image"
+              sizes="<?php echo $gt_small_desktop; ?> 50vw, 100vw"
+              srcset="/images/content/w683px_h1024px_2x--evean.jpg 1366w, /images/content/w683px_h1024px--evean.jpg 683w"
+              src="/images/content/w683px_h1024px--evean.jpg"
+              alt=""
+              width="1024"
+              height="683"
+              />
             <div class="seed__header leader-inside trailer-inside">
-              <img align="right" src="../images/logos/veh.png" alt="Vereniging Eigen Huis" width="112" height="25">
+              <img
+                class="brand-client"
+                sizes="<?php echo $gt_small_desktop; ?> 10vw, 25vw"
+                srcset="/images/logos/evean_h58w256.png 256w, /images/logos/evean_h20w128.png 128w"
+                src="/images/logos/evean_h20w128.png"
+                alt="Afbeelding logo Evean"
+                width="256"
+                height="58"
+                />
             </div>
             <div class="seed__footer">
               <small class="meta meta--tiny meta--inverse leader-inside trailer-inside">Case</small>
@@ -86,10 +93,18 @@
         <article class="pod--leopard isolation">
           <div class="pod__seed seed cover">
             <picture>
-              <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+              <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609" alt="">
             </picture>
             <div class="seed__header leader-inside trailer-inside">
-              <img align="right" src="../images/logos/veh.png" alt="Vereniging Eigen Huis" width="112" height="25">
+              <img
+                class="brand-client"
+                sizes="<?php echo $gt_small_desktop; ?> 10vw, 25vw"
+                srcset="/images/logos/evean_h58w256.png 256w, /images/logos/evean_h20w128.png 128w"
+                src="/images/logos/evean_h20w128.png"
+                alt="Afbeelding logo Evean"
+                width="256"
+                height="58"
+                />
             </div>
             <div class="seed__footer">
               <small class="meta meta--tiny meta--inverse leader-inside trailer-inside">Case</small>
@@ -101,17 +116,17 @@
               <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
             </div>
             <p class="seed__footer leader trailer">
-              <a class="anchor--shy meta" href="javascript:void();">Lees verder</a>
+              <a class="anchor--shy meta" href="/">Lees verder</a>
             </p>
           </div>
         </article>
         <article class="pod--leopard isolation">
           <div class="pod__seed seed cover">
             <picture>
-              <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+              <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609" alt="">
             </picture>
             <div class="seed__header leader-inside trailer-inside">
-              <img align="right" src="../images/logos/veh.png" alt="Vereniging Eigen Huis" width="112" height="25">
+              <img class="brand-client" src="../images/logos/veh.png" alt="Vereniging Eigen Huis" width="112" height="25">
             </div>
             <div class="seed__footer">
               <small class="meta meta--tiny meta--inverse leader-inside trailer-inside">Case</small>
@@ -123,17 +138,17 @@
               <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
             </div>
             <p class="seed__footer leader trailer">
-              <a class="anchor--shy meta" href="javascript:void();">Lees verder</a>
+              <a class="anchor--shy meta" href="/">Lees verder</a>
             </p>
           </div>
         </article>
         <article class="pod--leopard isolation">
           <div class="pod__seed seed cover">
             <picture>
-              <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609">
+              <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609" alt="">
             </picture>
             <div class="seed__header leader-inside trailer-inside">
-              <img align="right" src="../images/logos/veh.png" alt="Vereniging Eigen Huis" width="112" height="25">
+              <img class="brand-client" src="../images/logos/veh.png" alt="Vereniging Eigen Huis" width="112" height="25">
             </div>
             <div class="seed__footer">
               <small class="meta meta--tiny meta--inverse leader-inside trailer-inside">Case</small>
@@ -145,7 +160,7 @@
               <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
             </div>
             <p class="seed__footer leader trailer">
-              <a class="anchor--shy meta" href="javascript:void();">Lees verder</a>
+              <a class="anchor--shy meta" href="/">Lees verder</a>
             </p>
           </div>
         </article>

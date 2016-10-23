@@ -36,7 +36,15 @@
           <img class="cover__image" src="/images/content/w1280px_h1280px--evean.jpg" alt="">
         </picture>
         <div class="hero__header seed__header">
-          <img src="../images/logos/veh--l.png" alt="Brickson • Amsterdam – Den Bosch">
+          <img
+            class="brand-client--hero"
+            sizes="<?php echo $gt_small_desktop; ?> 23vw, 50vw"
+            srcset="/images/logos/evean_h58w256_2x.png 512w, /images/logos/evean_h58w256.png 256w, /images/logos/evean_h20w128.png 128w"
+            src="/images/logos/evean_h58w256.png"
+            alt="Afbeelding logo Evean"
+            width="256"
+            height="58"
+            />
         </div>
         <div class="hero__body seed__body backdrop">
           <h1 class="post__title title--inverse leader trailer">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit</h1>

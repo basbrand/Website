@@ -36,7 +36,15 @@
           <img class="cover__image" src="/images/content/w320px_h576px--eigenhuis.jpg" alt="">
         </picture>
       <div class="hero__header seed__header">
-        <img src="../images/logos/veh--l.png" alt="Brickson • Amsterdam – Den Bosch">
+        <img
+          class="brand-client--hero"
+          sizes="<?php echo $gt_small_desktop; ?> 23vw, 50vw"
+          srcset="/images/logos/veh_h80w237_2x.png 474w, /images/logos/veh_h80w237.png 237w, /images/logos/veh_h40w119.png 119w"
+          src="/images/logos/veh_h80w237.png"
+          alt="Afbeelding logo Vereniging Eigen Huis"
+          width="237"
+          height="80"
+          />
       </div>
       <div class="hero__body seed__body backdrop">
         <h1 class="post__title title--inverse leader trailer">UX design voor Vereniging Eigen Huis</h1>
