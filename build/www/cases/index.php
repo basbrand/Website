@@ -3,7 +3,7 @@
 <html lang="nl">
   <head>
     <meta charset="UTF-8">
-    <title>Brickson</title>
+    <title>Cases | Brickson</title>
     <meta name="description" content="Brickson is er voor organisaties die de volgende stap in digitaal willen maken. Werken met Brickson betekent samen ontdekken, bedenken, ontwerpen of bouwen."/>
     <?php include '../head.php'; ?>
   </head>
@@ -12,7 +12,7 @@
       <ol class="menu menu--hero list--reset fx bleed" id="menu">
         <li class="gutters meta meta--hero">
           <a class="menu__home fx" href="/"><span class="is-narrative">Home</span></a>
-          <a class="menu__item anchor--reset anchor--shy is-current is-active" href="/cases/#menu">Cases</a>
+          <h1><a class="menu__item anchor--reset anchor--shy is-current is-active" href="/cases/#menu">Cases</a></h1>
         </li>
         <li><a class="menu__item anchor--shy meta meta--tiny fx" href="/over-brickson/">Over Brickson</a></li>
         <li><a class="menu__item anchor--shy meta meta--tiny fx is-active" href="/cases/">Cases</a></li>
@@ -20,7 +20,7 @@
       </ol>
     </nav>
     <section class="layout">
-      <header class="hero hero--navbar seed pod pod--hippo cover isolation is-cleared">
+      <div class="hero hero--navbar seed pod pod--hippo cover isolation is-cleared">
         <picture class="cover__image">
           <!--[if IE 9]><video style="display: none;"><![endif]-->
           <source
@@ -46,13 +46,13 @@
             />
         </div>
         <div class="hero__body seed__body backdrop">
-          <h1 class="post__title title--inverse leader trailer">UX design voor Vereniging Eigen Huis</h1>
+          <h2 class="post__title title--inverse leader trailer">UX design voor Vereniging Eigen Huis</h2>
           <p class="lead body--inverse leader trailer">Vereniging Eigen Huis is met ruim 700.000 leden een van de grootste ledenorganisaties in Nederland. De Vereniging is belangenbehartiger en dienstverlener in één. Een unieke positie die vraagt om effectief op te komen voor de belangen voor iedereen die een huis heeft of van plan is te kopen. Daarnaast is Vereniging Eigen Huis een partner voor alle sectoren die met huizenbouw te maken hebben en de politiek.</p>
         </div>
         <div class="hero__body seed__footer backdrop backdrop--body">
           <p class="leader trailer"><a class="button button--hero button--inverse" href="/cases/vereniging-eigen-huis/">Lees verder</a></p>
         </div>
-      </header>
+      </div>
       <div class="layout__cell layout__cell--main">
         <article class="pod--leopard isolation">
           <div class="pod__seed seed cover">
