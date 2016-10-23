@@ -59,6 +59,7 @@ html {
   font: #{$font-style} #{$font-variant} #{$font-weight} #{$font-size}/#{$line-height} #{$font-family};
   color: $color-body; /* 5 */
   text-size-adjust: 100%; /* 3 */
+  -webkit-text-size-adjust: 100%;
 }
 
 /* HTML5 display definitions

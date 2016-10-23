@@ -30,22 +30,6 @@ Styleguide 2.1
  */
 
 .layout {
-  display: flex;
-  flex-direction: column;
-  &__cell {
-    flex: 0 1 100%;
-    max-width: 100%; /* 2. */
-  }
-  &--reverse {
-    flex-direction: column-reverse
-  }
-  &--even {
-    flex: 0 0 auto !important;
-    max-width: 100%; /* 2. */
-  }
-  &--align-middle {
-    align-items: center;
-  }
   @include breakpoint($gt-large-handheld) {
     &__cell {
       &.wings {
@@ -55,6 +39,23 @@ Styleguide 2.1
     }
   }
   @include breakpoint($gt-small-desktop) {
+    display: flex;
+    flex-direction: column;
+    &__cell {
+      flex: 0 1 100%;
+      max-width: 100%; /* 2. */
+    }
+    &--reverse {
+      flex-direction: column-reverse
+    }
+    &--even {
+      flex: 0 0 auto !important;
+      max-width: 100%; /* 2. */
+    }
+    &--align-middle {
+      align-items: center;
+    }
+
     flex-direction: row;
     flex-wrap: wrap;
     &__cell {

@@ -204,7 +204,8 @@ html {
   color: #445D87;
   /* 5 */
   text-size-adjust: 100%;
-  /* 3 */ }
+  /* 3 */
+  -webkit-text-size-adjust: 100%; }
 
 /* HTML5 display definitions
    ========================================================================== */
@@ -727,41 +728,41 @@ Styleguide 2.1
  * 1. Allow containers to shrink and grow
  * 2. IE Fallback
  */
-.layout {
-  display: flex;
-  flex-direction: column; }
-  .layout__cell {
-    flex: 0 1 100%;
-    max-width: 100%;
-    /* 2. */ }
-  .layout--reverse {
-    flex-direction: column-reverse; }
-  .layout--even {
-    flex: 0 0 auto !important;
-    max-width: 100%;
-    /* 2. */ }
-  .layout--align-middle {
-    align-items: center; }
-  @media only screen and (min-width: 48em) {
-    .layout__cell.wings {
-      padding-left: 4.16667%;
-      padding-right: 4.16667%; } }
-  @media only screen and (min-width: 64em) {
-    .layout {
-      flex-direction: row;
-      flex-wrap: wrap; }
-      .layout__cell {
-        flex: 1 1 33.33333%;
-        min-width: 33.33333%; }
-        .layout__cell.wings {
-          padding-left: 2.77778%;
-          padding-right: 2.77778%; }
-      .layout__cell--main {
-        flex: 1 1 66.66667%;
-        min-width: 66.66667%; }
-        .layout__cell--main.wings {
-          padding-left: 4.16667%;
-          padding-right: 4.16667%; } }
+@media only screen and (min-width: 48em) {
+  .layout__cell.wings {
+    padding-left: 4.16667%;
+    padding-right: 4.16667%; } }
+
+@media only screen and (min-width: 64em) {
+  .layout {
+    display: flex;
+    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .layout__cell {
+      flex: 0 1 100%;
+      max-width: 100%;
+      /* 2. */ }
+    .layout--reverse {
+      flex-direction: column-reverse; }
+    .layout--even {
+      flex: 0 0 auto !important;
+      max-width: 100%;
+      /* 2. */ }
+    .layout--align-middle {
+      align-items: center; }
+    .layout__cell {
+      flex: 1 1 33.33333%;
+      min-width: 33.33333%; }
+      .layout__cell.wings {
+        padding-left: 2.77778%;
+        padding-right: 2.77778%; }
+    .layout__cell--main {
+      flex: 1 1 66.66667%;
+      min-width: 66.66667%; }
+      .layout__cell--main.wings {
+        padding-left: 4.16667%;
+        padding-right: 4.16667%; } }
 
 /* 2.2 Gutter */
 /*
@@ -2467,27 +2468,35 @@ Menu
 .menu.menu--home - Menu
 
 markup:
-<ol class="{$modifiers} list--reset fx bleed media" id="menu">
-  <li class="gutters meta meta--hero media__stretcher">
-    <a class="menu__home fx" href="javascript:void();"><span class="is-narrative">Home</span></a>
-    <a class="menu__item anchor--shy is-current is-active" href="javascript:void();">Cases</a>
-  </li>
-  <li><a class="menu__item anchor--shy meta meta--tiny fx" href="javascript:void();">Over Brickson</a></li>
-  <li><a class="menu__item anchor--shy meta meta--tiny fx is-active" href="javascript:void();">Cases</a></li>
-  <li><a class="menu__item anchor--shy meta meta--tiny fx" href="javascript:void();">Werken bij Brickson</a></li>
-</ol>
+  <ol class="{$modifiers} list--reset fx bleed" id="menu">
+    <li class="gutters meta meta--hero">
+      <a class="menu__home fx" href="/"><span class="is-narrative">Home</span></a>
+      <a class="menu__item anchor--reset anchor--shy is-current is-active" href="/over-brickson/#menu">Over Brickson</a>
+    </li>
+    <li><a class="menu__item anchor--shy meta meta--tiny fx is-active" href="/over-brickson/">Over Brickson</a></li>
+    <li><a class="menu__item anchor--shy meta meta--tiny fx" href="/cases/">Cases</a></li>
+    <li><a class="menu__item anchor--shy meta meta--tiny fx" href="/werken-bij-brickson/">Werken bij Brickson</a></li>
+  </ol>
 
 Styleguide 4.5
 */
-.menu {
-  white-space: nowrap;
+.navbar .menu {
   max-height: 48px;
   height: auto;
-  overflow: hidden; }
-  .menu li {
-    position: relative; }
-  .menu li, .menu__item {
+  overflow: hidden;
+  width: 100%; }
+  .navbar .menu li, .navbar .menu__item {
     display: block; }
+  .navbar .menu.is-active, .navbar .menu:target {
+    max-height: 192px; }
+  @media only screen and (min-width: 48em) {
+    .navbar .menu {
+      display: flex; }
+      .navbar .menu li:first-child {
+        flex: 1 1 100%; } }
+
+.menu {
+  white-space: nowrap; }
   .menu__home {
     display: block;
     float: left;
@@ -2499,11 +2508,7 @@ Styleguide 4.5
     .menu__home:hover {
       background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23445D87' fill-rule='evenodd' d='M23.247 42.848c-1.993 0-3.92-.293-5.74-.83l.066-.022c.717-.255 1.43-.56 2.148-.92.716-.358 1.39-.707 2.02-1.05.44-.236.806-.44 1.104-.61.182.14.4.236.645.236h.015c1.27-.02 2.502-.19 3.692-.473.83-.066 1.63-.256 2.393-.584.58-.248 1.106-.56 1.592-.92 5.466-2.885 9.223-8.623 9.223-15.18 0-9.46-7.698-17.156-17.158-17.156-.284 0-.54.115-.73.295-.246-.142-.52-.303-.827-.485-.63-.375-1.304-.734-2.02-1.074-.717-.34-1.425-.638-2.123-.895-.122-.044-.236-.08-.35-.117 1.912-.596 3.944-.918 6.05-.918 11.222 0 20.352 9.13 20.352 20.35 0 11.223-9.13 20.353-20.353 20.353M2.895 22.496c0-6.968 3.523-13.128 8.88-16.798-.147.437-.237.896-.237 1.395 0 .844.237 1.593.68 2.262-3.905 3.27-6.128 8.008-6.128 13.14 0 5.108 2.304 9.964 6.21 13.21-.5.698-.762 1.488-.762 2.38 0 .414.07.796.17 1.163-5.318-3.675-8.813-9.812-8.813-16.752m14.78-13.894c-.887.392-1.5.588-1.84.588-.58 0-1.075-.203-1.483-.614-.41-.408-.616-.903-.616-1.483 0-.578.206-1.083.616-1.51.408-.424.903-.638 1.483-.638.34 0 .953.197 1.84.59.887.39 1.91.912 3.068 1.558-1.16.613-2.18 1.117-3.07 1.51m5.524-.435h.82c1.055 0 2.062.203 3.017.613.953.41 1.78.966 2.48 1.663.7.7 1.253 1.517 1.663 2.455.408.94.614 1.934.614 2.99 0 1.06-.205 2.057-.613 2.994-.41.938-.964 1.756-1.662 2.454-.7.698-1.52 1.262-2.455 1.688-.94.427-1.936.64-2.992.64h-.206c-.408-.24-.912-.53-1.507-.87-.598-.34-1.228-.666-1.893-.972-.665-.307-1.313-.58-1.943-.818-.633-.24-1.17-.392-1.612-.46v-9.36c.51-.134 1.073-.34 1.688-.613.614-.273 1.21-.562 1.79-.87.578-.306 1.116-.594 1.61-.867l1.2-.665m9.413 18.36c-.923-1.058-1.98-1.843-3.173-2.353.273-.17.545-.358.818-.564.274-.203.53-.44.77-.715.952-.92 1.676-1.985 2.17-3.195.496-1.21.744-2.48.744-3.81 0-1.943-.504-3.683-1.49-5.228 3.528 2.75 5.81 7.026 5.81 11.834 0 3.91-1.535 7.483-4.02 10.167.065-.4.106-.807.106-1.227 0-1.84-.58-3.478-1.737-4.91M14.35 39.594c-.41-.427-.616-.93-.616-1.51 0-.577.206-1.072.616-1.482.408-.408.903-.612 1.483-.612.34 0 .953.197 1.84.59.887.39 1.91.893 3.068 1.506-1.16.648-2.18 1.17-3.07 1.56-.885.392-1.498.588-1.838.588-.58 0-1.075-.212-1.483-.64m.714-16.313c.41-.427.904-.64 1.484-.64.34 0 .954.196 1.84.588.888.393 1.91.912 3.07 1.56-1.16.648-2.182 1.16-3.07 1.533-.886.378-1.5.565-1.84.565-.58 0-1.074-.205-1.484-.613-.408-.41-.613-.904-.613-1.484s.205-1.082.613-1.51m-1.254-12.452c.298.165.61.31.948.41v9.666c-.715.375-1.304.894-1.764 1.56-.46.664-.69 1.44-.69 2.326 0 .852.23 1.62.69 2.302.46.682 1.05 1.193 1.764 1.533v5.37c-.28.073-.542.178-.793.297-3.598-2.837-5.732-7.2-5.732-11.794 0-4.583 2.03-8.803 5.577-11.67m13.29 26.16c-.175.016-.35.025-.528.025h-3.377c-.272-.17-.663-.39-1.174-.664l-1.637-.87c-.58-.306-1.176-.587-1.79-.844-.615-.255-1.177-.468-1.688-.64v-4.958c.51-.07 1.1-.24 1.764-.512.665-.274 1.337-.57 2.02-.896.682-.324 1.32-.656 1.918-.996.596-.342 1.066-.615 1.406-.818h2.558c.75 0 1.465.144 2.148.434.682.29 1.278.69 1.79 1.2.512.512.92 1.11 1.226 1.792.307.682.46 1.415.46 2.198 0 .785-.153 1.51-.46 2.174-.306.665-.714 1.252-1.226 1.764-.23.23-.482.43-.747.615-.847.413-1.738.746-2.664.995M23.248 0C10.843 0 .75 10.092.75 22.496c0 12.405 10.093 22.497 22.497 22.497 12.405 0 22.496-10.092 22.496-22.497C45.743 10.092 35.653 0 23.247 0'/%3E%3C/svg%3E"); }
   .menu__item {
-    width: 100%;
     padding: 16px 14px; }
-    .menu__item:hover, .menu__item.is-active {
-      color: #445D87;
-      max-height: 240px; }
   .menu .is-current {
     height: auto;
     display: inline-block;
@@ -2511,19 +2516,9 @@ Styleguide 4.5
     line-height: 1.33333;
     padding-left: 1ex;
     padding-right: 0; }
-  .menu.is-active, .menu:target {
-    max-height: 192px; }
-  @media only screen and (min-width: 32.5em) {
-    .menu {
-      display: flex; }
-      .menu__item {
-        position: static; }
-      .menu li, .menu__item {
-        display: inline-block; }
-      .menu--home .menu__item {
-        padding: 8px 28px; }
-      .menu--home li:first-child {
-        flex: 1 1 100%; } }
+  .menu .is-current,
+  .menu .is-active {
+    color: inherit !important; }
 
 /* 4.6 Case */
 /*
@@ -2932,6 +2927,9 @@ Styleguide 5.8
 @media only screen and (min-width: 48em) and (max-aspect-ratio: 6 / 5) {
   .invitation .grid__cell {
     height: 25vh; } }
+
+.invitation .menu__item {
+  padding: 8px 14px; }
 
 /* 5.9 Hero */
 /*

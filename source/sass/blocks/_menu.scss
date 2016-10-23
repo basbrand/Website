@@ -6,32 +6,43 @@ Menu
 .menu.menu--home - Menu
 
 markup:
-<ol class="{$modifiers} list--reset fx bleed media" id="menu">
-  <li class="gutters meta meta--hero media__stretcher">
-    <a class="menu__home fx" href="javascript:void();"><span class="is-narrative">Home</span></a>
-    <a class="menu__item anchor--shy is-current is-active" href="javascript:void();">Cases</a>
-  </li>
-  <li><a class="menu__item anchor--shy meta meta--tiny fx" href="javascript:void();">Over Brickson</a></li>
-  <li><a class="menu__item anchor--shy meta meta--tiny fx is-active" href="javascript:void();">Cases</a></li>
-  <li><a class="menu__item anchor--shy meta meta--tiny fx" href="javascript:void();">Werken bij Brickson</a></li>
-</ol>
+  <ol class="{$modifiers} list--reset fx bleed" id="menu">
+    <li class="gutters meta meta--hero">
+      <a class="menu__home fx" href="/"><span class="is-narrative">Home</span></a>
+      <a class="menu__item anchor--reset anchor--shy is-current is-active" href="/over-brickson/#menu">Over Brickson</a>
+    </li>
+    <li><a class="menu__item anchor--shy meta meta--tiny fx is-active" href="/over-brickson/">Over Brickson</a></li>
+    <li><a class="menu__item anchor--shy meta meta--tiny fx" href="/cases/">Cases</a></li>
+    <li><a class="menu__item anchor--shy meta meta--tiny fx" href="/werken-bij-brickson/">Werken bij Brickson</a></li>
+  </ol>
 
 Styleguide 4.5
 */
 
-
+.navbar {
+  .menu {
+    max-height: rhythm(12);
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+    li,
+    &__item {
+      display: block;
+    }
+    &.is-active,
+    &:target {
+      max-height: rhythm(48);
+    }
+    @include breakpoint($gt-large-handheld) {
+      display: flex;
+      li:first-child {
+        flex: 1 1 100%;
+      }
+    }
+  }
+}
 .menu {
   white-space: nowrap;
-  max-height: rhythm(12);
-  height: auto;
-  overflow: hidden;
-  li {
-    position: relative;
-  }
-  li,
-  &__item {
-    display: block;
-  }
   &__home {
     display: block;
     float: left;
@@ -45,13 +56,8 @@ Styleguide 4.5
     }
   }
   &__item {
-    width: 100%;
+    // width: 100%;
     padding: rhythm(4) gutter();
-    &:hover,
-    &.is-active {
-      color: $color-body;
-      max-height: rhythm(60);
-    }
   }
   .is-current {
     height: auto;
@@ -61,32 +67,8 @@ Styleguide 4.5
     padding-left: 1ex;
     padding-right: 0;
   }
-  &.is-active,
-  &:target {
-    max-height: rhythm(48);
-  }
-  @include breakpoint($gt-small-desktop) {
-    &__home {
-      // position: absolute;
-      // left: -100%;
-    }
-  }
-  @include breakpoint($gt-medium-handheld) {
-    display: flex;
-    &__item {
-      position: static;
-    }
-    li,
-    &__item {
-      display: inline-block;
-    }
-    &--home &__item {
-      padding: rhythm(2) gutter(1);
-    }
-    &--home {
-      li:first-child {
-        flex: 1 1 100%;
-      }
-    }
+  .is-current,
+  .is-active {
+    color: inherit !important;
   }
 }
