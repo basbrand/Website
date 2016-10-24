@@ -59,7 +59,7 @@ Styleguide 2.1
     flex-wrap: wrap;
     &__cell {
       flex: 1 1 percentage(12/36);
-      min-width: percentage(12/36);
+      max-width: percentage(12/36);
       &.wings {
         padding-left: percentage(1/36);
         padding-right: percentage(1/36);
@@ -67,7 +67,7 @@ Styleguide 2.1
     }
     &__cell--main {
       flex: 1 1 percentage(24/36);
-      min-width: percentage(24/36);
+      max-width: percentage(24/36);
       &.wings {
         padding-left: percentage(1/24);
         padding-right: percentage(1/24);

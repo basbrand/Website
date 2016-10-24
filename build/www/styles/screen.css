@@ -707,13 +707,13 @@ Styleguide 2.1
     flex-wrap: wrap; }
     .layout__cell {
       flex: 1 1 33.33333%;
-      min-width: 33.33333%; }
+      max-width: 33.33333%; }
       .layout__cell.wings {
         padding-left: 2.77778%;
         padding-right: 2.77778%; }
     .layout__cell--main {
       flex: 1 1 66.66667%;
-      min-width: 66.66667%; }
+      max-width: 66.66667%; }
       .layout__cell--main.wings {
         padding-left: 4.16667%;
         padding-right: 4.16667%; } }
@@ -2827,7 +2827,8 @@ Styleguide 5.7
   right: 0;
   z-index: 1;
   padding: 4px 8.33333%;
-  background: rgba(255, 255, 255, 0.8); }
+  background: rgba(255, 255, 255, 0.8);
+  /* @TODO in the designs this is aligned right, not in the middle. */ }
   .navigation img {
     display: block;
     /* Hack - isolate in image class */ }
@@ -2847,8 +2848,8 @@ Styleguide 5.7
       padding: 16px 4.16667%; } }
   @media only screen and (min-width: 90em) {
     .navigation {
-      padding: 16px 2.77778%;
-      right: 66.66667%; } }
+      right: 66.66667%;
+      padding: 16px 2.77778%; } }
 
 /* 5.8 Invitation */
 /*
