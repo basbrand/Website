@@ -1451,7 +1451,9 @@ Styleguide 3.7
   .list--float {
     *zoom: 1; }
   .list--float li {
-    float: left; }
+    float: left;
+    margin: 0 16px;
+    /* Float caused overlapping of list bullets */ }
 
 .list--tools__section {
   margin-top: 32pt; }
