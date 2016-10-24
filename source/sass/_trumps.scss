@@ -47,3 +47,18 @@
     }
   }
 }
+
+/* Edge's absolute position requires extra help */
+@supports (-ms-ime-align:auto) {
+  .quote {
+    &:before {
+      display: inline;
+    }
+  }
+}
+
+.quote {
+  &:before {
+    display: inline\9;
+  }
+}
