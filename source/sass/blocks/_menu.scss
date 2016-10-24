@@ -72,3 +72,15 @@ Styleguide 4.5
     color: inherit !important;
   }
 }
+
+/* IE 9 */
+@include breakpoint($gt-small-desktop) {
+  .navbar {
+    .menu {
+      display: inline\9;
+      li {
+        display: inline-block\9;
+      }
+    }
+  }
+}
