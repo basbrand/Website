@@ -40,6 +40,8 @@ Styleguide 5.7
   .menu {
     text-align: right;
   }
+
+  /* @TODO in the designs this is aligned right, not in the middle. */
   @include breakpoint($gt-large-handheld) {
     right: percentage(12/24);
     padding: rhythm(4) percentage(1/12);
@@ -48,7 +50,7 @@ Styleguide 5.7
     padding: rhythm(4) percentage(1/24);
   }
   @include breakpoint($gt-medium-desktop) {
-    padding: rhythm(4) percentage(1/36);
     right: percentage(24/36);
+    padding: rhythm(4) percentage(1/36);
   }
 }
