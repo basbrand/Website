@@ -149,3 +149,10 @@ Styleguide 5.6
     }
   }
 }
+
+
+/* @TODO Box-shadow right side of post__main in light blue to fix flex dependency in IE 9-10-11 */
+
+.post__main + .well--stork {
+  box-shadow: 0 999px 0 0 #d3eaec;
+}
