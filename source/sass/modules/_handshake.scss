@@ -51,17 +51,18 @@ Styleguide 5.1
     .tile {
       width: percentage(6/12);
     }
+    .tile + .tile {
+      min-height: 0;
+    }
+    .pod__seed.tile {
+      width: 100%;
+    }
     .brand {
         height: px-to-pt( rhythm(22) );
     }
   }
   @include breakpoint("#{$gt-medium-desktop} and (min-aspect-ratio: 6/5)") {
-    .tile {
-      width: percentage(6/12);
-    }
-    .pod__seed.tile {
-      width: 100%;
-    }
+
     .brand {
         height: px-to-pt( rhythm(24) );
     }

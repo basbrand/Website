@@ -2577,14 +2577,14 @@ Styleguide 5.1
 @media only screen and (min-width: 64em) and (min-aspect-ratio: 6 / 5) {
   .handshake .tile {
     width: 50%; }
+  .handshake .tile + .tile {
+    min-height: 0; }
+  .handshake .pod__seed.tile {
+    width: 100%; }
   .handshake .brand {
     height: 88pt; } }
 
 @media only screen and (min-width: 90em) and (min-aspect-ratio: 6 / 5) {
-  .handshake .tile {
-    width: 50%; }
-  .handshake .pod__seed.tile {
-    width: 100%; }
   .handshake .brand {
     height: 96pt; } }
 

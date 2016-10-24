@@ -19,7 +19,7 @@
     <!--[if IE 9]></video><![endif]-->
     <img class="cover__image" src="/images/content/w320px_h576px--handshake.jpg" alt="">
   </picture>
-  <div class="pod__seed backdrop--body tile">
+  <div class="pod__seed backdrop tile">
     <div class="tile">
       <h1 class="brand brand--inverse brand--hero leader trailer"><span class="is-narrative">Brickson • Amsterdam – Den Bosch</span></h1>
     </div>
