@@ -47,3 +47,11 @@ Styleguide 3.18
     font: normal normal 4em/0 Arial, Helvetica, Gadget, sans-serif;
   }
 }
+
+@include breakpoint($msie) {
+  .quote {
+    &:before {
+      top: rhythm(-12);
+    }
+  }
+}

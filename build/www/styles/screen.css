@@ -1904,6 +1904,10 @@ Styleguide 3.18
   .quote:before, .quote:after {
     font: normal normal 4em/0 Arial, Helvetica, Gadget, sans-serif; }
 
+@media only screen and (-ms-high-contrast: active) and (-ms-high-contrast: none) {
+  .quote:before {
+    top: -48px; } }
+
 /* 3.19 Backdrop */
 /*
 Backdrop
