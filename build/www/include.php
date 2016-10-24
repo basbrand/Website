@@ -17,8 +17,10 @@ $gt_medium_desktop = "(min-width: 1440px)";
 $lt_large_desktop = "(max-width: 1599px)";
 $gt_large_desktop = "(min-width: 1600px)";
 
-$portrait = "(orientation: portrait)";
-$landscape = "(orientation: landscape)";
+// $portrait = "(orientation: portrait)";
+// $landscape = "(orientation: landscape)";
+$portrait = "(max-aspect-ratio: 6/5)";
+$landscape = "(min-aspect-ratio: 6/5)";
 
 $extension = pathinfo($_SERVER['SERVER_NAME'], PATHINFO_EXTENSION);
 $analytics_code = '';

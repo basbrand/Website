@@ -2,22 +2,15 @@
   <picture class="cover__image">
     <!--[if IE 9]><video style="display: none;"><![endif]-->
     <source
-      media="<?php echo $gt_medium_desktop; ?> and <?php echo $landscape; ?>"
-      srcset="/images/content/w1675px_h640px--handshake.jpg 1280w, /images/content/w1675px_h640px--handshake.jpg 2560w">
+      media="<?php echo $landscape; ?>"
+      sizes="<?php echo $gt_medium_desktop; ?> 34vw, 100vw"
+      srcset="/images/content/w785px_h320px_3x--handshake.jpg 2355w, /images/content/w785px_h320px_2x--handshake.jpg 1570w, /images/content/w785px_h320px--handshake.jpg 2560w">
     <source
-      media="<?php echo $gt_small_desktop; ?> and <?php echo $landscape; ?>"
-      srcset="/images/content/w683px_h1024px--handshake.jpg 683w, /images/content/w683px_h1024px_2x--handshake.jpg 1366w">
-    <source
-      media="<?php echo $gt_large_handheld; ?> and <?php echo $portrait; ?>"
-      srcset="/images/content/w896px_h640px--handshake.jpg 896w, /images/content/w896px_h640px_2x--handshake.jpg 1792w">
-    <source
-      media="<?php echo $gt_medium_handheld; ?> and <?php echo $landscape; ?>"
-      srcset="/images/content/w1022px_h520px--handshake.jpg 1022w, /images/content/w1022px_h520px_2x--handshake.jpg 2044w">
-    <source
-      media="<?php echo $gt_small_handheld; ?> and <?php echo $portrait; ?>"
-      srcset="/images/content/w520px_h1022px--handshake.jpg 520w, /images/content/w520px_h1022px_2x--handshake.jpg 1040w">
+      media="<?php echo $portrait; ?>"
+      sizes="<?php echo $gt_large_handheld; ?> 50vw, 100vw"
+      srcset="/images/content/w320px_h785px_3x--handshake.jpg 960w, /images/content/w320px_h785px_2x--handshake.jpg 640w, /images/content/w320px_h785px--handshake.jpg 320w">
     <!--[if IE 9]></video><![endif]-->
-    <img class="cover__image" src="/images/content/w320px_h576px--handshake.jpg" alt="">
+    <img class="cover__image" src="/images/content/w785px_h320px_2x--handshake.jpg" alt="">
   </picture>
   <div class="pod__seed backdrop tile">
     <div class="tile">

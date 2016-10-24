@@ -14,7 +14,10 @@
     <p class="tile leader trailer"><a class="button button--stretch" href="mailto:vooruit@brickson.nl?subject='Vooruit%20met%20Brickson'">Klaar voor de volgende stap?</a></p>
   </div>
   <div class="pod__seed tile cover isolation isolation--quad">
-    <img class="cover__image" src="http://static.zoom.nl/257F37719675390EAE458D3245085582-ijburg-brug-amsterdam.jpg">
+    <img
+      sizes="<?php echo $gt_large_handheld; ?> 50vw, <?php echo $gt_medium_desktop; ?> 34vw, 100vw"
+      srcset="/images/content/w414px_h414px_3x--invitation.jpg 1242w, /images/content/w414px_h414px_2x--invitation.jpg 828w, /images/content/w414px_h414px--invitation.jpg 414w"
+      class="cover__image" src="/images/content/w414px_h414px_2x--invitation.jpg" alt="">
     <ul class="grid">
       <li class="grid__cell tile tile--focus wellwell--ostrich backdrop backdrop--body">
         <p class="gutters leader trailer"><strong class="meta meta--inverse meta--hero">Ontdekken</strong></p>

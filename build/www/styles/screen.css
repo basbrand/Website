@@ -1635,12 +1635,12 @@ Styleguide 3.9
         height: 68pt; }
       .brand--hero {
         height: 88pt; } }
-  @media (orientation: landscape) and (min-width: 64em) {
+  @media (max-aspect-ratio: 6 / 5) and (min-width: 64em) {
     .brand--ams, .brand--dnb {
       height: 72pt; }
     .brand--hero {
       height: 132pt; } }
-  @media (orientation: landscape) and (min-width: 90em) {
+  @media (max-aspect-ratio: 6 / 5) and (min-width: 90em) {
     .brand--ams, .brand--dnb {
       height: 80pt; }
     .brand--hero {
@@ -1834,14 +1834,14 @@ Styleguide 3.17
     height: 100%;
     min-width: 100%;
     min-height: 100%; }
-  @media only screen and (orientation: portrait) {
+  @media only screen and (max-aspect-ratio: 6 / 5) {
     .cover--hero .cover__image {
       width: 100%;
       height: auto;
       min-height: 0;
       top: auto;
       bottom: 0; } }
-  @media only screen and (orientation: landscape) {
+  @media only screen and (max-aspect-ratio: 6 / 5) {
     .cover--hero .cover__image {
       height: auto;
       max-height: 100%;
@@ -1849,14 +1849,14 @@ Styleguide 3.17
       right: 0;
       top: auto;
       bottom: 0; } }
-  @media only screen and (orientation: landscape) and (min-aspect-ratio: 16 / 9) {
+  @media only screen and (max-aspect-ratio: 6 / 5) and (min-aspect-ratio: 16 / 9) {
     .cover--hero .cover__image {
       top: auto;
       bottom: 0; } }
   @media only screen and (min-aspect-ratio: 16 / 9) {
     .cover--hero .cover__image {
       height: 100%; } }
-  @media only screen and (orientation: portrait) {
+  @media only screen and (max-aspect-ratio: 6 / 5) {
     .cover--hero .cover__image {
       max-width: none; } }
 
@@ -1958,9 +1958,10 @@ Styleguide 3.99
   /* IE pushed the text to the bottom of the page without this */ }
 
 [data-collection] {
-  background-color: white;
+  z-index: -1;
   position: relative;
-  z-index: -1; }
+  top: 0;
+  background-color: white; }
 
 .is-root {
   position: relative; }
@@ -2641,13 +2642,6 @@ markup:
 
 Styleguide 5.3
 */
-@media only screen and (min-width: 90em) {
-  .introduction {
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 1; } }
-
 /* 5.4 Contact */
 /*
 Contact
@@ -2962,7 +2956,7 @@ Styleguide 5.9
   @media only screen and (min-width: 32.5em) {
     .hero__header, .hero__body, .hero__footer {
       padding: 0 8.33333%; } }
-  @media (orientation: portrait) and (min-width: 48em) {
+  @media (max-aspect-ratio: 6 / 5) and (min-width: 48em) {
     .post .hero {
       min-height: 50%;
       min-height: 50vh; } }
@@ -3161,40 +3155,13 @@ markup:
 Styleguide 7.3
 */
 /* 8. */
-@media only screen and (min-width: 64em) and (max-width: 89.9375em) and (orientation: landscape) {
-  .trump-landingpage {
-    display: flex;
-    flex-wrap: wrap; }
-    .trump-landingpage .handshake,
-    .trump-landingpage .invitation {
-      flex-basis: 50%;
-      width: 50%;
-      min-height: 100%;
-      min-height: 100vh; }
-      .trump-landingpage .handshake .pod__seed,
-      .trump-landingpage .invitation .pod__seed {
-        width: 100%;
-        min-height: 50%;
-        min-height: 50vh; }
-    .trump-landingpage .handshake .tile {
-      width: 100%;
-      flex-grow: 1; }
-    .trump-landingpage .handshake .tile + .tile {
-      flex-grow: 0; }
-    .trump-landingpage .handshake .brand {
-      background-position: center; }
-    .trump-landingpage .introduction,
-    .trump-landingpage .testimonial {
-      flex-basis: 100%;
-      width: 100%;
-      min-height: 50%;
-      min-height: 50vh; } }
-
-@media (orientation: landscape) and (min-width: 90em) {
-  .trump-landingpage {
-    display: block; }
-    .trump-landingpage .handshake .tile {
-      min-height: 0; } }
+@media only screen and (min-width: 90em) {
+  .introduction {
+    position: relative;
+    margin-bottom: -100%;
+    top: -100%;
+    top: -100vh;
+    float: right; } }
 
 /*
  * brrrrrrrrrr

@@ -18,6 +18,12 @@ Styleguide 3.99
 	left: -999em;
 	top: -999em; /* IE pushed the text to the bottom of the page without this */
 }
+[data-collection] {
+	z-index: -1;
+	position: relative;
+	top: 0;
+	background-color: white;
+}
 .is-root {
 	position: relative;
 }
