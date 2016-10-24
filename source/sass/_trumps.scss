@@ -52,9 +52,9 @@
 @include breakpoint($gt-medium-desktop) {
   .introduction {
     position: relative;
-    margin-bottom: -100%;
-    top: -100%;
-    top: -100vh;
+    margin-bottom: -50%;
+    top: -50%;
+    top: -50vh;
     float: right;
   }
 }

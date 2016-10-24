@@ -89,31 +89,31 @@ Styleguide 3.7
     }
 
   }
-  &--discover {
+  &--challenge {
     li {
       &:before {
-        background: $color-coral; /* or whatever color you prefer */
+        background: $color-challenge; /* or whatever color you prefer */
       }
     }
   }
-  &--concept {
+  &--discover {
     li {
       &:before {
-        background: $color-green; /* or whatever color you prefer */
+        background: $color-discover; /* or whatever color you prefer */
       }
     }
   }
   &--design {
     li {
       &:before {
-        background: $color-yellow; /* or whatever color you prefer */
+        background: $color-design; /* or whatever color you prefer */
       }
     }
   }
   &--build {
     li {
       &:before {
-        background: $color-teal; /* or whatever color you prefer */
+        background: $color-build; /* or whatever color you prefer */
       }
     }
   }

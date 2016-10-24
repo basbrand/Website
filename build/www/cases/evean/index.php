@@ -53,7 +53,7 @@
       </header>
       <div class="post__main isolation">
         <div class="wings">
-          <nav class="trail meta leader--tiny trailer bleed">
+          <nav class="trail meta leader trailer bleed">
             <ol class="list--reset list--inline">
               <li><a class="anchor--shy" href="/cases/">Cases</a></li>
               <li><a class="anchor--reset anchor--shy" href="/cases/vereniging-eigen-huis">Evean</a></li>

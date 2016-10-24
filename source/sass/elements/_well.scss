@@ -23,10 +23,22 @@ Styleguide 3.16
   &--stork {
     color: $color-body;
   }
+  &--dove {
+    background-color: $white;
+  }
   &--stork {
     background-color: mix($color-teal, $white, 26%);
   }
-  &--dove {
-    background-color: $white;
+  &--challenge {
+    background-color: mix($color-challenge, $white, 100%);
+  }
+  &--discover {
+    background-color: mix($color-discover, $white, 100%);
+  }
+  &--design {
+    background-color: mix($color-design, $white, 100%);
+  }
+  &--build {
+    background-color: mix($color-build, $white, 100%);
   }
 }

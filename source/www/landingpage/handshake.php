@@ -1,4 +1,4 @@
-<section class="pod pod--kudu pod--rhino handshake cover tile isolation" data-collection="default" style="height: 50vh;">
+<section class="pod pod--kudu pod--rhino handshake cover tile isolation" data-collection="default">
   <picture class="cover__image">
     <!--[if IE 9]><video style="display: none;"><![endif]-->
     <source
@@ -12,7 +12,7 @@
     <!--[if IE 9]></video><![endif]-->
     <img class="cover__image" src="/images/content/w785px_h320px_2x--handshake.jpg" alt="">
   </picture>
-  <div class="pod__seed backdrop tile">
+  <div class="pod__seed tile">
     <div class="tile">
       <h1 class="brand brand--inverse brand--hero leader trailer"><span class="is-narrative">Brickson • Amsterdam – Den Bosch</span></h1>
     </div>

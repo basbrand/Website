@@ -1164,6 +1164,11 @@ Styleguide 3.2
     font-size: 1.125em;
     line-height: 1.77778; } }
 
+@media only screen and (min-width: 48em) {
+  .lead {
+    font-size: 1.25em;
+    line-height: 1.8; } }
+
 /* 3.3 Headline */
 /*
 Title
@@ -1525,20 +1530,20 @@ Styleguide 3.7
   .list--tools li:nth-child(1):after {
     opacity: 0.05; }
 
-.list--discover li:before {
-  background: #E94E2C;
+.list--challenge li:before {
+  background: #EC6839;
   /* or whatever color you prefer */ }
 
-.list--concept li:before {
-  background: #63B452;
+.list--discover li:before {
+  background: #A8639A;
   /* or whatever color you prefer */ }
 
 .list--design li:before {
-  background: #F39200;
+  background: #FBBC43;
   /* or whatever color you prefer */ }
 
 .list--build li:before {
-  background: #57B0B6;
+  background: #27ABBF;
   /* or whatever color you prefer */ }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -1783,10 +1788,18 @@ Styleguide 3.16
     background-color: #57B0B6; }
   .well--dove, .well--stork {
     color: #445D87; }
-  .well--stork {
-    background-color: #d3eaec; }
   .well--dove {
     background-color: #ffffff; }
+  .well--stork {
+    background-color: #d3eaec; }
+  .well--challenge {
+    background-color: #ec6839; }
+  .well--discover {
+    background-color: #a8639a; }
+  .well--design {
+    background-color: #fbbc43; }
+  .well--build {
+    background-color: #27abbf; }
 
 /* 3.17 Cover */
 /*
@@ -2953,6 +2966,9 @@ Styleguide 5.9
     justify-content: center; }
   .hero__header {
     text-align: right; }
+  .hero--beta {
+    min-height: 50%;
+    min-height: 50vh; }
   @media only screen and (min-width: 32.5em) {
     .hero__header, .hero__body, .hero__footer {
       padding: 0 8.33333%; } }
@@ -3158,9 +3174,9 @@ Styleguide 7.3
 @media only screen and (min-width: 90em) {
   .introduction {
     position: relative;
-    margin-bottom: -100%;
-    top: -100%;
-    top: -100vh;
+    margin-bottom: -50%;
+    top: -50%;
+    top: -50vh;
     float: right; } }
 
 /*

@@ -3,7 +3,7 @@
 <html lang="nl">
   <head>
     <meta charset="UTF-8">
-    <title>Brickson</title>
+    <title>Ontdekken - Analysis &amp; Challenge | Brickson</title>
     <meta name="description" content="Brickson is er voor organisaties die de volgende stap in digitaal willen maken. Werken met Brickson betekent samen ontdekken, bedenken, ontwerpen of bouwen."/>
     <?php include '../head.php'; ?>
   </head>
@@ -30,27 +30,20 @@
         </video>
       </div>
       <div class="hero__body seed__body backdrop">
-        <h1 class="post__title title--inverse leader trailer">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit</h1>
-        <p class="post__lead body--inverse leader trailer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+        <h1 class="post__title title--inverse leader trailer">Ontdek je digitale kansen</h1>
+        <p class="post__lead body--inverse leader trailer">Onze ervaren ontdekkers laten zien waar jouw kansen voor digitale innovatie ligt. We helpen je belangrijke signalen herkennen, de uitdaging voor je organisatie te benoemen en je prioriteiten te definiëren.</p>
       </div>
     </header>
       <div class="post__main isolation">
         <div class="wings">
           <nav class="trail meta leader--tiny trailer bleed">
             <ol class="list--reset list--inline">
-              <li><a class="anchor--shy" href="/cases/">Over Brickson</a></li>
+              <li><a class="anchor--shy" href="/cases/">Ontdekken</a></li>
             </ol>
           </nav>
-          <h2>Lorem Ipsum Dolor Sit Amet</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
-          <h2>Lorem Ipsum Dolor Sit Amet</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
-          <h2>Lorem Ipsum Dolor Sit Amet</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
-          <h2>Lorem Ipsum Dolor Sit Amet</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
-          <h2>Lorem Ipsum Dolor Sit Amet</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+          <p>Het speelt binnen iedere organisatie: waardevolle signalen van klanten blijven onopgemerkt en de verandering van de markt wordt genegeerd. Het is complex om overzicht te houden; de digitale ontwikkelingen vliegen je om de oren en de waan van de dag regeert.</p>
+          <h2>Definieer je uitdaging</h2>
+          <p>Wil je de transitie maken binnen de eerste fase van internet: informatie, services en collaboratie? Of wil je of de stap maken naar de tweede fase van digitale dienstverlening: internet of things, big data, en blockchain?</p>
         </div>
         <footer class="well seed wings leader--hero">
           <h3 class="seed__title title--section leader trailer"><strong>Het resultaat</strong></h3>

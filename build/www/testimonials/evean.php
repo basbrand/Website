@@ -1,4 +1,4 @@
-<section class="pod pod--serval pod--rhino cover isolation backdrop">
+<section class="pod pod--serval pod--rhino cover isolation backdrop" data-collection="default">
   <picture class="cover__image">
     <!--[if IE 9]><video style="display: none;"><![endif]-->
     <source

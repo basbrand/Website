@@ -5,7 +5,7 @@
       <p class="leader trailer">Brickson is er voor ambitieuze merken in traditionele markten. Wij helpen ze om relevant te blijven en meer voor klanten te betekenen. Succesvolle merken kijken vooruit en stellen zich de vraag: hoe maak ik mijn klant blijer, gezonder en welvarender?</p>
     </div>
   </div>
-  <div class="pod__seed tile cover isolation">
+  <div class="pod__seed tile cover backdrop isolation">
     <img
       sizes="<?php echo $gt_large_handheld; ?> 50vw, <?php echo $gt_medium_desktop; ?> 34vw, 100vw"
       srcset="/images/content/w414px_h414px_3x--clients.jpg 1242w, /images/content/w414px_h414px_2x--clients.jpg 828w, /images/content/w414px_h414px--clients.jpg 414w"
