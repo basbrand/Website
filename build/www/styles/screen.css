@@ -1639,12 +1639,12 @@ Styleguide 3.9
         height: 68pt; }
       .brand--hero {
         height: 88pt; } }
-  @media (max-aspect-ratio: 6 / 5) and (min-width: 64em) {
+  @media (min-aspect-ratio: 6 / 5) and (min-width: 64em) {
     .brand--ams, .brand--dnb {
       height: 72pt; }
     .brand--hero {
       height: 132pt; } }
-  @media (max-aspect-ratio: 6 / 5) and (min-width: 90em) {
+  @media (min-aspect-ratio: 6 / 5) and (min-width: 90em) {
     .brand--ams, .brand--dnb {
       height: 80pt; }
     .brand--hero {
@@ -1834,18 +1834,25 @@ Styleguide 3.17
 .cover {
   position: relative;
   overflow: hidden;
-  background-color: transparent !important; }
+  background-color: transparent !important;
+  color: #ffffff;
+  box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #ffffff; }
   .cover__image {
     background-color: #FFF;
     object-fit: cover;
     position: absolute;
-    left: 0;
-    top: 0;
     z-index: -1;
     width: auto;
-    height: 100%;
     min-width: 100%;
     min-height: 100%; }
+  @media only screen and (max-aspect-ratio: 6 / 5) {
+    .cover__image {
+      bottom: 0;
+      top: auto; } }
+  @media only screen and (min-aspect-ratio: 6 / 5) {
+    .cover__image {
+      right: 0;
+      left: auto; } }
   @media only screen and (max-aspect-ratio: 6 / 5) {
     .cover--hero .cover__image {
       width: 100%;
@@ -1853,7 +1860,7 @@ Styleguide 3.17
       min-height: 0;
       top: auto;
       bottom: 0; } }
-  @media only screen and (max-aspect-ratio: 6 / 5) {
+  @media only screen and (min-aspect-ratio: 6 / 5) {
     .cover--hero .cover__image {
       height: auto;
       max-height: 100%;
@@ -1861,16 +1868,6 @@ Styleguide 3.17
       right: 0;
       top: auto;
       bottom: 0; } }
-  @media only screen and (max-aspect-ratio: 6 / 5) and (min-aspect-ratio: 16 / 9) {
-    .cover--hero .cover__image {
-      top: auto;
-      bottom: 0; } }
-  @media only screen and (min-aspect-ratio: 16 / 9) {
-    .cover--hero .cover__image {
-      height: 100%; } }
-  @media only screen and (max-aspect-ratio: 6 / 5) {
-    .cover--hero .cover__image {
-      max-width: none; } }
 
 /* 3.18 Quote */
 /*
@@ -3196,6 +3193,10 @@ Styleguide 7.3
 
 .quote:before {
   display: inline\9; }
+
+@media (max-aspect-ratio: 6 / 5) and (min-width: 48em) {
+  .pod--kudu .cover__image {
+    right: 0; } }
 
 /*
  * brrrrrrrrrr

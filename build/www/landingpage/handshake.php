@@ -2,7 +2,7 @@
   <picture class="cover__image">
     <!--[if IE 9]><video style="display: none;"><![endif]-->
     <source
-      media="<?php echo $landscape; ?>"
+      media="<?php echo $landscape; ?>, <?php echo $gt_large_handheld; ?> and <?php echo $portrait; ?>"
       sizes="<?php echo $gt_medium_desktop; ?> 34vw, 100vw"
       srcset="/images/content/w785px_h320px_3x--handshake.jpg 2355w, /images/content/w785px_h320px_2x--handshake.jpg 1570w, /images/content/w785px_h320px--handshake.jpg 2560w">
     <source

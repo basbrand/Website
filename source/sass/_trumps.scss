@@ -73,3 +73,9 @@
     display: inline\9;
   }
 }
+
+@include breakpoint($gt-large-handheld,$portrait) {
+  .pod--kudu .cover__image {
+    right: 0;
+  }
+}
