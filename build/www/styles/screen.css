@@ -1834,9 +1834,7 @@ Styleguide 3.17
 .cover {
   position: relative;
   overflow: hidden;
-  background-color: transparent !important;
-  color: #ffffff;
-  box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #ffffff; }
+  background-color: transparent !important; }
   .cover__image {
     background-color: #FFF;
     object-fit: cover;
