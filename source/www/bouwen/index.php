@@ -56,7 +56,7 @@
             <li>Altijd digitaal contact;</li>
           </ul>
         </div>
-        <footer class="well seed wings leader--hero">
+        <footer class="well well--build seed wings leader--hero">
           <h3 class="seed__header title--section leader"><strong>Het resultaat</strong></h3>
           <div class="seed__body">
             <h2>Digitale oplossingen voor de toekomst</h2>
@@ -67,24 +67,12 @@
           </div>
         </footer>
       </div>
-      <aside class="post__aside well well--build isolation seed">
+      <aside class="post__aside well well--build--stork isolation seed">
         <div class="wings seed__body">
 
-          <h3 class="meta meta--inverse leader trailer">Onze producten</h3>
-          <ul>
-            <li>Onze producten:</li>
-            <li>Touchpoint matrix</li>
-            <li>User Scenario’s</li>
-            <li>Use Cases</li>
-            <li>Customer journey maps</li>
-            <li>Informatie architectuur</li>
-            <li>Functioneel ontwerp</li>
-            <li>Interactieontwerp</li>
-            <li>Flow-chart</li>
-            <li>Wireframes</li>
-            <li>Mockups</li>
-            <li>Interactive prototype</li>
-            <li>Digital style guide</li>
+          <h3 class="meta leader trailer">Onze producten</h3>
+          <ul class="list">
+
           </ul>
 
           <hr class="divider leader--giant trailer">
@@ -93,10 +81,10 @@
             <blockquote class="quote leader--hero leader--hero trailer"><p>Digital leadership begint met goed te kijken naar je markt en te praten met je klanten.</p></blockquote>
             <figure class="person bleed leader trailer">
               <span class="person__picture gutters">
-                <img src="/images/heads/marja_smits.jpg" class="person__image" width="56" height="56" style="background: Grey;">
+                <img src="/images/heads/ronald_willems.jpg" class="person__image" width="56" height="56" style="background: Grey;">
               </span>
               <figcaption class="person__body">
-                <a href="mailto:babs@brickson.nl" class="anchor--shy anchor--reset person__name meta">Babs Gösgens</a><br>
+                <a href="mailto:ronald@brickson.nl" class="anchor--shy anchor--reset person__name meta">Ronald Willems</a><br>
                 <small class="person__occupation">Partner bij Brickson</small><br>
               </figcaption>
             </figure>

@@ -19,10 +19,6 @@ Styleguide 3.16
   &--ostrich {
     background-color: $color-teal;
   }
-  &--dove,
-  &--stork {
-    color: $color-body;
-  }
   &--dove {
     background-color: $white;
   }
@@ -32,7 +28,8 @@ Styleguide 3.16
   &--challenge {
     background-color: mix($color-challenge, $white, 100%);
   }
-  &--discover {
+  &--discover,
+  &--concept {
     background-color: mix($color-discover, $white, 100%);
   }
   &--design {
@@ -40,5 +37,27 @@ Styleguide 3.16
   }
   &--build {
     background-color: mix($color-build, $white, 100%);
+  }
+  &--challenge--stork {
+    background-color: mix($color-challenge, $white, 26%);
+  }
+  &--discover--stork,
+  &--concept--stork {
+    background-color: mix($color-discover, $white, 26%);
+  }
+  &--design--stork {
+    background-color: mix($color-design, $white, 26%);
+  }
+  &--build--stork {
+    background-color: mix($color-build, $white, 26%);
+  }
+  &--dove,
+  &--stork,
+  &--challenge--stork,
+  &--discover--stork,
+  &--concept--stork,
+  &--design--stork,
+  &--build--stork {
+    color: $color-body;
   }
 }

@@ -100,7 +100,7 @@
           <blockquote class="quote leader--hero leader--hero trailer"><p>Never say no when a client asks for something, even if it is the moon. You can always try, and anyhow there is plenty of time afterwards to explain that it was not possible.</p></blockquote>
           <figure class="person bleed leader trailer">
             <span class="person__picture gutters">
-              <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAevAAAAJDAzZDg2NjJhLTBjZmYtNDMyNC04OGM1LWM3MTA0M2UyNWE2Yg.jpg" class="person__image" width="56" height="56" style="background: Grey;">
+              <img src="/images/heads/stef_heutink.jpg" class="person__image" width="56" height="56" style="background: Grey;">
             </span>
             <figcaption class="person__body">
               <a href="mailto:stef@brickson.nl" class="anchor--shy person__name meta">Stef Heutink</a><br>

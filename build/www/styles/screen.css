@@ -1785,20 +1785,28 @@ Styleguide 3.16
   color: #ffffff; }
   .well--ostrich {
     background-color: #57B0B6; }
-  .well--dove, .well--stork {
-    color: #445D87; }
   .well--dove {
     background-color: #ffffff; }
   .well--stork {
     background-color: #d3eaec; }
   .well--challenge {
     background-color: #ec6839; }
-  .well--discover {
+  .well--discover, .well--concept {
     background-color: #a8639a; }
   .well--design {
     background-color: #fbbc43; }
   .well--build {
     background-color: #27abbf; }
+  .well--challenge--stork {
+    background-color: #fad8cc; }
+  .well--discover--stork, .well--concept--stork {
+    background-color: #e8d6e5; }
+  .well--design--stork {
+    background-color: #feeece; }
+  .well--build--stork {
+    background-color: #c7e9ee; }
+  .well--dove, .well--stork, .well--challenge--stork, .well--discover--stork, .well--concept--stork, .well--design--stork, .well--build--stork {
+    color: #445D87; }
 
 /* 3.17 Cover */
 /*
@@ -2428,18 +2436,18 @@ Styleguide 4.3
   .person__picture, .person__body {
     display: table-cell;
     vertical-align: middle;
-    line-height: 12pt; }
+    line-height: 12px; }
   .person__image {
     outline: 1px solid;
-    width: 40pt;
-    height: 40pt; }
+    width: 48px;
+    height: 48px; }
   .person--s .person__image {
-    width: 32pt;
-    height: 32pt; }
+    width: 40px;
+    height: 40px; }
   @media only screen and (min-width: 64em) {
     .person__image {
-      width: 48pt;
-      height: 48pt; } }
+      width: 56px;
+      height: 56px; } }
 
 /* 4.4 Trail */
 /*

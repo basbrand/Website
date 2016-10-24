@@ -49,7 +49,7 @@
             <li>Herken frisse geluiden door samen te werken met medewerkers</li>
           </ul>
         </div>
-        <footer class="well seed wings leader--hero">
+        <footer class="well well--discover seed wings leader--hero">
           <h3 class="seed__header title--section leader"><strong>Het resultaat</strong></h3>
           <div class="seed__body">
             <h2>Challenge accepted</h2>
@@ -67,10 +67,10 @@
           </div>
         </footer>
       </div>
-      <aside class="post__aside well well--discover isolation seed">
+      <aside class="post__aside well well--discover--stork isolation seed">
         <div class="wings seed__body">
 
-          <h3 class="meta meta--inverse leader trailer">Onze producten</h3>
+          <h3 class="meta leader trailer">Onze producten</h3>
           <ul>
             <li>Klantprofiel</li>
             <li>Markt analyse</li>
@@ -80,7 +80,7 @@
             <li>Concurrentie analyse</li>
           </ul>
 
-          <h3 class="meta meta--inverse leader trailer">Zet Brickson in bij</h3>
+          <h3 class="meta leader trailer">Zet Brickson in bij</h3>
           <ul>
             <li>Strategievorming</li>
             <li>Visievorming</li>
@@ -88,7 +88,7 @@
             <li>Business cases</li>
           </ul>
 
-          <h3 class="meta meta--inverse leader trailer">Voor (wegstrepen)</h3>
+          <h3 class="meta leader trailer">Voor (wegstrepen)</h3>
           <ul>
             <li>Business consultants</li>
             <li>ICT managers</li>
@@ -112,7 +112,7 @@
             <blockquote class="quote leader--hero leader--hero trailer"><p>Digital leadership begint met goed te kijken naar je markt en te praten met je klanten.</p></blockquote>
             <figure class="person bleed leader trailer">
               <span class="person__picture gutters">
-                <img src="/images/heads/marja_smits.jpg" class="person__image" width="56" height="56" style="background: Grey;">
+                <img src="/images/heads/stef_heutink.jpg" class="person__image" width="56" height="56" style="background: Grey;">
               </span>
               <figcaption class="person__body">
                 <a href="mailto:stef@brickson.nl" class="anchor--shy person__name meta">Stef Heutink</a><br>

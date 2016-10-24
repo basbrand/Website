@@ -50,7 +50,7 @@
             <li>Continue user testing;</li>
           </ul>
         </div>
-        <footer class="well seed wings leader--hero">
+        <footer class="well well--design seed wings leader--hero">
           <h3 class="seed__header title--section leader"><strong>Het resultaat</strong></h3>
           <div class="seed__body">
             <h2>Voor apps, websites, portalen en applicaties</h2>
@@ -66,12 +66,11 @@
           </div>
         </footer>
       </div>
-      <aside class="post__aside well well--design isolation seed">
+      <aside class="post__aside well well--design--stork isolation seed">
         <div class="wings seed__body">
 
-          <h3 class="meta meta--inverse leader trailer">Onze producten</h3>
+          <h3 class="meta leader trailer">Onze producten</h3>
           <ul>
-            <li>Onze producten:</li>
             <li>Touchpoint matrix</li>
             <li>User Scenario’s</li>
             <li>Use Cases</li>
@@ -92,7 +91,7 @@
             <blockquote class="quote leader--hero leader--hero trailer"><p>Digital leadership begint met goed te kijken naar je markt en te praten met je klanten.</p></blockquote>
             <figure class="person bleed leader trailer">
               <span class="person__picture gutters">
-                <img src="/images/heads/marja_smits.jpg" class="person__image" width="56" height="56" style="background: Grey;">
+                <img src="/images/heads/babs_gosgens.jpg" class="person__image" width="56" height="56" style="background: Grey;">
               </span>
               <figcaption class="person__body">
                 <a href="mailto:babs@brickson.nl" class="anchor--shy anchor--reset person__name meta">Babs Gösgens</a><br>
