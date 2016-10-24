@@ -1,10 +1,4 @@
 <section class="pod pod--baboon introduction" data-collection="default">
-  <div class="pod__seed tile ">
-    <div>
-      <h2 class="title leader trailer">Blijer, gezonder en welvarender</h2>
-      <p class="leader trailer">Brickson is er voor ambitieuze merken in traditionele markten. Wij helpen ze om relevant te blijven en meer voor klanten te betekenen. Succesvolle merken kijken vooruit en stellen zich de vraag: hoe maak ik mijn klant blijer, gezonder en welvarender?</p>
-    </div>
-  </div>
   <div class="pod__seed tile cover backdrop isolation">
     <img
       sizes="<?php echo $gt_large_handheld; ?> 50vw, <?php echo $gt_medium_desktop; ?> 34vw, 100vw"
@@ -27,5 +21,11 @@
         /images/logos/w506px_h220px--brands.png 771w,
         /images/logos/w395px_h172px_2x--brands.png 790w,
         /images/logos/w395px_h172px--brands.png">
+  </div>
+  <div class="pod__seed tile ">
+    <div>
+      <h2 class="title leader trailer">Blijer, gezonder en welvarender</h2>
+      <p class="leader trailer">Brickson is er voor ambitieuze merken in traditionele markten. Wij helpen ze om relevant te blijven en meer voor klanten te betekenen. Succesvolle merken kijken vooruit en stellen zich de vraag: hoe maak ik mijn klant blijer, gezonder en welvarender?</p>
+    </div>
   </div>
 </section>

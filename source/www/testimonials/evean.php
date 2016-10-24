@@ -2,22 +2,18 @@
   <picture class="cover__image">
     <!--[if IE 9]><video style="display: none;"><![endif]-->
     <source
-      media="<?php echo $gt_medium_desktop; ?> and <?php echo $landscape; ?>"
-      srcset="/images/content/w1280px_h1280px--evean.jpg 1280w, /images/content/w1280px_h1280px--evean.jpg 2560w">
+      media="<?php echo $gt_medium_desktop; ?>"
+      sizes="<?php echo $gt_medium_desktop; ?> 67vw"
+      srcset="/images/content/w1280px_h1280px--evean.jpg 2560w, /images/content/w1280px_h1280px--evean.jpg 1280w">
     <source
-      media="<?php echo $gt_small_desktop; ?> and <?php echo $landscape; ?>"
-      srcset="/images/content/w683px_h1024px--evean.jpg 683w, /images/content/w683px_h1024px_2x--evean.jpg 1366w">
+      media="<?php echo $landscape; ?>"
+      sizes="100vw"
+      srcset="/images/content/w785px_h320px_3x--evean.jpg 2355w, /images/content/w785px_h320px_2x--evean.jpg 1570w, /images/content/w785px_h320px--evean.jpg 785w">
     <source
-      media="<?php echo $gt_large_handheld; ?> and <?php echo $portrait; ?>"
-      srcset="/images/content/w896px_h640px--evean.jpg 896w, /images/content/w896px_h640px_2x--evean.jpg 1792w">
-    <source
-      media="<?php echo $gt_medium_handheld; ?> and <?php echo $landscape; ?>"
-      srcset="/images/content/w1022px_h520px--evean.jpg 1022w, /images/content/w1022px_h520px_2x--evean.jpg 2044w">
-    <source
-      media="<?php echo $gt_small_handheld; ?> and <?php echo $portrait; ?>"
-      srcset="/images/content/w520px_h1022px--evean.jpg 520w, /images/content/w520px_h1022px_2x--evean.jpg 1040w">
+      media="<?php echo $portrait; ?>"
+      srcset="/images/content/w414px_h828px_3x--evean.jpg 1242w, /images/content/w414px_h828px_2x--evean.jpg 828w, /images/content/w414px_h828px--evean.jpg 414w">
     <!--[if IE 9]></video><![endif]-->
-    <img class="cover__image" src="/images/content/w320px_h576px--evean.jpg" alt="">
+    <img class="cover__image" src="/images/content/w1280px_h1280px--evean.jpg" alt="">
   </picture>
   <div class="pod__seed seed">
     <h3 class="seed__header meta meta--tiny leader--hero trailer">Testimonial</h3>

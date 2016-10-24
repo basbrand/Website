@@ -1841,16 +1841,20 @@ Styleguide 3.17
     position: absolute;
     z-index: -1;
     width: auto;
+    height: auto;
     min-width: 100%;
     min-height: 100%; }
   @media only screen and (max-aspect-ratio: 6 / 5) {
     .cover__image {
       bottom: 0;
-      top: auto; } }
+      left: 0;
+      top: auto;
+      max-width: 100%; } }
   @media only screen and (min-aspect-ratio: 6 / 5) {
     .cover__image {
       right: 0;
-      left: auto; } }
+      left: auto;
+      max-height: 100%; } }
   @media only screen and (max-aspect-ratio: 6 / 5) {
     .cover--hero .cover__image {
       width: 100%;

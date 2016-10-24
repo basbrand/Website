@@ -30,37 +30,18 @@ Styleguide 3.17
  * 2. Text on an image backdrop is white
  */
 .cover {
-  // background-color: $color-blue; // Debug
   position: relative;
   overflow: hidden;
   background-color: transparent !important;
-  &--light {
-    // color: $color-dark-blue;
-    // .button {
-    //   color: $color-dark-blue;
-    //   border-color: $color-dark-blue;
-    // }
-  }
-  &--neutral {
-    // color: $color-body;
-    // .button {
-    //   color: $color-body;
-    //   border-color: $color-body;
-    // }
-  }
-  &--hero {
-
-  }
   &__image {
     background-color: #FFF;
     object-fit: cover;
     position: absolute;
     z-index: -1;
     width: auto;
+    height: auto;
     min-width: 100%;
     min-height: 100%;
-    // max-width: 100%;
-    // max-height: 100%;
 
     // top: 50%; /* 1 */
     // left: 50%; /* 1 */
@@ -69,18 +50,18 @@ Styleguide 3.17
   @include breakpoint($portrait) {
     &__image {
       bottom: 0;
+      left: 0;
       top: auto;
+      max-width: 100%;
     }
   }
   @include breakpoint($landscape) {
     &__image {
       right: 0;
       left: auto;
+      max-height: 100%;
     }
   }
-  // img {
-  //   max-width: 100%;
-  // }
 
   @include breakpoint($portrait) {
     &--hero &__image {
