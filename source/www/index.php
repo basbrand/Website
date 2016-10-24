@@ -8,8 +8,8 @@
     <?php include 'head.php'; ?>
   </head>
   <body class="<?php echo $debug ? 'debug-layout ' : ''; ?>">
-    <div data-collection="gt-medium-desktop">
-      <div data-collection="gt-large-handheld">
+    <div class="is-cleared" data-collection="gt-medium-desktop">
+      <div class="is-cleared" data-collection="gt-large-handheld">
         <?php include 'landingpage/handshake.php'; ?>
         <?php include 'landingpage/invitation.php'; ?>
       </div>

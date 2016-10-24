@@ -1,4 +1,4 @@
-<section class="pod pod--kudu pod--rhino handshake cover tile isolation" data-collection="<?php echo $gt_medium_desktop; ?>">
+<section class="pod pod--kudu pod--rhino handshake cover tile isolation" data-collection="default" style="height: 50vh;">
   <picture class="cover__image">
     <!--[if IE 9]><video style="display: none;"><![endif]-->
     <source
