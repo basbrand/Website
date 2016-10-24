@@ -1,4 +1,4 @@
-<section class="pod pod--baboon introduction">
+<section class="pod pod--baboon introduction" data-collection="default">
   <div class="pod__seed tile isolation">
     <div>
       <h2 class="title leader trailer">Blijer, gezonder en welvarender</h2>
@@ -6,10 +6,8 @@
     </div>
   </div>
   <div class="pod__seed tile cover">
-    <img
-      class="cover__image"
-      alt=""
-      src="http://previews.123rf.com/images/oleg23photo/oleg23photo1505/oleg23photo150500141/39415584-Young-handsome-man-shows-gesture-OK-Emotional-photo-in-studio--Stock-Photo.jpg">
+    <img class="cover__image" src="/images/content/in-good-company--desktop.jpg">
+      <h3 class="meta meta--tiny meta--inverse leader trailer--giant">In goed gezelschap</h3>
         <img
           class="introduction__cover image--stretch"
           alt=""

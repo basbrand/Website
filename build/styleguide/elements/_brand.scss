@@ -65,3 +65,29 @@ Styleguide 3.9
     }
   }
 }
+
+.brand-client {
+  &,
+  &--hero {
+    float: right;
+  }
+  &,
+  &--hero {
+    max-width: 128px;
+    max-height: 40px;
+    width: auto;
+    height: auto;
+  }
+  @include breakpoint($gt_large_handheld) {
+    &--hero {
+      max-width: 256px;
+      max-height: 80px;
+    }
+  }
+  @include breakpoint($gt_small_desktop) {
+    &--hero {
+      max-width: 256px;
+      max-height: 80px;
+    }
+  }
+}
