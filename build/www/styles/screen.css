@@ -1551,8 +1551,7 @@ Styleguide 3.7
     display: inline-block !important;
     float: left; }
   .list--inline {
-    display: inline-block;
-    float: left; }
+    display: inline-block; }
   li {
     float: left; } }
 
@@ -1911,7 +1910,7 @@ Styleguide 3.18
     display: block;
     content: open-quote;
     position: relative;
-    top: -.1em; }
+    top: -0.1em; }
   .quote:after {
     content: no-close-quote; }
   .quote:before, .quote:after {
@@ -2527,6 +2526,13 @@ Styleguide 4.5
   .menu .is-active {
     color: inherit !important; }
 
+/* IE 9 */
+@media only screen and (min-width: 64em) {
+  .navbar .menu {
+    display: inline\9; }
+    .navbar .menu li {
+      display: inline-block\9; } }
+
 /* 4.6 Case */
 /*
 Card
@@ -2814,6 +2820,10 @@ Styleguide 5.6
       padding-right: 33.33333%; }
     .post__title, .post__lead {
       padding-right: 6.66667%; } }
+
+/* @TODO Box-shadow right side of post__main in light blue to fix flex dependency in IE 9-10-11 */
+.post__main + .well--stork {
+  box-shadow: 0 999px 0 0 #d3eaec; }
 
 /* 5.7 Navigation */
 /*
@@ -3178,6 +3188,14 @@ Styleguide 7.3
     top: -50%;
     top: -50vh;
     float: right; } }
+
+/* Edge's absolute position requires extra help */
+@supports (-ms-ime-align: auto) {
+  .quote:before {
+    display: inline; } }
+
+.quote:before {
+  display: inline\9; }
 
 /*
  * brrrrrrrrrr
