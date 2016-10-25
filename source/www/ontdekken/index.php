@@ -49,9 +49,8 @@
           </ul>
         </div>
         <footer class="well well--challenge seed wings leader--hero">
-          <h3 class="seed__header title--section leader"><strong>Het resultaat</strong></h3>
+          <h3 class="seed__header title--section leader"><strong>Challenge accepted</strong></h3>
           <div class="seed__body">
-            <h2>Challenge accepted</h2>
             <p>We helpen je te zien waar de grootste kansen liggen, je prioriteiten te stellen en je leert verder te denken dan de uitdaging van vandaag.</p>
             <ul>
               <li>Startpunt voor digitale strategie en UX design;</li>
