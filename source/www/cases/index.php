@@ -12,7 +12,6 @@
       <ol class="menu menu--hero list--reset fx bleed" id="menu">
         <li class="gutters meta meta--hero">
           <a class="menu__home fx" href="/"><span class="is-narrative">Home</span></a>
-          <h1><a class="menu__item anchor--reset anchor--shy is-current is-active" href="/cases/#menu">Cases</a></h1>
         </li>
         <li><a class="menu__item anchor--shy meta meta--tiny fx" href="/over-brickson/">Over Brickson</a></li>
         <li><a class="menu__item anchor--shy meta meta--tiny fx is-active" href="/cases/">Cases</a></li>
