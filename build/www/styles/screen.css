@@ -685,10 +685,10 @@ html:after {
   @media (max-aspect-ratio: 6 / 5) and (min-width: 64em) {
     html:after {
       content: 'gt-small-desktop - portrait'; } }
-  @media (min-aspect-ratio: 6 / 5) and (min-width: 90em) {
+  @media (min-aspect-ratio: 6 / 5) and (min-width: 75em) {
     html:after {
       content: 'gt-medium-desktop - landscape'; } }
-  @media (max-aspect-ratio: 6 / 5) and (min-width: 90em) {
+  @media (max-aspect-ratio: 6 / 5) and (min-width: 75em) {
     html:after {
       content: 'gt-medium-desktop - portrait'; } }
   @media (min-aspect-ratio: 6 / 5) and (min-width: 100em) {
@@ -1704,7 +1704,7 @@ Styleguide 3.9
       height: 72pt; }
     .brand--hero {
       height: 132pt; } }
-  @media (min-aspect-ratio: 6 / 5) and (min-width: 90em) {
+  @media (min-aspect-ratio: 6 / 5) and (min-width: 75em) {
     .brand--ams, .brand--dnb {
       height: 80pt; }
     .brand--hero {
@@ -1917,12 +1917,12 @@ Styleguide 3.17
       bottom: 0;
       left: 0;
       top: auto;
-      max-width: 100%; } }
+      right: 0; } }
   @media only screen and (min-aspect-ratio: 6 / 5) {
     .cover__image {
       right: 0;
       left: auto;
-      max-height: 100%; } }
+      top: 0; } }
   @media only screen and (max-aspect-ratio: 6 / 5) {
     .cover--hero .cover__image {
       width: 100%;
@@ -2070,7 +2070,7 @@ Styleguide 3.99
   .is-gt-small-desktop {
     position: static; } }
 
-@media only screen and (min-width: 90em) {
+@media only screen and (min-width: 75em) {
   .is-gt-medium-desktop {
     position: static; } }
 
@@ -2103,7 +2103,18 @@ Styleguide 4.1
   min-height: 100vh;
   float: left;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  /**
+     * For IE 6/7 only
+     * Include this rule to trigger hasLayout and contain floats.
+     */ }
+  .pod:before, .pod:after {
+    content: " ";
+    display: table; }
+  .pod:after {
+    clear: both; }
+  .pod {
+    *zoom: 1; }
   .pod__seed {
     float: left;
     width: 100%;
@@ -2142,7 +2153,9 @@ Styleguide 4.1
       .pod--zebra .pod__seed {
         min-height: 100%; }
       .pod--serval .pod__seed {
-        width: 100%; } }
+        width: 100%; }
+      .pod--baboon.is-reverse {
+        flex-flow: row-reverse; } }
   @media only screen and (min-width: 48em) {
     .pod--baboon, .pod--kudo, .pod--leopard,
     .pod--kudu .pod__seed {
@@ -2153,14 +2166,16 @@ Styleguide 4.1
     .pod--leopard .pod__seed.cover {
       min-height: 50%;
       min-height: 25vh; } }
-  @media only screen and (min-width: 48em) and (max-aspect-ratio: 6 / 5) {
+  @media (max-aspect-ratio: 6 / 5) and (min-width: 48em) {
     .pod__seed {
       width: 50%; }
     .pod--serval {
       min-height: 50%;
       min-height: 50vh; }
     .pod--zebra, .pod--baboon {
-      flex-direction: row; } }
+      flex-direction: row; }
+      .pod--zebra.is-reverse, .pod--baboon.is-reverse {
+        flex-flow: row-reverse; } }
   @media only screen and (min-width: 48em) {
     .pod__seed {
       padding: 0 8.33333%; }
@@ -2177,7 +2192,7 @@ Styleguide 4.1
     .pod--leopard .pod__seed {
       min-height: 50%;
       min-height: 25vh; } }
-  @media only screen and (min-width: 64em) {
+  @media (min-aspect-ratio: 6 / 5) and (min-width: 64em) {
     .pod--serval {
       min-height: 50%;
       min-height: 50vh; }
@@ -2190,14 +2205,15 @@ Styleguide 4.1
       padding: 0 5.55556vw 0 11.11111vw; }
     .pod--baboon {
       min-height: 50%;
-      min-height: 50vh; }
+      min-height: 50vh;
+      flex-direction: row; }
     .pod--baboon .pod__seed {
       width: 50%;
       min-height: 100%;
       min-height: 50vh; }
-    .pod--hippo, .pod--baboon, .pod--leopard {
+    .pod--hippo, .pod--leopard {
       flex-direction: column; } }
-  @media only screen and (min-width: 90em) {
+  @media only screen and (min-width: 75em) {
     .pod__seed {
       padding: 0 5.55556%;
       padding: 0 5.55556vw; }
@@ -2229,7 +2245,10 @@ Styleguide 4.1
       .pod--serval .pod__seed .button {
         color: inherit; }
     .pod--baboon {
+      flex-direction: column;
       width: 33.33333%; }
+      .pod--baboon.is-reverse {
+        flex-flow: column; }
     .pod--baboon .pod__seed {
       width: 100%; } }
 
@@ -2683,7 +2702,7 @@ Styleguide 5.1
   .handshake .brand {
     height: 88pt; } }
 
-@media only screen and (min-width: 90em) and (min-aspect-ratio: 6 / 5) {
+@media only screen and (min-width: 75em) and (min-aspect-ratio: 6 / 5) {
   .handshake .brand {
     height: 96pt; } }
 
@@ -2777,7 +2796,7 @@ markup:
 
 Styleguide 5.4
 */
-@media only screen and (min-width: 90em) {
+@media only screen and (min-width: 75em) {
   .contact {
     position: relative;
     z-index: 1; } }
@@ -2877,7 +2896,7 @@ Styleguide 5.6
           padding-right: 8.33333%; }
       .post__title, .post__lead {
         padding-right: 13.33333%; } }
-  @media only screen and (min-width: 90em) {
+  @media only screen and (min-width: 75em) {
     .post__title {
       font-size: 3.875em;
       line-height: 1.16129; }
@@ -2951,7 +2970,7 @@ Styleguide 5.7
   @media only screen and (min-width: 64em) {
     .navigation {
       padding: 16px 4.16667%; } }
-  @media only screen and (min-width: 90em) {
+  @media only screen and (min-width: 75em) {
     .navigation {
       right: 66.66667%;
       padding: 16px 2.77778%; } }
@@ -3078,7 +3097,7 @@ Styleguide 5.9
   @media only screen and (min-width: 64em) {
     .hero__body, .hero__footer {
       padding: 0 8.33333%; } }
-  @media only screen and (min-width: 90em) {
+  @media only screen and (min-width: 75em) {
     .hero__header {
       padding: 0 5.55556%; }
     .hero__body, .hero__footer {
@@ -3119,7 +3138,7 @@ Styleguide 5.10
   @media only screen and (min-width: 64em) {
     .navbar {
       padding: 16px 4.16667%; } }
-  @media only screen and (min-width: 90em) {
+  @media only screen and (min-width: 75em) {
     .navbar {
       padding: 16px 5.55556%; } }
 
@@ -3263,7 +3282,7 @@ markup:
 Styleguide 7.3
 */
 /* 8. */
-@media only screen and (min-width: 90em) {
+@media only screen and (min-width: 75em) {
   .introduction {
     position: relative;
     margin-bottom: -50%;

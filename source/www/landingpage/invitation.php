@@ -1,4 +1,4 @@
-<section class="pod pod--zebra pod--rhino invitation isolation" data-collection="default" style="position: relative; z-index: 1;">
+<section class="pod pod--zebra pod--rhino invitation isolation" style="position: relative; z-index: 1;">
   <div class="pod__seed tile">
     <nav class="tile trailer-inside">
       <ol class="menu leader trailer list--reset list--inline fx bleed" id="menu">

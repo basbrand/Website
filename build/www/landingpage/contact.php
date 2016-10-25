@@ -1,4 +1,4 @@
-<div class="contact pod pod--baboon" data-collection="default">
+<div class="contact pod pod--baboon">
   <div class="pod__seed cover isolation tile backdrop">
     <img
       sizes="<?php echo $gt_large_handheld; ?> 50vw, <?php echo $gt_medium_desktop; ?> 34vw, 100vw"
