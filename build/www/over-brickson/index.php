@@ -87,6 +87,6 @@
         </section>
       </aside>
     </article>
-    <?php include 'post-body.php'; ?>
+    <?php include '../post-body.php'; ?>
   </body>
 </html>
