@@ -20,7 +20,7 @@
       </ol>
     </nav>
     <article class="post">
-      <header class="hero hero--navbar seed pod pod--hippo cover isolation">
+      <header class="hero hero--beta seed pod pod--hippo cover isolation">
         <picture class="cover__image">
           <!--[if IE 9]><video style="display: none;"><![endif]-->
           <source

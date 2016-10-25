@@ -26,7 +26,6 @@
           scrset="/images/content/w800_h400px_3x--invitation.jpg 2400w, /images/content/w800_h400px_2x--invitation.jpg 1600w, /images/content/w800_h400px--invitation.jpg 800w"
           class="cover__image" src="/images/content/w800_h400px_2x--invitation.jpg"
           alt="">
-
       <div class="hero__body seed__body backdrop">
         <h1 class="post__title title--inverse leader trailer">Ontdek je digitale kansen</h1>
       </div>
