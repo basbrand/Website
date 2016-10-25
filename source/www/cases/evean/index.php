@@ -56,7 +56,7 @@
           <nav class="trail meta leader trailer bleed">
             <ol class="list--reset list--inline">
               <li><a class="anchor--shy" href="/cases/">Cases</a></li>
-              <li><a class="anchor--reset anchor--shy" href="/cases/vereniging-eigen-huis">Evean</a></li>
+              <li><a class="anchor--reset anchor--shy" href="/cases/evean">Evean</a></li>
             </ol>
           </nav>
           <p class="lead">De zorg is flink in beweging, zo ook Evean. De veranderingen die het kabinet doorvoert, vragen een behoorlijke omslag in doen en denken. De cliënt van vandaag mag zélf bepalen welke zorg en ondersteuning het beste aansluit bij zijn behoeften en mogelijkheden.</p>

@@ -60,7 +60,7 @@
         <article class="pod--leopard isolation">
           <div class="pod__seed seed cover">
             <picture>
-              <img class="cover__image" src="https://hd.unsplash.com/photo-1428542244207-0aaec316e609" alt="">
+              <img class="cover__image" src="/images/content/w896px_h640px--eigenhuis.jpg" alt="">
             </picture>
             <div class="seed__header leader-inside trailer-inside">
               <img
@@ -79,11 +79,11 @@
           </div>
           <div class="pod__seed seed">
             <div class="seed__body">
-              <h2 class="title title--body leader trailer">Lorem Ipsum Dolor Sit Amet</h2>
-              <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+              <h2 class="title title--body leader trailer">UX design voor Vereniging Eigen Huis</h2>
+              <p class="">Vereniging Eigen Huis is met ruim 700.000 leden een van de grootste ledenorganisaties in Nederland. De Vereniging is belangenbehartiger en dienstverlener in één. Een unieke positie die vraagt om effectief op te komen voor de belangen voor iedereen die een huis heeft of van plan is te kopen. Daarnaast is Vereniging Eigen Huis een partner voor alle sectoren die met huizenbouw te maken hebben en de politiek.</p>
             </div>
             <p class="seed__footer leader trailer">
-              <a class="anchor--shy meta" href="/">Lees verder</a>
+              <a class="anchor--shy meta" href="/cases/vereniging-eigen-huis/">Lees verder</a>
             </p>
           </div>
         </article>
@@ -101,11 +101,11 @@
           </div>
           <div class="pod__seed seed">
             <div class="seed__body">
-              <h2 class="title title--body leader trailer">Lorem Ipsum Dolor Sit Amet</h2>
-              <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+              <h2 class="title title--body leader trailer">NVVE</h2>
+              <p class="">Nederland was in april 2002 het eerste land ter wereld dat euthanasie en hulp bij zelfdoding legaliseerde. Een verwerving van vrijheid, maar ook het begin van complexe medische vraagstukken en een voortdurend ethisch debat.</p>
             </div>
             <p class="seed__footer leader trailer">
-              <a class="anchor--shy meta" href="/">Lees verder</a>
+              <a class="anchor--shy meta" href="/cases/nvve/">Lees verder</a>
             </p>
           </div>
         </article>
