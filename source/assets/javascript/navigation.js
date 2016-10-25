@@ -24,8 +24,8 @@
 
         $(this.element).addClass('is-prioritised');
 
-        $(window).on('resize', this.hideElements.bind(this));
-        $(window).trigger('resize');
+        // $(window).on('resize', this.hideElements.bind(this));
+        // $(window).trigger('resize');
     }
 
     Navigation.prototype.orderItems = function() {

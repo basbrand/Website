@@ -5,8 +5,7 @@
   <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
   <link rel="manifest" href="/manifest.json">
   <link rel="stylesheet" type="text/css" href="/styles/screen.css?v0.2">
-  <?php //<link href="https://fonts.googleapis.com/css?family=Kanit:400,600,700|Lora:400,400i" rel="stylesheet"> ?>
-  <script src="/javascript/html5shiv.min.js"></script>
+  <script src="/javascript/modernizr-latest.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="/javascript/picturefill.min.js" async></script>
   <script src="/javascript/pf.intrinsic.min.js" async></script>

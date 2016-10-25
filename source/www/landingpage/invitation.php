@@ -2,9 +2,9 @@
   <div class="pod__seed tile">
     <nav class="tile trailer-inside">
       <ol class="menu leader trailer list--reset list--inline fx bleed" id="menu">
-        <li><a class="menu__item anchor--shy meta meta--tiny fx" href="/over-brickson/">Over Brickson</a></li>
-        <li><a class="menu__item anchor--shy meta meta--tiny fx" href="/cases/">Cases</a></li>
-        <!--li><a class="menu__item anchor--shy meta meta--tiny fx" href="/werken-bij-brickson/">Werken bij Brickson</a></li-->
+        <li data-priority="0"><a class="menu__item anchor--shy meta meta--tiny fx" href="/cases/">Cases</a></li>
+        <li data-priority="1"><a class="menu__item anchor--shy meta meta--tiny fx" href="/over-brickson/">Over Brickson</a></li>
+        <li data-priority="2"><a class="menu__item anchor--shy meta meta--tiny fx" href="/werken-bij-brickson/">Werken bij Brickson</a></li>
       </ol>
     </nav>
     <div class="tile">
