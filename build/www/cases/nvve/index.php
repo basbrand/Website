@@ -101,7 +101,7 @@
           <blockquote class="quote leader--giant leader--hero trailer"><p>Brickson is een goede praktisch en tactisch meedenkende partij waarmee de digitale strategie van NVVE naar een hoger plan is getild.</p></blockquote>
           <figure class="person bleed leader trailer">
             <span class="person__picture gutters">
-              <img src="/" class="person__image" width="56" height="56" style="background: Grey;">
+              <img src="/images/heads/petra_de_jong.jpg" class="person__image" width="56" height="56" style="background: Grey;">
             </span>
             <figcaption class="person__body">
               <span class="person__name meta">Petra de Jong</span>
