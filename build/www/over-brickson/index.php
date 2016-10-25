@@ -46,8 +46,8 @@
           <p>Wil je de transitie maken binnen de eerste fase van internet: informatie, services en collaboratie? Of wil je of de stap maken naar de tweede fase van digitale dienstverlening: internet of things, big data, en blockchain?</p>
         </div>
         <footer class="well seed wings leader--hero">
-          <h3 class="seed__title title--section leader trailer"><strong>Het resultaat</strong></h3>
-          <div class="seed__body leader trailer">
+          <h3 class="seed__title title--section leader-inside trailer"><strong>Het resultaat</strong></h3>
+          <div class="seed__body leader trailer-inside">
             <h2>Lorem Ipsum Dolor Sit Amet</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
           </div>
