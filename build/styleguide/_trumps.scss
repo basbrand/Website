@@ -49,15 +49,15 @@
 // }
 
 
-@include breakpoint($gt-medium-desktop) {
-  .introduction {
-    position: relative;
-    margin-bottom: -50%;
-    top: -50%;
-    top: -50vh;
-    float: right;
-  }
-}
+// @include breakpoint($gt-medium-desktop) {
+//   .introduction {
+//     position: relative;
+//     margin-bottom: -50%;
+//     top: -50%;
+//     top: -50vh;
+//     float: right;
+//   }
+// }
 
 /* Edge's absolute position requires extra help */
 @supports (-ms-ime-align:auto) {
@@ -83,4 +83,11 @@
 
 .is-italic {
   font-style: italic;
+}
+
+.tmp-shop {
+  &:hover {
+    box-shadow: 0 0 10px 0 rgba($black,1);
+    background-color: rgba($black,.4);
+  }
 }

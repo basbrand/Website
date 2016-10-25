@@ -20,19 +20,11 @@
     </nav>
     <article class="post">
       <header class="hero hero--beta seed pod pod--hippo cover isolation">
-        <picture class="cover__image">
-          <!--[if IE 9]><video style="display: none;"><![endif]-->
-          <source
-            media="<?php echo $gt_large_handheld; ?>"
-            sizes="<?php echo $gt_large_handheld; ?> 50vw, 100vw"
-            srcset="/images/content/w414px_h206px_3x--nvve.jpg 1242w, /images/content/w414px_h206px_2x--nvve.jpg 828w, /images/content/w414px_h414px--nvve.jpg 414w">
-          <source
-            media="<?php echo $lt_large_handheld; ?>"
-            sizes="100vw"
-            srcset="/images/content/w414px_h414px_3x--nvve.jpg 1242w, /images/content/w414px_h414px_2x--nvve.jpg 828w, /images/content/w414px_h414px--nvve.jpg 414w">
-          <!--[if IE 9]></video><![endif]-->
-          <img class="cover__image" src="/images/content/w414px_h414px--nvve.jpg" alt="">
-        </picture>
+        <img
+          sizes="100vw"
+          scrset="/images/content/w800px_h400px_3x--nvve.jpg 2400w, /images/content/w800px_h400px_2x--nvve.jpg 1600w, /images/content/w800px_h400px--nvve.jpg 800w"
+          class="cover__image" src="/images/content/w800px_h400px_2x--nvve.jpg"
+          alt="">
         <div class="hero__header seed__header leader trailer">
           <img
             class="brand-client--hero gutters"
@@ -44,9 +36,9 @@
             height="58"
             />
         </div>
-        <div class="hero__body seed__body backdrop">
+        <div class="hero__body seed__body backdrop--body">
           <h1 class="post__title title--inverse leader trailer">NVVE: Bij ieder leven hoort een waardig einde</h1>
-          <p class="post__lead body--inverse leader trailer">Nederland was in april 2002 het eerste land ter wereld dat euthanasie en hulp bij zelfdoding legaliseerde. Een verwerving van vrijheid, maar ook het begin van complexe medische vraagstukken en een voortdurend ethisch debat.</p>
+          <p class="post__lead body--inverse leader trailer"></p>
         </div>
       </header>
       <div class="post__main isolation">
@@ -57,6 +49,7 @@
               <li><a class="anchor--reset anchor--shy" href="/cases/nvve">NVVE</a></li>
             </ol>
           </nav>
+          <p class="lead">Nederland was in april 2002 het eerste land ter wereld dat euthanasie en hulp bij zelfdoding legaliseerde. Een verwerving van vrijheid, maar ook het begin van complexe medische vraagstukken en een voortdurend ethisch debat.</p>
           <p class="lead">Hoe moeten we onze diensten online gaan aanbieden? En presenteren we ons daarbij als een vereniging, een belangenbehartiger of een dienstverlener? Of kunnen we dat allemaal zijn? <br /> Een digitaal vraagstuk dat ook over het bestaansrecht van de organisatie gaat.</p>
           <h2>NVVE</h2>
           <p>De Nederlandse Euthanasievereniging zet zich in voor keuzevrijheid aan het einde van het leven. De NVVE wil een optimale uitvoering van de euthanasiewet, vooral voor groepen die in de praktijk geen hulp krijgen, zoals mensen met dementie, chronisch psychiatrische patiënten en ouderen die vinden dat hun leven voltooid is.</p>

@@ -52,15 +52,23 @@ Styleguide 3.17
       bottom: 0;
       left: 0;
       top: auto;
-      max-width: 100%;
+      right: 0;
     }
   }
   @include breakpoint($landscape) {
     &__image {
       right: 0;
       left: auto;
-      max-height: 100%;
+      top: 0;
+      bottom: 0;
     }
+  }
+  &--middle &__image {
+    top: 50%; /* 1 */
+    left: 50%; /* 1 */
+    transform: translateY(-50%) translateX(-50%); /* 1 */
+    bottom: auto;
+    right: auto;
   }
 
   @include breakpoint($portrait) {

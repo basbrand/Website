@@ -20,20 +20,11 @@
     </nav>
     <article class="post">
       <header class="hero hero--beta seed pod pod--hippo cover isolation">
-        <picture class="cover__image">
-          <!--[if IE 9]><video style="display: none;"><![endif]-->
-          <source
-            media="<?php echo $gt_large_handheld; ?> and <?php echo $portrait; ?>"
-            srcset="/images/content/w896px_h640px--evean.jpg 896w, /images/content/w896px_h640px_2x--evean.jpg 1792w">
-          <source
-            media="<?php echo $gt_medium_handheld; ?> and <?php echo $landscape; ?>"
-            srcset="/images/content/w1022px_h520px--evean.jpg 1022w, /images/content/w1022px_h520px_2x--evean.jpg 2044w">
-          <source
-            media="<?php echo $gt_small_handheld; ?> and <?php echo $portrait; ?>"
-            srcset="/images/content/w520px_h1022px--evean.jpg 520w, /images/content/w520px_h1022px_2x--evean.jpg 1040w">
-          <!--[if IE 9]></video><![endif]-->
-          <img class="cover__image" src="/images/content/w1280px_h1280px--evean.jpg" alt="">
-        </picture>
+        <img
+          sizes="100vw"
+          scrset="/images/content/w800px_h400px_3x--cta.jpg 2400w, /images/content/w800px_h400px_2x--cta.jpg 1600w, /images/content/w800px_h400px--cta.jpg 800w"
+          class="cover__image" src="/images/content/w800px_h400px_2x--cta.jpg"
+          alt="">
         <div class="hero__header seed__header leader trailer">
           <img
             class="brand-client--hero gutters"
@@ -45,7 +36,7 @@
             height="58"
             />
         </div>
-        <div class="hero__body seed__body backdrop">
+        <div class="hero__body seed__body backdrop--body">
           <h1 class="post__title title--inverse leader trailer">Evean staat naast haar klant</h1>
           <p class="post__lead body--inverse leader trailer">Hoe zorg je dat je klanten een gevoel van regie geeft? En welke digitale mogelijkheden moet je ze dan als eerste geven? Waar ga je investeren? Hoe ben je relevant in een ondoorzichtige zorgmarkt?</p>
         </div>
