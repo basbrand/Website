@@ -8,6 +8,8 @@
     <?php include 'head.php'; ?>
   </head>
   <body class="<?php echo $debug ? 'debug-layout ' : ''; ?> landingpage">
+    
+    <h1>DAVE</h1>
     <div class="layout">
       <div class="layout__cell layout__cell--main">
         <?php include 'landingpage/handshake.php'; ?>
