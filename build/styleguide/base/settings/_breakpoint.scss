@@ -47,4 +47,4 @@ $msie: "(-ms-high-contrast: active) and (-ms-high-contrast: none)";
 // $portrait: "(orientation: portrait)";
 // $landscape: "(orientation: landscape)";
 $portrait: "(max-aspect-ratio: 6/5)";
-$landscape: "(max-aspect-ratio: 6/5)";
+$landscape: "(min-aspect-ratio: 6/5)";

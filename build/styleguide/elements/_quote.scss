@@ -24,7 +24,6 @@ Styleguide 3.18
  */
 .quote {
   position: relative;
-  // quotes: "\201C""\201D""\2018""\2019";
   font-style: italic;
   font-size: to-unit(18px, 1em);
   line-height: to-unit(24px, 1, 18px);
@@ -37,7 +36,7 @@ Styleguide 3.18
     display: block;
     content: open-quote;
     position: relative;
-    top: -.1em;
+    top: -0.1em;
   }
   &:after {
     content: no-close-quote;
@@ -45,5 +44,13 @@ Styleguide 3.18
   &:before,
   &:after {
     font: normal normal 4em/0 Arial, Helvetica, Gadget, sans-serif;
+  }
+}
+
+@include breakpoint($msie) {
+  .quote {
+    &:before {
+      top: rhythm(-12);
+    }
   }
 }

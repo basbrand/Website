@@ -110,7 +110,7 @@
               <p>CTA is vertegenwoordigd in 78 landen en wil daar het kennisniveau over landbouw verhogen. Door te inspireren, samenwerking mogelijk te maken en kennis te delen.</p>
             </div>
             <p class="seed__footer leader trailer">
-              <a class="anchor--shy meta" href="/">Lees verder</a>
+              <a class="anchor--shy meta" href="/cases/vereniging-eigen-huis/">Lees verder</a>
             </p>
           </div>
         </article>
@@ -141,7 +141,7 @@
               <p>hoe moeten we onze diensten online gaan aanbieden? En presenteren we ons daarbij als een vereniging, een belangenbehartiger of een dienstverlener? Of kunnen we dat allemaal zijn? Een digitaal vraagstuk dat ook over het bestaansrecht van de organisatie gaat. </p>
             </div>
             <p class="seed__footer leader trailer">
-              <a class="anchor--shy meta" href="/">Lees verder</a>
+              <a class="anchor--shy meta" href="/cases/nvve/">Lees verder</a>
             </p>
           </div>
         </article>

@@ -3,7 +3,7 @@
 <html lang="nl">
   <head>
     <meta charset="UTF-8">
-    <title>Brickson</title>
+    <title>Evean staat naast haar klant</title>
     <meta name="description" content="Brickson is er voor organisaties die de volgende stap in digitaal willen maken. Werken met Brickson betekent samen ontdekken, bedenken, ontwerpen of bouwen."/>
     <?php include '../../head.php'; ?>
   </head>
@@ -47,8 +47,8 @@
             />
         </div>
         <div class="hero__body seed__body backdrop">
-          <h1 class="post__title title--inverse leader trailer">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit</h1>
-          <p class="post__lead body--inverse leader trailer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+          <h1 class="post__title title--inverse leader trailer">Evean staat naast haar klant</h1>
+          <p class="post__lead body--inverse leader trailer">Hoe zorg je dat je klanten een gevoel van regie geeft? En welke digitale mogelijkheden moet je ze dan als eerste geven? Waar ga je investeren? Hoe ben je relevant in een ondoorzichtige zorgmarkt?</p>
         </div>
       </header>
       <div class="post__main isolation">
@@ -56,25 +56,24 @@
           <nav class="trail meta leader trailer bleed">
             <ol class="list--reset list--inline">
               <li><a class="anchor--shy" href="/cases/">Cases</a></li>
-              <li><a class="anchor--reset anchor--shy" href="/cases/vereniging-eigen-huis">Evean</a></li>
+              <li><a class="anchor--reset anchor--shy" href="/cases/evean">Evean</a></li>
             </ol>
           </nav>
-          <h2>Lorem Ipsum Dolor Sit Amet</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
-          <h2>Lorem Ipsum Dolor Sit Amet</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
-          <h2>Lorem Ipsum Dolor Sit Amet</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
-          <h2>Lorem Ipsum Dolor Sit Amet</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
-          <h2>Lorem Ipsum Dolor Sit Amet</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+          <p class="lead">De zorg is flink in beweging, zo ook Evean. De veranderingen die het kabinet doorvoert, vragen een behoorlijke omslag in doen en denken. De cliënt van vandaag mag zélf bepalen welke zorg en ondersteuning het beste aansluit bij zijn behoeften en mogelijkheden.</p>
+          <h2>Digitale strategie</h2>
+          <p>Brickson ontwikkelde een gedragen strijdplan voor de komende jaren. De lange termijn visie van de organisatie vertaalden we naar een strategie voor het digitale domein: hoe biedt je transacties aan, hoe informeer je, hoe communiceer je met klanten.</p>
+          <h2>User experience en visual design</h2>
+          <p>De doorvertaling een digitale strategie resulteerde in een UX design en een visual design voor de nieuwe website. De cliënten en hun naasten zijn uitgangspunt, maar ook andere doelgroepen (professionals, huisartsen, collega’s) ervaren hoe Evean er voor ze is.</p>
+          <h2>Hoe kom je tot keuzes?</h2>
+          <p>De aanpak voor Evean was gericht op het begrijpen van de cultuur, processen en aanstaande veranderingen binnen de organisatie en de zorgmarkt.  We onderzochten vanuit 9 hypotheses, deze leidden uiteindelijk tot de inzichten waarmee Evean keuzes kon maken.</p>
+          <p>Geen onderonsjes met de directie, maar gesprekken dwars door de organisatie heen. Daarnaast spraken we vanzelfsprekend veel met cliënten en hun naasten.</p>
         </div>
         <footer class="well seed wings leader--hero">
           <h3 class="seed__title title--section leader trailer"><strong>Het resultaat</strong></h3>
           <div class="seed__body leader trailer">
-            <h2>Lorem Ipsum Dolor Sit Amet</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+            <h2>Evean kiest een eigen lijn</h2>
+            <p>Evean heeft nieuwe inzichten en een digitale roadmap, maar zet ook concrete stappen: een team van bevlogen professionals is begonnen om Evean.nl opnieuw in te richten. Daarbij kiest Evean voor een duidelijke online positionering en doet een uitgesproken propositie naar cliënten, naasten en verwijzers: <span class="is-italic">waarmee kunnen we u helpen?</span></p>
+            <div class="leader--hero"><small class="meta meta--tiny meta--inverse">Meer informatie: <a class="anchor--shy" href="mailto:stef@brickson.nl">Stef Heutink</a></small></div>
           </div>
         </footer>
       </div>
@@ -94,21 +93,21 @@
 
           <hr class="divider leader--giant trailer--giant">
 
-          <blockquote class="quote leader--hero leader--hero trailer"><p>Met oog en gevoel voor de mensen in je organisatie gaat Brickson altijd een stap verder.</p></blockquote>
+          <blockquote class="quote leader--hero leader--hero trailer"><p>Brickson het bureau dat een stap vooruit denkt, niet alleen strategisch ook in de uitvoering.</p></blockquote>
           <figure class="person bleed leader trailer">
             <span class="person__picture gutters">
-              <img src="/images/heads/marja_smits.jpg" class="person__image" width="56" height="56" style="background: Grey;">
+              <img src="/images/heads/danielle_vlaar.jpg" class="person__image" width="56" height="56" style="background: Grey;">
             </span>
             <figcaption class="person__body">
-              <span class="person__name meta">Marja Smits</span>
-              <small class="person__occupation">Manager Strategie en Marketing Evean</small>
+              <span class="person__name meta">Danielle Vlaar</span>
+              <small class="person__occupation">Projectleider Evean.nl</small>
             </figcaption>
           </figure>
 
         </section>
         <section class="leader--giant trailer wings seed__footer">
           <h3 class="title title--section leader">Over Brickson</h3>
-          <p class="body--tiny leader--tiny trailer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus, dapibus rutrum ipsum gravida et. Integer lectus nisi, facilisis sit amet eleifend nec, pharetra ut augue. Integer quam nunc, consequat nec egestas ac, volutpat ac nisi. Sed consectetur dignissim dignissim. Donec pretium est site.</p>
+          <p class="body--tiny leader--tiny trailer">Brickson is er voor ambitieuze merken in traditionele markten. Wij helpen ze om relevant te blijven en meer voor klanten te betekenen. Succesvolle merken kijken vooruit en stellen zich de vraag: hoe maak ik mijn klant blijer, gezonder en welvarender?</p>
         </section>
       </aside>
     </article>
