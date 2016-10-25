@@ -21,13 +21,13 @@
       <li class="grid__cell tile tile--focus backdrop tmp-shop">
         <a class="anchor--reset anchor--shy" href="/ontdekken/">
           <p class="gutters leader trailer"><strong class="meta meta--inverse meta--hero">Ontdekken</strong></p>
-          <p class="gutters trailer"><strong class="meta meta--inverse">Analysis &amp; Challenge</strong></p>
+          <p class="gutters trailer"><strong class="meta meta--inverse">Analyse &amp; Challenge</strong></p>
         </a>
       </li>
       <li class="grid__cell tile tile--focus backdrop tmp-shop">
         <a class="anchor--reset anchor--shy" href="/bedenken/">
           <p class="gutters leader trailer"><strong class="meta meta--inverse meta--hero">Bedenken</strong></p>
-          <p class="gutters trailer"><strong class="meta meta--inverse">Strategy &amp; Concept</strong></p>
+          <p class="gutters trailer"><strong class="meta meta--inverse">Strategie &amp; Concept</strong></p>
         </a>
       </li>
       <li class="grid__cell tile tile--focus backdrop tmp-shop">
@@ -39,7 +39,7 @@
       <li class="grid__cell tile tile--focus backdrop tmp-shop">
         <a class="anchor--reset anchor--shy" href="/bouwen/">
           <p class="gutters leader trailer"><strong class="meta meta--inverse meta--hero">Bouwen</strong></p>
-          <p class="gutters trailer"><strong class="meta meta--inverse">Development &amp; Implementation</strong></p>
+          <p class="gutters trailer"><strong class="meta meta--inverse">Development &amp; Implementatie</strong></p>
         </a>
       </li>
     </ul>
