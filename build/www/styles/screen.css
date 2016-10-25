@@ -3233,6 +3233,9 @@ Styleguide 7.3
   .pod--kudu .cover__image {
     right: 0; } }
 
+.is-italic {
+  font-style: italic; }
+
 /*
  * brrrrrrrrrr
  */
