@@ -90,4 +90,10 @@
     box-shadow: 0 0 10px 0 rgba($black,1);
     background-color: rgba($black,.4);
   }
+  a {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
