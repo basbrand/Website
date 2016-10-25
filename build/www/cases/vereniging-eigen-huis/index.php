@@ -23,8 +23,8 @@
       <header class="hero hero--beta seed pod pod--hippo cover isolation">
       <img
         sizes="100vw"
-        scrset="/images/content/w800_h400px_3x--veh.jpg 2400w, /images/content/w800_h400px_2x--veh.jpg 1600w, /images/content/w800_h400px--veh.jpg 800w"
-        class="cover__image" src="/images/content/w800_h400px_2x--veh.jpg"
+        scrset="/images/content/w800px_h400px_3x--veh.jpg 2400w, /images/content/w800px_h400px_2x--veh.jpg 1600w, /images/content/w800px_h400px--veh.jpg 800w"
+        class="cover__image" src="/images/content/w800px_h400px_2x--veh.jpg"
         alt="">
       <div class="hero__header seed__header leader trailer">
         <img
