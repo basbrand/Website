@@ -27,4 +27,8 @@ Styleguide 3.2
     font-size: to-unit(18px);
     line-height: to-unit(rhythm(8), 1, 18px);
   }
+  @include breakpoint($gt-large-handheld) {
+    font-size: to-unit(20px);
+    line-height: to-unit(rhythm(9), 1, 20px);
+  }
 }

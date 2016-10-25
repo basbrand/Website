@@ -31,22 +31,22 @@ Styleguide 4.3
   &__body {
     display: table-cell;
     vertical-align: middle;
-    line-height: px-to-pt(rhythm(3));
+    line-height: rhythm(3);
   }
   &__image {
     outline: 1px solid;
-    width: px-to-pt(rhythm(10));
-    height: px-to-pt(rhythm(10));
+    width: rhythm(12);
+    height: rhythm(12);
   }
   &--s &__image {
-      width: px-to-pt(rhythm(8));
-      height: px-to-pt(rhythm(8));
+      width: rhythm(10);
+      height: rhythm(10);
   }
   @include breakpoint($gt-small-desktop) {
     // left: px-to-pt(-1*rhythm(6));
     &__image {
-      width: px-to-pt(rhythm(12));
-      height: px-to-pt(rhythm(12));
+      width: rhythm(14);
+      height: rhythm(14);
     }
   }
 }
