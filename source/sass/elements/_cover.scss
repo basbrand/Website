@@ -63,6 +63,13 @@ Styleguide 3.17
       bottom: 0;
     }
   }
+  &--middle &__image {
+    top: 50%; /* 1 */
+    left: 50%; /* 1 */
+    transform: translateY(-50%) translateX(-50%); /* 1 */
+    bottom: auto;
+    right: auto;
+  }
 
   @include breakpoint($portrait) {
     &--hero &__image {

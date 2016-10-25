@@ -13,7 +13,7 @@
         <?php include 'landingpage/handshake.php'; ?>
         <?php include 'landingpage/invitation.php'; ?>
       </div>
-        <?php include 'landingpage/introduction.php'; ?>
+      <?php include 'landingpage/introduction.php'; ?>
     </div>
     <?php //include 'landingpage/tools.php'; ?>
     <div class="layout">

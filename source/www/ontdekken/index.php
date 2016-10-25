@@ -20,7 +20,7 @@
       </ol>
     </nav>
     <article class="post">
-      <header class="hero hero--beta seed pod pod--hippo cover isolation">
+      <header class="hero hero--beta seed pod pod--hippo cover cover--middle isolation">
         <img
           sizes="100vw"
           scrset="/images/content/w800_h400px_3x--invitation.jpg 2400w, /images/content/w800_h400px_2x--invitation.jpg 1600w, /images/content/w800_h400px--invitation.jpg 800w"
