@@ -37,9 +37,8 @@
           height="80"
           />
       </div>
-      <div class="hero__body seed__body backdrop">
+      <div class="hero__body seed__body backdrop--body">
         <h1 class="post__title title--inverse leader trailer">UX design voor Vereniging Eigen Huis</h1>
-        <p class="lead body--inverse leader trailer">Vereniging Eigen Huis is met ruim 700.000 leden een van de grootste ledenorganisaties in Nederland. De Vereniging is belangenbehartiger en dienstverlener in één. Een unieke positie die vraagt om effectief op te komen voor de belangen voor iedereen die een huis heeft of van plan is te kopen. Daarnaast is Vereniging Eigen Huis een partner voor alle sectoren die met huizenbouw te maken hebben en de politiek.</p>
       </div>
     </header>
       <div class="post__main isolation">
@@ -50,6 +49,7 @@
               <li><a class="anchor--reset anchor--shy" href="/cases/vereniging-eigen-huis">Vereniging Eigen Huis</a></li>
             </ol>
           </nav>
+          <p class="lead">Vereniging Eigen Huis is met ruim 700.000 leden een van de grootste ledenorganisaties in Nederland. De Vereniging is belangenbehartiger en dienstverlener in één. Een unieke positie die vraagt om effectief op te komen voor de belangen voor iedereen die een huis heeft of van plan is te kopen. Daarnaast is Vereniging Eigen Huis een partner voor alle sectoren die met huizenbouw te maken hebben en de politiek.</p>
           <h2>Hebben verenigingen nog wel bestaansrecht?</h2>
           <p>Grote verenigingen gaan door een interessante transitie. De kracht van het collectief paste goed bij de ‘calculerende babyboomer’ en de ‘samenbeslisser uit de generatieX’. Maar hoe ben je over 10 jaar nog relevant voor de ‘snack generatie; je klanten die geboren zijn na 2000’? Dat waren onze eerste vragen</p>
           <h2>Visie op klantrelatie</h2>

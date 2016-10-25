@@ -36,8 +36,8 @@ $gt-large-handheld: "(min-width: #{to-unit(768px,$unit,$font-size)})";
 $lt-small-desktop: "(max-width: #{to-unit(1023px,$unit,$font-size)})";
 $gt-small-desktop: "(min-width: #{to-unit(1024px,$unit,$font-size)})";
 
-$lt-medium-desktop: "(max-width: #{to-unit(1439px,$unit,$font-size)})";
-$gt-medium-desktop: "(min-width: #{to-unit(1440px,$unit,$font-size)})";
+$lt-medium-desktop: "(max-width: #{to-unit(1199px,$unit,$font-size)})";
+$gt-medium-desktop: "(min-width: #{to-unit(1200px,$unit,$font-size)})";
 
 $lt-large-desktop: "(max-width: #{to-unit(1599px,$unit,$font-size)})";
 $gt-large-desktop: "(min-width: #{to-unit(1600px,$unit,$font-size)})";
