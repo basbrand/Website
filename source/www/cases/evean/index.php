@@ -20,7 +20,7 @@
       </ol>
     </nav>
     <article class="post">
-      <header class="hero hero--navbar seed pod pod--hippo cover isolation">
+      <header class="hero hero--beta seed pod pod--hippo cover isolation">
         <picture class="cover__image">
           <!--[if IE 9]><video style="display: none;"><![endif]-->
           <source
@@ -48,7 +48,6 @@
         </div>
         <div class="hero__body seed__body backdrop">
           <h1 class="post__title title--inverse leader trailer">Evean staat naast haar klant</h1>
-          <p class="post__lead body--inverse leader trailer">Hoe zorg je dat je klanten een gevoel van regie geeft? En welke digitale mogelijkheden moet je ze dan als eerste geven? Waar ga je investeren? Hoe ben je relevant in een ondoorzichtige zorgmarkt?</p>
         </div>
       </header>
       <div class="post__main isolation">
@@ -59,7 +58,8 @@
               <li><a class="anchor--reset anchor--shy" href="/cases/evean">Evean</a></li>
             </ol>
           </nav>
-          <p class="lead">De zorg is flink in beweging, zo ook Evean. De veranderingen die het kabinet doorvoert, vragen een behoorlijke omslag in doen en denken. De cliënt van vandaag mag zélf bepalen welke zorg en ondersteuning het beste aansluit bij zijn behoeften en mogelijkheden.</p>
+          <p class="lead">Hoe zorg je dat je klanten een gevoel van regie geeft? En welke digitale mogelijkheden moet je ze dan als eerste geven? Waar ga je investeren? Hoe ben je relevant in een ondoorzichtige zorgmarkt?</p>
+          <p>De zorg is flink in beweging, zo ook Evean. De veranderingen die het kabinet doorvoert, vragen een behoorlijke omslag in doen en denken. De cliënt van vandaag mag zélf bepalen welke zorg en ondersteuning het beste aansluit bij zijn behoeften en mogelijkheden.</p>
           <h2>Digitale strategie</h2>
           <p>Brickson ontwikkelde een gedragen strijdplan voor de komende jaren. De lange termijn visie van de organisatie vertaalden we naar een strategie voor het digitale domein: hoe biedt je transacties aan, hoe informeer je, hoe communiceer je met klanten.</p>
           <h2>User experience en visual design</h2>

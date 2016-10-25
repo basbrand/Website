@@ -79,7 +79,7 @@
               <p>Grote verenigingen gaan door een interessante transitie. De kracht van het collectief paste goed bij de ‘calculerende babyboomer’ en de ‘samenbeslisser uit de generatieX’. Maar hoe ben je over 10 jaar nog relevant voor de ‘snack generatie; je klanten die geboren zijn na 2000’? Dat waren onze eerste vragen.</p>
             </div>
             <p class="seed__footer leader trailer">
-              <a class="anchor--shy meta" href="/">Lees verder</a>
+              <a class="anchor--shy meta" href="/cases/vereniging-eigen-huis/">Lees verder</a>
             </p>
           </div>
         </article>
@@ -110,7 +110,7 @@
               <p>CTA is vertegenwoordigd in 78 landen en wil daar het kennisniveau over landbouw verhogen. Door te inspireren, samenwerking mogelijk te maken en kennis te delen.</p>
             </div>
             <p class="seed__footer leader trailer">
-              <a class="anchor--shy meta" href="/cases/vereniging-eigen-huis/">Lees verder</a>
+              <a class="anchor--shy meta" href="/cases/cta/">Lees verder</a>
             </p>
           </div>
         </article>
