@@ -1,4 +1,4 @@
-<section class="pod pod--zebra pod--rhino invitation isolation" style="position: relative; z-index: 1;">
+<section class="pod pod--zebra invitation isolation" style="position: relative; z-index: 1;">
   <div class="pod__seed tile">
     <nav class="tile trailer-inside">
       <ol class="menu leader trailer list--reset list--inline fx bleed" id="menu">
@@ -11,7 +11,6 @@
       <h2 class="title leader trailer">Wat is jouw volgende stap?</h2>
       <p class="leader trailer">Werken met Brickson betekent samen ontdekken, bedenken, ontwerpen of bouwen. We lossen complexe problemen op en werken op project-, consultancy- of interimbasis.</p>
     </div>
-    <p class="tile leader trailer"><a class="button button--stretch" href="mailto:vooruit@brickson.nl?subject='Vooruit%20met%20Brickson'">Klaar voor de volgende stap?</a></p>
   </div>
   <div class="pod__seed tile cover isolation isolation--quad">
     <img

@@ -68,7 +68,10 @@ Styleguide 5.6
   }
   &__aside {}
   @include breakpoint($gt-large-handheld) {
-
+    &__title {
+      font-size: to-unit(36px);
+      line-height: to-unit( rhythm(10), 1, 36px);
+    }
   }
   @include breakpoint($gt_small_desktop) {
     flex-direction: row;

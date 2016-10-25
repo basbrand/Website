@@ -8,13 +8,22 @@
     <?php include 'head.php'; ?>
   </head>
   <body class="<?php echo $debug ? 'debug-layout ' : ''; ?> landingpage">
-    <?php include 'landingpage/handshake.php'; ?>
-    <?php include 'landingpage/invitation.php'; ?>
-    <?php // include 'testimonials/eigenhuis.php'; ?>
-    <?php include 'landingpage/introduction.php'; ?>
+    <div class="layout">
+      <div class="layout__cell layout__cell--main">
+        <?php include 'landingpage/handshake.php'; ?>
+        <?php include 'landingpage/invitation.php'; ?>
+      </div>
+        <?php include 'landingpage/introduction.php'; ?>
+    </div>
     <?php //include 'landingpage/tools.php'; ?>
-    <?php include 'testimonials/evean.php'; ?>
-    <?php include 'landingpage/contact.php'; ?>
+    <div class="layout">
+      <div class="layout__cell layout__cell--main">
+        <?php include 'testimonials/evean.php'; ?>
+      </div>
+      <div class="layout__cell layout__cell--aside">
+        <?php include 'landingpage/contact.php'; ?>
+      </div>
+    </div>
     <?php include 'post-body.php'; ?>
   </body>
 </html>

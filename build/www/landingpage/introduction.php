@@ -1,4 +1,4 @@
-<section class="pod pod--baboon is-reverse introduction">
+<section class="pod pod--baboon is-reverse introduction layout__cell layout__cell--aside">
   <div class="pod__seed tile ">
     <div>
       <h2 class="title leader trailer">Blijer, gezonder en welvarender</h2>

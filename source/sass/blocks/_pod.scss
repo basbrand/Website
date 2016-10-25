@@ -159,6 +159,15 @@ Styleguide 4.1
         min-height: 50%;
         min-height: 50vh;
     }
+    &--kudu,
+    &--serval {
+      &.cover {
+        .cover__image {
+          right: 0;
+          left: auto;
+        }
+      }
+    }
     &--leopard {
       width: percentage(6/12);
       float: left;
@@ -208,6 +217,13 @@ Styleguide 4.1
     &--leopard {
       flex-direction: column;
     }
+    &--kudu {
+      &.cover {
+        .cover__image {
+          top: auto;
+        }
+      }
+    }
   }
   @include breakpoint($gt-medium-desktop) {
 
@@ -252,9 +268,25 @@ Styleguide 4.1
     }
     &--baboon {
       flex-direction: column;
-      width: percentage(12/36);
+      // width: percentage(12/36);
+      min-height: 100%;
+      min-height: 100vh;
       &.is-reverse {
         flex-flow: column;
+      }
+      .cover {
+        .cover__image {
+          left: 0;
+          top: auto;
+          max-width: 100%;
+        }
+      }
+    }
+    .cover {
+      .cover__image {
+        left: 0;
+        top: auto;
+        max-width: 100%;
       }
     }
     &--baboon &__seed {

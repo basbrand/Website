@@ -49,15 +49,15 @@
 // }
 
 
-@include breakpoint($gt-medium-desktop) {
-  .introduction {
-    position: relative;
-    margin-bottom: -50%;
-    top: -50%;
-    top: -50vh;
-    float: right;
-  }
-}
+// @include breakpoint($gt-medium-desktop) {
+//   .introduction {
+//     position: relative;
+//     margin-bottom: -50%;
+//     top: -50%;
+//     top: -50vh;
+//     float: right;
+//   }
+// }
 
 /* Edge's absolute position requires extra help */
 @supports (-ms-ime-align:auto) {
