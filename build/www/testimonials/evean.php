@@ -4,7 +4,7 @@
     <source
       media="<?php echo $gt_medium_desktop; ?>"
       sizes="<?php echo $gt_medium_desktop; ?> 67vw"
-      srcset="/images/content/w1280px_h1280px--evean.jpg 2560w, /images/content/w1280px_h1280px--evean.jpg 1280w">
+      srcset="/images/content/w800px_h800px_2x--evean.jpg 1600w, /images/content/w800px_h800px--evean.jpg 800w">
     <source
       media="<?php echo $landscape; ?>"
       sizes="100vw"

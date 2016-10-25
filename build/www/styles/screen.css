@@ -1751,7 +1751,7 @@ Styleguide 3.11
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0;
+    top: 0;
     display: block;
     background: #ffffff; }
   .isolation:before {
