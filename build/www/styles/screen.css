@@ -651,6 +651,53 @@ Debug layout
 
 Styleguide 2.0.1
 */
+html:after,
+body:after {
+  display: block;
+  position: fixed;
+  right: 0;
+  background: #fff;
+  padding: 4px; }
+
+html:after {
+  top: 0; }
+  @media (min-aspect-ratio: 6 / 5) and (min-width: 20em) {
+    html:after {
+      content: 'gt-small-handheld - landscape'; } }
+  @media (max-aspect-ratio: 6 / 5) and (min-width: 20em) {
+    html:after {
+      content: 'gt-small-handheld - portrait'; } }
+  @media (min-aspect-ratio: 6 / 5) and (min-width: 32.5em) {
+    html:after {
+      content: 'gt-medium-handheld - landscape'; } }
+  @media (max-aspect-ratio: 6 / 5) and (min-width: 32.5em) {
+    html:after {
+      content: 'gt-medium-handheld - portrait'; } }
+  @media (min-aspect-ratio: 6 / 5) and (min-width: 48em) {
+    html:after {
+      content: 'gt-large-handheld - landscape'; } }
+  @media (max-aspect-ratio: 6 / 5) and (min-width: 48em) {
+    html:after {
+      content: 'gt-large-handheld - portrait'; } }
+  @media (min-aspect-ratio: 6 / 5) and (min-width: 64em) {
+    html:after {
+      content: 'gt-small-desktop - landscape'; } }
+  @media (max-aspect-ratio: 6 / 5) and (min-width: 64em) {
+    html:after {
+      content: 'gt-small-desktop - portrait'; } }
+  @media (min-aspect-ratio: 6 / 5) and (min-width: 90em) {
+    html:after {
+      content: 'gt-medium-desktop - landscape'; } }
+  @media (max-aspect-ratio: 6 / 5) and (min-width: 90em) {
+    html:after {
+      content: 'gt-medium-desktop - portrait'; } }
+  @media (min-aspect-ratio: 6 / 5) and (min-width: 100em) {
+    html:after {
+      content: 'gt-large-desktop - landscape'; } }
+  @media (max-aspect-ratio: 6 / 5) and (min-width: 100em) {
+    html:after {
+      content: 'gt-large-desktop - portrait'; } }
+
 /* 2.1 Layout */
 /*
 Layout
@@ -2068,10 +2115,14 @@ Styleguide 4.1
     width: 100%;
     min-height: 100%;
     min-height: 100vh; }
+  .pod--leopard {
+    min-height: 0; }
   .pod--leopard .pod__seed {
     width: 100%;
-    min-height: 50%;
-    min-height: 50vh; }
+    min-height: 0; }
+  .pod--leopard .pod__seed.cover {
+    min-height: 33.33333%;
+    min-height: 33.33333vh; }
   .pod--serval .pod__seed {
     color: white; }
     .pod--serval .pod__seed .button {
@@ -2099,7 +2150,7 @@ Styleguide 4.1
       min-height: 50vh; }
     .pod--leopard {
       width: 50%; }
-    .pod--leopard .pod__seed {
+    .pod--leopard .pod__seed.cover {
       min-height: 50%;
       min-height: 25vh; } }
   @media only screen and (min-width: 48em) and (max-aspect-ratio: 6 / 5) {
@@ -2144,9 +2195,7 @@ Styleguide 4.1
       width: 50%;
       min-height: 100%;
       min-height: 50vh; }
-    .pod--hippo {
-      flex-direction: column; }
-    .pod--baboon {
+    .pod--hippo, .pod--baboon, .pod--leopard {
       flex-direction: column; } }
   @media only screen and (min-width: 90em) {
     .pod__seed {

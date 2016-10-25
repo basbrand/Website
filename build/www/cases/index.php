@@ -21,21 +21,12 @@
     </nav>
     <section class="layout">
       <div class="layout__cell layout__cell--main">
-        <article class="pod--leopard isolation">
+        <article class="pod pod--leopard isolation">
           <div class="pod__seed seed cover">
-            <picture class="cover__image">
-              <!--[if IE 9]><video style="display: none;"><![endif]-->
-              <source
-                media="<?php echo $gt_large_handheld; ?>"
-                sizes="<?php echo $gt_large_handheld; ?> 50vw, 100vw"
-                srcset="/images/content/w414px_h206px_3x--evean.jpg 1242w, /images/content/w414px_h206px_2x--evean.jpg 828w, /images/content/w414px_h414px--evean.jpg 414w">
-              <source
-                media="<?php echo $lt_large_handheld; ?>"
-                sizes="100vw"
-                srcset="/images/content/w414px_h414px_3x--evean.jpg 1242w, /images/content/w414px_h414px_2x--evean.jpg 828w, /images/content/w414px_h414px--evean.jpg 414w">
-              <!--[if IE 9]></video><![endif]-->
-              <img class="cover__image" src="/images/content/w414px_h414px--evean.jpg" alt="">
-            </picture>
+            <img
+              sizes="<?php echo $gt_small_handheld; ?> 50vw, 100vw"
+              srcset="/images/content/w414px_h206px_3x--evean.jpg 1242w, /images/content/w414px_h206px_2x--evean.jpg 828w, /images/content/w414px_h206px--evean.jpg 414w"
+              class="cover__image" src="/images/content/w414px_h206px--evean.jpg" alt="">
             <div class="seed__header leader-inside trailer-inside">
               <img
                 class="brand-client"
@@ -61,61 +52,12 @@
             </p>
           </div>
         </article>
-        <article class="pod--leopard isolation">
+        <article class="pod pod--leopard isolation">
           <div class="pod__seed seed cover">
-            <picture class="cover__image">
-              <!--[if IE 9]><video style="display: none;"><![endif]-->
-              <source
-                media="<?php echo $gt_large_handheld; ?>"
-                sizes="<?php echo $gt_large_handheld; ?> 50vw, 100vw"
-                srcset="/images/content/w414px_h206px_3x--cta.jpg 1242w, /images/content/w414px_h206px_2x--cta.jpg 828w, /images/content/w414px_h414px--cta.jpg 414w">
-              <source
-                media="<?php echo $lt_large_handheld; ?>"
-                sizes="100vw"
-                srcset="/images/content/w414px_h414px_3x--cta.jpg 1242w, /images/content/w414px_h414px_2x--cta.jpg 828w, /images/content/w414px_h414px--cta.jpg 414w">
-              <!--[if IE 9]></video><![endif]-->
-              <img class="cover__image" src="/images/content/w414px_h414px--cta.jpg" alt="">
-            </picture>
-            <div class="seed__header leader-inside trailer-inside">
-              <img
-                class="brand-client"
-                sizes="<?php echo $gt_small_desktop; ?> 10vw, 25vw"
-                srcset="/images/logos/cta_h40w48.png 40w, /images/logos/cta_h40w48_2x.png 80w"
-                src="/images/logos/cta_h40w48.png"
-                alt="Afbeelding logo CTA"
-                width="48"
-                height="40"
-                />
-            </div>
-            <div class="seed__footer">
-              <small class="meta meta--tiny meta--inverse leader-inside trailer-inside">Case</small>
-            </div>
-          </div>
-          <div class="pod__seed seed">
-            <div class="seed__body">
-              <h2 class="title title--body leader trailer">CTA, stappen naar een glocal merk</h2>
-              <p>CTA is vertegenwoordigd in 78 landen en wil daar het kennisniveau over landbouw verhogen. Door te inspireren, samenwerking mogelijk te maken en kennis te delen.</p>
-            </div>
-            <p class="seed__footer leader trailer">
-              <a class="anchor--shy meta" href="/">Lees verder</a>
-            </p>
-          </div>
-        </article>
-        <article class="pod--leopard isolation">
-          <div class="pod__seed seed cover">
-            <picture class="cover__image">
-              <!--[if IE 9]><video style="display: none;"><![endif]-->
-              <source
-                media="<?php echo $gt_large_handheld; ?>"
-                sizes="<?php echo $gt_large_handheld; ?> 50vw, 100vw"
-                srcset="/images/content/w414px_h206px_3x--veh.jpg 1242w, /images/content/w414px_h206px_2x--veh.jpg 828w, /images/content/w414px_h414px--veh.jpg 414w">
-              <source
-                media="<?php echo $lt_large_handheld; ?>"
-                sizes="100vw"
-                srcset="/images/content/w414px_h414px_3x--veh.jpg 1242w, /images/content/w414px_h414px_2x--veh.jpg 828w, /images/content/w414px_h414px--veh.jpg 414w">
-              <!--[if IE 9]></video><![endif]-->
-              <img class="cover__image" src="/images/content/w414px_h414px--veh.jpg" alt="">
-            </picture>
+            <img
+              sizes="<?php echo $gt_small_handheld; ?> 50vw, 100vw"
+              srcset="/images/content/w414px_h206px_3x--veh.jpg 1242w, /images/content/w414px_h206px_2x--veh.jpg 828w, /images/content/w414px_h206px--veh.jpg 414w"
+              class="cover__image" src="/images/content/w414px_h206px--veh.jpg" alt="">
             <div class="seed__header leader-inside trailer-inside">
               <img
                 class="brand-client"
@@ -141,21 +83,43 @@
             </p>
           </div>
         </article>
-        <article class="pod--leopard isolation">
+        <article class="pod pod--leopard isolation">
           <div class="pod__seed seed cover">
-            <picture class="cover__image">
-              <!--[if IE 9]><video style="display: none;"><![endif]-->
-              <source
-                media="<?php echo $gt_large_handheld; ?>"
-                sizes="<?php echo $gt_large_handheld; ?> 50vw, 100vw"
-                srcset="/images/content/w414px_h206px_3x--nvve.jpg 1242w, /images/content/w414px_h206px_2x--nvve.jpg 828w, /images/content/w414px_h414px--nvve.jpg 414w">
-              <source
-                media="<?php echo $lt_large_handheld; ?>"
-                sizes="100vw"
-                srcset="/images/content/w414px_h414px_3x--nvve.jpg 1242w, /images/content/w414px_h414px_2x--nvve.jpg 828w, /images/content/w414px_h414px--nvve.jpg 414w">
-              <!--[if IE 9]></video><![endif]-->
-              <img class="cover__image" src="/images/content/w414px_h414px--nvve.jpg" alt="">
-            </picture>
+            <img
+              sizes="<?php echo $gt_small_handheld; ?> 50vw, 100vw"
+              srcset="/images/content/w414px_h206px_3x--cta.jpg 1242w, /images/content/w414px_h206px_2x--cta.jpg 828w, /images/content/w414px_h206px--cta.jpg 414w"
+              class="cover__image" src="/images/content/w414px_h206px--cta.jpg" alt="">
+            <div class="seed__header leader-inside trailer-inside">
+              <img
+                class="brand-client"
+                sizes="<?php echo $gt_small_desktop; ?> 10vw, 25vw"
+                srcset="/images/logos/cta_h40w48.png 40w, /images/logos/cta_h40w48_2x.png 80w"
+                src="/images/logos/cta_h40w48.png"
+                alt="Afbeelding logo CTA"
+                width="48"
+                height="40"
+                />
+            </div>
+            <div class="seed__footer">
+              <small class="meta meta--tiny meta--inverse leader-inside trailer-inside">Case</small>
+            </div>
+          </div>
+          <div class="pod__seed seed">
+            <div class="seed__body">
+              <h2 class="title title--body leader trailer">CTA, stappen naar een glocal merk</h2>
+              <p>CTA is vertegenwoordigd in 78 landen en wil daar het kennisniveau over landbouw verhogen. Door te inspireren, samenwerking mogelijk te maken en kennis te delen.</p>
+            </div>
+            <p class="seed__footer leader trailer">
+              <a class="anchor--shy meta" href="/">Lees verder</a>
+            </p>
+          </div>
+        </article>
+        <article class="pod pod--leopard isolation">
+          <div class="pod__seed seed cover">
+            <img
+              sizes="<?php echo $gt_small_handheld; ?> 50vw, 100vw"
+              srcset="/images/content/w414px_h206px_3x--nvve.jpg 1242w, /images/content/w414px_h206px_2x--nvve.jpg 828w, /images/content/w414px_h206px--nvve.jpg 414w"
+              class="cover__image" src="/images/content/w414px_h206px--nvve.jpg" alt="">
             <div class="seed__header leader-inside trailer-inside">
               <img
                 class="brand-client"
@@ -182,7 +146,7 @@
           </div>
         </article>
       </div>
-      <aside class="layout__cell well well--stork isolation wings seed is-gt-medium-desktop tile">
+      <aside class="layout__cell well well--stork isolation wings seed is-gt-small-desktop tile">
         <div class="seed__body">
           <blockquote class="quote leader--hero trailer"><p>Met oog en gevoel voor de mensen in je organisatie gaat Brickson altijd een stap verder.</p></blockquote>
           <figure class="person bleed leader trailer">
