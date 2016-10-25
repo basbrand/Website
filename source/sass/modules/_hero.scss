@@ -24,7 +24,7 @@ Styleguide 5.9
 .hero {
   max-width: 100%;
   &--navbar {
-    padding-top: rhythm(20);
+    min-height: calc( 100vh - #{rhythm(20)} );
   }
   &__header,
   &__body,
@@ -77,6 +77,7 @@ Styleguide 5.9
 
     &--navbar {
       // padding-top: rhythm(30);
+      // min-height: calc(100vh-80px);
     }
     &__body,
     &__footer {

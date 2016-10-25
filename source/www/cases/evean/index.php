@@ -8,7 +8,7 @@
     <?php include '../../head.php'; ?>
   </head>
   <body class="<?php echo $debug ? 'debug-layout ' : ''; ?>">
-    <nav class="navbar media">
+    <nav class="navbar navbar--hero media">
       <ol class="menu menu--hero list--reset fx bleed" id="menu">
         <li class="gutters meta meta--hero">
           <a class="menu__home fx" href="/"><span class="is-narrative">Home</span></a>

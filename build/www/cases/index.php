@@ -20,39 +20,6 @@
       </ol>
     </nav>
     <section class="layout">
-      <div class="hero hero--navbar seed pod pod--hippo cover isolation is-cleared">
-        <picture class="cover__image">
-          <!--[if IE 9]><video style="display: none;"><![endif]-->
-          <source
-            media="<?php echo $landscape; ?>"
-            sizes="100vw"
-            srcset="/images/content/w1022px_h520px--eigenhuis.jpg 1022w, /images/content/w1022px_h520px_2x--eigenhuis.jpg 2044w">
-          <source
-            media="<?php echo $portrait; ?>"
-            sizes="100vw"
-            srcset="/images/content/w520px_h1022px--eigenhuis.jpg 520w, /images/content/w520px_h1022px_2x--eigenhuis.jpg 1040w">
-          <!--[if IE 9]></video><![endif]-->
-          <img class="cover__image" src="/images/content/w320px_h576px--eigenhuis.jpg" alt="">
-        </picture>
-        <div class="hero__header seed__header">
-          <img
-            class="brand-client--hero"
-            sizes="<?php echo $gt_small_desktop; ?> 23vw, 50vw"
-            srcset="/images/logos/veh_h80w237_2x.png 474w, /images/logos/veh_h80w237.png 237w, /images/logos/veh_h40w119.png 119w"
-            src="/images/logos/veh_h80w237.png"
-            alt="Afbeelding logo Vereniging Eigen Huis"
-            width="237"
-            height="80"
-            />
-        </div>
-        <div class="hero__body seed__body backdrop">
-          <h2 class="post__title title--inverse leader trailer">UX design voor Vereniging Eigen Huis</h2>
-          <p class="lead body--inverse leader trailer">Vereniging Eigen Huis is met ruim 700.000 leden een van de grootste ledenorganisaties in Nederland. De Vereniging is belangenbehartiger en dienstverlener in één. Een unieke positie die vraagt om effectief op te komen voor de belangen voor iedereen die een huis heeft of van plan is te kopen. Daarnaast is Vereniging Eigen Huis een partner voor alle sectoren die met huizenbouw te maken hebben en de politiek.</p>
-        </div>
-        <div class="hero__body seed__footer backdrop backdrop--body">
-          <p class="leader trailer"><a class="button button--hero button--inverse" href="/cases/vereniging-eigen-huis/">Lees verder</a></p>
-        </div>
-      </div>
       <div class="layout__cell layout__cell--main">
         <article class="pod--leopard isolation">
           <div class="pod__seed seed cover">

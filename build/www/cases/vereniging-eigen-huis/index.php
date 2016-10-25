@@ -35,9 +35,9 @@
           <!--[if IE 9]></video><![endif]-->
           <img class="cover__image" src="/images/content/w320px_h576px--eigenhuis.jpg" alt="">
         </picture>
-      <div class="hero__header seed__header">
+      <div class="hero__header seed__header leader trailer">
         <img
-          class="brand-client--hero"
+          class="brand-client--hero gutters"
           sizes="<?php echo $gt_small_desktop; ?> 23vw, 50vw"
           srcset="/images/logos/veh_h80w237_2x.png 474w, /images/logos/veh_h80w237.png 237w, /images/logos/veh_h40w119.png 119w"
           src="/images/logos/veh_h80w237.png"
