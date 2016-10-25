@@ -8,7 +8,7 @@
     <?php include '../../head.php'; ?>
   </head>
   <body class="<?php echo $debug ? 'debug-layout ' : ''; ?>">
-    <nav class="navbar navbar--hero media">
+    <nav class="navbar media">
       <ol class="menu menu--hero list--reset fx bleed" id="menu">
         <li class="gutters meta meta--hero">
           <a class="menu__home fx" href="/"><span class="is-narrative">Home</span></a>
@@ -35,9 +35,9 @@
           <!--[if IE 9]></video><![endif]-->
           <img class="cover__image" src="/images/content/w1280px_h1280px--evean.jpg" alt="">
         </picture>
-        <div class="hero__header seed__header">
+        <div class="hero__header seed__header leader trailer">
           <img
-            class="brand-client--hero"
+            class="brand-client--hero gutters"
             sizes="<?php echo $gt_small_desktop; ?> 23vw, 50vw"
             srcset="/images/logos/evean_h58w256_2x.png 512w, /images/logos/evean_h58w256.png 256w, /images/logos/evean_h20w128.png 128w"
             src="/images/logos/evean_h58w256.png"
