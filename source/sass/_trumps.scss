@@ -84,3 +84,10 @@
 .is-italic {
   font-style: italic;
 }
+
+.tmp-shop {
+  &:hover {
+    box-shadow: 0 0 10px 0 rgba($black,1);
+    background-color: rgba($black,.4);
+  }
+}

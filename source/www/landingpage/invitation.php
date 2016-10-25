@@ -18,25 +18,25 @@
       srcset="/images/content/w414px_h414px_3x--invitation.jpg 1242w, /images/content/w414px_h414px_2x--invitation.jpg 828w, /images/content/w414px_h414px--invitation.jpg 414w"
       class="cover__image" src="/images/content/w414px_h414px_2x--invitation.jpg" alt="">
     <ul class="grid">
-      <li class="grid__cell tile tile--focus wellwell--ostrich backdrop backdrop--body">
+      <li class="grid__cell tile tile--focus backdrop tmp-shop">
         <a class="anchor--reset anchor--shy" href="/ontdekken/">
           <p class="gutters leader trailer"><strong class="meta meta--inverse meta--hero">Ontdekken</strong></p>
           <p class="gutters trailer"><strong class="meta meta--inverse">Analysis &amp; Challenge</strong></p>
         </a>
       </li>
-      <li class="grid__cell tile tile--focus wellwell--ostrich backdrop backdrop--body">
+      <li class="grid__cell tile tile--focus backdrop tmp-shop">
         <a class="anchor--reset anchor--shy" href="/bedenken/">
           <p class="gutters leader trailer"><strong class="meta meta--inverse meta--hero">Bedenken</strong></p>
           <p class="gutters trailer"><strong class="meta meta--inverse">Strategy &amp; Concept</strong></p>
         </a>
       </li>
-      <li class="grid__cell tile tile--focus wellwell--ostrich backdrop">
+      <li class="grid__cell tile tile--focus backdrop tmp-shop">
         <a class="anchor--reset anchor--shy" href="/ontwerpen/">
           <p class="gutters leader trailer"><strong class="meta meta--inverse meta--hero">Ontwerpen</strong></p>
           <p class="gutters trailer"><strong class="meta meta--inverse">User Experience Design</strong></p>
         </a>
       </li>
-      <li class="grid__cell tile tile--focus wellwell--ostrich backdrop">
+      <li class="grid__cell tile tile--focus backdrop tmp-shop">
         <a class="anchor--reset anchor--shy" href="/bouwen/">
           <p class="gutters leader trailer"><strong class="meta meta--inverse meta--hero">Bouwen</strong></p>
           <p class="gutters trailer"><strong class="meta meta--inverse">Development &amp; Implementation</strong></p>

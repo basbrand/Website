@@ -1750,16 +1750,16 @@ Styleguide 3.11
   .isolation:before, .isolation:after {
     content: "";
     position: absolute;
-    right: 0;
-    top: 0;
+    left: 0;
+    bottom: 0;
     display: block;
     background: #ffffff; }
   .isolation:before {
-    left: 0;
+    right: 0;
     height: 1px;
     width: 100%; }
   .isolation:after {
-    bottom: 0;
+    top: 0;
     width: 1px;
     height: 100%; }
   .isolation--quad:before {
@@ -3316,6 +3316,10 @@ Styleguide 7.3
 
 .is-italic {
   font-style: italic; }
+
+.tmp-shop:hover {
+  box-shadow: 0 0 10px 0 black;
+  background-color: rgba(0, 0, 0, 0.4); }
 
 /*
  * brrrrrrrrrr
