@@ -3,7 +3,7 @@
 <html lang="nl">
   <head>
     <meta charset="UTF-8">
-    <title>Brickson 123</title>
+    <title>Brickson Develop</title>
     <meta name="description" content="Brickson is er voor organisaties die de volgende stap in digitaal willen maken. Werken met Brickson betekent samen ontdekken, bedenken, ontwerpen of bouwen."/>
     <?php include 'head.php'; ?>
   </head>
