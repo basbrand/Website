@@ -24,16 +24,15 @@
         <picture class="cover__image">
           <!--[if IE 9]><video style="display: none;"><![endif]-->
           <source
-            media="<?php echo $gt_large_handheld; ?> and <?php echo $portrait; ?>"
-            srcset="/images/content/w896px_h640px--evean.jpg 896w, /images/content/w896px_h640px_2x--evean.jpg 1792w">
+            media="<?php echo $gt_large_handheld; ?>"
+            sizes="<?php echo $gt_large_handheld; ?> 50vw, 100vw"
+            srcset="/images/content/w414px_h206px_3x--nvve.jpg 1242w, /images/content/w414px_h206px_2x--nvve.jpg 828w, /images/content/w414px_h414px--nvve.jpg 414w">
           <source
-            media="<?php echo $gt_medium_handheld; ?> and <?php echo $landscape; ?>"
-            srcset="/images/content/w1022px_h520px--evean.jpg 1022w, /images/content/w1022px_h520px_2x--evean.jpg 2044w">
-          <source
-            media="<?php echo $gt_small_handheld; ?> and <?php echo $portrait; ?>"
-            srcset="/images/content/w520px_h1022px--evean.jpg 520w, /images/content/w520px_h1022px_2x--evean.jpg 1040w">
+            media="<?php echo $lt_large_handheld; ?>"
+            sizes="100vw"
+            srcset="/images/content/w414px_h414px_3x--nvve.jpg 1242w, /images/content/w414px_h414px_2x--nvve.jpg 828w, /images/content/w414px_h414px--nvve.jpg 414w">
           <!--[if IE 9]></video><![endif]-->
-          <img class="cover__image" src="/images/content/w1280px_h1280px--evean.jpg" alt="">
+          <img class="cover__image" src="/images/content/w414px_h414px--nvve.jpg" alt="">
         </picture>
         <div class="hero__header seed__header leader trailer">
           <img
