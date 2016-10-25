@@ -2041,7 +2041,9 @@ Styleguide 4.1
   width: 100%;
   min-height: 100%;
   min-height: 100vh;
-  float: left; }
+  float: left;
+  display: flex;
+  flex-direction: column; }
   .pod__seed {
     float: left;
     width: 100%;
@@ -2062,19 +2064,21 @@ Styleguide 4.1
     .pod--serval .pod__seed .button {
       color: white; }
   @media only screen and (min-aspect-ratio: 6 / 5) {
-    .pod__seed {
-      width: 50%;
-      min-height: 100%;
-      min-height: 100vh; }
-    .pod--kudu .pod__seed {
-      width: 100%; }
-    .pod--zebra {
-      display: flex;
-      flex-wrap: wrap; }
-    .pod--zebra .pod__seed {
-      min-height: 100%; }
-    .pod--serval .pod__seed {
-      width: 100%; } }
+    .pod {
+      flex-direction: row; }
+      .pod__seed {
+        width: 50%;
+        min-height: 100%;
+        min-height: 100vh; }
+      .pod--kudu .pod__seed {
+        width: 100%; }
+      .pod--zebra {
+        display: flex;
+        flex-wrap: wrap; }
+      .pod--zebra .pod__seed {
+        min-height: 100%; }
+      .pod--serval .pod__seed {
+        width: 100%; } }
   @media only screen and (min-width: 48em) {
     .pod--baboon, .pod--kudo, .pod--leopard,
     .pod--kudu .pod__seed {
@@ -2090,7 +2094,9 @@ Styleguide 4.1
       width: 50%; }
     .pod--serval {
       min-height: 50%;
-      min-height: 50vh; } }
+      min-height: 50vh; }
+    .pod--zebra, .pod--baboon {
+      flex-direction: row; } }
   @media only screen and (min-width: 48em) {
     .pod__seed {
       padding: 0 8.33333%; }
@@ -2124,7 +2130,9 @@ Styleguide 4.1
     .pod--baboon .pod__seed {
       width: 50%;
       min-height: 100%;
-      min-height: 50vh; } }
+      min-height: 50vh; }
+    .pod--baboon {
+      flex-direction: column; } }
   @media only screen and (min-width: 90em) {
     .pod__seed {
       padding: 0 5.55556%;
@@ -2982,7 +2990,8 @@ Styleguide 5.9
     flex-direction: column;
     justify-content: center; }
   .hero__header {
-    text-align: right; }
+    text-align: right;
+    padding-top: 80px; }
   .hero--beta {
     min-height: 50%;
     min-height: 50vh; }
@@ -2994,15 +3003,15 @@ Styleguide 5.9
       min-height: 50%;
       min-height: 50vh; } }
   @media only screen and (min-width: 48em) {
-    .hero__header, .hero__body, .hero__footer {
+    .hero__body, .hero__footer {
       padding: 0 4.16667%; }
+    .hero__header {
+      padding-top: 80px 4.16667% 0 4.16667%; }
     .hero__body, .hero__footer {
       padding: 0 4.16667%; }
       .post .hero__body, .post .hero__footer {
         padding: 0 25% 0 8.33333%; } }
   @media only screen and (min-width: 64em) {
-    .hero--navbar {
-      padding-top: 120px; }
     .hero__body, .hero__footer {
       padding: 0 8.33333%; } }
   @media only screen and (min-width: 90em) {

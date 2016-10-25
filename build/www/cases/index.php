@@ -195,5 +195,6 @@
         </div>
       </aside>
     </section>
+    <?php include 'post-body.php'; ?>
   </body>
 </html>

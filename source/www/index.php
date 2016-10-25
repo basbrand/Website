@@ -15,5 +15,6 @@
     <?php //include 'landingpage/tools.php'; ?>
     <?php include 'testimonials/evean.php'; ?>
     <?php include 'landingpage/contact.php'; ?>
+    <?php include 'post-body.php'; ?>
   </body>
 </html>

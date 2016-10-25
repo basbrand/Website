@@ -34,6 +34,8 @@ Styleguide 4.1
   min-height: 100%;
   min-height: 100vh;
   float: left;
+  display: flex;
+  flex-direction: column;
   &__seed {
     float: left;
     width: 100%;
@@ -63,6 +65,7 @@ Styleguide 4.1
     }
   }
   @include breakpoint("(min-aspect-ratio: 6/5)") {
+    flex-direction: row;
     &__seed {
       width: 50%;
       min-height: 100%;
@@ -138,6 +141,10 @@ Styleguide 4.1
       min-height: 50%;
       min-height: 50vh;
     }
+    &--zebra,
+    &--baboon {
+      flex-direction: row;
+    }
   }
   @include breakpoint($gt-large-handheld) {
     &__seed {
@@ -192,7 +199,9 @@ Styleguide 4.1
       min-height: 100%;
       min-height: 50vh;
     }
-
+    &--baboon {
+      flex-direction: column;
+    }
   }
   @include breakpoint($gt-medium-desktop) {
     &__seed {

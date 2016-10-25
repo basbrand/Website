@@ -101,5 +101,6 @@
           </div>
       </aside>
     </article>
+    <?php include 'post-body.php'; ?>
   </body>
 </html>

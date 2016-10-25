@@ -38,6 +38,7 @@ Styleguide 5.9
   }
   &__header {
     text-align: right;
+    padding-top: rhythm(20);
   }
   &--beta {
     min-height: 50%;
@@ -57,10 +58,12 @@ Styleguide 5.9
     }
   }
   @include breakpoint($gt-large-handheld) {
-    &__header,
     &__body,
     &__footer {
       padding: 0 percentage(1/24);
+    }
+    &__header {
+      padding-top: rhythm(20) percentage(1/24)  0 percentage(1/24);
     }
     &__body,
     &__footer {
@@ -73,7 +76,7 @@ Styleguide 5.9
   @include breakpoint($gt-small-desktop) {
 
     &--navbar {
-      padding-top: rhythm(30);
+      // padding-top: rhythm(30);
     }
     &__body,
     &__footer {
