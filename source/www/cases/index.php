@@ -132,7 +132,7 @@
           </div>
         </article>
       </div>
-      <aside class="layout__cell well well--stok isolation wings seed is-gt-medium-desktop tile">
+      <aside class="layout__cell well well--stork isolation wings seed is-gt-medium-desktop tile">
         <div class="seed__body">
           <blockquote class="quote leader--hero trailer"><p>Met oog en gevoel voor de mensen in je organisatie gaat Brickson altijd een stap verder.</p></blockquote>
           <figure class="person bleed leader trailer">

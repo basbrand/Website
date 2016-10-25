@@ -718,6 +718,19 @@ Styleguide 2.1
         padding-left: 4.16667%;
         padding-right: 4.16667%; } }
 
+@media only screen and (-ms-high-contrast: active) and (-ms-high-contrast: none) and (min-width: 64em) {
+  .layout__cell {
+    max-width: 33.33333%;
+    display: inline-block;
+    float: left; }
+    .layout__cell--main {
+      max-width: 66.66667%;
+      display: inline-block;
+      float: left; } }
+
+.layout__cell--main + .layout__cell {
+  display: table-cell\9; }
+
 /* 2.2 Gutter */
 /*
 Gutter
@@ -2838,8 +2851,8 @@ Styleguide 5.6
     .post__title, .post__lead {
       padding-right: 6.66667%; } }
 
-/* @TODO Box-shadow right side of post__main in light blue to fix flex dependency in IE 9-10-11 */
-.post__main + .well--stork {
+.post__main + .well--stork,
+.layout__cell--main + .well--stork {
   box-shadow: 0 999px 0 0 #d3eaec; }
 
 /* 5.7 Navigation */

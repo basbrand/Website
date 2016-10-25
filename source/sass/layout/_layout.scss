@@ -75,3 +75,24 @@ Styleguide 2.1
     }
   }
 }
+
+@include breakpoint($msie) {
+  @include breakpoint($gt-small-desktop){
+    .layout {
+      &__cell {
+        max-width: percentage(12/36);
+        display: inline-block;
+        float: left;
+        &--main {
+          max-width: percentage(24/36);
+          display: inline-block;
+          float: left;
+        }
+      }
+    }
+  }
+}
+
+.layout__cell--main + .layout__cell {
+    display: table-cell\9;
+}
