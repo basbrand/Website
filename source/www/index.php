@@ -3,13 +3,11 @@
 <html lang="nl">
   <head>
     <meta charset="UTF-8">
-    <title>HoleeDave</title>
+    <title>Brickson</title>
     <meta name="description" content="Brickson is er voor organisaties die de volgende stap in digitaal willen maken. Werken met Brickson betekent samen ontdekken, bedenken, ontwerpen of bouwen."/>
     <?php include 'head.php'; ?>
   </head>
   <body class="<?php echo $debug ? 'debug-layout ' : ''; ?> landingpage">
-    
-    <h1>DAVE</h1>
     <div class="layout">
       <div class="layout__cell layout__cell--main">
         <?php include 'landingpage/handshake.php'; ?>
