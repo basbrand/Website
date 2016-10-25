@@ -12,7 +12,6 @@
       <ol class="menu menu--hero list--reset fx bleed" id="menu">
         <li class="gutters meta meta--hero">
           <a class="menu__home fx" href="/"><span class="is-narrative">Home</span></a>
-          <h1><a class="menu__item anchor--reset anchor--shy is-current is-active" href="/cases/#menu">Cases</a></h1>
         </li>
         <li><a class="menu__item anchor--shy meta meta--tiny fx" href="/over-brickson/">Over Brickson</a></li>
         <li><a class="menu__item anchor--shy meta meta--tiny fx is-active" href="/cases/">Cases</a></li>
@@ -21,8 +20,8 @@
     </nav>
     <section class="layout">
       <div class="layout__cell layout__cell--main">
-        <article class="pod pod--leopard isolation">
-          <div class="pod__seed seed cover">
+        <article class="pod pod--leopard">
+          <div class="pod__seed seed cover isolation">
             <img
               sizes="<?php echo $gt_small_handheld; ?> 50vw, 100vw"
               srcset="/images/content/w414px_h206px_3x--evean.jpg 1242w, /images/content/w414px_h206px_2x--evean.jpg 828w, /images/content/w414px_h206px--evean.jpg 414w"
@@ -52,8 +51,8 @@
             </p>
           </div>
         </article>
-        <article class="pod pod--leopard isolation">
-          <div class="pod__seed seed cover">
+        <article class="pod pod--leopard">
+          <div class="pod__seed seed cover isolation">
             <img
               sizes="<?php echo $gt_small_handheld; ?> 50vw, 100vw"
               srcset="/images/content/w414px_h206px_3x--veh.jpg 1242w, /images/content/w414px_h206px_2x--veh.jpg 828w, /images/content/w414px_h206px--veh.jpg 414w"
@@ -83,8 +82,8 @@
             </p>
           </div>
         </article>
-        <article class="pod pod--leopard isolation">
-          <div class="pod__seed seed cover">
+        <article class="pod pod--leopard">
+          <div class="pod__seed seed cover isolation">
             <img
               sizes="<?php echo $gt_small_handheld; ?> 50vw, 100vw"
               srcset="/images/content/w414px_h206px_3x--cta.jpg 1242w, /images/content/w414px_h206px_2x--cta.jpg 828w, /images/content/w414px_h206px--cta.jpg 414w"
@@ -114,8 +113,8 @@
             </p>
           </div>
         </article>
-        <article class="pod pod--leopard isolation">
-          <div class="pod__seed seed cover">
+        <article class="pod pod--leopard">
+          <div class="pod__seed seed cover isolation">
             <img
               sizes="<?php echo $gt_small_handheld; ?> 50vw, 100vw"
               srcset="/images/content/w414px_h206px_3x--nvve.jpg 1242w, /images/content/w414px_h206px_2x--nvve.jpg 828w, /images/content/w414px_h206px--nvve.jpg 414w"
@@ -146,7 +145,7 @@
           </div>
         </article>
       </div>
-      <aside class="layout__cell well well--stork isolation wings seed is-gt-small-desktop tile">
+      <aside class="layout__cell well well--stork wings seed is-gt-small-desktop tile">
         <div class="seed__body">
           <blockquote class="quote leader--hero trailer"><p>Met oog en gevoel voor de mensen in je organisatie gaat Brickson altijd een stap verder.</p></blockquote>
           <figure class="person bleed leader trailer">
