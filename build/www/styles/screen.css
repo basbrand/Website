@@ -3051,6 +3051,7 @@ markup:
 Styleguide 5.10
 */
 .navbar {
+  width: 100%;
   padding: 8px 14px;
   background: #ffffff;
   background: rgba(255, 255, 255, 0.8); }
