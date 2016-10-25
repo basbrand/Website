@@ -137,7 +137,7 @@
               <p>Grote verenigingen gaan door een interessante transitie. De kracht van het collectief paste goed bij de ‘calculerende babyboomer’ en de ‘samenbeslisser uit de generatieX’. Maar hoe ben je over 10 jaar nog relevant voor de ‘snack generatie; je klanten die geboren zijn na 2000’? Dat waren onze eerste vragen.</p>
             </div>
             <p class="seed__footer leader trailer">
-              <a class="anchor--shy meta" href="/">Lees verder</a>
+              <a class="anchor--shy meta" href="/cases/vereniging-eigen-huis/">Lees verder</a>
             </p>
           </div>
         </article>
@@ -177,7 +177,7 @@
               <p>hoe moeten we onze diensten online gaan aanbieden? En presenteren we ons daarbij als een vereniging, een belangenbehartiger of een dienstverlener? Of kunnen we dat allemaal zijn? Een digitaal vraagstuk dat ook over het bestaansrecht van de organisatie gaat. </p>
             </div>
             <p class="seed__footer leader trailer">
-              <a class="anchor--shy meta" href="/">Lees verder</a>
+              <a class="anchor--shy meta" href="/cases/nvve/">Lees verder</a>
             </p>
           </div>
         </article>
